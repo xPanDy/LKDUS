@@ -63,6 +63,10 @@ namespace LKDUS_API
             });
 
             services.AddSingleton<ILoggerService, LoggerService>();
+
+            services.AddScoped<IUserRepository, UserRepository>();
+
+
             services.AddControllers();
         }
 

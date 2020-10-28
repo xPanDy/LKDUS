@@ -12,7 +12,7 @@ namespace LKDUS_API.Data
         public bool IsActive { get; set; }
         public string NfcCode { get; set; }
         public virtual IList<Role> Roles { get; set; }
-        
+        public int? roleId { get; set; }
         
     }
 }

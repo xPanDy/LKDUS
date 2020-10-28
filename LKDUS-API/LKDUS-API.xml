@@ -15,5 +15,23 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:LKDUS_API.Controllers.UsersController">
+            <summary>
+            Endpoint used to interact with the Users in the LKDUS database
+            </summary>
+        </member>
+        <member name="M:LKDUS_API.Controllers.UsersController.GetUsers">
+            <summary>
+            Get all Users
+            </summary>
+            <returns>List of all Users</returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.UsersController.GetUser(System.Int32)">
+            <summary>
+            Get the User by id
+            </summary>
+            <param name="id"></param>
+            <returns>An User's record</returns>
+        </member>
     </members>
 </doc>

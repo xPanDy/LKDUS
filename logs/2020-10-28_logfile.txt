@@ -1,0 +1,33 @@
+2020-10-28 14:19:16.1728 INFO Acessed Home Controller
+2020-10-28 14:46:22.8776 INFO Attempted Get All Users
+2020-10-28 14:46:24.9175 INFO Sucessfully got all Users
+2020-10-28 14:51:26.1060 INFO Attempted Get All Users
+2020-10-28 14:51:26.2556 INFO Sucessfully got all Users
+2020-10-28 14:54:02.3635 INFO Attempted Get All Users
+2020-10-28 14:54:02.3888 INFO Sucessfully got all Users
+2020-10-28 15:00:24.5222 INFO Attempted Get All Users
+2020-10-28 15:00:24.5799 INFO Sucessfully got all Users
+2020-10-28 15:06:05.8075 INFO Attempted Get All Users
+2020-10-28 15:06:07.7975 INFO Sucessfully got all Users
+2020-10-28 15:07:13.5934 INFO Attempted Get All Users
+2020-10-28 15:07:13.6829 INFO Sucessfully got all Users
+2020-10-28 15:15:46.2601 INFO Attempted Get All Users
+2020-10-28 15:16:05.1123 ERROR A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) - System.ComponentModel.Win32Exception (53): The network path was not found.
+2020-10-28 15:32:13.5922 INFO Attempted Get All Users
+2020-10-28 15:32:15.4283 INFO Sucessfully got all Users
+2020-10-28 15:32:25.5628 INFO Attempted Get User with ID: 1
+2020-10-28 15:32:25.8293 WARN User with id1 was not found
+2020-10-28 15:33:49.2082 INFO Attempted Get User with ID: 1
+2020-10-28 15:33:49.2481 WARN User with id1 was not found
+2020-10-28 15:34:51.7334 INFO Attempted Get User with ID: 1
+2020-10-28 15:34:51.7616 WARN User with id1 was not found
+2020-10-28 15:35:03.4380 INFO Attempted Get User with ID: 1
+2020-10-28 15:36:39.2174 WARN User with id:1 was not found
+2020-10-28 15:46:49.9634 INFO Attempted Get User with ID: 5
+2020-10-28 15:46:56.5485 WARN User with id:5 was not found
+2020-10-28 15:47:24.7332 INFO Attempted Get User with ID: 5
+2020-10-28 15:47:24.7543 WARN User with id:5 was not found
+2020-10-28 15:48:01.6619 INFO Attempted Get User with ID: 4
+2020-10-28 15:48:03.1090 INFO Sucessfully got the user with ID:4
+2020-10-28 15:48:33.7743 INFO Attempted Get User with ID: 4
+2020-10-28 15:48:43.2842 INFO Sucessfully got the user with ID:4
