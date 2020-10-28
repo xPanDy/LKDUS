@@ -13,6 +13,6 @@ namespace LKDUS_API.DTOs
         public string LastName { get; set; }
         public bool IsActive { get; set; }
         public string NfcCode { get; set; }
-        public virtual IList<Role> Roles { get; set; }
+        public virtual IList<RoleDTO> Roles { get; set; }
     }
 }

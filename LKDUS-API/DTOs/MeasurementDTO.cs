@@ -12,12 +12,12 @@ namespace LKDUS_API.DTOs
         public int Shift { get; set; }
 
         public int? MachineId { get; set; }
-        public virtual Machine Machine { get; set; }
+        public virtual MachineDTO Machine { get; set; }
 
         public int? UserId { get; set; }
-        public virtual User User { get; set; }
+        public virtual UserDTO User { get; set; }
 
         public int? MeasurementPositionId { get; set; }
-        public virtual MeasurementPosition MeasurementPosition { get; set; }
+        public virtual MeasurementDTO MeasurementPosition { get; set; }
     }
 }
