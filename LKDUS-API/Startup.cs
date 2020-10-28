@@ -16,6 +16,8 @@ using System.Reflection;
 using System.IO;
 using LKDUS_API.Contracts;
 using LKDUS_API.Services;
+using AutoMapper;
+using LKDUS_API.Mapping;
 
 namespace LKDUS_API
 {
@@ -44,6 +46,8 @@ namespace LKDUS_API
                 .AllowAnyMethod()
                 .AllowAnyHeader());
             });
+
+            services.AddAutoMapper(typeof(Maps));
 
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo {
