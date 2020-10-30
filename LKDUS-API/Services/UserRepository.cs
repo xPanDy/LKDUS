@@ -45,6 +45,11 @@ namespace LKDUS_API.Services
             return user;
         }
 
+        public async Task<bool> isExists(int id)
+        {
+            return await _db.Users.AnyAsync(q => q.Id == id);
+        }
+
         public async Task<bool> Save()
         {
             var changes = await _db.SaveChangesAsync();
@@ -57,5 +62,7 @@ namespace LKDUS_API.Services
             return await Save();
 
         }
+
+
     }
 }

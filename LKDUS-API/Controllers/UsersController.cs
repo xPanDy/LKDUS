@@ -95,7 +95,11 @@ namespace LKDUS_API.Controllers
 
 
         }
-
+        /// <summary>
+        /// Create a user 
+        /// </summary>
+        /// <param name="userDTO"></param>
+        /// <returns></returns>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -135,6 +139,107 @@ namespace LKDUS_API.Controllers
 
         }
 
+         /// <summary>
+         /// Updates user with specified Id
+         /// </summary>
+         /// <param name="id"></param>
+         /// <param name="userUpdateDTO"></param>
+         /// <returns></returns>
+        [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> Update(int id, [FromBody] UserUpdateDTO userUpdateDTO)
+        {
+            try
+            {
+                _logger.LogWarn($"User update atempted - id: {id}");
+                if (userUpdateDTO == null || id <1 || id != userUpdateDTO.Id )
+                {
+                    _logger.LogWarn($"User update failed with wrong data");
+                    return BadRequest(ModelState);
+                }
+
+                var isExist = await _userRepository.isExists(id);
+
+                if (isExist == null)
+                {
+                    _logger.LogWarn($"User Data was not found");
+                    return NotFound();
+                }
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogWarn($"User Data was Incomplete");
+                    return BadRequest(ModelState);
+
+                }
+                var user = _mapper.Map<User>(userUpdateDTO);
+                var isGood = await _userRepository.Update(user);
+                if (!isGood)
+                {
+
+                    return InternalError($"User update failed");
+                }
+
+                _logger.LogInfo($"User Data with id: {id} was updated");
+                return NoContent();
+                
+            }
+            catch (Exception e)
+            {
+                return InternalError($"{e.Message} - {e.InnerException}");
+
+            }
+
+        }
+
+
+        /// <summary>
+        /// Removes user by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                _logger.LogWarn($"User deletion atempted - id: {id}");
+                if (id < 1 )
+                {
+                    _logger.LogWarn($"User deleting failed with wrong data");
+                    return BadRequest();
+                }
+                 
+                var isExist = await _userRepository.isExists(id);
+                 
+                if (!isExist)
+                {
+                    _logger.LogWarn($"User Data with id: {id} was not found");
+                    return NotFound();
+                }
+                var user = await _userRepository.FindById(id);
+                var isGood = await _userRepository.Delete(user);
+
+                if (!isGood)
+                {
+                    return InternalError($"User Delete failed");
+                }
+
+                _logger.LogWarn($"User Data with id: {id} was deleted");
+                return NoContent();
+
+            }
+            catch (Exception e)
+            {
+                return InternalError($"{e.Message} - {e.InnerException}");
+
+            }
+
+        }
 
         private ObjectResult InternalError(string message)
         {

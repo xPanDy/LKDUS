@@ -27,8 +27,21 @@ namespace LKDUS_API.DTOs
         [Required]
         public bool IsActive { get; set; }
         public string NfcCode { get; set; }
-
         public virtual IList<RoleDTO> Roles { get; set; }
         public int? RoleId { get; set; }
     }
+
+    public class UserUpdateDTO
+    {
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public bool IsActive { get; set; }
+        public string NfcCode { get; set; }
+       
+        public int? RoleId { get; set; }
+    
+    }
+
+    
 }

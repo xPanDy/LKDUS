@@ -1,0 +1,64 @@
+2020-10-30 11:46:48.1049 WARN User update atempted - id: 4
+2020-10-30 11:48:00.7082 ERROR An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Users' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:66f5fb4a-b63d-44b1-b5bd-141dcf3642e8
+Error Number:544,State:1,Class:16
+2020-10-30 12:06:12.7411 WARN User update atempted - id: 4
+2020-10-30 12:06:14.7608 INFO User Data with id: 4 was updated
+2020-10-30 12:07:09.5889 WARN User update atempted - id: 4
+2020-10-30 12:07:09.6885 INFO User Data with id: 4 was updated
+2020-10-30 13:33:25.6917 WARN User update atempted - id: 4
+2020-10-30 13:33:25.7671 INFO User Data with id: 4 was updated
+2020-10-30 13:34:00.1016 WARN User update atempted - id: 4
+2020-10-30 13:34:35.7646 INFO User Data with id: 4 was updated
+2020-10-30 13:35:41.1322 WARN User update atempted - id: 4
+2020-10-30 13:35:51.2913 INFO User Data with id: 4 was updated
+2020-10-30 13:38:36.4025 WARN User update atempted - id: 4
+2020-10-30 13:38:38.4923 INFO User Data with id: 4 was updated
+2020-10-30 13:39:55.6090 WARN User update atempted - id: 4
+2020-10-30 13:39:57.5266 INFO User Data with id: 4 was updated
+2020-10-30 13:40:17.3339 WARN User update atempted - id: 4
+2020-10-30 13:40:17.3916 INFO User Data with id: 4 was updated
+2020-10-30 14:11:13.2255 WARN User deletion atempted - id: 4
+2020-10-30 14:11:13.2708 WARN User deleting failed with wrong data
+2020-10-30 14:11:38.2772 INFO Attempted Get All Users
+2020-10-30 14:11:40.2844 INFO Sucessfully got all Users
+2020-10-30 14:13:33.3490 WARN User deletion atempted - id: 4
+2020-10-30 14:13:33.3979 WARN User deleting failed with wrong data
+2020-10-30 14:14:43.8493 WARN User deletion atempted - id: 4
+2020-10-30 14:15:04.0284 WARN User Data with id: 4 was deleted
+2020-10-30 14:15:24.9902 WARN User deletion atempted - id: 4
+2020-10-30 14:15:38.5644 INFO Attempted Get All Users
+2020-10-30 14:15:38.6642 INFO Sucessfully got all Users
+2020-10-30 14:16:01.6558 WARN User deletion atempted - id: 5
+2020-10-30 14:16:01.7376 WARN User Data with id: 5 was deleted
+2020-10-30 14:16:03.7668 WARN User deletion atempted - id: 6
+2020-10-30 14:16:03.8066 WARN User Data with id: 6 was deleted
+2020-10-30 14:16:04.9234 WARN User deletion atempted - id: 7
+2020-10-30 14:16:04.9392 WARN User Data with id: 7 was deleted
+2020-10-30 14:16:06.0708 WARN User deletion atempted - id: 8
+2020-10-30 14:16:06.0986 WARN User Data with id: 8 was deleted
+2020-10-30 14:16:09.0499 WARN User deletion atempted - id: 9
+2020-10-30 14:16:09.0811 WARN User Data with id: 9 was deleted
+2020-10-30 14:16:11.9288 WARN User deletion atempted - id: 10
+2020-10-30 14:16:11.9653 WARN User Data with id: 10 was deleted
+2020-10-30 14:16:13.5408 WARN User deletion atempted - id: 11
+2020-10-30 14:16:13.5746 WARN User Data with id: 11 was deleted
+2020-10-30 14:16:15.5444 WARN User deletion atempted - id: 12
+2020-10-30 14:16:15.5654 WARN User Data with id: 12 was deleted
+2020-10-30 14:16:17.0560 WARN User deletion atempted - id: 113
+2020-10-30 14:16:19.4445 WARN User deletion atempted - id: 13
+2020-10-30 14:16:21.1120 WARN User deletion atempted - id: 12
+2020-10-30 14:16:54.9977 INFO User submission Attempted
+2020-10-30 14:16:55.1584 INFO User Data was created
