@@ -1,0 +1,21 @@
+2020-11-05 10:32:21.7473 INFO Measurement-GetMeasurements: Attempted Call
+2020-11-05 10:32:23.6455 INFO Sucessfully got all Measurements
+2020-11-05 10:40:52.1583 INFO Measurement-GetMeasurements: Attempted Call
+2020-11-05 10:40:52.6315 ERROR Measurement-GetMeasurements:Unable to cast object of type 'System.DateTime' to type 'System.String'. - 
+2020-11-05 10:41:32.2327 INFO Attempted Get All Users
+2020-11-05 10:41:33.9594 INFO Sucessfully got all Users
+2020-11-05 10:41:45.8514 INFO Measurement-GetMeasurements: Attempted Call
+2020-11-05 10:41:46.2705 ERROR Measurement-GetMeasurements:Unable to cast object of type 'System.DateTime' to type 'System.String'. - 
+2020-11-05 10:42:31.6363 INFO Measurement-GetMeasurement: Attempted Get User with ID: 3
+2020-11-05 10:42:32.0089 ERROR Unable to cast object of type 'System.DateTime' to type 'System.String'. - 
+2020-11-05 10:43:40.7845 INFO Measurement-GetMeasurement: Attempted Get User with ID: 3
+2020-11-05 15:13:26.8218 INFO Attempted Get All Users
+2020-11-05 15:13:28.5399 INFO Sucessfully got all Users
+2020-11-05 15:13:36.3852 INFO Measurement-GetMeasurements: Attempted Call
+2020-11-05 15:13:36.7311 ERROR Measurement-GetMeasurements:Unable to cast object of type 'System.DateTime' to type 'System.String'. - 
+2020-11-05 15:18:43.2708 INFO Attempted Get All Users
+2020-11-05 15:18:44.9308 INFO Sucessfully got all Users
+2020-11-05 15:19:12.3465 INFO Measurement-GetMeasurements: Attempted Call
+2020-11-05 15:19:12.6591 ERROR Measurement-GetMeasurements:Unable to cast object of type 'System.DateTime' to type 'System.String'. - 
+2020-11-05 15:22:38.7274 INFO Measurement-GetMeasurements: Attempted Call
+2020-11-05 15:22:40.7741 INFO Sucessfully got all Measurements

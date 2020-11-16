@@ -1,0 +1,58 @@
+2020-11-10 08:07:09.8891 INFO Measurements-GetMeasurements: Attempted Call
+2020-11-10 08:07:11.7178 INFO Sucessfully got all Measurements
+2020-11-10 08:08:00.9124 INFO Measurements-Create: Measurement creation  Attempted
+2020-11-10 08:08:01.3334 INFO Measurements-Create: Measurement creation was created
+2020-11-10 08:08:01.3334 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2020-11-10 08:08:14.0371 INFO Measurements-GetMeasurements: Attempted Call
+2020-11-10 08:08:14.0669 INFO Sucessfully got all Measurements
+2020-11-10 08:09:01.0318 INFO Measurements-GetMeasurement: Attempted Get User with ID: 3
+2020-11-10 08:09:01.1785 INFO Sucessfully got the measurement with Id:3
+2020-11-10 08:11:14.7696 WARN Measurements-Update: measurement update atempted - id: 3
+2020-11-10 08:11:14.8783 INFO Measurements-Update: measurement Data with id: 3 was updated
+2020-11-10 08:22:25.2631 INFO Measurements-GetMeasurements: Attempted Call
+2020-11-10 08:22:26.9464 INFO Sucessfully got all Measurements
+2020-11-10 08:23:06.3675 WARN Measurements-Update: measurement update atempted - id: 3
+2020-11-10 08:23:06.8144 INFO Measurements-Update: measurement Data with id: 3 was updated
+2020-11-10 08:23:21.7316 WARN Measurements-Update: measurement update atempted - id: 3
+2020-11-10 08:23:21.7758 INFO Measurements-Update: measurement Data with id: 3 was updated
+2020-11-10 08:23:22.7840 WARN Measurements-Update: measurement update atempted - id: 3
+2020-11-10 08:23:22.8333 INFO Measurements-Update: measurement Data with id: 3 was updated
+2020-11-10 08:23:23.6934 WARN Measurements-Update: measurement update atempted - id: 3
+2020-11-10 08:23:23.7187 INFO Measurements-Update: measurement Data with id: 3 was updated
+2020-11-10 08:24:10.5736 WARN Measurements-Update: measurement update atempted - id: 3
+2020-11-10 08:24:10.6074 INFO Measurements-Update: measurement Data with id: 3 was updated
+2020-11-10 08:37:55.2735 WARN Measurements-Update: measurement update atempted - id: 3
+2020-11-10 08:37:55.3518 INFO Measurements-Update: measurement Data with id: 3 was updated
+2020-11-10 09:07:04.2096 INFO Users-GetUsers: Attempted Get All Users
+2020-11-10 09:07:04.5111 ERROR Users-GetUsers: Value cannot be null. (Parameter 'source') - 
+2020-11-10 09:07:36.1465 INFO Users-GetUsers: Attempted Get All Users
+2020-11-10 09:07:37.9660 INFO Users-GetUsers: Sucessfully got all Users
+2020-11-10 09:09:02.4819 INFO Measurements-Create: Measurement creation  Attempted
+2020-11-10 09:09:02.8778 INFO Measurements-Create: Measurement creation was created
+2020-11-10 09:09:02.8778 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2020-11-10 09:09:08.0222 INFO Measurements-Create: Measurement creation  Attempted
+2020-11-10 09:09:08.0685 INFO Measurements-Create: Measurement creation was created
+2020-11-10 09:09:08.0708 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2020-11-10 09:09:09.1878 INFO Measurements-Create: Measurement creation  Attempted
+2020-11-10 09:09:09.2258 INFO Measurements-Create: Measurement creation was created
+2020-11-10 09:09:09.2258 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2020-11-10 09:09:09.9119 INFO Measurements-Create: Measurement creation  Attempted
+2020-11-10 09:09:09.9364 INFO Measurements-Create: Measurement creation was created
+2020-11-10 09:09:09.9364 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2020-11-10 09:09:10.4991 INFO Measurements-Create: Measurement creation  Attempted
+2020-11-10 09:09:10.5237 INFO Measurements-Create: Measurement creation was created
+2020-11-10 09:09:10.5237 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2020-11-10 09:09:11.0922 INFO Measurements-Create: Measurement creation  Attempted
+2020-11-10 09:09:11.1147 INFO Measurements-Create: Measurement creation was created
+2020-11-10 09:09:11.1182 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2020-11-10 09:09:11.7281 INFO Measurements-Create: Measurement creation  Attempted
+2020-11-10 09:09:11.7742 INFO Measurements-Create: Measurement creation was created
+2020-11-10 09:09:11.7742 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2020-11-10 09:09:41.3360 WARN Measurements-Update: measurement update atempted - id: 10
+2020-11-10 09:09:41.5247 INFO Measurements-Update: measurement Data with id: 10 was updated
+2020-11-10 09:09:47.4012 WARN Measurements-Update: measurement update atempted - id: 10
+2020-11-10 09:09:47.5498 INFO Measurements-Update: measurement Data with id: 10 was updated
+2020-11-10 09:11:05.2936 WARN Measurements-Delete: measurement deletion atempted - id: 10
+2020-11-10 09:11:05.5727 WARN Measurements-Delete:  measurement Data with id: 10 was deleted
+2020-11-10 09:11:18.9336 WARN Measurements-Delete: measurement deletion atempted - id: 9
+2020-11-10 09:11:18.9941 WARN Measurements-Delete:  measurement Data with id: 9 was deleted

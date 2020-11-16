@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection.PortableExecutable;
 
@@ -8,7 +10,9 @@ namespace LKDUS_API.Data
     public class Measurement
     {
         public int Id { get; set; }
-        public string DateCreated { get; set; }
+        
+         
+        public string  DateCreated { get; set ; }
         public int Shift { get; set; }
 
         public int? MachineId { get; set; }

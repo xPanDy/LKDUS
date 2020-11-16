@@ -1,0 +1,25 @@
+2020-11-06 16:27:48.6751 INFO Measurements-Create: Measurement creation  Attempted
+2020-11-06 16:27:48.9081 ERROR Measurements-Create: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Measurement
+System.Object -> LKDUS_API.Data.Measurement - 
+2020-11-06 16:31:18.3691 INFO Measurements-Create: Measurement creation  Attempted
+2020-11-06 16:31:21.0900 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert an explicit value into a timestamp column. Use INSERT with a column list to exclude the timestamp column, or insert a DEFAULT into the timestamp column.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:0030b2e9-be8f-438c-b81c-1ea775b14a3c
+Error Number:273,State:1,Class:16
+2020-11-06 16:38:36.5024 INFO Measurements-Create: Measurement creation  Attempted
+2020-11-06 16:38:38.3778 INFO Measurements-Create: Measurement creation was created
+2020-11-06 16:38:38.3778 INFO Measurements-Create: LKDUS_API.Data.Measurement

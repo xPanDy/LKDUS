@@ -1,0 +1,39 @@
+2020-11-09 09:53:46.5849 INFO Measurements-GetMeasurements: Attempted Call
+2020-11-09 09:53:48.5247 INFO Sucessfully got all Measurements
+2020-11-09 09:54:28.8624 INFO Measurements-GetMeasurement: Attempted Get User with ID: 3
+2020-11-09 09:54:29.0977 INFO Sucessfully got the measurement with Id:3
+2020-11-09 09:55:15.1795 INFO Measurements-Create: Measurement creation  Attempted
+2020-11-09 09:55:15.4564 INFO Measurements-Create: Measurement creation was created
+2020-11-09 09:55:15.4582 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2020-11-09 13:38:23.8859 INFO Measurements-Create: Measurement creation  Attempted
+2020-11-09 13:38:24.1767 INFO Measurements-Create: Measurement creation was created
+2020-11-09 13:38:24.1767 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2020-11-09 13:39:01.3414 INFO Measurements-Create: Measurement creation  Attempted
+2020-11-09 13:39:01.9843 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Measurements_Users". The conflict occurred in database "LKDUS", table "dbo.Users", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:99ff8b0a-7f74-4697-8aeb-9fdc6203cf03
+Error Number:547,State:0,Class:16
+2020-11-09 13:39:09.2257 INFO Measurements-Create: Measurement creation  Attempted
+2020-11-09 13:39:09.2530 INFO Measurements-Create: Measurement creation was created
+2020-11-09 13:39:09.2530 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2020-11-09 13:39:15.3334 INFO Measurements-Create: Measurement creation  Attempted
+2020-11-09 13:39:15.3894 INFO Measurements-Create: Measurement creation was created
+2020-11-09 13:39:15.3894 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2020-11-09 14:34:30.3733 INFO Measurements-Create: Measurement creation  Attempted
+2020-11-09 14:34:32.1999 INFO Measurements-Create: Measurement creation was created
+2020-11-09 14:34:32.2006 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2020-11-09 15:03:58.5110 INFO Measurements-Create: Measurement creation  Attempted
+2020-11-09 15:04:00.3995 INFO Measurements-Create: Measurement creation was created
+2020-11-09 15:04:00.3995 INFO Measurements-Create: LKDUS_API.Data.Measurement

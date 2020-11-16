@@ -34,6 +34,15 @@ namespace LKDUS_API.Controllers
             _logger = logger;
             _mapper = mapper;
         }
+
+
+        private string GetControllerActionNames()
+        {
+            var controller = ControllerContext.ActionDescriptor.ControllerName;
+            var action = ControllerContext.ActionDescriptor.ActionName;
+            return $"{controller}-{action}";
+        }
+
         /// <summary>
         /// Get all Users
         /// </summary>
@@ -43,18 +52,19 @@ namespace LKDUS_API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetUsers()
         {
+            var location = GetControllerActionNames();
             try 
             {
-                _logger.LogInfo("Attempted Get All Users");
+                _logger.LogInfo($"{location}: Attempted Get All Users");
                 var users = await _userRepository.FindAll();
                 var response = _mapper.Map<IList<UserDTO>>(users);
-                _logger.LogInfo("Sucessfully got all Users");
+                _logger.LogInfo($"{location}: Sucessfully got all Users");
                 
                 return Ok(response);
             }
             catch(Exception e)
             {
-                return InternalError($"{e.Message} - {e.InnerException}");
+                return InternalError($"{location}: {e.Message} - {e.InnerException}");
             }
 
           
@@ -71,17 +81,19 @@ namespace LKDUS_API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetUser(int id)
         {
+            var location = GetControllerActionNames();
+
             try
             {
-                _logger.LogInfo($"Attempted Get User with ID: {id}");
+                _logger.LogInfo($"{location}: Attempted Get User with ID: {id}");
                 var user = await _userRepository.FindById(id);
                 if(user == null)
                 {
-                    _logger.LogWarn($"User with id:{id} was not found");
+                    _logger.LogWarn($"{location}: User with id:{id} was not found");
                     return NotFound();
                 }
                 var response = _mapper.Map<UserDTO>(user);
-                _logger.LogInfo($"Sucessfully got the user with ID:{id}" );
+                _logger.LogInfo($"{location}: Sucessfully got the user with ID:{id}" );
 
                 return Ok(response);
             }
@@ -106,6 +118,8 @@ namespace LKDUS_API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Create([FromBody] UserCreateDTO userDTO)
         {
+            
+
             try
             {
                 _logger.LogInfo($"User submission Attempted");
@@ -160,9 +174,9 @@ namespace LKDUS_API.Controllers
                     return BadRequest(ModelState);
                 }
 
-                var isExist = await _userRepository.isExists(id);
+                var isExisting = await _userRepository.isExists(id);
 
-                if (isExist == null)
+                if (isExisting == false)
                 {
                     _logger.LogWarn($"User Data was not found");
                     return NotFound();
