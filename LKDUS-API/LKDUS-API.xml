@@ -4,7 +4,7 @@
         <name>LKDUS-API</name>
     </assembly>
     <members>
-        <member name="M:LKDUS_API.Controllers.AspNetUsers.Login(LKDUS_API.DTOs.AspNetUserDTO)">
+        <member name="M:LKDUS_API.Controllers.AspNetUsersController.Login(LKDUS_API.DTOs.AspNetUserDTO)">
             <summary>
             User Login endpoint
             </summary>

@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+ 
 using System.Threading.Tasks;
 using AutoMapper;
 using LKDUS_API.Contracts;
 using LKDUS_API.Data;
 using LKDUS_API.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -48,6 +49,7 @@ namespace LKDUS_API.Controllers
         /// </summary>
         /// <returns>List of all Users</returns>
         [HttpGet]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetUsers()
@@ -76,6 +78,7 @@ namespace LKDUS_API.Controllers
         /// <param name="id"></param>
         /// <returns>An User's record</returns>
         [HttpGet("{id}")]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -113,6 +116,7 @@ namespace LKDUS_API.Controllers
         /// <param name="userDTO"></param>
         /// <returns></returns>
         [HttpPost]
+        [Authorize(Roles = "Admin, Master")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -160,6 +164,7 @@ namespace LKDUS_API.Controllers
          /// <param name="userUpdateDTO"></param>
          /// <returns></returns>
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin, Master")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -214,6 +219,7 @@ namespace LKDUS_API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin, Master")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
