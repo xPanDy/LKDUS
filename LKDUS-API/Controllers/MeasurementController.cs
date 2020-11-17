@@ -6,6 +6,7 @@ using AutoMapper;
 using LKDUS_API.Contracts;
 using LKDUS_API.Data;
 using LKDUS_API.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,6 +21,7 @@ namespace LKDUS_API.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class MeasurementsController : ControllerBase
     {
         private readonly IMeasurementRepository measurementRepository;
@@ -42,6 +44,7 @@ namespace LKDUS_API.Controllers
         /// </summary>
         /// <returns>A list of all measurements</returns>
         [HttpGet]
+        [Authorize(Roles = "Operator")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetMeasurements()
@@ -87,6 +90,7 @@ namespace LKDUS_API.Controllers
         /// <param name="id"></param>
         /// <returns>An measurement record by id</returns>
         [HttpGet("{id:int}")]
+        [Authorize(Roles = "Operator")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -130,6 +134,7 @@ namespace LKDUS_API.Controllers
         /// <param name="measurementCreateDTO"></param>
         /// <returns></returns>
         [HttpPost]
+        [Authorize(Roles = "Operator")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -180,6 +185,7 @@ namespace LKDUS_API.Controllers
          /// <param name="measurementUpdateDTO"></param>
          /// <returns></returns>
         [HttpPut("{id}")]
+        [Authorize(Roles = "Operator")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]

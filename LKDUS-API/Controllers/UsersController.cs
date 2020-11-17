@@ -122,19 +122,19 @@ namespace LKDUS_API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Create([FromBody] UserCreateDTO userDTO)
         {
-            
+            var location = GetControllerActionNames();
 
             try
             {
-                _logger.LogInfo($"User submission Attempted");
+                _logger.LogInfo($"{location}: User submission Attempted");
                 if (userDTO == null)
                 {
-                    _logger.LogWarn($"Empty request was submitted");
+                    _logger.LogWarn($"{location}: Empty request was submitted");
                     return BadRequest(ModelState);
                 }
                 if (!ModelState.IsValid)
                 {
-                    _logger.LogWarn($"User Data was Incomplete");
+                    _logger.LogWarn($"{location}: User Data was Incomplete");
                     return BadRequest(ModelState);
 
                 }
@@ -143,15 +143,15 @@ namespace LKDUS_API.Controllers
                 if (!isGood)
                 {
                     
-                    return InternalError($"User creation failed");
+                    return InternalError($"{location}: User creation failed");
                 }
 
-                _logger.LogInfo($"User Data was created");
+                _logger.LogInfo($"{location}: User Data was created");
                 return Created("Create", new { user } );
             }
             catch (Exception e)
             {
-               return  InternalError($"{e.Message} - {e.InnerException}");
+               return  InternalError($"{location}: {e.Message} - {e.InnerException}");
                 
             }
 
@@ -170,12 +170,13 @@ namespace LKDUS_API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Update(int id, [FromBody] UserUpdateDTO userUpdateDTO)
         {
+            var location = GetControllerActionNames();
             try
             {
-                _logger.LogWarn($"User update atempted - id: {id}");
+                _logger.LogWarn($"{location}: User update atempted - id: {id}");
                 if (userUpdateDTO == null || id <1 || id != userUpdateDTO.Id )
                 {
-                    _logger.LogWarn($"User update failed with wrong data");
+                    _logger.LogWarn($"{location}: User update failed with wrong data");
                     return BadRequest(ModelState);
                 }
 
@@ -183,12 +184,12 @@ namespace LKDUS_API.Controllers
 
                 if (isExisting == false)
                 {
-                    _logger.LogWarn($"User Data was not found");
+                    _logger.LogWarn($"{location}: User Data was not found");
                     return NotFound();
                 }
                 if (!ModelState.IsValid)
                 {
-                    _logger.LogWarn($"User Data was Incomplete");
+                    _logger.LogWarn($"{location}: User Data was Incomplete");
                     return BadRequest(ModelState);
 
                 }
@@ -200,13 +201,13 @@ namespace LKDUS_API.Controllers
                     return InternalError($"User update failed");
                 }
 
-                _logger.LogInfo($"User Data with id: {id} was updated");
+                _logger.LogInfo($"{location}: User Data with id: {id} was updated");
                 return NoContent();
                 
             }
             catch (Exception e)
             {
-                return InternalError($"{e.Message} - {e.InnerException}");
+                return InternalError($"{location}: {e.Message} - {e.InnerException}");
 
             }
 
@@ -225,12 +226,13 @@ namespace LKDUS_API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Delete(int id)
         {
+            var location = GetControllerActionNames();
             try
             {
-                _logger.LogWarn($"User deletion atempted - id: {id}");
+                _logger.LogWarn($"{location}: User deletion atempted - id: {id}");
                 if (id < 1 )
                 {
-                    _logger.LogWarn($"User deleting failed with wrong data");
+                    _logger.LogWarn($"{location}: User deleting failed with wrong data");
                     return BadRequest();
                 }
                  
@@ -249,13 +251,13 @@ namespace LKDUS_API.Controllers
                     return InternalError($"User Delete failed");
                 }
 
-                _logger.LogWarn($"User Data with id: {id} was deleted");
+                _logger.LogWarn($"{location}: User Data with id: {id} was deleted");
                 return NoContent();
 
             }
             catch (Exception e)
             {
-                return InternalError($"{e.Message} - {e.InnerException}");
+                return InternalError($"{location}: {e.Message} - {e.InnerException}");
 
             }
 
@@ -267,5 +269,7 @@ namespace LKDUS_API.Controllers
             return StatusCode(500, "Something is broken, please contact your supervisor");
         }
 
+
+       
     }
 }
