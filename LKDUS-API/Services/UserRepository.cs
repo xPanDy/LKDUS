@@ -50,6 +50,11 @@ namespace LKDUS_API.Services
             return await _db.Users.AnyAsync(q => q.Id == id);
         }
 
+        public Task<bool> isExists(string id)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<bool> Save()
         {
             var changes = await _db.SaveChangesAsync();

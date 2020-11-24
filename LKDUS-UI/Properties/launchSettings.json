@@ -1,13 +1,13 @@
-﻿{
+{
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:55561",
-      "sslPort": 44321
+      "applicationUrl": "http://localhost:59220",
+      "sslPort": 44308
     }
   },
-  "profiles": { 
+  "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "LKDUS_API": {
+    "LKDUS-UI": {
       "commandName": "Project",
       "launchBrowser": true,
       "applicationUrl": "https://localhost:5001;http://localhost:5000",

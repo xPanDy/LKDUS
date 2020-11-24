@@ -15,7 +15,8 @@ namespace LKDUS_API.Contracts
         Task<bool> Delete(T entity);
         Task<bool> Save();
 
-
+        
+        Task<bool> isExists(string id);
 
     }
 }

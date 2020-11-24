@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using LKDUS_API.Contracts;
 using LKDUS_API.DTOs;
 using Microsoft.AspNetCore.Authorization;
@@ -13,10 +14,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+ 
 
 namespace LKDUS_API.Controllers
 {
     [Route("api/[controller]")]
+    [Route("api/login")]
     [ApiController]
     public class AspNetUsersController : ControllerBase
     {
@@ -24,16 +27,24 @@ namespace LKDUS_API.Controllers
         private readonly UserManager<IdentityUser> userManager;
         private readonly ILoggerService logger;
         private readonly IConfiguration config;
+        private readonly IMapper mapper;
+        //private readonly IAspNetUserRepository aspNetUserRepository;
 
         public AspNetUsersController(SignInManager<IdentityUser> signInManager,
             UserManager<IdentityUser> userManager,
             ILoggerService logger,
-            IConfiguration config)
+            IConfiguration config,
+            IMapper mapper
+            //,
+           // IAspNetUserRepository aspNetUserRepository
+            )
         {
             this.signInManager = signInManager;
             this.userManager = userManager;
             this.logger = logger;
             this.config = config;
+            this.mapper = mapper;
+          // this.aspNetUserRepository = aspNetUserRepository;
         }
 
         /// <summary>
@@ -88,6 +99,55 @@ namespace LKDUS_API.Controllers
             
 
         }
+
+        /// <summary>
+        /// Get all Users
+        /// </summary>
+        /// <returns>List of all Users</returns>
+        [HttpGet]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetUsers()
+        {
+            var location = GetControllerActionNames();
+            try
+            {
+                
+               
+                // _logger.LogInfo($"{location}: Attempted Get All Users");
+                var users = this.userManager.Users;
+
+                IList<AspNetUserDTO> operetorList = new List<AspNetUserDTO>();
+
+                foreach(var u in users)
+                {
+                    var operatorUser = new AspNetUserDTO
+                    {
+                        UserName = u.UserName,
+                        Password = u.PasswordHash
+                    };
+
+                    operetorList.Add(operatorUser);
+
+                    
+                }
+
+
+                var response = operetorList; 
+                //this.mapper.Map<IList<AspNetUserDTO>>(users);
+               // _logger.LogInfo($"{location}: Sucessfully got all Users");
+
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                return InternalError($"{location}: {e.Message} - {e.InnerException}");
+            }
+
+
+        }
+
 
         private async Task<string> GenerateJSONWebToken(IdentityUser user)
         {

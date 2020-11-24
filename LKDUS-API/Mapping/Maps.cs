@@ -12,6 +12,7 @@ namespace LKDUS_API.Mapping
     {
         public Maps()
         {
+          //  CreateMap<AspNetUsers, AspNetUserDTO>().ReverseMap();
             CreateMap<User, UserDTO>().ReverseMap();
             CreateMap<User, UserCreateDTO>().ReverseMap();
             CreateMap<User, UserUpdateDTO>().ReverseMap();
@@ -22,7 +23,11 @@ namespace LKDUS_API.Mapping
             
             CreateMap<MeasurementPosition, MeasurementPositionDTO>().ReverseMap();
             CreateMap<Role, RoleDTO>().ReverseMap();
-            
+
+
+
+
+
         }
        
     }

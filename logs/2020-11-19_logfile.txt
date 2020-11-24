@@ -1,0 +1,29 @@
+2020-11-19 11:14:50.5334 INFO AspNetUsers-Login: Login attempted call from user operator
+2020-11-19 11:14:50.9592 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2020-11-19 11:15:30.3283 INFO AspNetUsers-Login: Login attempted call from user kristaps
+2020-11-19 11:15:30.4153 INFO AspNetUsers-Login: kristaps Sucessfully Authenticated
+2020-11-19 11:16:05.4299 INFO AspNetUsers-Login: Login attempted call from user admin
+2020-11-19 11:16:05.6289 INFO AspNetUsers-Login: admin Sucessfully Authenticated
+2020-11-19 13:24:37.5486 INFO AspNetUsers-Login: Login attempted call from user admin
+2020-11-19 13:24:38.1875 INFO AspNetUsers-Login: admin Sucessfully Authenticated
+2020-11-19 13:24:49.4932 INFO AspNetUsers-Login: Login attempted call from user admin
+2020-11-19 13:24:49.6725 INFO AspNetUsers-Login: admin Sucessfully Authenticated
+2020-11-19 13:25:50.8240 INFO AspNetUsers-Login: Login attempted call from user admin
+2020-11-19 13:25:50.9076 INFO AspNetUsers-Login: admin Sucessfully Authenticated
+2020-11-19 13:26:00.4485 INFO AspNetUsers-Login: Login attempted call from user admin
+2020-11-19 13:26:00.6351 INFO AspNetUsers-Login: admin Sucessfully Authenticated
+2020-11-19 13:26:26.9404 INFO AspNetUsers-Login: Login attempted call from user admin
+2020-11-19 13:26:27.0604 INFO AspNetUsers-Login: admin Sucessfully Authenticated
+2020-11-19 13:27:01.1585 INFO AspNetUsers-Login: Login attempted call from user admin
+2020-11-19 13:27:01.2119 INFO AspNetUsers-Login: admin Sucessfully Authenticated
+2020-11-19 13:42:35.8908 INFO AspNetUsers-Login: Login attempted call from user admin
+2020-11-19 13:42:36.2040 INFO AspNetUsers-Login: admin Sucessfully Authenticated
+2020-11-19 15:33:56.1305 ERROR AspNetUsers-GetUsers: Unable to cast object of type 'Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[Microsoft.AspNetCore.Identity.IdentityUser]' to type 'Microsoft.AspNetCore.Mvc.IActionResult'. - 
+2020-11-19 15:37:30.9164 ERROR AspNetUsers-GetUsers: Unable to cast object of type 'Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[Microsoft.AspNetCore.Identity.IdentityUser]' to type 'Microsoft.AspNetCore.Mvc.IActionResult'. - 
+2020-11-19 15:46:03.1510 INFO AspNetUsers-GetUsers: Attempted Get All Users
+2020-11-19 15:52:01.4747 ERROR AspNetUsers-GetUsers: Unable to cast object of type 'Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[Microsoft.AspNetCore.Identity.IdentityUser]' to type 'Microsoft.AspNetCore.Mvc.IActionResult'. - 
+2020-11-19 15:57:45.8691 INFO AspNetUsers-GetUsers: Attempted Get All Users
+2020-11-19 15:57:53.3585 ERROR AspNetUsers-GetUsers: Unable to cast object of type 'Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[Microsoft.AspNetCore.Identity.IdentityUser]' to type 'Microsoft.AspNetCore.Mvc.IActionResult'. - 
+2020-11-19 15:58:34.8018 INFO AspNetUsers-GetUsers: Attempted Get All Users
+2020-11-19 16:07:30.6870 ERROR AspNetUsers-GetUsers: Unable to cast object of type 'Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[Microsoft.AspNetCore.Identity.IdentityUser]' to type 'Microsoft.AspNetCore.Mvc.IActionResult'. - 
+2020-11-19 16:08:21.4410 INFO AspNetUsers-GetUsers: Attempted Get All Users

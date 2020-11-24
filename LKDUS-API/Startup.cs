@@ -55,6 +55,9 @@ namespace LKDUS_API
 
             services.AddAutoMapper(typeof(Maps));
 
+
+
+
              services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                  .AddJwtBearer(o => {
                      o.TokenValidationParameters = new TokenValidationParameters
@@ -134,8 +137,11 @@ namespace LKDUS_API
             //app.UseStaticFiles();
 
             app.UseCors("CorsPolicy");
+            
+             
+                SeedData.Seed(userManager, roleManager).Wait();
 
-            SeedData.Seed(userManager, roleManager).Wait();
+            
 
             app.UseRouting();
 
