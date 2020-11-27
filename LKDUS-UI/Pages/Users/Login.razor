@@ -10,72 +10,79 @@
 @inject NavigationManager navManager
 <div class="card">
     <h3 class="card-title">Login</h3>
-
+  
+    
+    @if (!response)
+    {
+        <div>Something went wrong with the login attempt</div>
+    }
 
     @if (LoginModels == null)
     {
         <LoadingMessage Message="Loading Users" />
     }
-    else { 
+    else
+    {
 
-    <div class="card-body">
-        <EditForm Model="Model" OnValidSubmit="HandleLogin">
-            <DataAnnotationsValidator />
-            <ValidationSummary />
-          
-            <div class="form-group">
-                <label for="userName">Izvēlieties lietotāju!</label>
+        <div class="card-body">
+            <EditForm Model="Model" OnValidSubmit="HandleLogin">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
 
-               
+                <div class="form-group">
+                    <label for="userName">Izvēlieties lietotāju!</label>
 
-                <div id="userName" name="userName">
-                    <select @bind="Model.UserName">
-                       @foreach (var model in LoginModels)
-            
-                       {
-                             
-                           <option class="form-control"    >@model.UserName</option>
 
-                
-                             
-                       }
 
-                     </select>
+                    <div id="userName" name="userName">
+                        <select class="form-control form-control-lg" @bind="Model.UserName">
 
-                     <p> </p>
+                            @foreach (var model in LoginModels)
 
+                            {
+
+                                <option class="form-control">@model.UserName</option>
+
+
+
+                            }
+
+                        </select>
+
+                        <p> </p>
+
+                    </div>
+
+
+                    <ValidationMessage For="@(() => Model.UserName)" />
                 </div>
-  
-                
-                <ValidationMessage For="@(() => Model.UserName)" />
-            </div>
 
 
-            @*<div class="form-group">
-                <select>
-                    @foreach (var model in LoginModels)
-                        {
-                            <option value="On">@model.UserName</option>
+                @*<div class="form-group">
+                        <select>
+                            @foreach (var model in LoginModels)
+                                {
+                                    <option value="On">@model.UserName</option>
 
-                        } 
+                                }
 
-                    <option value="Off">Off</option>
-                </select>
-                <p> </p>
+                            <option value="Off">Off</option>
+                        </select>
+                        <p> </p>
 
-            </div>*@
+                    </div>*@
 
 
-            @*<div class="form-group">
-                    <label for="password">Password</label>
-                    <InputText Id="password" type="password" class="form-control" @bind-Value="Model.Password" />
-                    <ValidationMessage For="@(() => Model.Password)" />
-                </div>*@
+                @*<div class="form-group">
+                        <label for="password">Password</label>
+                        <InputText Id="password" type="password" class="form-control" @bind-Value="Model.Password" />
+                        <ValidationMessage For="@(() => Model.Password)" />
+                    </div>*@
 
-            <button type="submit" class="btn btn-primary btn-block">Login </button>
+                <button type="submit" class="btn btn-primary btn-block">Login </button>
 
-        </EditForm>
-    </div>
+            </EditForm>
+        </div>
     }
 </div>
 
@@ -97,7 +104,7 @@
         {
 
 
-             this.navManager.NavigateTo("/");
+             this.navManager.NavigateTo("/measurementpositions");
 
 
         }
@@ -106,6 +113,7 @@
     protected async override Task OnInitializedAsync()
     {
         LoginModels = await authRepo.Get(Endpoints.GetUsersEndpoint); //Model = await _repo.Get(Endpoints.BooksEndpoint);
+        Model = LoginModels.First();
     }
     void SomeStartupMethod()
     {

@@ -1,0 +1,77 @@
+﻿@page "/measurementpositions/"
+
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+
+
+@inject IMeasurementPositionsRepository measurementPositionsRepository
+@inject NavigationManager navManager
+
+<div class="card" hidden="@IsShowMeasurementsPositions">
+    <h3 class="card-title">Mērījumu pozīcijas</h3>
+
+
+    @if (Positions == null)
+    {
+        <LoadingMessage Message="Notiek pogu ielāde" />
+    }
+    else
+    {
+        @*@foreach (var pos in Positions)
+            {
+
+                <div class="row">
+                    <div class="col-xs-6 col-xl-6 item"><button class="btn btn-primary">Positions</button></div>
+                    <div class="col-xs-6 col-xl-6 item"><button class="btn btn-primary">ASD</button></div>
+                </div>
+            }*@
+
+    <div class="row" >
+    @for (int i = 0; i < Positions.ToList().Count / 2; i++)
+    {
+
+        <div class="col-xs-6 col-xl-6 item"><button class="btn btn-primary" @onclick="@HideMeasurementPositions">@Positions[i].Name </button></div>
+
+
+    }
+    @for (int i = Positions.ToList().Count / 2; i < Positions.ToList().Count  ; i++)
+    {
+
+        <div class="col-xs-6 col-xl-6 item"><button class="btn btn-primary"  @onclick="@HideMeasurementPositions">@Positions[i].Name </button></div>
+
+
+    }
+
+     
+</div>
+
+            }
+
+
+        </div>
+
+
+
+
+@code {
+
+    private bool IsShowMeasurementsPositions { get; set; } = false;
+
+    private IList<MeasurementPosition> Positions;
+
+    //parame
+    private void HideMeasurementPositions(MouseEventArgs e)
+    {
+        IsShowMeasurementsPositions = !IsShowMeasurementsPositions;
+         this.navManager.NavigateTo("/measurementpositions"); 
+    }
+
+    protected async override Task OnInitializedAsync()
+    {
+
+
+        Positions = await measurementPositionsRepository.Get(Endpoints.MeasurementPositions); //Model = await _repo.Get(Endpoints.BooksEndpoint);
+    }
+}

@@ -4,6 +4,11 @@
         <name>LKDUS-API</name>
     </assembly>
     <members>
+        <member name="T:LKDUS_API.Controllers.AspNetUsersController">
+            <summary>
+            Endpoint used to interact with the measurements in the LKDUS database
+            </summary>
+        </member>
         <member name="M:LKDUS_API.Controllers.AspNetUsersController.Login(LKDUS_API.DTOs.AspNetUserDTO)">
             <summary>
             User Login endpoint
@@ -62,6 +67,46 @@
             <returns></returns>
         </member>
         <member name="M:LKDUS_API.Controllers.MeasurementsController.Delete(System.Int32)">
+            <summary>
+            Removes measurement by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LKDUS_API.Controllers.MeasurementPositionController">
+            <summary>
+            Interacts with the Measurements Table
+            </summary>
+        </member>
+        <member name="M:LKDUS_API.Controllers.MeasurementPositionController.GetMeasurementPositions">
+            <summary>
+            gets all measurement positions
+            </summary>
+            <returns>A list of all measurements positions</returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.MeasurementPositionController.GetMeasurementPosition(System.Int32)">
+            <summary>
+            Get the Measurement Position by id
+            </summary>
+            <param name="id"></param>
+            <returns>An measurement position record by id</returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.MeasurementPositionController.Create(LKDUS_API.DTOs.MeasurementPositionCreateDTO)">
+            <summary>
+            Creates a new measurement position
+            </summary>
+            <param name="measurementPositionCreateDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.MeasurementPositionController.Update(System.Int32,LKDUS_API.DTOs.MeasurementPositionUpdateDTO)">
+            <summary>
+            Updates measurement position with specified Id
+            </summary>
+            <param name="id"></param>
+            <param name="measurementPositionUpdateDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.MeasurementPositionController.Delete(System.Int32)">
             <summary>
             Removes measurement by id
             </summary>

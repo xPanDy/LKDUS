@@ -8,6 +8,7 @@ namespace LKDUS_UI.Models
 {
     public class LoginModel
     {
+        public int Id { get; set; }
         [Required]
         [Display(Name = "User Name")]
         public string UserName { get; set; }

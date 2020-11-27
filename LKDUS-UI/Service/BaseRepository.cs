@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Blazored.LocalStorage;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,12 @@ namespace LKDUS_UI.Service
     public class BaseRepository<T> : IBaseRepository<T> where T : class
     {
         private readonly IHttpClientFactory client; // this will handle all client requests
-
-        public BaseRepository(IHttpClientFactory client)
+        private readonly ILocalStorageService _localStorage;
+        public BaseRepository(IHttpClientFactory client, ILocalStorageService localStorage)
         {
             this.client = client;
+            this._localStorage = localStorage;
+
         }
 
         public async Task<bool> Create(string url, T obj)
@@ -117,6 +120,11 @@ namespace LKDUS_UI.Service
             }
 
             return false;
+        }
+
+        private async Task<string> GetBearerToken()
+        {
+            return await _localStorage.GetItemAsync<string>("authToken");
         }
     }
 }

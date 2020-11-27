@@ -39,7 +39,21 @@ namespace LKDUS_UI
             services.AddHttpClient();
             services.AddTransient<IAuthenticationRepository, AuthenticationRepository>();
 
+            
+            
+            
             services.AddScoped<ApiAuthenticationStateProvider>();
+
+
+            services.AddTransient<IMeasurementPositionsRepository, MeasurementPositionRepository>();
+           // services.AddScoped<IMeasurementPositionsRepository, MeasurementPositionRepository>();
+           
+            
+            
+            
+            services.AddScoped<JwtSecurityTokenHandler>();
+
+
 
             services.AddScoped<AuthenticationStateProvider>(prop =>
                 prop.GetRequiredService<ApiAuthenticationStateProvider>());

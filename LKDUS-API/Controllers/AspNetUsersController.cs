@@ -18,9 +18,14 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace LKDUS_API.Controllers
 {
+    /// <summary>
+    /// Endpoint used to interact with the measurements in the LKDUS database
+    /// </summary>
     [Route("api/[controller]")]
     [Route("api/login")]
     [ApiController]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+
     public class AspNetUsersController : ControllerBase
     {
         private readonly SignInManager<IdentityUser> signInManager;
@@ -105,22 +110,22 @@ namespace LKDUS_API.Controllers
         /// </summary>
         /// <returns>List of all Users</returns>
         [HttpGet]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> GetUsers()
+        public IActionResult GetUsers()
         {
             var location = GetControllerActionNames();
             try
             {
-                
-               
+
+
                 // _logger.LogInfo($"{location}: Attempted Get All Users");
                 var users = this.userManager.Users;
 
                 IList<AspNetUserDTO> operetorList = new List<AspNetUserDTO>();
 
-                foreach(var u in users)
+                foreach (var u in users)
                 {
                     var operatorUser = new AspNetUserDTO
                     {
@@ -130,13 +135,13 @@ namespace LKDUS_API.Controllers
 
                     operetorList.Add(operatorUser);
 
-                    
+
                 }
 
 
-                var response = operetorList; 
+                var response = operetorList;
                 //this.mapper.Map<IList<AspNetUserDTO>>(users);
-               // _logger.LogInfo($"{location}: Sucessfully got all Users");
+                // _logger.LogInfo($"{location}: Sucessfully got all Users");
 
                 return Ok(response);
             }
