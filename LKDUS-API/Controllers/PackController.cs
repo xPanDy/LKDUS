@@ -15,48 +15,48 @@ namespace LKDUS_API.Controllers
     
     
     /// <summary>
-    /// Interacts with the Measurements Table
+    /// Interacts with the Packs Table
     /// </summary>
 
 
     [Route("api/[controller]")]
     [ApiController]
     //[Authorize]
-    public class MeasurementsController : ControllerBase
+    public class PackController : ControllerBase
     {
-        private readonly IMeasurementRepository measurementRepository;
+        private readonly IPackRepository packRepository;
 
         private readonly ILoggerService logger;
         private readonly IMapper mapper;
 
-        public MeasurementsController(IMeasurementRepository measurementRepository,
+        public PackController(IPackRepository packRepository,
             ILoggerService logger,
             IMapper mapper
             )
         {
-            this.measurementRepository = measurementRepository;
+            this.packRepository = packRepository;
             this.logger = logger;
             this.mapper = mapper;
         }
 
         /// <summary>
-        /// gets all measurements
+        /// gets all packs
         /// </summary>
-        /// <returns>A list of all measurements</returns>
+        /// <returns>A list of all packs</returns>
         [HttpGet]
 //[Authorize(Roles = "Operator")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> GetMeasurements()
+        public async Task<IActionResult> GetPacks()
         {
             var location = GetControllerActionNames();
             try
             {
                 this.logger.LogInfo($"{location}: Attempted Call");
-                var measurements = await this.measurementRepository.FindAll();
+                var packs = await this.packRepository.FindAll();
                  
-                var response = this.mapper.Map<IList<MeasurementDTO>>(measurements);
-                this.logger.LogInfo("Sucessfully got all Measurements");
+                var response = this.mapper.Map<IList<PackDTO>>(packs);
+                this.logger.LogInfo("Sucessfully got all packs");
 
                 return Ok(response);
             }
@@ -85,32 +85,32 @@ namespace LKDUS_API.Controllers
          
          
         /// <summary>
-        /// Get the User by id
+        /// Get the pack by id
         /// </summary>
         /// <param name="id"></param>
-        /// <returns>An measurement record by id</returns>
+        /// <returns>An pack record by id</returns>
         [HttpGet("{id:int}")]
        // [Authorize(Roles = "Operator")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> GetMeasurement(int id)
+        public async Task<IActionResult> GetPack(int id)
         {
             var location = GetControllerActionNames();
             try
             {
-                this.logger.LogInfo($"{location}: Attempted Get User with ID: {id}");
-                var measurement = await this.measurementRepository.FindById(id);
+                this.logger.LogInfo($"{location}: Attempted Get pack with ID: {id}");
+                var pack = await this.packRepository.FindById(id);
 
-                if(measurement == null)
+                if(pack == null)
                 {
 
-                    this.logger.LogWarn($"Measurement with the id:{id} was not found");
+                    this.logger.LogWarn($"Pack with the id:{id} was not found");
                     return NotFound();
                 }
 
-                var response = this.mapper.Map<MeasurementDTO>(measurement);
-                this.logger.LogInfo($"Sucessfully got the measurement with Id:{id}");
+                var response = this.mapper.Map<PackDTO>(pack);
+                this.logger.LogInfo($"Sucessfully got the pack with Id:{id}");
 
 
                     return Ok(response);
@@ -129,46 +129,46 @@ namespace LKDUS_API.Controllers
 
          
         /// <summary>
-        /// Creates a new measurement
+        /// Creates a new pack
         /// </summary>
-        /// <param name="measurementCreateDTO"></param>
+        /// <param name="packCreateDTO"></param>
         /// <returns></returns>
         [HttpPost]
        // [Authorize(Roles = "Operator")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Create([FromBody] MeasurementCreateDTO measurementCreateDTO)
+        public async Task<IActionResult> Create([FromBody] PackCreateDTO packCreateDTO)
         {
 
             var location = GetControllerActionNames();
 
             try
             {
-                this.logger.LogInfo($"{location}: Measurement creation  Attempted");
-                if (measurementCreateDTO == null)
+                this.logger.LogInfo($"{location}: Pack creation  Attempted");
+                if (packCreateDTO == null)
                 {
                     this.logger.LogWarn($"{location}: Empty request was submitted");
                     return BadRequest(ModelState);
                 }
                 if (!ModelState.IsValid)
                 {
-                    this.logger.LogWarn($"{location}: Measurement Data was Incomplete");
+                    this.logger.LogWarn($"{location}: Pack Data was Incomplete");
                     return BadRequest(ModelState);
 
                 }
-                measurementCreateDTO.DateCreated = DateTime.Now.ToString();
-                var measurement = this.mapper.Map<Measurement>(measurementCreateDTO);
-                var isGood = await measurementRepository.Create(measurement);
+                packCreateDTO.DateCreated = DateTime.Now.ToString();
+                var pack = this.mapper.Map<Pack>(packCreateDTO);
+                var isGood = await packRepository.Create(pack);
                 if (!isGood)
                 {
                     
-                    return InternalError($"{location}: Measurement creation failed");
+                    return InternalError($"{location}: Pack creation failed");
                 }
 
-                this.logger.LogInfo($"{location}: Measurement creation was created");
-                this.logger.LogInfo($"{location}: {measurement}");
-                return Created("Create", new { measurement } );
+                this.logger.LogInfo($"{location}: Pack creation was created");
+                this.logger.LogInfo($"{location}: {pack}");
+                return Created("Create", new { pack } );
             }
             catch (Exception e)
             {
@@ -177,13 +177,13 @@ namespace LKDUS_API.Controllers
             }
 
         }
-         
-         /// <summary>
-         /// Updates measurement with specified Id
-         /// </summary>
-         /// <param name="id"></param>
-         /// <param name="measurementUpdateDTO"></param>
-         /// <returns></returns>
+
+        /// <summary>
+        /// Updates pack with specified Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="packUpdateDTO"></param>
+        /// <returns></returns>
         [HttpPut("{id}")]
        // [Authorize(Roles = "Operator")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -191,41 +191,41 @@ namespace LKDUS_API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Update(
             int id, 
-            [FromBody] MeasurementUpdateDTO measurementUpdateDTO)
+            [FromBody] PackUpdateDTO packUpdateDTO)
         {
             var location = GetControllerActionNames();
             try
             {
-                this.logger.LogWarn($"{location}: measurement update atempted - id: {id}");
-                if (measurementUpdateDTO == null || id <1  || measurementUpdateDTO.Id < 1 )
+                this.logger.LogWarn($"{location}: pack update atempted - id: {id}");
+                if (packUpdateDTO == null || id <1  || packUpdateDTO.Id < 1 )
                 {
-                    this.logger.LogWarn($"{location}: measurement update failed with wrong data");
+                    this.logger.LogWarn($"{location}: pack update failed with wrong data");
                     return BadRequest(ModelState);
                 }
 
-                var isExist = await this.measurementRepository.isExists(id);
+                var isExist = await this.packRepository.isExists(id);
 
                 if (!isExist)
                 {
-                    this.logger.LogWarn($"{location}: measurement Data was not found");
+                    this.logger.LogWarn($"{location}: pack Data was not found");
                     return NotFound();
                 }
                 if (!ModelState.IsValid)
                 {
-                    this.logger.LogWarn($"{location}: measurement Data was Incomplete");
+                    this.logger.LogWarn($"{location}: pack Data was Incomplete");
                     return BadRequest(ModelState);
 
                 }
-                measurementUpdateDTO.DateCreated = DateTime.Now.ToString();
-                var measurement = this.mapper.Map<Measurement>(measurementUpdateDTO);
-                var isGood = await this.measurementRepository.Update(measurement);
+                packUpdateDTO.DateCreated = DateTime.Now.ToString();
+                var pack = this.mapper.Map<Pack>(packUpdateDTO);
+                var isGood = await this.packRepository.Update(pack);
                 if (!isGood)
                 {
 
-                    return InternalError($"{location}: measurement update failed");
+                    return InternalError($"{location}: pack update failed");
                 }
 
-                this.logger.LogInfo($"{location}: measurement Data with id: {id} was updated");
+                this.logger.LogInfo($"{location}: pack Data with id: {id} was updated");
                 return NoContent();
                 
             }
@@ -239,7 +239,7 @@ namespace LKDUS_API.Controllers
 
         
         /// <summary>
-        /// Removes measurement by id
+        /// Removes pack by id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -253,29 +253,29 @@ namespace LKDUS_API.Controllers
             var location = GetControllerActionNames();
             try
             {
-                this.logger.LogWarn($"{location}: measurement deletion atempted - id: {id}");
+                this.logger.LogWarn($"{location}: pack deletion atempted - id: {id}");
                 if (id < 1 )
                 {
-                    this.logger.LogWarn($"{location}: measurement deleting failed with wrong data");
+                    this.logger.LogWarn($"{location}: pack deleting failed with wrong data");
                     return BadRequest();
                 }
                  
-                var isExist = await this.measurementRepository.isExists(id);
+                var isExist = await this.packRepository.isExists(id);
                  
                 if (!isExist)
                 {
-                    this.logger.LogWarn($"{location}: measurement Data with id: {id} was not found");
+                    this.logger.LogWarn($"{location}: pack Data with id: {id} was not found");
                     return NotFound();
                 }
-                var user = await this.measurementRepository.FindById(id);
-                var isGood = await this.measurementRepository.Delete(user);
+                var pack = await this.packRepository.FindById(id);
+                var isGood = await this.packRepository.Delete(pack);
 
                 if (!isGood)
                 {
-                    return InternalError($"{location}: measurement Delete failed");
+                    return InternalError($"{location}: pack Delete failed");
                 }
 
-                this.logger.LogWarn($"{location}:  measurement Data with id: {id} was deleted");
+                this.logger.LogWarn($"{location}:  pack Data with id: {id} was deleted");
                 return NoContent();
 
             }

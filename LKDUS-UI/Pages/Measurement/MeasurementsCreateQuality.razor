@@ -1,0 +1,146 @@
+﻿@page "/measurements/createquality" 
+
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+
+@inject IMeasurementRepository repo
+@inject NavigationManager navManager
+
+
+
+
+<form>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <button type="button" class="btn btn-primary">Back</button>
+            </div>
+            <div class="col-sm">
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="machine">Iekārta</label>
+        <select class="custom-select" id="machine">
+            <option selected>Izvēlies...</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+
+
+    <div class="form-group row">
+
+        <label for="example-datetime-local-input" class="col-2 col-form-label">Datums</label>
+        <div class="col-10">
+            <input class="form-control" type="date" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="machine">Operators</label>
+        <select class="custom-select" id="machine">
+            <option selected>Izvēlies...</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+     </div>
+
+
+    <div class="form-group row">
+        <label for="example-text-input" class="col-2 col-form-label">FUS PAKA</label>
+        <div class="col-10">
+            <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="operator">Operators</label>
+        <select class="custom-select" id="operator">
+            <option selected>Izvēlies...</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+        
+    </div>
+
+
+    <div class="form-group">
+        <label for="shift">Maiņa</label>
+        <select class="custom-select" id="shift">
+            <option selected>Izvēlies...</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+         
+    </div>
+
+
+
+    <div class="form-group">
+        <label for="master">Meistars</label>
+        <select class="custom-select" id="master">
+            <option selected>Izvēlies...</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        
+    </div>
+
+
+    <nav class="navbar navbar-dark">
+        <div class="container-fluid">
+            <div class="navbar-btn">
+
+                <button type="button" class="btn btn-primary">Mitrā finiera biezums</button>
+            </div>
+            <div class="navbar-btn">
+
+                <button type="button" class="btn btn-primary">Izmērs Platums garus</button>
+            </div>
+            <div class="navbar-btn">
+
+                <button type="button" class="btn btn-primary">Kvalitāte</button>
+            </div>
+
+        </div>
+    </nav>
+
+</form>
+
+
+
+
+
+ 
+
+@code {
+    private IList<Measurement> Model2;
+
+    protected async override Task OnInitializedAsync()
+    {
+        Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+    }
+
+
+    private void OpenCreateForm(MouseEventArgs e)
+    {
+
+        this.navManager.NavigateTo("/measurements/create");
+    }
+
+}

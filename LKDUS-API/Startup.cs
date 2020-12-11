@@ -103,6 +103,7 @@ namespace LKDUS_API
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IMeasurementRepository, MeasurementRepository>();
             services.AddScoped<IMeasurementPositionRepository, MeasurementPositionRepository>();
+            services.AddScoped<IMeasurementTypeRepository, MeasurementTypeRepository>();
 
 
             services.AddControllers();

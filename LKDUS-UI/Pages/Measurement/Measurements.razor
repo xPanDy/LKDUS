@@ -1,10 +1,135 @@
-﻿@page "/books/"
+﻿@page "/measurements/{measurementPositionId}"
+
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+
+@inject IMeasurementRepository repo
+@inject NavigationManager navManager
+@inject IMeasurementPositionsRepository measurementPositionRepo
+
+<div class="card" style="height:100%">
 
 
-@inject IMe
+    <div style="height:50%" class="container">
+        <div class="mh-50">
+            <h3 class="card-title">Mitrais finieris</h3>
+            <button type="button" @onclick="@OpenCreateForm" class="btn btn-info">Jauna paka</button>
+            <h3 class="card-title">Pārbaudītās pakas</h3>
+        
+        </div>
 
-<h3>Measurements</h3>
 
+    </div>
+
+
+
+    @if (Model == null)
+    {
+        <LoadingMessage Message="Notiek mērījumu ielāde" />
+    }
+    else
+    {
+
+        <!-- Scroll bar present and enabled when more contents -->
+
+        
+
+
+        <div class="container pre-scrollable" style="height:50%" >
+            <div class="mh-50">
+                <table class="table" >
+                    <thead>
+                        <tr>
+                            <th scope="col">Nr.                 </th>
+                            <th scope="col">Datums              </th>
+                            <th scope="col">Maiņa               </th>
+                            <th scope="col">Iekārta             </th>
+                            <th scope="col">Operators           </th>
+                            <th scope="col">Mērījuma pozīcija   </th>
+                            <th scope="col">Pakas ID            </th>
+                            <th scope="col">Mērījuma tipa id    </th>
+                            <th scope="col">Mērījums 1          </th>
+                            <th scope="col">Mērījums 2          </th>
+                            <th scope="col">Mērījums 3          </th>
+                            <th scope="col">Mērījums 4          </th>
+                            <th scope="col">Mērījums 5          </th>
+                            <th scope="col">Mērījums 6          </th>
+                            <th scope="col">Mērījums 7          </th>
+                            <th scope="col">Mērījums 8          </th>
+                            <th scope="col">Mērījums 9          </th>
+                            @*<th scope="col">Meistars</th>*@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var model in Model)
+                        {
+
+                        <tr>
+                            <th scope="row">@model.Id</th>  
+                            <td>@model.DateCreated</td>    
+                            <td>@model.Shift</td>               
+                            <td>@model.MachineId</td>    
+                            <td>@model.UserId</td>
+                            <td>@model.MeasurementPositionId</td>   
+                            <td>@model.PackId</td>   
+                            <td>@model.MeasurementTypeId</td>   
+                            <td>@model.Measurement1</td>   
+                            <td>@model.Measurement2</td>   
+                            <td>@model.Measurement3</td>   
+                            <td>@model.Measurement4</td>   
+                            <td>@model.Measurement5</td>   
+                            <td>@model.Measurement6</td>   
+                            <td>@model.Measurement7</td>   
+                            <td>@model.Measurement8</td>   
+                            <td>@model.Measurement9</td>   
+
+
+                                          
+                                                 
+                        </tr>                                   
+                        }                                       
+                                                                
+                                                                
+                    </tbody>                                    
+                </table>                                        
+            </div>                                              
+                                                                
+                                                                
+                                                           
+        </div>
+
+
+
+
+    }
+</div>
 @code {
+
+    [Parameter]
+    public string measurementPositionId { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        //the param will be set now
+        string test = measurementPositionId;
+    }
+
+    private IList<Measurement> Model;
+    private MeasurementPosition measurementPosition;
+
+    protected async override Task OnInitializedAsync()
+    {
+        Model = await repo.Get(Endpoints.MeasurementEndpoint);
+
+    }
+
+
+    private void OpenCreateForm(MouseEventArgs e)
+    {
+        //this.measurementPosition.
+        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create");
+    }
 
 }

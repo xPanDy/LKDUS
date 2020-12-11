@@ -9,17 +9,17 @@
 @inject IAuthenticationRepository authRepo
 @inject NavigationManager navManager
 <div class="card">
-    <h3 class="card-title">Login</h3>
+    <h3 class="card-title">Ieiešana sistēmā</h3>
   
     
     @if (!response)
     {
-        <div>Something went wrong with the login attempt</div>
+        <div>Kaut kas notika greizi ar ieiešanu sistēmā</div>
     }
 
     @if (LoginModels == null)
     {
-        <LoadingMessage Message="Loading Users" />
+        <LoadingMessage Message="Notiek lietotāju ielāde..." />
     }
     else
     {
@@ -79,7 +79,7 @@
                         <ValidationMessage For="@(() => Model.Password)" />
                     </div>*@
 
-                <button type="submit" class="btn btn-primary btn-block">Login </button>
+                <button type="submit" class="btn btn-primary btn-block">Ieiet!</button>
 
             </EditForm>
         </div>

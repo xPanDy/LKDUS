@@ -113,6 +113,86 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:LKDUS_API.Controllers.MeasurementsTypeController">
+            <summary>
+            Interacts with the Measurements type Table
+            </summary>
+        </member>
+        <member name="M:LKDUS_API.Controllers.MeasurementsTypeController.GetMeasurementsType">
+            <summary>
+            gets all measurements types
+            </summary>
+            <returns>A list of all measurements types</returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.MeasurementsTypeController.GetMeasurementType(System.Int32)">
+            <summary>
+            Get the measurement type by id
+            </summary>
+            <param name="id"></param>
+            <returns>An measurement type record by id</returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.MeasurementsTypeController.Create(LKDUS_API.DTOs.MeasurementTypeCreateDTO)">
+            <summary>
+            Creates a new measurement type
+            </summary>
+            <param name="measurementTypeCreateDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.MeasurementsTypeController.Update(System.Int32,LKDUS_API.DTOs.MeasurementTypeUpdateDTO)">
+            <summary>
+            Updates measurement type with specified Id
+            </summary>
+            <param name="id"></param>
+            <param name="measurementTypeUpdateDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.MeasurementsTypeController.Delete(System.Int32)">
+            <summary>
+            Removes measurement type by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LKDUS_API.Controllers.PackController">
+            <summary>
+            Interacts with the Packs Table
+            </summary>
+        </member>
+        <member name="M:LKDUS_API.Controllers.PackController.GetPacks">
+            <summary>
+            gets all packs
+            </summary>
+            <returns>A list of all packs</returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.PackController.GetPack(System.Int32)">
+            <summary>
+            Get the pack by id
+            </summary>
+            <param name="id"></param>
+            <returns>An pack record by id</returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.PackController.Create(LKDUS_API.DTOs.PackCreateDTO)">
+            <summary>
+            Creates a new pack
+            </summary>
+            <param name="packCreateDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.PackController.Update(System.Int32,LKDUS_API.DTOs.PackUpdateDTO)">
+            <summary>
+            Updates pack with specified Id
+            </summary>
+            <param name="id"></param>
+            <param name="packUpdateDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.PackController.Delete(System.Int32)">
+            <summary>
+            Removes pack by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:LKDUS_API.Controllers.UsersController">
             <summary>
             Endpoint used to interact with the Users in the LKDUS database

@@ -1,0 +1,282 @@
+﻿@page "/measurements/create/thickness" 
+
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+
+@inject IMeasurementRepository repo
+@inject NavigationManager navManager
+
+
+
+
+ <form>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col">
+                <button type="button" @onclick="@GoToCreation" class="btn btn-primary btn-block">Atpakaļ</button>
+            </div>
+            <div class="col w-25"><h3 class="card-title">Mitrā finiera biezums</h3></div>
+            <div class="col">
+                <button type="submit" class="btn btn-primary btn-block">Saglabāt</button>
+            </div>
+            @*<div class="col">
+                <button type="button" @onclick="@GoToCreation" class="btn btn-primary">Atpakaļ</button>
+            </div>
+            <div class="col"> <h3 class="card-title">Mitrā finiera biezums</h3> </div>
+            <div class="col ">
+                <button type="submit" class="btn btn-success  pull-right">Saglabāt</button>
+            </div>*@
+
+        </div>
+        </div>
+    <div class="container">
+        <div class="form-group">
+            <label for="machine">Iekārta</label>
+            <input id="machine" class="form-control" type="text" placeholder="Iekārta" readonly>
+
+        </div>
+
+        <table class="table table-hover">
+            <thead>
+                <tr >
+                    <th class="text-center" scope="col">Nr.</th>
+                    <th class="text-center"  scope="col">1</th>
+                    <th class="text-center"  scope="col">2</th>
+                    <th class="text-center"  scope="col">3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background-color: @highlight1" @onclick="@HighlightSelected1">
+                    <th class="text-center"   scope="row">1</th>
+                    <td class="text-center" > @positionValues[0]</td>
+                    <td class="text-center" > @positionValues[1]</td>
+                    <td class="text-center" > @positionValues[2]</td>
+                </tr>
+                <tr style="background-color: @highlight2" @onclick="@HighlightSelected2">
+                    <th class="text-center"  scope="row">2</th>
+                    <td class="text-center" >@positionValues[0] </td>
+                    <td class="text-center" >@positionValues[1] </td>
+                    <td class="text-center" >@positionValues[2] </td>
+                </tr>
+                <tr style="background-color: @highlight3" @onclick="@HighlightSelected3">
+                    <th class="text-center"  scope="row">3</th>
+                    <td class="text-center" > @positionValues[0]</td>
+                    <td class="text-center" > @positionValues[1]</td>
+                    <td class="text-center" > @positionValues[2]</td>
+                </tr>
+                <tr style="background-color: @highlight4" @onclick="@HighlightSelected1" >
+                    <th class="text-center"  scope="row">4</th>
+                    <td class="text-center" >@positionValues[0] </td>
+                    <td class="text-center" >@positionValues[1] </td>
+                    <td class="text-center" >@positionValues[2] </td>
+                </tr>
+                <tr >
+                    <th class="text-center"  scope="row"></th>
+                    <td class="text-center" > </td>
+                    <td class="text-center" > </td>
+                    <td class="text-center" > </td>
+                </tr>
+
+                <tr>
+                    <th class="text-center"  scope="row">VID.</th>
+                    <td class="text-center" >@positionValues[0] </td>
+                    <td class="text-center" >@positionValues[1] </td>
+                    <td class="text-center" >@positionValues[2]</td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td class="text-center">
+                        <button type="button" @onclick="(()=>setPos(0))" class="btn btn-primary alert-info" >
+                            <span class="badge badge-info">1.poz</span>
+                            <br />
+                            <span class="badge badge-light">
+                                @positionValues[0]
+
+                            </span>
+                        </button>
+                    </td >
+                    <td class="text-center">
+                        <button type="button" @onclick="(()=>setPos(1))"   class="btn btn-primary alert-info">
+                            <span class="badge badge-info">2.poz</span><br />
+                            <span class="badge badge-light">@positionValues[1]</span>
+                        </button>
+                    </td>
+                    <td class="text-center">
+                        <button type="button" @onclick="(()=>setPos(2))"  class="btn btn-primary alert-info">
+                            <span class="badge badge-info">3.poz</span><br />
+                            <span class="badge badge-light">@positionValues[2]</span>
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row"></th>
+                    <td> </td>
+                    <td class="text-center">
+                        <button type="button" class="btn btn-success">
+                            OK
+                        </button>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   
+     
+     <div class="container" >
+
+       
+        
+       
+    </div>
+
+    <div  class="container">
+
+        <div class="d-flex justify-content-between">
+            <button type="button" @onclick="Reduce" style="color:deeppink" class="btn btn-secondary btn-lg">-</button>
+            <table class="table table-bordered table-bordered">
+                <tbody>
+                    <tr class="text-center">
+
+                        <td>  <button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button></td>
+                        <td><button type="button" @onclick="(()=>select(sizes[1]))" class="btn btn-info btn-lg btn-block" >@sizes[1]</button></td>
+                        <td><button type="button" @onclick="(()=>select(sizes[2]))" class="btn btn-info btn-lg btn-block">@sizes[2]</button></td>
+
+                    </tr>
+                    <tr class="text-center" >
+                        <td><button type="button" @onclick="(()=>select(sizes[3]))" class="btn btn-info btn-lg btn-block">@sizes[3]</button></td>
+                        <td><button type="button" @onclick="(()=>select(sizes[4]))" class="btn btn-info btn-lg btn-block">@sizes[4]</button></td>
+                        <td><button type="button" @onclick="(()=>select(sizes[5]))" class="btn btn-info btn-lg btn-block">@sizes[5]</button></td>
+                    </tr>
+                    <tr  class="text-center">
+                        <td><button type="button" @onclick="(()=>select(sizes[6]))" class="btn btn-info btn-lg btn-block">@sizes[6]</button></td>
+                        <td><button type="button" @onclick="(()=>select(sizes[7]))" class="btn btn-info btn-lg btn-block">@sizes[7]</button></td>
+                        <td><button type="button" @onclick="(()=>select(sizes[8]))" class="btn btn-info btn-lg btn-block">@sizes[8]</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" style="color:lawngreen" @onclick="Add" class="btn btn-secondary btn-lg">+</button>
+        </div>
+
+    </div>
+    
+    
+
+
+
+</form>
+ 
+
+@code {
+
+    private void HighlightSelected1()
+    {
+       // highlight1 = highlight1 == "" ? "red" : "";
+    }
+
+    private void HighlightSelected2()
+    {
+        highlight2 = highlight2 == "" ? "red" : "";
+    }//
+
+    private void HighlightSelected3()
+    {
+       // highlight3 = highlight3 == "" ? "red" : "";
+    }
+
+    private void HighlightSelected4()
+    {
+      //  highlight4 = highlight4 == "" ? "red" : "";
+    }
+
+    private string highlight1 { get; set; } = "";
+    private string highlight2 { get; set; } = "";
+    private string highlight3 { get; set; } = "";
+    private string highlight4 { get; set; } = "";
+
+    private void select(decimal value)
+    {
+        positionValues[actPos] = value;
+
+    }
+
+    private void setPos( int i)
+    {
+
+        // Color = Color == "red" ? "green" : "red";
+        actPos = i;
+
+    }
+
+    private string Color { get; set; } = "red";
+    private IList<Measurement> Model2;
+
+    private int actPos;
+    private decimal[] sizes = new decimal[9];
+    private decimal start = 1.51m;
+
+    private decimal selectedValue;
+    private decimal[] positionValues = new decimal[3];
+    private decimal positionValue;
+
+
+    public List<decimal> range = new List<decimal>();
+
+    protected async override Task OnInitializedAsync()
+    {
+        Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+
+        for (int i = 0; i< sizes.Length; i++)
+        {
+
+            sizes[i] = start  ;
+            start = start + 0.01m;
+        }
+
+    }
+
+
+    private void OpenCreateForm(MouseEventArgs e)
+    {
+
+        this.navManager.NavigateTo("/measurements/create");
+    }
+
+    private void GoToCreation(MouseEventArgs e)
+    {
+
+        this.navManager.NavigateTo("/measurements/create");
+    }
+
+
+
+
+    private void Reduce(MouseEventArgs e)
+    {
+        for (int i = 0; i < sizes.Length; i++)
+        {
+
+            sizes[i] = sizes[i] - 0.01m;
+        }
+
+    }
+
+
+    private void Add(MouseEventArgs e)
+    {
+        //  Color = "black";
+
+        for (int i = 0; i < sizes.Length; i++)
+        {
+
+            sizes[i] = sizes[i] + 0.01m;
+        }
+    }
+
+
+}

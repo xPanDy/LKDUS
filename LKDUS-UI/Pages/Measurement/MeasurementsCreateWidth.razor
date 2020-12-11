@@ -1,0 +1,226 @@
+﻿@page "/measurements/create/measurementdimensions/width"
+        
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+
+@inject IMeasurementRepository repo
+@inject NavigationManager navManager
+
+
+
+
+<div class="container">
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button type="button" @onclick="@BacktochooseDimension" class="btn btn-primary btn-block">Atpakaļ</button>
+            </div>
+            <div class="col w-25"><h3 class="card-title">Mitrā finiera platums</h3></div>
+            <div class="col">
+                <button type="submit" class="btn btn-primary btn-block">Saglabāt</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-outline-secondary btn-block"><h4>4x8</h4></button>
+            </div>
+            <div class="col w-25"></div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-secondary btn-block"><h4>8x4</h4></button>
+            </div>
+            <div class="col w-25"></div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-secondary btn-block"><h4>4x4</h4></button>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="w-100 h-25"></div>
+    <table class="table table-hover">
+
+        <thead>
+            <tr>
+                <th rowspan="2">Nr.p.k.</th>
+                <th colspan="2">Lokšņu platums</th>
+                <th rowspan="2">Slīpums</th>
+            </tr>
+            <tr>
+                <td>kreisā</td>
+                <td>labā</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td></td>
+                <td></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td></td>
+                <td></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td></td>
+                <td></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td></td>
+                <td></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td></td>
+                <td></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td></td>
+                <td></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td></td>
+                <td></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td></td>
+                <td></td>
+                <td>0</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <div class="container">
+
+        <div class="d-flex justify-content-between">
+            <button type="button" @onclick="Reduce" style="color:deeppink" class="btn btn-secondary btn-lg">-</button>
+            <table class="table table-bordered table-bordered">
+                <tbody>
+                    <tr class="text-center">
+
+                        <td>  <button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button></td>
+                        <td><button type="button" @onclick="(()=>select(sizes[1]))" class="btn btn-info btn-lg btn-block">@sizes[1]</button></td>
+                        <td><button type="button" @onclick="(()=>select(sizes[2]))" class="btn btn-info btn-lg btn-block">@sizes[2]</button></td>
+
+                    </tr>
+                    <tr class="text-center">
+                        <td><button type="button" @onclick="(()=>select(sizes[3]))" class="btn btn-info btn-lg btn-block">@sizes[3]</button></td>
+                        <td><button type="button" @onclick="(()=>select(sizes[4]))" class="btn btn-info btn-lg btn-block">@sizes[4]</button></td>
+                        <td><button type="button" @onclick="(()=>select(sizes[5]))" class="btn btn-info btn-lg btn-block">@sizes[5]</button></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td><button type="button" @onclick="(()=>select(sizes[6]))" class="btn btn-info btn-lg btn-block">@sizes[6]</button></td>
+                        <td><button type="button" @onclick="(()=>select(sizes[7]))" class="btn btn-info btn-lg btn-block">@sizes[7]</button></td>
+                        <td><button type="button" @onclick="(()=>select(sizes[8]))" class="btn btn-info btn-lg btn-block">@sizes[8]</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" style="color:lawngreen" @onclick="Add" class="btn btn-secondary btn-lg">+</button>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+@code {
+    private IList<Measurement> Model2;
+
+
+
+    protected async override Task OnInitializedAsync()
+    {
+        Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+        for (int i = 0; i < sizes.Length; i++)
+        {
+
+            sizes[i] = start;
+            start = start + 1;
+        }
+    }
+
+    private int actPos;
+
+    private int[] sizes = new int[9];
+    private int start = 27;
+
+    private int selectedValue;
+    private int[] positionValues = new int[3];
+    private int positionValue;
+
+
+    private void select(int value)
+    {
+        positionValues[actPos] = value;
+
+    }
+
+
+    private void BacktochooseDimension(MouseEventArgs e)
+    {
+
+        this.navManager.NavigateTo("/measurements/create/measurementdimensions");
+    }
+
+
+    private void Reduce(MouseEventArgs e)
+    {
+        for (int i = 0; i < sizes.Length; i++)
+        {
+
+            sizes[i] = sizes[i] -1;
+        }
+
+    }
+
+
+    private void Add(MouseEventArgs e)
+    {
+        //  Color = "black";
+
+        for (int i = 0; i < sizes.Length; i++)
+        {
+
+            sizes[i] = sizes[i] + 1;
+        }
+    }
+
+
+}

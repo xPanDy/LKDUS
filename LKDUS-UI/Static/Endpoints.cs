@@ -17,5 +17,7 @@ namespace LKDUS_UI.Static
 
         public static string GetUsersEndpoint = $"{BaseUrl}api/login/";
         public static string MeasurementPositions = $"{BaseUrl}api/measurementposition/";
+
+        public static string MeasurementTypeEndpoint = $"{BaseUrl}api/measurementtype/";
     }
 }

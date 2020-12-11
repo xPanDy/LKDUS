@@ -12,19 +12,29 @@ namespace LKDUS_UI.Models
 
 
         public string DateCreated { get; set; }
-        //public int Shift { get; set; }
+        public int Shift { get; set; }
 
-         
-         
+        public int? MachineId { get; set; }
+        public virtual Machine Machine { get; set; }
+
+        public int? UserId { get; set; }
+       
+
+        public int? MeasurementPositionId { get; set; }
+        public int? PackId { get; set; }
+        public int? MeasurementTypeId { get; set; }
 
 
-        //[Required]
-        //public int? UserId { get; set; }
-        //public virtual LoginModel LoginModel { get; set; }
 
-        //public int? MeasurementPositionId { get; set; }
-        //public virtual MeasurementPosition MeasurementPosition { get; set; }
-
+        public string Measurement1 { get; set; }
+        public string Measurement2 { get; set; }
+        public string Measurement3 { get; set; }
+        public string Measurement4 { get; set; }
+        public string Measurement5 { get; set; }
+        public string Measurement6 { get; set; }
+        public string Measurement7 { get; set; }
+        public string Measurement8 { get; set; }
+        public string Measurement9 { get; set; }
 
 
 

@@ -18,10 +18,17 @@ namespace LKDUS_API.Mapping
             CreateMap<User, UserUpdateDTO>().ReverseMap();
 
             CreateMap<Machine, MachineDTO>().ReverseMap();
+           
+            CreateMap<Pack, PackDTO>().ReverseMap();
 
             CreateMap<Measurement, MeasurementDTO>().ReverseMap();
             CreateMap<Measurement, MeasurementCreateDTO>().ReverseMap();
             CreateMap<Measurement, MeasurementUpdateDTO>().ReverseMap();
+          
+            
+            CreateMap<MeasurementType, MeasurementTypeDTO>().ReverseMap();
+            CreateMap<MeasurementType, MeasurementTypeUpdateDTO>().ReverseMap();
+            CreateMap<MeasurementType, MeasurementTypeCreateDTO>().ReverseMap();
             
             CreateMap<MeasurementPosition, MeasurementPositionDTO>().ReverseMap();
             CreateMap<MeasurementPosition, MeasurementPositionCreateDTO>().ReverseMap();

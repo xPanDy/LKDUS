@@ -16,6 +16,7 @@ using LKDUS_UI.Service;
 using System.IdentityModel.Tokens.Jwt;
 using LKDUS_UI.Providers;
 using Microsoft.AspNetCore.Components.Authorization;
+using Blazored.Localisation;
 
 namespace LKDUS_UI
 {
@@ -46,11 +47,15 @@ namespace LKDUS_UI
 
 
             services.AddTransient<IMeasurementPositionsRepository, MeasurementPositionRepository>();
-           // services.AddScoped<IMeasurementPositionsRepository, MeasurementPositionRepository>();
-           
-            
-            
-            
+            services.AddTransient<IMeasurementRepository, MeasurementRepository>();
+            services.AddTransient<IMachinesRepository, MachineRepository>();
+            services.AddTransient<IMeasurementTypeRepository, MeasurementTypeRepository>();
+            services.AddTransient<IPacksRepository, PackRepository>();
+            // services.AddScoped<IMeasurementPositionsRepository, MeasurementPositionRepository>();
+
+
+
+            services.AddBlazoredLocalisation();
             services.AddScoped<JwtSecurityTokenHandler>();
 
 

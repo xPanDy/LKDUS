@@ -9,63 +9,70 @@
 @inject IMeasurementPositionsRepository measurementPositionsRepository
 @inject NavigationManager navManager
 
-<div class="card" hidden="@IsShowMeasurementsPositions">
+<div class="card">
     <h3 class="card-title">Mērījumu pozīcijas</h3>
 
 
     @if (Positions == null)
     {
-        <LoadingMessage Message="Notiek pogu ielāde" />
+        <LoadingMessage Message="Notiek mērījumu pozīciju ielāde" />
     }
     else
     {
-        @*@foreach (var pos in Positions)
-            {
-
-                <div class="row">
-                    <div class="col-xs-6 col-xl-6 item"><button class="btn btn-primary">Positions</button></div>
-                    <div class="col-xs-6 col-xl-6 item"><button class="btn btn-primary">ASD</button></div>
-                </div>
-            }*@
-
-    <div class="row" >
-    @for (int i = 0; i < Positions.ToList().Count / 2; i++)
-    {
-
-        <div class="col-xs-6 col-xl-6 item"><button class="btn btn-primary" @onclick="@HideMeasurementPositions">@Positions[i].Name </button></div>
 
 
-    }
-    @for (int i = Positions.ToList().Count / 2; i < Positions.ToList().Count  ; i++)
-    {
+        <div class="container">
 
-        <div class="col-xs-6 col-xl-6 item"><button class="btn btn-primary"  @onclick="@HideMeasurementPositions">@Positions[i].Name </button></div>
+            <div class="container">
+
+                @{
+
+                    {
+                        while (j < Positions.Count)
+                        {
+                            <div class="row mt-5">
+                                <div class="col"><button class="btn btn-warning btn-block" @onclick="@(e=> NavigateToMeasurements(e,j))">@Positions[j].Name </button></div>
+
+                                @{ j++;}
+                                <div class="col"><button class="btn btn-warning btn-block" @onclick="@(e=> NavigateToMeasurements(e,j))">@Positions[j].Name </button></div>
+
+                                <div class="w-100"></div>
+
+                            </div>
+
+                           j++;
+
+                        }
 
 
-    }
+                    }
+               }
 
-     
-</div>
-
-            }
-
-
+            </div>
         </div>
 
+    }
 
+</div>
 
 
 @code {
 
-    private bool IsShowMeasurementsPositions { get; set; } = false;
+    [Parameter]
+    public string measurementPositionId { get; set; }
+    int j = 0;
+ 
+    
+
+
 
     private IList<MeasurementPosition> Positions;
 
     //parame
-    private void HideMeasurementPositions(MouseEventArgs e)
+    private void NavigateToMeasurements(MouseEventArgs a, int i)
     {
-        IsShowMeasurementsPositions = !IsShowMeasurementsPositions;
-         this.navManager.NavigateTo("/measurementpositions"); 
+        measurementPositionId = i.ToString();
+        this.navManager.NavigateTo($"/measurements/{measurementPositionId}");
     }
 
     protected async override Task OnInitializedAsync()

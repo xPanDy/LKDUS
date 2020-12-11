@@ -6,22 +6,20 @@ using System.Threading.Tasks;
 
 namespace LKDUS_UI.Models
 {
-    public class MeasurementPosition
+    public class Pack
     {
-
         public int Id { get; set; }
-        [Required]
-        [Display(Name = "Name")]
-        public string Name { get; set; }
-
-
+        public string Code { get; set; }
+        public string Author { get; set; }
+        public string DateCreated { get; set; }
+        public string Machine { get; set; }
 
 
 
     }
 
-   
 
-    
-     
+
+
+
 }
