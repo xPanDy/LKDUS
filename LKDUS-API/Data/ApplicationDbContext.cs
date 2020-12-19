@@ -17,9 +17,22 @@ namespace LKDUS_API.Data
         public DbSet<Role> Roles { get; set; }
         public DbSet<Machine> Machines { get; set; }
         public DbSet<Pack> Packs { get; set; }
+        //public DbSet<FusPack> FusPacks { get; set; }
 
+        public virtual DbSet<FusPack> FusPack { get; set; }
 
-       
+        //protected override void OnModelCreating(ModelBuilder builder)
+        //{
+        //    builder.Entity<FusPack>(entity =>
+        //    {
+        //       //entity.HasKey(e => e.Id);
+        //        entity.ToTable("FusPack");
+        //        entity.HasNoKey();
+        //       //entity.Property(e => e.Name);
+
+        //   });
+        //}
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

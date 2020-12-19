@@ -30,11 +30,22 @@
                     {
                         while (j < Positions.Count)
                         {
+                            var tmp = j;
+                            var tmp2 = j + 1;
                             <div class="row mt-5">
-                                <div class="col"><button class="btn btn-warning btn-block" @onclick="@(e=> NavigateToMeasurements(e,j))">@Positions[j].Name </button></div>
+                               
+                                <div  class="col"><button id="@tmp" class="btn btn-warning btn-block" @onclick="@(e=> NavigateToMeasurements(e,tmp))">@Positions[j].Name </button></div>
 
-                                @{ j++;}
-                                <div class="col"><button class="btn btn-warning btn-block" @onclick="@(e=> NavigateToMeasurements(e,j))">@Positions[j].Name </button></div>
+                                @{ 
+
+                                    j++;
+                                    tmp = j;
+                                    tmp2 = j + 1;
+                                    //var tmp2 = j + 1;
+                                    // tmp2 = j + 1;
+                                 }
+                               
+                                <div class="col"><button id="@tmp2" class="btn btn-warning btn-block" @onclick="@(e=> NavigateToMeasurements(e,tmp2))">@Positions[j].Name </button></div>
 
                                 <div class="w-100"></div>
 
@@ -61,6 +72,7 @@
     [Parameter]
     public string measurementPositionId { get; set; }
     int j = 0;
+
  
     
 

@@ -15,13 +15,13 @@ using System.Threading.Tasks;
 
 namespace LKDUS_UI.Service
 {
-    public class PackRepository : BaseRepository<FusPack>, IPacksRepository
+    public class FusPackRepository : BaseRepository<FusPack>, IFusPacksRepository
     {
 
         private readonly IHttpClientFactory clientFactory;
         private readonly ILocalStorageService localStorageService;
 
-        public PackRepository(IHttpClientFactory httpClientFactory,
+        public FusPackRepository(IHttpClientFactory httpClientFactory,
             ILocalStorageService localStorageService) : base(httpClientFactory, localStorageService)
         {
             this.clientFactory = httpClientFactory;

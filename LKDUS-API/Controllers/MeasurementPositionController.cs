@@ -92,7 +92,7 @@ namespace LKDUS_API.Controllers
         /// <param name="id"></param>
         /// <returns>An measurement position record by id</returns>
         [HttpGet("{id:int}")]
-        [Authorize(Roles = "Operator")]
+       // [Authorize(Roles = "Operator")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]

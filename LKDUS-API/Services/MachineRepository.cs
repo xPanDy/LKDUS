@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace LKDUS_API.Services
 {
-    public class PackRepository : IPackRepository
+    public class MachineRepository : IMachineRepository
     {
         private readonly ApplicationDbContext _db;
 
-        public PackRepository(ApplicationDbContext db)
+        public MachineRepository(ApplicationDbContext db)
         {
             //dependency initialized through constructor
             _db = db;
         }
 
-        public async Task<bool> Create(Pack entity)
+        public async Task<bool> Create(Machine entity)
         {
             await _db.Packs.AddAsync(entity);
             return await Save();

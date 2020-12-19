@@ -1,0 +1,88 @@
+2020-12-16 14:34:30.2408 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-16 14:34:30.4532 INFO Sucessfully got all measurementPositions
+2020-12-16 14:37:33.5240 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-16 14:37:33.6995 INFO Sucessfully got all measurementPositions
+2020-12-16 17:11:25.7957 INFO AspNetUsers-Login: Login attempted call from user operator
+2020-12-16 17:11:26.0728 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2020-12-16 17:11:26.5481 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-16 17:11:26.6163 INFO Sucessfully got all measurementPositions
+2020-12-16 17:11:27.7735 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-16 17:11:27.8182 INFO Sucessfully got all Measurements
+2020-12-16 17:11:27.9390 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-16 17:11:27.9629 INFO Sucessfully got the measurement position with Id:1
+2020-12-16 17:11:29.2039 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-16 17:11:29.2039 INFO Sucessfully got all Measurements
+2020-12-16 17:11:29.2699 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-16 17:11:29.2818 INFO Sucessfully got all Measurements
+2020-12-16 17:11:29.3037 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-16 17:11:29.3230 INFO Sucessfully got the measurement position with Id:1
+2020-12-16 17:11:30.2690 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-16 17:11:30.2869 INFO Sucessfully got all Measurements
+2020-12-16 17:11:30.3114 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-16 17:11:30.3252 INFO Sucessfully got the measurement position with Id:1
+2020-12-16 17:11:31.0788 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-16 17:11:31.1076 INFO Sucessfully got all measurementPositions
+2020-12-16 17:12:05.1118 INFO FusPack-GetFusPacks: Attempted Call
+2020-12-16 17:12:09.5420 ERROR FusPack-GetFusPacks:Invalid column name 'OperatorName'. - 
+2020-12-16 17:21:13.6525 INFO FusPack-GetFusPacks: Attempted Call
+2020-12-16 17:21:28.7312 ERROR FusPack-GetFusPacks:Unable to cast object of type 'System.DateTime' to type 'System.String'. - 
+2020-12-16 17:26:05.8012 INFO FusPack-GetFusPacks: Attempted Call
+2020-12-16 17:26:28.4511 INFO Sucessfully got all FUS packs
+2020-12-16 17:27:45.1808 INFO FusPack-GetFusPacks: Attempted Call
+2020-12-16 17:27:54.2410 INFO Sucessfully got all FUS packs
+2020-12-16 17:28:08.3927 INFO FusPack-GetPack: Attempted Get FUS pack with ID: 1963066
+2020-12-16 17:28:08.5247 INFO Sucessfully got the pack with Id:1963066
+2020-12-16 17:28:33.4632 INFO FusPack-GetPack: Attempted Get FUS pack with ID: 1963066
+2020-12-16 17:28:33.5591 INFO Sucessfully got the pack with Id:1963066
+2020-12-16 17:28:49.5536 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-16 17:28:49.6125 INFO Sucessfully got all measurementPositions
+2020-12-16 17:28:51.6057 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-16 17:28:51.6517 INFO Sucessfully got all Measurements
+2020-12-16 17:28:51.6828 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-16 17:28:51.6962 INFO Sucessfully got the measurement position with Id:1
+2020-12-16 17:28:53.6416 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-16 17:28:53.6533 INFO Sucessfully got all Measurements
+2020-12-16 17:28:53.6934 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-16 17:28:53.7118 INFO Sucessfully got all Measurements
+2020-12-16 17:28:53.7465 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-16 17:28:53.7679 INFO Sucessfully got the measurement position with Id:1
+2020-12-16 17:29:00.7514 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-16 17:29:00.7875 INFO Sucessfully got all Measurements
+2020-12-16 17:29:00.8160 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-16 17:29:00.8319 INFO Sucessfully got all Measurements
+2020-12-16 17:29:00.8581 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-16 17:29:00.8687 INFO Sucessfully got the measurement position with Id:1
+2020-12-16 17:29:01.3179 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-16 17:29:01.3179 INFO Sucessfully got all Measurements
+2020-12-16 17:29:01.3810 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-16 17:29:01.3810 INFO Sucessfully got all Measurements
+2020-12-16 17:29:01.4081 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-16 17:29:01.4246 INFO Sucessfully got the measurement position with Id:1
+2020-12-16 17:29:08.6361 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-16 17:29:08.6612 INFO Sucessfully got all Measurements
+2020-12-16 17:29:08.7317 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-16 17:29:08.7543 INFO Sucessfully got all Measurements
+2020-12-16 17:29:08.7885 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-16 17:29:08.8052 INFO Sucessfully got the measurement position with Id:1
+2020-12-16 17:29:09.2339 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-16 17:29:09.2759 INFO Sucessfully got all Measurements
+2020-12-16 17:29:09.3150 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-16 17:29:09.3324 INFO Sucessfully got all Measurements
+2020-12-16 17:29:09.3637 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-16 17:29:09.3637 INFO Sucessfully got the measurement position with Id:1
+2020-12-16 23:44:36.2467 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-16 23:44:36.4056 INFO Sucessfully got all measurementPositions
+2020-12-16 23:44:38.2020 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-16 23:44:38.2529 INFO Sucessfully got all Measurements
+2020-12-16 23:44:38.3162 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-16 23:44:38.3603 INFO Sucessfully got the measurement position with Id:1
+2020-12-16 23:44:39.5981 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-16 23:44:39.6071 INFO Sucessfully got all Measurements
+2020-12-16 23:44:39.6514 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-16 23:44:39.6595 INFO Sucessfully got all Measurements
+2020-12-16 23:44:39.6821 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-16 23:44:39.6906 INFO Sucessfully got the measurement position with Id:1
+2020-12-16 23:44:48.7241 INFO FusPack-GetPack: Attempted Get FUS pack with ID: 1963066
+2020-12-16 23:44:50.7321 ERROR Unable to cast object of type 'System.String' to type 'System.Int32'. - 
+2020-12-16 23:45:28.0683 INFO FusPack-GetPack: Attempted Get FUS pack with ID: 1963066
+2020-12-16 23:45:28.3039 INFO Sucessfully got the pack with Id:1963066

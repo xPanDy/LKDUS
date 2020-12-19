@@ -2,7 +2,7 @@
 
 namespace LKDUS_API.Data
 {
-
+    
     [Table("Packs")]
     public partial class Pack
     {
@@ -12,4 +12,6 @@ namespace LKDUS_API.Data
         public string DateCreated { get; set; }
         public string Machine { get; set; }
     }
+
+
 }

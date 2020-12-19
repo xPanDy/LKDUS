@@ -22,6 +22,24 @@
             </summary>
             <returns>List of all Users</returns>
         </member>
+        <member name="T:LKDUS_API.Controllers.FusPackController">
+            <summary>
+            Interacts with the FUS Packs VIEW
+            </summary>
+        </member>
+        <member name="M:LKDUS_API.Controllers.FusPackController.GetFusPacks">
+            <summary>
+            gets all packs
+            </summary>
+            <returns>A list of all fus  packs</returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.FusPackController.GetPack(System.Int32)">
+            <summary>
+            Get the FUS pack by id
+            </summary>
+            <param name="id"></param>
+            <returns>An FUS pack record by id</returns>
+        </member>
         <member name="T:LKDUS_API.Controllers.HomeController">
             <summary>
             This is a test API controller

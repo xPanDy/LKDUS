@@ -40,6 +40,11 @@ namespace LKDUS_API.Services
             return await _db.MeasurementPositions.FindAsync(id);
         }
 
+        public async Task<MeasurementPosition> FindById(string id)
+        {
+            return await _db.MeasurementPositions.FindAsync(id);
+        }
+
         public async Task<bool> isExists(int id)
         {
             var isExist = await _db.MeasurementPositions.AnyAsync(m => m.Id == id);

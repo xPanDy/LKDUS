@@ -80,6 +80,11 @@ namespace LKDUS_UI.Service
             throw new NotImplementedException();
         }
 
+        public Task<LoginModel> Get( int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<IList<LoginModel>> Get(string url)
         {
             try

@@ -51,6 +51,10 @@ namespace LKDUS_UI
             services.AddTransient<IMachinesRepository, MachineRepository>();
             services.AddTransient<IMeasurementTypeRepository, MeasurementTypeRepository>();
             services.AddTransient<IPacksRepository, PackRepository>();
+            
+            services.AddTransient<IFusPacksRepository, FusPackRepository>();
+
+
             // services.AddScoped<IMeasurementPositionsRepository, MeasurementPositionRepository>();
 
 

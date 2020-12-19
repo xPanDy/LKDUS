@@ -104,6 +104,8 @@ namespace LKDUS_API
             services.AddScoped<IMeasurementRepository, MeasurementRepository>();
             services.AddScoped<IMeasurementPositionRepository, MeasurementPositionRepository>();
             services.AddScoped<IMeasurementTypeRepository, MeasurementTypeRepository>();
+           
+            services.AddScoped<IFusPackRepository, FusPackRepository>();
 
 
             services.AddControllers();

@@ -1,21 +1,24 @@
-﻿@page "/measurements/{measurementPositionId}/create" 
+﻿@page "/measurements/{measurementPositionId}/create"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
 @using LKDUS_UI.Contracts
 @using System.Net.Http
+@using Microsoft.Extensions.Logging
 
 @inject IMeasurementRepository repo
+@inject IFusPacksRepository frepo
 @inject IMeasurementTypeRepository measTRepo
 @inject IMeasurementPositionsRepository measPositionRepo
 
 @inject NavigationManager navManager
 @inject Blazored.Localisation.Services.IBrowserDateTimeProvider datetime;
+@inject ILogger<FusPack> Logger
 
 
 
 
-<form>
+<div>
 
     <div class="container">
         <div class="row">
@@ -23,13 +26,111 @@
             <div class="col">
                 <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
             </div>
-            <div class="col w-25"><h3 class="card-title">Mitrā finiera pārbaude</h3></div>
+            <div class="col w-25"><h3 class="card-title">@mp.Name</h3></div>
             <div class="col">
                 <button type="submit" class="btn btn-primary btn-block">Saglabāt</button>
             </div>
-    
+
 
         </div>
+    </div>
+
+
+
+
+    <div class="form-group">
+        @{
+                <div class="row">
+
+
+                            <div class="col">
+                                <label for="packCode">Pakas kods</label>
+
+
+                                @*@bind=@packId*@
+
+                                <input class="form-control"
+                                       @bind-value="@stringPackValue"
+                                       @bind-value:event="oninput"
+                                       @onkeyup="DoSomethingElse"
+                                       type="text"
+                                       id="packCode">
+                                @if (fp == null)
+                                {
+                            <div class="alert alert-danger" role="alert">
+                                Šāda paka neeksistē
+                            </div>
+                            
+                                }
+
+                            </div>
+                    @if (fp != null)
+                    {
+                        <div class="col">
+
+                            <label for="pack">Pakas Autors   </label>
+
+                            <input class="form-control" readonly
+                                   @bind="@fp.OperatorNameSurname"
+                                   type="text" id="packAuthor">
+
+
+
+
+                        </div>
+
+
+
+
+                        <div class="col">
+                            <label for="pack">Pakas datums</label>
+
+                            <input class="form-control" type="text"
+                                   @bind="@fp.DateCreated"
+                                   readonly id="packDate">
+                        </div>
+                        <div class="col">
+                            <label for="pack">Pakas iekārta</label>
+
+                            <input class="form-control"
+                                   @bind-value="@fp.MachineName" type="text" readonly id="packMachine">
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col">
+
+                            <label for="pack">Pakas Autors   </label>
+
+                            <input class="form-control" readonly
+                                    
+                                   type="text" id="packAuthor">
+
+
+
+
+                        </div>
+
+
+
+
+                        <div class="col">
+                            <label for="pack">Pakas datums</label>
+
+                            <input class="form-control" type="text"
+                                    
+                                   readonly id="packDate">
+                        </div>
+                        <div class="col">
+                            <label for="pack">Pakas iekārta</label>
+
+                            <input class="form-control"
+                                     type="text" readonly id="packMachine">
+                        </div>
+                    }
+
+                </div>
+        }
     </div>
 
     <div class="form-group">
@@ -44,91 +145,126 @@
     </div>
 
 
-  
-        <div class="form-group">
 
-            <label for="example-datetime-local-input" class="col-2 col-form-label">Datums   <br /></label>
-            @*// 01.12.2020 09:19:04*@
-          
-            <input class="form-control" type="date" value="2020-12-01" id="example-datetime-local-input">
+    <div class="form-group">
+        <div class="row">
+            <label for="example-datetime-local-input" class="col-2 col-form-label">Datums   <br /></label> 
+    @*// 01.12.2020 09:19:04*@
 
+     <input class="form-control" type="date" value="2020-12-01" id="example-datetime-local-input">
         </div>
-    
+    </div>
 
 
 
-        <div class="form-group">
-            <label for="example-text-input">Fus pakas kods</label>
 
-            <input class="form-control" type="text" id="example-text-input">
+    <div class="form-group">
+        <label for="example-text-input">Fus pakas kods</label>
 
-        </div>
+        <input class="form-control" type="text" id="example-text-input">
 
-
-        <div class="form-group">
-            <label for="operator">Operators</label>
-            <select class="custom-select" id="operator">
-                <option selected> Izvēlies...</option>
-                <option value="1">Kristaps    </option>
-                <option value="2">Linards    </option>
-                <option value="3">Ieva       </option>
-            </select>
-
-        </div>
+    </div>
 
 
-        <div class="form-group">
-            <label for="shift">Maiņa</label>
-            <select class="custom-select" id="shift">
-                <option selected>Izvēlies...</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-            </select>
+    <div class="form-group">
+        <label for="operator">Operators</label>
+        <select class="custom-select" id="operator">
+            <option selected> Izvēlies...</option>
+            <option value="1">Kristaps    </option>
+            <option value="2">Linards    </option>
+            <option value="3">Ieva       </option>
+        </select>
 
-        </div>
-
-
-
-        <div class="form-group">
-            <label for="master">Meistars</label>
-            <select class="custom-select" id="master">
-                <option selected>Izvēlies...</option>
-                <option value="1">Ieva</option>
-                <option value="2">Linards</option>
-                <option value="3">Kristaps</option>
-            </select>
-
-        </div>
+    </div>
 
 
-        <nav class="navbar navbar-dark">
-            <div class="container-fluid">
-                <div class="navbar-btn">
+    <div class="form-group">
+        <label for="shift">Maiņa</label>
+        <select class="custom-select" id="shift">
+            <option selected>Izvēlies...</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
 
-                    <button type="button" @onclick="@GoToThickness" class="btn btn-primary">Mitrā finiera biezums</button>
-                </div>
-                <div class="navbar-btn">
+    </div>
 
-                    <button type="button" @onclick="@GoToDimensions" class="btn btn-primary">Izmērs, platums, garums</button>
-                </div> 
-                <div class="navbar-btn">
 
-                    <button type="button" @onclick="@GoToQuality" class="btn btn-primary">Kvalitāte</button>
-                </div>
 
+    <div class="form-group">
+        <label for="master">Meistars</label>
+        <select class="custom-select" id="master">
+            <option selected>Izvēlies...</option>
+            <option value="1">Ieva</option>
+            <option value="2">Linards</option>
+            <option value="3">Kristaps</option>
+        </select>
+
+    </div>
+
+
+    <nav class="navbar navbar-dark">
+        <div class="container-fluid">
+            <div class="navbar-btn">
+
+                <button type="button" @onclick="@GoToThickness" class="btn btn-primary">Mitrā finiera biezums</button>
             </div>
-        </nav>
+            <div class="navbar-btn">
 
-</form>
+                <button type="button" @onclick="@GoToDimensions" class="btn btn-primary">Izmērs, platums, garums</button>
+            </div>
+            <div class="navbar-btn">
+
+                <button type="button" @onclick="@GoToQuality" class="btn btn-primary">Kvalitāte</button>
+            </div>
+
+        </div>
+    </nav> 
+
+</div>
 
 
 
 
-
- 
 
 @code {
+
+
+    public string stringPackValue
+    {
+        get;
+        set;
+    }
+
+    string test = "";
+
+    public string datums = "";
+    public bool edited = false;
+
+    public IList<FusPack> fusPacks;
+    public FusPack fp = new FusPack();
+
+
+    private void DoSomethingElse(KeyboardEventArgs e)
+    {
+
+        if (e.Code == "Enter")
+        {
+
+            try
+            {
+                int packid = int.Parse(stringPackValue);
+                fp = fusPacks.Where(p => p.Id == packid).SingleOrDefault();
+
+            }
+            catch (Exception ex)
+            {
+
+                Logger.LogWarning(ex, "Failed to load fuspack {packid}", stringPackValue);
+            }
+
+        }
+    }
 
     [Parameter]
     public string measurementPositionId { get; set; }
@@ -136,24 +272,49 @@
 
 
 
-    private MeasurementPosition mpos = new MeasurementPosition();
+
+
+
+
+
+    ////private void SetValue(string Value)
+    ////{
+    ////    value = Value;
+    ////}
+    //async void Enter(KeyboardEventArgs e)
+    //{
+    //    if (e.Code == "Enter")
+    //    {
+    //        //packId = int.Parse(value2);
+
+    //        //value = packId.ToString();
+    //        try
+    //        {
+    //            int packid = int.Parse(stringValue);
+    //            fp = await frepo.Get(Endpoints.FusPackEndPoint, packid);
+
+    //        }
+    //        catch (Exception)
+    //        {
+
+    //            throw;
+    //        }
+    //    }
+
+
+
+    //}
+
+
+    MeasurementPosition mp = new MeasurementPosition();
+
     protected async override void OnParametersSet()
     {
         //the param will be set now
-        try
-        {
-            int result = Int32.Parse(measurementPositionId);
-            mpos = await measPositionRepo.Get(Endpoints.MeasurementPositions, result);
 
-        }
-
-        catch (FormatException)
-        {
-            Console.WriteLine($"Unable to parse");
-        }
     }
 
-    private static DateTime today = DateTime.Today ;
+    private static DateTime today = DateTime.Today;
     private static string todayLocal = today.ToString("d");
 
     public DateTime DateOfBirth { get; set; }
@@ -165,12 +326,17 @@
         if (firstRender) // Remove the firstRender check if you want the current local time displayed to continuously update.
         {   // Leave the above firstRender check in place to ensure that the call to StateHasChanged() does not trigger an endless update loop.
             var browserDateTime = await datetime.GetInstance();
-            currentLocalTime = browserDateTime. Now.ToString();
+            // fusPacks = await frepo.Get(Endpoints.FusPackEndPoint);
+
+            currentLocalTime = browserDateTime.Now.ToString();
             StateHasChanged();
             DateOfBirth = DateTime.Now;
         }
 
     }
+
+
+
     private IList<Measurement> Model2;
     private IList<Measurement> Machines;
 
@@ -179,6 +345,18 @@
     {
         Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
         Machines = await this.repo.Get(Endpoints.MeasurementEndpoint);
+        fusPacks = await frepo.Get(Endpoints.FusPackEndPoint);
+        try
+        {
+            int result = Int32.Parse(measurementPositionId);
+            mp = await measPositionRepo.Get(Endpoints.MeasurementPositions, result);
+
+        }
+
+        catch (FormatException)
+        {
+            Console.WriteLine($"Unable to parse");
+        }
         todayLocal = today.ToString("d");
     }
 

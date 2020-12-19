@@ -9,15 +9,28 @@
 @inject NavigationManager navManager
 @inject IMeasurementPositionsRepository measurementPositionRepo
 
-<div class="card" style="height:100%">
 
+
+<div class="card" style="height:100%">
+    <div class="container">
+        <div class="row">
+
+            <div class="col">
+                <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
 
     <div style="height:50%" class="container">
         <div class="mh-50">
-            <h3 class="card-title">Mitrais finieris</h3>
+            <h3 class="card-title">@mp.Name</h3>
             <button type="button" @onclick="@OpenCreateForm" class="btn btn-info">Jauna paka</button>
             <h3 class="card-title">Pārbaudītās pakas</h3>
-        
+
         </div>
 
 
@@ -34,12 +47,12 @@
 
         <!-- Scroll bar present and enabled when more contents -->
 
-        
 
 
-        <div class="container pre-scrollable" style="height:50%" >
+
+        <div class="container pre-scrollable" style="height:50%">
             <div class="mh-50">
-                <table class="table" >
+                <table class="table">
                     <thead>
                         <tr>
                             <th scope="col">Nr.                 </th>
@@ -66,38 +79,39 @@
                         @foreach (var model in Model)
                         {
 
-                        <tr>
-                            <th scope="row">@model.Id</th>  
-                            <td>@model.DateCreated</td>    
-                            <td>@model.Shift</td>               
-                            <td>@model.MachineId</td>    
-                            <td>@model.UserId</td>
-                            <td>@model.MeasurementPositionId</td>   
-                            <td>@model.PackId</td>   
-                            <td>@model.MeasurementTypeId</td>   
-                            <td>@model.Measurement1</td>   
-                            <td>@model.Measurement2</td>   
-                            <td>@model.Measurement3</td>   
-                            <td>@model.Measurement4</td>   
-                            <td>@model.Measurement5</td>   
-                            <td>@model.Measurement6</td>   
-                            <td>@model.Measurement7</td>   
-                            <td>@model.Measurement8</td>   
-                            <td>@model.Measurement9</td>   
+                            <tr>
+                                <th scope="row">@model.Id</th>
+                                <td>@model.DateCreated</td>
+                                <td>@model.Shift</td>
+                                <td>@model.MachineId</td>
+                                <td>@model.UserId</td>
+                                <td>@model.MeasurementPositionId</td>
+                                <td>@model.PackId</td>
+                                <td>@model.MeasurementTypeId</td>
+                                <td>@model.Measurement1</td>
+                                <td>@model.Measurement2</td>
+                                <td>@model.Measurement3</td>
+                                <td>@model.Measurement4</td>
+                                <td>@model.Measurement5</td>
+                                <td>@model.Measurement6</td>
+                                <td>@model.Measurement7</td>
+                                <td>@model.Measurement8</td>
+                                <td>@model.Measurement9</td>
 
 
-                                          
-                                                 
-                        </tr>                                   
-                        }                                       
-                                                                
-                                                                
-                    </tbody>                                    
-                </table>                                        
-            </div>                                              
-                                                                
-                                                                
-                                                           
+
+
+                            </tr>
+
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+
+
+
         </div>
 
 
@@ -109,6 +123,8 @@
 
     [Parameter]
     public string measurementPositionId { get; set; }
+
+    MeasurementPosition mp = new MeasurementPosition();
 
     protected override void OnParametersSet()
     {
@@ -122,7 +138,17 @@
     protected async override Task OnInitializedAsync()
     {
         Model = await repo.Get(Endpoints.MeasurementEndpoint);
+        try
+        {
+            int result = Int32.Parse(measurementPositionId);
+            mp = await measurementPositionRepo.Get(Endpoints.MeasurementPositions, result);
 
+        }
+
+        catch (FormatException)
+        {
+            Console.WriteLine($"Unable to parse");
+        }
     }
 
 
@@ -131,5 +157,8 @@
         //this.measurementPosition.
         this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create");
     }
-
+    private void goBack(MouseEventArgs e)
+    {
+        this.navManager.NavigateTo($"/measurementpositions/");
+    }
 }

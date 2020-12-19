@@ -57,6 +57,24 @@ namespace LKDUS_UI.Service
             return null ;
 
         }
+        public async Task<T> Get( int id)
+        {
+
+
+            var request = new HttpRequestMessage(HttpMethod.Get, id+"");
+            var client = this.client.CreateClient();
+
+            HttpResponseMessage response = await client.SendAsync(request);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<T>(content);
+            }
+
+            return null;
+
+        }
 
         public async Task<bool> Delete(string url, int id)
         {

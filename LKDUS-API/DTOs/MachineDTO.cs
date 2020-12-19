@@ -11,4 +11,18 @@ namespace LKDUS_API.DTOs
         public string Name { get; set; }
         public string Description { get; set; }
     }
+    public class MachineCreateDTO
+    {
+
+
+        public string Name { get; set; }
+        public string Description { get; set; }
+    }
+
+    public class MachineUpdateDTO
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+    }
 }

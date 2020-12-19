@@ -45,6 +45,11 @@ namespace LKDUS_API.Services
             return user;
         }
 
+        public Task<User> FindById(string id)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<bool> isExists(int id)
         {
             return await _db.Users.AnyAsync(q => q.Id == id);

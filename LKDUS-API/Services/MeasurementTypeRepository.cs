@@ -40,6 +40,11 @@ namespace LKDUS_API.Services
             return await _db.MeasurementsType.FindAsync(id);
         }
 
+        public Task<MeasurementType> FindById(string id)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<bool> isExists(int id)
         {
             var isExist = await _db.MeasurementsType.AnyAsync(m => m.Id == id);
