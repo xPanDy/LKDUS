@@ -51,6 +51,46 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:LKDUS_API.Controllers.MachineController">
+            <summary>
+            Interacts with the FUS Packs VIEW
+            </summary>
+        </member>
+        <member name="M:LKDUS_API.Controllers.MachineController.GetMachines">
+            <summary>
+            gets all MACHINES
+            </summary>
+            <returns>A list of all machines</returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.MachineController.GetMachine(System.Int32)">
+            <summary>
+            Get the machine   by id
+            </summary>
+            <param name="id"></param>
+            <returns>An machine record by id</returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.MachineController.Create(LKDUS_API.DTOs.MachineCreateDTO)">
+            <summary>
+            Creates a new machine
+            </summary>
+            <param name="machineCreateDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.MachineController.Update(System.Int32,LKDUS_API.DTOs.MachineUpdateDTO)">
+            <summary>
+            Updates machine with specified Id
+            </summary>
+            <param name="id"></param>
+            <param name="machineUpdateDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.MachineController.Delete(System.Int32)">
+            <summary>
+            Removes machine by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:LKDUS_API.Controllers.MeasurementsController">
             <summary>
             Interacts with the Measurements Table

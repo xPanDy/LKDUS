@@ -55,7 +55,7 @@ namespace LKDUS_API.Controllers
                 this.logger.LogInfo($"{location}: Attempted Call");
                 var machines = await this.machineRepository.FindAll();
                  
-                var response = this.mapper.Map<IList<FusPackDTO>>(machines);
+                var response = this.mapper.Map<IList<MachineDTO>>(machines);
                 this.logger.LogInfo("Sucessfully got all machines");
 
                 return Ok(response);

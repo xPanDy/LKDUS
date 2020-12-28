@@ -1,4 +1,4 @@
-﻿@page "/measurements/create/measurementdimensions"
+﻿@page "/measurements/{measurementPositionId}/create/measurementdimensions"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
@@ -34,7 +34,7 @@
             </div>
 
 
-            <div class="col"><button class="btn btn-warning btn-block" @onclick="@GoHeight"> <h3>Lokšņu garums</h3> </button></div>
+            <div class="col"><button class="btn btn-warning btn-block" @onclick="@GoLength"> <h3>Lokšņu garums</h3> </button></div>
 
 
             <div class="w-100"></div>
@@ -56,8 +56,9 @@
 
 @code {
     private IList<Measurement> Model2;
-    
 
+    [Parameter]
+    public string measurementPositionId { get; set; }
 
     protected async override Task OnInitializedAsync()
     {
@@ -71,26 +72,26 @@
     private void OpenCreateForm(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo("/measurements/create");
+        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create");
     }
 
 
     private void Return(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo("/measurements/create");
+        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create");
     }
 
 
     private void NavigattetoWidth(MouseEventArgs e)
     {
-       
-        this.navManager.NavigateTo("/measurements/create/measurementdimensions/width");
+
+        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create/measurementdimensions/width");
     }
 
-    private void GoHeight(MouseEventArgs e)
+    private void GoLength(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo(" ");
+        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create/measurementdimensions/length");
     }
 }

@@ -17,6 +17,9 @@ namespace LKDUS_API.Data
         public DbSet<Role> Roles { get; set; }
         public DbSet<Machine> Machines { get; set; }
         public DbSet<Pack> Packs { get; set; }
+        
+
+
         //public DbSet<FusPack> FusPacks { get; set; }
 
         public virtual DbSet<FusPack> FusPack { get; set; }

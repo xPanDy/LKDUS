@@ -522,3 +522,220 @@
 2020-12-19 16:05:22.2156 INFO Sucessfully got all FUS packs
 2020-12-19 16:05:22.2517 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
 2020-12-19 16:05:22.2517 INFO Sucessfully got the measurement position with Id:1
+2020-12-19 17:11:53.6958 INFO Machine-GetMachines: Attempted Call
+2020-12-19 17:11:54.0280 ERROR Machine-GetMachines:Error mapping types.
+
+Mapping types:
+Object -> IList`1
+System.Object -> System.Collections.Generic.IList`1[[LKDUS_API.DTOs.FusPackDTO, LKDUS-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] - AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Machine -> FusPackDTO
+LKDUS_API.Data.Machine -> LKDUS_API.DTOs.FusPackDTO
+   at lambda_method(Closure , Machine , FusPackDTO , ResolutionContext )
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+2020-12-19 17:15:33.3722 INFO Machine-GetMachines: Attempted Call
+2020-12-19 17:17:03.3817 INFO Machine-GetMachines: Attempted Call
+2020-12-19 17:17:03.5468 INFO Sucessfully got all machines
+2020-12-19 17:17:11.0898 INFO Machine-GetMachine: Attempted get machine with ID: 14
+2020-12-19 17:17:11.1441 INFO Sucessfully got the machine with Id:14
+2020-12-19 17:17:51.9090 INFO Machine-GetMachine: Attempted get machine with ID: 13
+2020-12-19 17:17:51.9331 INFO Sucessfully got the machine with Id:13
+2020-12-19 17:19:13.1166 INFO Machine-Create: Machine creation  Attempted
+2020-12-19 17:19:13.3742 INFO Machine-Create: Machine creation was created
+2020-12-19 17:19:13.3742 INFO Machine-Create: LKDUS_API.Data.Machine
+2020-12-19 17:19:35.7782 INFO Machine-Create: Machine creation  Attempted
+2020-12-19 17:19:36.7616 INFO Machine-GetMachines: Attempted Call
+2020-12-19 17:19:36.7978 INFO Machine-Create: Machine creation was created
+2020-12-19 17:19:36.8054 INFO Machine-Create: LKDUS_API.Data.Machine
+2020-12-19 17:19:36.8054 INFO Sucessfully got all machines
+2020-12-19 17:22:22.8590 WARN Machine-Update: machinE update atempted - id: 14
+2020-12-19 17:22:22.8590 WARN Machine-Update: machine  update failed with wrong data
+2020-12-19 17:24:14.8301 WARN Machine-Update: machinE update atempted - id: 14
+2020-12-19 17:24:14.8401 WARN Machine-Update: machine  update failed with wrong data
+2020-12-19 17:24:38.8545 WARN Machine-Update: machinE update atempted - id: 14
+2020-12-19 17:24:38.9244 INFO Machine-Update: machine Data with id: 14 was updated
+2020-12-19 17:24:50.8634 INFO Machine-GetMachines: Attempted Call
+2020-12-19 17:24:50.8844 INFO Sucessfully got all machines
+2020-12-19 17:26:26.2955 WARN Machine-Update: machinE update atempted - id: 11
+2020-12-19 17:26:26.3312 INFO Machine-Update: machine Data with id: 11 was updated
+2020-12-19 17:30:24.7312 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 17:30:24.8592 INFO Sucessfully got all measurementPositions
+2020-12-19 17:30:31.6457 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 17:30:31.6722 INFO Sucessfully got all measurementPositions
+2020-12-19 17:35:08.6358 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 17:35:08.6844 INFO Sucessfully got all Measurements
+2020-12-19 17:35:08.7560 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-19 17:35:08.7862 INFO Sucessfully got the measurement position with Id:1
+2020-12-19 17:35:10.6349 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 17:35:10.6461 INFO Sucessfully got all measurementPositions
+2020-12-19 17:35:11.7356 INFO AspNetUsers-Login: Login attempted call from user operator
+2020-12-19 17:35:11.9227 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2020-12-19 17:35:12.4008 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 17:35:12.4272 INFO Sucessfully got all measurementPositions
+2020-12-19 17:35:14.0209 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 17:35:14.0424 INFO Sucessfully got all Measurements
+2020-12-19 17:35:14.0696 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-19 17:35:14.0791 INFO Sucessfully got the measurement position with Id:1
+2020-12-19 17:35:18.8821 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 17:35:18.9196 INFO Sucessfully got all Measurements
+2020-12-19 17:35:18.9972 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 17:35:19.0227 INFO Sucessfully got all Measurements
+2020-12-19 17:35:19.0558 INFO FusPack-GetFusPacks: Attempted Call
+2020-12-19 17:35:19.1925 INFO Sucessfully got all FUS packs
+2020-12-19 17:35:19.2727 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-19 17:35:19.2790 INFO Sucessfully got the measurement position with Id:1
+2020-12-19 17:35:32.4502 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 17:35:32.4502 INFO Sucessfully got all Measurements
+2020-12-19 17:35:32.5000 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-19 17:35:32.5164 INFO Sucessfully got the measurement position with Id:1
+2020-12-19 17:35:33.4544 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 17:35:33.4793 INFO Sucessfully got all Measurements
+2020-12-19 17:35:33.5019 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 17:35:33.5206 INFO Sucessfully got all Measurements
+2020-12-19 17:35:33.5452 INFO FusPack-GetFusPacks: Attempted Call
+2020-12-19 17:35:33.6123 INFO Sucessfully got all FUS packs
+2020-12-19 17:35:33.6518 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-19 17:35:33.6518 INFO Sucessfully got the measurement position with Id:1
+2020-12-19 17:35:40.8153 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 17:35:40.8330 INFO Sucessfully got all Measurements
+2020-12-19 17:35:40.8649 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-19 17:35:40.8809 INFO Sucessfully got the measurement position with Id:1
+2020-12-19 17:35:41.6558 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 17:35:41.6558 INFO Sucessfully got all measurementPositions
+2020-12-19 17:35:42.7839 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 17:35:42.7942 INFO Sucessfully got all Measurements
+2020-12-19 17:35:42.8217 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-19 17:35:42.8306 INFO Sucessfully got the measurement position with Id:1
+2020-12-19 17:35:43.5462 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 17:35:43.5462 INFO Sucessfully got all Measurements
+2020-12-19 17:35:43.5821 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 17:35:43.5940 INFO Sucessfully got all Measurements
+2020-12-19 17:35:43.6090 INFO FusPack-GetFusPacks: Attempted Call
+2020-12-19 17:35:43.7026 INFO Sucessfully got all FUS packs
+2020-12-19 17:35:43.7468 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-19 17:35:43.7468 INFO Sucessfully got the measurement position with Id:1
+2020-12-19 21:13:04.3819 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 21:13:04.5082 INFO Sucessfully got all measurementPositions
+2020-12-19 21:13:43.8474 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 21:13:43.8692 INFO Sucessfully got all measurementPositions
+2020-12-19 21:13:45.1246 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 21:13:45.1677 INFO Sucessfully got all Measurements
+2020-12-19 21:13:45.2284 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-19 21:13:45.2592 INFO Sucessfully got the measurement position with Id:1
+2020-12-19 21:13:46.4490 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 21:13:46.4624 INFO Sucessfully got all Measurements
+2020-12-19 21:13:46.5379 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 21:13:46.5379 INFO Sucessfully got all Measurements
+2020-12-19 21:13:46.5707 INFO FusPack-GetFusPacks: Attempted Call
+2020-12-19 21:13:46.7414 INFO Sucessfully got all FUS packs
+2020-12-19 21:13:46.7934 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-19 21:13:46.7934 INFO Sucessfully got the measurement position with Id:1
+2020-12-19 21:13:47.6755 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 21:13:47.6873 INFO Sucessfully got all Measurements
+2020-12-19 21:13:47.7119 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-19 21:13:47.7119 INFO Sucessfully got the measurement position with Id:1
+2020-12-19 21:18:39.5111 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 21:18:39.6187 INFO Sucessfully got all measurementPositions
+2020-12-19 21:18:41.2003 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 21:18:41.2355 INFO Sucessfully got all measurementPositions
+2020-12-19 21:18:49.0369 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 21:18:49.0578 INFO Sucessfully got all measurementPositions
+2020-12-19 21:19:02.3026 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 21:19:02.3279 INFO Sucessfully got all measurementPositions
+2020-12-19 21:20:03.2718 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 21:20:03.4091 INFO Sucessfully got all measurementPositions
+2020-12-19 21:20:33.9888 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 21:20:34.1035 INFO Sucessfully got all measurementPositions
+2020-12-19 21:20:37.3089 INFO AspNetUsers-Login: Login attempted call from user operator
+2020-12-19 21:20:37.5139 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2020-12-19 21:20:37.9502 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 21:20:37.9670 INFO Sucessfully got all measurementPositions
+2020-12-19 21:20:39.5204 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 21:20:39.5664 INFO Sucessfully got all Measurements
+2020-12-19 21:20:39.6013 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-19 21:20:39.6282 INFO Sucessfully got the measurement position with Id:1
+2020-12-19 21:20:41.2680 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 21:20:41.2809 INFO Sucessfully got all measurementPositions
+2020-12-19 21:20:42.5388 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 21:20:42.5388 INFO Sucessfully got all Measurements
+2020-12-19 21:20:42.5862 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2020-12-19 21:20:42.5991 INFO Sucessfully got the measurement position with Id:2
+2020-12-19 21:20:43.5119 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 21:20:43.5237 INFO Sucessfully got all measurementPositions
+2020-12-19 21:20:44.4294 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 21:20:44.4469 INFO Sucessfully got all Measurements
+2020-12-19 21:20:44.4739 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-19 21:20:44.4902 INFO Sucessfully got the measurement position with Id:1
+2020-12-19 21:20:45.6989 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 21:20:45.7086 INFO Sucessfully got all Measurements
+2020-12-19 21:20:45.7719 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 21:20:45.7719 INFO Sucessfully got all Measurements
+2020-12-19 21:20:45.8244 INFO FusPack-GetFusPacks: Attempted Call
+2020-12-19 21:20:45.9682 INFO Sucessfully got all FUS packs
+2020-12-19 21:20:46.0165 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-19 21:20:46.0230 INFO Sucessfully got the measurement position with Id:1
+2020-12-19 21:21:04.1813 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 21:21:04.2087 INFO Sucessfully got all measurementPositions
+2020-12-19 22:22:46.3918 INFO AspNetUsers-Login: Login attempted call from user operator
+2020-12-19 22:22:46.6799 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2020-12-19 22:22:47.1869 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 22:22:47.2511 INFO Sucessfully got all measurementPositions
+2020-12-19 22:24:47.3994 INFO Machine-GetMachines: Attempted Call
+2020-12-19 22:24:47.4156 INFO Machine-Create: Machine creation  Attempted
+2020-12-19 22:24:47.4968 INFO Sucessfully got all machines
+2020-12-19 22:25:23.5005 INFO AspNetUsers-Login: Login attempted call from user operator
+2020-12-19 22:25:23.7457 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2020-12-19 22:25:24.1753 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 22:25:24.2432 INFO Sucessfully got all measurementPositions
+2020-12-19 22:25:25.0658 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 22:25:25.1090 INFO Sucessfully got all Measurements
+2020-12-19 22:25:25.1441 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-19 22:25:25.1669 INFO Sucessfully got the measurement position with Id:1
+2020-12-19 22:25:25.9873 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 22:25:25.9873 INFO Sucessfully got all Measurements
+2020-12-19 22:25:26.0336 INFO Measurements-GetMeasurements: Attempted Call
+2020-12-19 22:25:26.0512 INFO Sucessfully got all Measurements
+2020-12-19 22:25:26.0931 INFO FusPack-GetFusPacks: Attempted Call
+2020-12-19 22:25:26.3065 INFO Sucessfully got all FUS packs
+2020-12-19 22:25:26.3902 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2020-12-19 22:25:26.4008 INFO Sucessfully got the measurement position with Id:1
+2020-12-19 22:25:33.0354 INFO Machine-GetMachines: Attempted Call
+2020-12-19 22:25:33.0793 INFO Sucessfully got all machines
+2020-12-19 22:26:01.6095 INFO Machine-GetMachines: Attempted Call
+2020-12-19 22:26:01.6097 INFO Sucessfully got all machines
+2020-12-19 22:26:17.1223 INFO Machine-GetMachines: Attempted Call
+2020-12-19 22:26:17.1497 INFO Sucessfully got all machines
+2020-12-19 22:26:19.4749 INFO Machine-GetMachines: Attempted Call
+2020-12-19 22:26:19.4968 INFO Sucessfully got all machines
+2020-12-19 22:29:02.4954 INFO Machine-GetMachines: Attempted Call
+2020-12-19 22:29:02.5444 INFO Sucessfully got all machines
+2020-12-19 22:30:10.2490 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2020-12-19 22:30:10.3711 INFO Sucessfully got all measurementPositions
+2020-12-19 22:30:12.5857 INFO Machine-GetMachines: Attempted Call
+2020-12-19 22:30:12.6467 INFO Sucessfully got all machines
+2020-12-19 22:31:28.5402 INFO Machine-Create: Machine creation  Attempted
+2020-12-19 22:31:28.7988 INFO Machine-Create: Machine creation was created
+2020-12-19 22:31:28.7988 INFO Machine-Create: LKDUS_API.Data.Machine
+2020-12-19 22:38:04.8161 INFO Machine-GetMachines: Attempted Call
+2020-12-19 22:38:04.8674 INFO Sucessfully got all machines
+2020-12-19 22:41:30.8745 INFO Machine-Create: Machine creation  Attempted
+2020-12-19 22:41:30.9047 INFO Machine-Create: Machine creation was created
+2020-12-19 22:41:30.9047 INFO Machine-Create: LKDUS_API.Data.Machine
+2020-12-19 22:45:40.3066 INFO Machine-GetMachines: Attempted Call
+2020-12-19 22:45:40.4374 INFO Sucessfully got all machines
+2020-12-19 22:45:48.3773 INFO Machine-Create: Machine creation  Attempted
+2020-12-19 22:45:48.6162 INFO Machine-Create: Machine creation was created
+2020-12-19 22:45:48.6162 INFO Machine-Create: LKDUS_API.Data.Machine
+2020-12-19 22:45:53.9503 INFO Machine-GetMachines: Attempted Call
+2020-12-19 22:45:53.9813 INFO Sucessfully got all machines
+2020-12-19 22:46:21.3433 INFO Machine-GetMachines: Attempted Call
+2020-12-19 22:46:21.3589 INFO Sucessfully got all machines
+2020-12-19 22:46:21.7794 INFO Machine-GetMachines: Attempted Call
+2020-12-19 22:46:21.8141 INFO Sucessfully got all machines
+2020-12-19 22:46:22.8315 INFO Machine-GetMachine: Attempted get machine with ID: 2
+2020-12-19 22:46:22.8747 INFO Sucessfully got the machine with Id:2
+2020-12-19 22:46:26.0275 INFO Machine-GetMachines: Attempted Call
+2020-12-19 22:46:26.0499 INFO Sucessfully got all machines
+2020-12-19 22:46:27.3755 INFO Machine-GetMachine: Attempted get machine with ID: 2
+2020-12-19 22:46:27.4070 INFO Sucessfully got the machine with Id:2

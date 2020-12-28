@@ -1,0 +1,291 @@
+﻿@page "/measurements/{measurementPositionId}/create/measurementdimensions/length"
+
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+
+@inject IMeasurementRepository repo
+@inject NavigationManager navManager
+
+
+
+
+
+
+<div class="wrapper">
+    <select class="w-auto" onfocus='this.size=10;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+
+
+
+        <option disabled="disabled">0</option>
+
+        @for (int a = 0; a < sizes.Length; a++)
+        {
+
+            <option class="w-auto">@sizes[a]</option>
+
+
+        }
+
+
+    </select>
+
+</div>
+
+
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col">
+            <button type="button" @onclick="@BacktochooseDimension" class="btn btn-primary btn-block">Atpakaļ</button>
+        </div>
+        <div class="col w-25"><h3 class="card-title">Mitrā finiera garums</h3></div>
+        <div class="col">
+            <button type="submit" class="btn btn-primary btn-block">Saglabāt</button>
+        </div>
+
+    </div>
+</div>
+<!--<div class="row w-100">
+
+    <div class="col w-75">-->
+<div class="container">
+
+    <div class="row">
+
+        <div class="col">
+
+            <button type="button" class="btn btn-outline-secondary btn-block">
+                <h4>4x8</h4>
+                <br />
+                <h5>(28<span sstyle="color:red">XX</span>)</h5>
+            </button>
+
+        </div>
+
+
+        <div class="col w-25"></div>
+
+        <div class="col">
+
+            <button type="button" class="btn btn-outline-secondary btn-block">
+                <h4>8x4</h4>
+                <br />
+                <h5>(13<span sstyle="color:red">XX</span>)</h5>
+            </button>
+
+
+        </div>
+
+        <div class="col w-25"></div>
+
+        <div class="col">
+
+            <button type="button" class="btn btn-outline-secondary btn-block">
+                <h4>4x4</h4>
+                <br />
+                <h5>(13<span sstyle="color:red">XX</span>)</h5>
+
+            </button>
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table table-hover">
+
+                <thead>
+
+
+                    <tr>
+                        <th><button>test</button></th>
+                        <th rowspan="2">Nr.p.k.</th>
+                        <th colspan="2">Lokšņu garums</th>
+
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                    @for (int i = 0; i < 10; i++)
+                    {
+                        int npk = i + 1;
+                        <tr>
+                            <td></td>
+                            <td>@npk</td>
+
+                            <td>
+
+
+                                <select class="w-auto custom-select" onfocus='this.size=10;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+
+
+
+                                    <option disabled="disabled">0</option>
+
+                                    @for (int a = 0; a < sizes.Length; a++)
+                                    {
+
+                                        <option class="w-auto">@sizes[a]</option>
+
+
+                                    }
+
+
+                                </select>
+                            </td>
+                        </tr>
+                    }
+
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><button>test</button></td>
+                        <td> </td>
+                        <td> </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<div class="col">
+
+    <div class="row">
+        <div class="col">Npk.</div>
+        <div class="col">Lokšņu karums</div>
+    </div>
+    @for (int i = 0; i < 10; i++)
+    {
+        int npk = i + 1;
+         <div class="row">
+             <div class="col">@npk</div>
+             <div class="col">
+             <select class="w-auto custom-select" onfocus='this.size=10;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+
+
+
+                <option disabled="disabled">0</option>
+
+                @for (int a = 0; a < sizes.Length; a++)
+                {
+
+                    <option class="w-auto">@sizes[a]</option>
+
+
+                }
+
+
+
+
+                </select>
+             </div>
+
+         </div>
+
+             
+          
+       
+    }
+</div>
+
+
+
+
+
+@code {
+    private IList<Measurement> Model2;
+    [Parameter]
+    public string measurementPositionId { get; set; }
+
+    public int[] positions = new int[10];
+
+
+
+
+    protected async override Task OnInitializedAsync()
+    {
+        Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+        for (int i = 0; i < sizes.Length; i++)
+        {
+
+            sizes[i] = start;
+            start = start + 1;
+        }
+
+        //for (int i = 0; i < positions.GetLength(0); i++)
+        //{
+        for (int j = 0; j < positions.GetLength(0); j++)
+        {
+            positions[j] = 0;
+            //}
+        }
+    }
+
+    private int actPos;
+
+    private int[] sizes = new int[10];
+    private int start = 27;
+
+    private int selectedCellI = 0;
+    private int selectedCellJ = 0;
+    private int[] positionValues = new int[3];
+    private int positionValue;
+
+
+    private void select(int value)
+    {
+        positionValues[actPos] = value;
+        // positions[selectedCellI, selectedCellJ] = value;
+
+
+    }
+
+    private void selectTableCell(int ii, int jj)
+    {
+
+        selectedCellI = ii;
+        selectedCellJ = jj;
+    }
+
+    private void BacktochooseDimension(MouseEventArgs e)
+    {
+
+        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create/measurementdimensions");
+    }
+
+
+    private void Reduce(MouseEventArgs e)
+    {
+        for (int i = 0; i < sizes.Length; i++)
+        {
+
+            sizes[i] = sizes[i] - 10;
+        }
+
+    }
+
+
+    private void Add(MouseEventArgs e)
+    {
+        //  Color = "black";
+
+        for (int i = 0; i < sizes.Length; i++)
+        {
+
+            sizes[i] = sizes[i] + 10;
+        }
+    }
+
+
+}

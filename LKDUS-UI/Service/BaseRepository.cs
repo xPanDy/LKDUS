@@ -27,7 +27,8 @@ namespace LKDUS_UI.Service
             {
                 return false;
             }
-            request.Content = new StringContent(JsonConvert.SerializeObject(obj));
+            request.Content = new StringContent(JsonConvert.SerializeObject(obj)
+                ,                Encoding.UTF8, "application/json");
 
             var client = this.client.CreateClient();
             HttpResponseMessage response = await client.SendAsync(request);
@@ -143,6 +144,26 @@ namespace LKDUS_UI.Service
         private async Task<string> GetBearerToken()
         {
             return await _localStorage.GetItemAsync<string>("authToken");
+        }
+
+        public  async Task<bool> Update(string url, T obj, int id)
+        {
+            var request = new HttpRequestMessage(HttpMethod.Put, url + id);
+
+            if (obj == null) { 
+                return false;
+            }
+            request.Content = new StringContent(JsonConvert.SerializeObject(obj)
+                , Encoding.UTF8, "application/json");
+
+            var client = this.client.CreateClient();
+            //client.DefaultRequestHeaders.Authorization =
+            //    new AuthenticationHeaderValue("bearer", await GetBearerToken());
+            HttpResponseMessage response = await client.SendAsync(request);
+            if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
+                return true;
+
+            return false;
         }
     }
 }

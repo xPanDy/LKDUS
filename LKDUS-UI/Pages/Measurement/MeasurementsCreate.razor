@@ -10,6 +10,7 @@
 @inject IFusPacksRepository frepo
 @inject IMeasurementTypeRepository measTRepo
 @inject IMeasurementPositionsRepository measPositionRepo
+@inject IMachinesRepository machineRepository
 
 @inject NavigationManager navManager
 @inject Blazored.Localisation.Services.IBrowserDateTimeProvider datetime;
@@ -133,13 +134,20 @@
         }
     </div>
 
+
+
+
     <div class="form-group">
         <label for="machine">Iekārta</label>
         <select class="custom-select" id="machine">
             <option selected>Izvēlies...</option>
-            <option value="1">Iekārta 1</option>
-            <option value="2">Iekārta 2</option>
-            <option value="3">Iekārta 3</option>
+            @if (Machines != null) { 
+            @foreach (var Mach in Machines)
+            {
+                 
+                <option  >@Mach.Name</option>
+            }
+            }
         </select>
 
     </div>
@@ -147,27 +155,61 @@
 
 
     <div class="form-group">
+        <label for="example-datetime-local-input" class="col-2 col-form-label">Datums     <br /></label>
         <div class="row">
-            <label for="example-datetime-local-input" class="col-2 col-form-label">Datums   <br /></label> 
-    @*// 01.12.2020 09:19:04*@
+            <div class="col">
+                @*// 01.12.2020 09:19:04*@
+                <select class="custom-select" @bind="Day">
+                    @for (int i = 1; i <= 31; i++)
+                    {
+                        <option>@i</option>
+                    }
+                </select>
 
-     <input class="form-control" type="date" value="2020-12-01" id="example-datetime-local-input">
+            </div>
+
+
+            <div class="col">
+                <select class="custom-select" @bind="Month">
+                    @for (int i = 1; i <= 12; i++)
+                    {
+                        <option value="@i">@Months[i - 1]</option>
+                    }
+                </select>
+
+            </div>
+
+
+            <div class="col">
+                <select class="custom-select" @bind="Year">
+                    @for (int i = DateTime.Now.Year - 5;
+                        i <= DateTime.Now.Year + 5; i++)
+                    {
+                        <option>@i</option>
+                    }
+                </select>
+                @*<button type="button">Izvēlēties</button>*@
+            </div>
+            @*<input class="form-control" type="text" @bind-value="@v" />*@
+            @*<input class="form-control" type="date" bind-value="12/11/2020" id="example-datetime-local-input">*@
+            @*<input class="form-control" type="date" value="2020-12-01" id="example-datetime-local-input">*@
+
         </div>
+
+    
     </div>
 
 
-
-
-    <div class="form-group">
+    @*<div class="form-group">
         <label for="example-text-input">Fus pakas kods</label>
 
         <input class="form-control" type="text" id="example-text-input">
 
-    </div>
+    </div>*@
 
 
     <div class="form-group">
-        <label for="operator">Operators</label>
+        <label for="operator">Laborants</label>
         <select class="custom-select" id="operator">
             <option selected> Izvēlies...</option>
             <option value="1">Kristaps    </option>
@@ -229,6 +271,23 @@
 
 @code {
 
+    public int Day { get; set; }
+    public int Month { get; set; }
+    public int Year { get; set; }
+
+    public string[] Months { get; set; } = {
+       "January", "February", "March",
+       "April", "May", "June", "July",
+       "August", "September", "October",
+       "November", "December" };
+
+
+
+
+
+    [Parameter]
+    public string measurementPositionId { get; set; }
+
 
     public string stringPackValue
     {
@@ -242,6 +301,7 @@
     public bool edited = false;
 
     public IList<FusPack> fusPacks;
+    //public IList<Machine> macinesList;
     public FusPack fp = new FusPack();
 
 
@@ -266,8 +326,6 @@
         }
     }
 
-    [Parameter]
-    public string measurementPositionId { get; set; }
 
 
 
@@ -314,10 +372,12 @@
 
     }
 
-    private static DateTime today = DateTime.Today;
+    private static DateTime today;
     private static string todayLocal = today.ToString("d");
 
-    public DateTime DateOfBirth { get; set; }
+    public DateTime dateOfMeasurement  { get; set; }
+    public string dateToday { get; set; }
+    public DateTime dateToday2 { get; set; }
 
     string currentLocalTime = "";
 
@@ -327,10 +387,13 @@
         {   // Leave the above firstRender check in place to ensure that the call to StateHasChanged() does not trigger an endless update loop.
             var browserDateTime = await datetime.GetInstance();
             // fusPacks = await frepo.Get(Endpoints.FusPackEndPoint);
-
+            today = DateTime.Today;
             currentLocalTime = browserDateTime.Now.ToString();
             StateHasChanged();
-            DateOfBirth = DateTime.Now;
+            //dateToday = DateTime.Now.ToString("MM/dd/yyyy");
+            //dateToday2 = DateTime.Parse(dateToday);
+
+            //ToString("MM/dd/yyyy");
         }
 
     }
@@ -338,14 +401,22 @@
 
 
     private IList<Measurement> Model2;
-    private IList<Measurement> Machines;
-
+    private IList<Measurement> FusMachines;
+    private IList<Machine> Machines;
 
     protected async override Task OnInitializedAsync()
     {
+
+        Day = DateTime.Now.Day;
+        Month = DateTime.Now.Month;
+        Year = DateTime.Now.Year;
+
+
+
         Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
-        Machines = await this.repo.Get(Endpoints.MeasurementEndpoint);
+        FusMachines = await this.repo.Get(Endpoints.MeasurementEndpoint);
         fusPacks = await frepo.Get(Endpoints.FusPackEndPoint);
+        Machines = await machineRepository.Get(Endpoints.MachinesEndpoint);
         try
         {
             int result = Int32.Parse(measurementPositionId);
@@ -363,25 +434,25 @@
     private void GoToThickness(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo("/measurements/create/thickness");
+        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create/thickness");
     }
 
     private void GoToDimensions(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo("/measurements/create/measurementdimensions");
+        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create/measurementdimensions");
     }
 
     private void GoToQuality(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo("/measurements/create/quality");
+        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create/quality");
     }
 
     private void OpenCreateForm(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo("/measurements/create");
+        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create");
     }
 
     private void goBack(MouseEventArgs e)

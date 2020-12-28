@@ -129,6 +129,8 @@
  
 
 @code {
+    [Parameter]
+    public string measurementPositionId { get; set; }
     private IList<Measurement> Model2;
 
     protected async override Task OnInitializedAsync()

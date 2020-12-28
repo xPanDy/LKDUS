@@ -1,4 +1,4 @@
-﻿@page "/measurements/create/thickness" 
+﻿@page "/measurements/{measurementPositionId}/create/thickness" 
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
@@ -7,8 +7,7 @@
 
 @inject IMeasurementRepository repo
 @inject NavigationManager navManager
-
-
+ 
 
 
  <form>
@@ -40,90 +39,92 @@
 
         </div>
 
-        <table class="table table-hover">
+        <table class="table table-hover table-striped">
             <thead>
-                <tr >
+                <tr>
+                     
                     <th class="text-center" scope="col">Nr.</th>
-                    <th class="text-center"  scope="col">1</th>
-                    <th class="text-center"  scope="col">2</th>
-                    <th class="text-center"  scope="col">3</th>
+                    <th class="text-center" scope="col">1</th>
+                    <th class="text-center" scope="col">2</th>
+                    <th class="text-center" scope="col">3</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr style="background-color: @highlight1" @onclick="@HighlightSelected1">
-                    <th class="text-center"   scope="row">1</th>
-                    <td class="text-center" > @positionValues[0]</td>
-                    <td class="text-center" > @positionValues[1]</td>
-                    <td class="text-center" > @positionValues[2]</td>
-                </tr>
-                <tr style="background-color: @highlight2" @onclick="@HighlightSelected2">
-                    <th class="text-center"  scope="row">2</th>
-                    <td class="text-center" >@positionValues[0] </td>
-                    <td class="text-center" >@positionValues[1] </td>
-                    <td class="text-center" >@positionValues[2] </td>
-                </tr>
-                <tr style="background-color: @highlight3" @onclick="@HighlightSelected3">
-                    <th class="text-center"  scope="row">3</th>
-                    <td class="text-center" > @positionValues[0]</td>
-                    <td class="text-center" > @positionValues[1]</td>
-                    <td class="text-center" > @positionValues[2]</td>
-                </tr>
-                <tr style="background-color: @highlight4" @onclick="@HighlightSelected1" >
-                    <th class="text-center"  scope="row">4</th>
-                    <td class="text-center" >@positionValues[0] </td>
-                    <td class="text-center" >@positionValues[1] </td>
-                    <td class="text-center" >@positionValues[2] </td>
-                </tr>
-                <tr >
-                    <th class="text-center"  scope="row"></th>
-                    <td class="text-center" > </td>
-                    <td class="text-center" > </td>
-                    <td class="text-center" > </td>
-                </tr>
+            <tbody class="h-50">
 
-                <tr>
-                    <th class="text-center"  scope="row">VID.</th>
-                    <td class="text-center" >@positionValues[0] </td>
-                    <td class="text-center" >@positionValues[1] </td>
-                    <td class="text-center" >@positionValues[2]</td>
-                </tr>
-                <tr>
-                    <th scope="row"></th>
-                    <td class="text-center">
-                        <button type="button" @onclick="(()=>setPos(0))" class="btn btn-primary alert-info" >
-                            <span class="badge badge-info">1.poz</span>
-                            <br />
-                            <span class="badge badge-light">
-                                @positionValues[0]
 
-                            </span>
-                        </button>
-                    </td >
-                    <td class="text-center">
-                        <button type="button" @onclick="(()=>setPos(1))"   class="btn btn-primary alert-info">
-                            <span class="badge badge-info">2.poz</span><br />
-                            <span class="badge badge-light">@positionValues[1]</span>
-                        </button>
-                    </td>
-                    <td class="text-center">
-                        <button type="button" @onclick="(()=>setPos(2))"  class="btn btn-primary alert-info">
-                            <span class="badge badge-info">3.poz</span><br />
-                            <span class="badge badge-light">@positionValues[2]</span>
-                        </button>
-                    </td>
-                </tr>
+                @if (sizesArray != null)
+                {
+                    for (int i = 0; i < sizesArray.GetLength(0); i++)
+                    {
 
-                <tr>
-                    <th scope="row"></th>
-                    <td> </td>
-                    <td class="text-center">
-                        <button type="button" class="btn btn-success">
-                            OK
-                        </button>
-                    </td>
-                    <td></td>
-                </tr>
+                        int tmp = i;
+                        var rowNumber = i + 1;
+                        <tr id="@tmp" style="background-color: @Background" @onclick="( e => HighlightSelected1(tmp, Background))">
+                            
+                            <td class="text-center" scope="row">@rowNumber</td>
+
+                            @for (int j = 0; j < sizesArray.GetLength(1); j++)
+                            {
+                                <td style="background-color: @highlight2"
+                                    class="text-center">
+                                    @sizesArray[i, j]
+                                </td>
+
+
+                            }
+                        </tr>
+
+                    }
+                }
+               
             </tbody>
+            
+                <tr>
+                   
+                    <th class="text-center">
+                        <button type="button" @onclick="(()=>setPos(0))" class="btn btn-primary alert-info">
+                            <span class="badge badge-info">1.poz</span>
+                            @*<br />
+                    <span class="badge badge-light">
+                        @sizesArray[@actPosRow, @actPosCol]
+                        @rowPositionValues[0]
+
+                    </span>*@
+                        </button>
+                    </th>
+                    <th class="text-center">
+                        <button type="button" @onclick="(()=>setPos(1))" class="btn btn-primary alert-info">
+                            <span class="badge badge-info">2.poz</span>
+                            @*<br />
+                    <span class="badge badge-light">
+                    @sizesArray[@actPosRow,@actPosCol]
+                    @rowPositionValues[1]</span>*@
+                        </button>
+                    </th>
+                    <th class="text-center">
+                        <button type="button" @onclick="(()=>setPos(2))" class="btn btn-primary alert-info">
+                            <span class="badge badge-info">3.poz</span>
+                            @*<br />
+                    <span class="badge badge-light">
+                        @sizesArray[@actPosRow, @actPosCol]
+                        @rowPositionValues[2]
+                    </span>*@
+                        </button>
+                    </th>
+                  
+                </tr>
+            
+            <tr>
+                <th scope="row"></th>
+                <td> </td>
+                <td class="text-center">
+                    <button type="button" class="btn btn-success">
+                        OK
+                    </button>
+                </td>
+                <td></td>
+                
+            </tr>
         </table>
     </div>
    
@@ -174,24 +175,30 @@
 
 @code {
 
-    private void HighlightSelected1()
+    [Parameter]
+    public string measurementPositionId { get; set; }
+    private string Background { get; set; }//= "green";
+
+    private void HighlightSelected1(int i, string higlith)
     {
-       // highlight1 = highlight1 == "" ? "red" : "";
+        int a = i;
+        actPosRow = i;
+        //Background = Background == "green" ? "white" : "green";
     }
 
     private void HighlightSelected2()
     {
-        highlight2 = highlight2 == "" ? "red" : "";
+        // highlight2 = highlight2 == "" ? "red" : "";
     }//
 
     private void HighlightSelected3()
     {
-       // highlight3 = highlight3 == "" ? "red" : "";
+        // highlight3 = highlight3 == "" ? "red" : "";
     }
 
     private void HighlightSelected4()
     {
-      //  highlight4 = highlight4 == "" ? "red" : "";
+        //  highlight4 = highlight4 == "" ? "red" : "";
     }
 
     private string highlight1 { get; set; } = "";
@@ -201,7 +208,9 @@
 
     private void select(decimal value)
     {
-        positionValues[actPos] = value;
+        //  rowPositionValues[actPos] = value;
+        sizesArray[actPosRow, actPosCol] = value; ;
+        // rowPositionValues
 
     }
 
@@ -210,18 +219,28 @@
 
         // Color = Color == "red" ? "green" : "red";
         actPos = i;
-
+        actPosCol = i;
+        //actPosCol
     }
 
     private string Color { get; set; } = "red";
     private IList<Measurement> Model2;
 
     private int actPos;
+
+
+    private int actPosCol;
+    private int actPosRow;
+
+
     private decimal[] sizes = new decimal[9];
+
+    private decimal[,] sizesArray = new decimal[40,3];
+
     private decimal start = 1.51m;
 
     private decimal selectedValue;
-    private decimal[] positionValues = new decimal[3];
+    private decimal[] rowPositionValues = new decimal[3];
     private decimal positionValue;
 
 
@@ -230,6 +249,17 @@
     protected async override Task OnInitializedAsync()
     {
         Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+
+        int startValuesOfMeasurement = 0;
+        for(int i = 0; i< sizesArray.GetLength(0); i++)
+        {
+
+            for(int j = 0; j< sizesArray.GetLength(1); j++)
+            {
+
+                sizesArray[i, j] = startValuesOfMeasurement;
+            }
+        }
 
         for (int i = 0; i< sizes.Length; i++)
         {
@@ -244,13 +274,13 @@
     private void OpenCreateForm(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo("/measurements/create");
+        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create");
     }
 
     private void GoToCreation(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo("/measurements/create");
+        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create");
     }
 
 

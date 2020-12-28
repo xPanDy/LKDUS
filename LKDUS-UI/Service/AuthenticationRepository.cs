@@ -131,5 +131,10 @@ namespace LKDUS_UI.Service
         {
             throw new NotImplementedException();
         }
+
+        public Task<bool> Update(string url, LoginModel obj, int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

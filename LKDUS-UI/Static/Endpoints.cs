@@ -19,6 +19,9 @@ namespace LKDUS_UI.Static
         public static string MeasurementPositions = $"{BaseUrl}api/measurementposition/";
 
         public static string MeasurementTypeEndpoint = $"{BaseUrl}api/measurementtype/";
+    
+        
+        public static string MachinesEndpoint = $"{BaseUrl}api/machine/";
         
         public static string FusPackEndPoint = $"{BaseUrl}api/FusPack/";
     }

@@ -20,39 +20,39 @@ namespace LKDUS_API.Services
 
         public async Task<bool> Create(Machine entity)
         {
-            await _db.Packs.AddAsync(entity);
+            await _db.Machines.AddAsync(entity);
             return await Save();
 
         }
 
-        public async Task<bool> Delete(Pack entity)
+        public async Task<bool> Delete(Machine entity)
         {
-            _db.Packs.Remove(entity);
+            _db.Machines.Remove(entity);
             return await Save();
         }
 
-        public async Task<IList<Pack>> FindAll()
+        public async Task<IList<Machine>> FindAll()
         {
-            var packs = await _db.Packs.ToListAsync();
+            var machines = await _db.Machines.ToListAsync();
 
-            return packs;
+            return machines;
         }
 
-        public async Task<Pack> FindById(int id)
+        public async Task<Machine> FindById(int id)
         {
-            var pack = await _db.Packs.FindAsync(id);
+            var machine = await _db.Machines.FindAsync(id);
 
-            return pack;
+            return machine;
         }
 
-        public Task<Pack> FindById(string id)
+        public Task<Machine> FindById(string id)
         {
             throw new NotImplementedException();
         }
 
         public async Task<bool> isExists(int id)
         {
-            return await _db.Packs.AnyAsync(q => q.Id == id);
+            return await _db.Machines.AnyAsync(q => q.Id == id);
         }
 
         public Task<bool> isExists(string id)
@@ -66,9 +66,9 @@ namespace LKDUS_API.Services
             return changes > 0;
         }
 
-        public async Task<bool> Update(Pack entity)
+        public async Task<bool> Update(Machine entity)
         {
-            _db.Packs.Update(entity);
+            _db.Machines.Update(entity);
             return await Save();
 
         }

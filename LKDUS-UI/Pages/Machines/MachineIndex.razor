@@ -1,0 +1,98 @@
+﻿@page "/machines/"
+@attribute [Authorize]
+
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+@using Microsoft.Extensions.Logging
+
+@inject IMachinesRepository   _repo
+
+
+<h3>Iekārtas</h3>
+<hr />
+<br />
+@if (Model == null)
+{
+    <LoadingMessage Message="Ielādē iekārtu sarakstu" />
+}
+else
+{
+    @*<AuthorizeView Roles="Administrator">*@
+        <a href="/machinecreate" class="btn btn-primary">
+            <span class="oi oi-plus"></span>
+            Izveidot
+        </a>
+    @*</AuthorizeView>*@
+
+    <br />
+    <br />
+    <br />
+    @if (Model.Count < 1)
+    {
+        <LoadingMessage Message="Nav nevienas iekārtas datu krātuvē. 
+                        Uzklikšķini uz 'Izveidot' lai pievienotu"/>
+    }
+    else
+    {
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    
+                    <th>Nr.</th>
+                    <th>Iekārta</th>
+                    <th>Apraksts</th>
+                    <th>Darbība</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var machine in Model)
+                {
+                    <tr>
+                        @*<td>
+                            <img src="uploads/@book.Image" class="img-thumbnail" style="height:100px;width:100px" />
+                        </td>*@
+                        <td>@machine.Id</td>
+                        <td>@machine.Name</td>
+                        <td>@machine.Description</td>
+                        @*<td>
+                            @if (@book.Author == null)
+                            {
+                                <span class="text-muted">No Author Recorded</span>
+                            }
+                            else
+                            {
+                                <span>@book.Author.Firstname @book.Author.Lastname </span>
+                            }
+                        </td>*@
+                        <td>
+                            @*<a href="/books/view/@book.Id" class="btn btn-primary">
+                                <span class="oi oi-book"></span>
+                            </a>
+                            <AuthorizeView Roles="Administrator">*@
+                                <a href="/machineedit/@machine.Id" class="btn btn-warning">
+                                    <span class="oi oi-pencil">Rediģēt</span>
+                                </a>
+                                <a href="/machinedelete/@machine.Id" class="btn btn-danger">
+                                    <span class="oi oi-delete">Dzēst</span>
+                                </a>
+                            @*</AuthorizeView>*@
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}
+
+
+
+@code {
+    private IList<Machine> Model;
+
+    protected async override Task OnInitializedAsync()
+    {
+        Model = await _repo.Get(Endpoints.MachinesEndpoint);
+    }
+}
