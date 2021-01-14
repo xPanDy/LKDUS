@@ -173,65 +173,43 @@ namespace LKDUS_API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Create([FromBody] AspUserCreateDTO userDTO)
         {
-
-
-            if (await userManager.FindByEmailAsync("operator@finieris.lv") == null)
-            {
-                var user = new IdentityUser
-                {
-                    UserName = "operator",
-                    Email = "operator@finieris.lv"
-                };
-
-                var result = await userManager.CreateAsync(user, "1111");
-                if (result.Succeeded)
-                {
-                    await userManager.AddToRoleAsync(user, "Operator");
-                }
-
-            }
-
-
-
             var location = GetControllerActionNames();
-
             try
             {
                 this.logger.LogInfo($"{location}: User creation  Attempted");
-                if (userDTO == null)
+                if (await userManager.FindByNameAsync(userDTO.UserName) == null)
                 {
-                    this.logger.LogWarn($"{location}: Empty request was submitted");
-                    return BadRequest(ModelState);
-                }
-                if (!ModelState.IsValid)
-                {
-                    this.logger.LogWarn($"{location}: User Data was Incomplete");
-                    return BadRequest(ModelState);
 
-                }
+                    var user = new IdentityUser
+                    {
+                        UserName = userDTO.UserName,
+                        Email = "operator@finieris.lv",
 
+                    };
+
+                    var result = await userManager.CreateAsync(user, "1111");
+                    if (result.Succeeded)
+                    {
+                        await userManager.AddToRoleAsync(user, "Operator");
+                        this.logger.LogInfo($"{location}: User creation was created");
+                        this.logger.LogInfo($"{location}: {user}");
+                        return Created("Create", new { user });
+                    } 
+
+
+                    
+                }
+                return BadRequest(ModelState);
+
+
+          
+
+           
+               
                 
 
-                UserManager<AspUserDTO> userManager1=null;
-        
-                AspUserDTO aspuser = new AspUserDTO
-                {
-                    UserName = userDTO.UserName,
-                    Password = "1111",
-                };
-
-                IdentityResult result = await userManager1.CreateAsync(aspuser, aspuser.Password);
-
-                if (result.Succeeded)
-                {
-                    return InternalError($"{location}: User creation failed");
-                }
-
                 
-
-                this.logger.LogInfo($"{location}: User creation was created");
-                this.logger.LogInfo($"{location}: {aspuser}");
-                return Created("Create", new { aspuser });
+ 
             }
             catch (Exception e)
             {

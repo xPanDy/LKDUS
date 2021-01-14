@@ -1,1 +1,22 @@
 2021-01-14 10:01:30.8196 INFO AspNetUsers-Create: User creation  Attempted
+2021-01-14 15:21:24.6060 INFO AspNetUsers-Create: User creation  Attempted
+2021-01-14 15:21:34.3796 INFO AspNetUsers-Create: User creation was created
+2021-01-14 15:21:34.3796 INFO AspNetUsers-Create: testa
+2021-01-14 15:23:24.3938 INFO Machine-GetMachines: Attempted Call
+2021-01-14 15:23:24.5970 INFO Sucessfully got all machines
+2021-01-14 15:23:27.5309 INFO Machine-GetMachine: Attempted get machine with ID: 4
+2021-01-14 15:23:27.5808 INFO Sucessfully got the machine with Id:4
+2021-01-14 15:23:29.4669 WARN Machine-Update: machinE update atempted - id: 4
+2021-01-14 15:23:29.5643 INFO Machine-GetMachines: Attempted Call
+2021-01-14 15:23:29.5643 INFO Sucessfully got all machines
+2021-01-14 15:23:29.5899 INFO Machine-Update: machine Data with id: 4 was updated
+2021-01-14 15:23:32.0549 INFO Machine-GetMachine: Attempted get machine with ID: 4
+2021-01-14 15:23:32.1502 INFO Sucessfully got the machine with Id:4
+2021-01-14 15:23:33.9572 WARN Machine-Delete: machine deletion atempted - id: 4
+2021-01-14 15:23:34.0320 WARN Machine-Delete:  machine Data with id: 4 was deleted
+2021-01-14 15:23:34.0582 INFO Machine-GetMachines: Attempted Call
+2021-01-14 15:23:34.0820 INFO Sucessfully got all machines
+2021-01-14 15:23:56.2430 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-14 15:23:56.4322 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-14 15:23:57.0339 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-14 15:23:57.0664 INFO Sucessfully got all measurementPositions
