@@ -107,6 +107,7 @@ namespace LKDUS_API
            
             services.AddScoped<IFusPackRepository, FusPackRepository>();
             services.AddScoped<IMachineRepository, MachineRepository>();
+          //  services.AddScoped<IAspUserRepository, AspUserRepository>();
 
 
             services.AddControllers();

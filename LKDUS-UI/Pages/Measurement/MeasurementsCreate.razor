@@ -44,27 +44,27 @@
                 <div class="row">
 
 
-                            <div class="col">
-                                <label for="packCode">Pakas kods</label>
+                    <div class="col">
+                        <label for="packCode">Pakas kods</label>
 
 
-                                @*@bind=@packId*@
+                        @*@bind=@packId*@
 
-                                <input class="form-control"
-                                       @bind-value="@stringPackValue"
-                                       @bind-value:event="oninput"
-                                       @onkeyup="DoSomethingElse"
-                                       type="text"
-                                       id="packCode">
-                                @if (fp == null)
-                                {
+                        <input class="form-control"
+                               @bind-value="@stringPackValue"
+                               @bind-value:event="oninput"
+                               @onkeyup="DoSomethingElse"
+                               type="text"
+                               id="packCode">
+                        @if (fp == null)
+                        {
                             <div class="alert alert-danger" role="alert">
                                 Šāda paka neeksistē
                             </div>
-                            
-                                }
 
-                            </div>
+                        }
+
+                    </div>
                     @if (fp != null)
                     {
                         <div class="col">
@@ -96,6 +96,12 @@
                             <input class="form-control"
                                    @bind-value="@fp.MachineName" type="text" readonly id="packMachine">
                         </div>
+                        <div class="col">
+                            <label for="packMaster">Meistars</label>
+
+                            <input class="form-control"
+                                   @bind-value="@fp.Master" type="text" readonly id="packMaster">
+                        </div>
                     }
                     else
                     {
@@ -104,7 +110,6 @@
                             <label for="pack">Pakas Autors   </label>
 
                             <input class="form-control" readonly
-                                    
                                    type="text" id="packAuthor">
 
 
@@ -119,14 +124,20 @@
                             <label for="pack">Pakas datums</label>
 
                             <input class="form-control" type="text"
-                                    
                                    readonly id="packDate">
                         </div>
                         <div class="col">
                             <label for="pack">Pakas iekārta</label>
 
                             <input class="form-control"
-                                     type="text" readonly id="packMachine">
+                                   type="text" readonly id="packMachine">
+                        </div>
+
+                        <div class="col">
+                            <label for="pack">Meistars</label>
+
+                            <input class="form-control"
+                                   type="text" readonly id="packMaster">
                         </div>
                     }
 
@@ -233,7 +244,7 @@
 
 
 
-    <div class="form-group">
+    @*<div class="form-group">
         <label for="master">Meistars</label>
         <select class="custom-select" id="master">
             <option selected>Izvēlies...</option>
@@ -242,7 +253,7 @@
             <option value="3">Kristaps</option>
         </select>
 
-    </div>
+    </div>*@
 
 
     <nav class="navbar navbar-dark">

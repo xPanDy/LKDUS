@@ -1,4 +1,4 @@
-﻿@page "/measurements/{measurementPositionId}/create/thickness" 
+﻿@page "/measurements/{measurementPositionId}/create/thickness"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
@@ -9,8 +9,72 @@
 @inject NavigationManager navManager
  
 
+<style>
 
- <form>
+    #ttr:focus {
+        background-color: yellow;
+    }
+
+    .table-scroll {
+        /*width:100%; */
+        display: block;
+        /* Decoration */
+    }
+
+        .table-scroll thead {
+            background-color: #f1f1f1;
+            position: relative;
+            display: block;
+            width: 100%;
+        }
+
+        .table-scroll tbody {
+            /* Position */
+            display: block;
+            position: relative;
+            width: 100%;
+            overflow-y: scroll;
+            /* Decoration */
+        }
+
+        .table-scroll tr {
+            width: 100%;
+            display: flex;
+        }
+
+        .table-scroll td, .table-scroll th {
+            flex-basis: 100%;
+            flex-grow: 2;
+            display: block;
+            padding: 5px;
+            text-align: left;
+        }
+
+        /* Other options */
+
+        .table-scroll.small-first-col td:first-child,
+        .table-scroll.small-first-col th:first-child {
+            flex-basis: 20%;
+            flex-grow: 1;
+        }
+
+        .table-scroll tbody tr:nth-child(2n) {
+            background-color: rgba(130,130,170,0.1);
+        }
+
+        .table-scroll tfoot {
+            background-color: #f1f1f1;
+            position: relative;
+            display: block;
+            width: 100%;
+        }
+
+    .body-half-screen {
+        max-height: 35vh;
+    }
+</style>
+
+<form>
 
     <div class="container">
         <div class="row">
@@ -23,34 +87,113 @@
                 <button type="submit" class="btn btn-primary btn-block">Saglabāt</button>
             </div>
             @*<div class="col">
-                <button type="button" @onclick="@GoToCreation" class="btn btn-primary">Atpakaļ</button>
-            </div>
-            <div class="col"> <h3 class="card-title">Mitrā finiera biezums</h3> </div>
-            <div class="col ">
-                <button type="submit" class="btn btn-success  pull-right">Saglabāt</button>
-            </div>*@
+                    <button type="button" @onclick="@GoToCreation" class="btn btn-primary">Atpakaļ</button>
+                </div>
+                <div class="col"> <h3 class="card-title">Mitrā finiera biezums</h3> </div>
+                <div class="col ">
+                    <button type="submit" class="btn btn-success  pull-right">Saglabāt</button>
+                </div>*@
 
         </div>
-        </div>
-    <div class="container">
-        <div class="form-group">
-            <label for="machine">Iekārta</label>
-            <input id="machine" class="form-control" type="text" placeholder="Iekārta" readonly>
+    </div>
+    <div class="form-group">
+        <label for="machine">Iekārta</label>
+        <input id="machine" class="form-control" type="text" placeholder="Iekārta" readonly>
 
-        </div>
+    </div>
+    <div class="form-group">
 
-        <table class="table table-hover table-striped">
+        <table class="table-scroll  ">
             <thead>
                 <tr>
-                     
-                    <th class="text-center" scope="col">Nr.</th>
-                    <th class="text-center" scope="col">1</th>
-                    <th class="text-center" scope="col">2</th>
-                    <th class="text-center" scope="col">3</th>
+                    <th class="text-center">Nr.</th>
+                    <th class="text-center">1  </th>
+                    <th class="text-center">2  </th>
+                    <th class="text-center">3  </th>
                 </tr>
             </thead>
-            <tbody class="h-50">
+            <tbody class="body-half-screen">
+                @if (sizesArray != null)
+                {
+                    for (int i = 0; i < sizesArray.GetLength(0); i++)
+                    {
 
+                        int tmp = i;
+                        var rowNumber = i + 1;
+                        //id="@tmp"
+                        <tr tabindex="1" id="ttr" style="background-color: @Background" @onclick="( e => HighlightSelected1(tmp, Background))">
+
+                            <td class="text-center" scope="row">@rowNumber</td>
+
+                            @for (int j = 0; j < sizesArray.GetLength(1); j++)
+                            {
+                                <td   style="background-color: @highlight2"
+                                    class="text-center">
+                                    @sizesArray[i, j]
+                                </td>
+
+
+                            }
+                        </tr>
+
+                    }
+                }
+
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td class="text-center">
+                        <button type="button" @onclick="(()=>setPos(0))" class="btn btn-primary alert-info">
+                            <span class="badge badge-info">1.poz</span>
+                            @*<br />
+                                <span class="badge badge-light">
+                                    @sizesArray[@actPosRow, @actPosCol]
+                                    @rowPositionValues[0]
+
+                                </span>*@
+                        </button>
+                    </td>
+                    <td class="text-center">
+                        <button type="button" @onclick="(()=>setPos(1))" class="btn btn-primary alert-info">
+                            <span class="badge badge-info">2.poz</span>
+                            @*<br />
+                                <span class="badge badge-light">
+                                @sizesArray[@actPosRow,@actPosCol]
+                                @rowPositionValues[1]</span>*@
+                        </button>
+                    </td>
+                    <td class="text-center">
+                        <button type="button" @onclick="(()=>setPos(2))" class="btn btn-primary alert-info">
+                            <span class="badge badge-info">3.poz</span>
+                            @*<br />
+                                <span class="badge badge-light">
+                                @sizesArray[@actPosRow, @actPosCol]
+                                @rowPositionValues[2]
+                                </span>*@
+                        </button>
+                    </td>
+
+                </tr>
+
+
+
+            </tfoot>
+        </table>
+    </div>
+    @*<div class="container">
+        <table id="tabli" class="table table-fixed table-striped">
+            <thead id="tthead">
+                <tr id="ttr">
+
+                    <th class="col-xs-3" scope="col">Nr.</th>
+                    <th class="col-xs-3" scope="col">1  </th>
+                    <th class="col-xs-3" scope="col">2  </th>
+                    <th class="col-xs-3" scope="col">3  </th>
+                </tr>
+            </thead>
+            <tbody id="ttbody">
 
                 @if (sizesArray != null)
                 {
@@ -59,8 +202,9 @@
 
                         int tmp = i;
                         var rowNumber = i + 1;
-                        <tr id="@tmp" style="background-color: @Background" @onclick="( e => HighlightSelected1(tmp, Background))">
-                            
+                        //id="@tmp"
+                        <tr id="ttr" style="background-color: @Background" @onclick="( e => HighlightSelected1(tmp, Background))">
+
                             <td class="text-center" scope="row">@rowNumber</td>
 
                             @for (int j = 0; j < sizesArray.GetLength(1); j++)
@@ -76,67 +220,67 @@
 
                     }
                 }
-               
-            </tbody>
-            
-                <tr>
-                   
-                    <th class="text-center">
-                        <button type="button" @onclick="(()=>setPos(0))" class="btn btn-primary alert-info">
-                            <span class="badge badge-info">1.poz</span>
-                            @*<br />
-                    <span class="badge badge-light">
-                        @sizesArray[@actPosRow, @actPosCol]
-                        @rowPositionValues[0]
 
-                    </span>*@
-                        </button>
-                    </th>
-                    <th class="text-center">
-                        <button type="button" @onclick="(()=>setPos(1))" class="btn btn-primary alert-info">
-                            <span class="badge badge-info">2.poz</span>
-                            @*<br />
-                    <span class="badge badge-light">
-                    @sizesArray[@actPosRow,@actPosCol]
-                    @rowPositionValues[1]</span>*@
-                        </button>
-                    </th>
-                    <th class="text-center">
-                        <button type="button" @onclick="(()=>setPos(2))" class="btn btn-primary alert-info">
-                            <span class="badge badge-info">3.poz</span>
-                            @*<br />
-                    <span class="badge badge-light">
-                        @sizesArray[@actPosRow, @actPosCol]
-                        @rowPositionValues[2]
-                    </span>*@
-                        </button>
-                    </th>
-                  
-                </tr>
-            
-            <tr>
-                <th scope="row"></th>
-                <td> </td>
-                <td class="text-center">
-                    <button type="button" class="btn btn-success">
-                        OK
-                    </button>
-                </td>
-                <td></td>
-                
-            </tr>
-        </table>
+            </tbody>*@
+
+    <!--<tr>
+       <th></th>
+        <th class="text-center">
+            <button type="button" @onclick="(()=>setPos(0))" class="btn btn-primary alert-info">
+                <span class="badge badge-info">1.poz</span>-->
+    @*<br />
+        <span class="badge badge-light">
+            @sizesArray[@actPosRow, @actPosCol]
+            @rowPositionValues[0]
+
+        </span>*@
+    <!--</button>
+    </th>
+    <th class="text-center">
+        <button type="button" @onclick="(()=>setPos(1))" class="btn btn-primary alert-info">
+            <span class="badge badge-info">2.poz</span>-->
+    @*<br />
+        <span class="badge badge-light">
+        @sizesArray[@actPosRow,@actPosCol]
+        @rowPositionValues[1]</span>*@
+    <!--</button>
+    </th>
+    <th class="text-center">
+        <button type="button" @onclick="(()=>setPos(2))" class="btn btn-primary alert-info">
+            <span class="badge badge-info">3.poz</span>-->
+    @*<br />
+        <span class="badge badge-light">
+        @sizesArray[@actPosRow, @actPosCol]
+        @rowPositionValues[2]
+        </span>*@
+    <!--</button>
+            </th>
+
+        </tr>
+
+    <tr>
+        <th scope="row"></th>
+        <td> </td>
+        <td class="text-center">
+            <button type="button" class="btn btn-success">
+                OK
+            </button>
+        </td>
+        <td></td>
+
+    </tr>-->
+    @*</table>
+        </div>*@
+
+
+    <div class="container">
+
+
+
+
     </div>
-   
-     
-     <div class="container" >
 
-       
-        
-       
-    </div>
-
-    <div  class="container">
+    <div class="container">
 
         <div class="d-flex justify-content-between">
             <button type="button" @onclick="Reduce" style="color:deeppink" class="btn btn-secondary btn-lg">-</button>
@@ -145,16 +289,16 @@
                     <tr class="text-center">
 
                         <td>  <button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button></td>
-                        <td><button type="button" @onclick="(()=>select(sizes[1]))" class="btn btn-info btn-lg btn-block" >@sizes[1]</button></td>
+                        <td><button type="button" @onclick="(()=>select(sizes[1]))" class="btn btn-info btn-lg btn-block">@sizes[1]</button></td>
                         <td><button type="button" @onclick="(()=>select(sizes[2]))" class="btn btn-info btn-lg btn-block">@sizes[2]</button></td>
 
                     </tr>
-                    <tr class="text-center" >
+                    <tr class="text-center">
                         <td><button type="button" @onclick="(()=>select(sizes[3]))" class="btn btn-info btn-lg btn-block">@sizes[3]</button></td>
                         <td><button type="button" @onclick="(()=>select(sizes[4]))" class="btn btn-info btn-lg btn-block">@sizes[4]</button></td>
                         <td><button type="button" @onclick="(()=>select(sizes[5]))" class="btn btn-info btn-lg btn-block">@sizes[5]</button></td>
                     </tr>
-                    <tr  class="text-center">
+                    <tr class="text-center">
                         <td><button type="button" @onclick="(()=>select(sizes[6]))" class="btn btn-info btn-lg btn-block">@sizes[6]</button></td>
                         <td><button type="button" @onclick="(()=>select(sizes[7]))" class="btn btn-info btn-lg btn-block">@sizes[7]</button></td>
                         <td><button type="button" @onclick="(()=>select(sizes[8]))" class="btn btn-info btn-lg btn-block">@sizes[8]</button></td>
@@ -165,15 +309,16 @@
         </div>
 
     </div>
-    
-    
+
+
 
 
 
 </form>
- 
+
 
 @code {
+
 
     [Parameter]
     public string measurementPositionId { get; set; }
@@ -214,12 +359,13 @@
 
     }
 
-    private void setPos( int i)
+    private void setPos(int i)
     {
 
         // Color = Color == "red" ? "green" : "red";
         actPos = i;
         actPosCol = i;
+        
         //actPosCol
     }
 
@@ -235,7 +381,7 @@
 
     private decimal[] sizes = new decimal[9];
 
-    private decimal[,] sizesArray = new decimal[40,3];
+    private decimal[,] sizesArray = new decimal[40, 3];
 
     private decimal start = 1.51m;
 
@@ -251,20 +397,20 @@
         Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
 
         int startValuesOfMeasurement = 0;
-        for(int i = 0; i< sizesArray.GetLength(0); i++)
+        for (int i = 0; i < sizesArray.GetLength(0); i++)
         {
 
-            for(int j = 0; j< sizesArray.GetLength(1); j++)
+            for (int j = 0; j < sizesArray.GetLength(1); j++)
             {
 
                 sizesArray[i, j] = startValuesOfMeasurement;
             }
         }
 
-        for (int i = 0; i< sizes.Length; i++)
+        for (int i = 0; i < sizes.Length; i++)
         {
 
-            sizes[i] = start  ;
+            sizes[i] = start;
             start = start + 0.01m;
         }
 

@@ -1,0 +1,137 @@
+﻿@page "/usercreate"
+@*@attribute [Authorize(Roles = "Administrator")]*@
+
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+@using Microsoft.Extensions.Logging
+
+@inject NavigationManager navManager
+@inject IAuthenticationRepository authRepo
+@*@inject IToastService _toastService*@
+
+<h3>Lietotāju izveidošanas forma</h3>
+<hr />
+<br />
+@if (!isSuccess)
+{
+    <h3>"Ups, ir problēma, kaut kas nogāja greizi" </h3>
+}
+
+<EditForm Model="Model" OnValidSubmit="HandleCreate">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="form-group">
+        <label for="title">Lietotāja vārds </label>
+        <InputText @bind-Value="Model.UserName" class="form-control" id="title" />
+    </div>
+   
+    @*<div class="form-group">
+            <label for="price">Price</label>
+            <InputNumber @bind-Value="Model.Price" class="form-control" id="price" />
+        </div>
+        <div class="form-group">
+            <label for="author">Authors</label>
+            <select @bind="Model.AuthorId" class="form-control" id="author">
+                <option value="">-- Select Author --</option>
+                @if (Authors != null)
+                {
+                    foreach (var author in Authors)
+                    {
+                        <option value="@author.Id">@author.Firstname @author.Lastname</option>
+                    }
+                }
+            </select>
+        </div>*@
+    @*<div class="form-group">
+        <label for="summary">Lietotāja loma</label>
+        <InputTextArea @bind-Value="Model.Description" class="form-control" id="summary" />
+    </div>*@
+
+    <button class="btn btn-primary" type="submit">
+        <span class="oi oi-pencil"></span>
+        Izveidot
+    </button>
+    <button @onclick="BackToList" class="btn btn-outline-secondary">
+        <span class="oi oi-media-skip-backward"></span>
+        Atpakaļ
+    </button>
+    @if (!isSuccess)
+    {
+        <label class="alert-warning">Kaut kas nav labi!</label>
+    }
+</EditForm>
+
+@code {
+    private LoginModelCreate Model = new LoginModelCreate();
+    //private IList<Machine> Authors;
+    //private IFileListEntry file;
+    private bool isSuccess = true;
+    //private bool isInvalidFileType = false;
+    //private string imageDataURL;
+    //private MemoryStream msFile;
+
+    //protected override async Task OnInitializedAsync()
+    //{
+    //    Machin = await _authorRepo.Get(Endpoints.AuthorsEndpoint);
+    //}
+
+    private async Task HandleCreate()
+    {
+        //if (!isInvalidFileType)
+        //{
+        //if (file != null)
+        //{
+        //var ext = Path.GetExtension(file.Name);
+        //var picId = Guid.NewGuid().ToString().Replace("-", "");
+        //var picName = $"{picId}{ext}";
+
+        //_fileUpload.UploadFile(file, msFile, picName);
+
+        //Model.Image = picName;
+        //}
+
+        isSuccess = await authRepo.Register(   Model);
+        if (isSuccess)
+        {
+            //_toastService.ShowSuccess("Book Created Successfully", "");
+            BackToList();
+        }
+        //}
+    }
+
+    //private async Task HandleFileSelection(IFileListEntry[] files)
+    //{
+    //    file = files.FirstOrDefault();
+    //    if (file != null)
+    //    {
+    //        var name = file.Name;
+    //        if (name.Contains("jpg") || name.Contains("png") || name.Contains("jpeg"))
+    //        {
+    //            msFile = new MemoryStream();
+    //            await file.Data.CopyToAsync(msFile);
+
+    //            var reader = new StreamReader(file.Data);
+    //            var imageBase64Data = Convert.ToBase64String(msFile.ToArray());
+    //            imageDataURL = string.Format("data:image/png;base64,{0}", imageBase64Data);
+    //            isInvalidFileType = false;
+    //        }
+    //        else
+    //        {
+    //            isInvalidFileType = true;
+    //            imageDataURL = string.Empty;
+    //        }
+    //    }
+    //    else
+    //    {
+    //        isInvalidFileType = false;
+    //    }
+    //}
+
+
+    private void BackToList()
+    {
+        navManager.NavigateTo("/users/");
+    }
+}

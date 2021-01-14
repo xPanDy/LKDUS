@@ -16,5 +16,6 @@ namespace LKDUS_API.Data
         public string MachineName { get; set; }
       
         public DateTime DateCreated { get; set; }
+        public string Master { get; set; }
     }
 }

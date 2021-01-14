@@ -9,6 +9,7 @@ namespace LKDUS_API.Data
     public class ApplicationDbContext : IdentityDbContext 
     {
         public DbSet<User> Users { get; set; }
+      //  public DbSet<AspUser> AspUsers { get; set; }
      //   public DbSet<AspNetUser> AspNetUsers { get; set; }
         public DbSet<Measurement> Measurements { get; set; }
 

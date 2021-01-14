@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using LKDUS_API.Contracts;
+using LKDUS_API.Data;
 using LKDUS_API.DTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -28,22 +29,26 @@ namespace LKDUS_API.Controllers
 
     public class AspNetUsersController : ControllerBase
     {
+    //    private UserManager<AspUserDTO> userManager1;
         private readonly SignInManager<IdentityUser> signInManager;
         private readonly UserManager<IdentityUser> userManager;
         private readonly ILoggerService logger;
         private readonly IConfiguration config;
         private readonly IMapper mapper;
-        //private readonly IAspNetUserRepository aspNetUserRepository;
+        // private readonly IAspUserRepository aspNetUserRepository;
 
-        public AspNetUsersController(SignInManager<IdentityUser> signInManager,
+        public AspNetUsersController(
+        //    UserManager<AspUserDTO> userManager1,
+            SignInManager<IdentityUser> signInManager,
             UserManager<IdentityUser> userManager,
             ILoggerService logger,
             IConfiguration config,
             IMapper mapper
             //,
-           // IAspNetUserRepository aspNetUserRepository
+           // IAspUserRepository aspNetUserRepository
             )
         {
+           // this.userManager1 = userManager1;
             this.signInManager = signInManager;
             this.userManager = userManager;
             this.logger = logger;
@@ -59,7 +64,7 @@ namespace LKDUS_API.Controllers
         /// <returns></returns>
         [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> Login([FromBody] AspNetUserDTO aspNetUserDTO)
+        public async Task<IActionResult> Login([FromBody] AspUserDTO aspNetUserDTO)
         {
 
             var location = GetControllerActionNames();
@@ -84,8 +89,11 @@ namespace LKDUS_API.Controllers
                     this.logger.LogInfo($"{location}: {userName} Sucessfully Authenticated");
                     var tokenString = await GenerateJSONWebToken(user);
                     return Ok(new {  token = tokenString});
-                }
+                }  
                 
+                
+               
+
                 this.logger.LogInfo($"{location}: {userName} Not authenticated");
 
                 return Unauthorized(aspNetUserDTO);
@@ -123,12 +131,13 @@ namespace LKDUS_API.Controllers
                 // _logger.LogInfo($"{location}: Attempted Get All Users");
                 var users = this.userManager.Users;
 
-                IList<AspNetUserDTO> operetorList = new List<AspNetUserDTO>();
+                IList<AspUserDTO> operetorList = new List<AspUserDTO>();
 
                 foreach (var u in users)
                 {
-                    var operatorUser = new AspNetUserDTO
+                    var operatorUser = new AspUserDTO
                     {
+                        Id = u.Id,
                         UserName = u.UserName,
                         Password = u.PasswordHash
                     };
@@ -152,8 +161,86 @@ namespace LKDUS_API.Controllers
 
 
         }
+      /// <summary>
+        /// Creates a asp user 
+        /// </summary>
+        /// <param name="userDTO"></param>
+        /// <returns></returns>
+        [HttpPut]
+      //  [Authorize(Roles = "Admin, Master")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> Create([FromBody] AspUserCreateDTO userDTO)
+        {
 
 
+            if (await userManager.FindByEmailAsync("operator@finieris.lv") == null)
+            {
+                var user = new IdentityUser
+                {
+                    UserName = "operator",
+                    Email = "operator@finieris.lv"
+                };
+
+                var result = await userManager.CreateAsync(user, "1111");
+                if (result.Succeeded)
+                {
+                    await userManager.AddToRoleAsync(user, "Operator");
+                }
+
+            }
+
+
+
+            var location = GetControllerActionNames();
+
+            try
+            {
+                this.logger.LogInfo($"{location}: User creation  Attempted");
+                if (userDTO == null)
+                {
+                    this.logger.LogWarn($"{location}: Empty request was submitted");
+                    return BadRequest(ModelState);
+                }
+                if (!ModelState.IsValid)
+                {
+                    this.logger.LogWarn($"{location}: User Data was Incomplete");
+                    return BadRequest(ModelState);
+
+                }
+
+                
+
+                UserManager<AspUserDTO> userManager1=null;
+        
+                AspUserDTO aspuser = new AspUserDTO
+                {
+                    UserName = userDTO.UserName,
+                    Password = "1111",
+                };
+
+                IdentityResult result = await userManager1.CreateAsync(aspuser, aspuser.Password);
+
+                if (result.Succeeded)
+                {
+                    return InternalError($"{location}: User creation failed");
+                }
+
+                
+
+                this.logger.LogInfo($"{location}: User creation was created");
+                this.logger.LogInfo($"{location}: {aspuser}");
+                return Created("Create", new { aspuser });
+            }
+            catch (Exception e)
+            {
+                return InternalError($"{location}: {e.Message} - {e.InnerException}");
+
+            }
+
+        }
+  
         private async Task<string> GenerateJSONWebToken(IdentityUser user)
         {
             //

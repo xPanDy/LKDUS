@@ -1,0 +1,56 @@
+2021-01-13 11:37:38.6253 INFO Users-GetUsers: Attempted Get All Users
+2021-01-13 11:37:40.0816 ERROR Users-GetUsers: Invalid object name 'Users'. - 
+2021-01-13 11:38:12.8165 INFO Users-GetUsers: Attempted Get All Users
+2021-01-13 11:38:13.7225 ERROR Users-GetUsers: Invalid object name 'Users'. - 
+2021-01-13 11:39:30.9824 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-13 11:39:31.3364 INFO Sucessfully got all measurementPositions
+2021-01-13 11:42:08.7317 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-13 11:42:09.3605 INFO Sucessfully got all measurementPositions
+2021-01-13 13:48:32.2418 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-13 13:48:33.5660 INFO Sucessfully got all FUS packs
+2021-01-13 13:49:33.2260 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-13 13:49:33.6203 INFO Sucessfully got all FUS packs
+2021-01-13 13:50:11.7632 INFO Machine-GetMachines: Attempted Call
+2021-01-13 13:50:11.8280 INFO Sucessfully got all machines
+2021-01-13 15:27:39.4707 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-13 15:27:39.7299 INFO Sucessfully got all measurementPositions
+2021-01-13 15:28:46.9654 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-13 15:28:47.2730 INFO Sucessfully got all measurementPositions
+2021-01-13 15:31:21.7818 INFO AspNetUsers-Login: Login attempted call from user kristaps
+2021-01-13 15:31:22.4661 INFO AspNetUsers-Login: kristaps Sucessfully Authenticated
+2021-01-13 15:31:23.5560 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-13 15:31:23.6297 INFO Sucessfully got all measurementPositions
+2021-01-13 15:31:25.2611 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-13 15:31:25.3442 INFO Sucessfully got all Measurements
+2021-01-13 15:31:25.3870 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-13 15:31:25.4123 INFO Sucessfully got the measurement position with Id:1
+2021-01-13 15:31:26.4705 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-13 15:31:26.4887 INFO Sucessfully got all Measurements
+2021-01-13 15:31:26.5248 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-13 15:31:26.5389 INFO Sucessfully got all Measurements
+2021-01-13 15:31:26.5767 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-13 15:31:26.7345 INFO Sucessfully got all FUS packs
+2021-01-13 15:31:26.8209 INFO Machine-GetMachines: Attempted Call
+2021-01-13 15:31:26.8856 INFO Sucessfully got all machines
+2021-01-13 15:31:26.9464 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-13 15:31:26.9532 INFO Sucessfully got the measurement position with Id:1
+2021-01-13 15:31:46.9194 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-13 15:31:46.9568 INFO Sucessfully got all measurementPositions
+2021-01-13 16:06:22.4750 INFO AspNetUsers-Create: User creation  Attempted
+2021-01-13 16:09:54.5597 INFO AspNetUsers-Create: User creation  Attempted
+2021-01-13 16:10:22.9514 ERROR AspNetUsers-Create: The method or operation is not implemented. - 
+2021-01-13 16:17:18.8544 INFO AspNetUsers-Login: Login attempted call from user kristaps
+2021-01-13 16:17:19.3162 INFO AspNetUsers-Login: kristaps Sucessfully Authenticated
+2021-01-13 16:17:19.9677 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-13 16:17:20.0489 INFO Sucessfully got all measurementPositions
+2021-01-13 16:17:39.3602 INFO AspNetUsers-Create: User creation  Attempted
+2021-01-13 16:17:51.0637 ERROR AspNetUsers-Create: The method or operation is not implemented. - 
+2021-01-13 23:32:02.0075 INFO AspNetUsers-Create: User creation  Attempted
+2021-01-13 23:32:02.0946 ERROR AspNetUsers-Create: The method or operation is not implemented. - 
+2021-01-13 23:32:20.5735 INFO AspNetUsers-Create: User creation  Attempted
+2021-01-13 23:32:31.6210 ERROR AspNetUsers-Create: The method or operation is not implemented. - 
+2021-01-13 23:32:46.2105 INFO AspNetUsers-Create: User creation  Attempted
+2021-01-13 23:32:47.9900 ERROR AspNetUsers-Create: The method or operation is not implemented. - 
+2021-01-13 23:39:37.3535 INFO AspNetUsers-Create: User creation  Attempted
+2021-01-13 23:40:08.6158 ERROR AspNetUsers-Create: Object reference not set to an instance of an object. - 
+2021-01-13 23:40:23.0508 INFO AspNetUsers-Create: User creation  Attempted

@@ -13,6 +13,7 @@ namespace LKDUS_API.DTOs
         public string Author { get; set; }
         public string DateCreated { get; set; }
         public string Machine { get; set; }
+        public string Master { get; set; }
     }
 
     public class PackCreateDTO
@@ -23,6 +24,8 @@ namespace LKDUS_API.DTOs
         public string Author { get; set; }
         public string DateCreated { get; set; }
         public string Machine { get; set; }
+        public string Master { get; set; }
+
     }
 
     public class PackUpdateDTO
@@ -33,5 +36,6 @@ namespace LKDUS_API.DTOs
         public string Author { get; set; }
         public string DateCreated { get; set; }
         public string Machine { get; set; }
+        public string Master { get; set; }
     }
 }

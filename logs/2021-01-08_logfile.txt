@@ -1,0 +1,164 @@
+2021-01-08 10:06:12.5464 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-08 10:06:12.8478 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-08 10:06:13.3210 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-08 10:06:13.3803 INFO Sucessfully got all measurementPositions
+2021-01-08 10:06:14.1547 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-08 10:06:14.1971 INFO Sucessfully got all Measurements
+2021-01-08 10:06:14.2341 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-08 10:06:14.2616 INFO Sucessfully got the measurement position with Id:1
+2021-01-08 10:06:15.3014 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-08 10:06:15.3014 INFO Sucessfully got all Measurements
+2021-01-08 10:06:15.3375 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-08 10:06:15.3506 INFO Sucessfully got all Measurements
+2021-01-08 10:06:31.7587 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-08 10:06:32.9298 INFO Sucessfully got all FUS packs
+2021-01-08 10:06:37.1070 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:06:37.1470 INFO Sucessfully got all machines
+2021-01-08 10:06:37.1799 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-08 10:06:37.1995 INFO Sucessfully got the measurement position with Id:1
+2021-01-08 10:10:44.8113 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-08 10:10:45.1168 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-08 10:10:45.6522 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-08 10:10:45.7089 INFO Sucessfully got all measurementPositions
+2021-01-08 10:10:46.6806 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-08 10:10:46.7172 INFO Sucessfully got all Measurements
+2021-01-08 10:10:46.9092 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-08 10:10:46.9399 INFO Sucessfully got the measurement position with Id:1
+2021-01-08 10:10:48.2614 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-08 10:10:48.2726 INFO Sucessfully got all Measurements
+2021-01-08 10:10:48.2896 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-08 10:10:48.2896 INFO Sucessfully got all Measurements
+2021-01-08 10:10:52.2989 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-08 10:10:52.4251 INFO Sucessfully got all FUS packs
+2021-01-08 10:10:52.5021 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:10:52.5266 INFO Sucessfully got all machines
+2021-01-08 10:10:52.5492 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-08 10:10:52.5492 INFO Sucessfully got the measurement position with Id:1
+2021-01-08 10:11:32.9628 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:11:32.9816 INFO Sucessfully got all machines
+2021-01-08 10:12:08.1502 INFO Machine-GetMachine: Attempted get machine with ID: 2
+2021-01-08 10:12:08.1860 INFO Sucessfully got the machine with Id:2
+2021-01-08 10:12:09.7771 WARN Machine-Delete: machine deletion atempted - id: 2
+2021-01-08 10:12:09.9870 WARN Machine-Delete:  machine Data with id: 2 was deleted
+2021-01-08 10:12:10.0143 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:12:10.0229 INFO Sucessfully got all machines
+2021-01-08 10:12:12.6499 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:12:12.6631 INFO Sucessfully got all machines
+2021-01-08 10:12:13.0975 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:12:13.0975 INFO Sucessfully got all machines
+2021-01-08 10:12:23.7503 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:12:23.7848 INFO Sucessfully got all machines
+2021-01-08 10:14:37.3123 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-08 10:14:37.6322 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-08 10:14:38.0536 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-08 10:14:38.1028 INFO Sucessfully got all measurementPositions
+2021-01-08 10:14:39.0970 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-08 10:14:39.1410 INFO Sucessfully got all Measurements
+2021-01-08 10:14:39.1730 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-08 10:14:39.1972 INFO Sucessfully got the measurement position with Id:1
+2021-01-08 10:14:40.1142 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-08 10:14:40.1270 INFO Sucessfully got all Measurements
+2021-01-08 10:14:40.1471 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-08 10:14:40.1471 INFO Sucessfully got all Measurements
+2021-01-08 10:14:40.1858 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-08 10:14:40.2947 INFO Sucessfully got all FUS packs
+2021-01-08 10:14:40.3405 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:14:40.3632 INFO Sucessfully got all machines
+2021-01-08 10:14:40.3864 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-08 10:14:40.3924 INFO Sucessfully got the measurement position with Id:1
+2021-01-08 10:15:15.1953 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:15:15.2093 INFO Sucessfully got all machines
+2021-01-08 10:15:16.5064 INFO Machine-GetMachine: Attempted get machine with ID: 3
+2021-01-08 10:15:16.5347 INFO Sucessfully got the machine with Id:3
+2021-01-08 10:15:28.9219 WARN Machine-Update: machinE update atempted - id: 3
+2021-01-08 10:15:29.0990 INFO Machine-Update: machine Data with id: 3 was updated
+2021-01-08 10:15:29.1380 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:15:29.1503 INFO Sucessfully got all machines
+2021-01-08 10:15:34.4900 INFO Machine-GetMachine: Attempted get machine with ID: 3
+2021-01-08 10:15:34.5366 INFO Sucessfully got the machine with Id:3
+2021-01-08 10:15:41.9088 WARN Machine-Update: machinE update atempted - id: 3
+2021-01-08 10:15:41.9259 INFO Machine-Update: machine Data with id: 3 was updated
+2021-01-08 10:15:41.9669 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:15:41.9778 INFO Sucessfully got all machines
+2021-01-08 10:15:45.8528 INFO Machine-GetMachine: Attempted get machine with ID: 3
+2021-01-08 10:15:45.8675 INFO Sucessfully got the machine with Id:3
+2021-01-08 10:15:48.6187 WARN Machine-Update: machinE update atempted - id: 3
+2021-01-08 10:15:48.6530 INFO Machine-Update: machine Data with id: 3 was updated
+2021-01-08 10:15:48.7202 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:15:48.7420 INFO Sucessfully got all machines
+2021-01-08 10:15:51.3730 INFO Machine-GetMachine: Attempted get machine with ID: 3
+2021-01-08 10:15:51.3903 INFO Sucessfully got the machine with Id:3
+2021-01-08 10:15:52.3335 WARN Machine-Update: machinE update atempted - id: 3
+2021-01-08 10:15:52.3530 INFO Machine-Update: machine Data with id: 3 was updated
+2021-01-08 10:15:54.3904 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:15:54.3904 INFO Sucessfully got all machines
+2021-01-08 10:15:59.6744 INFO Machine-GetMachine: Attempted get machine with ID: 3
+2021-01-08 10:15:59.6886 INFO Sucessfully got the machine with Id:3
+2021-01-08 10:16:01.7984 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:16:01.7984 INFO Sucessfully got all machines
+2021-01-08 10:16:02.9696 INFO Machine-GetMachine: Attempted get machine with ID: 3
+2021-01-08 10:16:02.9893 INFO Sucessfully got the machine with Id:3
+2021-01-08 10:16:03.7704 WARN Machine-Delete: machine deletion atempted - id: 3
+2021-01-08 10:16:03.8118 WARN Machine-Delete:  machine Data with id: 3 was deleted
+2021-01-08 10:16:03.8338 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:16:03.8338 INFO Sucessfully got all machines
+2021-01-08 10:16:05.7312 INFO Machine-GetMachine: Attempted get machine with ID: 4
+2021-01-08 10:16:05.7571 INFO Sucessfully got the machine with Id:4
+2021-01-08 10:16:09.5458 WARN Machine-Update: machinE update atempted - id: 4
+2021-01-08 10:16:09.5458 INFO Machine-Update: machine Data with id: 4 was updated
+2021-01-08 10:16:09.5839 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:16:09.5987 INFO Sucessfully got all machines
+2021-01-08 10:22:45.0551 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-08 10:22:45.3372 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-08 10:22:45.7686 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-08 10:22:45.8237 INFO Sucessfully got all measurementPositions
+2021-01-08 10:22:46.7068 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-08 10:22:46.7452 INFO Sucessfully got all Measurements
+2021-01-08 10:22:46.7770 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-08 10:22:46.8038 INFO Sucessfully got the measurement position with Id:1
+2021-01-08 10:22:58.0703 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:22:58.1164 INFO Sucessfully got all machines
+2021-01-08 10:23:00.8758 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:23:00.8921 INFO Sucessfully got all machines
+2021-01-08 10:23:02.0382 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:23:02.0557 INFO Sucessfully got all machines
+2021-01-08 10:23:03.0021 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:23:03.0167 INFO Sucessfully got all machines
+2021-01-08 10:23:03.8613 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:23:03.8737 INFO Sucessfully got all machines
+2021-01-08 10:23:06.1418 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-08 10:23:06.1511 INFO Sucessfully got all measurementPositions
+2021-01-08 10:23:06.9062 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:23:06.9242 INFO Sucessfully got all machines
+2021-01-08 10:23:07.6141 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:23:07.6221 INFO Sucessfully got all machines
+2021-01-08 10:23:08.2878 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:23:08.2974 INFO Sucessfully got all machines
+2021-01-08 10:27:26.4093 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:27:26.4721 INFO Sucessfully got all machines
+2021-01-08 10:27:27.4256 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:27:27.4643 INFO Sucessfully got all machines
+2021-01-08 10:27:50.9414 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-08 10:27:51.1892 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-08 10:27:51.6082 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-08 10:27:51.6624 INFO Sucessfully got all measurementPositions
+2021-01-08 10:27:52.8900 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-08 10:27:52.9298 INFO Sucessfully got all Measurements
+2021-01-08 10:27:52.9616 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-08 10:27:52.9857 INFO Sucessfully got the measurement position with Id:1
+2021-01-08 10:27:55.0554 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-08 10:27:55.0663 INFO Sucessfully got all Measurements
+2021-01-08 10:27:55.0855 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-08 10:27:55.0855 INFO Sucessfully got all Measurements
+2021-01-08 10:27:55.1256 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-08 10:27:55.2974 INFO Sucessfully got all FUS packs
+2021-01-08 10:27:55.3427 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:27:55.3652 INFO Sucessfully got all machines
+2021-01-08 10:27:55.3969 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-08 10:27:55.3969 INFO Sucessfully got the measurement position with Id:1
+2021-01-08 10:27:57.9610 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:27:57.9739 INFO Sucessfully got all machines
+2021-01-08 10:27:58.9296 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:27:58.9456 INFO Sucessfully got all machines
+2021-01-08 10:33:09.2615 INFO Machine-GetMachines: Attempted Call
+2021-01-08 10:33:09.2814 INFO Sucessfully got all machines

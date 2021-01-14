@@ -1,0 +1,36 @@
+2021-01-12 15:17:40.2545 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-12 15:17:40.2545 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-12 15:17:41.3543 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-12 15:17:41.3802 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-12 15:17:44.8680 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-12 15:17:45.8503 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-12 15:17:45.8648 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-12 15:17:45.9803 INFO Sucessfully got all measurementPositions
+2021-01-12 20:07:45.8057 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-12 20:07:45.9762 INFO Sucessfully got all Measurements
+2021-01-12 20:07:46.8675 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-12 20:07:46.9036 INFO Sucessfully got all Measurements
+2021-01-12 20:07:47.0085 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-12 20:07:48.8696 INFO Sucessfully got all FUS packs
+2021-01-12 20:07:49.4703 INFO Machine-GetMachines: Attempted Call
+2021-01-12 20:07:49.5699 INFO Sucessfully got all machines
+2021-01-12 20:07:49.6628 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-12 20:07:49.7414 INFO Sucessfully got the measurement position with Id:1
+2021-01-12 20:07:54.0186 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-12 20:07:54.3381 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-12 20:07:55.0476 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-12 20:07:55.0720 INFO Sucessfully got all measurementPositions
+2021-01-12 20:08:02.9101 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-12 20:08:03.1762 INFO Sucessfully got all Measurements
+2021-01-12 20:08:03.2791 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-12 20:08:03.2914 INFO Sucessfully got the measurement position with Id:1
+2021-01-12 20:08:05.4151 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-12 20:08:05.6541 INFO Sucessfully got all Measurements
+2021-01-12 20:08:06.2587 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-12 20:08:06.4314 INFO Sucessfully got all Measurements
+2021-01-12 20:08:06.5381 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-12 20:08:06.6695 INFO Sucessfully got all FUS packs
+2021-01-12 20:08:07.1168 INFO Machine-GetMachines: Attempted Call
+2021-01-12 20:08:07.3520 INFO Sucessfully got all machines
+2021-01-12 20:08:07.4604 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-12 20:08:07.6222 INFO Sucessfully got the measurement position with Id:1

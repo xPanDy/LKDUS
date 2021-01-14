@@ -40,7 +40,10 @@ namespace LKDUS_API.Mapping
 
 
             CreateMap<Role, RoleDTO>().ReverseMap();
-
+           
+            
+            //CreateMap<AspUser, AspUserDTO>().ReverseMap();
+            //CreateMap<AspUser, AspCreateUserDTO>().ReverseMap();
 
 
 

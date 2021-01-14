@@ -165,5 +165,10 @@ namespace LKDUS_UI.Service
 
             return false;
         }
+
+        public Task<bool> Put(string url, T obj)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

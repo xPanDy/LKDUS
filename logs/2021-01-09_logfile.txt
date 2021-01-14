@@ -1,0 +1,67 @@
+2021-01-09 16:34:33.6137 ERROR AspNetUsers-GetUsers: Cannot use table 'AspNetUsers' for entity type 'IdentityUser' since it is being used for entity type 'AspUser' and there is no relationship between their primary keys. - 
+2021-01-09 16:39:22.0991 ERROR AspNetUsers-GetUsers: Cannot use table 'AspNetUsers' for entity type 'IdentityUser' since it is being used for entity type 'AspUser' and there is no relationship between their primary keys. - 
+2021-01-09 17:49:32.3008 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-09 17:49:36.9862 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-09 18:52:28.8363 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-09 18:52:28.8363 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-09 18:52:28.8363 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-09 18:52:32.2156 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-09 18:52:32.2156 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-09 18:52:32.2156 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-09 18:52:32.7118 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-09 18:52:32.7697 INFO Sucessfully got all measurementPositions
+2021-01-09 18:52:34.2580 INFO Machine-GetMachines: Attempted Call
+2021-01-09 18:52:34.2929 INFO Sucessfully got all machines
+2021-01-09 18:52:36.3201 INFO Machine-GetMachines: Attempted Call
+2021-01-09 18:52:36.3426 INFO Sucessfully got all machines
+2021-01-09 18:52:37.5297 INFO Machine-GetMachines: Attempted Call
+2021-01-09 18:52:37.5518 INFO Sucessfully got all machines
+2021-01-09 19:17:57.4699 INFO Machine-GetMachine: Attempted get machine with ID: 0
+2021-01-09 19:17:57.5636 WARN machine with the id:0 was not found
+2021-01-09 20:50:02.3016 INFO Machine-GetMachine: Attempted get machine with ID: 0
+2021-01-09 20:50:02.3203 WARN machine with the id:0 was not found
+2021-01-09 20:50:04.6482 INFO Machine-GetMachine: Attempted get machine with ID: 0
+2021-01-09 20:50:04.6707 WARN machine with the id:0 was not found
+2021-01-09 20:50:07.0480 INFO Machine-GetMachines: Attempted Call
+2021-01-09 20:50:07.1204 INFO Sucessfully got all machines
+2021-01-09 20:50:23.5941 INFO Machine-GetMachine: Attempted get machine with ID: 0
+2021-01-09 20:50:23.6139 WARN machine with the id:0 was not found
+2021-01-09 20:50:24.8567 INFO Machine-GetMachines: Attempted Call
+2021-01-09 20:50:24.8770 INFO Sucessfully got all machines
+2021-01-09 20:50:27.5544 INFO Machine-Create: Machine creation  Attempted
+2021-01-09 20:50:27.5544 INFO Machine-GetMachines: Attempted Call
+2021-01-09 20:50:27.5544 INFO Sucessfully got all machines
+2021-01-09 20:50:27.8331 INFO Machine-Create: Machine creation was created
+2021-01-09 20:50:27.8331 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-01-09 20:55:20.4199 INFO Machine-GetMachines: Attempted Call
+2021-01-09 20:55:20.4304 INFO Sucessfully got all machines
+2021-01-09 20:55:22.2634 INFO Machine-GetMachines: Attempted Call
+2021-01-09 20:55:22.2733 INFO Sucessfully got all machines
+2021-01-09 20:55:22.8218 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-09 20:55:22.8607 INFO Sucessfully got all measurementPositions
+2021-01-09 20:55:23.5587 INFO Machine-GetMachines: Attempted Call
+2021-01-09 20:55:23.5813 INFO Sucessfully got all machines
+2021-01-09 20:55:25.9210 INFO Machine-GetMachines: Attempted Call
+2021-01-09 20:55:25.9304 INFO Sucessfully got all machines
+2021-01-09 20:55:26.5752 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-09 20:55:26.5752 INFO Sucessfully got all measurementPositions
+2021-01-09 20:55:27.2682 INFO Machine-GetMachines: Attempted Call
+2021-01-09 20:55:27.2773 INFO Sucessfully got all machines
+2021-01-09 20:55:29.3918 INFO Machine-GetMachines: Attempted Call
+2021-01-09 20:55:29.4025 INFO Sucessfully got all machines
+2021-01-09 20:55:29.8805 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-09 20:55:29.8806 INFO Sucessfully got all measurementPositions
+2021-01-09 20:55:30.5463 INFO Machine-GetMachines: Attempted Call
+2021-01-09 20:55:30.5543 INFO Sucessfully got all machines
+2021-01-09 20:55:42.1358 INFO AspNetUsers-Login: Login attempted call from user kristaps
+2021-01-09 20:55:42.3275 INFO AspNetUsers-Login: kristaps Sucessfully Authenticated
+2021-01-09 20:55:42.7492 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-09 20:55:42.7582 INFO Sucessfully got all measurementPositions
+2021-01-09 20:55:43.5953 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-09 20:55:43.6359 INFO Sucessfully got all Measurements
+2021-01-09 20:55:43.6691 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-09 20:55:43.6821 INFO Sucessfully got the measurement position with Id:1
+2021-01-09 21:02:21.5064 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-09 21:02:21.7600 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-09 21:02:22.2538 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-09 21:02:22.3080 INFO Sucessfully got all measurementPositions

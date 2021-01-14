@@ -1,0 +1,515 @@
+2021-01-07 13:19:28.2263 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-07 13:19:28.7583 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-07 13:19:29.3645 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-07 13:19:29.4282 INFO Sucessfully got all measurementPositions
+2021-01-07 13:19:30.4475 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-07 13:19:30.4902 INFO Sucessfully got all Measurements
+2021-01-07 13:19:30.5301 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-07 13:19:30.5588 INFO Sucessfully got the measurement position with Id:1
+2021-01-07 13:19:35.8267 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-07 13:19:35.8630 INFO Sucessfully got all Measurements
+2021-01-07 13:19:35.9756 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-07 13:19:35.9975 INFO Sucessfully got all Measurements
+2021-01-07 13:19:36.0402 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-07 13:19:38.0267 ERROR FusPack-GetFusPacks:Error mapping types.
+
+Mapping types:
+Object -> IList`1
+System.Object -> System.Collections.Generic.IList`1[[LKDUS_API.DTOs.FusPackDTO, LKDUS-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] - AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Type Map configuration:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Destination Member:
+Master
+
+ ---> System.FormatException: Jana Žuravska is not a valid value for DateTime.
+ ---> System.FormatException: The string 'Jana Žuravska' was not recognized as a valid DateTime. There is an unknown word starting at index '0'.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   --- End of inner exception stack trace ---
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at System.ComponentModel.TypeConverter.ConvertFrom(Object value)
+   at AutoMapper.Mappers.TypeConverterMapper.Map[TSource,TDestination](TSource source)
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+2021-01-07 13:19:38.0548 INFO Machine-GetMachines: Attempted Call
+2021-01-07 13:19:38.0819 INFO Sucessfully got all machines
+2021-01-07 13:19:38.1093 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-07 13:19:38.1093 INFO Sucessfully got the measurement position with Id:1
+2021-01-07 13:42:10.5277 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-07 13:42:10.7000 INFO Sucessfully got all Measurements
+2021-01-07 13:42:10.8217 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-07 13:42:10.8493 INFO Sucessfully got all Measurements
+2021-01-07 13:42:31.0921 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-07 13:42:31.3014 ERROR FusPack-GetFusPacks:Error mapping types.
+
+Mapping types:
+Object -> IList`1
+System.Object -> System.Collections.Generic.IList`1[[LKDUS_API.DTOs.FusPackDTO, LKDUS-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] - AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Type Map configuration:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Destination Member:
+Master
+
+ ---> System.FormatException: Jana Žuravska is not a valid value for DateTime.
+ ---> System.FormatException: The string 'Jana Žuravska' was not recognized as a valid DateTime. There is an unknown word starting at index '0'.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   --- End of inner exception stack trace ---
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at System.ComponentModel.TypeConverter.ConvertFrom(Object value)
+   at AutoMapper.Mappers.TypeConverterMapper.Map[TSource,TDestination](TSource source)
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+2021-01-07 13:42:31.3247 INFO Machine-GetMachines: Attempted Call
+2021-01-07 13:42:31.3404 INFO Sucessfully got all machines
+2021-01-07 13:42:31.3614 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-07 13:42:31.3693 INFO Sucessfully got the measurement position with Id:1
+2021-01-07 13:42:31.8445 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-07 13:42:31.8567 INFO Sucessfully got all Measurements
+2021-01-07 13:42:31.9076 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-07 13:42:31.9213 INFO Sucessfully got all Measurements
+2021-01-07 13:42:41.3324 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-07 13:42:41.4787 ERROR FusPack-GetFusPacks:Error mapping types.
+
+Mapping types:
+Object -> IList`1
+System.Object -> System.Collections.Generic.IList`1[[LKDUS_API.DTOs.FusPackDTO, LKDUS-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] - AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Type Map configuration:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Destination Member:
+Master
+
+ ---> System.FormatException: Jana Žuravska is not a valid value for DateTime.
+ ---> System.FormatException: The string 'Jana Žuravska' was not recognized as a valid DateTime. There is an unknown word starting at index '0'.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   --- End of inner exception stack trace ---
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at System.ComponentModel.TypeConverter.ConvertFrom(Object value)
+   at AutoMapper.Mappers.TypeConverterMapper.Map[TSource,TDestination](TSource source)
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+2021-01-07 13:42:41.5070 INFO Machine-GetMachines: Attempted Call
+2021-01-07 13:42:41.5264 INFO Sucessfully got all machines
+2021-01-07 13:42:41.5494 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-07 13:42:41.5494 INFO Sucessfully got the measurement position with Id:1
+2021-01-07 13:42:42.3951 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-07 13:42:42.4100 INFO Sucessfully got all Measurements
+2021-01-07 13:42:42.4425 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-07 13:42:42.4425 INFO Sucessfully got all Measurements
+2021-01-07 13:42:45.2581 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-07 13:42:47.5909 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-07 13:42:47.5992 INFO Sucessfully got all Measurements
+2021-01-07 13:42:47.6450 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-07 13:42:47.6855 INFO Sucessfully got all Measurements
+2021-01-07 13:42:47.7484 ERROR FusPack-GetFusPacks:Error mapping types.
+
+Mapping types:
+Object -> IList`1
+System.Object -> System.Collections.Generic.IList`1[[LKDUS_API.DTOs.FusPackDTO, LKDUS-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] - AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Type Map configuration:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Destination Member:
+Master
+
+ ---> System.FormatException: Jana Žuravska is not a valid value for DateTime.
+ ---> System.FormatException: The string 'Jana Žuravska' was not recognized as a valid DateTime. There is an unknown word starting at index '0'.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   --- End of inner exception stack trace ---
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at System.ComponentModel.TypeConverter.ConvertFrom(Object value)
+   at AutoMapper.Mappers.TypeConverterMapper.Map[TSource,TDestination](TSource source)
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+2021-01-07 13:42:51.7484 INFO Machine-GetMachines: Attempted Call
+2021-01-07 13:42:51.7484 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-07 13:42:51.7773 INFO Sucessfully got all machines
+2021-01-07 13:42:51.9097 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-07 13:42:51.9686 ERROR FusPack-GetFusPacks:Error mapping types.
+
+Mapping types:
+Object -> IList`1
+System.Object -> System.Collections.Generic.IList`1[[LKDUS_API.DTOs.FusPackDTO, LKDUS-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] - AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Type Map configuration:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Destination Member:
+Master
+
+ ---> System.FormatException: Jana Žuravska is not a valid value for DateTime.
+ ---> System.FormatException: The string 'Jana Žuravska' was not recognized as a valid DateTime. There is an unknown word starting at index '0'.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   --- End of inner exception stack trace ---
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at System.ComponentModel.TypeConverter.ConvertFrom(Object value)
+   at AutoMapper.Mappers.TypeConverterMapper.Map[TSource,TDestination](TSource source)
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+2021-01-07 13:42:51.9686 INFO Sucessfully got the measurement position with Id:1
+2021-01-07 13:42:51.9918 INFO Machine-GetMachines: Attempted Call
+2021-01-07 13:42:52.0602 INFO Sucessfully got all machines
+2021-01-07 13:42:52.1462 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-07 13:42:52.1829 INFO Sucessfully got the measurement position with Id:1
+2021-01-07 13:42:52.4420 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-07 13:42:52.4420 INFO Sucessfully got all Measurements
+2021-01-07 13:42:52.4757 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-07 13:42:52.4930 INFO Sucessfully got all Measurements
+2021-01-07 13:42:57.9364 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-07 13:42:58.2646 ERROR FusPack-GetFusPacks:Error mapping types.
+
+Mapping types:
+Object -> IList`1
+System.Object -> System.Collections.Generic.IList`1[[LKDUS_API.DTOs.FusPackDTO, LKDUS-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] - AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Type Map configuration:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Destination Member:
+Master
+
+ ---> System.FormatException: Jana Žuravska is not a valid value for DateTime.
+ ---> System.FormatException: The string 'Jana Žuravska' was not recognized as a valid DateTime. There is an unknown word starting at index '0'.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   --- End of inner exception stack trace ---
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at System.ComponentModel.TypeConverter.ConvertFrom(Object value)
+   at AutoMapper.Mappers.TypeConverterMapper.Map[TSource,TDestination](TSource source)
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+2021-01-07 13:42:59.9918 INFO Machine-GetMachines: Attempted Call
+2021-01-07 13:43:00.0606 INFO Sucessfully got all machines
+2021-01-07 13:43:00.0812 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-07 13:43:00.1202 INFO Sucessfully got the measurement position with Id:1
+2021-01-07 14:47:20.8051 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-07 14:47:21.7148 ERROR FusPack-GetFusPacks:Error mapping types.
+
+Mapping types:
+Object -> IList`1
+System.Object -> System.Collections.Generic.IList`1[[LKDUS_API.DTOs.FusPackDTO, LKDUS-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] - AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Type Map configuration:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Destination Member:
+Master
+
+ ---> System.FormatException: Jana Žuravska is not a valid value for DateTime.
+ ---> System.FormatException: The string 'Jana Žuravska' was not recognized as a valid DateTime. There is an unknown word starting at index '0'.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   --- End of inner exception stack trace ---
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at System.ComponentModel.TypeConverter.ConvertFrom(Object value)
+   at AutoMapper.Mappers.TypeConverterMapper.Map[TSource,TDestination](TSource source)
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+2021-01-07 14:48:04.4485 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-07 14:49:25.5376 ERROR FusPack-GetFusPacks:Error mapping types.
+
+Mapping types:
+Object -> IList`1
+System.Object -> System.Collections.Generic.IList`1[[LKDUS_API.DTOs.FusPackDTO, LKDUS-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] - AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Type Map configuration:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Destination Member:
+Master
+
+ ---> System.FormatException: Jana Žuravska is not a valid value for DateTime.
+ ---> System.FormatException: The string 'Jana Žuravska' was not recognized as a valid DateTime. There is an unknown word starting at index '0'.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   --- End of inner exception stack trace ---
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at System.ComponentModel.TypeConverter.ConvertFrom(Object value)
+   at AutoMapper.Mappers.TypeConverterMapper.Map[TSource,TDestination](TSource source)
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+2021-01-07 14:49:36.1741 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-07 14:49:36.3591 ERROR FusPack-GetFusPacks:Error mapping types.
+
+Mapping types:
+Object -> IList`1
+System.Object -> System.Collections.Generic.IList`1[[LKDUS_API.DTOs.FusPackDTO, LKDUS-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] - AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Type Map configuration:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Destination Member:
+Master
+
+ ---> System.FormatException: Jana Žuravska is not a valid value for DateTime.
+ ---> System.FormatException: The string 'Jana Žuravska' was not recognized as a valid DateTime. There is an unknown word starting at index '0'.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   --- End of inner exception stack trace ---
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at System.ComponentModel.TypeConverter.ConvertFrom(Object value)
+   at AutoMapper.Mappers.TypeConverterMapper.Map[TSource,TDestination](TSource source)
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+2021-01-07 14:49:54.4850 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-07 14:50:02.1880 ERROR FusPack-GetFusPacks:Error mapping types.
+
+Mapping types:
+Object -> IList`1
+System.Object -> System.Collections.Generic.IList`1[[LKDUS_API.DTOs.FusPackDTO, LKDUS-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] - AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Type Map configuration:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Destination Member:
+Master
+
+ ---> System.FormatException: Jana Žuravska is not a valid value for DateTime.
+ ---> System.FormatException: The string 'Jana Žuravska' was not recognized as a valid DateTime. There is an unknown word starting at index '0'.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   --- End of inner exception stack trace ---
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at System.ComponentModel.TypeConverter.ConvertFrom(Object value)
+   at AutoMapper.Mappers.TypeConverterMapper.Map[TSource,TDestination](TSource source)
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+2021-01-07 14:50:43.0258 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-07 14:51:44.2181 ERROR FusPack-GetFusPacks:Error mapping types.
+
+Mapping types:
+Object -> IList`1
+System.Object -> System.Collections.Generic.IList`1[[LKDUS_API.DTOs.FusPackDTO, LKDUS-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] - AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Type Map configuration:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Destination Member:
+Master
+
+ ---> System.FormatException: Jana Žuravska is not a valid value for DateTime.
+ ---> System.FormatException: The string 'Jana Žuravska' was not recognized as a valid DateTime. There is an unknown word starting at index '0'.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   --- End of inner exception stack trace ---
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at System.ComponentModel.TypeConverter.ConvertFrom(Object value)
+   at AutoMapper.Mappers.TypeConverterMapper.Map[TSource,TDestination](TSource source)
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+2021-01-07 15:21:57.9744 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-07 15:21:58.8040 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-07 15:21:59.8151 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-07 15:21:59.9430 INFO Sucessfully got all measurementPositions
+2021-01-07 15:22:00.9466 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-07 15:22:01.0206 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-07 15:22:41.0718 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-07 15:23:19.2422 ERROR FusPack-GetFusPacks:Error mapping types.
+
+Mapping types:
+Object -> IList`1
+System.Object -> System.Collections.Generic.IList`1[[LKDUS_API.DTOs.FusPackDTO, LKDUS-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] - AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Type Map configuration:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Destination Member:
+Master
+
+ ---> System.FormatException: Jana Žuravska is not a valid value for DateTime.
+ ---> System.FormatException: The string 'Jana Žuravska' was not recognized as a valid DateTime. There is an unknown word starting at index '0'.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   --- End of inner exception stack trace ---
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at System.ComponentModel.TypeConverter.ConvertFrom(Object value)
+   at AutoMapper.Mappers.TypeConverterMapper.Map[TSource,TDestination](TSource source)
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+2021-01-07 15:23:25.6598 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-07 15:23:57.1841 ERROR FusPack-GetFusPacks:Error mapping types.
+
+Mapping types:
+Object -> IList`1
+System.Object -> System.Collections.Generic.IList`1[[LKDUS_API.DTOs.FusPackDTO, LKDUS-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] - AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Type Map configuration:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Destination Member:
+Master
+
+ ---> System.FormatException: Jana Žuravska is not a valid value for DateTime.
+ ---> System.FormatException: The string 'Jana Žuravska' was not recognized as a valid DateTime. There is an unknown word starting at index '0'.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   --- End of inner exception stack trace ---
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at System.ComponentModel.TypeConverter.ConvertFrom(Object value)
+   at AutoMapper.Mappers.TypeConverterMapper.Map[TSource,TDestination](TSource source)
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+2021-01-07 15:24:05.4058 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-07 15:47:48.2695 ERROR FusPack-GetFusPacks:Error mapping types.
+
+Mapping types:
+Object -> IList`1
+System.Object -> System.Collections.Generic.IList`1[[LKDUS_API.DTOs.FusPackDTO, LKDUS-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] - AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Type Map configuration:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Destination Member:
+Master
+
+ ---> System.FormatException: Jana Žuravska is not a valid value for DateTime.
+ ---> System.FormatException: The string 'Jana Žuravska' was not recognized as a valid DateTime. There is an unknown word starting at index '0'.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   --- End of inner exception stack trace ---
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at System.ComponentModel.TypeConverter.ConvertFrom(Object value)
+   at AutoMapper.Mappers.TypeConverterMapper.Map[TSource,TDestination](TSource source)
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+2021-01-07 15:47:57.1587 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-07 15:48:06.5178 ERROR FusPack-GetFusPacks:Error mapping types.
+
+Mapping types:
+Object -> IList`1
+System.Object -> System.Collections.Generic.IList`1[[LKDUS_API.DTOs.FusPackDTO, LKDUS-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] - AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Type Map configuration:
+FusPack -> FusPackDTO
+LKDUS_API.Data.FusPack -> LKDUS_API.DTOs.FusPackDTO
+
+Destination Member:
+Master
+
+ ---> System.FormatException: Jana Žuravska is not a valid value for DateTime.
+ ---> System.FormatException: The string 'Jana Žuravska' was not recognized as a valid DateTime. There is an unknown word starting at index '0'.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   --- End of inner exception stack trace ---
+   at System.ComponentModel.DateTimeConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at System.ComponentModel.TypeConverter.ConvertFrom(Object value)
+   at AutoMapper.Mappers.TypeConverterMapper.Map[TSource,TDestination](TSource source)
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , IList`1 , ResolutionContext )
+2021-01-07 15:48:21.3949 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-07 17:16:12.3281 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-07 17:16:19.5957 INFO Sucessfully got all FUS packs

@@ -12,6 +12,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+ 
 
 namespace LKDUS_UI.Service
 {
@@ -133,6 +134,59 @@ namespace LKDUS_UI.Service
         }
 
         public Task<bool> Update(string url, LoginModel obj, int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<bool> Register(LoginModelCreate newUser)
+        {
+            var request = new HttpRequestMessage(HttpMethod.Put
+              , Endpoints.RegisterUserEndpoint);
+            request.Content = new StringContent(JsonConvert.SerializeObject(newUser)
+                , Encoding.UTF8, "application/json");
+
+            var client = this.client.CreateClient();
+            HttpResponseMessage response = await client.SendAsync(request);
+
+            return response.IsSuccessStatusCode;
+        }
+
+        public Task<bool> Put(LoginModel user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> Put(string url, LoginModel obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<LoginModelCreate> IBaseRepository<LoginModelCreate>.Get(string url, int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<LoginModelCreate> IBaseRepository<LoginModelCreate>.Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<IList<LoginModelCreate>> IBaseRepository<LoginModelCreate>.Get(string url)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> Create(string url, LoginModelCreate obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> Put(string url, LoginModelCreate obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> Update(string url, LoginModelCreate obj, int id)
         {
             throw new NotImplementedException();
         }
