@@ -12,6 +12,10 @@ namespace LKDUS_UI.Contracts
         public Task<bool> Register(LoginModelCreate user);
         public Task Logout();
         public new Task<IList<LoginModel>> Get(string url);
-
+  //      public Task<LoginModel> Get(string url,int id);
+  //      public Task<LoginModel> GetById(string   id);
+         public Task<LoginModel> Get(string url,string id);
+        public new Task<bool> DeleteUserById(string url, string id);
+        
     }
 }

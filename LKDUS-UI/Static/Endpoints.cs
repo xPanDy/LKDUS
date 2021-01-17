@@ -22,11 +22,11 @@ namespace LKDUS_UI.Static
     
         
         public static string MachinesEndpoint = $"{BaseUrl}api/machine/";
-        public static string AspUsersEndpoint = $"{BaseUrl}api/AspNetUsers/";
+        public static string AspUsersEndpoint = $"{BaseUrl}api/aspnetusers/";
         
         public static string FusPackEndPoint = $"{BaseUrl}api/FusPack/";
        
-        public static string RegisterUserEndpoint = $"{BaseUrl}api/AspNetUsers/";
+        public static string RegisterUserEndpoint = $"{BaseUrl}api/aspnetusers/";
 
 
     }

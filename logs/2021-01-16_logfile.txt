@@ -1,0 +1,62 @@
+2021-01-16 12:13:36.8727 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-16 12:13:37.0310 INFO Sucessfully got all measurementPositions
+2021-01-16 20:29:49.1065 INFO AspNetUsers-GetUser: Attempted Call for id: 768fd4c5-8360-4a48-b8c6-4e50cfa2ea1b
+2021-01-16 20:29:49.4041 ERROR AspNetUsers-GetUser: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> UserDTO
+System.Object -> LKDUS_API.DTOs.UserDTO - 
+2021-01-16 20:30:12.1233 INFO AspNetUsers-GetUser: Attempted Call for id: 768fd4c5-8360-4a48-b8c6-4e50cfa2ea1b
+2021-01-16 20:31:25.2215 ERROR AspNetUsers-GetUser: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> UserDTO
+System.Object -> LKDUS_API.DTOs.UserDTO - 
+2021-01-16 20:31:33.0618 INFO AspNetUsers-GetUser: Attempted Call for id: 768fd4c5-8360-4a48-b8c6-4e50cfa2ea1b
+2021-01-16 20:31:39.9194 ERROR AspNetUsers-GetUser: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> UserDTO
+System.Object -> LKDUS_API.DTOs.UserDTO - 
+2021-01-16 20:43:22.4988 INFO AspNetUsers-GetUser: Attempted Call for id: 768fd4c5-8360-4a48-b8c6-4e50cfa2ea1b
+2021-01-16 20:43:22.9616 ERROR AspNetUsers-GetUser: The method or operation is not implemented. - 
+2021-01-16 20:43:36.6152 INFO AspNetUsers-GetUser: Attempted Call for id: 768fd4c5-8360-4a48-b8c6-4e50cfa2ea1b
+2021-01-16 20:43:36.7219 ERROR AspNetUsers-GetUser: The method or operation is not implemented. - 
+2021-01-16 20:43:44.5864 INFO AspNetUsers-GetUser: Attempted Call for id: 768fd4c5-8360-4a48-b8c6-4e50cfa2ea1b
+2021-01-16 20:43:49.4370 ERROR AspNetUsers-GetUser: The method or operation is not implemented. - 
+2021-01-16 20:44:05.5653 INFO AspNetUsers-GetUser: Attempted Call for id: 768fd4c5-8360-4a48-b8c6-4e50cfa2ea1b
+2021-01-16 20:45:01.4550 INFO AspNetUsers-GetUser: Attempted Call for id: 768fd4c5-8360-4a48-b8c6-4e50cfa2ea1b
+2021-01-16 20:46:42.7050 INFO AspNetUsers-GetUser: Attempted Call for id: 768fd4c5-8360-4a48-b8c6-4e50cfa2ea1b
+2021-01-16 20:59:12.0996 INFO AspNetUsers-GetUser: Attempted Call for id: 768fd4c5-8360-4a48-b8c6-4e50cfa2ea1b
+2021-01-16 20:59:12.4121 ERROR AspNetUsers-GetUser: The method or operation is not implemented. - 
+2021-01-16 20:59:34.8679 INFO AspNetUsers-GetUser: Attempted Call for id: 04bdf95a-2320-44ee-9b6f-2ebcebb2f02d
+2021-01-16 20:59:34.9877 ERROR AspNetUsers-GetUser: The method or operation is not implemented. - 
+2021-01-16 20:59:57.5527 INFO AspNetUsers-GetUser: Attempted Call for id: 04bdf95a-2320-44ee-9b6f-2ebcebb2f02d
+2021-01-16 21:00:36.7281 ERROR AspNetUsers-GetUser: The method or operation is not implemented. - 
+2021-01-16 21:05:02.3209 INFO AspNetUsers-GetUser: Attempted Call for id: 04bdf95a-2320-44ee-9b6f-2ebcebb2f02d
+2021-01-16 21:05:04.1885 ERROR AspNetUsers-GetUser: Unable to cast object of type 'System.Collections.Generic.List`1[Microsoft.AspNetCore.Identity.IdentityUser]' to type 'System.Collections.Generic.IList`1[LKDUS_API.DTOs.AspUserDTO]'. - 
+2021-01-16 22:16:44.7847 INFO AspNetUsers-GetUser: Attempted Call for id: 04bdf95a-2320-44ee-9b6f-2ebcebb2f02d
+2021-01-16 22:16:54.9037 INFO AspNetUsers-GetUser: Successfully got record with id: 04bdf95a-2320-44ee-9b6f-2ebcebb2f02d
+2021-01-16 22:44:19.3178 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-16 22:44:19.7097 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-16 22:44:20.4930 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-16 22:44:20.6177 INFO Sucessfully got all measurementPositions
+2021-01-16 22:47:12.2429 INFO AspNetUsers-GetUser: Attempted Call for id: 04bdf95a-2320-44ee-9b6f-2ebcebb2f02d
+2021-01-16 22:47:17.3524 INFO AspNetUsers-GetUser: Successfully got record with id: 04bdf95a-2320-44ee-9b6f-2ebcebb2f02d
+2021-01-16 23:06:56.7726 INFO AspNetUsers-GetUser: Attempted Call for id: 04bdf95a-2320-44ee-9b6f-2ebcebb2f02d
+2021-01-16 23:07:02.3088 INFO AspNetUsers-GetUser: Successfully got record with id: 04bdf95a-2320-44ee-9b6f-2ebcebb2f02d
+2021-01-16 23:09:25.7099 INFO AspNetUsers-GetUser: Attempted Call for id: 04bdf95a-2320-44ee-9b6f-2ebcebb2f02d
+2021-01-16 23:09:25.7836 INFO AspNetUsers-GetUser: Successfully got record with id: 04bdf95a-2320-44ee-9b6f-2ebcebb2f02d
+2021-01-16 23:09:36.5347 WARN AspNetUsers-Update: user update atempted - id: 04bdf95a-2320-44ee-9b6f-2ebcebb2f02d
+2021-01-16 23:15:26.6666 INFO AspNetUsers-Login: Login attempted call from user operator
+2021-01-16 23:15:27.0119 INFO AspNetUsers-Login: operator Sucessfully Authenticated
+2021-01-16 23:15:27.5459 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-16 23:15:27.6268 INFO Sucessfully got all measurementPositions
+2021-01-16 23:15:30.4879 INFO AspNetUsers-GetUser: Attempted Call for id: 04bdf95a-2320-44ee-9b6f-2ebcebb2f02d
+2021-01-16 23:15:30.5004 INFO AspNetUsers-GetUser: Successfully got record with id: 04bdf95a-2320-44ee-9b6f-2ebcebb2f02d
+2021-01-16 23:15:42.6653 WARN AspNetUsers-Update: user update atempted - id: 04bdf95a-2320-44ee-9b6f-2ebcebb2f02d
+2021-01-16 23:16:11.0093 INFO AspNetUsers-Update: user Data with id: 04bdf95a-2320-44ee-9b6f-2ebcebb2f02d was updated
+2021-01-16 23:16:21.0420 INFO Machine-GetMachines: Attempted Call
+2021-01-16 23:16:21.2287 INFO Sucessfully got all machines
+2021-01-16 23:16:24.0451 INFO Machine-GetMachines: Attempted Call
+2021-01-16 23:16:24.1196 INFO Sucessfully got all machines

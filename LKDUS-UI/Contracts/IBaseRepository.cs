@@ -13,6 +13,9 @@ namespace LKDUS_UI
         Task<bool> Create(string url, T obj);
         Task<bool> Put(string url, T obj);
         Task<bool> Update(string url, T obj, int id);
+        Task<bool> Update(string url, T obj );
+        Task<bool> Update(string url, T obj, string id);
         Task<bool> Delete(string url, int id);
+        Task<bool> DeleteUserById(string url, string idd);
     }
 }

@@ -143,9 +143,17 @@ namespace LKDUS_API
             //app.UseStaticFiles();
 
             app.UseCors("CorsPolicy");
-            
-             
+            try
+            {
                 SeedData.Seed(userManager, roleManager).Wait();
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
+             
+                
 
             
 

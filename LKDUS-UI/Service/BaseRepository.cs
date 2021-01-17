@@ -98,6 +98,27 @@ namespace LKDUS_UI.Service
 
         }
 
+      /*  public async Task<T> Get(string url, string id)
+        {
+            var request = new HttpRequestMessage(HttpMethod.Get, url + id);
+
+            var client = this.client.CreateClient();
+            //client.DefaultRequestHeaders.Authorization =
+            //    new AuthenticationHeaderValue("bearer", await GetBearerToken());
+            HttpResponseMessage response = await client.SendAsync(request);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<T>(content);
+            }
+
+
+            return null;
+
+
+        }*/
+
 
         public async Task<IList<T>> Get(string url)
         {
@@ -169,6 +190,30 @@ namespace LKDUS_UI.Service
         public Task<bool> Put(string url, T obj)
         {
             throw new NotImplementedException();
+        }
+
+        public Task<bool> Update(string url, T obj, string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<bool> DeleteUserById(string url, string id)
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                return false;
+            }
+
+            var request = new HttpRequestMessage(HttpMethod.Delete, url + id);
+            var client = this.client.CreateClient();
+            HttpResponseMessage response = await client.SendAsync(request);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

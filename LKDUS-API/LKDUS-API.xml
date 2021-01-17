@@ -16,9 +16,17 @@
             <param name="aspNetUserDTO"></param>
             <returns></returns>
         </member>
+        <member name="M:LKDUS_API.Controllers.AspNetUsersController.GetUser(System.String)">
+            <summary>
+            Get user by id 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:LKDUS_API.Controllers.AspNetUsersController.GetUsers">
             <summary>
             Get all Users
+            
             </summary>
             <returns>List of all Users</returns>
         </member>
@@ -27,6 +35,20 @@
             Creates a asp user 
             </summary>
             <param name="userDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.AspNetUsersController.Update(LKDUS_API.DTOs.AspUserDTO,System.String)">
+            <summary>
+            Updates a asp user 
+            </summary>
+            <param name="userDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LKDUS_API.Controllers.AspNetUsersController.Delete(System.String)">
+            <summary>
+            Removes USER by id
+            </summary>
+            <param name="id"></param>
             <returns></returns>
         </member>
         <member name="T:LKDUS_API.Controllers.FusPackController">

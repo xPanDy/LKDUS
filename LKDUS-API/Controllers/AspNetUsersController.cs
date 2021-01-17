@@ -29,7 +29,7 @@ namespace LKDUS_API.Controllers
 
     public class AspNetUsersController : ControllerBase
     {
-    //    private UserManager<AspUserDTO> userManager1;
+        //    private UserManager<AspUserDTO> userManager1;
         private readonly SignInManager<IdentityUser> signInManager;
         private readonly UserManager<IdentityUser> userManager;
         private readonly ILoggerService logger;
@@ -45,16 +45,16 @@ namespace LKDUS_API.Controllers
             IConfiguration config,
             IMapper mapper
             //,
-           // IAspUserRepository aspNetUserRepository
+            // IAspUserRepository aspNetUserRepository
             )
         {
-           // this.userManager1 = userManager1;
+            // this.userManager1 = userManager1;
             this.signInManager = signInManager;
             this.userManager = userManager;
             this.logger = logger;
             this.config = config;
             this.mapper = mapper;
-          // this.aspNetUserRepository = aspNetUserRepository;
+            // this.aspNetUserRepository = aspNetUserRepository;
         }
 
         /// <summary>
@@ -75,24 +75,24 @@ namespace LKDUS_API.Controllers
                 var password = aspNetUserDTO.Password;// aspNetUserDTO.Password;
                 this.logger.LogInfo($"{location}: Login attempted call from user {userName}");
 
-              // var user1 = this.userManager.FindByNameAsync(userName);
+                // var user1 = this.userManager.FindByNameAsync(userName);
 
-               //var res = this.signInManager.UserManager.CheckPasswordAsync(user1.Id, password);
-                
+                //var res = this.signInManager.UserManager.CheckPasswordAsync(user1.Id, password);
+
                 var result = await signInManager.PasswordSignInAsync(userName.ToString(), "1111", false, false);
 
-               // signInManager.UserManager.CheckPasswordAsync(aspNetUserDTO, aspNetUserDTO.Password);
+                // signInManager.UserManager.CheckPasswordAsync(aspNetUserDTO, aspNetUserDTO.Password);
 
                 if (result.Succeeded)
                 {
                     var user = await this.userManager.FindByNameAsync(userName);
                     this.logger.LogInfo($"{location}: {userName} Sucessfully Authenticated");
                     var tokenString = await GenerateJSONWebToken(user);
-                    return Ok(new {  token = tokenString});
-                }  
-                
-                
-               
+                    return Ok(new { token = tokenString });
+                }
+
+
+
 
                 this.logger.LogInfo($"{location}: {userName} Not authenticated");
 
@@ -107,21 +107,81 @@ namespace LKDUS_API.Controllers
 
 
 
-           
 
-            
+
+
 
         }
 
+
+      
+
         /// <summary>
-        /// Get all Users
+        /// Get user by id 
         /// </summary>
-        /// <returns>List of all Users</returns>
-        [HttpGet]
-        //[AllowAnonymous]
+        /// <param name="id"></param>
+
+        /// <returns></returns>
+        [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult GetUsers()
+        public async Task<IActionResult> GetUser(string id)
+        {
+            var location = GetControllerActionNames();
+            try
+            {
+                this.logger.LogInfo($"{location}: Attempted Call for id: {id}");
+
+                //IList<AspUserDTO> operetorList = new List<AspUserDTO>();
+                var users = this.userManager.Users;
+                AspUserDTO usr = null;
+
+                foreach (var uuser in users)
+                {
+                    if (uuser.Id == id)
+                    {
+                        usr = new AspUserDTO()
+                        {
+                            UserName = uuser.UserName,
+                            Id = uuser.Id,
+                            Password = uuser.PasswordHash,
+
+
+
+
+                        };
+
+
+                    }
+                }
+                //   AspUserDTO user = await userManager.FindByIdAsync(id);
+                if (usr == null)
+                {
+                    this.logger.LogWarn($"{location}: Failed to retrieve record with id: {id}");
+                    return NotFound();
+                }
+
+
+                var response = this.mapper.Map<AspUserDTO>(usr);
+                this.logger.LogInfo($"{location}: Successfully got record with id: {id}");
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                return InternalError($"{location}: {e.Message} - {e.InnerException}");
+            }
+        }  
+          
+        
+        /// <summary>
+            /// Get all Users
+            /// 
+            /// </summary>
+            /// <returns>List of all Users</returns>
+            [HttpGet] 
+           [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public   IActionResult GetUsers( )
         {
             var location = GetControllerActionNames();
             try
@@ -161,6 +221,8 @@ namespace LKDUS_API.Controllers
 
 
         }
+
+
       /// <summary>
         /// Creates a asp user 
         /// </summary>
@@ -183,7 +245,7 @@ namespace LKDUS_API.Controllers
                     var user = new IdentityUser
                     {
                         UserName = userDTO.UserName,
-                        Email = "operator@finieris.lv",
+                        Email = userDTO.UserName+"@finieris.lv",
 
                     };
 
@@ -263,6 +325,116 @@ namespace LKDUS_API.Controllers
             this.logger.LogError(message);
             return StatusCode(500, "Something is broken, please contact your supervisor");
         }
+
+
+
+        /// <summary>
+        /// Updates a asp user 
+        /// </summary>
+        /// <param name="userDTO"></param>
+        /// <returns></returns>
+        [HttpPut("{id}")]
+        //  [Authorize(Roles = "Admin, Master")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> Update( [FromBody] AspUserDTO userDTO, string id)
+        {
+            var location = GetControllerActionNames();
+            try
+            {
+                this.logger.LogWarn($"{location}: user update atempted - id: {id}");
+                if (  string.IsNullOrEmpty(id) || string.IsNullOrEmpty(userDTO.Id))
+                {
+                    this.logger.LogWarn($"{location}: user  update failed with wrong data");
+                    return BadRequest(ModelState);
+                }
+
+                var user = await userManager.FindByIdAsync(id);// .machineRepository.isExists(id);
+
+                if (user == null)
+                {
+                    this.logger.LogWarn($"{location}: user Data was not found");
+                    return NotFound();
+                }
+                if (!ModelState.IsValid)
+                {
+                    this.logger.LogWarn($"{location}: pack Data was Incomplete");
+                    return BadRequest(ModelState);
+
+                }
+
+                user.UserName = userDTO.UserName;
+                var isGood = await this.userManager.UpdateAsync(user);
+              //  var isGood = await this.machineRepository.Update(machine);
+                if (!isGood.Succeeded)
+                {
+
+                    return InternalError($"{location}: user update failed");
+                }
+
+                this.logger.LogInfo($"{location}: user Data with id: {id} was updated");
+                return NoContent();
+
+            }
+            catch (Exception e)
+            {
+                return InternalError($"{location}: {e.Message} - {e.InnerException}");
+
+            }
+
+        }
+
+
+        /// <summary>
+        /// Removes USER by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> Delete(string id)
+        {
+
+            var location = GetControllerActionNames();
+            try
+            {
+                this.logger.LogWarn($"{location}: user deletion atempted - id: {id}");
+                if (string.IsNullOrEmpty(id))
+                {
+                    this.logger.LogWarn($"{location}: user deleting failed with wrong data");
+                    return BadRequest();
+                }
+                var user = await userManager.FindByIdAsync(id);// .machineRepository.isExists(id);
+              //  var isExist = await this. machineRepository.isExists(id);
+
+                if (user == null)
+                {
+                    this.logger.LogWarn($"{location}: user Data with id: {id} was not found");
+                    return NotFound();
+                }
+                
+                var isGood = await this.userManager.DeleteAsync(user);
+
+                if ( !isGood.Succeeded)
+                {
+                    return InternalError($"{location}: user Delete failed");
+                }
+
+                this.logger.LogWarn($"{location}:  user Data with id: {id} was deleted");
+                return NoContent();
+
+            }
+            catch (Exception e)
+            {
+                return InternalError($"{location}: {e.Message} - {e.InnerException}");
+
+            }
+
+        }
+
 
 
     }

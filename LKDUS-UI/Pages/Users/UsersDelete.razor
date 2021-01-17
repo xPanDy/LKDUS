@@ -1,4 +1,4 @@
-﻿ 
+﻿
 
 @page "/userdelete/{Id}"
 @*@attribute [Authorize(Roles = "Administrator")]*@
@@ -10,84 +10,52 @@
 @using System.Net.Http
 @using Microsoft.Extensions.Logging
 
+
 @inject NavigationManager navManager
-@inject IMachinesRepository machineRepo
+@inject IAuthenticationRepository authRepo
 
 <h3>Esi pārliecināts ka vēlies dzēst šo ierakstu?</h3>
 <hr />
 <br />
 @if (!isSuccess)
 {
-   <label> kaut kas nav</label>
+    <label> kaut kas nav</label>
 }
 
 
-@if (int.Parse(Id) < 1 || string.IsNullOrWhiteSpace(Id))
+@if (string.IsNullOrWhiteSpace(Id))
 {
     @*<ErrorMessage Message="Invalid Selection. Please Try Again" />*@
     <label>nepareiza izvēle, mēģini vēlreiz!</label>
 }
 else if (Model == null)
 {
-<label>Notiek iekārtu datu ielāde</label>
+    <label>Notiek lietotāja datu ielāde</label>
 }
 else
 {
-<div class="row">
-    <div class="col-6">
-        <table class="table table-responsive">
-            <tr>
-                <td>
-                    <strong>Nosaukums</strong>
-                </td>
-                <td>@Model.Name</td>
-            </tr>
-            @*<tr>
-                <td>
-                    <strong>Author</strong>
-                </td>
-                <td>
-                    @if (Model.Author == null)
-                    {
-                        <span class="text-muted">No Author Recorded</span>
-                    }
-                    else
-                    {
-                        <a href="/authors/view/@Model.AuthorId">@Model.Author.Firstname @Model.Author.Lastname</a>
-                    }
-                </td>
-            </tr>*@
-            <tr>
-                <td>
-                    <strong>Apraksts</strong>
-                </td>
-                <td>@Model.Description</td>
-            </tr>
-            @*<tr>
-                <td>
-                    <strong>Published Year</strong>
-                </td>
-                <td>@Model.Year</td>
-            </tr>*@
-            @*<tr>
-                <td>
-                    <strong>ISBN</strong>
-                </td>
-                <td>@Model.Isbn</td>
-            </tr>*@
+    <div class="row">
+        <div class="col-6">
+            <table class="table table-responsive">
+                <tr>
+                    <td>
+                        <strong>Nosaukums</strong>
+                    </td>
+                    <td>@Model.UserName</td>
+                </tr>
 
-        </table>
+
+
+
+            </table>
+        </div>
+
     </div>
-    @*<div class="col-4">
-        <img src="uploads/@Model.Image" style="height:300px; width:300px" />
-        <h3 class="text-center text-info">@string.Format("{0:C}", Model.Price)</h3>
-    </div>*@
-</div>
 }
 
-<button @onclick="DeleteMachine" class="btn btn-danger">
+<button @onclick="DeleteUser" class="btn btn-danger">
     <span class="oi oi-delete"></span>
-    Dzēst iekārtu
+    Dzēst lietotāju
 </button>
 @if (!isSuccess)
 {
@@ -102,19 +70,19 @@ else
     [Parameter]
     public string Id { get; set; }
 
-    private Machine Model = new Machine();
+    private LoginModel Model = new LoginModel();
     private bool isSuccess = true;
 
     protected override async Task OnInitializedAsync()
     {
-        int id = Convert.ToInt32(Id);
-        Model = await machineRepo.Get(Endpoints.MachinesEndpoint, id);
+        // int id = Convert.ToInt32(Id);
+        Model = await authRepo.Get(Endpoints.AspUsersEndpoint, Id);
     }
 
-    private async Task DeleteMachine()
+    private async Task DeleteUser()
     {
         //_fileUpload.RemoveFile(Model.Image);
-        isSuccess = await machineRepo.Delete(Endpoints.MachinesEndpoint, Model.Id);
+        isSuccess = await authRepo.DeleteUserById( Endpoints.AspUsersEndpoint,  Model.Id);
         if (isSuccess)
         {
             //_toastService.ShowError("Book Deleted Successfully", "");
@@ -125,7 +93,7 @@ else
 
     private void BackToList()
     {
-        navManager.NavigateTo("/machines/");
+        navManager.NavigateTo("/users/");
     }
 
 }

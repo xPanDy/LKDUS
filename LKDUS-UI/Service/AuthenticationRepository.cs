@@ -93,10 +93,12 @@ namespace LKDUS_UI.Service
                 var client = this.client.CreateClient();
 
                 var request = new HttpRequestMessage(HttpMethod.Get, url);
+            //   var request2 = new HttpRequestMessage(HttpMethod.Get, url+ "/04bdf95a-2320-44ee-9b6f-2ebcebb2f02d");
 
 
 
                 HttpResponseMessage response = await client.SendAsync(request);
+              //  HttpResponseMessage response2 = await client.SendAsync(request2);
 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
@@ -123,14 +125,55 @@ namespace LKDUS_UI.Service
             throw new NotImplementedException();
         }
 
-        public Task<bool> Update(string url, LoginModel obj)
+        public async Task<bool> Update(string url, LoginModel obj)
         {
-            throw new NotImplementedException();
+
+            var request = new HttpRequestMessage(HttpMethod.Put, url);
+
+            if (obj == null)
+            {
+                return false;
+            }
+
+            request.Content = new StringContent(JsonConvert.SerializeObject(obj),
+                Encoding.UTF8, "applicaton/json");
+
+
+            var client = this.client.CreateClient();
+
+            HttpResponseMessage response = await client.SendAsync(request);
+
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         public Task<bool> Delete(string url, int id)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<bool> DeleteUserById(string url, string id)
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                return false;
+            }
+
+            var request = new HttpRequestMessage(HttpMethod.Delete, url + id);
+            var client = this.client.CreateClient();
+            HttpResponseMessage response = await client.SendAsync(request);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         public Task<bool> Update(string url, LoginModel obj, int id)
@@ -190,5 +233,70 @@ namespace LKDUS_UI.Service
         {
             throw new NotImplementedException();
         }
+
+        public async  Task<bool> Update(string url, LoginModel obj, string id)
+        {
+            var request = new HttpRequestMessage(HttpMethod.Put, url + id);
+
+            if (obj == null)
+            {
+                return false;
+            }
+            request.Content = new StringContent(JsonConvert.SerializeObject(obj)
+                , Encoding.UTF8, "application/json");
+
+            var client = this.client.CreateClient();
+            //client.DefaultRequestHeaders.Authorization =
+            //    new AuthenticationHeaderValue("bearer", await GetBearerToken());
+            HttpResponseMessage response = await client.SendAsync(request);
+            if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
+                return true;
+
+            return false;
+        }
+
+        public Task<bool> Update(string url, LoginModelCreate obj, string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> Update(string url, LoginModelCreate obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<LoginModel> Get(string url, string id)
+        {
+            var request = new HttpRequestMessage(HttpMethod.Get, url+ id);
+            var client = this.client.CreateClient();
+
+            HttpResponseMessage response = await client.SendAsync(request);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<LoginModel>(content);
+            }
+
+            return null;
+        }
+
+        public async Task<LoginModel> GetById(string id)
+        {
+            var request = new HttpRequestMessage(HttpMethod.Get, Endpoints.AspUsersEndpoint+ id);
+            var client = this.client.CreateClient();
+
+            HttpResponseMessage response = await client.SendAsync(request);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<LoginModel>(content);
+            }
+
+            return null;
+        }
+
+        
     }
 }
