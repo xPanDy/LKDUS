@@ -23,6 +23,11 @@ namespace LKDUS_API.Services
             return await Save();
         }
 
+        public Task<bool> Create(IList<MeasurementType> entityList)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<bool> Delete(MeasurementType entity)
         {
             _db.MeasurementsType.Remove(entity);

@@ -1,4 +1,4 @@
-﻿@page "/measurements/{measurementPositionId}/create/measurementdimensions/width"
+﻿@page "/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions/width"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
@@ -7,24 +7,32 @@
 
 @inject IMeasurementRepository repo
 @inject NavigationManager navManager
+@inject IMeasurementRepository measurementRepo;
 
+<style>
+    /* #btn:active, #btn:focus{
+         color:greenyellow;
 
-
+        background-color:white;
+        outline-color: greenyellow;
+        background-color : greenyellow;
+    }*/
+</style>
 
 <div class="container">
 
-     
-        <div class="row">
-            <div class="col">
-                <button type="button" @onclick="@BacktochooseDimension" class="btn btn-primary btn-block">Atpakaļ</button>
-            </div>
-            <div class="col w-25"><h3 class="card-title">Mitrā finiera platums</h3></div>
-            <div class="col">
-                <button type="submit" class="btn btn-primary btn-block">Saglabāt</button>
-            </div>
 
+    <div class="row">
+        <div class="col">
+            <button type="button" @onclick="@BacktochooseDimension" class="btn btn-primary btn-block">Atpakaļ</button>
         </div>
-    
+        <div class="col w-25"><h3 class="card-title">Mitrā finiera platums</h3></div>
+        <div class="col">
+            <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
+        </div>
+
+    </div>
+
     <div class="row w-100">
 
         <div class="col w-75">
@@ -35,9 +43,11 @@
 
                 <div class="col">
 
-                    <button type="button" class="btn btn-outline-secondary btn-block"><h4>4x8</h4>
-                    <br />
-                    <h5>(13<span sstyle="color:red">XX</span >)</h5> </button>
+                    <button style="background-color:@colorBg1;" @onclick="changecolor1AndSetSizes" type="button" class="btn btn-outline-secondary btn-block">
+                        <h4>4x8</h4>
+                        <br />
+                        <h5>(13<span sstyle="color:red">XX</span>)</h5>
+                    </button>
 
                 </div>
 
@@ -46,10 +56,12 @@
 
                 <div class="col">
 
-                    <button type="button" class="btn btn-outline-secondary btn-block"><h4>8x4</h4>
-                     <br />
-                    <h5>(28<span sstyle="color:red">XX</span >)</h5> </button>
-                    
+                    <button style="background-color:@colorBg2;" @onclick="changecolor2AndSetSizes" type="button" class="btn btn-outline-secondary btn-block">
+                        <h4>8x4</h4>
+                        <br />
+                        <h5>(28<span sstyle="color:red">XX</span>)</h5>
+                    </button>
+
 
                 </div>
 
@@ -57,23 +69,23 @@
 
                 <div class="col">
 
-                    <button type="button" class="btn btn-outline-secondary btn-block">
+                    <button style="background-color:@colorBg3;" @onclick="changecolor3AndSetSizes" type="button" class="btn btn-outline-secondary btn-block">
                         <h4>4x4</h4>
                         <br />
                         <h5>(13<span sstyle="color:red">XX</span>)</h5>
-                    
+
                     </button>
 
                 </div>
 
             </div>
             <div class="row">
-                <div class="col">
+                <div class="col w-75">
                     <table class="table table-hover">
 
                         <thead>
 
-                           
+
                             <tr>
                                 <th rowspan="2">Nr.p.k.</th>
                                 <th colspan="2">Lokšņu platums</th>
@@ -85,84 +97,99 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @if(positions != null) { 
-                            @for (int i = 0; i < 10; i++)
+                            @if (positions != null)
                             {
-                            var ind=i+1;
-                                var tmpI = i;
-                            <tr>
-                                    <td>@ind</td>
-                                @for (int j = 1; j < 3; j++)
+                                @for (int i = 0; i < 10; i++)
                                 {
-                                var tmpJ = j;
-                                    <td><button @onclick="( e => selectTableCell(tmpI,tmpJ))">@positions[i, j]</button></td>
-                                    
+                                    var ind = i + 1;
+                                    var tmpI = i;
+                                    <tr>
+                                        <td>@ind</td>
+                                        @for (int j = 1; j < 3; j++)
+                                        {
+                                            var tmpJ = j;
+                                            <td><button @onclick="( e => selectTableCell(tmpI,tmpJ))">@positions[i, j]</button></td>
+
+                                        }
+                                        <td>@positions[i, 3]</td>
+                                    </tr>
                                 }
-                                <td>@positions[i,3]</td>
-                            </tr>
                             }
-                            }
-                           
+
                         </tbody>
 
                     </table>
                 </div>
-            </div>
-             
 
-             
+                <div class="col w-25">
+
+                    <div class="d-flex justify-content-between">
+
+                        <table class="table  ">
+                            <tbody class="h-100">
+                                <tr class="text-center">
+                                    <td colspan="3"> <button type="button" @onclick="Reduce" style="color:deeppink" class="btn btn-secondary btn-lg">-</button></td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td>  <button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button></td>
+
+
+                                    <td>  <button type="button" @onclick="(()=>select(sizes[1]))" class="btn btn-info btn-lg btn-block">@sizes[1]</button></td>
+
+
+                                    <td>  <button type="button" @onclick="(()=>select(sizes[2]))" class="btn btn-info btn-lg btn-block">@sizes[2]</button></td>
+                                </tr>
+
+
+                                <tr class="text-center">
+                                    <td>  <button type="button" @onclick="(()=>select(sizes[3]))" class="btn btn-info btn-lg btn-block">@sizes[3]</button></td>
+
+                                    <td>  <button type="button" @onclick="(()=>select(sizes[4]))" class="btn btn-info btn-lg btn-block">@sizes[4]</button></td>
+
+                                    <td>  <button type="button" @onclick="(()=>select(sizes[5]))" class="btn btn-info btn-lg btn-block">@sizes[5]</button></td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td>  <button type="button" @onclick="(()=>select(sizes[6]))" class="btn btn-info btn-lg btn-block">@sizes[6]</button></td>
+
+                                    <td>  <button type="button" @onclick="(()=>select(sizes[7]))" class="btn btn-info btn-lg btn-block">@sizes[7]</button></td>
+
+                                    <td>  <button type="button" @onclick="(()=>select(sizes[8]))" class="btn btn-info btn-lg btn-block">@sizes[8]</button></td>
+                                </tr>
+
+
+                                <tr class="text-center">
+                                    <td colspan="3">  <button type="button" style="color:lawngreen" @onclick="Add" class="btn btn-secondary btn-lg">+</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+
+                </div>
+
+                <div class="col w-25">
+
+
+                </div>
+
+            </div>
+
+
+
 
         </div>
 
-        <div class="col w-25">
-            
-            <div class="d-flex justify-content-between">
-                
-                <table class="table table-bordered table-bordered">
-                    <tbody>
-                        <tr class="text-center">
-                            <td> <button type="button" @onclick="Reduce" style="color:deeppink" class="btn btn-secondary btn-lg">-</button></td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>  <button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button></td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>  <button type="button" @onclick="(()=>select(sizes[1]))" class="btn btn-info btn-lg btn-block">@sizes[1]</button></td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>  <button type="button" @onclick="(()=>select(sizes[2]))" class="btn btn-info btn-lg btn-block">@sizes[2]</button></td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>  <button type="button" @onclick="(()=>select(sizes[3]))" class="btn btn-info btn-lg btn-block">@sizes[3]</button></td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>  <button type="button" @onclick="(()=>select(sizes[4]))" class="btn btn-info btn-lg btn-block">@sizes[4]</button></td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>  <button type="button" @onclick="(()=>select(sizes[5]))" class="btn btn-info btn-lg btn-block">@sizes[5]</button></td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>  <button type="button" @onclick="(()=>select(sizes[6]))" class="btn btn-info btn-lg btn-block">@sizes[6]</button></td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>  <button type="button" @onclick="(()=>select(sizes[7]))" class="btn btn-info btn-lg btn-block">@sizes[7]</button></td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>  <button type="button" @onclick="(()=>select(sizes[8]))" class="btn btn-info btn-lg btn-block">@sizes[8]</button></td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>  <button type="button" @onclick="(()=>select(sizes[9]))" class="btn btn-info btn-lg btn-block">@sizes[9]</button></td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>  <button type="button" style="color:lawngreen" @onclick="Add" class="btn btn-secondary btn-lg">+</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-            </div>
 
 
-        </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -181,14 +208,142 @@
 
 
 @code {
-    private IList<Measurement> Model2;
+
+    [Parameter]
+    public string userId { get; set; }
     [Parameter]
     public string measurementPositionId { get; set; }
+    [Parameter]
+    public string stringPackValue { get; set; }
+    [Parameter]
+    public string pmachineIdd { get; set; }
+
+    public string colorBg1 = "white";
+    public string colorBg2 = "white";
+    public string colorBg3 = "white";
+
+    int selecteSizeType = 0;
+
+
+    private IList<Measurement> Model2;
+    Machine machine = new Machine();
 
     public int[,] positions = new int[10, 4];
 
+    private void changecolor1AndSetSizes()
+    {
+        selecteSizeType = 13;
+        colorBg1 = "greenyellow";
+        colorBg2 = "white";
+        colorBg3 = "white";
+
+    }
+    private void changecolor2AndSetSizes()
+    {
+        selecteSizeType = 28;
+        colorBg1 = "white";
+        colorBg2 = "greenyellow";
+        colorBg3 = "white";
+    }
+    private void changecolor3AndSetSizes()
+    {
+        selecteSizeType = 13;
+        colorBg1 = "white";
+        colorBg2 = "white";
+        colorBg3 = "greenyellow";
+    }
+
+    private async void SaveMeasurement()
+    {
+        String measurementDateAndTime = DateTime.Now.ToString("g");
+
+        DateTime shiftTime = Convert.ToDateTime("12:00:00");
+        DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
+        int packId = int.Parse(stringPackValue);
+
+        //String timeOfTheDayNow = DateTime.Now.ToString("t");
+        int shift = 1;
+
+        if (DateTime.Compare(currentMeasurement, shiftTime) >= 0)
+        {
+            shift = 2;
+        }
 
 
+
+        bool isSuccess = true;
+
+        IList<Measurement> measurementsToCreate = new List<Measurement>();
+        for (int i = 0; i < positions.GetLength(0); i++)
+        {
+
+
+            Measurement meas = new Measurement();
+            meas.DateCreated = measurementDateAndTime;
+            meas.Shift = shift;
+            meas.MachineId = int.Parse(pmachineIdd); //machine.Id;
+            meas.UserId = userId;
+            meas.MeasurementPositionId = int.Parse(measurementPositionId);
+            meas.PackId = packId;
+            meas.MeasurementTypeId = 2;
+
+            for (int j = 1; j < positions.GetLength(1); j++)
+            {
+                string newMeasSize = selecteSizeType.ToString();
+
+
+                if (j == 1)
+                {
+
+                    if (positions[i, j] == 0)
+                    {
+                        newMeasSize = newMeasSize + "00";
+                    }
+                    else {
+
+                        newMeasSize = newMeasSize + positions[i, j];
+                    }
+
+
+                    meas.Measurement1 = Convert.ToDecimal(newMeasSize);
+                }
+                if (j == 2)
+                {
+                    if (positions[i, j] == 0)
+                    {
+                        newMeasSize = newMeasSize + "00";
+                    }
+                    else
+                    {
+
+                        newMeasSize = newMeasSize + positions[i, j];
+                    }
+                    meas.Measurement2 = Convert.ToDecimal(newMeasSize);
+                }
+                if (j == 3)
+                {
+                    if (positions[i, j] == 0)
+                    {
+                        newMeasSize = newMeasSize + "00";
+                    }
+                    else
+                    {
+
+                        newMeasSize = newMeasSize + positions[i, j];
+                    }
+                    meas.Measurement3 = Convert.ToDecimal(newMeasSize);
+                }
+
+                newMeasSize = "";
+
+            }
+            measurementsToCreate.Add(meas);
+
+            isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
+        }
+
+
+    }
 
     protected async override Task OnInitializedAsync()
     {
@@ -200,21 +355,23 @@
             start = start + 1;
         }
 
-        for(int i =0; i < positions.GetLength(0); i++)
+        for (int i = 0; i < positions.GetLength(0); i++)
         {
-            for(int j = 0; j < positions.GetLength(1); j++)
+            for (int j = 0; j < positions.GetLength(1); j++)
             {
                 positions[i, j] = 0;
             }
         }
+
+
     }
 
     private int actPos;
 
-    private int[] sizes = new int[10];
+    private int[] sizes = new int[9];
     private int start = 27;
 
-    private int selectedCellI =0;
+    private int selectedCellI = 0;
     private int selectedCellJ = 0;
     private int[] positionValues = new int[3];
     private int positionValue;
@@ -223,14 +380,14 @@
     private void select(int value)
     {
         positionValues[actPos] = value;
-        positions[selectedCellI,selectedCellJ] = value;
+        positions[selectedCellI, selectedCellJ] = value;
 
 
     }
 
     private void selectTableCell(int ii, int jj)
     {
-         
+
         selectedCellI = ii;
         selectedCellJ = jj;
     }
@@ -238,7 +395,7 @@
     private void BacktochooseDimension(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create/measurementdimensions");
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions");
     }
 
 
@@ -263,6 +420,8 @@
             sizes[i] = sizes[i] + 10;
         }
     }
+
+
 
 
 }

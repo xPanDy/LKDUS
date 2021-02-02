@@ -11,6 +11,8 @@ namespace LKDUS_API.Contracts
         Task<T> FindById(int id);
         
         Task<bool> Create(T entity);
+       // Task<bool> Create(IList<T> entityList);
+
         Task<bool> isExists(int id);
         Task<bool> Update(T entity);
         Task<bool> Delete(T entity);

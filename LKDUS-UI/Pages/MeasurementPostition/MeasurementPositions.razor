@@ -1,4 +1,4 @@
-﻿@page "/measurementpositions/"
+﻿@page "/measurementpositions/{userId}"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
@@ -71,10 +71,15 @@
 
     [Parameter]
     public string measurementPositionId { get; set; }
+    [Parameter]
+    public string userId { get; set; }
+
+
     int j = 0;
 
- 
-    
+    LoginModel user = new LoginModel();
+
+
 
 
 
@@ -84,7 +89,7 @@
     private void NavigateToMeasurements(MouseEventArgs a, int i)
     {
         measurementPositionId = i.ToString();
-        this.navManager.NavigateTo($"/measurements/{measurementPositionId}");
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}");
     }
 
     protected async override Task OnInitializedAsync()

@@ -25,6 +25,11 @@ namespace LKDUS_API.Services
 
         }
 
+        public Task<bool> Create(IList<Machine> entityList)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<bool> Delete(Machine entity)
         {
             _db.Machines.Remove(entity);

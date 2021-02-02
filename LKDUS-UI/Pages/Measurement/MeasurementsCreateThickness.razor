@@ -1,4 +1,4 @@
-﻿@page "/measurements/{measurementPositionId}/create/thickness"
+﻿@page "/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
@@ -7,7 +7,8 @@
 
 @inject IMeasurementRepository repo
 @inject NavigationManager navManager
- 
+@inject IMachinesRepository machineRepository;
+ @inject IMeasurementRepository measurementRepo;
 
 <style>
 
@@ -84,21 +85,15 @@
             </div>
             <div class="col w-25"><h3 class="card-title">Mitrā finiera biezums</h3></div>
             <div class="col">
-                <button type="submit" class="btn btn-primary btn-block">Saglabāt</button>
+                <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
             </div>
-            @*<div class="col">
-                    <button type="button" @onclick="@GoToCreation" class="btn btn-primary">Atpakaļ</button>
-                </div>
-                <div class="col"> <h3 class="card-title">Mitrā finiera biezums</h3> </div>
-                <div class="col ">
-                    <button type="submit" class="btn btn-success  pull-right">Saglabāt</button>
-                </div>*@
+            
 
         </div>
     </div>
     <div class="form-group">
         <label for="machine">Iekārta</label>
-        <input id="machine" class="form-control" type="text" placeholder="Iekārta" readonly>
+        <input id="machine" class="form-control" type="text" placeholder=@mach.Name readonly>
 
     </div>
     <div class="form-group">
@@ -182,95 +177,7 @@
             </tfoot>
         </table>
     </div>
-    @*<div class="container">
-        <table id="tabli" class="table table-fixed table-striped">
-            <thead id="tthead">
-                <tr id="ttr">
-
-                    <th class="col-xs-3" scope="col">Nr.</th>
-                    <th class="col-xs-3" scope="col">1  </th>
-                    <th class="col-xs-3" scope="col">2  </th>
-                    <th class="col-xs-3" scope="col">3  </th>
-                </tr>
-            </thead>
-            <tbody id="ttbody">
-
-                @if (sizesArray != null)
-                {
-                    for (int i = 0; i < sizesArray.GetLength(0); i++)
-                    {
-
-                        int tmp = i;
-                        var rowNumber = i + 1;
-                        //id="@tmp"
-                        <tr id="ttr" style="background-color: @Background" @onclick="( e => HighlightSelected1(tmp, Background))">
-
-                            <td class="text-center" scope="row">@rowNumber</td>
-
-                            @for (int j = 0; j < sizesArray.GetLength(1); j++)
-                            {
-                                <td style="background-color: @highlight2"
-                                    class="text-center">
-                                    @sizesArray[i, j]
-                                </td>
-
-
-                            }
-                        </tr>
-
-                    }
-                }
-
-            </tbody>*@
-
-    <!--<tr>
-       <th></th>
-        <th class="text-center">
-            <button type="button" @onclick="(()=>setPos(0))" class="btn btn-primary alert-info">
-                <span class="badge badge-info">1.poz</span>-->
-    @*<br />
-        <span class="badge badge-light">
-            @sizesArray[@actPosRow, @actPosCol]
-            @rowPositionValues[0]
-
-        </span>*@
-    <!--</button>
-    </th>
-    <th class="text-center">
-        <button type="button" @onclick="(()=>setPos(1))" class="btn btn-primary alert-info">
-            <span class="badge badge-info">2.poz</span>-->
-    @*<br />
-        <span class="badge badge-light">
-        @sizesArray[@actPosRow,@actPosCol]
-        @rowPositionValues[1]</span>*@
-    <!--</button>
-    </th>
-    <th class="text-center">
-        <button type="button" @onclick="(()=>setPos(2))" class="btn btn-primary alert-info">
-            <span class="badge badge-info">3.poz</span>-->
-    @*<br />
-        <span class="badge badge-light">
-        @sizesArray[@actPosRow, @actPosCol]
-        @rowPositionValues[2]
-        </span>*@
-    <!--</button>
-            </th>
-
-        </tr>
-
-    <tr>
-        <th scope="row"></th>
-        <td> </td>
-        <td class="text-center">
-            <button type="button" class="btn btn-success">
-                OK
-            </button>
-        </td>
-        <td></td>
-
-    </tr>-->
-    @*</table>
-        </div>*@
+     
 
 
     <div class="container">
@@ -279,6 +186,10 @@
 
 
     </div>
+
+
+
+
 
     <div class="container">
 
@@ -319,32 +230,31 @@
 
 @code {
 
-
+    [Parameter]
+    public string userId { get; set; }
     [Parameter]
     public string measurementPositionId { get; set; }
-    private string Background { get; set; }//= "green";
+    [Parameter]
+    public string stringPackValue { get; set; }
+    [Parameter]
+    public string pmachineIdd { get; set; }
+
+
+    Machine machine = new Machine();
+
+
+
+
+    private string Background { get; set; }
 
     private void HighlightSelected1(int i, string higlith)
     {
         int a = i;
         actPosRow = i;
-        //Background = Background == "green" ? "white" : "green";
+
     }
 
-    private void HighlightSelected2()
-    {
-        // highlight2 = highlight2 == "" ? "red" : "";
-    }//
 
-    private void HighlightSelected3()
-    {
-        // highlight3 = highlight3 == "" ? "red" : "";
-    }
-
-    private void HighlightSelected4()
-    {
-        //  highlight4 = highlight4 == "" ? "red" : "";
-    }
 
     private string highlight1 { get; set; } = "";
     private string highlight2 { get; set; } = "";
@@ -353,9 +263,8 @@
 
     private void select(decimal value)
     {
-        //  rowPositionValues[actPos] = value;
+
         sizesArray[actPosRow, actPosCol] = value; ;
-        // rowPositionValues
 
     }
 
@@ -365,7 +274,7 @@
         // Color = Color == "red" ? "green" : "red";
         actPos = i;
         actPosCol = i;
-        
+
         //actPosCol
     }
 
@@ -392,9 +301,16 @@
 
     public List<decimal> range = new List<decimal>();
 
+    int machineId;
+    Machine mach = new Machine();
+
     protected async override Task OnInitializedAsync()
     {
-        Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+
+        machineId = int.Parse(pmachineIdd);
+
+        mach = await machineRepository.Get(Endpoints.MachinesEndpoint,   machineId);
+
 
         int startValuesOfMeasurement = 0;
         for (int i = 0; i < sizesArray.GetLength(0); i++)
@@ -420,14 +336,75 @@
     private void OpenCreateForm(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create");
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
     }
 
     private void GoToCreation(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create");
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
     }
+
+    private async void SaveMeasurement()
+    {
+        String measurementDateAndTime = DateTime.Now.ToString("g");
+
+        DateTime shiftTime = Convert.ToDateTime("12:00:00");
+        DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
+        int packId = int.Parse(stringPackValue);
+
+        //String timeOfTheDayNow = DateTime.Now.ToString("t");
+        int shift = 1;
+
+        if(DateTime.Compare(currentMeasurement,shiftTime) >= 0)
+        {
+            shift = 2;
+        }
+
+
+
+        bool isSuccess = true;
+
+        IList<Measurement> measurementsToCreate = new List<Measurement>();
+
+        for(int i = 0; i < sizesArray.GetLength(0); i++)
+        {
+            Measurement meas = new Measurement();
+            meas.DateCreated = measurementDateAndTime;
+            meas.Shift = shift;
+            meas.MachineId = mach.Id;
+            meas.UserId = userId;
+            meas.MeasurementPositionId = int.Parse(measurementPositionId);
+            meas.PackId = packId;
+            meas.MeasurementTypeId = 1;
+            for (int j = 0; j < sizesArray.GetLength(1); j++)
+            {
+
+
+                if (j == 0)
+                {
+                    meas.Measurement1 = sizesArray[i, j];
+                }
+                if (j == 1)
+                {
+                    meas.Measurement2 = sizesArray[i, j];
+                }
+                if (j == 2)
+                {
+                    meas.Measurement3 = sizesArray[i, j];
+                }
+
+
+
+            }
+            measurementsToCreate.Add(meas);
+
+            isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
+        }
+
+
+    }
+
 
 
 
@@ -445,7 +422,6 @@
 
     private void Add(MouseEventArgs e)
     {
-        //  Color = "black";
 
         for (int i = 0; i < sizes.Length; i++)
         {

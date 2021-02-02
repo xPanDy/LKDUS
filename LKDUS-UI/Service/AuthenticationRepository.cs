@@ -297,6 +297,14 @@ namespace LKDUS_UI.Service
             return null;
         }
 
-        
+        public Task<bool> Create(string url, IList<LoginModel> list)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> Create(string url, IList<LoginModelCreate> list)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

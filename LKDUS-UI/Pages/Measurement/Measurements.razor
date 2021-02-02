@@ -1,4 +1,4 @@
-﻿@page "/measurements/{measurementPositionId}"
+﻿@page "/measurements/{userId}/{measurementPositionId}"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
@@ -50,8 +50,8 @@
 
 
 
-        <div class="container pre-scrollable" style="height:50%">
-            <div class="mh-50">
+        <div class="container pre-scrollable" style="height:75%">
+            <div class="mh-75">
                 <table class="table">
                     <thead>
                         <tr>
@@ -123,6 +123,8 @@
 
     [Parameter]
     public string measurementPositionId { get; set; }
+    [Parameter]
+    public string userId { get; set; }
 
     MeasurementPosition mp = new MeasurementPosition();
 
@@ -138,6 +140,9 @@
     protected async override Task OnInitializedAsync()
     {
         Model = await repo.Get(Endpoints.MeasurementEndpoint);
+
+
+
         try
         {
             int result = Int32.Parse(measurementPositionId);
@@ -155,10 +160,10 @@
     private void OpenCreateForm(MouseEventArgs e)
     {
         //this.measurementPosition.
-        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create");
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
     }
     private void goBack(MouseEventArgs e)
     {
-        this.navManager.NavigateTo($"/measurementpositions/");
+        this.navManager.NavigateTo($"/measurementpositions/{userId}");
     }
 }

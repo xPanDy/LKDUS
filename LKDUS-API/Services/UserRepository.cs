@@ -25,6 +25,11 @@ namespace LKDUS_API.Services
 
         }
 
+        public Task<bool> Create(IList<User> entityList)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<bool> Delete(User entity)
         {
             _db.Users.Remove(entity);

@@ -6,9 +6,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace LKDUS_API.Services
 {
-    public class MeasurementRepository : IMeasurementRepository
+    public class MeasurementRepository :  IMeasurementRepository
     {
         private readonly ApplicationDbContext _db;
 
@@ -23,16 +24,32 @@ namespace LKDUS_API.Services
             return await Save();
         }
 
+        public async Task<bool> Create(IList<Measurement> entityList)
+        {
+
+            foreach (var element in entityList) {
+                await _db.Measurements.AddAsync(element);
+                return await Save();
+            }
+            return await Save();
+        }
+
         public async Task<bool> Delete(Measurement entity)
         {
             _db.Measurements.Remove(entity);
             return await Save();
 
         }
+        //public async Task<IList<Machine>> FindAll()
+        //{
+        //    var machines = await _db.Machines.ToListAsync();
 
+        //    return machines;
+        //}
         public async Task<IList<Measurement>> FindAll()
         {
-            return await _db.Measurements.ToListAsync();
+            var measurements = await _db.Measurements.ToListAsync();
+            return measurements;
         }
 
         public async Task<Measurement> FindById(int id)

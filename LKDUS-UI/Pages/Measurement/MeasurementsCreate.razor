@@ -1,4 +1,4 @@
-﻿@page "/measurements/{measurementPositionId}/create"
+﻿@page "/measurements/{userId}/{measurementPositionId}/create"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
@@ -6,6 +6,7 @@
 @using System.Net.Http
 @using Microsoft.Extensions.Logging
 
+@inject IAuthenticationRepository authRepo
 @inject IMeasurementRepository repo
 @inject IFusPacksRepository frepo
 @inject IMeasurementTypeRepository measTRepo
@@ -21,6 +22,8 @@
 
 <div>
 
+
+
     <div class="container">
         <div class="row">
 
@@ -29,7 +32,7 @@
             </div>
             <div class="col w-25"><h3 class="card-title">@mp.Name</h3></div>
             <div class="col">
-                <button type="submit" class="btn btn-primary btn-block">Saglabāt</button>
+                @*<button type="submit" class="btn btn-primary btn-block">Saglabāt</button>*@
             </div>
 
 
@@ -41,107 +44,114 @@
 
     <div class="form-group">
         @{
-                <div class="row">
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
+                            <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z" />
+                            <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="col">
+                    <label for="packCode">Pakas kods</label>
 
 
-                    <div class="col">
-                        <label for="packCode">Pakas kods</label>
+                    @*@bind=@packId*@
 
-
-                        @*@bind=@packId*@
-
-                        <input class="form-control"
-                               @bind-value="@stringPackValue"
-                               @bind-value:event="oninput"
-                               @onkeyup="DoSomethingElse"
-                               type="text"
-                               id="packCode">
-                        @if (fp == null)
-                        {
-                            <div class="alert alert-danger" role="alert">
-                                Šāda paka neeksistē
-                            </div>
-
-                        }
-
-                    </div>
-                    @if (fp != null)
+                    <input class="form-control"
+                           @bind-value="@stringPackValue"
+                           @bind-value:event="oninput"
+                           @onkeyup="DoSomethingElse"
+                           type="text"
+                           id="packCode">
+                    @if (fp == null)
                     {
-                        <div class="col">
-
-                            <label for="pack">Pakas Autors   </label>
-
-                            <input class="form-control" readonly
-                                   @bind="@fp.OperatorNameSurname"
-                                   type="text" id="packAuthor">
-
-
-
-
+                        <div class="alert alert-danger" role="alert">
+                            Šāda paka neeksistē
                         </div>
 
-
-
-
-                        <div class="col">
-                            <label for="pack">Pakas datums</label>
-
-                            <input class="form-control" type="text"
-                                   @bind="@fp.DateCreated"
-                                   readonly id="packDate">
-                        </div>
-                        <div class="col">
-                            <label for="pack">Pakas iekārta</label>
-
-                            <input class="form-control"
-                                   @bind-value="@fp.MachineName" type="text" readonly id="packMachine">
-                        </div>
-                        <div class="col">
-                            <label for="packMaster">Meistars</label>
-
-                            <input class="form-control"
-                                   @bind-value="@fp.Master" type="text" readonly id="packMaster">
-                        </div>
-                    }
-                    else
-                    {
-                        <div class="col">
-
-                            <label for="pack">Pakas Autors   </label>
-
-                            <input class="form-control" readonly
-                                   type="text" id="packAuthor">
-
-
-
-
-                        </div>
-
-
-
-
-                        <div class="col">
-                            <label for="pack">Pakas datums</label>
-
-                            <input class="form-control" type="text"
-                                   readonly id="packDate">
-                        </div>
-                        <div class="col">
-                            <label for="pack">Pakas iekārta</label>
-
-                            <input class="form-control"
-                                   type="text" readonly id="packMachine">
-                        </div>
-
-                        <div class="col">
-                            <label for="pack">Meistars</label>
-
-                            <input class="form-control"
-                                   type="text" readonly id="packMaster">
-                        </div>
                     }
 
                 </div>
+                @if (fp != null)
+                {
+                    <div class="col">
+
+                        <label for="pack">Pakas Autors   </label>
+
+                        <input class="form-control" readonly
+                               @bind="@fp.OperatorNameSurname"
+                               type="text" id="packAuthor">
+
+
+
+
+                    </div>
+
+
+
+
+                    <div class="col">
+                        <label for="pack">Pakas datums</label>
+
+                        <input class="form-control" type="text"
+                               @bind="@fp.DateCreated"
+                               readonly id="packDate">
+                    </div>
+                    <div class="col">
+                        <label for="pack">Pakas iekārta</label>
+
+                        <input class="form-control"
+                               @bind-value="@fp.MachineName" type="text" readonly id="packMachine">
+                    </div>
+                    <div class="col">
+                        <label for="packMaster">Meistars</label>
+
+                        <input class="form-control"
+                               @bind-value="@fp.Master" type="text" readonly id="packMaster">
+                    </div>
+                }
+                else
+                {
+                    <div class="col">
+
+                        <label for="pack">Pakas Autors   </label>
+
+                        <input class="form-control" readonly
+                               type="text" id="packAuthor">
+
+
+
+
+                    </div>
+
+
+
+
+                    <div class="col">
+                        <label for="pack">Pakas datums</label>
+
+                        <input class="form-control" type="text"
+                               readonly id="packDate">
+                    </div>
+                    <div class="col">
+                        <label for="pack">Pakas iekārta</label>
+
+                        <input class="form-control"
+                               type="text" readonly id="packMachine">
+                    </div>
+
+                    <div class="col">
+                        <label for="pack">Meistars</label>
+
+                        <input class="form-control"
+                               type="text" readonly id="packMaster">
+                    </div>
+                }
+
+            </div>
         }
     </div>
 
@@ -150,14 +160,16 @@
 
     <div class="form-group">
         <label for="machine">Iekārta</label>
-        <select class="custom-select" id="machine">
-            <option selected>Izvēlies...</option>
-            @if (Machines != null) { 
-            @foreach (var Mach in Machines)
+        <select class="custom-select"  @bind="machine.Id"  id ="machine"  >
+            
+            @if (Machines != null)
             {
-                 
-                <option  >@Mach.Name</option>
-            }
+                @foreach (var Mach in Machines)
+                {
+                    //pmachineIdd = Mach.Id;
+
+                    <option value="@Mach.Id">@Mach.Name</option>
+                }
             }
         </select>
 
@@ -194,67 +206,57 @@
             <div class="col">
                 <select class="custom-select" @bind="Year">
                     @for (int i = DateTime.Now.Year - 5;
-                        i <= DateTime.Now.Year + 5; i++)
+                       i <= DateTime.Now.Year + 5; i++)
                     {
                         <option>@i</option>
                     }
                 </select>
-                @*<button type="button">Izvēlēties</button>*@
+                
             </div>
-            @*<input class="form-control" type="text" @bind-value="@v" />*@
-            @*<input class="form-control" type="date" bind-value="12/11/2020" id="example-datetime-local-input">*@
-            @*<input class="form-control" type="date" value="2020-12-01" id="example-datetime-local-input">*@
-
+            
         </div>
 
-    
+
     </div>
 
 
-    @*<div class="form-group">
-        <label for="example-text-input">Fus pakas kods</label>
+    
 
-        <input class="form-control" type="text" id="example-text-input">
-
-    </div>*@
-
-
+    @if (LaborantList == null)
+    {
+        <LoadingMessage Message="Notiek laborantu ielāde" />
+    }
+    else { 
     <div class="form-group">
         <label for="operator">Laborants</label>
-        <select class="custom-select" id="operator">
-            <option selected> Izvēlies...</option>
-            <option value="1">Kristaps    </option>
-            <option value="2">Linards    </option>
-            <option value="3">Ieva       </option>
+        <select disabled="true" class="custom-select" @bind=@defaultUser.UserName id="operator">
+
+            
+            @foreach (var usr in LaborantList)
+            {
+
+                <option>@usr.UserName</option>
+            } 
+
+            
         </select>
 
     </div>
 
-
+    }
     <div class="form-group">
         <label for="shift">Maiņa</label>
-        <select class="custom-select" id="shift">
-            <option selected>Izvēlies...</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+        <select class="custom-select" @bind="@pshift" id="shift">
+            <option selected>1</option>
+            <option value="1">2</option>
+
+
+            
         </select>
 
     </div>
 
-
-
-    @*<div class="form-group">
-        <label for="master">Meistars</label>
-        <select class="custom-select" id="master">
-            <option selected>Izvēlies...</option>
-            <option value="1">Ieva</option>
-            <option value="2">Linards</option>
-            <option value="3">Kristaps</option>
-        </select>
-
-    </div>*@
-
+ 
 
     <nav class="navbar navbar-dark">
         <div class="container-fluid">
@@ -272,7 +274,7 @@
             </div>
 
         </div>
-    </nav> 
+    </nav>
 
 </div>
 
@@ -281,7 +283,7 @@
 
 
 @code {
-
+    public string bindUsername { get; set; }
     public int Day { get; set; }
     public int Month { get; set; }
     public int Year { get; set; }
@@ -293,12 +295,20 @@
        "November", "December" };
 
 
-
+    [Parameter]
+    public int pshift { get; set; }
+    [Parameter]
+    public int pmachineIdd { get; set; }
+    [Parameter]
+    public string userId { get; set; }
 
 
     [Parameter]
     public string measurementPositionId { get; set; }
-
+    [Parameter]
+    public string packId { get; set; }
+    [Parameter]
+    public int pmeasurementTypeId { get; set; }
 
     public string stringPackValue
     {
@@ -312,9 +322,12 @@
     public bool edited = false;
 
     public IList<FusPack> fusPacks;
-    //public IList<Machine> macinesList;
-    public FusPack fp = new FusPack();
 
+    public IList<LoginModel> LaborantList ;
+
+
+    public FusPack fp = new FusPack();
+    Machine machine = new Machine();
 
     private void DoSomethingElse(KeyboardEventArgs e)
     {
@@ -337,42 +350,10 @@
         }
     }
 
+    private void changeMachine( )
+    {
 
-
-
-
-
-
-
-
-
-    ////private void SetValue(string Value)
-    ////{
-    ////    value = Value;
-    ////}
-    //async void Enter(KeyboardEventArgs e)
-    //{
-    //    if (e.Code == "Enter")
-    //    {
-    //        //packId = int.Parse(value2);
-
-    //        //value = packId.ToString();
-    //        try
-    //        {
-    //            int packid = int.Parse(stringValue);
-    //            fp = await frepo.Get(Endpoints.FusPackEndPoint, packid);
-
-    //        }
-    //        catch (Exception)
-    //        {
-
-    //            throw;
-    //        }
-    //    }
-
-
-
-    //}
+    }
 
 
     MeasurementPosition mp = new MeasurementPosition();
@@ -384,27 +365,26 @@
     }
 
     private static DateTime today;
-    private static string todayLocal = today.ToString("d");
+    private static string todayLocal = today.ToString("g");
 
-    public DateTime dateOfMeasurement  { get; set; }
-    public string dateToday { get; set; }
-    public DateTime dateToday2 { get; set; }
+    // public DateTime dateOfMeasurement { get; set; }
+    // public string dateToday { get; set; }
+    // public DateTime dateToday2 { get; set; }
 
     string currentLocalTime = "";
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender) // Remove the firstRender check if you want the current local time displayed to continuously update.
-        {   // Leave the above firstRender check in place to ensure that the call to StateHasChanged() does not trigger an endless update loop.
+        pshift = 1;
+
+        if (firstRender)
+        {
             var browserDateTime = await datetime.GetInstance();
-            // fusPacks = await frepo.Get(Endpoints.FusPackEndPoint);
+
             today = DateTime.Today;
             currentLocalTime = browserDateTime.Now.ToString();
             StateHasChanged();
-            //dateToday = DateTime.Now.ToString("MM/dd/yyyy");
-            //dateToday2 = DateTime.Parse(dateToday);
 
-            //ToString("MM/dd/yyyy");
         }
 
     }
@@ -414,7 +394,7 @@
     private IList<Measurement> Model2;
     private IList<Measurement> FusMachines;
     private IList<Machine> Machines;
-
+    public LoginModel defaultUser = new LoginModel();
     protected async override Task OnInitializedAsync()
     {
 
@@ -422,7 +402,9 @@
         Month = DateTime.Now.Month;
         Year = DateTime.Now.Year;
 
+        LaborantList = await this.authRepo.Get(Endpoints.AspUsersEndpoint);
 
+        defaultUser = LaborantList.Where(o => o.Id == userId).FirstOrDefault();
 
         Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
         FusMachines = await this.repo.Get(Endpoints.MeasurementEndpoint);
@@ -439,35 +421,74 @@
         {
             Console.WriteLine($"Unable to parse");
         }
-        todayLocal = today.ToString("d");
+        todayLocal = DateTime.Now.ToString("g");// today.ToString("g");
+        pmachineIdd = machine.Id;
+        if (pmachineIdd == 0)
+        {
+            pmachineIdd = Machines.FirstOrDefault().Id;
+        }
+        if (stringPackValue == null)
+        {
+            stringPackValue = "0";
+        }
+    }
+
+    private void checkParams( )
+    {
+        pmachineIdd = machine.Id;
+        if (pmachineIdd == 0)
+        {
+            pmachineIdd = Machines.FirstOrDefault().Id;
+        }
+        if (stringPackValue == null)
+        {
+            stringPackValue = "0";
+        }
     }
 
     private void GoToThickness(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create/thickness");
+        checkParams();
+
+        //  validateParameters(measurementPositionId, measurementPositionId, stringPackValue, pmachineIdd, pshift);
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness");
+        //      /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness
+        //     {userId}/{measurementPositionId}/{stringPackValue}/{ pmachineIdd}
+
     }
+
+    //private bool validateParameters(string p1, string p2, string p3, int p4, int p5 )
+    //{
+    //    //if (string.IsNullOrEmpty(stringPackValue)==true && (string.IsNullOrEmpty(stringPackValue))
+    //    //{
+
+    //    //    return true;
+    //    //}
+    //    //return false;
+    //}
 
     private void GoToDimensions(MouseEventArgs e)
     {
-
-        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create/measurementdimensions");
+        checkParams();
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions");
     }
 
     private void GoToQuality(MouseEventArgs e)
     {
+        checkParams();
 
-        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create/quality");
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/quality");
     }
 
     private void OpenCreateForm(MouseEventArgs e)
     {
-
-        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create");
+        checkParams();
+        //  this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{defaultUser.Id}/{pshift}/create");
     }
 
     private void goBack(MouseEventArgs e)
     {
-        this.navManager.NavigateTo($"/measurements/{measurementPositionId}");
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}");
     }
 }

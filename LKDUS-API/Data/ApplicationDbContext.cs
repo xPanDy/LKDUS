@@ -25,18 +25,56 @@ namespace LKDUS_API.Data
 
         public virtual DbSet<FusPack> FusPack { get; set; }
 
-        //protected override void OnModelCreating(ModelBuilder builder)
-        //{
-        //    builder.Entity<FusPack>(entity =>
-        //    {
-        //       //entity.HasKey(e => e.Id);
-        //        entity.ToTable("FusPack");
-        //        entity.HasNoKey();
-        //       //entity.Property(e => e.Name);
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
 
-        //   });
-        //}
+            base.OnModelCreating(builder);
+            builder.Entity<Measurement>()
+                .Property(p => p.Measurement1 )
+                .HasColumnType("decimal(6,2)");
 
+            builder.Entity<Measurement>()
+              .Property(p => p.Measurement2)
+              .HasColumnType("decimal(6,2)");
+
+            builder.Entity<Measurement>()
+              .Property(p => p.Measurement3)
+              .HasColumnType("decimal(6,2)");
+
+            builder.Entity<Measurement>()
+              .Property(p => p.Measurement4)
+              .HasColumnType("decimal(6,2)");
+
+            builder.Entity<Measurement>()
+              .Property(p => p.Measurement5)
+              .HasColumnType("decimal(6,2)");
+
+            builder.Entity<Measurement>()
+              .Property(p => p.Measurement6)
+              .HasColumnType("decimal(6,2)");
+
+            builder.Entity<Measurement>()
+              .Property(p => p.Measurement7)
+              .HasColumnType("decimal(6,2)");
+
+            builder.Entity<Measurement>()
+              .Property(p => p.Measurement8)
+              .HasColumnType("decimal(6,2)");
+
+            builder.Entity<Measurement>()
+              .Property(p => p.Measurement9)
+              .HasColumnType("decimal(6,2)");
+
+            // builder.Entity<FusPack>(entity =>
+            // {
+            //    //entity.HasKey(e => e.Id);
+            //     entity.ToTable("FusPack");
+            //     entity.HasNoKey();
+            //    //entity.Property(e => e.Name);
+
+            //});
+        }
+        
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

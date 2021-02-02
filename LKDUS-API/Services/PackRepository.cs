@@ -25,6 +25,11 @@ namespace LKDUS_API.Services
 
         }
 
+        public Task<bool> Create(IList<Pack> entityList)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<bool> Delete(Pack entity)
         {
             _db.Packs.Remove(entity);

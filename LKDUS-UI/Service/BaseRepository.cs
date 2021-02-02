@@ -215,5 +215,41 @@ namespace LKDUS_UI.Service
 
             return false;
         }
+
+        public async Task<bool> Create(string url, IList<T> list)
+        {
+            if (list == null)
+            {
+                return false;
+            }
+
+            list = list.ToList();
+            var client = this.client.CreateClient();
+            foreach (var el in list)
+            {
+                if (el == null)
+                {
+                    return false;
+                }
+                var request = new HttpRequestMessage(HttpMethod.Post, url);
+                request.Content = new StringContent(JsonConvert.SerializeObject(el)
+                , Encoding.UTF8, "application/json");
+
+                HttpResponseMessage response = await client.SendAsync(request);
+                if (response.StatusCode == System.Net.HttpStatusCode.Created)
+                {
+                    return true;
+                }
+            }
+            
+           
+            
+
+          
+           
+           
+
+            return false;
+        }
     }
 }

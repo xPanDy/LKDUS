@@ -68,6 +68,9 @@ namespace LKDUS_API.Controllers
         }
 
 
+
+
+
         private ObjectResult InternalError(string message)
         {
             this.logger.LogError(message);
@@ -127,20 +130,73 @@ namespace LKDUS_API.Controllers
 
         }
 
-         
+
         /// <summary>
         /// Creates a new measurement
         /// </summary>
         /// <param name="measurementCreateDTO"></param>
+
         /// <returns></returns>
         [HttpPost]
        // [Authorize(Roles = "Operator")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Create([FromBody] MeasurementCreateDTO measurementCreateDTO)
-        {
+        public async Task<IActionResult> Create([FromBody]  MeasurementCreateDTO measurementCreateDTO)
+        {/*
 
+            var location = GetControllerActionNames();
+
+            try
+            {
+                this.logger.LogInfo($"{location}: Measurement creation  Attempted");
+                if (measurementListCreateDTO == null)
+                {
+                    this.logger.LogWarn($"{location}: Empty request was submitted");
+                    return BadRequest(ModelState);
+                }aaaaaaaaaaaaaaaaaaaaaaaaawdw
+                if (!ModelState.IsValid)
+                {
+                    this.logger.LogWarn($"{location}: Measurement Data was Incomplete");
+                    return BadRequest(ModelState);
+
+                }
+                //measurementListCreateDTO.DateCreated = DateTime.Now.ToString();
+
+                var isGood = false;
+
+                for (int i = 0; i < measurementListCreateDTO.Count; i++)
+                {
+                    MeasurementCreateDTO measurementCreateDTO = new MeasurementCreateDTO();
+
+                    var measurement = this.mapper.Map<Measurement>(measurementCreateDTO);
+                    isGood = await measurementRepository.Create(measurement);
+
+                    if (!isGood)
+                    {
+
+                        break;
+                    }
+                    this.logger.LogInfo($"{location}: Measurement creation was created");
+                    this.logger.LogInfo($"{location}: {measurement}");
+
+                }
+                //  var measurement = this.mapper.Map<Measurement>(measurementListCreateDTO);
+                if (!isGood)
+                {
+
+                    return InternalError($"{location}: Measurement creation failed");
+                }
+                return Created("Create", new { measurementListCreateDTO });
+
+            }
+            catch (Exception e)
+            {
+                return InternalError($"{location}: {e.Message} - {e.InnerException}");
+
+            }*/
+            
+             
             var location = GetControllerActionNames();
 
             try
@@ -174,16 +230,84 @@ namespace LKDUS_API.Controllers
             {
                return  InternalError($"{location}: {e.Message} - {e.InnerException}");
                 
-            }
+            }  
 
         }
-         
-         /// <summary>
-         /// Updates measurement with specified Id
-         /// </summary>
-         /// <param name="id"></param>
-         /// <param name="measurementUpdateDTO"></param>
-         /// <returns></returns>
+
+       /*  
+        /// <summary>
+        /// Creates multiple measurements
+        /// </summary>
+        /// <param name="measurementListCreateDTO"></param>
+        /// <returns></returns>
+        [HttpPost]
+        // [Authorize(Roles = "Operator")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async void CreateList([FromBody] IList<MeasurementCreateDTO> measurementListCreateDTO)
+        {
+            
+            var location = GetControllerActionNames();
+
+            try
+            {
+                this.logger.LogInfo($"{location}: Measurement creation  Attempted");
+                if (measurementListCreateDTO == null)
+                {
+                    this.logger.LogWarn($"{location}: Empty request was submitted");
+                    //return BadRequest(ModelState);
+                }
+                if (!ModelState.IsValid)
+                {
+                    this.logger.LogWarn($"{location}: Measurement Data was Incomplete");
+//return BadRequest(ModelState);
+
+                }
+                //measurementListCreateDTO.DateCreated = DateTime.Now.ToString();
+
+                var isGood = false;
+                 
+                for(int i = 0; i < measurementListCreateDTO.Count; i++)
+                {
+                    MeasurementCreateDTO measurementCreateDTO = new MeasurementCreateDTO();
+
+                      var  measurement = this.mapper.Map<Measurement>(measurementCreateDTO);
+                     isGood = await measurementRepository.Create(measurement);
+
+                    if (!isGood)
+                    {
+                       
+                        break;
+                    }
+                    this.logger.LogInfo($"{location}: Measurement creation was created");
+                    this.logger.LogInfo($"{location}: {measurement}");
+                   
+                }
+              //  var measurement = this.mapper.Map<Measurement>(measurementListCreateDTO);
+                if (!isGood)
+                {
+
+                //    return InternalError($"{location}: Measurement creation failed");
+                }
+             //   return Created("Create", new { measurementListCreateDTO });
+
+            }
+            catch (Exception e)
+            {
+               // return InternalError($"{location}: {e.Message} - {e.InnerException}");
+
+            }
+
+        } 
+ */
+
+        /// <summary>
+        /// Updates measurement with specified Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="measurementUpdateDTO"></param>
+        /// <returns></returns>
         [HttpPut("{id}")]
        // [Authorize(Roles = "Operator")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]

@@ -23,6 +23,11 @@ namespace LKDUS_API.Services
             throw new NotImplementedException();
         }
 
+        public Task<bool> Create(IList<FusPack> entityList)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<bool> Delete(FusPack entity)
         {
             throw new NotImplementedException();

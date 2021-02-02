@@ -1,17 +1,17 @@
-﻿@page "/measurements/{measurementPositionId}/create/measurementdimensions"
-
+﻿@page "/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions"
+@* // /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions*@
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
 @using LKDUS_UI.Contracts
 @using System.Net.Http
-
+@inject IMachinesRepository machineRepository;
 @inject IMeasurementRepository repo
 @inject NavigationManager navManager
 
 
 
 
- 
+
 <div class="card">
     <div class="container">
         <div class="row">
@@ -57,41 +57,69 @@
 @code {
     private IList<Measurement> Model2;
 
+
+    [Parameter]
+    public string userId { get; set; }
     [Parameter]
     public string measurementPositionId { get; set; }
+    [Parameter]
+    public string stringPackValue { get; set; }
+    [Parameter]
+    public string pmachineIdd { get; set; }
+
+    Machine machine = new Machine();
 
     protected async override Task OnInitializedAsync()
     {
+        Machines = await machineRepository.Get(Endpoints.MachinesEndpoint);
         Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+        machine.Id = int.Parse(pmachineIdd);
 
+        machine = await machineRepository.Get(Endpoints.MachinesEndpoint, machine.Id);
     }
 
+    private IList<Machine> Machines;
 
+    private void checkParams()
+    {
+
+
+
+        if (machine.Id  == 0)
+        {
+            machine.Id = Machines.FirstOrDefault().Id;
+
+        }
+        if (stringPackValue == null)
+        {
+            stringPackValue = "0";
+        }
+    }
 
 
     private void OpenCreateForm(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create");
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
     }
 
 
     private void Return(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create");
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
     }
 
 
     private void NavigattetoWidth(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create/measurementdimensions/width");
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions/width");
     }
 
     private void GoLength(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo($"/measurements/{measurementPositionId}/create/measurementdimensions/length");
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions/length");
     }
 }

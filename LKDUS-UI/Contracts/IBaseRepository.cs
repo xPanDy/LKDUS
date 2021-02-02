@@ -11,6 +11,7 @@ namespace LKDUS_UI
         Task<T> Get(  int id);
         Task<IList<T>> Get(string url);
         Task<bool> Create(string url, T obj);
+        Task<bool> Create(string url, IList<T> list);
         Task<bool> Put(string url, T obj);
         Task<bool> Update(string url, T obj, int id);
         Task<bool> Update(string url, T obj );

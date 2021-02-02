@@ -1,0 +1,501 @@
+2021-01-28 08:31:47.3886 INFO AspNetUsers-Login: Login attempted call from user test
+2021-01-28 08:31:47.6439 INFO AspNetUsers-Login: test Sucessfully Authenticated
+2021-01-28 08:31:48.2406 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-28 08:31:48.2908 INFO Sucessfully got all measurementPositions
+2021-01-28 08:31:49.2918 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 08:31:49.3409 INFO Sucessfully got all Measurements
+2021-01-28 08:31:49.3797 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 08:31:49.4052 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 08:31:50.4106 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 08:31:50.4216 INFO Sucessfully got all Measurements
+2021-01-28 08:31:50.4407 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 08:31:50.4490 INFO Sucessfully got all Measurements
+2021-01-28 08:31:50.4732 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-28 08:32:03.6359 INFO Sucessfully got all FUS packs
+2021-01-28 08:32:03.9944 INFO Machine-GetMachines: Attempted Call
+2021-01-28 08:32:04.0304 INFO Sucessfully got all machines
+2021-01-28 08:32:04.0553 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 08:32:04.0622 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 08:32:11.0119 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 08:32:11.0360 INFO Sucessfully got all Measurements
+2021-01-28 08:32:11.0606 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 08:32:11.0606 INFO Sucessfully got all Measurements
+2021-01-28 08:32:11.0898 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-28 08:32:11.1579 INFO Sucessfully got all FUS packs
+2021-01-28 08:32:11.1838 INFO Machine-GetMachines: Attempted Call
+2021-01-28 08:32:11.1838 INFO Sucessfully got all machines
+2021-01-28 08:32:11.2038 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 08:32:11.2183 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 08:32:11.3511 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 08:32:11.3604 INFO Sucessfully got all Measurements
+2021-01-28 08:32:11.3823 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 08:32:11.3972 INFO Sucessfully got all Measurements
+2021-01-28 08:32:11.4111 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-28 08:32:11.5062 INFO Sucessfully got all FUS packs
+2021-01-28 08:32:11.5419 INFO Machine-GetMachines: Attempted Call
+2021-01-28 08:32:11.5569 INFO Sucessfully got all machines
+2021-01-28 08:32:11.5690 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 08:32:11.5765 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 08:32:13.2974 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 08:32:13.2974 INFO Sucessfully got all Measurements
+2021-01-28 08:32:13.3274 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 08:32:13.3274 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 08:32:14.4321 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 08:32:14.4412 INFO Sucessfully got all Measurements
+2021-01-28 08:32:14.4665 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 08:32:14.4665 INFO Sucessfully got all Measurements
+2021-01-28 08:32:14.4992 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-28 08:32:14.6372 INFO Sucessfully got all FUS packs
+2021-01-28 08:32:14.6601 INFO Machine-GetMachines: Attempted Call
+2021-01-28 08:32:14.6601 INFO Sucessfully got all machines
+2021-01-28 08:32:14.6792 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 08:32:14.6855 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 08:32:17.8065 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 08:32:17.8312 INFO Sucessfully got the machine with Id:5
+2021-01-28 08:32:20.6842 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 08:32:20.6842 INFO Sucessfully got the machine with Id:5
+2021-01-28 08:32:20.9013 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 08:32:20.9118 INFO Sucessfully got the machine with Id:5
+2021-01-28 08:39:11.7810 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 08:39:11.8621 INFO Sucessfully got the machine with Id:5
+2021-01-28 08:39:12.1399 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 08:39:12.1612 INFO Sucessfully got the machine with Id:5
+2021-01-28 08:44:31.7155 INFO AspNetUsers-Login: Login attempted call from user kristaps
+2021-01-28 08:44:32.0029 INFO AspNetUsers-Login: kristaps Sucessfully Authenticated
+2021-01-28 08:44:32.4784 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-28 08:44:32.5287 INFO Sucessfully got all measurementPositions
+2021-01-28 08:44:33.5627 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 08:44:33.6054 INFO Sucessfully got all Measurements
+2021-01-28 08:44:33.6411 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 08:44:33.6753 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 08:44:34.5843 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 08:44:34.5927 INFO Sucessfully got all Measurements
+2021-01-28 08:44:34.6176 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 08:44:34.6229 INFO Sucessfully got all Measurements
+2021-01-28 08:44:34.6529 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-28 08:44:34.8074 INFO Sucessfully got all FUS packs
+2021-01-28 08:44:34.8508 INFO Machine-GetMachines: Attempted Call
+2021-01-28 08:44:34.8730 INFO Sucessfully got all machines
+2021-01-28 08:44:34.8973 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 08:44:34.9113 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 08:44:37.1516 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 08:44:37.1752 INFO Sucessfully got the machine with Id:5
+2021-01-28 08:44:38.9562 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 08:44:38.9684 INFO Sucessfully got the machine with Id:5
+2021-01-28 08:44:39.1608 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 08:44:39.1791 INFO Sucessfully got the machine with Id:5
+2021-01-28 08:46:21.0023 INFO Measurements-Create: Measurement creation  Attempted
+2021-01-28 08:46:21.6538 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Measurements_AspNetUsers". The conflict occurred in database "LKDUS", table "dbo.AspNetUsers", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:939a19c3-fd5e-4a85-b6e3-9508450f4a1f
+Error Number:547,State:0,Class:16
+2021-01-28 08:52:51.5683 INFO AspNetUsers-Login: Login attempted call from user kristaps
+2021-01-28 08:52:51.8299 INFO AspNetUsers-Login: kristaps Sucessfully Authenticated
+2021-01-28 08:52:52.3114 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-28 08:52:52.3622 INFO Sucessfully got all measurementPositions
+2021-01-28 08:52:53.7036 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 08:52:53.7496 INFO Sucessfully got all Measurements
+2021-01-28 08:52:53.7900 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 08:52:53.8149 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 08:52:54.7388 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 08:52:54.7454 INFO Sucessfully got all Measurements
+2021-01-28 08:52:54.7689 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 08:52:54.7736 INFO Sucessfully got all Measurements
+2021-01-28 08:52:54.7976 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-28 08:52:54.9513 INFO Sucessfully got all FUS packs
+2021-01-28 08:52:55.0076 INFO Machine-GetMachines: Attempted Call
+2021-01-28 08:52:55.0316 INFO Sucessfully got all machines
+2021-01-28 08:52:55.0571 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 08:52:55.0736 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 08:52:56.2578 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 08:52:56.2814 INFO Sucessfully got the machine with Id:5
+2021-01-28 08:52:59.5419 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 08:52:59.5720 INFO Sucessfully got the machine with Id:5
+2021-01-28 08:52:59.8190 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 08:52:59.8190 INFO Sucessfully got the machine with Id:5
+2021-01-28 09:41:42.8969 INFO Measurements-Create: Measurement creation  Attempted
+2021-01-28 09:41:43.8188 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Measurements_AspNetUsers". The conflict occurred in database "LKDUS", table "dbo.AspNetUsers", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:d291a383-6b65-4fb8-b8e1-502152b4c301
+Error Number:547,State:0,Class:16
+2021-01-28 09:42:01.7422 INFO Measurements-Create: Measurement creation  Attempted
+2021-01-28 09:42:11.8176 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Measurements_AspNetUsers". The conflict occurred in database "LKDUS", table "dbo.AspNetUsers", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:d291a383-6b65-4fb8-b8e1-502152b4c301
+Error Number:547,State:0,Class:16
+2021-01-28 09:43:24.0670 INFO Measurements-Create: Measurement creation  Attempted
+2021-01-28 09:43:34.6513 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Measurements_AspNetUsers". The conflict occurred in database "LKDUS", table "dbo.AspNetUsers", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:d291a383-6b65-4fb8-b8e1-502152b4c301
+Error Number:547,State:0,Class:16
+2021-01-28 09:44:57.4271 INFO Measurements-Create: Measurement creation  Attempted
+2021-01-28 09:53:37.8764 INFO AspNetUsers-Login: Login attempted call from user kristaps
+2021-01-28 09:53:38.1716 INFO AspNetUsers-Login: kristaps Sucessfully Authenticated
+2021-01-28 09:53:38.7186 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-28 09:53:38.7729 INFO Sucessfully got all measurementPositions
+2021-01-28 09:53:39.1657 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 09:53:39.2051 INFO Sucessfully got all Measurements
+2021-01-28 09:53:39.2470 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-01-28 09:53:39.2772 INFO Sucessfully got the measurement position with Id:2
+2021-01-28 09:53:40.2876 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-28 09:53:40.3161 INFO Sucessfully got all measurementPositions
+2021-01-28 09:53:41.0340 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 09:53:41.0340 INFO Sucessfully got all Measurements
+2021-01-28 09:53:41.0671 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 09:53:41.0671 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 09:53:42.1642 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 09:53:42.1754 INFO Sucessfully got all Measurements
+2021-01-28 09:53:42.2090 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 09:53:42.2201 INFO Sucessfully got all Measurements
+2021-01-28 09:53:42.2560 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-28 09:53:42.4075 INFO Sucessfully got all FUS packs
+2021-01-28 09:53:42.4639 INFO Machine-GetMachines: Attempted Call
+2021-01-28 09:53:42.4837 INFO Sucessfully got all machines
+2021-01-28 09:53:42.5100 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 09:53:42.5100 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 09:53:44.3747 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 09:53:44.3938 INFO Sucessfully got the machine with Id:5
+2021-01-28 09:54:19.6821 INFO Measurements-Create: Measurement creation  Attempted
+2021-01-28 09:57:40.6409 INFO AspNetUsers-Login: Login attempted call from user kristaps
+2021-01-28 09:57:40.9304 INFO AspNetUsers-Login: kristaps Sucessfully Authenticated
+2021-01-28 09:57:41.3890 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-28 09:57:41.4404 INFO Sucessfully got all measurementPositions
+2021-01-28 09:57:42.2446 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 09:57:42.2762 INFO Sucessfully got all Measurements
+2021-01-28 09:57:42.3164 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 09:57:42.3417 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 09:57:43.4069 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 09:57:43.4069 INFO Sucessfully got all Measurements
+2021-01-28 09:57:43.4395 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 09:57:43.4395 INFO Sucessfully got all Measurements
+2021-01-28 09:57:43.4731 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-28 09:57:43.6795 INFO Sucessfully got all FUS packs
+2021-01-28 09:57:43.7428 INFO Machine-GetMachines: Attempted Call
+2021-01-28 09:57:43.7646 INFO Sucessfully got all machines
+2021-01-28 09:57:43.7904 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 09:57:43.7971 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 09:57:45.9686 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 09:57:45.9992 INFO Sucessfully got the machine with Id:5
+2021-01-28 09:58:13.4051 INFO Measurements-Create: Measurement creation  Attempted
+2021-01-28 10:05:24.5247 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Measurements_AspNetUsers". The conflict occurred in database "LKDUS", table "dbo.AspNetUsers", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:0897d8f6-4016-41ab-8482-569521134fbe
+Error Number:547,State:0,Class:16
+2021-01-28 10:05:39.4563 INFO Measurements-Create: Measurement creation  Attempted
+2021-01-28 10:10:04.4027 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Measurements_Machines". The conflict occurred in database "LKDUS", table "dbo.Machines", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:15d87081-83e5-4252-9e4d-61b265a22baf
+Error Number:547,State:0,Class:16
+2021-01-28 10:13:41.8699 INFO AspNetUsers-Login: Login attempted call from user kristaps
+2021-01-28 10:13:42.1807 INFO AspNetUsers-Login: kristaps Sucessfully Authenticated
+2021-01-28 10:13:42.6843 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-28 10:13:42.7390 INFO Sucessfully got all measurementPositions
+2021-01-28 11:07:39.2987 INFO Measurements-Create: Measurement creation  Attempted
+2021-01-28 11:07:46.4889 INFO Measurements-Create: Measurement creation was created
+2021-01-28 11:07:46.4927 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-01-28 11:07:53.0618 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 11:07:53.3829 ERROR Measurements-GetMeasurements:Unable to cast object of type 'System.Decimal' to type 'System.String'. - 
+2021-01-28 11:07:53.4150 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 11:07:53.4406 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 11:08:35.6691 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 11:08:35.8389 ERROR Measurements-GetMeasurements:Unable to cast object of type 'System.Decimal' to type 'System.String'. - 
+2021-01-28 11:23:59.7954 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 11:24:00.0023 ERROR Measurements-GetMeasurements:Unable to cast object of type 'System.Decimal' to type 'System.String'. - 
+2021-01-28 11:27:37.6850 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 11:27:37.7049 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 11:29:46.5709 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 11:29:46.7228 ERROR Measurements-GetMeasurements:Unable to cast object of type 'System.Decimal' to type 'System.String'. - 
+2021-01-28 11:30:42.6491 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 11:30:47.8732 ERROR Measurements-GetMeasurements:Unable to cast object of type 'System.Decimal' to type 'System.String'. - 
+2021-01-28 11:32:45.6220 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 11:32:59.5788 ERROR Measurements-GetMeasurements:Unable to cast object of type 'System.Decimal' to type 'System.String'. - 
+2021-01-28 11:33:14.0582 INFO Machine-GetMachines: Attempted Call
+2021-01-28 11:33:24.1324 INFO Sucessfully got all machines
+2021-01-28 11:33:30.0489 INFO Machine-GetMachines: Attempted Call
+2021-01-28 11:33:40.5362 INFO Sucessfully got all machines
+2021-01-28 11:37:03.0847 INFO Machine-GetMachines: Attempted Call
+2021-01-28 11:37:51.2673 INFO Sucessfully got all machines
+2021-01-28 13:06:28.7911 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 13:06:30.3282 ERROR Measurements-GetMeasurements:Unable to cast object of type 'System.Decimal' to type 'System.String'. - 
+2021-01-28 13:10:34.9577 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 13:10:35.4619 ERROR Measurements-GetMeasurements:Unable to cast object of type 'System.Decimal' to type 'System.String'. - 
+2021-01-28 13:10:35.9456 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 13:10:35.9557 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 13:10:36.2602 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 13:10:36.5650 ERROR Measurements-GetMeasurements:Unable to cast object of type 'System.Decimal' to type 'System.String'. - 
+2021-01-28 13:10:45.2881 INFO Machine-GetMachines: Attempted Call
+2021-01-28 13:10:50.2161 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 13:10:52.2960 INFO Sucessfully got all machines
+2021-01-28 13:10:52.2960 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 13:13:49.9926 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 13:15:42.7726 ERROR Measurements-GetMeasurements:Unable to cast object of type 'System.Decimal' to type 'System.String'. - 
+2021-01-28 13:15:49.9228 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 13:22:09.0428 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 13:22:32.2309 ERROR Measurements-GetMeasurements:Unable to cast object of type 'System.Decimal' to type 'System.String'. - 
+2021-01-28 13:22:47.3099 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 13:26:09.8544 ERROR Measurements-GetMeasurements:Unable to cast object of type 'System.Decimal' to type 'System.String'. - 
+2021-01-28 13:42:53.9719 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 13:43:04.3787 INFO Sucessfully got all Measurements
+2021-01-28 13:43:13.4366 INFO AspNetUsers-Login: Login attempted call from user kristaps
+2021-01-28 13:43:13.6363 INFO AspNetUsers-Login: kristaps Sucessfully Authenticated
+2021-01-28 13:43:14.1063 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-28 13:43:14.1458 INFO Sucessfully got all measurementPositions
+2021-01-28 13:43:15.2586 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 13:43:19.3659 INFO Sucessfully got all Measurements
+2021-01-28 13:43:22.1818 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 13:43:22.2141 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 14:15:17.2424 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 14:15:25.0208 INFO Sucessfully got all Measurements
+2021-01-28 14:15:26.3034 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 14:15:30.6733 INFO Sucessfully got all Measurements
+2021-01-28 14:15:36.1285 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-28 14:15:36.9472 INFO Sucessfully got all FUS packs
+2021-01-28 14:15:36.9985 INFO Machine-GetMachines: Attempted Call
+2021-01-28 14:15:41.5022 INFO Sucessfully got all machines
+2021-01-28 14:15:41.5286 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 14:15:41.5286 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 14:15:50.4200 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 14:15:50.4499 INFO Sucessfully got the machine with Id:5
+2021-01-28 14:15:52.9695 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 14:15:52.9872 INFO Sucessfully got the machine with Id:5
+2021-01-28 14:15:53.1712 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 14:15:53.1999 INFO Sucessfully got the machine with Id:5
+2021-01-28 14:17:36.6925 INFO Measurements-Create: Measurement creation  Attempted
+2021-01-28 14:17:39.0242 INFO Measurements-Create: Measurement creation was created
+2021-01-28 14:17:39.0277 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-01-28 14:17:48.7089 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 14:18:04.2354 INFO Sucessfully got all Measurements
+2021-01-28 14:18:04.2633 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 14:18:08.9980 INFO Sucessfully got all Measurements
+2021-01-28 14:18:09.0141 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-28 14:18:09.4220 INFO Sucessfully got all FUS packs
+2021-01-28 14:18:09.4510 INFO Machine-GetMachines: Attempted Call
+2021-01-28 14:18:12.5537 INFO Sucessfully got all machines
+2021-01-28 14:18:12.5689 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 14:18:12.5763 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 14:18:16.9907 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 14:18:17.0021 INFO Sucessfully got all Measurements
+2021-01-28 14:18:23.3143 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 14:18:23.3143 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 14:22:53.7126 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-28 14:22:53.7230 INFO Sucessfully got all measurementPositions
+2021-01-28 14:22:55.5656 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 14:22:55.5844 INFO Sucessfully got all Measurements
+2021-01-28 14:22:55.6074 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 14:22:55.6074 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 14:22:56.9744 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 14:22:56.9836 INFO Sucessfully got all Measurements
+2021-01-28 14:22:57.0144 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 14:22:57.0144 INFO Sucessfully got all Measurements
+2021-01-28 14:22:57.0382 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-28 14:22:57.1691 INFO Sucessfully got all FUS packs
+2021-01-28 14:22:57.1917 INFO Machine-GetMachines: Attempted Call
+2021-01-28 14:22:57.1917 INFO Sucessfully got all machines
+2021-01-28 14:22:57.2229 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 14:22:57.2316 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 15:34:37.6312 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 15:34:37.7037 INFO Sucessfully got the machine with Id:5
+2021-01-28 15:34:39.0065 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 15:34:39.0065 INFO Sucessfully got the machine with Id:5
+2021-01-28 15:34:39.2274 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 15:34:39.2452 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:14:33.9372 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:14:34.0342 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:14:34.3148 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:14:34.3254 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:14:36.1846 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:14:36.1918 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:14:36.3871 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:14:36.4022 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:15:01.6863 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:15:01.7083 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:22:31.9407 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:22:32.0771 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:22:32.3748 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:22:32.4137 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:22:34.4243 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:22:34.4776 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:22:39.0111 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:22:39.1054 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:28:55.5143 INFO AspNetUsers-Login: Login attempted call from user kristaps
+2021-01-28 16:28:55.7837 INFO AspNetUsers-Login: kristaps Sucessfully Authenticated
+2021-01-28 16:28:56.2539 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-28 16:28:56.2994 INFO Sucessfully got all measurementPositions
+2021-01-28 16:28:57.0498 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 16:28:57.1021 INFO Sucessfully got all Measurements
+2021-01-28 16:28:57.1715 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 16:28:57.1983 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 16:28:58.1746 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 16:28:58.1926 INFO Sucessfully got all Measurements
+2021-01-28 16:28:58.2481 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 16:28:58.2543 INFO Sucessfully got all Measurements
+2021-01-28 16:28:58.2888 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-28 16:28:58.4331 INFO Sucessfully got all FUS packs
+2021-01-28 16:28:58.4842 INFO Machine-GetMachines: Attempted Call
+2021-01-28 16:28:58.5052 INFO Sucessfully got all machines
+2021-01-28 16:28:58.5288 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 16:28:58.5361 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 16:28:59.7413 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:28:59.7711 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:29:03.3454 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:29:03.4095 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:29:03.9519 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:29:04.0027 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:29:22.9639 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:29:22.9795 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:30:55.4265 INFO Machine-GetMachines: Attempted Call
+2021-01-28 16:30:55.4562 INFO Sucessfully got all machines
+2021-01-28 16:30:55.7660 INFO Machine-GetMachines: Attempted Call
+2021-01-28 16:30:55.7924 INFO Sucessfully got all machines
+2021-01-28 16:31:30.1429 INFO Machine-Create: Machine creation  Attempted
+2021-01-28 16:31:30.4599 INFO Machine-Create: Machine creation was created
+2021-01-28 16:31:30.4599 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-01-28 16:31:53.3378 INFO Machine-GetMachines: Attempted Call
+2021-01-28 16:31:53.3502 INFO Sucessfully got all machines
+2021-01-28 16:32:08.6857 INFO AspNetUsers-Login: Login attempted call from user test
+2021-01-28 16:32:08.7241 INFO AspNetUsers-Login: test Sucessfully Authenticated
+2021-01-28 16:32:08.7932 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-01-28 16:32:08.8042 INFO Sucessfully got all measurementPositions
+2021-01-28 16:32:09.8885 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 16:32:09.9074 INFO Sucessfully got all Measurements
+2021-01-28 16:32:09.9394 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 16:32:09.9656 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 16:32:11.5307 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 16:32:11.5307 INFO Sucessfully got all Measurements
+2021-01-28 16:32:11.5816 INFO Measurements-GetMeasurements: Attempted Call
+2021-01-28 16:32:11.5932 INFO Sucessfully got all Measurements
+2021-01-28 16:32:11.6096 INFO FusPack-GetFusPacks: Attempted Call
+2021-01-28 16:32:11.7517 INFO Sucessfully got all FUS packs
+2021-01-28 16:32:11.7820 INFO Machine-GetMachines: Attempted Call
+2021-01-28 16:32:11.7820 INFO Sucessfully got all machines
+2021-01-28 16:32:11.8085 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-01-28 16:32:11.8143 INFO Sucessfully got the measurement position with Id:1
+2021-01-28 16:32:14.5441 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:32:14.5591 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:35:41.7873 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:35:41.8328 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:39:35.8146 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:39:36.0092 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:39:36.2958 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:39:36.3321 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:39:38.3330 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:39:38.3796 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:40:00.4352 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:40:00.4949 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:42:51.1670 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:42:51.2905 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:42:51.5351 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:42:51.6061 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:42:53.1817 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:42:53.1982 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:43:13.0494 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:43:13.0653 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:43:38.5365 INFO Measurements-Create: Measurement creation  Attempted
+2021-01-28 16:43:45.6477 INFO Measurements-Create: Measurement creation was created
+2021-01-28 16:43:46.3378 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-01-28 16:44:34.8589 INFO Measurements-Create: Measurement creation  Attempted
+2021-01-28 16:44:34.8758 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:44:34.9002 INFO Measurements-Create: Measurement creation was created
+2021-01-28 16:44:34.9021 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-01-28 16:44:34.9233 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:44:35.1496 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:44:35.1624 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:44:41.0961 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:44:41.1139 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:44:41.3378 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:44:41.3539 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:44:43.3759 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:44:43.3759 INFO Measurements-Create: Measurement creation  Attempted
+2021-01-28 16:44:43.4033 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:44:43.4033 INFO Measurements-Create: Measurement creation was created
+2021-01-28 16:44:43.4165 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-01-28 16:44:43.6478 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:44:43.6752 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:44:57.9476 INFO Measurements-Create: Measurement creation  Attempted
+2021-01-28 16:44:57.9726 INFO Measurements-Create: Measurement creation was created
+2021-01-28 16:44:57.9726 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-01-28 16:44:57.9726 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:44:57.9923 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:44:58.2341 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:44:58.2472 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:46:32.0255 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:46:32.1441 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:46:32.4109 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:46:32.4335 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:46:36.5764 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:46:36.5889 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:46:36.7857 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:46:36.8326 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:47:05.1514 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:47:05.1895 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:47:41.3769 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-01-28 16:47:41.4336 INFO Sucessfully got the machine with Id:5
+2021-01-28 16:47:51.4230 INFO Measurements-Create: Measurement creation  Attempted
+2021-01-28 16:47:58.1994 INFO Measurements-Create: Measurement creation was created
+2021-01-28 16:47:58.8562 INFO Measurements-Create: LKDUS_API.Data.Measurement
