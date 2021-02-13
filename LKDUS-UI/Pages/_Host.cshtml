@@ -40,6 +40,15 @@
                 element.focus();
             }
         };
+
+        window.jsfunction =
+            { focusElement: function (id) { const element = document.getElementById(id); element.focus(); } }
     </script>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="js/my_lib.js"></script>
+    <script type="text/javascript" src="JsLib"></script>zzzzzzzzzzzzzzzzzzzz
+    @*<script src="_framework/blazor.server.js"></script>
+        <script>window.jsfunction =
+                { focusElement: function (id) { const element = document.getElementById(id); element.focus(); } }</script>*@
 </body>
 </html>

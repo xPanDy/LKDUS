@@ -6,6 +6,7 @@
 @using System.Net.Http
 
 @inject IMeasurementRepository repo
+@inject IPacksRepository pRepo
 @inject NavigationManager navManager
 @inject IMeasurementPositionsRepository measurementPositionRepo
 
@@ -50,6 +51,7 @@
 
 
 
+
         <div class="container pre-scrollable" style="height:75%">
             <div class="mh-75">
                 <table class="table">
@@ -57,21 +59,12 @@
                         <tr>
                             <th scope="col">Nr.                 </th>
                             <th scope="col">Datums              </th>
-                            <th scope="col">Maiņa               </th>
-                            <th scope="col">Iekārta             </th>
-                            <th scope="col">Operators           </th>
-                            <th scope="col">Mērījuma pozīcija   </th>
-                            <th scope="col">Pakas ID            </th>
-                            <th scope="col">Mērījuma tipa id    </th>
-                            <th scope="col">Mērījums 1          </th>
-                            <th scope="col">Mērījums 2          </th>
-                            <th scope="col">Mērījums 3          </th>
-                            <th scope="col">Mērījums 4          </th>
-                            <th scope="col">Mērījums 5          </th>
-                            <th scope="col">Mērījums 6          </th>
-                            <th scope="col">Mērījums 7          </th>
-                            <th scope="col">Mērījums 8          </th>
-                            <th scope="col">Mērījums 9          </th>
+                            <th scope="col">Iekārta               </th>
+                            <th scope="col">Maiņa             </th>
+                            <th scope="col">Laborants           </th>
+                            <th scope="col">Fus Pakas ID   </th>
+
+
                             @*<th scope="col">Meistars</th>*@
                         </tr>
                     </thead>
@@ -82,21 +75,11 @@
                             <tr>
                                 <th scope="row">@model.Id</th>
                                 <td>@model.DateCreated</td>
+                                <td>@model.Machine</td>
                                 <td>@model.Shift</td>
-                                <td>@model.MachineId</td>
-                                <td>@model.UserId</td>
-                                <td>@model.MeasurementPositionId</td>
-                                <td>@model.PackId</td>
-                                <td>@model.MeasurementTypeId</td>
-                                <td>@model.Measurement1</td>
-                                <td>@model.Measurement2</td>
-                                <td>@model.Measurement3</td>
-                                <td>@model.Measurement4</td>
-                                <td>@model.Measurement5</td>
-                                <td>@model.Measurement6</td>
-                                <td>@model.Measurement7</td>
-                                <td>@model.Measurement8</td>
-                                <td>@model.Measurement9</td>
+                                <td>@model.Author</td>
+                                <td>@model.FusCode</td>
+
 
 
 
@@ -134,14 +117,15 @@
         string test = measurementPositionId;
     }
 
-    private IList<Measurement> Model;
+    //private IList<Measurement> Model;
+    private IList<Pack> Model;
     private MeasurementPosition measurementPosition;
 
     protected async override Task OnInitializedAsync()
     {
-        Model = await repo.Get(Endpoints.MeasurementEndpoint);
+        Model = await pRepo.Get(Endpoints.PacksEndpoint);
 
-
+       // Model = Model.Where(e => (e.MeasurementPositionId == 1)).ToList();
 
         try
         {

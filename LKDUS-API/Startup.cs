@@ -106,6 +106,7 @@ namespace LKDUS_API
             services.AddScoped<IMeasurementTypeRepository, MeasurementTypeRepository>();
            
             services.AddScoped<IFusPackRepository, FusPackRepository>();
+            services.AddScoped<IPackRepository, PackRepository>();
             services.AddScoped<IMachineRepository, MachineRepository>();
           //  services.AddScoped<IAspUserRepository, AspUserRepository>();
 

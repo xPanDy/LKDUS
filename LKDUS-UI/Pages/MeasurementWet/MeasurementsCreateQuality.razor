@@ -8,7 +8,10 @@
 @inject IMeasurementRepository repo
 @inject NavigationManager navManager
 @inject IMeasurementRepository measurementRepo
+@inject IMachinesRepository machineRepository
 
+@inject IPacksRepository packRepo
+@inject IAuthenticationRepository authRepo
 <style>
     .button {
         width: 100%;
@@ -25,7 +28,7 @@
             </div>
             <div class="col w-25"><h3 class="card-title">Mitrā finiera kvalitāte</h3></div>
             <div class="col">
-                <button type="submit"  @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
+                <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
             </div>
 
         </div>
@@ -39,7 +42,7 @@
                 <button @onclick="focusToInput1" type="button" class="btn btn-block btn-lg btn-success">
                     Raupjums
                 </button>
-                <input @onclick="focusToInput1" id="@id1" @ref="input1"  @bind="@v1" class="form-control"
+                <input @onclick="focusToInput1" id="@id1" @ref="input1" @bind="@v1" class="form-control"
                        min="0"
                        type="number">
             </div>
@@ -74,7 +77,7 @@
                 <button @onclick="focusToInput4" type="button" class="btn btn-success btn-lg btn-block">
                     Atkritumi zem naža
                 </button>
-                <input @onclick="focusToInput4" id="@id4" @ref="input4" @bind="@v4"  class="form-control"
+                <input @onclick="focusToInput4" id="@id4" @ref="input4" @bind="@v4" class="form-control"
                        min="0"
                        type="number">
             </div>
@@ -159,10 +162,10 @@
     public string pmachineIdd { get; set; }
 
     private IList<Measurement> Model2;
-    private int v1 ; 
-    private int v2 ; 
-    private int v3 ; 
-    private int v4 ; 
+    private int v1;
+    private int v2;
+    private int v3;
+    private int v4;
     protected async override Task OnInitializedAsync()
     {
         v1 = 0;
@@ -243,7 +246,7 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
         this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
     }
 
-   
+
 
     private async void SaveMeasurement()
     {
@@ -264,7 +267,7 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
 
 
         bool isSuccess = true;
-
+        bool isPackCreated = true;
         IList<Measurement> measurementsToCreate = new List<Measurement>();
 
 
@@ -285,7 +288,20 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
 
 
 
+        Pack pack = new Pack();
+        Machine machine = new Machine();
 
+        machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
+        LoginModel user = new LoginModel();
+        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
+        pack.DateCreated = measurementDateAndTime;
+        pack.Machine = machine.Name;
+        pack.Shift = shift;
+        pack.Author = user.UserName;
+        pack.FusCode = stringPackValue;
+
+
+        isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
 
 
 
@@ -300,4 +316,4 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
 
 
 
- 
+

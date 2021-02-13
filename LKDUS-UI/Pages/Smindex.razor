@@ -1,0 +1,20 @@
+﻿@using LKDUS_UI.Components 
+@page "/smindex"
+@inject IJSRuntime IJSRuntime
+
+<h1>LKDUS  svitru kods</h1>
+<h1>Value: @_barcodeValue</h1>
+<BarcodeReaderComponent
+  GetValue="((value) => SetValue(value))">
+</BarcodeReaderComponent>
+
+
+
+@code
+{
+    private string _barcodeValue = string.Empty;
+    private void SetValue(string value)
+    {
+        _barcodeValue = value;
+    }
+}

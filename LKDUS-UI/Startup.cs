@@ -17,6 +17,9 @@ using System.IdentityModel.Tokens.Jwt;
 using LKDUS_UI.Providers;
 using Microsoft.AspNetCore.Components.Authorization;
 using Blazored.Localisation;
+ 
+using Microsoft.AspNetCore.ResponseCompression;
+ 
 
 namespace LKDUS_UI
 {
@@ -35,6 +38,11 @@ namespace LKDUS_UI
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddResponseCompression(opts =>
+            {
+                opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
+                    new[] { "application/octet-stream" });
+            });
             //
             services.AddBlazoredLocalStorage();
             services.AddHttpClient();
@@ -76,9 +84,12 @@ namespace LKDUS_UI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseResponseCompression();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                 
+
             }
             else
             {
@@ -96,6 +107,7 @@ namespace LKDUS_UI
             {
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
+
             });
         }
     }

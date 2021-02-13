@@ -1,0 +1,473 @@
+﻿@page "/measurementspeeling/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/saving"
+
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+
+@inject IMeasurementRepository repo
+@inject NavigationManager navManager
+@inject IMeasurementRepository measurementRepo
+
+<style>
+    .button {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<div class="container">
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button type="button" @onclick="@Return" class="btn btn-primary btn-block">Atpakaļ</button>
+            </div>
+            <div class="col w-25"><h3 class="card-title">Mizošana</h3></div>
+            <div class="col">
+                <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        @*<div class="col-md-3">
+
+                <button @onclick="focusToInput2" type="button" class="btn btn-success btn-block btn-lg">
+                    Risas
+                </button>
+                <input @onclick="focusToInput2" id="@id2" @ref="input2" @bind="@v2" class="form-control"
+                       min="0"
+                       type="number">
+
+
+
+                <button @onclick="focusToInput3" type="button" class="btn btn-success btn-block btn-lg">
+                    Zilās svītras
+                </button>
+                <input @onclick="focusToInput3" id="@id3" @ref="input3" @bind="@v3" class="form-control"
+                       min="0"
+                       type="number">
+
+            </div>*@
+
+
+        <div class="col">
+            <table class="table table-hover">
+
+                <thead>
+
+
+                    <tr>
+
+                        <th>Nr</th>
+                        <th>1.pl.</th>
+                        <th>2..pl.</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                    @for (int i = 0; i < positions.GetLength(0) - 20; i++)
+                    {
+                        int local = i;
+                        int npk = i + 1;
+                        var tmpI = i;
+                        <tr>
+                            <td>@npk</td>
+                            @for (int j = 0; j < positions.GetLength(1); j++)
+                            {
+                                var tmpJ = j;
+                                <td><button @onclick="( e => selectTableCell(tmpI,tmpJ))">@positions[i, j]</button></td>
+
+                            }
+
+
+
+
+
+                        </tr>
+                    }
+
+
+                </tbody>
+
+            </table>
+        </div>
+
+       <div class="col">
+            <table class="table table-hover">
+
+                <thead>
+
+
+                    <tr>
+
+                        <th>Nr</th>
+                        <th>1.pl.</th>
+                        <th>2..pl.</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                    @for (int i = 10; i < positions.GetLength(0) - 10; i++)
+                    {
+                        int local = i;
+                        int npk = i + 1;
+                        var tmpI = i;
+                        <tr>
+                            <td>@npk</td>
+                            @for (int j = 0; j < positions.GetLength(1); j++)
+                            {
+                                var tmpJ = j;
+                                <td><button @onclick="( e => selectTableCell(tmpI,tmpJ))">@positions[i, j]</button></td>
+
+                            }
+
+
+
+
+
+                        </tr>
+                    }
+
+
+                </tbody>
+
+            </table>
+        </div>
+        <div class="col">
+            <table class="table table-hover">
+
+                <thead>
+
+
+                    <tr>
+
+                        <th>Nr</th>
+                        <th>1.pl.</th>
+                        <th>2.pl.</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                    @for (int i = 20; i < positions.GetLength(0); i++)
+                    {
+                        int local = i;
+                        int npk = i + 1;
+                        var tmpI = i;
+                        <tr>
+                            <td>@npk</td>
+                            @for (int j = 0; j < positions.GetLength(1); j++)
+                            {
+                                var tmpJ = j;
+                                <td><button @onclick="( e => selectTableCell(tmpI,tmpJ))">@positions[i, j]</button></td>
+
+                            }
+
+
+
+
+
+                        </tr>
+                    }
+
+
+                </tbody>
+
+            </table>
+        </div> 
+
+
+
+    </div>
+
+
+    <div class="row w-25">
+
+        <div class="d-flex justify-content-between ">
+
+            <table class="table table-borderless ">
+                <tbody class="h-100">
+
+                    <tr class="text-center">
+                        <td>  <button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button></td>
+
+
+                        <td>  <button type="button" @onclick="(()=>select(sizes[1]))" class="btn btn-info btn-lg btn-block">@sizes[1]</button></td>
+
+
+                        <td>  <button type="button" @onclick="(()=>select(sizes[2]))" class="btn btn-info btn-lg btn-block">@sizes[2]</button></td>
+
+
+
+                        <td>  <button type="button" @onclick="(()=>select(sizes[3]))" class="btn btn-info btn-lg btn-block">@sizes[3]</button></td>
+
+                        <td>  <button type="button" @onclick="(()=>select(sizes[4]))" class="btn btn-info btn-lg btn-block">@sizes[4]</button></td>
+
+
+                    </tr>
+
+
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @*<div class="btn-group-vertical ml-4 mt-4" role="group" aria-label="Basic example">
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '1';">1</button>
+                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '2';">2</button>
+                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '3';">3</button>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '4';">4</button>
+                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '5';">5</button>
+                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '6';">6</button>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '7';">7</button>
+                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '8';">8</button>
+                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '9';">9</button>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value.slice(0, -1);">&lt;</button>
+                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '0';">0</button>
+                <button type="button" class="btn btn-primary py-3" onclick="">Go</button>
+            </div>
+        </div>*@
+
+
+
+
+
+</div>
+
+
+
+
+@code {
+
+    [Parameter]
+    public string userId { get; set; }
+    [Parameter]
+    public string measurementPositionId { get; set; }
+    [Parameter]
+    public string stringPackValue { get; set; }
+    [Parameter]
+    public string pmachineIdd { get; set; }
+
+    private IList<Measurement> Model2;
+
+    protected async override Task OnInitializedAsync()
+    {
+        Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+
+        for (int i = 0; i < positions.GetLength(0); i++)
+        {
+            for (int j = 0; j < positions.GetLength(1); j++)
+            {
+                positions[i, j] = 0;
+            }
+        }
+        for (int i = 0; i < sizes.Length; i++)
+        {
+
+            sizes[i] = start;
+            start = start + 1;
+        }
+
+
+    }
+
+
+    private int actPos;
+
+    private int[] sizes = new int[5];
+    private int start = 1;
+
+    private int selectedCellI = 0;
+    private int selectedCellJ = 0;
+    private int[] positionValues = new int[3];
+    private int positionValue;
+
+
+    private void select(int value)
+    {
+        positionValues[actPos] = value;
+        positions[selectedCellI, selectedCellJ] = value;
+
+
+    }
+
+    private ElementReference input1;
+    [Inject] IJSRuntime JSRuntime { get; set; }
+
+    private ElementReference input2;
+    private ElementReference input3;
+    private ElementReference input4;
+    private string id1 = "inactive";
+    private string id2 = "inactive";
+    private string id3 = "inactive";
+    private string id4 = "inactive";
+
+    private int[,] positions = new int[30, 2];
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        //if (firstRender)
+        //{
+        //    id1 = "code";
+        //    await
+        //    JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
+        //}
+
+    }
+
+    private void selectTableCell(int ii, int jj)
+    {
+
+        selectedCellI = ii;
+        selectedCellJ = jj;
+    }
+
+    //    private async void focusToInput1()
+    //    {
+    //        id1 = "code";
+    //        id2 = "inactive";
+    //        id3 = "inactive";
+    //        id4 = "inactive";
+    //        await
+    //JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
+
+    //    }
+
+    //    private async void focusToInput2()
+    //    {
+    //        id1 = "inactive";
+    //        id2 = "code";
+    //        id3 = "inactive";
+    //        id4 = "inactive";
+    //        await
+    //        JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input2);
+
+    //    }
+    //    private async void focusToInput3()
+    //    {
+    //        id1 = "inactive";
+    //        id2 = "inactive";
+    //        id3 = "code";
+    //        id4 = "inactive";
+    //        await
+    //        JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input3);
+
+    //    }
+    //    private async void focusToInput4()
+    //    {
+    //        id1 = "inactive";
+    //        id2 = "inactive";
+    //        id3 = "inactive";
+    //        id4 = "code";
+    //        await
+    //        JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input4);
+
+    //    }
+
+    private void Return(MouseEventArgs e)
+    {
+
+        this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}/create");
+    }
+
+
+
+    private async void SaveMeasurement()
+    {
+        String measurementDateAndTime = DateTime.Now.ToString("g");
+
+        DateTime shiftTime = Convert.ToDateTime("12:00:00");
+        DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
+        int packId = int.Parse(stringPackValue);
+
+        //String timeOfTheDayNow = DateTime.Now.ToString("t");
+        int shift = 1;
+
+        if (DateTime.Compare(currentMeasurement, shiftTime) >= 0)
+        {
+            shift = 2;
+        }
+
+
+
+        bool isSuccess = true;
+
+        IList<Measurement> measurementsToCreate = new List<Measurement>();
+
+        for (int i = 0; i < positions.GetLength(0); i++)
+        {
+
+            Measurement meas = new Measurement();
+            meas.DateCreated = measurementDateAndTime;
+            meas.Shift = shift;
+            meas.MachineId = int.Parse(pmachineIdd); //machine.Id;
+            meas.UserId = userId;
+            meas.MeasurementPositionId = int.Parse(measurementPositionId);
+            meas.PackId = packId;
+            meas.MeasurementTypeId = 5;
+
+            for (int j = 0; j < positions.GetLength(1); j++)
+            {
+                
+
+
+                if (j == 0)
+                {
+ 
+ 
+                    meas.Measurement1 = Convert.ToDecimal(positions[i, j]);
+                }
+                if (j == 1)
+                {
+                    
+                    meas.Measurement2 = Convert.ToDecimal(positions[i, j]);
+                }
+               
+
+               
+
+            }
+
+
+
+
+
+
+
+            measurementsToCreate.Add(meas);
+
+            isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
+        }
+
+    }
+}
+
+
+
+

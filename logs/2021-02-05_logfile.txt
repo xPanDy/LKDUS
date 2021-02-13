@@ -1,0 +1,1902 @@
+2021-02-05 08:52:58.9190 INFO Pack-GetPacks: Attempted Call
+2021-02-05 08:53:00.3135 ERROR Pack-GetPacks:Invalid column name 'FusCode'.
+Invalid column name 'Shift'. - 
+2021-02-05 09:01:56.6798 INFO Pack-GetPacks: Attempted Call
+2021-02-05 09:01:57.1306 ERROR Pack-GetPacks:Invalid column name 'FusCode'.
+Invalid column name 'Shift'. - 
+2021-02-05 10:09:05.8401 INFO Pack-GetPacks: Attempted Call
+2021-02-05 10:09:05.9373 INFO Sucessfully got all packs
+2021-02-05 10:09:40.3375 INFO Pack-GetPacks: Attempted Call
+2021-02-05 10:09:40.3713 INFO Sucessfully got all packs
+2021-02-05 10:10:02.2114 INFO AspNetUsers-Login: Login attempted call from user Linards3
+2021-02-05 10:10:02.4064 INFO AspNetUsers-Login: Linards3 Sucessfully Authenticated
+2021-02-05 10:10:02.9033 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-05 10:10:02.9437 INFO Sucessfully got all measurementPositions
+2021-02-05 10:10:05.9788 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:10:06.0656 INFO Sucessfully got all Measurements
+2021-02-05 10:10:06.1461 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 10:10:06.1720 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 10:10:07.3111 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:10:07.3341 INFO Sucessfully got all Measurements
+2021-02-05 10:10:07.3735 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:10:07.3970 INFO Sucessfully got all Measurements
+2021-02-05 10:10:07.4258 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 10:10:08.5054 INFO Sucessfully got all FUS packs
+2021-02-05 10:10:13.2730 INFO Machine-GetMachines: Attempted Call
+2021-02-05 10:10:13.3067 INFO Sucessfully got all machines
+2021-02-05 10:10:13.3577 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 10:10:13.3577 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 10:10:19.7031 INFO AspNetUsers-Login: Login attempted call from user Linards3
+2021-02-05 10:10:19.7588 INFO AspNetUsers-Login: Linards3 Sucessfully Authenticated
+2021-02-05 10:10:19.8186 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-05 10:10:19.8271 INFO Sucessfully got all measurementPositions
+2021-02-05 10:10:20.8496 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:10:20.8815 INFO Sucessfully got all Measurements
+2021-02-05 10:10:20.9428 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-02-05 10:10:20.9575 INFO Sucessfully got the measurement position with Id:2
+2021-02-05 10:10:22.3689 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:10:22.3874 INFO Sucessfully got all Measurements
+2021-02-05 10:10:22.4118 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:10:22.4256 INFO Sucessfully got all Measurements
+2021-02-05 10:10:22.4518 INFO Machine-GetMachines: Attempted Call
+2021-02-05 10:10:22.4660 INFO Sucessfully got all machines
+2021-02-05 10:10:22.4828 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-02-05 10:10:22.4828 INFO Sucessfully got the measurement position with Id:2
+2021-02-05 10:10:25.6359 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:10:25.6637 INFO Sucessfully got all Measurements
+2021-02-05 10:10:25.7156 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-02-05 10:10:25.7156 INFO Sucessfully got the measurement position with Id:2
+2021-02-05 10:10:27.3059 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-05 10:10:27.3165 INFO Sucessfully got all measurementPositions
+2021-02-05 10:10:28.3353 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:10:28.3599 INFO Sucessfully got all Measurements
+2021-02-05 10:10:28.3817 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 10:10:28.3931 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 10:10:31.0202 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:10:31.0569 INFO Sucessfully got all Measurements
+2021-02-05 10:10:31.0984 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:10:31.1289 INFO Sucessfully got all Measurements
+2021-02-05 10:10:31.1809 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 10:10:31.2868 INFO Sucessfully got all FUS packs
+2021-02-05 10:10:31.3087 INFO Machine-GetMachines: Attempted Call
+2021-02-05 10:10:31.3087 INFO Sucessfully got all machines
+2021-02-05 10:10:31.3315 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 10:10:31.3425 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 10:10:32.4681 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:10:32.4858 INFO Sucessfully got all Measurements
+2021-02-05 10:10:56.2033 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:10:56.2187 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:10:56.2422 INFO Sucessfully got all Measurements
+2021-02-05 10:10:56.2515 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:10:56.3860 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:10:56.3860 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:11:02.9679 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:11:02.9969 INFO Sucessfully got all Measurements
+2021-02-05 10:11:31.6459 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:12:02.2445 INFO Pack-Create: Pack creation was created
+2021-02-05 10:12:02.2473 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:12:24.3756 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:12:24.4358 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:12:24.4358 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:28.6635 INFO AspNetUsers-Login: Login attempted call from user Linards3
+2021-02-05 10:16:28.7270 INFO AspNetUsers-Login: Linards3 Sucessfully Authenticated
+2021-02-05 10:16:28.8061 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-05 10:16:28.8258 INFO Sucessfully got all measurementPositions
+2021-02-05 10:16:29.8630 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:16:29.8759 INFO Sucessfully got all Measurements
+2021-02-05 10:16:29.9018 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 10:16:29.9095 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 10:16:30.9875 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:16:31.0227 INFO Sucessfully got all Measurements
+2021-02-05 10:16:31.0667 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:16:31.0889 INFO Sucessfully got all Measurements
+2021-02-05 10:16:31.1176 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 10:16:31.2122 INFO Sucessfully got all FUS packs
+2021-02-05 10:16:31.2342 INFO Machine-GetMachines: Attempted Call
+2021-02-05 10:16:31.2342 INFO Sucessfully got all machines
+2021-02-05 10:16:31.2709 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 10:16:31.2791 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 10:16:32.8098 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:32.8168 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:36.0238 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:36.0411 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:36.0664 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:36.0794 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:36.0794 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:36.0794 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:44.4473 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:44.4700 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:44.4700 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:44.5021 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:44.5227 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:44.5227 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:44.5506 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:44.5634 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:44.5780 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:44.6002 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:44.6002 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:44.6074 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:44.6276 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:44.6517 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:44.6517 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:44.6860 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:44.7022 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:44.7022 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:44.7203 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:44.7203 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:44.7472 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:44.7518 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:44.7663 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:44.7663 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:44.7795 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:44.7795 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:44.8065 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:44.8065 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:44.8227 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:44.8319 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:44.8466 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:44.8466 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:44.8724 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:44.8986 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:44.8986 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:44.9480 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:44.9611 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:44.9611 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:44.9796 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:44.9866 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:45.0026 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:45.0026 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:45.0236 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:45.0421 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:45.0442 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:45.0442 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:45.0727 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:45.0727 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:45.0894 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:45.0960 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:45.1162 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:45.1162 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:45.1521 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:45.1646 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:45.1646 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:45.1819 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:45.1954 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:45.1954 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:45.2122 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:45.2223 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:45.2382 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:45.2382 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:45.2594 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:45.2807 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:45.2807 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:45.2982 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:45.3250 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:45.3271 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:45.3426 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:45.3426 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:45.3678 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:45.3678 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:45.3869 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:45.3986 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:45.3986 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:45.4136 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:45.4229 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:45.4229 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:45.4362 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:45.4362 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:45.4848 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:45.4848 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:45.5035 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:45.5206 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:45.5206 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:45.5359 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:45.5460 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:45.5460 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:45.5737 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:45.5844 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:45.6018 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:45.6116 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:45.6311 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:45.6564 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:45.6564 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:45.6793 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:45.6920 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:45.6920 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:45.7090 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:45.7174 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:45.7356 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:45.7356 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:45.7674 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:45.7993 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:45.7993 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:45.8147 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:45.8147 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:45.8266 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:45.8266 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:45.8430 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:45.8576 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:45.8576 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:45.8757 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:45.8757 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:45.8757 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:45.8978 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:45.9062 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:45.9062 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:45.9214 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:45.9214 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:45.9388 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:45.9388 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:45.9556 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:45.9556 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:45.9556 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:45.9804 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:45.9893 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:45.9893 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:46.0068 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:46.0068 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:46.0260 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:46.0309 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:46.0448 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:46.0448 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:46.0448 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:46.0685 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:46.0771 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:46.0771 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:46.0918 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:46.0918 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:46.1098 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:46.1098 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:46.1279 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:46.1279 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:46.1406 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:46.1555 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:46.1555 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:46.1555 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:46.1773 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:46.1773 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:46.2013 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:46.2013 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:46.2231 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:46.2350 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:46.2350 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:46.2621 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:46.2737 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:46.2737 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:46.2926 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:46.2984 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:46.3143 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:46.3143 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:46.3450 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:46.3594 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:46.3594 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:46.3762 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:46.3762 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:46.3888 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:46.4055 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:46.4055 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:46.4322 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:46.4403 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:46.4641 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:46.4780 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:46.4780 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:46.4956 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:46.5127 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:46.5148 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:46.5148 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:46.5356 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:46.5490 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:46.5643 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:46.5811 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:46.5950 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:46.5950 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:46.6146 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:46.6243 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:46.6243 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:46.6482 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:46.6482 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:46.6714 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:46.6714 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:46.6910 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:46.6910 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:46.7023 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:46.7023 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:46.7232 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:46.7232 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:46.7374 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:46.7374 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:46.7546 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:46.7546 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:46.7721 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:46.7831 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:46.7831 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:46.8108 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:46.8108 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:46.8108 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:46.9518 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:46.9705 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:46.9899 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:46.9899 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.0091 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:47.0186 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:47.0186 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:47.0316 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:47.0316 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:47.0316 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:47.0556 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:47.0608 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:47.0608 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.0779 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.0779 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:47.0994 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:47.0994 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:47.1137 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:47.1223 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:47.1223 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:47.1223 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:47.1438 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:47.1583 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.1583 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.1782 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:47.1860 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:47.1860 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:47.2017 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:47.2017 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:47.2017 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:47.2267 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:47.2325 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:47.2325 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.2508 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.2650 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:47.2650 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:47.2650 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:47.2882 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:47.3091 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:47.3112 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:47.3262 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:47.3262 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:47.3474 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.3474 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.3666 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:47.3757 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:47.3757 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:47.3927 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:47.3927 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:47.3927 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:47.4164 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:47.4228 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:47.4355 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.4355 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.4566 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:47.4566 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:47.4668 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:47.4668 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:47.4887 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:47.4887 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:47.5048 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:47.5048 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:47.5233 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.5233 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.5416 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:47.5504 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:47.5504 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:47.5667 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:47.5766 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:47.5766 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:47.5920 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:47.5920 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:47.6136 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.6136 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.6309 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:47.6508 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:47.6508 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:47.6646 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:47.6788 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:47.6788 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:47.6926 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:47.7024 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:47.7169 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.7169 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.7363 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:47.7363 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:47.7476 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:47.7476 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:47.7704 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:47.7704 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:47.7856 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:47.7856 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:47.8063 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.8111 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.8262 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:47.8479 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:47.8479 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:47.8666 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:47.8743 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:47.8743 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:47.8930 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:47.8930 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:47.9133 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.9195 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:47.9195 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:47.9421 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:47.9421 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:47.9569 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:47.9744 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:47.9744 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:47.9924 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:47.9991 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:48.0230 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:48.0230 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:48.0501 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:48.0655 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:48.0655 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:48.0942 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:48.1076 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:48.1076 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:48.1301 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:48.1301 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:48.1497 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:48.1544 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:48.1544 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:48.1754 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:48.1754 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:48.1902 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:48.1902 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:48.2012 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:48.2012 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:48.2246 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:48.2408 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:48.2408 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:48.2590 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:48.2696 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:48.2696 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:48.2843 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:48.2993 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:48.2993 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:48.3130 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:48.3130 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:48.3394 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:48.3444 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:48.3580 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:48.3580 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:48.3580 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:48.3832 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:48.3972 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:48.3972 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:48.4138 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:48.4204 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:48.4204 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:48.4390 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:48.4512 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:48.4512 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:48.4512 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:48.4737 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:48.4827 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:48.4827 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:48.5016 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:48.5016 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:48.5228 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:48.5228 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:48.5436 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:48.5532 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:48.5532 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:48.5694 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:48.5802 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:48.5802 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:48.5943 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:48.5943 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:48.6123 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:48.6123 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:48.6287 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:48.6287 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:48.6391 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:48.6391 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:48.6591 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:48.6591 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:16:48.6773 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:16:48.6773 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:16:48.6941 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:48.6941 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:16:48.7120 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:16:48.7213 INFO Pack-Create: Pack creation was created
+2021-02-05 10:16:48.7213 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:16:48.7363 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:16:48.7363 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:16:48.7363 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:01.8892 INFO AspNetUsers-Login: Login attempted call from user Linards3
+2021-02-05 10:19:02.2812 INFO AspNetUsers-Login: Linards3 Sucessfully Authenticated
+2021-02-05 10:19:02.7592 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-05 10:19:02.8358 INFO Sucessfully got all measurementPositions
+2021-02-05 10:19:04.0651 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:19:04.1629 INFO Sucessfully got all Measurements
+2021-02-05 10:19:04.2254 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 10:19:04.2825 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 10:19:05.2885 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:19:05.3261 INFO Sucessfully got all Measurements
+2021-02-05 10:19:05.3531 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:19:05.8093 INFO Sucessfully got all Measurements
+2021-02-05 10:19:05.8510 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 10:19:06.4249 INFO Sucessfully got all FUS packs
+2021-02-05 10:19:06.4703 INFO Machine-GetMachines: Attempted Call
+2021-02-05 10:19:06.5161 INFO Sucessfully got all machines
+2021-02-05 10:19:06.5467 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 10:19:06.5728 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 10:19:07.5564 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:19:07.5845 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:19:09.6026 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:19:09.6106 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:09.6360 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:19:09.8708 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:19:09.9447 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:19:10.0477 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.0477 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.0793 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.0985 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.0985 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.1319 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.1516 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.1516 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.1742 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.1861 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.1861 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.2081 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.2081 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.2189 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.2574 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.2828 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.2828 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.3415 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.3561 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.3592 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.3831 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.3953 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.3953 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.4143 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.4294 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.4294 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.4480 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.4625 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.4625 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.4825 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.4825 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.4825 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.5136 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.5254 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.5254 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.5444 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.5542 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.5542 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.5706 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.5791 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.5791 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.5959 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.5959 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.5959 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.6213 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.6290 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.6290 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.6492 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.6571 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.6571 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.6732 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.6732 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.6732 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.6983 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.7251 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.7251 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.7533 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.7737 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.7737 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.7966 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.8195 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.8195 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.8456 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.8791 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.8791 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:10.9837 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:10.9837 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:10.9997 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:11.0339 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:11.0542 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:11.0542 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:11.0741 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:11.0851 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:11.0851 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:11.1047 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:11.1158 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:11.1158 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:11.1405 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:11.1405 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:11.1405 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:11.1835 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:11.1954 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:11.1954 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:11.2167 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:11.2279 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:11.2279 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:11.2467 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:11.2577 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:11.2577 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:11.2817 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:11.3057 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:11.3057 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:11.3287 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:11.3287 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:11.3287 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:11.3595 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:11.3595 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:11.3595 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:11.3859 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:11.3969 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:11.3969 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:11.4132 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:11.4216 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:11.4216 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:11.4378 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:11.4378 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:11.4378 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:11.4615 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:11.4720 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:11.4720 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:11.4907 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:11.5029 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:11.5029 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:11.5215 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:11.5449 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:11.5450 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:11.5655 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:11.5856 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:11.5856 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:11.6296 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:19:11.6445 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:19:11.6814 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:19:11.6888 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:19:11.7204 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:19:11.7481 INFO Pack-Create: Pack creation was created
+2021-02-05 10:19:11.7481 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:19:59.9077 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:59.9377 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:19:59.9377 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:59.9377 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:19:59.9553 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:19:59.9811 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:19:59.9998 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:19:59.9998 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.0953 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.1121 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.1121 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.1658 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.1948 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.1948 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.2195 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.2374 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.2374 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:20:00.2374 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.2487 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:20:00.2816 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.2992 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.2992 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.3215 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.3400 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.3422 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.3422 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.3723 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.3747 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.3892 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.4165 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.4165 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.4361 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.4361 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.4520 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.4520 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.4825 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.4847 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.5053 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.5265 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.5265 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.5439 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.5605 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.5626 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.5783 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.5783 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.5929 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.6447 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.6579 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.6579 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.6804 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.6975 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.6975 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.7147 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.7244 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.7244 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.7415 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.7514 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.7514 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.7764 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.7904 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.7904 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.8105 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.8191 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.8191 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.8374 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.8463 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.8463 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.8637 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.8637 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.8760 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.8945 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.8945 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.8945 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.9170 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.9258 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.9258 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.9437 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.9539 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.9539 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.9688 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:00.9688 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:00.9688 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:00.9945 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:01.0032 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:01.0032 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:01.0195 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:01.0504 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:01.0504 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:01.1250 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:01.1676 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:01.1701 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:01.2026 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:01.2171 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:01.2171 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:01.2428 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:01.2516 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:01.2516 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:01.2717 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:01.2822 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:01.2822 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:01.3050 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:01.3302 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:01.3302 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:01.3588 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:01.3744 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:01.3744 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:01.3919 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:01.4063 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:01.4063 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:01.4234 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:01.4234 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:01.4234 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:01.4486 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:01.4571 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:01.4571 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:01.4706 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:01.4706 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:01.4706 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:01.4938 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:01.5017 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:01.5017 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:01.5160 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 10:20:01.5160 INFO Measurements-Create: Measurement creation was created
+2021-02-05 10:20:01.5160 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 10:20:01.5365 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:20:01.5365 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:20:01.5594 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:20:01.5656 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 10:20:01.5856 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 10:20:01.6060 INFO Pack-Create: Pack creation was created
+2021-02-05 10:20:01.6082 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 10:20:42.2628 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:20:42.2716 INFO Sucessfully got all Measurements
+2021-02-05 10:20:42.3500 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:20:42.4185 INFO Sucessfully got all Measurements
+2021-02-05 10:20:42.4360 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 10:20:42.5506 INFO Sucessfully got all FUS packs
+2021-02-05 10:20:42.5728 INFO Machine-GetMachines: Attempted Call
+2021-02-05 10:20:42.5796 INFO Sucessfully got all machines
+2021-02-05 10:20:42.5988 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 10:20:42.5988 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 10:20:44.6622 INFO Machine-GetMachines: Attempted Call
+2021-02-05 10:20:44.6826 INFO Sucessfully got all machines
+2021-02-05 10:20:44.6992 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:20:44.7134 INFO Sucessfully got all Measurements
+2021-02-05 10:20:44.7319 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 10:20:44.7483 INFO Sucessfully got the machine with Id:5
+2021-02-05 10:20:45.8200 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 10:20:45.8363 INFO Sucessfully got all Measurements
+2021-02-05 13:20:22.2908 INFO AspNetUsers-Login: Login attempted call from user Linards3
+2021-02-05 13:20:22.5580 INFO AspNetUsers-Login: Linards3 Sucessfully Authenticated
+2021-02-05 13:20:22.9834 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-05 13:20:23.0311 INFO Sucessfully got all measurementPositions
+2021-02-05 13:20:29.1206 INFO Pack-GetPacks: Attempted Call
+2021-02-05 13:20:29.1643 INFO Sucessfully got all packs
+2021-02-05 13:20:33.1418 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 13:20:33.1757 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 13:20:40.1216 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-05 13:20:40.1216 INFO Sucessfully got all measurementPositions
+2021-02-05 13:20:41.8641 INFO Pack-GetPacks: Attempted Call
+2021-02-05 13:20:41.8757 INFO Sucessfully got all packs
+2021-02-05 13:20:41.8945 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 13:20:41.9071 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 13:20:43.2197 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 13:20:43.2688 INFO Sucessfully got all Measurements
+2021-02-05 13:20:43.3213 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 13:20:43.3307 INFO Sucessfully got all Measurements
+2021-02-05 13:20:43.3504 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 13:20:44.0170 INFO Sucessfully got all FUS packs
+2021-02-05 13:20:44.0678 INFO Machine-GetMachines: Attempted Call
+2021-02-05 13:20:44.0932 INFO Sucessfully got all machines
+2021-02-05 13:20:44.1145 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 13:20:44.1211 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 13:21:24.2627 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 13:21:24.3083 INFO Sucessfully got all Measurements
+2021-02-05 13:21:32.2131 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 13:21:32.2363 INFO Sucessfully got the machine with Id:5
+2021-02-05 13:21:32.2618 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 13:21:32.2989 INFO Sucessfully got all Measurements
+2021-02-05 13:21:32.2989 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:21:32.3100 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:21:37.2428 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 13:21:37.3161 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 13:21:37.3427 INFO Sucessfully got all Measurements
+2021-02-05 13:21:37.5387 INFO Pack-Create: Pack creation was created
+2021-02-05 13:21:37.5387 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 13:21:37.5783 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:21:37.6286 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:21:37.6286 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:21:40.7589 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 13:21:40.8012 INFO Sucessfully got all Measurements
+2021-02-05 13:21:40.8671 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 13:21:40.8880 INFO Sucessfully got all Measurements
+2021-02-05 13:21:40.9056 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 13:21:40.9787 INFO Sucessfully got all FUS packs
+2021-02-05 13:21:40.9982 INFO Machine-GetMachines: Attempted Call
+2021-02-05 13:21:40.9982 INFO Sucessfully got all machines
+2021-02-05 13:21:41.0161 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 13:21:41.0161 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 13:21:42.8558 INFO Pack-GetPacks: Attempted Call
+2021-02-05 13:21:42.8689 INFO Sucessfully got all packs
+2021-02-05 13:21:42.8855 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 13:21:42.8855 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 13:23:09.3759 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-05 13:23:09.3874 INFO Sucessfully got all measurementPositions
+2021-02-05 13:23:10.8603 INFO Pack-GetPacks: Attempted Call
+2021-02-05 13:23:10.8844 INFO Sucessfully got all packs
+2021-02-05 13:23:10.9078 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 13:23:10.9182 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 13:23:12.2223 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 13:23:12.2338 INFO Sucessfully got all Measurements
+2021-02-05 13:23:12.2594 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 13:23:12.2594 INFO Sucessfully got all Measurements
+2021-02-05 13:23:12.2968 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 13:23:12.3594 INFO Sucessfully got all FUS packs
+2021-02-05 13:23:12.3825 INFO Machine-GetMachines: Attempted Call
+2021-02-05 13:23:12.3925 INFO Sucessfully got all machines
+2021-02-05 13:23:12.4193 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 13:23:12.4193 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 13:23:14.4017 INFO Machine-GetMachines: Attempted Call
+2021-02-05 13:23:14.4017 INFO Sucessfully got all machines
+2021-02-05 13:23:14.4282 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 13:23:14.4417 INFO Sucessfully got all Measurements
+2021-02-05 13:23:14.4585 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 13:23:14.4697 INFO Sucessfully got the machine with Id:5
+2021-02-05 13:23:19.4326 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 13:23:19.4326 INFO Sucessfully got the machine with Id:5
+2021-02-05 13:23:19.4569 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:19.4715 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:19.4933 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 13:23:19.4933 INFO Pack-Create: Pack creation was created
+2021-02-05 13:23:19.5101 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 13:23:19.5285 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:23:19.5428 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:23:19.5428 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:23:19.5657 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 13:23:19.5777 INFO Sucessfully got the machine with Id:5
+2021-02-05 13:23:19.5974 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:19.6032 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:19.6032 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 13:23:19.6260 INFO Pack-Create: Pack creation was created
+2021-02-05 13:23:19.6260 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 13:23:19.6406 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:23:19.6510 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:23:19.6510 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:23:19.6700 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 13:23:19.6700 INFO Sucessfully got the machine with Id:5
+2021-02-05 13:23:19.6893 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:19.6999 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:19.7137 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 13:23:19.7137 INFO Pack-Create: Pack creation was created
+2021-02-05 13:23:19.7137 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 13:23:19.7381 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:23:19.7536 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:23:19.7536 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:23:19.7723 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 13:23:19.7835 INFO Sucessfully got the machine with Id:5
+2021-02-05 13:23:19.7994 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:19.7994 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:19.8198 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 13:23:19.8294 INFO Pack-Create: Pack creation was created
+2021-02-05 13:23:19.8294 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 13:23:19.8470 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:23:19.8572 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:23:19.8572 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:23:19.8733 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 13:23:19.8733 INFO Sucessfully got the machine with Id:5
+2021-02-05 13:23:19.8934 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:19.8934 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:19.9135 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 13:23:19.9242 INFO Pack-Create: Pack creation was created
+2021-02-05 13:23:19.9242 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 13:23:19.9400 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:23:19.9512 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:23:19.9512 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:23:19.9650 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 13:23:19.9650 INFO Sucessfully got the machine with Id:5
+2021-02-05 13:23:19.9862 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:19.9862 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:20.0058 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 13:23:20.0150 INFO Pack-Create: Pack creation was created
+2021-02-05 13:23:20.0150 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 13:23:20.0317 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:23:20.0497 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:23:20.0497 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:23:20.0637 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 13:23:20.0637 INFO Sucessfully got the machine with Id:5
+2021-02-05 13:23:20.0805 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:20.0805 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:20.0986 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 13:23:20.1066 INFO Pack-Create: Pack creation was created
+2021-02-05 13:23:20.1066 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 13:23:20.1205 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:23:20.1205 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:23:20.1205 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:23:20.1432 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 13:23:20.1432 INFO Sucessfully got the machine with Id:5
+2021-02-05 13:23:20.1615 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:20.1662 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:20.1662 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 13:23:20.1893 INFO Pack-Create: Pack creation was created
+2021-02-05 13:23:20.1893 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 13:23:20.2055 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:23:20.2162 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:23:20.2162 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:23:20.2315 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 13:23:20.2315 INFO Sucessfully got the machine with Id:5
+2021-02-05 13:23:20.2580 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:20.2638 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:20.2780 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 13:23:20.3039 INFO Pack-Create: Pack creation was created
+2021-02-05 13:23:20.3063 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 13:23:20.3063 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:23:20.3544 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:23:20.3544 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:23:20.3719 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 13:23:20.3719 INFO Sucessfully got the machine with Id:5
+2021-02-05 13:23:20.3942 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:20.3942 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:23:20.3998 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 13:23:20.4260 INFO Pack-Create: Pack creation was created
+2021-02-05 13:23:20.4260 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 13:23:20.4433 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:23:20.4592 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:23:20.4592 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:23:23.0270 INFO Machine-GetMachines: Attempted Call
+2021-02-05 13:23:23.0270 INFO Sucessfully got all machines
+2021-02-05 13:23:23.0511 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 13:23:23.0614 INFO Sucessfully got all Measurements
+2021-02-05 13:23:23.0817 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 13:23:23.1085 INFO Sucessfully got the machine with Id:5
+2021-02-05 13:23:23.9454 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 13:23:23.9528 INFO Sucessfully got all Measurements
+2021-02-05 13:23:23.9752 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 13:23:23.9814 INFO Sucessfully got all Measurements
+2021-02-05 13:23:23.9985 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 13:23:24.0631 INFO Sucessfully got all FUS packs
+2021-02-05 13:23:24.0823 INFO Machine-GetMachines: Attempted Call
+2021-02-05 13:23:24.0904 INFO Sucessfully got all machines
+2021-02-05 13:23:24.0904 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 13:23:24.1084 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 13:23:25.3215 INFO Pack-GetPacks: Attempted Call
+2021-02-05 13:23:25.3215 INFO Sucessfully got all packs
+2021-02-05 13:23:25.3489 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 13:23:25.3556 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 13:24:48.6805 INFO AspNetUsers-Login: Login attempted call from user Linards3
+2021-02-05 13:24:48.9597 INFO AspNetUsers-Login: Linards3 Sucessfully Authenticated
+2021-02-05 13:24:49.4095 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-05 13:24:49.4675 INFO Sucessfully got all measurementPositions
+2021-02-05 13:24:50.4339 INFO Pack-GetPacks: Attempted Call
+2021-02-05 13:24:50.4730 INFO Sucessfully got all packs
+2021-02-05 13:24:50.5193 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 13:24:50.5445 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 13:24:51.6438 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 13:24:51.6741 INFO Sucessfully got all Measurements
+2021-02-05 13:24:51.7020 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 13:24:51.7020 INFO Sucessfully got all Measurements
+2021-02-05 13:24:51.7320 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 13:24:51.8390 INFO Sucessfully got all FUS packs
+2021-02-05 13:24:51.9320 INFO Machine-GetMachines: Attempted Call
+2021-02-05 13:24:51.9517 INFO Sucessfully got all machines
+2021-02-05 13:24:51.9778 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 13:24:51.9836 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 13:25:23.7915 INFO Machine-GetMachine: Attempted get machine with ID: 14
+2021-02-05 13:25:23.8196 INFO Sucessfully got the machine with Id:14
+2021-02-05 13:25:27.1969 INFO Machine-GetMachine: Attempted get machine with ID: 14
+2021-02-05 13:25:27.2319 INFO Sucessfully got the machine with Id:14
+2021-02-05 13:25:27.4799 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:27.6828 INFO Machine-GetMachine: Attempted get machine with ID: 14
+2021-02-05 13:25:27.7438 INFO Sucessfully got the machine with Id:14
+2021-02-05 13:25:27.8457 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:27.8457 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:27.8837 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:27.9027 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:27.9027 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:27.9346 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:27.9346 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:27.9346 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:27.9616 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:27.9616 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:27.9616 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:27.9908 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:27.9991 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:27.9991 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.0157 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.0274 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.0274 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.0423 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.0570 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.0570 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.0839 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.0976 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.0976 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.1196 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.1342 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.1342 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.1523 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.1523 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.1649 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.1816 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.1816 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.1969 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.2134 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.2134 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.2134 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.2439 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.2439 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.2439 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.2738 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.2864 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.2864 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.3078 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.3228 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.3228 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.4499 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.4805 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.4805 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.5124 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.5276 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.5276 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.5442 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.5612 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.5612 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.5804 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.5949 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.5949 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.6126 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.6234 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.6234 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.6379 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.6379 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.6516 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.6674 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.6674 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.6674 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.7024 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.7423 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.7458 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.7648 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.7812 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.7812 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.8003 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.8148 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.8148 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.8444 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.8593 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.8593 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.8784 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.8881 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.8881 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.9077 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.9171 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.9171 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.9392 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:28.9680 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:28.9680 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:28.9854 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:29.0038 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:29.0038 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:29.0272 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:29.0428 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:29.0428 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:29.1039 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:29.1363 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:29.1363 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:29.2356 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:29.2514 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:29.2514 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:29.2725 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:29.2862 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:29.2862 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:29.3108 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:29.3219 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:29.3219 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:29.3481 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:29.3712 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:29.3712 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:29.4108 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:29.4219 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:29.4219 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:29.4459 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:29.4459 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:29.4459 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:29.4964 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:29.5128 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:29.5128 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:29.5534 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 13:25:29.5710 INFO Measurements-Create: Measurement creation was created
+2021-02-05 13:25:29.5710 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 13:25:29.6067 INFO Machine-GetMachine: Attempted get machine with ID: 14
+2021-02-05 13:25:29.6248 INFO Sucessfully got the machine with Id:14
+2021-02-05 13:25:29.7167 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:25:29.7342 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 13:25:29.9303 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 13:25:29.9600 INFO Pack-Create: Pack creation was created
+2021-02-05 13:25:29.9623 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 14:31:26.0330 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:31:26.0555 INFO Sucessfully got all Measurements
+2021-02-05 14:31:26.1240 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:31:26.1240 INFO Sucessfully got all Measurements
+2021-02-05 14:31:26.1557 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 14:31:26.2569 INFO Sucessfully got all FUS packs
+2021-02-05 14:31:26.2770 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:31:26.2826 INFO Sucessfully got all machines
+2021-02-05 14:31:26.3039 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 14:31:26.3131 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 14:31:28.0995 INFO Pack-GetPacks: Attempted Call
+2021-02-05 14:31:28.1112 INFO Sucessfully got all packs
+2021-02-05 14:31:28.1400 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 14:31:28.1400 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 14:31:32.1844 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:31:32.2049 INFO Sucessfully got all Measurements
+2021-02-05 14:31:32.2359 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:31:32.2359 INFO Sucessfully got all Measurements
+2021-02-05 14:31:32.2728 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 14:31:32.3513 INFO Sucessfully got all FUS packs
+2021-02-05 14:31:32.3736 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:31:32.3736 INFO Sucessfully got all machines
+2021-02-05 14:31:32.3984 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 14:31:32.4051 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 14:31:58.8188 INFO Pack-GetPacks: Attempted Call
+2021-02-05 14:31:58.8312 INFO Sucessfully got all packs
+2021-02-05 14:31:58.8895 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 14:31:58.8895 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 14:32:00.8471 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:32:00.8641 INFO Sucessfully got all Measurements
+2021-02-05 14:32:00.9242 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:32:00.9242 INFO Sucessfully got all Measurements
+2021-02-05 14:32:00.9514 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 14:32:01.0184 INFO Sucessfully got all FUS packs
+2021-02-05 14:32:01.0409 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:32:01.0476 INFO Sucessfully got all machines
+2021-02-05 14:32:01.0643 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 14:32:01.0643 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 14:32:04.5171 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:32:04.5610 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:32:06.6528 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:32:06.6607 INFO Sucessfully got all Measurements
+2021-02-05 14:32:06.6835 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:32:06.6901 INFO Sucessfully got all Measurements
+2021-02-05 14:32:06.7074 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 14:32:06.7745 INFO Sucessfully got all FUS packs
+2021-02-05 14:32:06.8045 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:32:06.8109 INFO Sucessfully got all machines
+2021-02-05 14:32:06.8635 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 14:32:06.8635 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 14:32:07.8214 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:32:07.8299 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:32:09.0052 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:09.0456 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:09.0456 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:09.0871 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:32:09.1106 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:32:09.1239 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:09.1666 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:09.1666 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:09.2763 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:09.3019 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:09.3019 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:09.4740 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:09.4917 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:09.4917 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:09.5059 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:32:09.5307 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:32:09.5307 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:09.5501 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:09.5501 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:09.5693 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:09.5864 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:09.5864 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:09.6095 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:09.6254 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:09.6254 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:09.6482 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:09.6727 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:09.6727 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:09.6924 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:09.7027 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:09.7027 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:09.7427 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:09.7736 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:09.7736 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:09.7947 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:09.8057 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:09.8057 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:09.8198 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:09.8303 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:09.8303 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:09.8443 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:09.8443 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:09.8443 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:09.8711 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:09.8799 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:09.8799 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:09.8963 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:09.9058 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:09.9058 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:09.9203 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:09.9203 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:09.9203 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:09.9455 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:09.9607 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:09.9607 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:09.9799 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.0085 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.0085 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.0224 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.0324 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.0324 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.0514 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.0736 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.0736 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.0910 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.1006 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.1006 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.1212 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.1393 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.1393 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.1593 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.1593 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.1720 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.1934 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.2086 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.2086 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.2286 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.2376 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.2376 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.2575 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.2703 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.2703 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.2857 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.2857 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.2968 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.2968 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.3166 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.3166 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.3315 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.3315 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.3315 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.3537 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.3620 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.3620 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.3765 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.3765 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.3765 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.4037 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.4114 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.4114 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.4289 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.4495 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.4516 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.4691 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.4886 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.4886 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.5082 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.5172 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.5172 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.5398 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.5603 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.5603 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.5827 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.5827 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.5920 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.6152 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.6152 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.6250 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.6250 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.6479 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.6479 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.6637 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:10.6726 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:10.6726 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:10.6867 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:32:10.6867 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:32:10.7118 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:10.7176 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:10.7176 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 14:32:10.7623 INFO Pack-Create: Pack creation was created
+2021-02-05 14:32:10.7642 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 14:32:20.0833 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:32:20.0929 INFO Sucessfully got all Measurements
+2021-02-05 14:32:20.1251 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:32:20.1251 INFO Sucessfully got all Measurements
+2021-02-05 14:32:20.1819 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 14:32:20.2481 INFO Sucessfully got all FUS packs
+2021-02-05 14:32:20.2690 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:32:20.2690 INFO Sucessfully got all machines
+2021-02-05 14:32:20.2974 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 14:32:20.2974 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 14:32:23.9429 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:32:23.9593 INFO Sucessfully got all machines
+2021-02-05 14:32:23.9749 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:32:23.9858 INFO Sucessfully got all Measurements
+2021-02-05 14:32:24.0077 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:32:24.0149 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:32:24.9824 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:32:24.9824 INFO Sucessfully got all Measurements
+2021-02-05 14:32:26.9218 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:32:26.9218 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:32:26.9542 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:26.9542 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:26.9819 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 14:32:26.9947 INFO Pack-Create: Pack creation was created
+2021-02-05 14:32:26.9947 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 14:32:27.0104 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:27.0231 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:27.0231 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:27.0394 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:32:27.0469 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:32:27.0469 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:27.0601 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:27.0815 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 14:32:27.0815 INFO Pack-Create: Pack creation was created
+2021-02-05 14:32:27.0931 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 14:32:27.0931 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:27.1163 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:27.1163 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:27.1302 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:32:27.1302 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:32:27.1486 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:27.1614 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:27.1756 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 14:32:27.1851 INFO Pack-Create: Pack creation was created
+2021-02-05 14:32:27.1851 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 14:32:27.2021 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:27.2021 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:27.2021 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:27.2240 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:32:27.2240 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:32:27.2428 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:27.2428 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:27.2602 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 14:32:27.2680 INFO Pack-Create: Pack creation was created
+2021-02-05 14:32:27.2680 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 14:32:27.2810 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:27.2810 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:27.2810 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:27.3041 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:32:27.3041 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:32:27.3217 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:27.3266 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:27.3266 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 14:32:27.3482 INFO Pack-Create: Pack creation was created
+2021-02-05 14:32:27.3482 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 14:32:27.3616 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:27.3616 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:27.3616 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:27.3839 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:32:27.3898 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:32:27.4046 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:27.4046 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:27.4264 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 14:32:27.4264 INFO Pack-Create: Pack creation was created
+2021-02-05 14:32:27.4366 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 14:32:27.4366 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:27.4592 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:27.4592 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:27.4722 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:32:27.4722 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:32:27.4893 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:27.4893 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:27.5073 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 14:32:27.5170 INFO Pack-Create: Pack creation was created
+2021-02-05 14:32:27.5170 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 14:32:27.5303 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:27.5303 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:27.5303 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:27.5555 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:32:27.5605 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:32:27.5605 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:27.5787 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:27.5923 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 14:32:27.5923 INFO Pack-Create: Pack creation was created
+2021-02-05 14:32:27.5923 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 14:32:27.6178 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:27.6294 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:27.6294 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:27.6512 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:32:27.6712 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:32:27.6879 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:27.6879 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:27.7175 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 14:32:27.7424 INFO Pack-Create: Pack creation was created
+2021-02-05 14:32:27.7424 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 14:32:27.7573 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:27.7685 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:27.7685 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:32:27.7842 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:32:27.7842 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:32:27.8050 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:27.8103 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:32:27.8103 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 14:32:27.8336 INFO Pack-Create: Pack creation was created
+2021-02-05 14:32:27.8336 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 14:32:27.8497 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:32:27.8627 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:32:27.8627 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:33:25.5622 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:33:25.5937 INFO Sucessfully got all machines
+2021-02-05 14:33:25.6258 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:33:25.6405 INFO Sucessfully got all Measurements
+2021-02-05 14:33:25.6559 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:33:25.6559 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:33:58.4982 INFO AspNetUsers-Login: Login attempted call from user Linards3
+2021-02-05 14:33:58.7804 INFO AspNetUsers-Login: Linards3 Sucessfully Authenticated
+2021-02-05 14:33:59.2355 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-05 14:33:59.2875 INFO Sucessfully got all measurementPositions
+2021-02-05 14:34:00.2549 INFO Pack-GetPacks: Attempted Call
+2021-02-05 14:34:00.2835 INFO Sucessfully got all packs
+2021-02-05 14:34:00.3284 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 14:34:00.3530 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 14:34:01.1855 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:34:01.2231 INFO Sucessfully got all Measurements
+2021-02-05 14:34:01.2586 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:34:01.2674 INFO Sucessfully got all Measurements
+2021-02-05 14:34:01.2951 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 14:34:01.3995 INFO Sucessfully got all FUS packs
+2021-02-05 14:34:01.4432 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:34:01.4674 INFO Sucessfully got all machines
+2021-02-05 14:34:01.4954 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 14:34:01.5018 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 14:34:05.1906 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:34:05.2239 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:34:07.0696 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:34:07.0885 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:34:07.1755 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:07.3433 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:34:07.3433 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:34:07.5652 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:07.5652 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:07.6065 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:07.6240 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:07.6240 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:07.6513 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:07.6643 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:07.6643 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:07.6836 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:07.6932 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:07.6932 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:07.7361 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:07.7489 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:07.7489 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:07.7666 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:07.7875 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:07.7875 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:07.8099 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:07.8234 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:07.8234 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:07.8431 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:07.8431 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:07.8431 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:07.8680 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:07.8759 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:07.8759 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:07.8906 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:07.8906 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:07.8906 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:07.9182 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:07.9307 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:07.9307 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:07.9511 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:07.9685 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:07.9685 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:07.9862 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.0044 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.0044 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.0245 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.0349 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.0349 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.0538 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.0640 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.0640 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.0817 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.0817 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.0919 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.0919 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.1376 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.1397 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.1632 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.1869 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.1869 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.2114 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.2271 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.2271 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.2448 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.2659 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.2659 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.2859 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.3013 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.3013 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.3172 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.3309 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.3309 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.3506 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.3824 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.3824 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.3982 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.4068 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.4068 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.4227 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.4227 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.4227 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.4461 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.4552 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.4552 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.4691 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.4691 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.4829 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.4983 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.4983 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.4983 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.5386 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.5571 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.6987 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.7500 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.7639 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.7639 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.7955 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.7955 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.8115 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.8298 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.8487 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.8487 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.8722 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.8722 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.8722 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.9032 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.9115 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.9115 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.9303 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.9386 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.9386 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.9573 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:08.9695 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:08.9695 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:08.9892 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:09.0059 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:09.0059 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:09.0315 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:09.0559 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:09.0559 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:09.0857 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:09.1104 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:09.1104 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:09.1317 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:09.1457 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:09.1457 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:09.1641 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:34:09.1728 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:34:09.1948 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:34:09.2034 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:34:09.2342 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 14:34:09.2601 INFO Pack-Create: Pack creation was created
+2021-02-05 14:34:09.2601 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 14:34:33.0973 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:34:33.1267 INFO Sucessfully got all Measurements
+2021-02-05 14:34:33.1815 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:34:33.1943 INFO Sucessfully got all Measurements
+2021-02-05 14:34:33.2158 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 14:34:33.2766 INFO Sucessfully got all FUS packs
+2021-02-05 14:34:33.3002 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:34:33.3002 INFO Sucessfully got all machines
+2021-02-05 14:34:33.3203 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 14:34:33.3272 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 14:34:34.8232 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:34:34.8321 INFO Sucessfully got all machines
+2021-02-05 14:34:34.8512 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:34:34.8687 INFO Sucessfully got all Measurements
+2021-02-05 14:34:34.8958 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:34:34.9120 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:34:35.8165 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:34:35.8278 INFO Sucessfully got all Measurements
+2021-02-05 14:34:38.7665 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:38.7813 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:38.7813 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:38.8017 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:38.8239 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:38.8261 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:38.8498 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:38.8677 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:38.8677 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:38.8871 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:38.9065 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:38.9065 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:38.9279 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:38.9379 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:38.9379 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:38.9561 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:38.9561 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:38.9674 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:38.9826 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:38.9826 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:38.9826 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:39.0084 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:39.0465 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:39.0465 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:39.0679 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:39.0804 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:39.0804 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:39.1222 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:34:39.1326 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:34:39.1326 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:34:39.1786 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:34:39.1924 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:34:39.2125 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:34:39.2206 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:34:39.2412 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 14:34:39.2526 INFO Pack-Create: Pack creation was created
+2021-02-05 14:34:39.2526 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 14:35:13.1181 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:35:13.1310 INFO Sucessfully got all machines
+2021-02-05 14:35:13.1561 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:35:13.1561 INFO Sucessfully got all Measurements
+2021-02-05 14:35:13.1879 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:35:13.1879 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:35:16.1916 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:35:16.2094 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:35:16.2094 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:35:16.2254 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:35:16.2388 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:35:16.2388 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:35:16.2551 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:35:16.2674 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:35:16.2674 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:35:16.2847 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:35:16.2970 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:35:16.2970 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:35:16.3139 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:35:16.3322 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:35:16.3322 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:35:16.3523 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:35:16.3670 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:35:16.3670 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:35:16.3910 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:35:16.3910 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:35:16.3910 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:35:16.4199 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:35:16.4199 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:35:16.4199 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:35:16.4487 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:35:16.4662 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:35:16.4662 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:35:16.4842 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:35:16.4842 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:35:16.4842 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:35:16.5084 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:35:16.5145 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:35:16.5145 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:35:16.5324 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:35:16.5461 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 14:35:16.5461 INFO Pack-Create: Pack creation was created
+2021-02-05 14:35:16.5461 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 14:35:31.4817 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:35:31.4817 INFO Sucessfully got all machines
+2021-02-05 14:35:31.5141 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:35:31.5141 INFO Sucessfully got all Measurements
+2021-02-05 14:35:31.5470 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:35:31.5470 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:35:33.7893 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:35:33.8120 INFO Sucessfully got all Measurements
+2021-02-05 14:35:33.8434 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:35:33.8627 INFO Sucessfully got all Measurements
+2021-02-05 14:35:33.8807 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 14:35:33.9971 INFO Sucessfully got all FUS packs
+2021-02-05 14:35:34.0193 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:35:34.0193 INFO Sucessfully got all machines
+2021-02-05 14:35:34.0378 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 14:35:34.0489 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 14:35:35.1889 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:35:35.2011 INFO Sucessfully got all Measurements
+2021-02-05 14:35:37.0849 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:35:37.0849 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:35:37.1060 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:35:37.1290 INFO Sucessfully got all Measurements
+2021-02-05 14:35:37.1405 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:35:37.1405 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 14:35:37.1788 INFO Pack-Create: Pack creation  Attempted
+2021-02-05 14:35:37.2101 INFO Pack-Create: Pack creation was created
+2021-02-05 14:35:37.2101 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-02-05 14:35:37.2561 INFO Measurements-Create: Measurement creation  Attempted
+2021-02-05 14:35:37.2786 INFO Measurements-Create: Measurement creation was created
+2021-02-05 14:35:37.2786 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-02-05 14:35:37.3330 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:35:37.3736 INFO Sucessfully got all Measurements
+2021-02-05 14:35:56.0387 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:35:56.0616 INFO Sucessfully got all Measurements
+2021-02-05 14:35:56.1161 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:35:56.1577 INFO Sucessfully got all Measurements
+2021-02-05 14:35:56.1968 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 14:35:56.2612 INFO Sucessfully got all FUS packs
+2021-02-05 14:35:56.2787 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:35:56.2837 INFO Sucessfully got all machines
+2021-02-05 14:35:56.2991 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 14:35:56.2991 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 14:35:57.8341 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:35:57.8408 INFO Sucessfully got all machines
+2021-02-05 14:35:57.8408 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:35:57.8640 INFO Sucessfully got all Measurements
+2021-02-05 14:35:57.8778 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:35:57.8778 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:36:03.0741 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:36:03.0802 INFO Sucessfully got all machines
+2021-02-05 14:36:03.0950 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:36:03.0950 INFO Sucessfully got all Measurements
+2021-02-05 14:36:03.1211 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:36:03.1282 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:36:04.0971 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:36:04.1078 INFO Sucessfully got all Measurements
+2021-02-05 14:36:11.2260 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:36:11.2413 INFO Sucessfully got all machines
+2021-02-05 14:36:11.3148 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:36:11.3331 INFO Sucessfully got all Measurements
+2021-02-05 14:36:11.3861 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:36:11.3952 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:36:12.6002 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:36:12.6115 INFO Sucessfully got all Measurements
+2021-02-05 14:36:12.6252 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:36:12.6252 INFO Sucessfully got all Measurements
+2021-02-05 14:36:12.6496 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 14:36:12.7153 INFO Sucessfully got all FUS packs
+2021-02-05 14:36:12.7428 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:36:12.7481 INFO Sucessfully got all machines
+2021-02-05 14:36:12.7695 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 14:36:12.7695 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 14:36:15.5763 INFO Machine-GetMachine: Attempted get machine with ID: 5
+2021-02-05 14:36:15.6014 INFO Sucessfully got the machine with Id:5
+2021-02-05 14:59:24.0271 INFO AspNetUsers-Login: Login attempted call from user Linards3
+2021-02-05 14:59:24.3025 INFO AspNetUsers-Login: Linards3 Sucessfully Authenticated
+2021-02-05 14:59:24.8929 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-05 14:59:24.9520 INFO Sucessfully got all measurementPositions
+2021-02-05 14:59:27.2509 INFO Pack-GetPacks: Attempted Call
+2021-02-05 14:59:27.2937 INFO Sucessfully got all packs
+2021-02-05 14:59:27.3403 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 14:59:27.3682 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 14:59:31.0329 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:59:31.1005 INFO Sucessfully got all Measurements
+2021-02-05 14:59:31.1589 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 14:59:31.1677 INFO Sucessfully got all Measurements
+2021-02-05 14:59:31.2030 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 14:59:31.3285 INFO Sucessfully got all FUS packs
+2021-02-05 14:59:31.3724 INFO Machine-GetMachines: Attempted Call
+2021-02-05 14:59:31.3935 INFO Sucessfully got all machines
+2021-02-05 14:59:31.4209 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 14:59:31.4209 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 16:17:12.5072 INFO AspNetUsers-Login: Login attempted call from user Linards3
+2021-02-05 16:17:12.7901 INFO AspNetUsers-Login: Linards3 Sucessfully Authenticated
+2021-02-05 16:17:13.3478 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-05 16:17:13.4111 INFO Sucessfully got all measurementPositions
+2021-02-05 16:17:14.7801 INFO Pack-GetPacks: Attempted Call
+2021-02-05 16:17:14.8260 INFO Sucessfully got all packs
+2021-02-05 16:17:14.8725 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 16:17:14.9035 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 16:17:20.4068 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 16:17:20.4731 INFO Sucessfully got all Measurements
+2021-02-05 16:17:20.5279 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 16:17:20.5376 INFO Sucessfully got all Measurements
+2021-02-05 16:17:20.5779 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 16:17:20.7121 INFO Sucessfully got all FUS packs
+2021-02-05 16:17:20.7748 INFO Machine-GetMachines: Attempted Call
+2021-02-05 16:17:20.7938 INFO Sucessfully got all machines
+2021-02-05 16:17:20.8176 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 16:17:20.8242 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 16:17:27.4308 INFO Machine-GetMachine: Attempted get machine with ID: 0
+2021-02-05 16:17:27.4508 WARN machine with the id:0 was not found
+2021-02-05 16:17:58.2800 INFO AspNetUsers-Login: Login attempted call from user Linards3
+2021-02-05 16:17:58.3966 INFO AspNetUsers-Login: Linards3 Sucessfully Authenticated
+2021-02-05 16:17:58.5108 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-05 16:17:58.5108 INFO Sucessfully got all measurementPositions
+2021-02-05 16:18:00.0804 INFO Pack-GetPacks: Attempted Call
+2021-02-05 16:18:00.0957 INFO Sucessfully got all packs
+2021-02-05 16:18:00.1198 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 16:18:00.1198 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 16:18:01.5210 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 16:18:01.5353 INFO Sucessfully got all Measurements
+2021-02-05 16:18:01.5571 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 16:18:01.5571 INFO Sucessfully got all Measurements
+2021-02-05 16:18:01.5815 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 16:18:01.6556 INFO Sucessfully got all FUS packs
+2021-02-05 16:18:01.6849 INFO Machine-GetMachines: Attempted Call
+2021-02-05 16:18:01.6849 INFO Sucessfully got all machines
+2021-02-05 16:18:01.7267 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 16:18:01.7575 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 16:18:12.9827 INFO Machine-GetMachine: Attempted get machine with ID: 0
+2021-02-05 16:18:13.0059 WARN machine with the id:0 was not found
+2021-02-05 16:21:07.3975 INFO AspNetUsers-Login: Login attempted call from user Linards3
+2021-02-05 16:21:07.4680 INFO AspNetUsers-Login: Linards3 Sucessfully Authenticated
+2021-02-05 16:21:07.7685 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-05 16:21:07.7908 INFO Sucessfully got all measurementPositions
+2021-02-05 16:21:08.5824 INFO Pack-GetPacks: Attempted Call
+2021-02-05 16:21:08.6016 INFO Sucessfully got all packs
+2021-02-05 16:21:08.6300 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 16:21:08.6300 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 16:21:09.6601 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 16:21:09.6835 INFO Sucessfully got all Measurements
+2021-02-05 16:21:09.7045 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 16:21:09.7140 INFO Sucessfully got all Measurements
+2021-02-05 16:21:09.7379 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 16:21:09.8123 INFO Sucessfully got all FUS packs
+2021-02-05 16:21:09.8327 INFO Machine-GetMachines: Attempted Call
+2021-02-05 16:21:09.8377 INFO Sucessfully got all machines
+2021-02-05 16:21:09.8518 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 16:21:09.8518 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 16:21:22.0113 INFO Machine-GetMachine: Attempted get machine with ID: 0
+2021-02-05 16:21:22.0652 WARN machine with the id:0 was not found
+2021-02-05 16:49:43.1395 INFO AspNetUsers-Login: Login attempted call from user Linards3
+2021-02-05 16:49:43.4018 INFO AspNetUsers-Login: Linards3 Sucessfully Authenticated
+2021-02-05 16:49:43.8494 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-05 16:49:43.9013 INFO Sucessfully got all measurementPositions
+2021-02-05 16:49:51.1452 INFO Pack-GetPacks: Attempted Call
+2021-02-05 16:49:51.1921 INFO Sucessfully got all packs
+2021-02-05 16:49:51.2406 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 16:49:51.2728 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 16:49:54.5457 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 16:49:54.6058 INFO Sucessfully got all Measurements
+2021-02-05 16:49:54.6735 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-05 16:49:54.6735 INFO Sucessfully got all Measurements
+2021-02-05 16:49:54.7089 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-05 16:49:54.8350 INFO Sucessfully got all FUS packs
+2021-02-05 16:49:54.8879 INFO Machine-GetMachines: Attempted Call
+2021-02-05 16:49:54.9070 INFO Sucessfully got all machines
+2021-02-05 16:49:54.9303 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 16:49:54.9364 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 17:15:37.4318 INFO Pack-GetPacks: Attempted Call
+2021-02-05 17:15:37.4835 INFO Sucessfully got all packs
+2021-02-05 17:15:37.4992 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-05 17:15:37.5136 INFO Sucessfully got the measurement position with Id:1
+2021-02-05 17:15:38.3894 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-05 17:15:38.4066 INFO Sucessfully got all measurementPositions
+2021-02-05 17:16:07.8058 INFO AspNetUsers-Create: User creation  Attempted
+2021-02-05 17:16:08.1424 INFO AspNetUsers-Create: User creation was created
+2021-02-05 17:16:08.1424 INFO AspNetUsers-Create: frats
+2021-02-05 17:16:19.3586 INFO AspNetUsers-GetUser: Attempted Call for id: 3c76b8ea-9c6a-497a-aab3-ee3737956c87
+2021-02-05 17:16:19.3683 INFO AspNetUsers-GetUser: Successfully got record with id: 3c76b8ea-9c6a-497a-aab3-ee3737956c87
+2021-02-05 17:16:22.2936 WARN AspNetUsers-Update: user update atempted - id: 3c76b8ea-9c6a-497a-aab3-ee3737956c87
+2021-02-05 17:16:22.3227 INFO AspNetUsers-Update: user Data with id: 3c76b8ea-9c6a-497a-aab3-ee3737956c87 was updated
+2021-02-05 17:26:38.0795 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 17:26:38.0924 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 17:26:40.6927 WARN AspNetUsers-Update: user update atempted - id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 17:26:40.7246 INFO AspNetUsers-Update: user Data with id: 19073b7c-9cf5-46c9-99cc-f236e502232e was updated
+2021-02-05 17:27:55.4473 INFO AspNetUsers-GetUser: Attempted Call for id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 17:27:55.4473 INFO AspNetUsers-GetUser: Successfully got record with id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 17:28:01.8501 WARN AspNetUsers-Update: user update atempted - id: 19073b7c-9cf5-46c9-99cc-f236e502232e
+2021-02-05 17:28:01.8809 INFO AspNetUsers-Update: user Data with id: 19073b7c-9cf5-46c9-99cc-f236e502232e was updated
+2021-02-05 17:28:22.2991 INFO AspNetUsers-GetUser: Attempted Call for id: 240d1a27-9b58-41ce-8e8b-a183e51a5342
+2021-02-05 17:28:22.3066 INFO AspNetUsers-GetUser: Successfully got record with id: 240d1a27-9b58-41ce-8e8b-a183e51a5342
+2021-02-05 17:28:35.3135 WARN AspNetUsers-Update: user update atempted - id: 240d1a27-9b58-41ce-8e8b-a183e51a5342
+2021-02-05 17:28:35.3398 INFO AspNetUsers-Update: user Data with id: 240d1a27-9b58-41ce-8e8b-a183e51a5342 was updated

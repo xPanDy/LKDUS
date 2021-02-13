@@ -89,7 +89,30 @@
     private void NavigateToMeasurements(MouseEventArgs a, int i)
     {
         measurementPositionId = i.ToString();
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}");
+        if (i == 1) {
+            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}");
+        }
+        else if (i == 2)
+        {
+            this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
+        }
+        else if (i == 3)
+        {
+            this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
+        }
+        else if (i == 4)
+        {
+            this.navManager.NavigateTo($"/measurementspeelingknives/{userId}/{measurementPositionId}");
+        }
+        else if (i == 5)
+        {
+            this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
+        }
+
+        else if (i == 6)
+        {
+            this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
+        }
     }
 
     protected async override Task OnInitializedAsync()

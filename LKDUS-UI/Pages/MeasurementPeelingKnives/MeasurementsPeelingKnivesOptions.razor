@@ -1,5 +1,4 @@
-﻿@page "/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions"
-@* // /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions*@
+﻿@page "/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/"
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
 @using LKDUS_UI.Contracts
@@ -16,25 +15,28 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <button type="button" @onclick="@Return" class="btn btn-primary btn-block">Atpakaļ</button>
-            </div>
-            <div class="col w-25"><h3 class="card-title">Mitrā finiera izmēri</h3></div>
-            <div class="col">
-                <button type="submit" class="btn btn-primary btn-block">Saglabāt</button>
+                <button type="button" @onclick="@Return" class="btn btn-primary  ">Atpakaļ</button>
             </div>
 
-        </div>
+            @*<div class="col">
+                <button type="submit" class="btn btn-primary btn-block">Saglabāt</button>
+            </div>*@
+
+        </div><div class="row">
+    <div class="col w-25"><h3 class="card-title">Lobnaža asināšana</h3></div>
+</div>
     </div>
     <div>
         <div class="row">
             <div class="col w-25 h-25">
-                <button class="btn btn-warning btn-block" @onclick="@NavigattetoWidth">
-                    <h3>Lokšņu platums</h3>
+                <button class="btn btn-warning btn-block" @onclick="@NavigatetoPoints">
+                    <h3>Pārbaudes punkti</h3>
                 </button>
             </div>
 
 
-            <div class="col"><button class="btn btn-warning btn-block" @onclick="@GoLength"> <h3>Lokšņu garums</h3> </button></div>
+            <div class="col"><button class="btn btn-warning btn-block" @onclick="@NavigatetoAngle">
+                <h3>Nažu izmēri un asināšanas leņķis</h3> </button></div>
 
 
             <div class="w-100"></div>
@@ -85,7 +87,7 @@
 
 
 
-        if (machine.Id  == 0)
+        if (machine.Id == 0)
         {
             machine.Id = Machines.FirstOrDefault().Id;
 
@@ -107,17 +109,17 @@
     private void Return(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
+        this.navManager.NavigateTo($"/measurementspeelingknives/{userId}/{measurementPositionId}/create");
     }
 
 
-    private void NavigattetoWidth(MouseEventArgs e)
+    private void NavigatetoPoints(MouseEventArgs e)
     {
 
         this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions/width");
     }
 
-    private void GoLength(MouseEventArgs e)
+    private void NavigatetoAngle(MouseEventArgs e)
     {
 
         this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions/length");

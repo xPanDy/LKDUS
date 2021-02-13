@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LKDUS_UI.Contracts
 {
-    public interface IPacksRepository : IBaseRepository<FusPack>
+    public interface IPacksRepository : IBaseRepository<Pack>
     {
        
 

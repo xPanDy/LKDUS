@@ -1,0 +1,153 @@
+﻿@page "/measurementspeeling/{userId}/{measurementPositionId}"
+
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+
+@inject IMeasurementRepository repo
+@inject IPacksRepository pRepo
+@inject NavigationManager navManager
+@inject IMeasurementPositionsRepository measurementPositionRepo
+
+
+
+<div class="card" style="height:100%">
+    <div class="container">
+        <div class="row">
+
+            <div class="col">
+                <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+
+    <div style="height:50%" class="container">
+        <div class="mh-50">
+            <h3 class="card-title">@mp.Name</h3>
+            <button type="button" @onclick="@OpenCreateForm" class="btn btn-info">Jauns</button>
+            <h3 class="card-title">Pārbaudītās pakas</h3>
+
+        </div>
+
+
+    </div>
+
+
+
+    @if (Model == null)
+    {
+        <LoadingMessage Message="Notiek mizošanas mērījumu ielāde" />
+    }
+    else
+    {
+
+        <!-- Scroll bar present and enabled when more contents -->
+
+
+
+
+        <div class="container pre-scrollable" style="height:75%">
+            <div class="mh-75">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nr.                 </th>
+                            <th scope="col">Datums              </th>
+                            <th scope="col">Iekārta               </th>
+                            <th scope="col">Maiņa             </th>
+                            <th scope="col">Laborants           </th>
+                            <th scope="col">Fus Pakas ID   </th>
+                            
+
+                            @*<th scope="col">Meistars</th>*@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var model in Model)
+                        {
+
+                            <tr>
+                                <th scope="row">@model.Id</th>
+                                <td>@model.DateCreated</td>
+                                <td>@model.Machine</td>
+                                <td>@model.Shift</td>
+                                <td>@model.Author</td>
+                                <td>@model.FusCode</td>
+                               
+
+
+
+
+                            </tr>
+
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+
+
+
+        </div>
+
+
+
+
+    }
+</div>
+@code {
+
+    [Parameter]
+    public string measurementPositionId { get; set; }
+    [Parameter]
+    public string userId { get; set; }
+
+    MeasurementPosition mp = new MeasurementPosition();
+
+    protected override void OnParametersSet()
+    {
+        //the param will be set now
+        string test = measurementPositionId;
+    }
+
+    //private IList<Measurement> Model;
+    private IList<Pack> Model;
+    private MeasurementPosition measurementPosition;
+
+    protected async override Task OnInitializedAsync()
+    {
+      // Model = await repo.Get(Endpoints.MeasurementEndpoint);
+       Model = await pRepo.Get(Endpoints.PacksEndpoint);
+      //  Model = Model.Where(e => (e.MeasurementPositionId == 2)).ToList();
+
+
+        try
+        {
+            int result = Int32.Parse(measurementPositionId);
+            mp = await measurementPositionRepo.Get(Endpoints.MeasurementPositions, result);
+
+        }
+
+        catch (FormatException)
+        {
+            Console.WriteLine($"Unable to parse");
+        }
+    }
+
+
+    private void OpenCreateForm(MouseEventArgs e)
+    {
+        //this.measurementPosition.
+        this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}/create");
+    }
+    private void goBack(MouseEventArgs e)
+    {
+        this.navManager.NavigateTo($"/measurementpositions/{userId}");
+    }
+}

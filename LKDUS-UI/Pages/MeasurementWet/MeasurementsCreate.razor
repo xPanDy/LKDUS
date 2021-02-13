@@ -1,0 +1,707 @@
+﻿@page "/measurements/{userId}/{measurementPositionId}/create"
+
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+@using Microsoft.Extensions.Logging
+@using LKDUS_UI.Components
+
+@inject IAuthenticationRepository authRepo
+@inject IMeasurementRepository repo
+@inject IFusPacksRepository frepo
+@inject IMeasurementTypeRepository measTRepo
+@inject IMeasurementPositionsRepository measPositionRepo
+@inject IMachinesRepository machineRepository
+
+@inject IJSRuntime JsRuntime;
+
+@inject NavigationManager navManager
+@inject Blazored.Localisation.Services.IBrowserDateTimeProvider datetime;
+@inject ILogger<FusPack> Logger
+
+<style>
+    /* In order to place the tracking correctly */
+    canvas.drawing, canvas.drawingBuffer, .drawingBuffer {
+        position: absolute;
+        left: inherit;
+        top: inherit;
+        display: none;
+        border-radius: 10px;
+    }
+</style>
+
+<input id="scan-value" @bind="decodedValue" />
+<input @bind="decodedValue" />
+<p>Result: @Result</p>
+<br />
+
+<div id="scanner-container">
+    <canvas id="helperlines" class="drawingBuffer"></canvas>
+</div>
+<button id="btn" @onclick="StartReader">Start/Stop the scanner</button>
+
+
+
+
+
+<div>
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col">
+
+
+                <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
+            </div>
+            <div class="col w-25"><h3 class="card-title">@mp.Name</h3></div>
+            <div class="col">
+                @*<button type="submit" class="btn btn-primary btn-block">Saglabāt</button>*@
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <div class="form-group">
+        @{
+            <div class="row">
+                <div class="col">
+
+                    <h1>LKDUS  svitru kods</h1>
+                    <h1>Value: @_barcodeValue ŠEIT JĀBŪT</h1>ggggg<h1> hhhhhhhhhh</h1>
+                    <BarcodeReaderComponent GetValue="((value) => SetValue(value))">
+                    </BarcodeReaderComponent>
+
+                </div>
+
+
+                <div class="col">
+                    <label for="code2">Pakas kods</label>
+
+
+                    @*@bind=@packId*@
+
+                    <input class="form-control"
+                           id="@id100"
+                           @bind-value="@stringPackValue"
+                           @bind-value:event="oninput"
+                           @onkeydown="DoSomethingElse"
+                           @onclick="focusToInput100"
+                           @ref="@input100"
+                           type="text">
+
+                    @*<input class="form-control"
+                        id="@id100"
+                        @onkeydown="DoSomethingElse"
+                        @onclick="focusToInput100"
+                        @bind="@stringPackValue"
+                        @ref="@input100"
+                        type="text">*@
+
+
+
+                    @if (fp == null)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            Šāda paka neeksistē
+                        </div>
+
+                    }
+
+                </div>
+                @if (fp != null)
+                {
+                    <div class="col">
+
+                        <label for="pack">Pakas Autors   </label>
+
+                        <input class="form-control" readonly
+                               @bind="@fp.OperatorNameSurname"
+                               type="text" id="packAuthor">
+
+
+
+
+                    </div>
+
+
+
+
+                    <div class="col">
+                        <label for="pack">Pakas datums</label>
+
+                        <input class="form-control" type="text"
+                               @bind="@fp.DateCreated"
+                               readonly id="packDate">
+                    </div>
+                    <div class="col">
+                        <label for="pack">Pakas iekārta</label>
+
+                        <input class="form-control"
+                               @bind-value="@fp.MachineName" type="text" readonly id="packMachine">
+                    </div>
+                    <div class="col">
+                        <label for="packMaster">Meistars</label>
+
+                        <input class="form-control"
+                               @bind-value="@fp.Master" type="text" readonly id="packMaster">
+                    </div>
+                }
+                else
+                {
+                    <div class="col">
+
+                        <label for="pack">Pakas Autors   </label>
+
+                        <input class="form-control" readonly
+                               type="text" id="packAuthor">
+
+
+
+
+                    </div>
+
+
+
+
+                    <div class="col">
+                        <label for="pack">Pakas datums</label>
+
+                        <input class="form-control" type="text"
+                               readonly id="packDate">
+                    </div>
+                    <div class="col">
+                        <label for="pack">Pakas iekārta</label>
+
+                        <input class="form-control"
+                               type="text" readonly id="packMachine">
+                    </div>
+
+                    <div class="col">
+                        <label for="pack">Meistars</label>
+
+                        <input class="form-control"
+                               type="text" readonly id="packMaster">
+                    </div>
+                }
+
+            </div>
+        }
+    </div>
+
+
+
+
+    @*<div class="form-group">
+            <label for="machine">Iekārta</label>
+            <select class="custom-select"  @bind="machine.Id"  id ="machine"  >
+
+                @if (Machines != null)
+                {
+                    @foreach (var Mach in Machines)
+                    {
+                        //pmachineIdd = Mach.Id;
+
+                        <option value="@Mach.Id">@Mach.Name</option>
+                    }
+                }
+            </select>
+
+        </div>*@
+
+
+
+    <div class="form-group">
+        <label for="example-datetime-local-input" class="col-2 col-form-label">Datums     <br /></label>
+        <div class="row">
+            <div class="col">
+                @*// 01.12.2020 09:19:04*@
+                <select class="custom-select" @bind="Day">
+                    @for (int i = 1; i <= 31; i++)
+                    {
+                        <option>@i</option>
+                    }
+                </select>
+
+            </div>
+
+
+            <div class="col">
+                <select class="custom-select" @bind="Month">
+                    @for (int i = 1; i <= 12; i++)
+                    {
+                        <option value="@i">@Months[i - 1]</option>
+                    }
+                </select>
+
+            </div>
+
+
+            <div class="col">
+                <select class="custom-select" @bind="Year">
+                    @for (int i = DateTime.Now.Year - 5;
+                 i <= DateTime.Now.Year + 5; i++)
+                    {
+                        <option>@i</option>
+                    }
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+    @if (LaborantList == null)
+    {
+        <LoadingMessage Message="Notiek laborantu ielāde" />
+    }
+    else
+    {
+        <div class="form-group">
+            <label for="operator">Laborants</label>
+            <select disabled="true" class="custom-select" @bind=@defaultUser.UserName id="operator">
+
+
+                @foreach (var usr in LaborantList)
+                {
+
+                    <option>@usr.UserName</option>
+                }
+
+
+            </select>
+
+        </div>
+
+    }
+    <div class="form-group">
+        <label for="shift">Maiņa</label>
+        <select class="custom-select" @bind="@pshift" id="shift">
+            <option selected>1</option>
+            <option value="1">2</option>
+
+
+
+        </select>
+
+    </div>
+
+
+    @if ((stringPackValue == "0" || string.IsNullOrEmpty(stringPackValue)) || fp == null)
+    {
+
+        <LoadingMessage Message="Lūdzu ievadi pakas kodu" />
+    }
+    else
+    {
+        <nav class="navbar navbar-dark">
+            <div class="container-fluid">
+                <div class="navbar-btn">
+
+                    <button type="button" @onclick="@GoToThickness" class="btn btn-primary">Mitrā finiera biezums</button>
+                </div>
+                <div class="navbar-btn">
+
+                    <button type="button" @onclick="@GoToDimensions" class="btn btn-primary">Izmērs, platums, garums</button>
+                </div>
+                <div class="navbar-btn">
+
+                    <button type="button" @onclick="@GoToQuality" class="btn btn-primary">Kvalitāte</button>
+                </div>
+
+            </div>
+        </nav>
+    }
+
+
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <table class="table table-bordered justify-content-center">
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+1))" onclick="document.getElementById('code2').value = document.getElementById('code2').value + '1';">
+                                1
+                            </button>
+                        </td>
+                        <td> <button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+2))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '2';">2</button></td>
+                        <td> <button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+3))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '3';">3</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>sliceStrPvalue(stringPackValue))" onclick="document.getElementById('code2').value=document.getElementById('code2').value.slice(0, -1);">&lt;</button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+4))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '4';">4</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+5))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '5';">5</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+6))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '6';">6</button></td>
+                        <td> </td>
+                    </tr>
+
+                    <tr>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+7))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '7';">7</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+8))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '8';">8</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+9))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '9';">9</button></td>
+                        <td rowspan="2"><button type="button" class="btn btn-success btn-lg btn-block" @onclick="@focusToInput100">Go</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+0))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '0';">0</button></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@code {
+    public string bindUsername { get; set; }
+    public int Day { get; set; }
+    public int Month { get; set; }
+    public int Year { get; set; }
+    private ElementReference input100;//= "code2";
+                                      // private ElementReference input1;
+
+    public string[] Months { get; set; } = {
+       "January", "February", "March",
+       "April", "May", "June", "July",
+       "August", "September", "October",
+       "November", "December" };
+
+    bool isPackEntered = false;
+
+    [Parameter]
+    public int pshift { get; set; }
+    [Parameter]
+    public int pmachineIdd { get; set; }
+    [Parameter]
+    public string userId { get; set; }
+
+
+    [Parameter]
+    public string measurementPositionId { get; set; }
+    [Parameter]
+    public string packId { get; set; }
+    [Parameter]
+    public int pmeasurementTypeId { get; set; }
+    [Parameter]
+    public string fusMachineName { get; set; }
+
+    public string stringPackValue { get; set; }
+
+
+    private string id100 = "code2";
+
+
+    // string test = "";
+
+    public string datums = "";
+    public bool edited = false;
+
+    public IList<FusPack> fusPacks;
+
+    public IList<LoginModel> LaborantList;
+
+
+    public FusPack fp = new FusPack();
+    Machine machine = new Machine();
+
+
+
+    private void Convert()
+    {
+
+        KeyboardEventArgs ec = new KeyboardEventArgs();
+        ec.Code = "Enter";
+        DoSomethingElse(ec);
+    }
+
+    public void sliceStrPvalue(string pv)
+    {
+        if (!string.IsNullOrEmpty(stringPackValue))
+        {
+            //stringPackValue = "";
+            stringPackValue = pv.Remove(pv.Length - 1, 1);
+        }
+        //else { }
+    }
+
+    public void changeStrPvalue(string pv)
+    {
+        stringPackValue = pv;
+    }
+
+    private void focusToInput100()
+    {
+        //await JSRuntime.
+        //var element = Docum
+        InvokeAsync(() =>
+        {
+
+            StateHasChanged();
+        });
+        if (string.IsNullOrEmpty(stringPackValue))
+        {
+            fp = null;
+        }
+        else
+        {
+            int packid = int.Parse(stringPackValue);
+            JsRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input100);
+
+            //await JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", id);
+            //  await        JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input4);
+            KeyboardEventArgs ec = new KeyboardEventArgs();
+            ec.Code = "Enter";
+            DoSomethingElse(ec);
+        }
+
+    }
+    private void DoSomethingElse(KeyboardEventArgs e)
+    {
+
+        if (e.Code == "Enter")
+        {
+
+            try
+            {
+                if (string.IsNullOrEmpty(stringPackValue))
+                {
+                    fp = null;
+                }
+                else
+                {
+                    int packid = int.Parse(stringPackValue);
+                    fp = fusPacks.Where(p => p.Id == packid).SingleOrDefault();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Logger.LogWarning(ex, "Failed to load fuspack {packid}", stringPackValue);
+            }
+
+        }
+        else
+        {
+            fp = null;
+        }
+    }
+
+    private void changeMachine()
+    {
+
+    }
+
+
+    MeasurementPosition mp = new MeasurementPosition();
+
+    protected async override void OnParametersSet()
+    {
+        //the param will be set now
+
+    }
+
+    private static DateTime today;
+    private static string todayLocal = today.ToString("g");
+
+    // public DateTime dateOfMeasurement { get; set; }
+    // public string dateToday { get; set; }
+    // public DateTime dateToday2 { get; set; }
+
+    string currentLocalTime = "";
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        pshift = 1;
+
+        if (firstRender)
+        {
+            id100 = "code2";
+            var browserDateTime = await datetime.GetInstance();
+
+            today = DateTime.Today;
+            currentLocalTime = browserDateTime.Now.ToString();
+            StateHasChanged();
+
+
+            /* inputId = "code2";
+             // await JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", inputId);
+             await JsRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", inputId);
+            */
+        }
+
+    }
+
+
+
+    private IList<Measurement> Model2;
+    private IList<Measurement> FusMachines;
+    private IList<Machine> Machines;
+    public LoginModel defaultUser = new LoginModel();
+    protected async override Task OnInitializedAsync()
+    {
+
+        Day = DateTime.Now.Day;
+        Month = DateTime.Now.Month;
+        Year = DateTime.Now.Year;
+
+        LaborantList = await this.authRepo.Get(Endpoints.AspUsersEndpoint);
+
+        defaultUser = LaborantList.Where(o => o.Id == userId).FirstOrDefault();
+
+        Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+        FusMachines = await this.repo.Get(Endpoints.MeasurementEndpoint);
+        fusPacks = await frepo.Get(Endpoints.FusPackEndPoint);
+        Machines = await machineRepository.Get(Endpoints.MachinesEndpoint);
+        try
+        {
+            int result = Int32.Parse(measurementPositionId);
+            mp = await measPositionRepo.Get(Endpoints.MeasurementPositions, result);
+
+        }
+
+        catch (FormatException)
+        {
+            Console.WriteLine($"Unable to parse");
+        }
+        todayLocal = DateTime.Now.ToString("g");// today.ToString("g");
+        pmachineIdd = fp.MachineId;// machine.Id;
+        if (pmachineIdd == 0)
+        {
+            pmachineIdd = fp.MachineId;// Machines.FirstOrDefault().Id;
+        }
+        if (fp.MachineId == null)
+        {
+            pmachineIdd = 0;
+        }
+
+        if (stringPackValue == null)
+        {
+            stringPackValue = "0";
+        }
+    }
+
+    private void checkParams()
+    {
+        bool isThere = false;
+        pmachineIdd = fp.MachineId;// machine.Id;
+        if (pmachineIdd == 0)
+        {
+            pmachineIdd = fp.MachineId;// Machines.FirstOrDefault().Id;
+
+        }
+        else { isThere = true; }
+        if (stringPackValue == null)
+        {
+            stringPackValue = "0";
+
+        }
+        else
+        {
+            isThere = true;
+        }
+        if (isThere)
+        {
+            fusMachineName = fp.MachineName;
+        }
+    }
+
+    private void GoToThickness(MouseEventArgs e)
+    {
+
+        checkParams();
+
+        //  validateParameters(measurementPositionId, measurementPositionId, stringPackValue, pmachineIdd, pshift);
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/thickness");
+        //      /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness
+        //     {userId}/{measurementPositionId}/{stringPackValue}/{ pmachineIdd}
+
+    }
+
+    //private bool validateParameters(string p1, string p2, string p3, int p4, int p5 )
+    //{
+    //    //if (string.IsNullOrEmpty(stringPackValue)==true && (string.IsNullOrEmpty(stringPackValue))
+    //    //{
+
+    //    //    return true;
+    //    //}
+    //    //return false;
+    //}
+
+    private void GoToDimensions(MouseEventArgs e)
+    {
+        checkParams();
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions");
+    }
+
+    private void GoToQuality(MouseEventArgs e)
+    {
+        checkParams();
+
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/quality");
+    }
+
+    private void OpenCreateForm(MouseEventArgs e)
+    {
+        checkParams();
+        //  this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{defaultUser.Id}/{pshift}/create");
+    }
+
+    private void goBack(MouseEventArgs e)
+    {
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}");
+    }
+
+    /* [Parameter]
+     public EventCallback<string> GetValue { get; set; }
+     private async Task StartReader()
+     {
+         //await IJSRuntime.InvokeVoidAsync("MyLib.DecodeBarcode", DotNetObjectReference.Create(this));
+         await JsRuntime.InvokeVoidAsync("MyLib.DecodeBarcode", DotNetObjectReference.Create(this));
+     }
+
+     [JSInvokable]
+     public void SetReturnValue(string value)
+     {
+         GetValue.InvokeAsync(value);
+         StateHasChanged();
+     }*/
+    private string _barcodeValue = string.Empty;
+    private void SetValue(string value)
+    {
+        _barcodeValue = "L18-203995";// value;
+    }
+
+    private string Result = "inget";
+    private string decodedValue = "";
+    ElementReference ReferenceToInputControl;
+    private async Task StartReader()
+    {
+        await JsRuntime.InvokeVoidAsync("MyLib.DecodeBarcode", DotNetObjectReference.Create(this));
+
+    }
+
+    [JSInvokable]
+    public void SetReturnValue(string value)
+    {
+        decodedValue = value;
+        StateHasChanged();
+    }
+}

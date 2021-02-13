@@ -1,4 +1,4 @@
-﻿@page "/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions/width"
+﻿@page "/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/width"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
@@ -8,6 +8,11 @@
 @inject IMeasurementRepository repo
 @inject NavigationManager navManager
 @inject IMeasurementRepository measurementRepo;
+@inject IMachinesRepository machineRepository
+
+@inject IPacksRepository packRepo
+@inject IAuthenticationRepository authRepo
+
 
 <style>
     /* #btn:active, #btn:focus{
@@ -168,6 +173,8 @@
 
                 </div>
 
+
+
                 <div class="col w-25">
 
 
@@ -217,6 +224,8 @@
     public string stringPackValue { get; set; }
     [Parameter]
     public string pmachineIdd { get; set; }
+    [Parameter]
+    public string fusMachineName { get; set; }
 
     public string colorBg1 = "white";
     public string colorBg2 = "white";
@@ -226,7 +235,7 @@
 
 
     private IList<Measurement> Model2;
-    Machine machine = new Machine();
+  //  Machine machine = new Machine();
 
     public int[,] positions = new int[10, 4];
 
@@ -272,6 +281,7 @@
 
 
         bool isSuccess = true;
+        bool isPackCreated = true;
 
         IList<Measurement> measurementsToCreate = new List<Measurement>();
         for (int i = 0; i < positions.GetLength(0); i++)
@@ -281,7 +291,7 @@
             Measurement meas = new Measurement();
             meas.DateCreated = measurementDateAndTime;
             meas.Shift = shift;
-            meas.MachineId = int.Parse(pmachineIdd); //machine.Id;
+          //  meas.MachineId = int.Parse(pmachineIdd); //machine.Id;
             meas.UserId = userId;
             meas.MeasurementPositionId = int.Parse(measurementPositionId);
             meas.PackId = packId;
@@ -299,7 +309,8 @@
                     {
                         newMeasSize = newMeasSize + "00";
                     }
-                    else {
+                    else
+                    {
 
                         newMeasSize = newMeasSize + positions[i, j];
                     }
@@ -341,7 +352,20 @@
 
             isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
         }
+        Pack pack = new Pack();
+//Machine machine = new Machine();
 
+       // machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
+        LoginModel user = new LoginModel();
+        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
+        pack.DateCreated = measurementDateAndTime;
+      //  pack.Machine = machine.Name;
+        pack.Shift = shift;
+        pack.Author = user.UserName;
+        pack.FusCode = stringPackValue;
+
+
+        isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
 
     }
 
@@ -395,7 +419,7 @@
     private void BacktochooseDimension(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions");
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions");
     }
 
 

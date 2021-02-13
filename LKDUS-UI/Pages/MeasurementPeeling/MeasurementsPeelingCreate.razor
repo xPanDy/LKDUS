@@ -1,4 +1,4 @@
-﻿@page "/measurements/{userId}/{measurementPositionId}/create"
+﻿@page "/measurementspeeling/{userId}/{measurementPositionId}/create"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
@@ -42,8 +42,8 @@
 
 
 
-    <div class="form-group">
-        @{
+    <!--<div class="form-group">
+        
             <div class="row">
                 <div class="col">
                     <button class="btn btn-primary">
@@ -55,18 +55,18 @@
                 </div>
 
                 <div class="col">
-                    <label for="packCode">Pakas kods</label>
+                    <label for="packCode">Pakas kods</label>-->
 
 
                     @*@bind=@packId*@
 
-                    <input class="form-control"
+                    <!--<input class="form-control"
                            @bind-value="@stringPackValue"
                            @bind-value:event="oninput"
                            @onkeyup="DoSomethingElse"
                            type="text"
                            id="packCode">
-                    @if (fp == null)
+                    if (fp == null)
                     {
                         <div class="alert alert-danger" role="alert">
                             Šāda paka neeksistē
@@ -75,7 +75,7 @@
                     }
 
                 </div>
-                @if (fp != null)
+                 if (fp != null)
                 {
                     <div class="col">
 
@@ -104,13 +104,13 @@
                         <label for="pack">Pakas iekārta</label>
 
                         <input class="form-control"
-                               @bind-value="@fp.MachineName" type="text" readonly id="packMachine">
+                               bind-value=" fp.MachineName" type="text" readonly id="packMachine">
                     </div>
                     <div class="col">
                         <label for="packMaster">Meistars</label>
 
                         <input class="form-control"
-                               @bind-value="@fp.Master" type="text" readonly id="packMaster">
+                             bind-value=" fp.Master" type="text" readonly id="packMaster">
                     </div>
                 }
                 else
@@ -153,7 +153,7 @@
 
             </div>
         }
-    </div>
+    </div>-->
 
 
 
@@ -260,18 +260,12 @@
 
     <nav class="navbar navbar-dark">
         <div class="container-fluid">
+            
             <div class="navbar-btn">
 
-                <button type="button" @onclick="@GoToThickness" class="btn btn-primary">Mitrā finiera biezums</button>
+                <button type="button" @onclick="@GoToPeeling" class="btn btn-primary">Tālāk</button>
             </div>
-            <div class="navbar-btn">
-
-                <button type="button" @onclick="@GoToDimensions" class="btn btn-primary">Izmērs, platums, garums</button>
-            </div>
-            <div class="navbar-btn">
-
-                <button type="button" @onclick="@GoToQuality" class="btn btn-primary">Kvalitāte</button>
-            </div>
+            
 
         </div>
     </nav>
@@ -321,34 +315,15 @@
     public string datums = "";
     public bool edited = false;
 
-    public IList<FusPack> fusPacks;
+  //  public IList<FusPack> fusPacks;
 
     public IList<LoginModel> LaborantList ;
 
 
-    public FusPack fp = new FusPack();
+   // public FusPack fp = new FusPack();
     Machine machine = new Machine();
 
-    private void DoSomethingElse(KeyboardEventArgs e)
-    {
-
-        if (e.Code == "Enter")
-        {
-
-            try
-            {
-                int packid = int.Parse(stringPackValue);
-                fp = fusPacks.Where(p => p.Id == packid).SingleOrDefault();
-
-            }
-            catch (Exception ex)
-            {
-
-                Logger.LogWarning(ex, "Failed to load fuspack {packid}", stringPackValue);
-            }
-
-        }
-    }
+   
 
     private void changeMachine( )
     {
@@ -408,7 +383,7 @@
 
         Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
         FusMachines = await this.repo.Get(Endpoints.MeasurementEndpoint);
-        fusPacks = await frepo.Get(Endpoints.FusPackEndPoint);
+        
         Machines = await machineRepository.Get(Endpoints.MachinesEndpoint);
         try
         {
@@ -468,27 +443,16 @@
     //    //return false;
     //}
 
-    private void GoToDimensions(MouseEventArgs e)
+    private void GoToPeeling(MouseEventArgs e)
     {
         checkParams();
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions");
+        this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/saving");
     }
 
-    private void GoToQuality(MouseEventArgs e)
-    {
-        checkParams();
-
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/quality");
-    }
-
-    private void OpenCreateForm(MouseEventArgs e)
-    {
-        checkParams();
-        //  this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{defaultUser.Id}/{pshift}/create");
-    }
+    
 
     private void goBack(MouseEventArgs e)
     {
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}");
-    }
+        this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
+    } 
 }

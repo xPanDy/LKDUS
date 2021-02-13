@@ -1,15 +1,18 @@
-﻿@page "/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness"
+﻿@page "/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/thickness"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
 @using LKDUS_UI.Contracts
 @using System.Net.Http
 
-@inject IMeasurementRepository repo
-@inject NavigationManager navManager
-@inject IMachinesRepository machineRepository;
- @inject IMeasurementRepository measurementRepo;
 
+@inject NavigationManager navManager
+
+@inject IMeasurementRepository measurementRepo;
+@inject IMachinesRepository machineRepository
+
+@inject IPacksRepository packRepo
+@inject IAuthenticationRepository authRepo
 <style>
 
     #ttr:focus {
@@ -87,13 +90,13 @@
             <div class="col">
                 <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
             </div>
-            
+
 
         </div>
     </div>
     <div class="form-group">
         <label for="machine">Iekārta</label>
-        <input id="machine" class="form-control" type="text" placeholder=@mach.Name readonly>
+        <input id="machine" class="form-control" type="text" placeholder=@fusMachineName readonly>
 
     </div>
     <div class="form-group">
@@ -122,7 +125,7 @@
 
                             @for (int j = 0; j < sizesArray.GetLength(1); j++)
                             {
-                                <td   style="background-color: @highlight2"
+                                <td style="background-color: @highlight2"
                                     class="text-center">
                                     @sizesArray[i, j]
                                 </td>
@@ -177,7 +180,7 @@
             </tfoot>
         </table>
     </div>
-     
+
 
 
     <div class="container">
@@ -238,6 +241,8 @@
     public string stringPackValue { get; set; }
     [Parameter]
     public string pmachineIdd { get; set; }
+    [Parameter]
+    public string fusMachineName { get; set; }
 
 
     Machine machine = new Machine();
@@ -302,14 +307,14 @@
     public List<decimal> range = new List<decimal>();
 
     int machineId;
-    Machine mach = new Machine();
+ //   Machine mach = new Machine();
 
     protected async override Task OnInitializedAsync()
     {
 
         machineId = int.Parse(pmachineIdd);
 
-        mach = await machineRepository.Get(Endpoints.MachinesEndpoint,   machineId);
+      //  mach = await machineRepository.Get(Endpoints.MachinesEndpoint, machineId);
 
 
         int startValuesOfMeasurement = 0;
@@ -356,7 +361,7 @@
         //String timeOfTheDayNow = DateTime.Now.ToString("t");
         int shift = 1;
 
-        if(DateTime.Compare(currentMeasurement,shiftTime) >= 0)
+        if (DateTime.Compare(currentMeasurement, shiftTime) >= 0)
         {
             shift = 2;
         }
@@ -364,15 +369,16 @@
 
 
         bool isSuccess = true;
+        bool isPackCreated = true;
 
         IList<Measurement> measurementsToCreate = new List<Measurement>();
 
-        for(int i = 0; i < sizesArray.GetLength(0); i++)
+        for (int i = 0; i < sizesArray.GetLength(0); i++)
         {
             Measurement meas = new Measurement();
             meas.DateCreated = measurementDateAndTime;
             meas.Shift = shift;
-            meas.MachineId = mach.Id;
+            //meas.MachineId = mach.Id;
             meas.UserId = userId;
             meas.MeasurementPositionId = int.Parse(measurementPositionId);
             meas.PackId = packId;
@@ -399,10 +405,24 @@
             }
             measurementsToCreate.Add(meas);
 
+
             isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
         }
 
+        Pack pack = new Pack();
+        Machine machine = new Machine();
 
+        machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
+        LoginModel user = new LoginModel();
+        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
+        pack.DateCreated = measurementDateAndTime;
+        pack.Machine = fusMachineName; //machine.Name;
+        pack.Shift = shift;
+        pack.Author = user.UserName;
+        pack.FusCode = stringPackValue;
+
+
+        isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
     }
 
 

@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace LKDUS_UI.Service
 {
-    public class PackRepository : BaseRepository<FusPack>, IPacksRepository
+    public class PackRepository : BaseRepository<Pack>, IPacksRepository
     {
 
         private readonly IHttpClientFactory clientFactory;
