@@ -106,7 +106,8 @@ namespace LKDUS_UI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapBlazorHub();
-                endpoints.MapFallbackToPage("/_Host");
+              endpoints.MapFallbackToPage("/_Host");
+               //d endpoints.MapFallbackToPage("/index.html");
 
             });
         }

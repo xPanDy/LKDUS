@@ -5,7 +5,7 @@
 @using LKDUS_UI.Contracts
 @using System.Net.Http
 @using Microsoft.Extensions.Logging
-@using LKDUS_UI.Components
+
 
 @inject IAuthenticationRepository authRepo
 @inject IMeasurementRepository repo
@@ -20,34 +20,40 @@
 @inject Blazored.Localisation.Services.IBrowserDateTimeProvider datetime;
 @inject ILogger<FusPack> Logger
 
-<style>
-    /* In order to place the tracking correctly */
-    canvas.drawing, canvas.drawingBuffer, .drawingBuffer {
-        position: absolute;
-        left: inherit;
-        top: inherit;
-        display: none;
-        border-radius: 10px;
-    }
-</style>
-
-<input id="scan-value" @bind="decodedValue" />
-<input @bind="decodedValue" />
-<p>Result: @Result</p>
-<br />
-
-<div id="scanner-container">
-    <canvas id="helperlines" class="drawingBuffer"></canvas>
-</div>
-<button id="btn" @onclick="StartReader">Start/Stop the scanner</button>
 
 
+@*<div class="modal alert-popup" tabindex="-1" style="display:block" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+             Edit form for the current item 
+            <div class="modal-body">
 
+                <button class="btn btn-primary p-2 m-1 w-25" id="startButton">Skenēt</button>
+                <button class="btn btn-secondary p-2 m-1 w-25" id="resetButton">Notīrīt</button>
+                <button type="button" class="btn btn-info p-2 m-1 w-25" id="closeButton">Aizvērt</button>
 
+                <div id="sourceSelectPanel" style="display:none">
+                <label for="sourceSelect">Rez:</label><span class="text-dark" id="result"></span>
+                    <select id="sourceSelect" style="max-width:100%" class="form-control">
+                    </select>
+                </div>
+                <div>
+                    <video id="video" style="min-height:150px;max-height:60%; max-width: 100%;border: 1px solid gray"></video>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>*@
+
+@*<button class="btn btn-primary"
+        type="button"
+        @onclick="(() => ShowScanBarcode = !ShowScanBarcode)">
+    testtttt
+</button>*@
+ 
 
 <div>
-
-
     <div class="container">
         <div class="row">
 
@@ -71,14 +77,30 @@
     <div class="form-group">
         @{
             <div class="row">
-                <div class="col">
+                        <div class="col">
+                            <button id="startButton" class="btn btn-outline-success" @onclick="isStreamVisible">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">
+                                    <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z" />
+                                </svg>Svītrkoda skenēšana
+                            </button>
+                            @if (visibilityOfCamera)
+                            {
+                                <div  id="sourceSelectPanel" style="display:none">
+                                    <label for="sourceSelect"> </label><span class="text-dark" id="result"></span>
+                                    <select id="sourceSelect" style="max-width:100%" class="form-control">
+                                    </select>
+                                </div>
+                                <div>
+                                    <video id="video" style="min-height:150px;max-height:60%; max-width: 100%;border: 1px solid gray"></video>
+                                </div>
 
-                    <h1>LKDUS  svitru kods</h1>
-                    <h1>Value: @_barcodeValue ŠEIT JĀBŪT</h1>ggggg<h1> hhhhhhhhhh</h1>
-                    <BarcodeReaderComponent GetValue="((value) => SetValue(value))">
-                    </BarcodeReaderComponent>
+                            }
+                            else
+                            {
+                                
+                            }
 
-                </div>
+                        </div>
 
 
                 <div class="col">
@@ -106,7 +128,7 @@
 
 
 
-                    @if (fp == null)
+                    @if (fp == null || sucess !=true )
                     {
                         <div class="alert alert-danger" role="alert">
                             Šāda paka neeksistē
@@ -246,7 +268,7 @@
             <div class="col">
                 <select class="custom-select" @bind="Year">
                     @for (int i = DateTime.Now.Year - 5;
-                 i <= DateTime.Now.Year + 5; i++)
+              i <= DateTime.Now.Year + 5; i++)
                     {
                         <option>@i</option>
                     }
@@ -419,10 +441,27 @@
     public IList<LoginModel> LaborantList;
 
 
-    public FusPack fp = new FusPack();
+    public FusPack fp { set; get; } = new FusPack();
     Machine machine = new Machine();
 
+    private bool visibilityOfCamera = false;
 
+    private async void isStreamVisible()
+    {
+        stringPackValue = "0";
+        if (visibilityOfCamera)
+        {
+            visibilityOfCamera = false;
+            ShowScanBarcode = false;
+            await CloseScan();
+        }else
+        {
+            ShowScanBarcode = true;
+            visibilityOfCamera = true;
+            await JsRuntime.InvokeAsync<string>("zxing.start", true, DotNetObjectReference.Create(this));
+            visibilityOfCamera = false;
+        }
+    }
 
     private void Convert()
     {
@@ -438,6 +477,8 @@
         {
             //stringPackValue = "";
             stringPackValue = pv.Remove(pv.Length - 1, 1);
+            focusToInput100();
+
         }
         //else { }
     }
@@ -445,12 +486,15 @@
     public void changeStrPvalue(string pv)
     {
         stringPackValue = pv;
+        focusToInput100();
     }
+
+
+    bool sucess= true;
 
     private void focusToInput100()
     {
-        //await JSRuntime.
-        //var element = Docum
+
         InvokeAsync(() =>
         {
 
@@ -462,14 +506,19 @@
         }
         else
         {
-            int packid = int.Parse(stringPackValue);
-            JsRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input100);
+            int number;
+            sucess = Int32.TryParse(stringPackValue, out number);
 
-            //await JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", id);
-            //  await        JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input4);
-            KeyboardEventArgs ec = new KeyboardEventArgs();
-            ec.Code = "Enter";
-            DoSomethingElse(ec);
+            if (sucess) {
+                int packid = int.Parse(stringPackValue);
+                JsRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input100);
+
+                //await JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", id);
+                //  await        JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input4);
+                KeyboardEventArgs ec = new KeyboardEventArgs();
+                ec.Code = "Enter";
+                DoSomethingElse(ec);
+            }
         }
 
     }
@@ -487,8 +536,18 @@
                 }
                 else
                 {
+
                     int packid = int.Parse(stringPackValue);
                     fp = fusPacks.Where(p => p.Id == packid).SingleOrDefault();
+                    InvokeAsync(() =>
+                    {
+
+                        StateHasChanged();
+                    });
+                    KeyboardEventArgs ec = new KeyboardEventArgs();
+                    ec.Code = "Enter";
+
+
                 }
             }
             catch (Exception ex)
@@ -512,11 +571,11 @@
 
     MeasurementPosition mp = new MeasurementPosition();
 
-    protected async override void OnParametersSet()
-    {
-        //the param will be set now
+    //protected async override void OnParametersSet()
+    //{
 
-    }
+
+    //}
 
     private static DateTime today;
     private static string todayLocal = today.ToString("g");
@@ -533,6 +592,8 @@
 
         if (firstRender)
         {
+
+
             id100 = "code2";
             var browserDateTime = await datetime.GetInstance();
 
@@ -540,11 +601,10 @@
             currentLocalTime = browserDateTime.Now.ToString();
             StateHasChanged();
 
+            if (firstRender) {
+                //await JsRuntime.InvokeAsync<string>("zxing.start", true, DotNetObjectReference.Create(this));
+            }
 
-            /* inputId = "code2";
-             // await JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", inputId);
-             await JsRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", inputId);
-            */
         }
 
     }
@@ -683,25 +743,135 @@
          GetValue.InvokeAsync(value);
          StateHasChanged();
      }*/
-    private string _barcodeValue = string.Empty;
-    private void SetValue(string value)
-    {
-        _barcodeValue = "L18-203995";// value;
-    }
+    //private string _barcodeValue = string.Empty;
+    //private void SetValue(string value)
+    //{
+    //    _barcodeValue = "L18-203995";// value;
+    //}
 
-    private string Result = "inget";
-    private string decodedValue = "";
-    ElementReference ReferenceToInputControl;
-    private async Task StartReader()
-    {
-        await JsRuntime.InvokeVoidAsync("MyLib.DecodeBarcode", DotNetObjectReference.Create(this));
 
-    }
+    //private string decodedValue = "";
+    //ElementReference ReferenceToInputControl;
+    //private async Task StartReader()
+    //{
+    //    await JsRuntime.InvokeVoidAsync("MyLib.DecodeBarcode", DotNetObjectReference.Create(this));
 
-    [JSInvokable]
-    public void SetReturnValue(string value)
+    //}
+
+    //[JSInvokable]
+    //public void SetReturnValue(string value)
+    //{
+    //    decodedValue = value;
+    //    StateHasChanged();
+    //}
+
+
+    bool ShowScanBarcode { get; set; } = false;
+
+
+    public string? BarCode { get; set; }
+
+
+
+
+
+
+    [Parameter]
+    public EventCallback<string> ScanResult { get; set; }
+
+
+    [Parameter]
+    public EventCallback Close { get; set; }
+
+
+
+    [Parameter]
+    public string? ResultBc { get; set; }
+
+    /// <summary>
+    /// 显示扫码框
+    /// </summary>
+
+
+
+
+    [JSInvokable("invokeFromJS")]
+    public async Task ChangeValue(string val)
     {
-        decodedValue = value;
+        // stringPackValue = val;
         StateHasChanged();
+        await ScanResult.InvokeAsync(val);
+        Translate(val);
+
+        //return Task.CompletedTask;
     }
+
+    [JSInvokable("invokeFromJSClose")]
+    public async Task CloseScan()
+    {
+        await Close.InvokeAsync(null);
+    }
+
+    private static char[] base62Alphabet =  { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+                                                  'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+                                                  'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+    private static string base62string = new string(base62Alphabet);
+
+    private static char[] base64Alphabet =  { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+                                                  'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+                                                  'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+                                                  '(', ')'};
+    private static string base64string = new string(base64Alphabet);
+
+    public void Translate(string val)
+    {
+        string barCode = val;
+        int iResult = 0;
+        switch (barCode.Length)
+        {
+            case 4:
+                //iResult = base62BarCodeToInt(barCode);
+                iResult = BarCodeToInt(barCode, base62string);
+                break;
+            case 5:
+                iResult = BarCodeToInt(barCode, base64string);
+                break;
+            default:
+                throw new Exception("Error in bar code. Illegal barcode length");
+        }
+
+        stringPackValue = iResult.ToString();
+
+        InvokeAsync(() =>
+        {
+
+            StateHasChanged();
+        });
+
+        visibilityOfCamera = false;
+        JsRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input100);
+
+        focusToInput100();
+    }
+
+
+    public static int BarCodeToInt(string barCode, string baseString)
+    {
+        int iResult = 0;
+        int b = 1;
+        for (int i = barCode.Length - 1; i >= 0; i--)
+        {
+            int index = 0;
+            index = baseString.LastIndexOf(barCode[i]);
+            if (index == -1)
+            {
+                throw new Exception("Error in bar code. Illegal character in alphabet");
+            }
+            iResult += index * b;
+            b *= baseString.Length;
+        }
+
+        return iResult;
+    }
+
 }

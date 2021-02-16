@@ -167,6 +167,7 @@ namespace LKDUS_API
             {
                 //endpoints.MapRazorPages();
                 endpoints.MapControllers();
+               // endpoints.MapFallbackToPage("/index.html");
             });
         }
     }
