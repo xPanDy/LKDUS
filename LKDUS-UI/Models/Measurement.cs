@@ -12,9 +12,10 @@ namespace LKDUS_UI.Models
 
 
         public string DateCreated { get; set; }
+        public string MachineName { get; set; }
         public int Shift { get; set; }
 
-        public int? MachineId { get; set; }
+        //public int? MachineId { get; set; }
         public virtual Machine Machine { get; set; }
 
         public string UserId { get; set; }
@@ -35,6 +36,7 @@ namespace LKDUS_UI.Models
         public decimal Measurement7 { get; set; }
         public decimal Measurement8 { get; set; }
         public decimal Measurement9 { get; set; }
+        public decimal Measurement10 { get; set; }
 
 
 

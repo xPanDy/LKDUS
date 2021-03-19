@@ -9,10 +9,10 @@
 @inject NavigationManager navManager
 @inject IMeasurementRepository measurementRepo;
 @inject IMachinesRepository machineRepository
-
+@inject IMeasurementTypeRepository measurementTypeRepository;
 @inject IPacksRepository packRepo
 @inject IAuthenticationRepository authRepo
-
+@inject IJSRuntime JsRuntime;
 
 <style>
     /* #btn:active, #btn:focus{
@@ -32,11 +32,20 @@
             <button type="button" @onclick="@BacktochooseDimension" class="btn btn-primary btn-block">Atpakaļ</button>
         </div>
         <div class="col w-25"><h3 class="card-title">Mitrā finiera platums</h3></div>
-        <div class="col">
-            <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
-        </div>
 
-    </div>
+        @if (!isTypeCklicked)
+        {
+             <div class="col">
+
+                </div>
+            }
+    else
+            {
+                <div class="col">
+                    <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
+                </div>
+            }
+        </div>
 
     <div class="row w-100">
 
@@ -84,128 +93,180 @@
                 </div>
 
             </div>
-            <div class="row">
-                <div class="col w-75">
-                    <table class="table table-hover">
 
-                        <thead>
+            @if (isTypeCklicked)
+            {
+                <div class="row">
+                    <div class="col w-75">
+                        <table class="table table-hover">
+
+                            <thead>
 
 
-                            <tr>
-                                <th rowspan="2">Nr.p.k.</th>
-                                <th colspan="2">Lokšņu platums</th>
-                                <th rowspan="2">Slīpums</th>
-                            </tr>
-                            <tr>
-                                <td>kreisā</td>
-                                <td>labā</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @if (positions != null)
-                            {
-                                @for (int i = 0; i < 10; i++)
+                                <tr>
+                                    <th rowspan="2">Nr.p.k.</th>
+                                    <th colspan="2">Lokšņu platums</th>
+                                    <th rowspan="2">Slīpums</th>
+                                </tr>
+                                <tr>
+                                    <td>kreisā</td>
+                                    <td>labā</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (positions != null)
                                 {
-                                    var ind = i + 1;
-                                    var tmpI = i;
-                                    <tr>
-                                        <td>@ind</td>
-                                        @for (int j = 1; j < 3; j++)
+
+
+                                    @for (int i = 0; i < positions.GetLength(0); i++)
+                                    {
+                                        var nrpk = i + 1;
+                                        <tr>
+                                            <td style="background-color:white;">@nrpk  </td>
+
+                                            @for (int j = 0; j < positions.GetLength(1); j++)
+                                            {
+                                                int tmpx = i;
+                                                int tmpj = j;
+                                                if (j < positions.GetLength(1) - 1)
+                                                {
+                                                    <td @onclick="(e => HighlightSelected(tmpx,tmpj))"  style="background-color:@elements[i, j];" id="@currentElement[i,j]"> @positions[i, j] </td>
+
+                                                }
+                                                else
+                                                {
+                                                    <td style="background-color:white;">@positions[i, j] </td>
+                                                }
+                                            }
+                                        </tr>
+                                    }
+
+
+
+                                    //var x = 0;
+                                    //var xx = 0;
+
+
+
+                                    @*@for (int i = 0; i < 10; i++)
                                         {
-                                            var tmpJ = j;
-                                            <td><button @onclick="( e => selectTableCell(tmpI,tmpJ))">@positions[i, j]</button></td>
 
-                                        }
-                                        <td>@positions[i, 3]</td>
-                                    </tr>
+                                            var ind = i + 1;
+                                            var tmpI = i;
+                                            var tmpII = i;
+                                            var yy = 0;
+                                            <tr>
+                                                <td>@ind</td>
+                                                @for (int j = 1; j < 3; j++)
+                                                {
+                                                    var tmpjj = j - 1;
+                                                    var tmpJ = j; //style="bacground-color:@bgcolor[i, j];"
+                                                    <td style="background-color:@elements[xx, yy];" id="@currentElement[i,tmpjj]" @onclick="( e => selectTableCell(tmpI,tmpJ))">@positions[i, j]  </td>
+                                                    x++;
+                                                    yy++;
+                                                }
+                                                <td>@positions[i, 3]</td>
+                                            </tr>
+                                            xx++;
+
+                                        }*@
                                 }
-                            }
 
-                        </tbody>
-
-                    </table>
-                </div>
-
-                <div class="col w-25">
-
-                    <div class="d-flex justify-content-between">
-
-                        <table class="table  ">
-                            <tbody class="h-100">
-                                <tr class="text-center">
-                                    <td colspan="3"> <button type="button" @onclick="Reduce" style="color:deeppink" class="btn btn-secondary btn-lg">-</button></td>
-                                </tr>
-                                <tr class="text-center">
-                                    <td>  <button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button></td>
-
-
-                                    <td>  <button type="button" @onclick="(()=>select(sizes[1]))" class="btn btn-info btn-lg btn-block">@sizes[1]</button></td>
-
-
-                                    <td>  <button type="button" @onclick="(()=>select(sizes[2]))" class="btn btn-info btn-lg btn-block">@sizes[2]</button></td>
-                                </tr>
-
-
-                                <tr class="text-center">
-                                    <td>  <button type="button" @onclick="(()=>select(sizes[3]))" class="btn btn-info btn-lg btn-block">@sizes[3]</button></td>
-
-                                    <td>  <button type="button" @onclick="(()=>select(sizes[4]))" class="btn btn-info btn-lg btn-block">@sizes[4]</button></td>
-
-                                    <td>  <button type="button" @onclick="(()=>select(sizes[5]))" class="btn btn-info btn-lg btn-block">@sizes[5]</button></td>
-                                </tr>
-                                <tr class="text-center">
-                                    <td>  <button type="button" @onclick="(()=>select(sizes[6]))" class="btn btn-info btn-lg btn-block">@sizes[6]</button></td>
-
-                                    <td>  <button type="button" @onclick="(()=>select(sizes[7]))" class="btn btn-info btn-lg btn-block">@sizes[7]</button></td>
-
-                                    <td>  <button type="button" @onclick="(()=>select(sizes[8]))" class="btn btn-info btn-lg btn-block">@sizes[8]</button></td>
-                                </tr>
-
-
-                                <tr class="text-center">
-                                    <td colspan="3">  <button type="button" style="color:lawngreen" @onclick="Add" class="btn btn-secondary btn-lg">+</button></td>
-                                </tr>
                             </tbody>
-                        </table>
 
+                        </table>
                     </div>
 
+                    <div class="col w-25">
+
+                        <div class="d-flex justify-content-between">
+
+                            <table class="table  ">
+                                <tbody class="h-100">
+                                    <tr class="text-center">
+                                        <td colspan="3"> <button type="button" @onclick="Reduce" style="color:deeppink" class="btn btn-secondary btn-lg">-</button></td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button></td>
+
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[1]))" class="btn btn-info btn-lg btn-block">@sizes[1]</button></td>
+
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[2]))" class="btn btn-info btn-lg btn-block">@sizes[2]</button></td>
+                                    </tr>
+
+
+                                    <tr class="text-center">
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[3]))" class="btn btn-info btn-lg btn-block">@sizes[3]</button></td>
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[4]))" class="btn btn-info btn-lg btn-block">@sizes[4]</button></td>
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[5]))" class="btn btn-info btn-lg btn-block">@sizes[5]</button></td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[6]))" class="btn btn-info btn-lg btn-block">@sizes[6]</button></td>
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[7]))" class="btn btn-info btn-lg btn-block">@sizes[7]</button></td>
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[8]))" class="btn btn-info btn-lg btn-block">@sizes[8]</button></td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[9]))" class="btn btn-info btn-lg btn-block">@sizes[9]</button></td>
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[10]))" class="btn btn-info btn-lg btn-block">@sizes[10]</button></td>
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[11]))" class="btn btn-info btn-lg btn-block">@sizes[11]</button></td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[12]))" class="btn btn-info btn-lg btn-block">@sizes[12]</button></td>
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[13]))" class="btn btn-info btn-lg btn-block">@sizes[13]</button></td>
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[14]))" class="btn btn-info btn-lg btn-block">@sizes[14]</button></td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[15]))" class="btn btn-info btn-lg btn-block">@sizes[15]</button></td>
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[16]))" class="btn btn-info btn-lg btn-block">@sizes[16]</button></td>
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[17]))" class="btn btn-info btn-lg btn-block">@sizes[17]</button></td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[18]))" class="btn btn-info btn-lg btn-block">@sizes[18]</button></td>
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[19]))" class="btn btn-info btn-lg btn-block">@sizes[19]</button></td>
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[20]))" class="btn btn-info btn-lg btn-block">@sizes[20]</button></td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[21]))" class="btn btn-info btn-lg btn-block">@sizes[21]</button></td>
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[22]))" class="btn btn-info btn-lg btn-block">@sizes[22]</button></td>
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[23]))" class="btn btn-info btn-lg btn-block">@sizes[23]</button></td>
+                                    </tr>
+
+                                    <tr class="text-center">
+                                        <td colspan="3">  <button type="button" style="color:lawngreen" @onclick="Add" class="btn btn-secondary btn-lg">+</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="col w-25">
+                    </div>
 
                 </div>
 
-
-
-                <div class="col w-25">
-
-
-                </div>
-
-            </div>
-
-
-
-
+            }
+            else
+            {
+                <LoadingMessage Message="Izvēlies izmēru lai sāktu mērījumu"></LoadingMessage>
+            }
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
-
-
-
-
-
 </div>
 
 
@@ -230,25 +291,82 @@
     public string colorBg1 = "white";
     public string colorBg2 = "white";
     public string colorBg3 = "white";
-
+    public bool isTypeCklicked = false;
     int selecteSizeType = 0;
-
+    private string activePosition = "";
 
     private IList<Measurement> Model2;
-  //  Machine machine = new Machine();
+    //  Machine machine = new Machine();
 
-    public int[,] positions = new int[10, 4];
+    public int[,] positions = new int[10, 3];
+
+    bool isEdit = false;
+    string editPosition = "";
+    private void HighlightSelected(int a, int b)
+    {
+        isEdit = true;
+        for (int i = 0; i < elements.GetLength(0); i++)
+        {
+
+            for (int j = 0; j < elements.GetLength(1); j++)
+            {
+                if (i == a && b == j)
+                {
+                    elements[i, j] = "yellow";
+                    editPosition = "current" + i + j;
+
+                }
+                else
+                {
+                    elements[i, j] = "";
+                }
+                //if (currentElement[i,j] == activePosition)
+                //  {
+                //      activePosition = "current" + i + j;
+                //      elements[i, j] = "red";
+                //      break;
+                //  } 
+            }
+        }
+
+    }
+
 
     private void changecolor1AndSetSizes()
     {
+        for (int i = 0; i < elements.GetLength(0); i++)
+        {
+            for (int j = 0; j < elements.GetLength(1); j++)
+            {
+                elements[i, j] = "";
+            }
+        }
+        activePosition = "current00";
+        elements[0, 0] = "red";
+        selectedCellI = 0;
+        selectedCellJ = 0;
+
+        isTypeCklicked = true;
         selecteSizeType = 13;
         colorBg1 = "greenyellow";
         colorBg2 = "white";
         colorBg3 = "white";
 
     }
+
     private void changecolor2AndSetSizes()
     {
+        for (int i = 0; i < elements.GetLength(0); i++)
+        {
+            for (int j = 0; j < elements.GetLength(1); j++)
+            {
+                elements[i, j] = "";
+            }
+        }
+        activePosition = "current00";
+        elements[0, 0] = "red";
+
+        isTypeCklicked = true;
         selecteSizeType = 28;
         colorBg1 = "white";
         colorBg2 = "greenyellow";
@@ -256,11 +374,25 @@
     }
     private void changecolor3AndSetSizes()
     {
+        for (int i = 0; i < elements.GetLength(0); i++)
+        {
+            for (int j = 0; j < elements.GetLength(1); j++)
+            {
+                elements[i, j] = "";
+            }
+        }
+        activePosition = "current00";
+        elements[0, 0] = "red";
+        isTypeCklicked = true;
         selecteSizeType = 13;
         colorBg1 = "white";
         colorBg2 = "white";
         colorBg3 = "greenyellow";
     }
+    MeasurementType mt = new MeasurementType();
+
+    bool isPackCreated = false;
+    bool isSuccess = false;
 
     private async void SaveMeasurement()
     {
@@ -269,8 +401,7 @@
         DateTime shiftTime = Convert.ToDateTime("12:00:00");
         DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
         int packId = int.Parse(stringPackValue);
-
-        //String timeOfTheDayNow = DateTime.Now.ToString("t");
+        mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 2);        //String timeOfTheDayNow = DateTime.Now.ToString("t");
         int shift = 1;
 
         if (DateTime.Compare(currentMeasurement, shiftTime) >= 0)
@@ -280,8 +411,7 @@
 
 
 
-        bool isSuccess = true;
-        bool isPackCreated = true;
+
 
         IList<Measurement> measurementsToCreate = new List<Measurement>();
         for (int i = 0; i < positions.GetLength(0); i++)
@@ -291,18 +421,19 @@
             Measurement meas = new Measurement();
             meas.DateCreated = measurementDateAndTime;
             meas.Shift = shift;
-          //  meas.MachineId = int.Parse(pmachineIdd); //machine.Id;
+            // meas.MachineId = int.Parse(pmachineIdd); //machine.Id;
+            meas.MachineName = fusMachineName;
             meas.UserId = userId;
             meas.MeasurementPositionId = int.Parse(measurementPositionId);
             meas.PackId = packId;
             meas.MeasurementTypeId = 2;
 
-            for (int j = 1; j < positions.GetLength(1); j++)
+            for (int j = 0; j < positions.GetLength(1); j++)
             {
                 string newMeasSize = selecteSizeType.ToString();
 
 
-                if (j == 1)
+                if (j == 0)
                 {
 
                     if (positions[i, j] == 0)
@@ -318,7 +449,7 @@
 
                     meas.Measurement1 = Convert.ToDecimal(newMeasSize);
                 }
-                if (j == 2)
+                if (j == 1)
                 {
                     if (positions[i, j] == 0)
                     {
@@ -331,16 +462,16 @@
                     }
                     meas.Measurement2 = Convert.ToDecimal(newMeasSize);
                 }
-                if (j == 3)
+                if (j == 2)
                 {
                     if (positions[i, j] == 0)
                     {
-                        newMeasSize = newMeasSize + "00";
+
                     }
                     else
                     {
 
-                        newMeasSize = newMeasSize + positions[i, j];
+                        newMeasSize =   positions[i, j].ToString();
                     }
                     meas.Measurement3 = Convert.ToDecimal(newMeasSize);
                 }
@@ -353,24 +484,26 @@
             isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
         }
         Pack pack = new Pack();
-//Machine machine = new Machine();
 
-       // machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
         LoginModel user = new LoginModel();
         user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
         pack.DateCreated = measurementDateAndTime;
-      //  pack.Machine = machine.Name;
+        pack.Machine = fusMachineName;
         pack.Shift = shift;
         pack.Author = user.UserName;
         pack.FusCode = stringPackValue;
-
+        pack.MeasurementTypeName = mt.Name;
 
         isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
-
+        if (isPackCreated)
+        {
+            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
+        }
     }
 
     protected async override Task OnInitializedAsync()
     {
+        activePosition = "current00";
         Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
         for (int i = 0; i < sizes.Length; i++)
         {
@@ -388,11 +521,31 @@
         }
 
 
+        for (int i = 0; i < elements.GetLength(0); i++)
+        {
+
+            for (int j = 0; j < elements.GetLength(1); j++)
+            {
+                elements[i, j] = "";
+            }
+        }
+
+
+        for (int i = 0; i < 10; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
+
+                currentElement[i, j] = "current" + i + j;
+            }
+        }
     }
+
+    private string bgcolor = "";
 
     private int actPos;
 
-    private int[] sizes = new int[9];
+    private int[] sizes = new int[27];
     private int start = 27;
 
     private int selectedCellI = 0;
@@ -400,26 +553,196 @@
     private int[] positionValues = new int[3];
     private int positionValue;
 
+    private string[,] elements { get; set; } = new string[10, 3];
 
+    bool isEnd = false;
     private void select(int value)
     {
-        positionValues[actPos] = value;
-        positions[selectedCellI, selectedCellJ] = value;
+
+        if (isEdit)
+        {
+            for (int i = 0; i < currentElement.GetLength(0); i++)
+            {
+                for (int j = 0; j < currentElement.GetLength(1); j++)
+                {
+
+                    if (currentElement[i, j] == editPosition)
+                    {
+                        positions[i, j] = value;
+                    }
+
+                }
+            }
+            isEdit = false;
+            for (int i = 0; i < positions.GetLength(0); i++)
+            {
+
+
+                int max = positions[i, 0];
+                int min = positions[i, 1];
+                if (positions[i, 1] >= max)
+                {
+                    max = positions[i, 1];
+                    min = positions[i, 0];
+                }
+
+                positions[i, 2] = max - min;
+
+
+
+            }
+        }
+        else
+        {
+
+            for (int i = 0; i < currentElement.GetLength(0); i++)
+            {
+
+                for (int j = 0; j < currentElement.GetLength(1); j++)
+                {
+                    if (currentElement[i, j] == activePosition)
+                    {
+                        if (selectedCellI == 10 && selectedCellJ == 1)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            positions[selectedCellI, selectedCellJ] = value;
+                            elements[i, j] = "";
+                            i++;
+                            selectedCellI = i;
+                            selectedCellJ = j;
+                            if (selectedCellI == 10 && selectedCellJ == 0)
+                            {
+
+                                selectedCellI = 0; selectedCellJ = 1;
+                                activePosition = "current" + selectedCellI + selectedCellJ;
+                                positions[selectedCellI, selectedCellJ] = value;
+                                elements[selectedCellI, selectedCellJ] = "red";
+                                break;
+                            }
+                            else if (selectedCellI < 10 && selectedCellJ < 2)
+                            {
+                                elements[selectedCellI, selectedCellJ] = "red";
+                                activePosition = "current" + i + j;
+
+                                break;// break;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+
+
+
+
+
+            for (int i = 0; i < positions.GetLength(0); i++)
+            {
+
+
+                int max = positions[i, 0];
+                int min = positions[i, 1];
+                if (positions[i, 1] >= max)
+                {
+                    max = positions[i, 1];
+                    min = positions[i, 0];
+                }
+
+                positions[i, 2] = max - min;
+
+
+
+            }
+
+        }
+    }
+
+
+
+
+    private string[,] currentElement = new string[10, 2];
+    string current = "";
+
+    public  void focusToNextElement(int i, int j)
+    {
+
+        int focus = 0;
+        for (int x = 0; x < 10; x++)
+        {
+
+            for (int y = 0; y < 2; y++)
+            {
+                if (x == i && y == j)
+                {
+                    elements[selectedCellI, selectedCellJ] = "";
+                    if (x < 9)
+                    {
+                        selectedCellI = x + 1;
+                        selectedCellJ = y;
+
+                        elements[selectedCellI, selectedCellJ] = "red";
+                    }
+                }
+
+
+            }
+
+
+        }
+
 
 
     }
-
     private void selectTableCell(int ii, int jj)
     {
-
         selectedCellI = ii;
         selectedCellJ = jj;
+        int cellI = ii;
+        int cellJ = jj - 1;
+
+
+
+        for (int i = 0; i < elements.GetLength(0); i++)
+        {
+
+            for (int j = 0; j < elements.GetLength(1); j++)
+            {
+                if (i == cellI && j == cellJ)
+                {
+                    elements[i, j] = "red";
+                }
+                else
+                {
+                    elements[i, j] = "";
+                }
+
+
+            }
+        }
+
+
     }
 
-    private void BacktochooseDimension(MouseEventArgs e)
+    private async void BacktochooseDimension(MouseEventArgs e)
     {
+        if (isSuccess && isPackCreated)
+        {
+            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions");
+        }
+        else
+        {
 
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions");
+            bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Tiešām vēlies iziet nesaglabājot?");
+            if (confirmed)
+            {
+                this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions");
+            }
+        }
+        // this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions");
     }
 
 

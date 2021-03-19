@@ -1,5 +1,5 @@
-﻿@page "/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/quality"
-
+﻿@page "/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/quality"
+@* /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/quality"*@
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
 @using LKDUS_UI.Contracts
@@ -9,6 +9,8 @@
 @inject NavigationManager navManager
 @inject IMeasurementRepository measurementRepo
 @inject IMachinesRepository machineRepository
+@inject IMeasurementTypeRepository measurementTypeRepository
+@inject IJSRuntime JsRuntime;
 
 @inject IPacksRepository packRepo
 @inject IAuthenticationRepository authRepo
@@ -19,7 +21,7 @@
     }
 </style>
 
-<form>
+<div>
 
     <div class="container">
         <div class="row">
@@ -145,12 +147,13 @@
 
 
 
-</form>
+</div>
 
 
 
 
 @code {
+    MeasurementType mt = new MeasurementType();
 
     [Parameter]
     public string userId { get; set; }
@@ -161,6 +164,8 @@
     [Parameter]
     public string pmachineIdd { get; set; }
 
+    [Parameter]
+    public string fusMachineName { get; set; }
     private IList<Measurement> Model2;
     private int v1;
     private int v2;
@@ -240,16 +245,32 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
 
     }
 
-    private void Return(MouseEventArgs e)
+    private async void Return(MouseEventArgs e)
     {
+        if (isSuccess && isPackCreated)
+        {
+            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
+        }
+        else
+        {
 
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
+            bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Tiešām vēlies iziet nesaglabājot?");
+            if (confirmed)
+            {
+                this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
+            }
+        }
+
     }
 
-
+    bool isSuccess = false;
+    bool isPackCreated = false;
 
     private async void SaveMeasurement()
     {
+        mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 5);
+
+
         String measurementDateAndTime = DateTime.Now.ToString("g");
 
         DateTime shiftTime = Convert.ToDateTime("12:00:00");
@@ -266,8 +287,7 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
 
 
 
-        bool isSuccess = true;
-        bool isPackCreated = true;
+
         IList<Measurement> measurementsToCreate = new List<Measurement>();
 
 
@@ -275,7 +295,8 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
         Measurement meas = new Measurement();
         meas.DateCreated = measurementDateAndTime;
         meas.Shift = shift;
-        meas.MachineId = int.Parse(pmachineIdd); //machine.Id;
+        // meas.MachineId = int.Parse(pmachineIdd); //machine.Id;
+        meas.MachineName = fusMachineName;
         meas.UserId = userId;
         meas.MeasurementPositionId = int.Parse(measurementPositionId);
         meas.PackId = packId;
@@ -295,11 +316,11 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
         LoginModel user = new LoginModel();
         user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
         pack.DateCreated = measurementDateAndTime;
-        pack.Machine = machine.Name;
+        pack.Machine = fusMachineName;//  machine.Name;
         pack.Shift = shift;
         pack.Author = user.UserName;
         pack.FusCode = stringPackValue;
-
+        pack.MeasurementTypeName = mt.Name;
 
         isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
 
@@ -309,6 +330,11 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
         measurementsToCreate.Add(meas);
 
         isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
+
+        if (isPackCreated)
+        {
+            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
+        }
     }
 
 

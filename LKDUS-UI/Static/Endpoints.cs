@@ -13,12 +13,12 @@ namespace LKDUS_UI.Static
         public static string LoginEndpoint = $"{BaseUrl}api/login/";
         public static string GetUsersEndpoint = $"{BaseUrl}api/login/";
         public static string MeasurementPositions = $"{BaseUrl}api/measurementposition/";
-        public static string MeasurementTypeEndpoint = $"{BaseUrl}api/measurementtype/";
+        public static string MeasurementTypeEndpoint = $"{BaseUrl}api/measurementstype/";
         public static string MachinesEndpoint = $"{BaseUrl}api/machine/";
         public static string AspUsersEndpoint = $"{BaseUrl}api/aspnetusers/";
         public static string FusPackEndPoint = $"{BaseUrl}api/FusPack/";
         public static string RegisterUserEndpoint = $"{BaseUrl}api/aspnetusers/";
-        public static string PacksEndpoint = $"{BaseUrl}api/pack";
+        public static string PacksEndpoint = $"{BaseUrl}api/pack/";
 
 
     }

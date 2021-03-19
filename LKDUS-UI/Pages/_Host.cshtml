@@ -42,16 +42,39 @@
         };
 
         window.jsfunction =
-            { focusElement: function (id) { const element = document.getElementById(id); element.focus(); } }
+            { focusElement: function (id) { const element = document.getElementById(id); element.focus(); } };
+
+        window.blazorHelpers = {
+            scrollToFragment: (elementId) => {
+                var element = document.getElementById(elementId);
+
+                if (element) {
+                    element.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        };
+
+        window.Alert = function (message) {
+            alert(message);
+        };
+
+         function myFunction() {
+             
+            var r = confirm("Tiešām vēlies iziet nesaglabājot");
+             return r;
+            
+        }
 
     </script>
     <script src="js/lib/barcodereader/zxing.js"></script>
     <script src="js/lib/barcodereader/barcode.js"></script>
     <script src="js/lib/handwritten/handwritten.js"></script>
 
+     
 
-
-    <script type="text/javascript" src="JsLib"></script>zzzzzzzzzzzzzzzzzzzz
+    <script type="text/javascript" src="JsLib"></script>
     @*<script src="_framework/blazor.server.js"></script>
         <script>window.jsfunction =
                 { focusElement: function (id) { const element = document.getElementById(id); element.focus(); } }</script>*@

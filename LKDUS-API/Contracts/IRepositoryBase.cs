@@ -8,7 +8,7 @@ namespace LKDUS_API.Contracts
     public interface IRepositoryBase<T> where T : class
     {
         Task<IList<T>> FindAll();
-        Task<T> FindById(int id);
+        Task<T> FindById(int id);//Task<T> FindById(string id);
         
         Task<bool> Create(T entity);
        // Task<bool> Create(IList<T> entityList);

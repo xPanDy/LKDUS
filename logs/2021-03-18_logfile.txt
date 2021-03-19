@@ -1,0 +1,369 @@
+2021-03-18 10:03:31.1014 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-03-18 10:03:31.3977 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-03-18 10:03:31.9407 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-03-18 10:03:31.9896 INFO Sucessfully got all measurementPositions
+2021-03-18 10:03:33.1833 INFO Pack-GetPacks: Attempted Call
+2021-03-18 10:03:33.2196 INFO Sucessfully got all packs
+2021-03-18 10:03:33.2663 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-03-18 10:03:33.2919 INFO Sucessfully got the measurement position with Id:2
+2021-03-18 10:03:36.3076 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 10:03:36.3914 INFO Sucessfully got all Measurements
+2021-03-18 10:03:36.4709 INFO Machine-GetMachines: Attempted Call
+2021-03-18 10:03:36.4916 INFO Sucessfully got all machines
+2021-03-18 10:03:36.5107 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-03-18 10:03:36.5107 INFO Sucessfully got the measurement position with Id:2
+2021-03-18 10:03:37.3016 INFO Pack-GetPacks: Attempted Call
+2021-03-18 10:03:37.3206 INFO Sucessfully got all packs
+2021-03-18 10:03:37.3404 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-03-18 10:03:37.3559 INFO Sucessfully got the measurement position with Id:2
+2021-03-18 10:03:43.6248 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 10:03:43.6501 INFO Sucessfully got all Measurements
+2021-03-18 10:03:43.6835 INFO Machine-GetMachines: Attempted Call
+2021-03-18 10:03:43.6944 INFO Sucessfully got all machines
+2021-03-18 10:03:43.7232 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-03-18 10:03:43.7665 INFO Sucessfully got the measurement position with Id:2
+2021-03-18 10:03:45.8914 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 10:03:45.9301 INFO Sucessfully got all Measurements
+2021-03-18 10:03:52.9530 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 10:03:52.9883 INFO Sucessfully got all Measurements
+2021-03-18 10:03:53.0495 INFO Machine-GetMachines: Attempted Call
+2021-03-18 10:03:53.0581 INFO Sucessfully got all machines
+2021-03-18 10:03:53.0916 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-03-18 10:03:53.1109 INFO Sucessfully got the measurement position with Id:2
+2021-03-18 10:03:55.4995 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 10:03:55.5587 INFO Sucessfully got all Measurements
+2021-03-18 10:03:57.6123 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-03-18 10:03:57.6402 INFO Sucessfully got the measurement type with Id:11
+2021-03-18 10:03:57.6950 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:57.9825 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:57.9825 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.0061 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.0061 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.0061 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.0303 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.0392 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.0392 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.0526 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.0526 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.0526 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.0746 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.0853 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.0853 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.1014 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.1014 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.1014 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.1228 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.1316 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.1316 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.1462 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.1462 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.1462 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.1710 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.1832 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.1832 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.2028 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.2134 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.2134 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.2316 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.2431 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.2431 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.2616 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.2726 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.2726 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.2924 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.3035 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.3035 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.3231 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.3340 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.3340 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.3536 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.3639 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.3639 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.3824 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.3824 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.3824 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.4109 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.4109 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.4109 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.4335 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.4497 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.4497 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.4645 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.4645 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.4750 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.4901 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.4901 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.4901 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.5141 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.5216 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.5216 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.5375 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.5375 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.5375 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.5633 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.5741 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.5741 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.5922 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.6031 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.6031 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.6201 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.6301 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.6301 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.6462 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.6462 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.6462 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.6730 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.6851 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.6851 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.7095 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.7390 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.7390 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.7614 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.7712 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.7712 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.7910 INFO Measurements-Create: Measurement creation  Attempted
+2021-03-18 10:03:58.8085 INFO Measurements-Create: Measurement creation was created
+2021-03-18 10:03:58.8085 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-03-18 10:03:58.8379 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-03-18 10:03:58.8379 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-03-18 10:03:58.8784 INFO Pack-Create: Pack creation  Attempted
+2021-03-18 10:03:58.9062 INFO Pack-Create: Pack creation was created
+2021-03-18 10:03:58.9062 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-03-18 10:03:58.9932 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 10:03:59.0179 INFO Sucessfully got all Measurements
+2021-03-18 10:03:59.0522 INFO Machine-GetMachines: Attempted Call
+2021-03-18 10:03:59.0522 INFO Sucessfully got all machines
+2021-03-18 10:03:59.0925 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-03-18 10:03:59.1019 INFO Sucessfully got the measurement position with Id:2
+2021-03-18 10:26:42.8887 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 10:26:42.9686 INFO Sucessfully got all Measurements
+2021-03-18 10:32:15.4904 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-03-18 10:32:15.7679 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-03-18 10:32:16.2498 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-03-18 10:32:16.2968 INFO Sucessfully got all measurementPositions
+2021-03-18 10:32:20.8360 INFO Pack-GetPacks: Attempted Call
+2021-03-18 10:32:20.8949 INFO Sucessfully got all packs
+2021-03-18 10:32:20.9614 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-03-18 10:32:20.9912 INFO Sucessfully got the measurement position with Id:2
+2021-03-18 10:32:22.8554 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 10:32:22.9293 INFO Sucessfully got all Measurements
+2021-03-18 10:32:22.9945 INFO Machine-GetMachines: Attempted Call
+2021-03-18 10:32:23.0209 INFO Sucessfully got all machines
+2021-03-18 10:32:23.0398 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-03-18 10:32:23.0398 INFO Sucessfully got the measurement position with Id:2
+2021-03-18 10:32:24.1555 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 10:32:24.2086 INFO Sucessfully got all Measurements
+2021-03-18 10:34:10.9913 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-03-18 10:34:11.2878 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-03-18 10:34:11.7344 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-03-18 10:34:11.7812 INFO Sucessfully got all measurementPositions
+2021-03-18 10:34:13.0269 INFO Pack-GetPacks: Attempted Call
+2021-03-18 10:34:13.0725 INFO Sucessfully got all packs
+2021-03-18 10:34:13.1176 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-03-18 10:34:13.1422 INFO Sucessfully got the measurement position with Id:2
+2021-03-18 10:34:14.1021 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 10:34:14.1683 INFO Sucessfully got all Measurements
+2021-03-18 10:34:14.2321 INFO Machine-GetMachines: Attempted Call
+2021-03-18 10:34:14.2528 INFO Sucessfully got all machines
+2021-03-18 10:34:14.2745 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-03-18 10:34:14.2745 INFO Sucessfully got the measurement position with Id:2
+2021-03-18 10:34:15.3060 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 10:34:15.3300 INFO Sucessfully got all Measurements
+2021-03-18 10:45:41.6241 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-03-18 10:45:41.8984 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-03-18 10:45:42.3948 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-03-18 10:45:42.4410 INFO Sucessfully got all measurementPositions
+2021-03-18 10:45:43.3695 INFO Pack-GetPacks: Attempted Call
+2021-03-18 10:45:43.4138 INFO Sucessfully got all packs
+2021-03-18 10:45:43.4644 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-03-18 10:45:43.4916 INFO Sucessfully got the measurement position with Id:2
+2021-03-18 10:45:44.8749 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 10:45:44.9426 INFO Sucessfully got all Measurements
+2021-03-18 10:45:45.0216 INFO Machine-GetMachines: Attempted Call
+2021-03-18 10:45:45.0455 INFO Sucessfully got all machines
+2021-03-18 10:45:45.0683 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-03-18 10:45:45.0683 INFO Sucessfully got the measurement position with Id:2
+2021-03-18 10:45:47.4490 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 10:45:47.4905 INFO Sucessfully got all Measurements
+2021-03-18 10:48:28.3417 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-03-18 10:48:28.6275 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-03-18 10:48:29.0633 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-03-18 10:48:29.1140 INFO Sucessfully got all measurementPositions
+2021-03-18 10:48:30.0373 INFO Pack-GetPacks: Attempted Call
+2021-03-18 10:48:30.0831 INFO Sucessfully got all packs
+2021-03-18 10:48:30.1301 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-03-18 10:48:30.1611 INFO Sucessfully got the measurement position with Id:2
+2021-03-18 10:48:33.5695 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 10:48:33.6616 INFO Sucessfully got all Measurements
+2021-03-18 10:48:33.7528 INFO Machine-GetMachines: Attempted Call
+2021-03-18 10:48:33.7805 INFO Sucessfully got all machines
+2021-03-18 10:48:33.8041 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-03-18 10:48:33.8103 INFO Sucessfully got the measurement position with Id:2
+2021-03-18 10:48:35.7083 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 10:48:35.7403 INFO Sucessfully got all Measurements
+2021-03-18 11:11:16.0966 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 11:11:16.2659 INFO Sucessfully got all Measurements
+2021-03-18 11:11:16.5778 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 11:11:16.6365 INFO Sucessfully got all Measurements
+2021-03-18 14:09:20.2676 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 14:09:20.4578 INFO Sucessfully got all Measurements
+2021-03-18 14:09:20.7091 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 14:09:20.7620 INFO Sucessfully got all Measurements
+2021-03-18 14:56:48.2141 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 14:56:48.4037 INFO Sucessfully got all Measurements
+2021-03-18 14:56:48.7096 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 14:56:48.7696 INFO Sucessfully got all Measurements
+2021-03-18 14:58:04.4849 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 14:58:04.6348 INFO Sucessfully got all Measurements
+2021-03-18 14:58:04.9650 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 14:58:05.0068 INFO Sucessfully got all Measurements
+2021-03-18 14:59:51.9164 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 14:59:52.0920 INFO Sucessfully got all Measurements
+2021-03-18 14:59:52.8043 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 14:59:52.8404 INFO Sucessfully got all Measurements
+2021-03-18 15:00:32.3856 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 15:00:32.4236 INFO Sucessfully got all Measurements
+2021-03-18 15:00:32.6555 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 15:00:32.6724 INFO Sucessfully got all Measurements
+2021-03-18 15:12:02.9388 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 15:12:02.9712 INFO Sucessfully got all Measurements
+2021-03-18 15:12:03.1902 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 15:12:03.2489 INFO Sucessfully got all Measurements
+2021-03-18 15:39:44.0722 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 15:39:44.1388 INFO Sucessfully got all Measurements
+2021-03-18 15:39:44.4140 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 15:39:44.4320 INFO Sucessfully got all Measurements
+2021-03-18 16:08:15.5559 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:08:15.6276 INFO Sucessfully got all Measurements
+2021-03-18 16:08:15.8940 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:08:15.9511 INFO Sucessfully got all Measurements
+2021-03-18 16:40:19.4667 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:40:19.5256 INFO Sucessfully got all Measurements
+2021-03-18 16:40:19.7368 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:40:19.7915 INFO Sucessfully got all Measurements
+2021-03-18 16:41:55.4606 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:41:55.5225 INFO Sucessfully got all Measurements
+2021-03-18 16:41:55.8368 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:41:55.8828 INFO Sucessfully got all Measurements
+2021-03-18 16:42:44.1222 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:42:44.1546 INFO Sucessfully got all Measurements
+2021-03-18 16:42:44.3997 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:42:44.4201 INFO Sucessfully got all Measurements
+2021-03-18 16:44:11.0706 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:44:11.2741 INFO Sucessfully got all Measurements
+2021-03-18 16:44:11.6378 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:44:11.7067 INFO Sucessfully got all Measurements
+2021-03-18 16:50:40.2600 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:50:40.3189 INFO Sucessfully got all Measurements
+2021-03-18 16:50:40.6519 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:50:40.7138 INFO Sucessfully got all Measurements
+2021-03-18 16:52:38.1476 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:52:38.3267 INFO Sucessfully got all Measurements
+2021-03-18 16:52:38.7034 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:52:38.7479 INFO Sucessfully got all Measurements
+2021-03-18 16:53:31.2098 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:53:31.2647 INFO Sucessfully got all Measurements
+2021-03-18 16:53:31.5412 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:53:31.5832 INFO Sucessfully got all Measurements
+2021-03-18 16:54:38.5985 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:54:38.7772 INFO Sucessfully got all Measurements
+2021-03-18 16:54:39.1022 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:54:39.1459 INFO Sucessfully got all Measurements
+2021-03-18 16:58:00.4119 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:58:00.5833 INFO Sucessfully got all Measurements
+2021-03-18 16:58:00.8982 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:58:00.9503 INFO Sucessfully got all Measurements
+2021-03-18 16:58:23.5740 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:58:23.6032 INFO Sucessfully got all Measurements
+2021-03-18 16:58:23.8514 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 16:58:23.8741 INFO Sucessfully got all Measurements
+2021-03-18 17:03:55.9876 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:03:56.1879 INFO Sucessfully got all Measurements
+2021-03-18 17:03:56.5958 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:03:56.6513 INFO Sucessfully got all Measurements
+2021-03-18 17:03:56.8034 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:03:56.8437 INFO Sucessfully got all Measurements
+2021-03-18 17:03:57.0774 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:03:57.1060 INFO Sucessfully got all Measurements
+2021-03-18 17:05:10.6910 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:05:10.9483 INFO Sucessfully got all Measurements
+2021-03-18 17:05:11.3761 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:05:11.4232 INFO Sucessfully got all Measurements
+2021-03-18 17:05:19.8967 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:05:19.9271 INFO Sucessfully got all Measurements
+2021-03-18 17:05:20.1785 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:05:20.2030 INFO Sucessfully got all Measurements
+2021-03-18 17:05:55.0316 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:05:55.2038 INFO Sucessfully got all Measurements
+2021-03-18 17:05:55.6402 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:05:55.6744 INFO Sucessfully got all Measurements
+2021-03-18 17:05:59.9744 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:06:00.0071 INFO Sucessfully got all Measurements
+2021-03-18 17:06:00.2184 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:06:00.2384 INFO Sucessfully got all Measurements
+2021-03-18 17:06:55.6092 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:06:55.7620 INFO Sucessfully got all Measurements
+2021-03-18 17:06:56.1010 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:06:56.1464 INFO Sucessfully got all Measurements
+2021-03-18 17:35:46.5530 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:35:46.7442 INFO Sucessfully got all Measurements
+2021-03-18 17:35:47.0189 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:35:47.0850 INFO Sucessfully got all Measurements
+2021-03-18 17:43:21.4482 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:43:21.5012 INFO Sucessfully got all Measurements
+2021-03-18 17:43:21.7308 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:43:21.7916 INFO Sucessfully got all Measurements
+2021-03-18 17:46:39.3696 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-03-18 17:46:39.5736 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-03-18 17:46:40.0378 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-03-18 17:46:40.0613 INFO Sucessfully got all measurementPositions
+2021-03-18 17:46:40.5561 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:46:40.5783 INFO Sucessfully got all Measurements
+2021-03-18 17:46:40.8248 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:46:40.8526 INFO Sucessfully got all Measurements
+2021-03-18 17:47:20.0671 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:47:20.2232 INFO Sucessfully got all Measurements
+2021-03-18 17:47:20.5226 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:47:20.5708 INFO Sucessfully got all Measurements
+2021-03-18 17:48:28.8772 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:48:28.9250 INFO Sucessfully got all Measurements
+2021-03-18 17:48:29.1526 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:48:29.1740 INFO Sucessfully got all Measurements
+2021-03-18 17:52:49.6254 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:52:49.7833 INFO Sucessfully got all Measurements
+2021-03-18 17:52:50.0706 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:52:50.1157 INFO Sucessfully got all Measurements
+2021-03-18 17:54:20.5323 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:54:20.7444 INFO Sucessfully got all Measurements
+2021-03-18 17:54:21.4536 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:54:21.5156 INFO Sucessfully got all Measurements
+2021-03-18 17:54:21.5159 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:54:21.5534 INFO Sucessfully got all Measurements
+2021-03-18 17:54:21.7824 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:54:21.8405 INFO Sucessfully got all Measurements
+2021-03-18 17:54:23.9640 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:54:23.9819 INFO Sucessfully got all Measurements
+2021-03-18 17:54:24.2086 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:54:24.2284 INFO Sucessfully got all Measurements
+2021-03-18 17:54:26.2894 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:54:26.3107 INFO Sucessfully got all Measurements
+2021-03-18 17:54:26.5394 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:54:26.5591 INFO Sucessfully got all Measurements
+2021-03-18 17:54:57.8753 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:54:58.0365 INFO Sucessfully got all Measurements
+2021-03-18 17:54:58.1866 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:54:58.2138 INFO Sucessfully got all Measurements
+2021-03-18 17:54:58.4322 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:54:58.4983 INFO Sucessfully got all Measurements
+2021-03-18 17:55:45.9523 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:55:45.9830 INFO Sucessfully got all Measurements
+2021-03-18 17:55:46.2015 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:55:46.2242 INFO Sucessfully got all Measurements
+2021-03-18 17:57:26.3937 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:57:26.5463 INFO Sucessfully got all Measurements
+2021-03-18 17:57:26.8199 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:57:26.8619 INFO Sucessfully got all Measurements
+2021-03-18 17:59:47.6864 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:59:47.8649 INFO Sucessfully got all Measurements
+2021-03-18 17:59:48.2418 INFO Measurements-GetMeasurements: Attempted Call
+2021-03-18 17:59:48.2773 INFO Sucessfully got all Measurements

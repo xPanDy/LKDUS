@@ -1,0 +1,766 @@
+2021-02-25 06:40:16.7477 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1
+2021-02-25 06:40:16.8814 INFO Sucessfully got the measurement type with Id:1
+2021-02-25 06:40:17.1338 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1
+2021-02-25 06:40:17.1520 INFO Sucessfully got the measurement type with Id:1
+2021-02-25 06:40:19.1644 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-02-25 06:40:19.4463 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-02-25 06:40:19.9344 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-25 06:40:19.9688 INFO Sucessfully got all measurementPositions
+2021-02-25 06:40:20.9537 INFO Pack-GetPacks: Attempted Call
+2021-02-25 06:40:21.0002 INFO Sucessfully got all packs
+2021-02-25 06:40:21.0511 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-25 06:40:21.0688 INFO Sucessfully got the measurement position with Id:1
+2021-02-25 06:40:21.9826 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:40:22.0158 INFO Sucessfully got all Measurements
+2021-02-25 06:40:22.0573 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:40:22.0693 INFO Sucessfully got all Measurements
+2021-02-25 06:40:22.1077 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-25 06:40:22.5238 INFO Sucessfully got all FUS packs
+2021-02-25 06:40:22.5855 INFO Machine-GetMachines: Attempted Call
+2021-02-25 06:40:22.6100 INFO Sucessfully got all machines
+2021-02-25 06:40:22.6373 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-25 06:40:22.6440 INFO Sucessfully got the measurement position with Id:1
+2021-02-25 06:40:27.4758 INFO Machine-GetMachines: Attempted Call
+2021-02-25 06:40:27.4916 INFO Sucessfully got all machines
+2021-02-25 06:40:27.5208 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:40:27.5208 INFO Sucessfully got all Measurements
+2021-02-25 06:40:28.7828 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:40:28.8120 INFO Sucessfully got all Measurements
+2021-02-25 06:42:44.7556 INFO Machine-GetMachines: Attempted Call
+2021-02-25 06:42:44.7717 INFO Sucessfully got all machines
+2021-02-25 06:42:44.7887 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:42:44.8040 INFO Sucessfully got all Measurements
+2021-02-25 06:42:45.5601 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:42:45.5601 INFO Sucessfully got all Measurements
+2021-02-25 06:49:37.6485 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-02-25 06:49:37.9101 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-02-25 06:49:38.3450 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-25 06:49:38.3978 INFO Sucessfully got all measurementPositions
+2021-02-25 06:49:39.5867 INFO Pack-GetPacks: Attempted Call
+2021-02-25 06:49:39.6368 INFO Sucessfully got all packs
+2021-02-25 06:49:39.6835 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-25 06:49:39.7089 INFO Sucessfully got the measurement position with Id:1
+2021-02-25 06:49:40.8341 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:49:40.8705 INFO Sucessfully got all Measurements
+2021-02-25 06:49:40.9119 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:49:40.9175 INFO Sucessfully got all Measurements
+2021-02-25 06:49:40.9386 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-25 06:49:41.1805 INFO Sucessfully got all FUS packs
+2021-02-25 06:49:41.2421 INFO Machine-GetMachines: Attempted Call
+2021-02-25 06:49:41.2671 INFO Sucessfully got all machines
+2021-02-25 06:49:41.3021 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-25 06:49:41.3087 INFO Sucessfully got the measurement position with Id:1
+2021-02-25 06:49:46.6793 INFO Machine-GetMachines: Attempted Call
+2021-02-25 06:49:46.7156 INFO Sucessfully got all machines
+2021-02-25 06:49:46.7386 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:49:46.7452 INFO Sucessfully got all Measurements
+2021-02-25 06:49:49.8502 INFO Machine-GetMachines: Attempted Call
+2021-02-25 06:49:49.8826 INFO Sucessfully got all machines
+2021-02-25 06:49:49.9367 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:49:49.9530 INFO Sucessfully got all Measurements
+2021-02-25 06:49:50.1142 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:49:50.1429 INFO Sucessfully got all Measurements
+2021-02-25 06:49:59.0445 INFO Machine-GetMachines: Attempted Call
+2021-02-25 06:49:59.0445 INFO Sucessfully got all machines
+2021-02-25 06:49:59.0739 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:49:59.0739 INFO Sucessfully got all Measurements
+2021-02-25 06:50:02.9955 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:50:03.0124 INFO Sucessfully got all Measurements
+2021-02-25 06:51:02.5349 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:51:02.6662 INFO Sucessfully got all Measurements
+2021-02-25 06:56:20.7584 INFO Machine-GetMachines: Attempted Call
+2021-02-25 06:56:20.8655 INFO Sucessfully got all machines
+2021-02-25 06:56:20.9416 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:56:20.9795 INFO Sucessfully got all Measurements
+2021-02-25 06:56:21.1838 INFO Machine-GetMachines: Attempted Call
+2021-02-25 06:56:21.2055 INFO Sucessfully got all machines
+2021-02-25 06:56:21.2641 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:56:21.2712 INFO Sucessfully got all Measurements
+2021-02-25 06:56:22.4360 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:56:22.4562 INFO Sucessfully got all Measurements
+2021-02-25 06:56:33.3103 INFO Machine-GetMachines: Attempted Call
+2021-02-25 06:56:33.3399 INFO Sucessfully got all machines
+2021-02-25 06:56:33.3810 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:56:33.3810 INFO Sucessfully got all Measurements
+2021-02-25 06:56:33.5786 INFO Machine-GetMachines: Attempted Call
+2021-02-25 06:56:33.5871 INFO Sucessfully got all machines
+2021-02-25 06:56:33.6343 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:56:33.6552 INFO Sucessfully got all Measurements
+2021-02-25 06:56:34.4867 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:56:34.4987 INFO Sucessfully got all Measurements
+2021-02-25 06:57:04.1321 INFO Machine-GetMachines: Attempted Call
+2021-02-25 06:57:04.2531 INFO Sucessfully got all machines
+2021-02-25 06:57:04.3128 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:57:04.3400 INFO Sucessfully got all Measurements
+2021-02-25 06:57:04.5556 INFO Machine-GetMachines: Attempted Call
+2021-02-25 06:57:04.5874 INFO Sucessfully got all machines
+2021-02-25 06:57:04.6107 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:57:04.6185 INFO Sucessfully got all Measurements
+2021-02-25 06:57:05.8146 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:57:05.8247 INFO Sucessfully got all Measurements
+2021-02-25 06:58:21.9742 INFO Machine-GetMachines: Attempted Call
+2021-02-25 06:58:22.0799 INFO Sucessfully got all machines
+2021-02-25 06:58:22.1626 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:58:22.1929 INFO Sucessfully got all Measurements
+2021-02-25 06:58:22.3818 INFO Machine-GetMachines: Attempted Call
+2021-02-25 06:58:22.4049 INFO Sucessfully got all machines
+2021-02-25 06:58:22.4469 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:58:22.4469 INFO Sucessfully got all Measurements
+2021-02-25 06:58:42.7832 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:58:42.7920 INFO Sucessfully got all Measurements
+2021-02-25 06:59:35.7572 INFO Machine-GetMachines: Attempted Call
+2021-02-25 06:59:35.8692 INFO Sucessfully got all machines
+2021-02-25 06:59:35.9312 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:59:35.9543 INFO Sucessfully got all Measurements
+2021-02-25 06:59:36.1898 INFO Machine-GetMachines: Attempted Call
+2021-02-25 06:59:36.2088 INFO Sucessfully got all machines
+2021-02-25 06:59:36.2548 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:59:36.2548 INFO Sucessfully got all Measurements
+2021-02-25 06:59:40.7856 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 06:59:40.8051 INFO Sucessfully got all Measurements
+2021-02-25 07:01:33.5212 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:01:33.6385 INFO Sucessfully got all machines
+2021-02-25 07:01:33.7075 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:01:33.7365 INFO Sucessfully got all Measurements
+2021-02-25 07:01:33.9373 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:01:33.9608 INFO Sucessfully got all machines
+2021-02-25 07:01:33.9858 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:01:33.9918 INFO Sucessfully got all Measurements
+2021-02-25 07:01:37.6877 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:01:37.6963 INFO Sucessfully got all Measurements
+2021-02-25 07:02:53.0179 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:02:53.1308 INFO Sucessfully got all machines
+2021-02-25 07:02:53.1935 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:02:53.2167 INFO Sucessfully got all Measurements
+2021-02-25 07:02:53.4162 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:02:53.4313 INFO Sucessfully got all machines
+2021-02-25 07:02:53.4574 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:02:53.4574 INFO Sucessfully got all Measurements
+2021-02-25 07:02:57.8211 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:02:57.8327 INFO Sucessfully got all Measurements
+2021-02-25 07:04:23.8661 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:04:23.9929 INFO Sucessfully got all machines
+2021-02-25 07:04:24.0557 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:04:24.0796 INFO Sucessfully got all Measurements
+2021-02-25 07:04:24.2892 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:04:24.3195 INFO Sucessfully got all machines
+2021-02-25 07:04:24.3378 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:04:24.3378 INFO Sucessfully got all Measurements
+2021-02-25 07:04:25.0662 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:04:25.0662 INFO Sucessfully got all machines
+2021-02-25 07:04:25.1318 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:04:25.1318 INFO Sucessfully got all Measurements
+2021-02-25 07:04:25.3857 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:04:25.3962 INFO Sucessfully got all machines
+2021-02-25 07:04:25.4234 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:04:25.4234 INFO Sucessfully got all Measurements
+2021-02-25 07:04:35.0961 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:04:35.0961 INFO Sucessfully got all Measurements
+2021-02-25 07:05:58.4545 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:05:58.4825 INFO Sucessfully got all Measurements
+2021-02-25 07:06:02.2239 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:06:02.2421 INFO Sucessfully got all Measurements
+2021-02-25 07:07:13.3440 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:07:13.4661 INFO Sucessfully got all machines
+2021-02-25 07:07:13.5247 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:07:13.5520 INFO Sucessfully got all Measurements
+2021-02-25 07:07:13.8037 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:07:13.8478 INFO Sucessfully got all machines
+2021-02-25 07:07:13.8904 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:07:13.9082 INFO Sucessfully got all Measurements
+2021-02-25 07:07:17.0133 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:07:17.0246 INFO Sucessfully got all Measurements
+2021-02-25 07:08:35.3158 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:08:35.4222 INFO Sucessfully got all machines
+2021-02-25 07:08:35.4778 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:08:35.5016 INFO Sucessfully got all Measurements
+2021-02-25 07:08:35.7269 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:08:35.7443 INFO Sucessfully got all machines
+2021-02-25 07:08:35.7724 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:08:35.7724 INFO Sucessfully got all Measurements
+2021-02-25 07:08:43.1624 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:08:43.1919 INFO Sucessfully got all Measurements
+2021-02-25 07:12:39.3618 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:12:39.6062 INFO Sucessfully got all machines
+2021-02-25 07:12:39.6744 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:12:39.7009 INFO Sucessfully got all Measurements
+2021-02-25 07:12:40.0751 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:12:40.0936 INFO Sucessfully got all machines
+2021-02-25 07:12:40.1137 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:12:40.1137 INFO Sucessfully got all Measurements
+2021-02-25 07:12:40.9393 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:12:40.9393 INFO Sucessfully got all Measurements
+2021-02-25 07:15:51.2137 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:15:51.2308 INFO Sucessfully got all Measurements
+2021-02-25 07:15:51.4131 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:15:51.4131 INFO Sucessfully got all Measurements
+2021-02-25 07:35:46.1628 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:35:46.2625 INFO Sucessfully got all machines
+2021-02-25 07:35:46.3195 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:35:46.3757 INFO Sucessfully got all Measurements
+2021-02-25 07:35:46.6557 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:35:46.7011 INFO Sucessfully got all machines
+2021-02-25 07:35:46.7259 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:35:46.7259 INFO Sucessfully got all Measurements
+2021-02-25 07:35:47.8988 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:35:47.9108 INFO Sucessfully got all Measurements
+2021-02-25 07:41:00.9249 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:41:01.0470 INFO Sucessfully got all machines
+2021-02-25 07:41:01.1183 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:41:01.1640 INFO Sucessfully got all Measurements
+2021-02-25 07:41:01.4600 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:41:01.4956 INFO Sucessfully got all machines
+2021-02-25 07:41:01.5128 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:41:01.5198 INFO Sucessfully got all Measurements
+2021-02-25 07:41:02.6838 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:41:02.6942 INFO Sucessfully got all Measurements
+2021-02-25 07:42:43.1115 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:42:43.2226 INFO Sucessfully got all machines
+2021-02-25 07:42:43.2995 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:42:43.3294 INFO Sucessfully got all Measurements
+2021-02-25 07:42:43.5426 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:42:43.5740 INFO Sucessfully got all machines
+2021-02-25 07:42:43.5955 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:42:43.6024 INFO Sucessfully got all Measurements
+2021-02-25 07:42:44.4110 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:42:44.4110 INFO Sucessfully got all Measurements
+2021-02-25 07:43:01.4730 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:43:01.4968 INFO Sucessfully got all Measurements
+2021-02-25 07:43:01.6727 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:43:01.6833 INFO Sucessfully got all Measurements
+2021-02-25 07:51:01.5471 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:51:01.7208 INFO Sucessfully got all machines
+2021-02-25 07:51:01.7753 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:51:01.7996 INFO Sucessfully got all Measurements
+2021-02-25 07:51:02.0855 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:51:02.1141 INFO Sucessfully got all machines
+2021-02-25 07:51:02.1404 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:51:02.1404 INFO Sucessfully got all Measurements
+2021-02-25 07:51:03.0474 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:51:03.0474 INFO Sucessfully got all Measurements
+2021-02-25 07:51:23.7212 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:51:23.8955 INFO Sucessfully got all Measurements
+2021-02-25 07:51:24.1855 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:51:24.2776 INFO Sucessfully got all Measurements
+2021-02-25 07:52:43.5315 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:52:43.6339 INFO Sucessfully got all machines
+2021-02-25 07:52:43.6945 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:52:43.7196 INFO Sucessfully got all Measurements
+2021-02-25 07:52:43.9554 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:52:43.9732 INFO Sucessfully got all machines
+2021-02-25 07:52:44.0042 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:52:44.0166 INFO Sucessfully got all Measurements
+2021-02-25 07:52:44.9640 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:52:44.9728 INFO Sucessfully got all Measurements
+2021-02-25 07:55:39.2355 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:55:39.3375 INFO Sucessfully got all machines
+2021-02-25 07:55:39.4035 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:55:39.4338 INFO Sucessfully got all Measurements
+2021-02-25 07:55:39.6632 INFO Machine-GetMachines: Attempted Call
+2021-02-25 07:55:39.6916 INFO Sucessfully got all machines
+2021-02-25 07:55:39.7127 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:55:39.7189 INFO Sucessfully got all Measurements
+2021-02-25 07:55:40.6808 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 07:55:40.6905 INFO Sucessfully got all Measurements
+2021-02-25 08:01:31.4432 INFO Machine-GetMachines: Attempted Call
+2021-02-25 08:01:31.5005 INFO Sucessfully got all machines
+2021-02-25 08:01:31.5301 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:01:31.5486 INFO Sucessfully got all Measurements
+2021-02-25 08:01:31.7414 INFO Machine-GetMachines: Attempted Call
+2021-02-25 08:01:31.7553 INFO Sucessfully got all machines
+2021-02-25 08:01:31.8094 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:01:31.8094 INFO Sucessfully got all Measurements
+2021-02-25 08:01:32.8001 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:01:32.8104 INFO Sucessfully got all Measurements
+2021-02-25 08:02:09.2202 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:02:09.2448 INFO Sucessfully got all Measurements
+2021-02-25 08:02:09.4967 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:02:09.4967 INFO Sucessfully got all Measurements
+2021-02-25 08:02:37.2723 INFO Machine-GetMachines: Attempted Call
+2021-02-25 08:02:37.2802 INFO Sucessfully got all machines
+2021-02-25 08:02:37.3089 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:02:37.3089 INFO Sucessfully got all Measurements
+2021-02-25 08:02:37.5039 INFO Machine-GetMachines: Attempted Call
+2021-02-25 08:02:37.5459 INFO Sucessfully got all machines
+2021-02-25 08:02:37.5723 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:02:37.5860 INFO Sucessfully got all Measurements
+2021-02-25 08:02:39.5461 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:02:39.5461 INFO Sucessfully got all Measurements
+2021-02-25 08:04:35.4473 INFO Machine-GetMachines: Attempted Call
+2021-02-25 08:04:35.5633 INFO Sucessfully got all machines
+2021-02-25 08:04:35.6327 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:04:35.6568 INFO Sucessfully got all Measurements
+2021-02-25 08:04:35.8637 INFO Machine-GetMachines: Attempted Call
+2021-02-25 08:04:35.8976 INFO Sucessfully got all machines
+2021-02-25 08:04:35.9235 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:04:35.9235 INFO Sucessfully got all Measurements
+2021-02-25 08:04:36.5296 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:04:36.5419 INFO Sucessfully got all Measurements
+2021-02-25 08:05:07.2310 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:05:07.2310 INFO Sucessfully got all Measurements
+2021-02-25 08:05:07.4806 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:05:07.4806 INFO Sucessfully got all Measurements
+2021-02-25 08:06:14.4998 INFO Machine-GetMachines: Attempted Call
+2021-02-25 08:06:14.7577 INFO Sucessfully got all machines
+2021-02-25 08:06:14.8454 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:06:14.8794 INFO Sucessfully got all Measurements
+2021-02-25 08:06:15.2224 INFO Machine-GetMachines: Attempted Call
+2021-02-25 08:06:15.2458 INFO Sucessfully got all machines
+2021-02-25 08:06:15.2658 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:06:15.2658 INFO Sucessfully got all Measurements
+2021-02-25 08:06:16.3417 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:06:16.3629 INFO Sucessfully got all Measurements
+2021-02-25 08:06:45.8891 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:06:45.9172 INFO Sucessfully got all Measurements
+2021-02-25 08:06:46.0899 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:06:46.1064 INFO Sucessfully got all Measurements
+2021-02-25 08:07:21.0032 INFO Machine-GetMachines: Attempted Call
+2021-02-25 08:07:21.0207 INFO Sucessfully got all machines
+2021-02-25 08:07:21.0460 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:07:21.0460 INFO Sucessfully got all Measurements
+2021-02-25 08:07:21.3065 INFO Machine-GetMachines: Attempted Call
+2021-02-25 08:07:21.3065 INFO Sucessfully got all machines
+2021-02-25 08:07:21.3360 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:07:21.3360 INFO Sucessfully got all Measurements
+2021-02-25 08:07:21.9856 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:07:21.9989 INFO Sucessfully got all Measurements
+2021-02-25 08:11:43.7413 INFO Machine-GetMachines: Attempted Call
+2021-02-25 08:11:43.8589 INFO Sucessfully got all machines
+2021-02-25 08:11:43.9210 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:11:43.9478 INFO Sucessfully got all Measurements
+2021-02-25 08:11:44.1531 INFO Machine-GetMachines: Attempted Call
+2021-02-25 08:11:44.2389 INFO Sucessfully got all machines
+2021-02-25 08:11:44.2664 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:11:44.2727 INFO Sucessfully got all Measurements
+2021-02-25 08:11:45.2840 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:11:45.3031 INFO Sucessfully got all Measurements
+2021-02-25 08:17:47.9562 INFO Machine-GetMachines: Attempted Call
+2021-02-25 08:17:48.3437 INFO Sucessfully got all machines
+2021-02-25 08:17:48.4132 INFO Machine-GetMachines: Attempted Call
+2021-02-25 08:17:48.4260 INFO Sucessfully got all machines
+2021-02-25 08:17:48.5237 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:17:48.5237 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:17:48.5613 INFO Sucessfully got all Measurements
+2021-02-25 08:17:48.5676 INFO Sucessfully got all Measurements
+2021-02-25 08:17:49.1720 INFO Machine-GetMachines: Attempted Call
+2021-02-25 08:17:49.1720 INFO Machine-GetMachines: Attempted Call
+2021-02-25 08:17:49.1978 INFO Sucessfully got all machines
+2021-02-25 08:17:49.1978 INFO Sucessfully got all machines
+2021-02-25 08:17:49.2586 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:17:49.2586 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:17:49.2999 INFO Sucessfully got all Measurements
+2021-02-25 08:17:49.3645 INFO Sucessfully got all Measurements
+2021-02-25 08:17:49.4072 INFO Machine-GetMachines: Attempted Call
+2021-02-25 08:17:49.5105 INFO Sucessfully got all machines
+2021-02-25 08:17:49.5334 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:17:49.5704 INFO Sucessfully got all Measurements
+2021-02-25 08:17:49.7775 INFO Machine-GetMachines: Attempted Call
+2021-02-25 08:17:49.8626 INFO Sucessfully got all machines
+2021-02-25 08:17:49.9374 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:17:49.9440 INFO Sucessfully got all Measurements
+2021-02-25 08:17:50.0995 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 08:17:50.0995 INFO Sucessfully got all Measurements
+2021-02-25 11:49:35.7509 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-02-25 11:49:36.0589 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-02-25 11:49:36.6335 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-25 11:49:36.6904 INFO Sucessfully got all measurementPositions
+2021-02-25 11:49:36.9789 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1
+2021-02-25 11:49:37.0264 INFO Sucessfully got the measurement type with Id:1
+2021-02-25 11:49:37.1983 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1
+2021-02-25 11:49:37.2143 INFO Sucessfully got the measurement type with Id:1
+2021-02-25 11:49:58.4007 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 11:49:58.4400 INFO Sucessfully got all Measurements
+2021-02-25 11:49:58.4631 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 11:49:58.4754 INFO Sucessfully got all Measurements
+2021-02-25 11:49:58.5141 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-25 11:50:00.5304 INFO Sucessfully got all FUS packs
+2021-02-25 11:50:00.5773 INFO Machine-GetMachines: Attempted Call
+2021-02-25 11:50:00.5972 INFO Sucessfully got all machines
+2021-02-25 11:50:00.6213 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-25 11:50:00.6333 INFO Sucessfully got the measurement position with Id:1
+2021-02-25 11:50:30.9195 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-02-25 11:50:30.9664 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-02-25 11:50:31.0129 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-02-25 11:50:31.0296 INFO Sucessfully got all measurementPositions
+2021-02-25 11:50:31.9917 INFO Pack-GetPacks: Attempted Call
+2021-02-25 11:50:32.0904 INFO Sucessfully got all packs
+2021-02-25 11:50:32.1738 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-25 11:50:32.1738 INFO Sucessfully got the measurement position with Id:1
+2021-02-25 11:50:33.0915 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 11:50:33.0988 INFO Sucessfully got all Measurements
+2021-02-25 11:50:33.1166 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 11:50:33.1166 INFO Sucessfully got all Measurements
+2021-02-25 11:50:33.1476 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-25 11:50:33.2198 INFO Sucessfully got all FUS packs
+2021-02-25 11:50:33.2568 INFO Machine-GetMachines: Attempted Call
+2021-02-25 11:50:33.2568 INFO Sucessfully got all machines
+2021-02-25 11:50:33.2809 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-25 11:50:33.2872 INFO Sucessfully got the measurement position with Id:1
+2021-02-25 11:50:40.3451 INFO Machine-GetMachines: Attempted Call
+2021-02-25 11:50:40.3624 INFO Sucessfully got all machines
+2021-02-25 11:50:40.3826 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 11:50:40.3826 INFO Sucessfully got all Measurements
+2021-02-25 11:50:42.3226 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 11:50:42.3321 INFO Sucessfully got all Measurements
+2021-02-25 11:50:44.0197 INFO Machine-GetMachines: Attempted Call
+2021-02-25 11:50:44.0518 INFO Sucessfully got all machines
+2021-02-25 11:50:44.0674 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 11:50:44.0674 INFO Sucessfully got all Measurements
+2021-02-25 11:50:45.5614 INFO Machine-GetMachines: Attempted Call
+2021-02-25 11:50:45.5696 INFO Sucessfully got all machines
+2021-02-25 11:50:45.5870 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 11:50:45.5870 INFO Sucessfully got all Measurements
+2021-02-25 11:50:46.1515 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 11:50:46.1594 INFO Sucessfully got all Measurements
+2021-02-25 11:51:12.1347 INFO Machine-GetMachines: Attempted Call
+2021-02-25 11:51:12.1435 INFO Sucessfully got all machines
+2021-02-25 11:51:12.1623 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 11:51:12.1623 INFO Sucessfully got all Measurements
+2021-02-25 11:51:12.9014 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 11:51:12.9075 INFO Sucessfully got all Measurements
+2021-02-25 11:52:06.3690 INFO Machine-GetMachines: Attempted Call
+2021-02-25 11:52:06.3768 INFO Sucessfully got all machines
+2021-02-25 11:52:06.3972 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 11:52:06.4107 INFO Sucessfully got all Measurements
+2021-02-25 11:52:08.4785 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1
+2021-02-25 11:52:08.4921 INFO Sucessfully got the measurement type with Id:1
+2021-02-25 11:52:08.6602 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1
+2021-02-25 11:52:08.6602 INFO Sucessfully got the measurement type with Id:1
+2021-02-25 11:52:11.5805 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 11:52:11.5805 INFO Sucessfully got all Measurements
+2021-02-25 11:52:11.6182 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 11:52:11.6263 INFO Sucessfully got all Measurements
+2021-02-25 11:52:11.6472 INFO FusPack-GetFusPacks: Attempted Call
+2021-02-25 11:52:11.7202 INFO Sucessfully got all FUS packs
+2021-02-25 11:52:11.7202 INFO Machine-GetMachines: Attempted Call
+2021-02-25 11:52:11.7397 INFO Sucessfully got all machines
+2021-02-25 11:52:11.7397 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-02-25 11:52:11.7536 INFO Sucessfully got the measurement position with Id:1
+2021-02-25 11:52:18.1039 INFO Machine-GetMachines: Attempted Call
+2021-02-25 11:52:18.1177 INFO Sucessfully got all machines
+2021-02-25 11:52:18.1322 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 11:52:18.1322 INFO Sucessfully got all Measurements
+2021-02-25 11:52:19.6583 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 11:52:19.6583 INFO Sucessfully got all Measurements
+2021-02-25 12:36:21.9223 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 12:36:22.8744 INFO Sucessfully got all Measurements
+2021-02-25 12:36:26.0782 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 12:36:26.5909 INFO Sucessfully got all Measurements
+2021-02-25 12:55:06.1743 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 12:55:06.2552 INFO Sucessfully got all Measurements
+2021-02-25 12:55:06.4777 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 12:55:06.5032 INFO Sucessfully got all Measurements
+2021-02-25 12:57:26.6440 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 12:57:26.7406 INFO Sucessfully got all Measurements
+2021-02-25 12:57:26.9581 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 12:57:26.9698 INFO Sucessfully got all Measurements
+2021-02-25 12:59:15.0834 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 12:59:15.0834 INFO Sucessfully got all Measurements
+2021-02-25 12:59:15.2765 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 12:59:15.2875 INFO Sucessfully got all Measurements
+2021-02-25 13:30:38.6142 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 13:30:38.6690 INFO Sucessfully got all Measurements
+2021-02-25 13:30:38.8355 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 13:30:38.8410 INFO Sucessfully got all Measurements
+2021-02-25 13:43:48.1950 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 13:43:48.2324 INFO Sucessfully got all Measurements
+2021-02-25 13:43:48.4130 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 13:43:48.4269 INFO Sucessfully got all Measurements
+2021-02-25 13:44:12.6591 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 13:44:12.6736 INFO Sucessfully got all Measurements
+2021-02-25 13:44:16.2293 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 13:44:16.2293 INFO Sucessfully got all Measurements
+2021-02-25 13:46:43.3744 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 13:46:43.4001 INFO Sucessfully got all Measurements
+2021-02-25 13:46:43.5903 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 13:46:43.6034 INFO Sucessfully got all Measurements
+2021-02-25 13:48:36.1056 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 13:48:36.1201 INFO Sucessfully got all Measurements
+2021-02-25 13:48:36.2905 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 13:48:36.2905 INFO Sucessfully got all Measurements
+2021-02-25 14:00:51.6476 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:00:51.8794 INFO Sucessfully got all Measurements
+2021-02-25 14:00:51.9215 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:00:51.9332 INFO Sucessfully got all Measurements
+2021-02-25 14:00:52.1576 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:00:52.1813 INFO Sucessfully got all Measurements
+2021-02-25 14:02:59.0069 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:02:59.1010 INFO Sucessfully got all Measurements
+2021-02-25 14:02:59.3123 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:02:59.3268 INFO Sucessfully got all Measurements
+2021-02-25 14:04:20.5420 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:04:20.6636 INFO Sucessfully got all Measurements
+2021-02-25 14:04:20.9154 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:04:20.9354 INFO Sucessfully got all Measurements
+2021-02-25 14:04:53.7905 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:04:53.8747 INFO Sucessfully got all Measurements
+2021-02-25 14:04:54.1035 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:04:54.1035 INFO Sucessfully got all Measurements
+2021-02-25 14:32:11.7107 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:32:11.8344 INFO Sucessfully got all Measurements
+2021-02-25 14:32:12.0403 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:32:12.0403 INFO Sucessfully got all Measurements
+2021-02-25 14:32:51.5537 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:32:51.6406 INFO Sucessfully got all Measurements
+2021-02-25 14:32:51.8506 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:32:51.8674 INFO Sucessfully got all Measurements
+2021-02-25 14:34:07.3334 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:34:07.4339 INFO Sucessfully got all Measurements
+2021-02-25 14:34:07.6931 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:34:07.6931 INFO Sucessfully got all Measurements
+2021-02-25 14:36:25.2862 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:36:25.3048 INFO Sucessfully got all Measurements
+2021-02-25 14:36:25.4873 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:36:25.5098 INFO Sucessfully got all Measurements
+2021-02-25 14:38:50.9408 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:38:51.0376 INFO Sucessfully got all Measurements
+2021-02-25 14:38:51.2589 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 14:38:51.2688 INFO Sucessfully got all Measurements
+2021-02-25 15:37:58.1010 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:37:58.1908 INFO Sucessfully got all Measurements
+2021-02-25 15:37:58.5405 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:37:58.5405 INFO Sucessfully got all Measurements
+2021-02-25 15:38:13.0610 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:38:13.0780 INFO Sucessfully got all Measurements
+2021-02-25 15:38:13.3347 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:38:13.3426 INFO Sucessfully got all Measurements
+2021-02-25 15:38:56.0937 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:38:56.1037 INFO Sucessfully got all Measurements
+2021-02-25 15:38:56.2801 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:38:56.2971 INFO Sucessfully got all Measurements
+2021-02-25 15:43:07.1358 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:43:07.2291 INFO Sucessfully got all Measurements
+2021-02-25 15:43:07.4430 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:43:07.4541 INFO Sucessfully got all Measurements
+2021-02-25 15:44:07.6473 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:44:07.7500 INFO Sucessfully got all Measurements
+2021-02-25 15:44:07.9659 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:44:07.9795 INFO Sucessfully got all Measurements
+2021-02-25 15:46:56.1466 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:46:56.2399 INFO Sucessfully got all Measurements
+2021-02-25 15:46:56.4592 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:46:56.4644 INFO Sucessfully got all Measurements
+2021-02-25 15:47:14.0889 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:47:14.1018 INFO Sucessfully got all Measurements
+2021-02-25 15:47:14.3039 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:47:14.3191 INFO Sucessfully got all Measurements
+2021-02-25 15:51:30.6808 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:51:30.7668 INFO Sucessfully got all Measurements
+2021-02-25 15:51:30.9664 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:51:30.9760 INFO Sucessfully got all Measurements
+2021-02-25 15:51:50.7915 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:51:50.8042 INFO Sucessfully got all Measurements
+2021-02-25 15:51:50.9921 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:51:50.9921 INFO Sucessfully got all Measurements
+2021-02-25 15:53:48.8018 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:53:48.9113 INFO Sucessfully got all Measurements
+2021-02-25 15:53:49.1773 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:53:49.1940 INFO Sucessfully got all Measurements
+2021-02-25 15:55:15.9091 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:55:16.0551 INFO Sucessfully got all Measurements
+2021-02-25 15:55:16.2502 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:55:16.2588 INFO Sucessfully got all Measurements
+2021-02-25 15:56:55.9369 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:56:56.0321 INFO Sucessfully got all Measurements
+2021-02-25 15:56:56.2428 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 15:56:56.2528 INFO Sucessfully got all Measurements
+2021-02-25 16:02:24.1843 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:02:24.2782 INFO Sucessfully got all Measurements
+2021-02-25 16:02:24.5400 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:02:24.5561 INFO Sucessfully got all Measurements
+2021-02-25 16:02:34.8280 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:02:34.8404 INFO Sucessfully got all Measurements
+2021-02-25 16:02:35.0111 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:02:35.0111 INFO Sucessfully got all Measurements
+2021-02-25 16:05:44.8228 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:05:44.9181 INFO Sucessfully got all Measurements
+2021-02-25 16:05:45.1484 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:05:45.1590 INFO Sucessfully got all Measurements
+2021-02-25 16:06:01.4657 INFO Machine-GetMachines: Attempted Call
+2021-02-25 16:06:01.5234 INFO Sucessfully got all machines
+2021-02-25 16:06:01.5668 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:06:01.5668 INFO Sucessfully got all Measurements
+2021-02-25 16:06:03.1151 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:06:03.1241 INFO Sucessfully got all Measurements
+2021-02-25 16:43:41.9224 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:43:42.0255 INFO Sucessfully got all Measurements
+2021-02-25 16:43:42.2727 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:43:42.2842 INFO Sucessfully got all Measurements
+2021-02-25 16:43:56.1003 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:43:56.1098 INFO Sucessfully got all Measurements
+2021-02-25 16:43:56.2871 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:43:56.2971 INFO Sucessfully got all Measurements
+2021-02-25 16:44:53.4487 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:44:53.4915 INFO Sucessfully got all Measurements
+2021-02-25 16:44:53.6767 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:44:53.6767 INFO Sucessfully got all Measurements
+2021-02-25 16:45:41.0170 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:45:41.0170 INFO Sucessfully got all Measurements
+2021-02-25 16:45:41.2487 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:45:41.2528 INFO Sucessfully got all Measurements
+2021-02-25 16:51:41.1987 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:51:41.2483 INFO Sucessfully got all Measurements
+2021-02-25 16:51:41.4468 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:51:41.4575 INFO Sucessfully got all Measurements
+2021-02-25 16:54:15.8144 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:54:15.9077 INFO Sucessfully got all Measurements
+2021-02-25 16:54:16.1498 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:54:16.1617 INFO Sucessfully got all Measurements
+2021-02-25 16:55:15.8444 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:55:15.9295 INFO Sucessfully got all Measurements
+2021-02-25 16:55:16.1471 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:55:16.1471 INFO Sucessfully got all Measurements
+2021-02-25 16:55:54.7953 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:55:54.8142 INFO Sucessfully got all Measurements
+2021-02-25 16:55:54.9928 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:55:55.0029 INFO Sucessfully got all Measurements
+2021-02-25 16:57:45.0302 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:57:45.1257 INFO Sucessfully got all Measurements
+2021-02-25 16:57:45.4412 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:57:45.4593 INFO Sucessfully got all Measurements
+2021-02-25 16:59:04.4525 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:59:04.5911 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:59:04.5944 INFO Sucessfully got all Measurements
+2021-02-25 16:59:04.5944 INFO Sucessfully got all Measurements
+2021-02-25 16:59:05.0130 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 16:59:05.0215 INFO Sucessfully got all Measurements
+2021-02-25 17:00:08.3033 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:00:08.3116 INFO Sucessfully got all Measurements
+2021-02-25 17:00:08.5369 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:00:08.5369 INFO Sucessfully got all Measurements
+2021-02-25 17:00:09.7294 INFO Machine-GetMachines: Attempted Call
+2021-02-25 17:00:09.7672 INFO Sucessfully got all machines
+2021-02-25 17:00:09.8025 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:00:09.8025 INFO Sucessfully got all Measurements
+2021-02-25 17:00:10.5941 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:00:10.6089 INFO Sucessfully got all Measurements
+2021-02-25 17:04:30.6057 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:04:30.8170 INFO Sucessfully got all Measurements
+2021-02-25 17:04:31.1860 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:04:31.2151 INFO Sucessfully got all Measurements
+2021-02-25 17:04:33.0151 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:04:33.0151 INFO Sucessfully got all Measurements
+2021-02-25 17:04:33.2514 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:04:33.2642 INFO Sucessfully got all Measurements
+2021-02-25 17:06:37.2311 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:06:37.3169 INFO Sucessfully got all Measurements
+2021-02-25 17:06:37.5047 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:06:37.5179 INFO Sucessfully got all Measurements
+2021-02-25 17:07:47.0411 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:07:47.1347 INFO Sucessfully got all Measurements
+2021-02-25 17:07:47.3458 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:07:47.3608 INFO Sucessfully got all Measurements
+2021-02-25 17:07:48.2078 INFO Machine-GetMachines: Attempted Call
+2021-02-25 17:07:48.2547 INFO Sucessfully got all machines
+2021-02-25 17:07:48.3037 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:07:48.3109 INFO Sucessfully got all Measurements
+2021-02-25 17:07:48.5805 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:07:48.5879 INFO Sucessfully got all Measurements
+2021-02-25 17:08:52.7429 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:08:52.8344 INFO Sucessfully got all Measurements
+2021-02-25 17:08:53.0870 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:08:53.0870 INFO Sucessfully got all Measurements
+2021-02-25 17:38:37.4416 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:38:37.5868 INFO Sucessfully got all Measurements
+2021-02-25 17:38:38.2404 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:38:38.2404 INFO Sucessfully got all Measurements
+2021-02-25 17:42:09.5951 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:42:09.6938 INFO Sucessfully got all Measurements
+2021-02-25 17:42:09.9686 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:42:09.9986 INFO Sucessfully got all Measurements
+2021-02-25 17:43:13.7505 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:43:13.8439 INFO Sucessfully got all Measurements
+2021-02-25 17:43:14.1301 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:43:14.1450 INFO Sucessfully got all Measurements
+2021-02-25 17:44:30.3932 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:44:30.4881 INFO Sucessfully got all Measurements
+2021-02-25 17:44:30.6789 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 17:44:30.6937 INFO Sucessfully got all Measurements
+2021-02-25 19:23:01.5665 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 19:23:01.6912 INFO Sucessfully got all Measurements
+2021-02-25 19:23:01.9616 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 19:23:01.9783 INFO Sucessfully got all Measurements
+2021-02-25 19:33:17.4213 INFO Machine-GetMachines: Attempted Call
+2021-02-25 19:33:17.4873 INFO Sucessfully got all machines
+2021-02-25 19:33:17.5335 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 19:33:17.5335 INFO Sucessfully got all Measurements
+2021-02-25 19:33:18.2646 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 19:33:18.2721 INFO Sucessfully got all Measurements
+2021-02-25 22:11:06.0639 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:11:06.1753 INFO Sucessfully got all Measurements
+2021-02-25 22:11:06.4649 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:11:06.4949 INFO Sucessfully got all Measurements
+2021-02-25 22:39:31.0282 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:39:31.1516 INFO Sucessfully got all Measurements
+2021-02-25 22:39:31.4157 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:39:31.4518 INFO Sucessfully got all Measurements
+2021-02-25 22:43:35.1503 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:43:35.3987 INFO Sucessfully got all Measurements
+2021-02-25 22:43:35.7601 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:43:35.7601 INFO Sucessfully got all Measurements
+2021-02-25 22:43:36.9436 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:43:36.9511 INFO Sucessfully got all Measurements
+2021-02-25 22:43:37.1474 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:43:37.1474 INFO Sucessfully got all Measurements
+2021-02-25 22:46:34.1175 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:46:34.2144 INFO Sucessfully got all Measurements
+2021-02-25 22:46:34.4530 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:46:34.4809 INFO Sucessfully got all Measurements
+2021-02-25 22:50:53.9430 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:50:54.0431 INFO Sucessfully got all Measurements
+2021-02-25 22:50:54.2808 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:50:54.2996 INFO Sucessfully got all Measurements
+2021-02-25 22:53:25.7723 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:53:25.9014 INFO Sucessfully got all Measurements
+2021-02-25 22:53:26.1184 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:53:26.1377 INFO Sucessfully got all Measurements
+2021-02-25 22:55:49.1719 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:55:49.1719 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:55:49.2013 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:55:49.3841 INFO Sucessfully got all Measurements
+2021-02-25 22:55:49.3841 INFO Sucessfully got all Measurements
+2021-02-25 22:55:49.3841 INFO Sucessfully got all Measurements
+2021-02-25 22:55:49.9559 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:55:49.9610 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:55:49.9610 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:55:49.9756 INFO Sucessfully got all Measurements
+2021-02-25 22:55:49.9756 INFO Sucessfully got all Measurements
+2021-02-25 22:55:50.0480 INFO Sucessfully got all Measurements
+2021-02-25 22:55:50.6474 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:55:50.6678 INFO Sucessfully got all Measurements
+2021-02-25 22:55:50.8672 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 22:55:50.8672 INFO Sucessfully got all Measurements
+2021-02-25 23:01:00.1927 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 23:01:00.2874 INFO Sucessfully got all Measurements
+2021-02-25 23:01:00.5135 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 23:01:00.5233 INFO Sucessfully got all Measurements
+2021-02-25 23:02:48.2085 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 23:02:48.2964 INFO Sucessfully got all Measurements
+2021-02-25 23:02:48.5261 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 23:02:48.5357 INFO Sucessfully got all Measurements
+2021-02-25 23:05:07.1940 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 23:05:07.2932 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 23:05:07.3057 INFO Sucessfully got all Measurements
+2021-02-25 23:05:07.3057 INFO Sucessfully got all Measurements
+2021-02-25 23:05:07.4954 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 23:05:07.5078 INFO Sucessfully got all Measurements
+2021-02-25 23:06:00.3786 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 23:06:00.3790 INFO Sucessfully got all Measurements
+2021-02-25 23:06:00.5701 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 23:06:00.5701 INFO Sucessfully got all Measurements
+2021-02-25 23:06:49.3813 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 23:06:49.4689 INFO Sucessfully got all Measurements
+2021-02-25 23:06:49.7328 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 23:06:49.7552 INFO Sucessfully got all Measurements
+2021-02-25 23:08:09.3800 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 23:08:09.4733 INFO Sucessfully got all Measurements
+2021-02-25 23:08:09.7130 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 23:08:09.7449 INFO Sucessfully got all Measurements
+2021-02-25 23:08:43.7083 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 23:08:43.8017 INFO Sucessfully got all Measurements
+2021-02-25 23:08:44.0238 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 23:08:44.0423 INFO Sucessfully got all Measurements
+2021-02-25 23:10:28.2103 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 23:10:28.3136 INFO Sucessfully got all Measurements
+2021-02-25 23:10:28.5603 INFO Measurements-GetMeasurements: Attempted Call
+2021-02-25 23:10:28.5844 INFO Sucessfully got all Measurements

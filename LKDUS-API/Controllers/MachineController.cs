@@ -99,6 +99,7 @@ namespace LKDUS_API.Controllers
             var location = GetControllerActionNames();
             try
             {
+                string idString = id.ToString();
                 this.logger.LogInfo($"{location}: Attempted get machine with ID: {id}");
                 var machine = await this.machineRepository.FindById(id);
 

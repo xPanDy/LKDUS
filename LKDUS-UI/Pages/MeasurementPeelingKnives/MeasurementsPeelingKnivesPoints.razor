@@ -1,0 +1,225 @@
+﻿@page "/measurementspeelingknivespoints/{userId}/{measurementPositionId}/{pmachineIdd}"
+@*  *@
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+@inject IMachinesRepository machineRepository;
+@inject IMeasurementRepository repo
+@inject NavigationManager navManager
+
+
+
+
+
+<div class="card">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button type="button" @onclick="@Return" class="btn btn-primary  ">Atpakaļ</button>
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-primary btn-block">Saglabāt</button>
+            </div>
+            @*<div class="col">
+                    <button type="submit" class="btn btn-primary btn-block">Saglabāt</button>
+                </div>*@
+
+        </div><div class="row">
+            <div class="col w-25"><h3 class="card-title">Lobnaža asināšana</h3></div>
+        </div>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col w-25 h-25">
+                <button style="background-color:@bgOk" @onclick="(isOk=>ArePointsOk(true))" class="btn btn-warning btn-block">
+                    <h3>Ok</h3>
+                </button>
+            </div>
+            <div class="col w-25 h-25">
+                <button @onclick="(isOk=>ArePointsOk(false))" class="btn btn-warning btn-block">
+                    <h3>Slikti</h3>
+                </button>
+            </div>
+
+            <div style="visibility:@visible" class="col">
+                <div class="row">
+                    <button @onclick="minus" class="btn btn-warning btn-block">
+                        <h3>-</h3>
+                    </button>
+                </div>
+
+                <div class="row">
+                    <input value="@correctedValue" />
+                </div>
+                <div class="row">
+                    <button  @onclick="plus" class="btn btn-warning btn-block">
+                        <h3>+</h3>
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="w-100"></div>
+
+        </div>
+
+
+        <div style="visibility:@visible" class="row">
+            @{ int lengthPosition2 = 50;
+            for (int i = 0; i < positions.GetLength(0); i++)
+
+            {
+                     
+                    var tmp = i;
+                lengthPosition2 = i * 150 + lengthPosition;
+
+                <div class="col"><div class="row"><input style="background-color:@colors[i]" @bind-value="@positions[i]"/></div><div class="row"><button @onclick="(el=>setPositionValue(tmp))" class="btn btn-primary">@lengthPosition2</button>  </div></div>
+                
+
+            }
+            }
+            @*<div class="col"><div class="row"><input/></div><div class="row"><button class="btn btn-primary">positions</button> </div></div>
+        <div class="col"><div class="row"><input/></div><div class="row"><button class="btn btn-primary">positions</button> </div></div>
+        <div class="col"><div class="row"><input/></div><div class="row"><button class="btn btn-primary">positions</button> </div></div>
+        <div class="col"><div class="row"><input/></div><div class="row"><button class="btn btn-primary">positions</button> </div></div>
+        <div class="col"><div class="row"><input/></div><div class="row"><button class="btn btn-primary">positions</button> </div></div>
+        <div class="col"><div class="row"><input/></div><div class="row"><button class="btn btn-primary">positions</button> </div></div>
+        <div class="col"><div class="row"><input/></div><div class="row"><button class="btn btn-primary">positions</button></div></div>
+        <div class="col"><div class="row"><input/></div><div class="row"><button class="btn btn-primary">positions</button></div></div>
+        <div class="col"><div class="row"><input/></div><div class="row"><button class="btn btn-primary">positions</button></div></div>*@
+
+
+
+        </div>
+        @*<div class="btn-group mr-2" role="group" aria-label="First group">
+                <button type="button" class="btn btn-secondary btn-block btn-huge">Lokšņu platums</button>
+                <button type="button" class="btn btn-secondary btn-block btn-huge">Lokšņu garums</button>
+
+            </div>*@
+    </div>
+
+</div>
+
+
+
+
+
+
+@code {
+    int posId = 0;
+    int lengthPosition ;
+    decimal correctedValue = 0.1m;
+    private string bgOk = "";
+    private string visible = "hidden";
+
+    private void minus() {
+        if (correctedValue > 0.1m)
+        {
+
+            correctedValue = Decimal.Add(correctedValue, -.05m);
+            positions[posId] = correctedValue;
+            colors[posId] = "red";
+        }
+    }
+
+    private void plus( ) {
+
+        correctedValue = Decimal.Add(correctedValue, .05m); ;
+        positions[posId] = correctedValue;
+        colors[posId] = "red";
+    }
+    private void setPositionValue(int position)
+    {
+        for (int i = 0; i < positions.GetLength(0); i++)
+        {
+            if(position ==  i )
+            {
+
+                posId = i;
+                positions[i] = correctedValue;
+            }
+        }
+    }
+    private void ArePointsOk(bool isOk)
+    {
+        if (isOk)
+        {
+            bgOk = "green";
+            visible = "hidden";
+            isOk = true;
+            for (int i = 0; i < positions.GetLength(0); i++)
+            {
+                positions[i] = 0;
+            }
+        }
+        else
+        {
+            correctedValue = 0.1m;
+            visible = "visible";
+            bgOk = "";
+        }
+    }
+    private IList<Measurement> Model2;
+    public decimal[] positions = new decimal[10];
+    public string[] colors = new string[10];
+
+    [Parameter]
+    public string userId { get; set; }
+    [Parameter]
+    public string measurementPositionId { get; set; }
+
+    [Parameter]
+    public string pmachineIdd { get; set; }
+
+    Machine machine = new Machine();
+
+    protected async override Task OnInitializedAsync()
+    {
+        lengthPosition = 50;
+        for (int i = 0; i < positions.GetLength(0); i++)
+        {
+            positions[i] = 0;
+            colors[i] = "green";
+        }
+        Machines = await machineRepository.Get(Endpoints.MachinesEndpoint);
+        Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+        machine.Id = int.Parse(pmachineIdd);
+
+        machine = await machineRepository.Get(Endpoints.MachinesEndpoint, machine.Id);
+    }
+
+    private IList<Machine> Machines;
+
+    private void checkParams()
+    {
+
+
+
+        if (machine.Id == 0)
+        {
+            machine.Id = Machines.FirstOrDefault().Id;
+
+        }
+
+    }
+
+
+    private void OpenCreateForm(MouseEventArgs e)
+    {
+
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
+    }
+
+
+    private void Return(MouseEventArgs e)
+    {
+
+        this.navManager.NavigateTo($"/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{pmachineIdd}/");
+    }
+
+
+
+
+
+}

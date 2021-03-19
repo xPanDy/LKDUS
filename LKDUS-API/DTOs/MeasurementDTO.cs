@@ -10,9 +10,10 @@ namespace LKDUS_API.DTOs
     {
         public int Id { get; set; }
         public string DateCreated { get; set; }
+        public string MachineName { get; set; }
         public int Shift { get; set; }
 
-        public int MachineId { get; set; }
+       // public int MachineId { get; set; }
         
 
         public string UserId { get; set; }
@@ -30,6 +31,7 @@ namespace LKDUS_API.DTOs
         public decimal Measurement7 { get; set; }
         public decimal Measurement8 { get; set; }
         public decimal Measurement9 { get; set; }
+        public decimal Measurement10 { get; set; }
     }
 
     public class MeasurementCreateDTO
@@ -37,10 +39,11 @@ namespace LKDUS_API.DTOs
 
       
         public string DateCreated { get; set; }
+        public string MachineName { get; set; }
         
         public int Shift { get; set; }
 
-         public int MachineId { get; set; }
+       //  public int MachineId { get; set; }
  
          public string UserId { get; set; }
 
@@ -56,6 +59,7 @@ namespace LKDUS_API.DTOs
         public decimal Measurement7 { get; set; }
         public decimal Measurement8 { get; set; }
         public decimal Measurement9 { get; set; }
+        public decimal Measurement10 { get; set; }
 
 
 
@@ -68,12 +72,13 @@ namespace LKDUS_API.DTOs
 
         [Required]
         public string DateCreated { get; set; }
+        public string MachineName { get; set; }
 
         [Required]
         public int Shift { get; set; }
 
-        [Required]
-        public int MachineId { get; set; }
+        //[Required]
+        //public int MachineId { get; set; }
 
         [Required]
         public int UserId { get; set; }

@@ -62,7 +62,7 @@ namespace LKDUS_UI.Service
         {
 
 
-            var request = new HttpRequestMessage(HttpMethod.Get, id+"");
+            var request = new HttpRequestMessage(HttpMethod.Get, id.ToString());
             var client = this.client.CreateClient();
 
             HttpResponseMessage response = await client.SendAsync(request);

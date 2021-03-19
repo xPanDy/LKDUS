@@ -42,138 +42,7 @@
 
 
 
-    <!--<div class="form-group">
-        
-            <div class="row">
-                <div class="col">
-                    <button class="btn btn-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
-                            <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z" />
-                            <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="col">
-                    <label for="packCode">Pakas kods</label>-->
-
-
-                    @*@bind=@packId*@
-
-                    <!--<input class="form-control"
-                           @bind-value="@stringPackValue"
-                           @bind-value:event="oninput"
-                           @onkeyup="DoSomethingElse"
-                           type="text"
-                           id="packCode">
-                    if (fp == null)
-                    {
-                        <div class="alert alert-danger" role="alert">
-                            Šāda paka neeksistē
-                        </div>
-
-                    }
-
-                </div>
-                 if (fp != null)
-                {
-                    <div class="col">
-
-                        <label for="pack">Pakas Autors   </label>
-
-                        <input class="form-control" readonly
-                               @bind="@fp.OperatorNameSurname"
-                               type="text" id="packAuthor">
-
-
-
-
-                    </div>
-
-
-
-
-                    <div class="col">
-                        <label for="pack">Pakas datums</label>
-
-                        <input class="form-control" type="text"
-                               @bind="@fp.DateCreated"
-                               readonly id="packDate">
-                    </div>
-                    <div class="col">
-                        <label for="pack">Pakas iekārta</label>
-
-                        <input class="form-control"
-                               bind-value=" fp.MachineName" type="text" readonly id="packMachine">
-                    </div>
-                    <div class="col">
-                        <label for="packMaster">Meistars</label>
-
-                        <input class="form-control"
-                             bind-value=" fp.Master" type="text" readonly id="packMaster">
-                    </div>
-                }
-                else
-                {
-                    <div class="col">
-
-                        <label for="pack">Pakas Autors   </label>
-
-                        <input class="form-control" readonly
-                               type="text" id="packAuthor">
-
-
-
-
-                    </div>
-
-
-
-
-                    <div class="col">
-                        <label for="pack">Pakas datums</label>
-
-                        <input class="form-control" type="text"
-                               readonly id="packDate">
-                    </div>
-                    <div class="col">
-                        <label for="pack">Pakas iekārta</label>
-
-                        <input class="form-control"
-                               type="text" readonly id="packMachine">
-                    </div>
-
-                    <div class="col">
-                        <label for="pack">Meistars</label>
-
-                        <input class="form-control"
-                               type="text" readonly id="packMaster">
-                    </div>
-                }
-
-            </div>
-        }
-    </div>-->
-
-
-
-
-    @*<div class="form-group">
-        <label for="machine">Iekārta</label>
-        <select class="custom-select"  @bind="machine.Id"  id ="machine"  >
-            
-            @if (Machines != null)
-            {
-                @foreach (var Mach in Machines)
-                {
-                    //pmachineIdd = Mach.Id;
-
-                    <option value="@Mach.Id">@Mach.Name</option>
-                }
-            }
-        </select>
-
-    </div>*@
+    
 
 
 
@@ -258,17 +127,7 @@
 
  
 
-    @*<nav class="navbar navbar-dark">
-        <div class="container-fluid">
-            
-            <div class="navbar-btn">
-
-                <button type="button" @onclick="@GoToPeeling" class="btn btn-primary">Tālāk</button>
-            </div>
-            
-
-        </div>
-    </nav>*@
+    
 
 </div>
 
@@ -420,6 +279,7 @@
 
     private void checkParams( )
     {
+        
         pmachineIdd = machine.Id;
         if (pmachineIdd == 0)
         {
@@ -431,17 +291,17 @@
         }
     }
 
-    private void GoToThickness(MouseEventArgs e)
-    {
+    //private void GoToThickness(MouseEventArgs e)
+    //{
 
-        checkParams();
+    //    checkParams();
 
-        //  validateParameters(measurementPositionId, measurementPositionId, stringPackValue, pmachineIdd, pshift);
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness");
-        //      /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness
-        //     {userId}/{measurementPositionId}/{stringPackValue}/{ pmachineIdd}
+    //    //  validateParameters(measurementPositionId, measurementPositionId, stringPackValue, pmachineIdd, pshift);
+    //    this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness");
+    //    //      /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness
+    //    //     {userId}/{measurementPositionId}/{stringPackValue}/{ pmachineIdd}
 
-    }
+    //}
 
     //private bool validateParameters(string p1, string p2, string p3, int p4, int p5 )
     //{
@@ -482,7 +342,7 @@
         }
         pmachineIdd = machine.Id;
         checkParams();
-        this.navManager.NavigateTo($"/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/");
+        this.navManager.NavigateTo($"/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{pmachineIdd}/");
     }
 
 

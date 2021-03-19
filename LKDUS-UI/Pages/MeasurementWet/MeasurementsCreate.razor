@@ -10,7 +10,7 @@
 @inject IAuthenticationRepository authRepo
 @inject IMeasurementRepository repo
 @inject IFusPacksRepository frepo
-@inject IMeasurementTypeRepository measTRepo
+
 @inject IMeasurementPositionsRepository measPositionRepo
 @inject IMachinesRepository machineRepository
 
@@ -21,37 +21,36 @@
 @inject ILogger<FusPack> Logger
 
 
-
 @*<div class="modal alert-popup" tabindex="-1" style="display:block" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-             Edit form for the current item 
-            <div class="modal-body">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                 Edit form for the current item
+                <div class="modal-body">
 
-                <button class="btn btn-primary p-2 m-1 w-25" id="startButton">Skenēt</button>
-                <button class="btn btn-secondary p-2 m-1 w-25" id="resetButton">Notīrīt</button>
-                <button type="button" class="btn btn-info p-2 m-1 w-25" id="closeButton">Aizvērt</button>
+                    <button class="btn btn-primary p-2 m-1 w-25" id="startButton">Skenēt</button>
+                    <button class="btn btn-secondary p-2 m-1 w-25" id="resetButton">Notīrīt</button>
+                    <button type="button" class="btn btn-info p-2 m-1 w-25" id="closeButton">Aizvērt</button>
 
-                <div id="sourceSelectPanel" style="display:none">
-                <label for="sourceSelect">Rez:</label><span class="text-dark" id="result"></span>
-                    <select id="sourceSelect" style="max-width:100%" class="form-control">
-                    </select>
+                    <div id="sourceSelectPanel" style="display:none">
+                    <label for="sourceSelect">Rez:</label><span class="text-dark" id="result"></span>
+                        <select id="sourceSelect" style="max-width:100%" class="form-control">
+                        </select>
+                    </div>
+                    <div>
+                        <video id="video" style="min-height:150px;max-height:60%; max-width: 100%;border: 1px solid gray"></video>
+                    </div>
+
                 </div>
-                <div>
-                    <video id="video" style="min-height:150px;max-height:60%; max-width: 100%;border: 1px solid gray"></video>
-                </div>
-
             </div>
         </div>
-    </div>
-</div>*@
+    </div>*@
 
 @*<button class="btn btn-primary"
-        type="button"
-        @onclick="(() => ShowScanBarcode = !ShowScanBarcode)">
-    testtttt
-</button>*@
- 
+            type="button"
+            @onclick="(() => ShowScanBarcode = !ShowScanBarcode)">
+        testtttt
+    </button>*@
+
 
 <div>
     <div class="container">
@@ -77,30 +76,30 @@
     <div class="form-group">
         @{
             <div class="row">
-                        <div class="col">
-                            <button id="startButton" class="btn btn-outline-success" @onclick="isStreamVisible">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">
-                                    <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z" />
-                                </svg>Svītrkoda skenēšana
-                            </button>
-                            @if (visibilityOfCamera)
-                            {
-                                <div  id="sourceSelectPanel" style="display:none">
-                                    <label for="sourceSelect"> </label><span class="text-dark" id="result"></span>
-                                    <select id="sourceSelect" style="max-width:100%" class="form-control">
-                                    </select>
-                                </div>
-                                <div>
-                                    <video id="video" style="min-height:150px;max-height:60%; max-width: 100%;border: 1px solid gray"></video>
-                                </div>
-
-                            }
-                            else
-                            {
-                                
-                            }
-
+                <div class="col">
+                    <button id="startButton" class="btn btn-outline-success" @onclick="isStreamVisible">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">
+                            <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z" />
+                        </svg>Svītrkoda skenēšana
+                    </button>
+                    @if (visibilityOfCamera)
+                    {
+                        <div id="sourceSelectPanel" style="display:none">
+                            <label for="sourceSelect"> </label><span class="text-dark" id="result"></span>
+                            <select id="sourceSelect" style="max-width:100%" class="form-control">
+                            </select>
                         </div>
+                        <div>
+                            <video id="video" style="min-height:150px;max-height:60%; max-width: 100%;border: 1px solid gray"></video>
+                        </div>
+
+                    }
+                    else
+                    {
+
+                    }
+
+                </div>
 
 
                 <div class="col">
@@ -128,7 +127,7 @@
 
 
 
-                    @if (fp == null || sucess !=true )
+                    @if (fp == null || sucess != true)
                     {
                         <div class="alert alert-danger" role="alert">
                             Šāda paka neeksistē
@@ -268,58 +267,62 @@
             <div class="col">
                 <select class="custom-select" @bind="Year">
                     @for (int i = DateTime.Now.Year - 5;
-              i <= DateTime.Now.Year + 5; i++)
+            i <= DateTime.Now.Year + 5; i++)
                     {
                         <option>@i</option>
                     }
                 </select>
 
             </div>
-
-        </div>
-
-
-
-
-    </div>
-
-
-
-
-    @if (LaborantList == null)
-    {
-        <LoadingMessage Message="Notiek laborantu ielāde" />
-    }
-    else
-    {
-        <div class="form-group">
-            <label for="operator">Laborants</label>
-            <select disabled="true" class="custom-select" @bind=@defaultUser.UserName id="operator">
-
-
-                @foreach (var usr in LaborantList)
+            <div class="col">
+                @if (LaborantList == null)
                 {
-
-                    <option>@usr.UserName</option>
+                    <LoadingMessage Message="Notiek laborantu ielāde" />
                 }
+                else
+                {
+                    <div class="form-group">
+                        <label for="operator">Laborants</label>
+                        <select disabled="true" class="custom-select" @bind=@defaultUser.UserName id="operator">
 
 
-            </select>
+                            @foreach (var usr in LaborantList)
+                            {
 
+                                <option>@usr.UserName</option>
+                            }
+
+
+                        </select>
+
+                    </div>
+
+                }
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="shift">Maiņa</label>
+                    <select class="custom-select" @bind="@pshift" id="shift">
+                        <option selected>1</option>
+                        <option value="1">2</option>
+
+
+
+                    </select>
+
+                </div>
+            </div>
         </div>
 
-    }
-    <div class="form-group">
-        <label for="shift">Maiņa</label>
-        <select class="custom-select" @bind="@pshift" id="shift">
-            <option selected>1</option>
-            <option value="1">2</option>
 
 
-
-        </select>
 
     </div>
+
+
+
+
+
 
 
     @if ((stringPackValue == "0" || string.IsNullOrEmpty(stringPackValue)) || fp == null)
@@ -454,7 +457,8 @@
             visibilityOfCamera = false;
             ShowScanBarcode = false;
             await CloseScan();
-        }else
+        }
+        else
         {
             ShowScanBarcode = true;
             visibilityOfCamera = true;
@@ -490,7 +494,7 @@
     }
 
 
-    bool sucess= true;
+    bool sucess = true;
 
     private void focusToInput100()
     {
@@ -509,7 +513,8 @@
             int number;
             sucess = Int32.TryParse(stringPackValue, out number);
 
-            if (sucess) {
+            if (sucess)
+            {
                 int packid = int.Parse(stringPackValue);
                 JsRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input100);
 
@@ -601,7 +606,8 @@
             currentLocalTime = browserDateTime.Now.ToString();
             StateHasChanged();
 
-            if (firstRender) {
+            if (firstRender)
+            {
                 //await JsRuntime.InvokeAsync<string>("zxing.start", true, DotNetObjectReference.Create(this));
             }
 
@@ -682,6 +688,7 @@
             fusMachineName = fp.MachineName;
         }
     }
+
 
     private void GoToThickness(MouseEventArgs e)
     {

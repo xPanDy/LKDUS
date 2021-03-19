@@ -21,8 +21,11 @@
             </div>
             <div class="col">
             </div>
-            <div class="col">
-            </div>
+           
+                <div class="col">
+                    <button type="submit"   class="btn btn-primary btn-block">Saglabāt</button>
+                </div>
+             
         </div>
     </div>
 
@@ -61,7 +64,7 @@
                             <th scope="col">Iekārta               </th>
                             <th scope="col">Maiņa             </th>
                             <th scope="col">Laborants           </th>
-                            <th scope="col">Fus Pakas ID   </th>
+                            
                             
 
                             @*<th scope="col">Meistars</th>*@
@@ -77,7 +80,7 @@
                                 <td>@model.Machine</td>
                                 <td>@model.Shift</td>
                                 <td>@model.Author</td>
-                                <td>@model.FusCode</td>
+                                
                                
 
 
@@ -122,9 +125,11 @@
 
     protected async override Task OnInitializedAsync()
     {
-      // Model = await repo.Get(Endpoints.MeasurementEndpoint);
-       Model = await pRepo.Get(Endpoints.PacksEndpoint);
-      //  Model = Model.Where(e => (e.MeasurementPositionId == 2)).ToList();
+        // Model = await repo.Get(Endpoints.MeasurementEndpoint);
+       // Model = await pRepo.Get(Endpoints.PacksEndpoint);
+        Model = await pRepo.Get(Endpoints.PacksEndpoint);
+        Model = Model.OrderByDescending(el => el.Id).Where(el=>el.Machine.Equals("Plūsmas")).ToList();
+        //  Model = Model.Where(e => (e.MeasurementPositionId == 2)).ToList();
 
 
         try

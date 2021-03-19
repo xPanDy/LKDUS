@@ -64,6 +64,11 @@ namespace LKDUS_API.Data
             builder.Entity<Measurement>()
               .Property(p => p.Measurement9)
               .HasColumnType("decimal(6,2)");
+           
+            
+            builder.Entity<Measurement>()
+              .Property(p => p.Measurement10)
+              .HasColumnType("decimal(6,2)");
 
             // builder.Entity<FusPack>(entity =>
             // {
@@ -74,7 +79,7 @@ namespace LKDUS_API.Data
 
             //});
         }
-        
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

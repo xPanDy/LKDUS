@@ -1,4 +1,4 @@
-﻿@page "/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/"
+﻿@page "/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{pmachineIdd}/"
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
 @using LKDUS_UI.Contracts
@@ -115,8 +115,8 @@
 
     private void NavigatetoPoints(MouseEventArgs e)
     {
-
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions/width");
+                                    ///measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/
+        this.navManager.NavigateTo($"/measurementspeelingknivespoints/{userId}/{measurementPositionId}/{pmachineIdd}");
     }
 
     private void NavigatetoAngle(MouseEventArgs e)

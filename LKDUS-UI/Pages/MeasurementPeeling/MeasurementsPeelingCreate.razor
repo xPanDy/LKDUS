@@ -158,7 +158,7 @@
 
 
 
-    <div class="form-group">
+    @*<div class="form-group">
         <label for="machine">Iekārta</label>
         <select class="custom-select"  @bind="machine.Id"  id ="machine"  >
             
@@ -173,7 +173,7 @@
             }
         </select>
 
-    </div>
+    </div>*@
 
 
 
@@ -291,8 +291,8 @@
 
     [Parameter]
     public int pshift { get; set; }
-    [Parameter]
-    public int pmachineIdd { get; set; }
+    // [Parameter]
+    //  public int pmachineIdd { get; set; }
     [Parameter]
     public string userId { get; set; }
 
@@ -315,15 +315,15 @@
     public string datums = "";
     public bool edited = false;
 
-  //  public IList<FusPack> fusPacks;
+    //  public IList<FusPack> fusPacks;
 
     public IList<LoginModel> LaborantList ;
 
 
-   // public FusPack fp = new FusPack();
+    // public FusPack fp = new FusPack();
     Machine machine = new Machine();
 
-   
+
 
     private void changeMachine( )
     {
@@ -382,8 +382,8 @@
         defaultUser = LaborantList.Where(o => o.Id == userId).FirstOrDefault();
 
         Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
-        FusMachines = await this.repo.Get(Endpoints.MeasurementEndpoint);
-        
+        //    FusMachines = await this.repo.Get(Endpoints.MeasurementEndpoint);
+
         Machines = await machineRepository.Get(Endpoints.MachinesEndpoint);
         try
         {
@@ -397,11 +397,11 @@
             Console.WriteLine($"Unable to parse");
         }
         todayLocal = DateTime.Now.ToString("g");// today.ToString("g");
-        pmachineIdd = machine.Id;
-        if (pmachineIdd == 0)
-        {
-            pmachineIdd = Machines.FirstOrDefault().Id;
-        }
+        //pmachineIdd = machine.Id;
+        //if (pmachineIdd == 0)
+        //{
+        //    pmachineIdd = Machines.FirstOrDefault().Id;
+        //}
         if (stringPackValue == null)
         {
             stringPackValue = "0";
@@ -410,28 +410,28 @@
 
     private void checkParams( )
     {
-        pmachineIdd = machine.Id;
-        if (pmachineIdd == 0)
-        {
-            pmachineIdd = Machines.FirstOrDefault().Id;
-        }
+        //pmachineIdd = machine.Id;
+        //if (pmachineIdd == 0)
+        //{
+        //    pmachineIdd = Machines.FirstOrDefault().Id;
+        //}
         if (stringPackValue == null)
         {
             stringPackValue = "0";
         }
     }
 
-    private void GoToThickness(MouseEventArgs e)
-    {
+    //private void GoToThickness(MouseEventArgs e)
+    //{
 
-        checkParams();
+    //    checkParams();
 
-        //  validateParameters(measurementPositionId, measurementPositionId, stringPackValue, pmachineIdd, pshift);
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness");
-        //      /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness
-        //     {userId}/{measurementPositionId}/{stringPackValue}/{ pmachineIdd}
+    //    //  validateParameters(measurementPositionId, measurementPositionId, stringPackValue, pmachineIdd, pshift);
+    //    this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/create/thickness");
+    //    //      /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness
+    //    //     {userId}/{measurementPositionId}/{stringPackValue}/{ pmachineIdd}
 
-    }
+    //}
 
     //private bool validateParameters(string p1, string p2, string p3, int p4, int p5 )
     //{
@@ -446,13 +446,13 @@
     private void GoToPeeling(MouseEventArgs e)
     {
         checkParams();
-        this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/saving");
+        this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}/{stringPackValue}/saving");
     }
 
-    
+
 
     private void goBack(MouseEventArgs e)
     {
         this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
-    } 
+    }
 }

@@ -15,6 +15,7 @@ namespace LKDUS_UI.Models
         public int Shift { get; set; }
         public string Author { get; set; }
         public string FusCode { get; set; }
+        public string MeasurementTypeName { get; set; }
 
 
 

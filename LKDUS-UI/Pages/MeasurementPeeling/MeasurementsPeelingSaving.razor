@@ -1,4 +1,4 @@
-﻿@page "/measurementspeeling/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/saving"
+﻿@page "/measurementspeeling/{userId}/{measurementPositionId}/{stringPackValue}/saving"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
@@ -8,7 +8,11 @@
 @inject IMeasurementRepository repo
 @inject NavigationManager navManager
 @inject IMeasurementRepository measurementRepo
-
+@inject IMachinesRepository machineRepository
+@inject IAuthenticationRepository authRepo
+@inject IPacksRepository packRepo
+@inject IMeasurementTypeRepository measurementTypeRepository
+@inject IJSRuntime JsRuntime
 <style>
     .button {
         width: 100%;
@@ -32,25 +36,7 @@
     </div>
 
     <div class="row">
-        @*<div class="col-md-3">
 
-                <button @onclick="focusToInput2" type="button" class="btn btn-success btn-block btn-lg">
-                    Risas
-                </button>
-                <input @onclick="focusToInput2" id="@id2" @ref="input2" @bind="@v2" class="form-control"
-                       min="0"
-                       type="number">
-
-
-
-                <button @onclick="focusToInput3" type="button" class="btn btn-success btn-block btn-lg">
-                    Zilās svītras
-                </button>
-                <input @onclick="focusToInput3" id="@id3" @ref="input3" @bind="@v3" class="form-control"
-                       min="0"
-                       type="number">
-
-            </div>*@
 
 
         <div class="col">
@@ -79,9 +65,12 @@
                             @for (int j = 0; j < positions.GetLength(1); j++)
                             {
                                 var tmpJ = j;
-                                <td><button @onclick="( e => selectTableCell(tmpI,tmpJ))">@positions[i, j]</button></td>
+                                
+                                    <td style="background-color:@elements[i, j];" id="@currentElement[i,j]"
+                                         @onclick="( e => selectTableCell(tmpI,tmpJ))">@positions[i, j]</td>
+                                     
 
-                            }
+                                }
 
 
 
@@ -96,7 +85,7 @@
             </table>
         </div>
 
-       <div class="col">
+        <div class="col">
             <table class="table table-hover">
 
                 <thead>
@@ -106,7 +95,7 @@
 
                         <th>Nr</th>
                         <th>1.pl.</th>
-                        <th>2..pl.</th>
+                        <th>2.pl.</th>
                     </tr>
 
                 </thead>
@@ -122,9 +111,12 @@
                             @for (int j = 0; j < positions.GetLength(1); j++)
                             {
                                 var tmpJ = j;
-                                <td><button @onclick="( e => selectTableCell(tmpI,tmpJ))">@positions[i, j]</button></td>
+                                 
+                                    <td @onclick="( e => selectTableCell(tmpI,tmpJ))"
+                                         style="background-color:@elements[i, j];" id="@currentElement[i,j]">@positions[i, j]</td>
+                                    
 
-                            }
+                                }
 
 
 
@@ -164,9 +156,12 @@
                             @for (int j = 0; j < positions.GetLength(1); j++)
                             {
                                 var tmpJ = j;
-                                <td><button @onclick="( e => selectTableCell(tmpI,tmpJ))">@positions[i, j]</button></td>
+                                 
+                                    <td style="background-color:@elements[i, j];" id="@currentElement[i,j]"
+                                         @onclick="( e => selectTableCell(tmpI,tmpJ))">@positions[i, j]</td>
+                                   
 
-                            }
+                                }
 
 
 
@@ -179,44 +174,50 @@
                 </tbody>
 
             </table>
-        </div> 
-
-
-
-    </div>
-
-
-    <div class="row w-25">
-
-        <div class="d-flex justify-content-between ">
-
-            <table class="table table-borderless ">
-                <tbody class="h-100">
-
-                    <tr class="text-center">
-                        <td>  <button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button></td>
-
-
-                        <td>  <button type="button" @onclick="(()=>select(sizes[1]))" class="btn btn-info btn-lg btn-block">@sizes[1]</button></td>
-
-
-                        <td>  <button type="button" @onclick="(()=>select(sizes[2]))" class="btn btn-info btn-lg btn-block">@sizes[2]</button></td>
-
-
-
-                        <td>  <button type="button" @onclick="(()=>select(sizes[3]))" class="btn btn-info btn-lg btn-block">@sizes[3]</button></td>
-
-                        <td>  <button type="button" @onclick="(()=>select(sizes[4]))" class="btn btn-info btn-lg btn-block">@sizes[4]</button></td>
-
-
-                    </tr>
-
-
-
-                </tbody>
-            </table>
-
         </div>
+
+
+
+    </div>
+    <div class="row w-50  mx-auto" style="padding-top:25px">
+        <div class="col  w-20  mx-auto"><button type="button" @onclick="(e => SetFlow(0))" class="btn btn-success btn-lg btn-block">1.Plūsma</button> </div>
+
+
+
+        <div class="col w-20  mx-auto">
+            <button type="button" @onclick="(e =>SetFlow(1))" class="btn btn-success btn-lg btn-block">2.Plūsma</button>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="row w-100" style="padding-top:25px">
+        <div class="col"><button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button> </div>
+
+
+
+        <div class="col">
+            <button type="button" @onclick="(()=>select(sizes[1]))" class="btn btn-info btn-lg btn-block">@sizes[1]</button>
+        </div>
+
+
+        <div class="col">
+            <button type="button" @onclick="(()=>select(sizes[2]))" class="btn btn-info btn-lg btn-block">@sizes[2]</button>
+        </div>
+
+
+
+        <div class="col">
+            <button type="button" @onclick="(()=>select(sizes[3]))" class="btn btn-info btn-lg btn-block">@sizes[3]</button>
+        </div>
+
+        <div class="col">
+            <button type="button" @onclick="(()=>select(sizes[4]))" class="btn btn-info btn-lg btn-block">@sizes[4]</button>
+        </div>
+
+
     </div>
 
 
@@ -231,29 +232,6 @@
 
 
 
-    @*<div class="btn-group-vertical ml-4 mt-4" role="group" aria-label="Basic example">
-
-            <div class="btn-group">
-                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '1';">1</button>
-                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '2';">2</button>
-                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '3';">3</button>
-            </div>
-            <div class="btn-group">
-                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '4';">4</button>
-                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '5';">5</button>
-                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '6';">6</button>
-            </div>
-            <div class="btn-group">
-                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '7';">7</button>
-                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '8';">8</button>
-                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '9';">9</button>
-            </div>
-            <div class="btn-group">
-                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value.slice(0, -1);">&lt;</button>
-                <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('code').value=document.getElementById('code').value + '0';">0</button>
-                <button type="button" class="btn btn-primary py-3" onclick="">Go</button>
-            </div>
-        </div>*@
 
 
 
@@ -277,6 +255,8 @@
 
     private IList<Measurement> Model2;
 
+
+    private string[,] currentElement = new string[30, 2];
     protected async override Task OnInitializedAsync()
     {
         Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
@@ -295,7 +275,26 @@
             start = start + 1;
         }
 
+        for (int i = 0; i < elements.GetLength(0); i++)
+        {
 
+            for (int j = 0; j < elements.GetLength(1); j++)
+            {
+                elements[i, j] = "";
+            }
+        }
+        elements[0, 0] = "red";
+
+        for (int i = 0; i < currentElement.GetLength(0); i++)
+        {
+
+            for (int j = 0; j < currentElement.GetLength(1); j++)
+            {
+
+                currentElement[i, j] = "current" + i + j;
+            }
+        }
+        activePosition = "current00";
     }
 
 
@@ -308,14 +307,114 @@
     private int selectedCellJ = 0;
     private int[] positionValues = new int[3];
     private int positionValue;
+    private string activePosition = "";
 
+
+
+    private string[,] elements { get; set; } = new string[30, 2];
+
+    int column = 0;
 
     private void select(int value)
     {
-        positionValues[actPos] = value;
-        positions[selectedCellI, selectedCellJ] = value;
+        if (isEdit)
+        {
+            for (int i = 0; i < currentElement.GetLength(0); i++)
+            {
+
+                for (int j = 0; j < currentElement.GetLength(1); j++)
+                {
+
+                    if (currentElement[i, j] == editPosition)
+                    {
+                        positions[i, j] = value;
+                    }
+
+                }
+            }
+            isEdit = false;
+            for (int i = 0; i < currentElement.GetLength(0); i++)
+            {
+
+                //for (int j = 0; j < currentElement.GetLength(1); j++)
+                //{ elements[i, column] = "";
+                elements[i, column] = "";
+                if (positions[i, column] == 0)
+                {
+                    if (i < currentElement.GetLength(0) - 1)
+                    {
+                        elements[i, column] = "red";
+                    }
 
 
+                    return;
+
+                }
+            }
+        }
+        else
+        {
+
+
+            //  positionValues[actPos] = value;
+            //  positions[selectedCellI, selectedCellJ] = value;
+
+            for (int i = 0; i < currentElement.GetLength(0); i++)
+            {
+
+                //for (int j = 0; j < currentElement.GetLength(1); j++)
+                //{ elements[i, column] = "";
+                elements[i, column] = "";
+                if (positions[i, column] == 0)
+                {
+                    if (i < currentElement.GetLength(0) - 1)
+                    {
+                        elements[i + 1, column] = "red";
+                    }
+                    selectedCellI = i;
+
+                    positions[i, column] = value;
+                    return;
+
+                } else
+                {
+
+                }
+
+                /*/ if (currentElement[i, j] == activePosition)
+                 {
+                     if ((selectedCellI == 29 && selectedCellJ == 1) || (selectedCellI == 29 && selectedCellJ == 0))
+                     {
+                         break;
+                     }
+                     else
+                     {
+                         positions[selectedCellI, selectedCellJ] = value;
+                         elements[i, column] = "";
+                         i++;
+                         selectedCellI = i;
+                         selectedCellJ = column;
+                         if (selectedCellI == 30 && selectedCellJ == 0)
+                         {
+
+                             selectedCellI = 0; selectedCellJ = 1;
+                             activePosition = "current" + selectedCellI + column;//selectedCellJ;
+                             positions[selectedCellI, selectedCellJ] = value;
+                             elements[selectedCellI, selectedCellJ] = "red";
+                             break;
+                         }
+                         else if (selectedCellI < 30 && selectedCellJ < 2)
+                         {
+                             elements[selectedCellI, selectedCellJ] = "red";
+                             activePosition = "current" + i + column;//j;
+
+                             break;// break;
+                         }
+                     }
+                 }*/
+                //}
+            }
+        }
     }
 
     private ElementReference input1;
@@ -332,6 +431,7 @@
     private int[,] positions = new int[30, 2];
     protected async override Task OnAfterRenderAsync(bool firstRender)
     {
+
         //if (firstRender)
         //{
         //    id1 = "code";
@@ -340,66 +440,127 @@
         //}
 
     }
+    int lastRow1;
+    int lastRow2;
+    private void SetFlow(int i)
+    {
 
+        for(int ii = 0; ii < currentElement.GetLength(0); ii++)
+        {
+            for (int jj = 0; jj < currentElement.GetLength(1); jj++)
+            {
+                elements[ii, jj] = "";
+            }
+        }
+        column = i;
+
+
+        for (int k = 0; k < currentElement.GetLength(0); k++)
+        {
+            for (int j = 0; j < currentElement.GetLength(1); j++)
+            {
+
+                if (positions[k, column] == 0)
+                {
+
+                    selectedCellI = k;
+                    //elements[selectedCellI, selectedCellJ] = "";
+                    selectedCellJ = column;
+                    activePosition = "current" + selectedCellI + selectedCellJ;//activePosition;
+                                                                               //  activePosition = activePosition.Remove(activePosition.Length - 1, 1) + "" + column;
+                    elements[selectedCellI, column] = "red";
+
+                    return;
+                }
+            }
+        }
+
+
+        /* for (int k = 0; k < currentElement.GetLength(0); k++)
+         {
+
+             for (int j = 0; j < currentElement.GetLength(1); j++)
+             {
+                 if (currentElement[k, j] == activePosition)
+                 {
+
+
+                     selectedCellI = k;
+                     elements[selectedCellI, selectedCellJ] = "";
+                     selectedCellJ = column;
+
+
+
+                     string act = activePosition;
+                     activePosition = activePosition.Remove(activePosition.Length - 1, 1) + "" + column;
+                     elements[selectedCellI, selectedCellJ] = "red";
+                     return;
+                 }
+             }
+         }*/
+
+    }
+    bool isEdit = false;
+    string editPosition = "";
     private void selectTableCell(int ii, int jj)
     {
+        isEdit = true;
+
+        for (int i = 0; i < elements.GetLength(0); i++)
+        {
+
+            for (int j = 0; j < elements.GetLength(1); j++)
+            {
+                if (i == ii && j == jj)
+                {
+                    elements[i, j] = "yellow";
+                    editPosition = "current" + i + j;
+
+                }
+                else
+                {
+                    elements[i, j] = "";
+                }
+            }
+            //if (currentElement[i,j] == activePosition)
+            //  {
+            //      activePosition = "current" + i + j;
+            //      elements[i, j] = "red";
+            //      break;
+            //  }
+
+        }
 
         selectedCellI = ii;
         selectedCellJ = jj;
     }
 
-    //    private async void focusToInput1()
-    //    {
-    //        id1 = "code";
-    //        id2 = "inactive";
-    //        id3 = "inactive";
-    //        id4 = "inactive";
-    //        await
-    //JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
 
-    //    }
 
-    //    private async void focusToInput2()
-    //    {
-    //        id1 = "inactive";
-    //        id2 = "code";
-    //        id3 = "inactive";
-    //        id4 = "inactive";
-    //        await
-    //        JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input2);
-
-    //    }
-    //    private async void focusToInput3()
-    //    {
-    //        id1 = "inactive";
-    //        id2 = "inactive";
-    //        id3 = "code";
-    //        id4 = "inactive";
-    //        await
-    //        JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input3);
-
-    //    }
-    //    private async void focusToInput4()
-    //    {
-    //        id1 = "inactive";
-    //        id2 = "inactive";
-    //        id3 = "inactive";
-    //        id4 = "code";
-    //        await
-    //        JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input4);
-
-    //    }
-
-    private void Return(MouseEventArgs e)
+    private async void Return(MouseEventArgs e)
     {
+        if (isSuccess && isPackCreated)
+        {
+            this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}/create");
+        }
+        else
+        {
 
-        this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}/create");
+            bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Tiešām vēlies iziet nesaglabājot?");
+            if (confirmed)
+            {
+                this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}/create");
+            }
+        }
+        //   this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}/create");
     }
 
-
-
+    bool isSuccess = false;
+    bool isPackCreated = false;
+    MeasurementType mt = new MeasurementType();
     private async void SaveMeasurement()
     {
+        mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 11);
         String measurementDateAndTime = DateTime.Now.ToString("g");
 
         DateTime shiftTime = Convert.ToDateTime("12:00:00");
@@ -416,7 +577,6 @@
 
 
 
-        bool isSuccess = true;
 
         IList<Measurement> measurementsToCreate = new List<Measurement>();
 
@@ -426,31 +586,31 @@
             Measurement meas = new Measurement();
             meas.DateCreated = measurementDateAndTime;
             meas.Shift = shift;
-            meas.MachineId = int.Parse(pmachineIdd); //machine.Id;
+            // meas.MachineName = int.Parse(pmachineIdd); //machine.Id;
             meas.UserId = userId;
             meas.MeasurementPositionId = int.Parse(measurementPositionId);
             meas.PackId = packId;
-            meas.MeasurementTypeId = 5;
+            meas.MeasurementTypeId = 6;
 
             for (int j = 0; j < positions.GetLength(1); j++)
             {
-                
+
 
 
                 if (j == 0)
                 {
- 
- 
+
+
                     meas.Measurement1 = Convert.ToDecimal(positions[i, j]);
                 }
                 if (j == 1)
                 {
-                    
+
                     meas.Measurement2 = Convert.ToDecimal(positions[i, j]);
                 }
-               
 
-               
+
+
 
             }
 
@@ -464,7 +624,28 @@
 
             isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
         }
+        Pack pack = new Pack();
+        Machine machine = new Machine();
+        // machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
+        LoginModel user = new LoginModel();
+        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
+        pack.DateCreated = measurementDateAndTime;
+        pack.MeasurementTypeName = mt.Name;
 
+
+        pack.Machine = "Plūsmas";
+
+
+        pack.Shift = shift;
+        pack.Author = user.UserName;
+
+        isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
+        // pack.FusCode = stringPackValue;
+
+        if (isPackCreated)
+        {
+            this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}/create");
+        }
     }
 }
 

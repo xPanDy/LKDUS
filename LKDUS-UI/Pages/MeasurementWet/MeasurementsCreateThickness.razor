@@ -10,19 +10,15 @@
 
 @inject IMeasurementRepository measurementRepo;
 @inject IMachinesRepository machineRepository
-
+@inject IMeasurementTypeRepository measurementTypeRepository;
 @inject IPacksRepository packRepo
 @inject IAuthenticationRepository authRepo
+@inject IMeasurementTypeRepository measTRepo
+@inject IJSRuntime JsRuntime;
 <style>
 
-    #ttr:focus {
-        background-color: yellow;
-    }
-
     .table-scroll {
-        /*width:100%; */
         display: block;
-        /* Decoration */
     }
 
         .table-scroll thead {
@@ -33,12 +29,10 @@
         }
 
         .table-scroll tbody {
-            /* Position */
             display: block;
             position: relative;
             width: 100%;
             overflow-y: scroll;
-            /* Decoration */
         }
 
         .table-scroll tr {
@@ -78,7 +72,7 @@
     }
 </style>
 
-<form>
+<div>
 
     <div class="container">
         <div class="row">
@@ -87,152 +81,329 @@
                 <button type="button" @onclick="@GoToCreation" class="btn btn-primary btn-block">Atpakaļ</button>
             </div>
             <div class="col w-25"><h3 class="card-title">Mitrā finiera biezums</h3></div>
-            <div class="col">
-                <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
+            @if (!isTypeCklicked)
+            {<div class="col">
+                     
+                </div>
+            }
+            else
+            {
+                <div class="col">
+                    <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
+                </div>
+            }
+
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col">
+
+            <button type="button" style="background-color:@colorBgP1" @onclick="changecolor1AndSetSizes" class="btn btn-outline-secondary btn-block">
+                <h4>4x8</h4>
+
+            </button>
+
+        </div>
+
+
+        <div class="col w-25"></div>
+
+        <div class="col">
+
+            <button type="button" style="background-color:@colorBgP2;" @onclick="changecolor2AndSetSizes" class="btn btn-outline-secondary btn-block">
+                <h4>8x4</h4>
+
+
+            </button>
+
+
+        </div>
+
+        <div class="col w-25"></div>
+
+        <div class="col">
+
+            <button type="button" style="background-color:@colorBgP3;" @onclick="changecolor3AndSetSizes" class="btn btn-outline-secondary btn-block">
+                <h4>4x4</h4>
+
+
+
+            </button>
+
+        </div>
+
+    </div>
+    @if (isTypeCklicked)
+    {
+
+        <div class="form-group">
+            <label for="machine">Iekārta</label>
+            <input id="machine" class="form-control" type="text" placeholder=@fusMachineName readonly>
+
+        </div>
+
+        <div class="form-group">
+
+            <table class="table-scroll  ">
+                <thead>
+                    <tr>
+                        <th class="text-center">Nr.</th>
+                        <th class="text-center">1  </th>
+                        <th class="text-center">2  </th>
+                        <th class="text-center">3  </th>
+                    </tr>
+                </thead>
+                <tbody class="body-half-screen">
+
+
+                    @if (sizesArray != null)
+                    {
+                        for (int i = 0; i < sizesArray.GetLength(0); i++)
+                        {
+
+                            int tmp = i;
+                            var rowNumber = i + 1;
+                            //id="@tmp"
+                            @* OLD<div id="@currentRow[i]">
+                                    <tr tabindex="1" id="@rows[i]" style="background-color: @Background[i]" @onclick="(e => HighlightSelected1(tmp))">
+
+                                        <td class="text-center" scope="row">
+                                            @rowNumber
+
+                                        </td>
+
+                                        @for (int j = 0; j < sizesArray.GetLength(1); j++)
+                                        {
+                                            <td style="background-color: @highlight2"
+                                                class="text-center">
+                                                @sizesArray[i, j]
+                                            </td>
+
+
+                                        }
+                                    </tr>@onclick="(e => HighlightSelected1(tmp))"
+                                </div>*@
+                            <tr>
+                                <td class="text-center" scope="row">@rowNumber</td>
+                                @for (int j = 0; j < sizesArray.GetLength(1); j++)
+                                {
+                                    int tmpx = i;
+                                    int tmpj = j;
+                                    <td class="text-center"  @onclick="(e => HighlightSelected(tmpx,tmpj))" style="background-color: @colors[i,j]" id="@idsForCells[i,j]">@sizesArray[i, j]</td>
+                                }
+                            </tr>
+                        }
+                    }
+
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="text-center">Vid.:</td>
+                        <td class="text-center">
+                            <div style="background-color:@colorBg2">
+                                <span class="badge badge-info">@avg1</span>
+                                @*<br />
+                                    <span class="badge badge-light">
+                                        @sizesArray[@actPosRow, @actPosCol]
+                                        @rowPositionValues[0]
+
+                                    </span>*@
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div style="background-color:@colorBg2;">
+                                <span class="badge badge-info">@avg2</span>
+                                @*<br />
+                                    <span class="badge badge-light">
+                                    @sizesArray[@actPosRow,@actPosCol]
+                                    @rowPositionValues[1]</span>*@
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div type="button" style="background-color:@colorBg3;">
+                                <span class="badge badge-info">@avg3</span>
+                                @*<br />
+                                    <span class="badge badge-light">
+                                    @sizesArray[@actPosRow, @actPosCol]
+                                    @rowPositionValues[2]
+                                    </span>*@
+                            </div>
+                        </td>
+
+                    </tr>
+
+
+
+                </tfoot>
+            </table>
+        </div>
+
+
+
+        <div class="container">
+
+
+
+
+        </div>
+
+
+
+
+
+        <div class="container">
+
+            <div class="d-flex justify-content-between">
+                <button type="button" @onclick="Reduce" style="color:deeppink" class="btn btn-secondary btn-lg">-</button>
+                <table class="table table-bordered table-bordered">
+                    <tbody>
+                        <tr class="text-center">
+
+                            <td><button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button></td>
+                            <td><button type="button" @onclick="(()=>select(sizes[1]))" class="btn btn-info btn-lg btn-block">@sizes[1]</button></td>
+                            <td><button type="button" @onclick="(()=>select(sizes[2]))" class="btn btn-info btn-lg btn-block">@sizes[2]</button></td>
+
+                        </tr>
+                        <tr class="text-center">
+                            <td><button type="button" @onclick="(()=>select(sizes[3]))" class="btn btn-info btn-lg btn-block">@sizes[3]</button></td>
+                            <td><button type="button" @onclick="(()=>select(sizes[4]))" class="btn btn-info btn-lg btn-block">@sizes[4]</button></td>
+                            <td><button type="button" @onclick="(()=>select(sizes[5]))" class="btn btn-info btn-lg btn-block">@sizes[5]</button></td>
+                        </tr>
+                        <tr class="text-center">
+                            <td><button type="button" @onclick="(()=>select(sizes[6]))" class="btn btn-info btn-lg btn-block">@sizes[6]</button></td>
+                            <td><button type="button" @onclick="(()=>select(sizes[7]))" class="btn btn-info btn-lg btn-block">@sizes[7]</button></td>
+                            <td><button type="button" @onclick="(()=>select(sizes[8]))" class="btn btn-info btn-lg btn-block">@sizes[8]</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" style="color:lawngreen" @onclick="Add" class="btn btn-secondary btn-lg">+</button>
             </div>
 
-
         </div>
-    </div>
-    <div class="form-group">
-        <label for="machine">Iekārta</label>
-        <input id="machine" class="form-control" type="text" placeholder=@fusMachineName readonly>
-
-    </div>
-    <div class="form-group">
-
-        <table class="table-scroll  ">
-            <thead>
-                <tr>
-                    <th class="text-center">Nr.</th>
-                    <th class="text-center">1  </th>
-                    <th class="text-center">2  </th>
-                    <th class="text-center">3  </th>
-                </tr>
-            </thead>
-            <tbody class="body-half-screen">
-                @if (sizesArray != null)
-                {
-                    for (int i = 0; i < sizesArray.GetLength(0); i++)
-                    {
-
-                        int tmp = i;
-                        var rowNumber = i + 1;
-                        //id="@tmp"
-                        <tr tabindex="1" id="ttr" style="background-color: @Background" @onclick="( e => HighlightSelected1(tmp, Background))">
-
-                            <td class="text-center" scope="row">@rowNumber</td>
-
-                            @for (int j = 0; j < sizesArray.GetLength(1); j++)
-                            {
-                                <td style="background-color: @highlight2"
-                                    class="text-center">
-                                    @sizesArray[i, j]
-                                </td>
-
-
-                            }
-                        </tr>
-
-                    }
-                }
-
-
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td></td>
-                    <td class="text-center">
-                        <button type="button" @onclick="(()=>setPos(0))" class="btn btn-primary alert-info">
-                            <span class="badge badge-info">1.poz</span>
-                            @*<br />
-                                <span class="badge badge-light">
-                                    @sizesArray[@actPosRow, @actPosCol]
-                                    @rowPositionValues[0]
-
-                                </span>*@
-                        </button>
-                    </td>
-                    <td class="text-center">
-                        <button type="button" @onclick="(()=>setPos(1))" class="btn btn-primary alert-info">
-                            <span class="badge badge-info">2.poz</span>
-                            @*<br />
-                                <span class="badge badge-light">
-                                @sizesArray[@actPosRow,@actPosCol]
-                                @rowPositionValues[1]</span>*@
-                        </button>
-                    </td>
-                    <td class="text-center">
-                        <button type="button" @onclick="(()=>setPos(2))" class="btn btn-primary alert-info">
-                            <span class="badge badge-info">3.poz</span>
-                            @*<br />
-                                <span class="badge badge-light">
-                                @sizesArray[@actPosRow, @actPosCol]
-                                @rowPositionValues[2]
-                                </span>*@
-                        </button>
-                    </td>
-
-                </tr>
-
-
-
-            </tfoot>
-        </table>
-    </div>
-
-
-
-    <div class="container">
-
-
-
-
-    </div>
-
-
-
-
-
-    <div class="container">
-
-        <div class="d-flex justify-content-between">
-            <button type="button" @onclick="Reduce" style="color:deeppink" class="btn btn-secondary btn-lg">-</button>
-            <table class="table table-bordered table-bordered">
-                <tbody>
-                    <tr class="text-center">
-
-                        <td>  <button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button></td>
-                        <td><button type="button" @onclick="(()=>select(sizes[1]))" class="btn btn-info btn-lg btn-block">@sizes[1]</button></td>
-                        <td><button type="button" @onclick="(()=>select(sizes[2]))" class="btn btn-info btn-lg btn-block">@sizes[2]</button></td>
-
-                    </tr>
-                    <tr class="text-center">
-                        <td><button type="button" @onclick="(()=>select(sizes[3]))" class="btn btn-info btn-lg btn-block">@sizes[3]</button></td>
-                        <td><button type="button" @onclick="(()=>select(sizes[4]))" class="btn btn-info btn-lg btn-block">@sizes[4]</button></td>
-                        <td><button type="button" @onclick="(()=>select(sizes[5]))" class="btn btn-info btn-lg btn-block">@sizes[5]</button></td>
-                    </tr>
-                    <tr class="text-center">
-                        <td><button type="button" @onclick="(()=>select(sizes[6]))" class="btn btn-info btn-lg btn-block">@sizes[6]</button></td>
-                        <td><button type="button" @onclick="(()=>select(sizes[7]))" class="btn btn-info btn-lg btn-block">@sizes[7]</button></td>
-                        <td><button type="button" @onclick="(()=>select(sizes[8]))" class="btn btn-info btn-lg btn-block">@sizes[8]</button></td>
-                    </tr>
-                </tbody>
-            </table>
-            <button type="button" style="color:lawngreen" @onclick="Add" class="btn btn-secondary btn-lg">+</button>
-        </div>
-
-    </div>
-
-
-
-
-
-</form>
+    }
+    else
+    {
+        <LoadingMessage Message="Izvēlies izmēru lai sāktu mērījumu"></LoadingMessage>
+    }
+</div>
 
 
 @code {
 
+    public string colorBgP1 = "white";
+    public string colorBgP2 = "white";
+    public string colorBgP3 = "white";
+    public bool isTypeCklicked = false;
+    public string colorBg1 = "white";
+    public string colorBg2 = "white";
+    public string colorBg3 = "white";
+
+    public string[] rows = new string[40];
+
+    public string[,] colors = new string[40, 3];
+
+    public async void focustoDiv(int i)
+    {
+        await JsRuntime.InvokeVoidAsync("blazorHelpers.scrollToFragment", "currentRow" + i);
+
+    }
+
+
+    bool isEdit = false;
+    string editPosition = "";
+    private void HighlightSelected(int a, int b)
+    {
+        isEdit = true;
+        for (int i = 0; i< colors.GetLength(0); i++)
+        {
+
+            for(int j = 0; j< colors.GetLength(1); j++)
+            {
+                if(i==a && b == j)
+                {
+                    colors[i, j] = "yellow";
+                    editPosition= "cell" + i + j;
+
+                }
+                else {
+                    colors[i, j] = "";
+                }
+                if (idsForCells[i, j] == activePosition)
+                {
+                    activePosition = "cell"+i+j;
+                    colors[i, j] = "red";
+                    break;
+                }
+            }
+        }
+
+    }
+
+    int selecteSizeType = 0;
+    int selectionType = 0;
+    string activePosition = "";
+    private void changecolor1AndSetSizes()
+    {
+
+
+        for (int i = 0; i < colors.GetLength(0); i++)
+        {
+            for (int j = 0; j < colors.GetLength(1); j++)
+            {
+                colors[i, j] = "";
+            }
+        }
+        activePosition = "cell00";
+        colors[0, 0] = "red";
+
+        isTypeCklicked = true;
+
+        selecteSizeType = 2;
+        colorBgP1 = "greenyellow";
+        colorBgP2 = "white";
+        colorBgP3 = "white";
+
+    }
+    private void changecolor2AndSetSizes()
+    {
+        for (int i = 0; i < colors.GetLength(0); i++)
+        {
+            for (int j = 0; j < colors.GetLength(1); j++)
+            {
+                colors[i, j] = "";
+            }
+        }
+        activePosition = "cell00";
+        colors[0, 0] = "red";
+
+
+        isTypeCklicked = true;
+        selecteSizeType = 1;
+
+        colorBgP1 = "white";
+        colorBgP2 = "greenyellow";
+        colorBgP3 = "white";
+    }
+    private void changecolor3AndSetSizes()
+    {
+        for (int i = 0; i < colors.GetLength(0); i++)
+        {
+            for (int j = 0; j < colors.GetLength(1); j++)
+            {
+                colors[i, j] = "";
+            }
+        }
+        activePosition = "cell00";
+        colors[0, 0] = "red";
+
+        isTypeCklicked = true;
+        selecteSizeType = 2;
+        colorBgP1 = "white";
+        colorBgP2 = "white";
+        colorBgP3 = "greenyellow";
+    }
     [Parameter]
     public string userId { get; set; }
     [Parameter]
@@ -250,13 +421,27 @@
 
 
 
-    private string Background { get; set; }
+    private string[] Background { get; set; } = new string[40];
 
-    private void HighlightSelected1(int i, string higlith)
+    private async void HighlightSelected1(int i)
     {
+        current = "";
         int a = i;
         actPosRow = i;
+        current = "current" + i;
+        for (int r = 0; r < Background.GetLength(0); r++)
+        {
+            if (r == i)
+            {
+                Background[r] = "yellow";
 
+            }
+            else
+            {
+                Background[r] = "";
+            }
+        }
+        //  await JsRuntime.InvokeAsync<object>("Alert", current);
     }
 
 
@@ -266,10 +451,309 @@
     private string highlight3 { get; set; } = "";
     private string highlight4 { get; set; } = "";
 
-    private void select(decimal value)
+    // private string[] currentRow = new string[40];
+    private string[,] idsForCells = new string[40, 3];
+    bool down = true;
+    bool right = false;
+    bool up = false;
+    bool left = false;
+    decimal avg1 = 0;
+    decimal avg2 = 0;
+    decimal avg3 = 0;
+    private async void select(decimal value)
     {
 
-        sizesArray[actPosRow, actPosCol] = value; ;
+        if (isEdit)
+        {
+            for (int i = 0; i < idsForCells.GetLength(0); i++)
+            {
+                for (int j = 0; j < idsForCells.GetLength(1); j++)
+                {
+
+                    if (idsForCells[i, j] == editPosition)
+                    {
+                        sizesArray[i, j] = value;
+                    }
+
+                }
+            }
+            isEdit = false;
+        }
+        else {
+            decimal sum1 = 0;
+            decimal sum2 = 0;
+            decimal sum3 = 0;
+            for (int i = 0; i < sizesArray.GetLength(0); i++)
+            {
+
+                sum1 = sum1 + sizesArray[i, 0];
+                sum2 = sum2 + sizesArray[i, 1];
+                sum3 = sum3 + sizesArray[i, 2];
+
+            }
+            avg1 = sum1 / 40;
+            avg2 = sum2 / 40;
+            avg3 = sum3 / 40;
+            if (selecteSizeType == 1)
+            {
+
+                if (down)
+                {
+
+                    for (int i = 0; i < idsForCells.GetLength(0); i++)
+                    {
+                        for (int j = 0; j < idsForCells.GetLength(1); j++)
+                        {
+
+                            if (idsForCells[i, j] == activePosition)
+                            {
+                                if (i == idsForCells.GetLength(0) - 1)
+                                {
+                                    sizesArray[i, j] = value;
+                                    colors[i, j] = "";
+                                    down = false;
+                                    right = true;
+                                    j++;
+                                    activePosition = "cell" + i + j;
+                                    colors[i, j] = "red";
+
+                                    break;
+                                }
+                                else
+                                {
+                                    sizesArray[i, j] = value;
+                                    colors[i, j] = "";
+
+                                    down = true;
+                                    i++;
+                                    activePosition = "cell" + (i) + j;
+                                    colors[i, j] = "red";
+
+                                    break;
+
+                                }
+
+                            }
+
+                        }
+                    }
+                    focusToNext();
+                    return;
+                }
+                if (right)
+                {
+
+                    for (int i = 0; i < idsForCells.GetLength(0); i++)
+                    {
+                        for (int j = 0; j < idsForCells.GetLength(1); j++)
+                        {
+                            colors[i, j] = "";
+                            if (idsForCells[i, j] == activePosition)
+                            {
+                                if (j < idsForCells.GetLength(1) - 1)
+                                {
+                                    sizesArray[i, j] = value;
+                                    j++;
+
+                                    activePosition = "cell" + i + j;
+                                    colors[i, j] = "red";
+                                    if (j == idsForCells.GetLength(1) - 1)
+                                    {
+                                        up = true;
+                                        right = false;
+                                        break;
+                                    }
+                                }
+                            }
+                            else
+                            {
+
+                            }
+
+
+
+
+                        }
+                    }
+                    focusToNext();
+                    return;
+                }
+
+                if (up)
+                {
+
+                    for (int i = 0; i < idsForCells.GetLength(0); i++)
+                    {
+                        for (int j = 0; j < idsForCells.GetLength(1); j++)
+                        {
+                            //colors[i, j] = "";
+                            if (idsForCells[i, j] == activePosition)
+                            {
+                                // colors[i, j] = "";
+
+                                if (i == 0 && j == 1)
+                                {
+                                    sizesArray[i, j] = value;
+                                    break;
+                                }
+
+                                if (j == 1)
+                                {
+                                    sizesArray[i, j] = value; colors[i, j] = "";
+                                    up = false;
+                                    right = true;
+                                    i--;
+                                    activePosition = "cell" + i + j;
+                                    colors[i, j] = "red";
+                                }
+                                else if (j == 2)
+                                {
+                                    sizesArray[i, j] = value; colors[i, j] = "";
+                                    up = false;
+                                    left = true;
+                                    i--;
+                                    activePosition = "cell" + i + j;
+                                    colors[i, j] = "red";
+                                }
+
+                            }
+                            else
+                            {
+
+                            }
+
+
+
+
+                        }
+
+                    }
+                    focusToNext();
+                    return;
+                }
+
+                if (left)
+                {
+
+                    for (int i = 0; i < idsForCells.GetLength(0); i++)
+                    {
+                        for (int j = 0; j < idsForCells.GetLength(1); j++)
+                        {
+                            //colors[i, j] = "";
+                            if (idsForCells[i, j] == activePosition)
+                            {
+                                if (j == 2)
+                                {
+                                    sizesArray[i, j] = value;
+                                    colors[i, j] = "";
+                                    left = false;
+                                    up = true;
+                                    j--;
+                                    activePosition = "cell" + i + j;
+                                    colors[i, j] = "red";
+                                }
+
+                            }
+                            else
+                            {
+
+                            }
+
+
+
+
+                        }
+
+                    }
+                    focusToNext();
+                    return;
+                }
+            }
+
+            if (selecteSizeType == 2)
+            {
+
+
+
+
+
+                for (int i = 0; i < idsForCells.GetLength(0); i++)
+                {
+                    for (int j = 0; j < idsForCells.GetLength(1); j++)
+                    {
+
+                        if (idsForCells[i, j] == activePosition)
+                        {
+                            if (i == idsForCells.GetLength(0) - 1 && j == idsForCells.GetLength(1) - 1)
+                            {
+                                sizesArray[i, j] = value;
+                                break;
+                            }
+
+                            colors[i, j] = "";
+                            if (j < idsForCells.GetLength(1) - 1)
+                            {
+                                sizesArray[i, j] = value;
+                                j++;
+
+                                activePosition = "cell" + i + j;
+                                colors[i, j] = "red";
+                                break;
+
+                            }
+                            else if (j == idsForCells.GetLength(1) - 1)
+                            {
+                                sizesArray[i, j] = value;
+                                j = 0;
+
+                                i++;
+                                activePosition = "cell" + i + j;
+                                colors[i, j] = "red";
+                                break;
+                            }
+                        }
+
+
+
+
+
+                    }
+                }
+                focusToNext();
+                return;
+
+            }
+
+        }
+
+
+
+    }
+
+    private string posToFocusOn = "";
+    public async void focusToNext()
+    {
+
+        for (int i = 0; i < idsForCells.GetLength(0); i++)
+        {
+            for (int j = 0; j < idsForCells.GetLength(1); j++)
+            {
+                if(activePosition == idsForCells[i, j] && i>5)
+                {
+
+                    posToFocusOn = idsForCells[i-5,j];
+                }
+            }
+        }
+
+
+
+        await JsRuntime.InvokeVoidAsync("blazorHelpers.scrollToFragment", posToFocusOn);
+
+
+
+
+
 
     }
 
@@ -279,6 +763,25 @@
         // Color = Color == "red" ? "green" : "red";
         actPos = i;
         actPosCol = i;
+
+        if (i == 0)
+        {
+            colorBg1 = "red";
+            colorBg2 = "";
+            colorBg3 = "";
+        }
+        else if (i == 1)
+        {
+            colorBg1 = "";
+            colorBg2 = "red";
+            colorBg3 = "";
+        }
+        else if (i == 2)
+        {
+            colorBg1 = "";
+            colorBg2 = "";
+            colorBg3 = "red";
+        }
 
         //actPosCol
     }
@@ -307,14 +810,17 @@
     public List<decimal> range = new List<decimal>();
 
     int machineId;
- //   Machine mach = new Machine();
+    //   Machine mach = new Machine();
+    string current = "current";
+
+    MeasurementType mt = new MeasurementType();
 
     protected async override Task OnInitializedAsync()
     {
 
         machineId = int.Parse(pmachineIdd);
 
-      //  mach = await machineRepository.Get(Endpoints.MachinesEndpoint, machineId);
+        //  mach = await machineRepository.Get(Endpoints.MachinesEndpoint, machineId);
 
 
         int startValuesOfMeasurement = 0;
@@ -335,6 +841,22 @@
             start = start + 0.01m;
         }
 
+
+
+        for (int i = 0; i < idsForCells.GetLength(0); i++)
+        {
+            for (int j = 0; j < idsForCells.GetLength(1); j++)
+            {
+                idsForCells[i, j] = "cell" + i + j;
+            }
+        }
+
+        for (int i = 0; i < rows.Length; i++)
+        {
+            rows[i] = "current" + i;
+        }
+
+        mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 1);//measPositionRepo.Get(Endpoints.MeasurementPositions, result);
     }
 
 
@@ -344,12 +866,26 @@
         this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
     }
 
-    private void GoToCreation(MouseEventArgs e)
+    private async void GoToCreation(MouseEventArgs e)
     {
+        if (isSuccess && isPackCreated)
+        {
+            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
+        }
+        else
+        {
 
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
+            bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Tiešām vēlies iziet nesaglabājot?");
+            if (confirmed)
+            {
+                this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
+            }
+        }
+       // this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
     }
 
+    bool isSuccess = false;
+    bool isPackCreated = false;
     private async void SaveMeasurement()
     {
         String measurementDateAndTime = DateTime.Now.ToString("g");
@@ -368,8 +904,6 @@
 
 
 
-        bool isSuccess = true;
-        bool isPackCreated = true;
 
         IList<Measurement> measurementsToCreate = new List<Measurement>();
 
@@ -378,8 +912,8 @@
             Measurement meas = new Measurement();
             meas.DateCreated = measurementDateAndTime;
             meas.Shift = shift;
-            //meas.MachineId = mach.Id;
             meas.UserId = userId;
+            meas.MachineName = fusMachineName;
             meas.MeasurementPositionId = int.Parse(measurementPositionId);
             meas.PackId = packId;
             meas.MeasurementTypeId = 1;
@@ -420,9 +954,13 @@
         pack.Shift = shift;
         pack.Author = user.UserName;
         pack.FusCode = stringPackValue;
-
+        pack.MeasurementTypeName = mt.Name;
 
         isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
+        if (isPackCreated)
+        {
+            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
+        }
     }
 
 

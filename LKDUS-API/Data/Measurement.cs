@@ -15,7 +15,7 @@ namespace LKDUS_API.Data
         public string  DateCreated { get; set ; }
         public int Shift { get; set; }
 
-        public int  MachineId { get; set; }
+        public string MachineName { get; set; }
            public string  UserId { get; set; }
             public int  MeasurementPositionId { get; set; }
          
@@ -32,6 +32,7 @@ namespace LKDUS_API.Data
         public decimal Measurement7 { get; set; }
         public decimal Measurement8 { get; set; }
         public decimal Measurement9 { get; set; }
+        public decimal Measurement10 { get; set; }
 
 
     }
