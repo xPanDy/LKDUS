@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>LKDUS_UI</RootNamespace>
+    <UserSecretsId>d7ce9c07-f40b-41eb-97c4-9c7de5e5727d</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +17,8 @@
     <PackageReference Include="Blazored.LocalStorage" Version="3.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
+    <PackageReference Include="WebEssentials.AspNetCore.PWA" Version="1.0.65" />
+    <PackageReference Include="WebEssentials.AspNetCore.ServiceWorker" Version="1.0.11" />
     <PackageReference Include="ZXingBlazor" Version="0.1.4" />
   </ItemGroup>
 

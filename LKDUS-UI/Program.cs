@@ -16,10 +16,24 @@ namespace LKDUS_UI
 {
     public class Program
     {
+      /*    public static void Main(string[] args)
+          {
+              var builder = WebAssemblyHostBuilder.CreateDefault(args);
+              builder.RootComponents.Add<App>("app");
+              CreateHostBuilder(args).Build().Run();
+
+          }
+
+          public static IHostBuilder CreateHostBuilder(string[] args) =>
+              Host.CreateDefaultBuilder(args)
+                  .ConfigureWebHostDefaults(webBuilder =>
+                  {
+                      webBuilder.UseStartup<Startup>();
+                  });
+      } */
+ 
         public static void Main(string[] args)
         {
-            var builder = WebAssemblyHostBuilder.CreateDefault(args);
-            builder.RootComponents.Add<App>("app");
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -29,5 +43,5 @@ namespace LKDUS_UI
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-    }
+    } 
 }

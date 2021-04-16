@@ -4,10 +4,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>aspnet-LKDUS_API-EC0AF261-0F36-4646-8F96-9E23087797BB</UserSecretsId>
     <RootNamespace>LKDUS_API</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\admin-kristaps\source\repos\LKDUS\LKDUS-API\LKDUS-API.xml</DocumentationFile>
+    <DocumentationFile>bin\$(Configuration)\LKDUS-API.xml</DocumentationFile>
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
 
@@ -24,6 +25,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.6.3" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.6.3" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.6.3" />
+    <PackageReference Include="WebEssentials.AspNetCore.PWA" Version="1.0.65" />
+    <PackageReference Include="WebEssentials.AspNetCore.ServiceWorker" Version="1.0.11" />
   </ItemGroup>
 
   <ItemGroup>

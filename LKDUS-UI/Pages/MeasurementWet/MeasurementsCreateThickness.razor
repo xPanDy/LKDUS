@@ -746,11 +746,16 @@
             }
         }
 
+        if (selecteSizeType == 1)
+        {
+            if (idsForCells[5, 2] == activePosition)
+            {
+                posToFocusOn = idsForCells[0, 0];
+            }
 
+            await JsRuntime.InvokeVoidAsync("blazorHelpers.scrollToFragment", posToFocusOn);
 
-        await JsRuntime.InvokeVoidAsync("blazorHelpers.scrollToFragment", posToFocusOn);
-
-
+        }
 
 
 
@@ -881,7 +886,7 @@
                 this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
             }
         }
-       // this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
+        // this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
     }
 
     bool isSuccess = false;

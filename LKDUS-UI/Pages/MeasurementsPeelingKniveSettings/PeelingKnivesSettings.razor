@@ -1,4 +1,4 @@
-﻿@page "/measurementspeelingknives/{userId}/{measurementPositionId}/create"
+﻿@page "/measurementspeelingknivessettings/{userId}/{measurementPositionId}/create"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
@@ -133,12 +133,12 @@
 
 <div class=" col-md-1 mx-auto ">
     
-    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToKniveSharpening(1)) " >4.Līnijas nazis</button></div>
-    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToKniveSharpening(2)) " >5.Līnijas nazis</button></div>
-    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToKniveSharpening(3)) " >6.Līnijas nazis</button></div>
-    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToKniveSharpening(4)) " >7.Līnijas nazis</button></div>
-    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToKniveSharpening(5)) " >8.Līnijas nazis</button></div>
-    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToKniveSharpening(6)) " >9.Līnijas nazis</button></div>
+    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToSetting(1)) " >4.Līnijas nazis</button></div>
+    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToSetting(2)) " >5.Līnijas nazis</button></div>
+    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToSetting(3)) " >6.Līnijas nazis</button></div>
+    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToSetting(4)) " >7.Līnijas nazis</button></div>
+    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToSetting(5)) " >8.Līnijas nazis</button></div>
+    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToSetting(6)) " >9.Līnijas nazis</button></div>
 
 
 
@@ -318,7 +318,7 @@
         //    //return false;
         //}
 
-        private void GoToKniveSharpening(int knive)
+        private void GoToSetting(int knive)
         {
             if (knive == 1)
             {
@@ -347,13 +347,13 @@
             }
             pmachineIdd = machine.Id;
             checkParams();
-            this.navManager.NavigateTo($"/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{pmachineIdd}/");
+            this.navManager.NavigateTo($"/measurementspeelingknivessettingoptions/{userId}/{measurementPositionId}/{pmachineIdd}/");
         }
 
 
 
         private void goBack(MouseEventArgs e)
         {
-            this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
+            this.navManager.NavigateTo($"/measurementspeelingknivessettingview/{userId}/{measurementPositionId}");
         }
     }

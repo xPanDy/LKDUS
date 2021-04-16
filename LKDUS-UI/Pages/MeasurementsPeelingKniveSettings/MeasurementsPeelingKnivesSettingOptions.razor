@@ -1,4 +1,4 @@
-﻿@page "/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{pmachineIdd}/"
+﻿@page "/measurementspeelingknivessettingoptions/{userId}/{measurementPositionId}/{pmachineIdd}/"
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
 @using LKDUS_UI.Contracts
@@ -19,30 +19,42 @@
             </div>
 
             @*<div class="col">
-                <button type="submit" class="btn btn-primary btn-block">Saglabāt</button>
-            </div>*@
+                    <button type="submit" class="btn btn-primary btn-block">Saglabāt</button>
+                </div>*@
 
         </div><div class="row">
-    <div class="col w-25"><h3 class="card-title">Lobnaža asināšana</h3></div>
-</div>
+            <div class="col w-25"><h3 class="card-title">Lobnaža asināšana</h3></div>
+        </div>
     </div>
     <div>
         <div class="row">
             <div class="col w-25 h-25">
-                <button class="btn btn-warning btn-block" @onclick="@NavigatetoPoints">
-                    <h3>Pārbaudes punkti</h3>
+                <button class="btn btn-warning btn-block" @onclick="@NavigatetoShaftHeight">
+                    <h3>Lobnaža uzstādīšanas augstums attiecībā pret vārpstu, h, mm</h3>
                 </button>
             </div>
 
 
-            <div class="col"><button class="btn btn-warning btn-block" @onclick="@NavigatetoAngle">
-                <h3>Nažu izmēri un asināšanas leņķis</h3> </button></div>
+            <div class="col">
+                <button class="btn btn-warning btn-block" @onclick="@NavigatetoKnifeAngle">
+                    <h3>Spiedlīstes augstums virs naža, mm</h3>
+                </button>
+            </div>
+
+
+            <div class="w-100"></div>
+
+            <div class="col">
+                <button class="btn btn-warning btn-block" @onclick="@NavigatetoGap">
+                    <h3>Sprauga starp lobnaža priekšējo virsmu un spiedlīsti, mm</h3>
+                </button>
+            </div>
 
 
             <div class="w-100"></div>
 
         </div>
-        
+
     </div>
 
 </div>
@@ -105,19 +117,26 @@
     private void Return(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo($"/measurementspeelingknives/{userId}/{measurementPositionId}/create");
+        this.navManager.NavigateTo($"/measurementspeelingknivessettings/{userId}/{measurementPositionId}/create");
     }
 
 
-    private void NavigatetoPoints(MouseEventArgs e)
+    private void NavigatetoShaftHeight(MouseEventArgs e)
     {
         ///measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/
-        this.navManager.NavigateTo($"/measurementspeelingknivespoints/{userId}/{measurementPositionId}/{pmachineIdd}");
+        this.navManager.NavigateTo($"/shaft/{userId}/{measurementPositionId}/{pmachineIdd}");
     }
 
-    private void NavigatetoAngle(MouseEventArgs e)
+    private void NavigatetoKnifeAngle(MouseEventArgs e)
     {
         //"/measurementspeelingknivesangle/{userId}/{measurementPositionId}/{pmachineIdd}"
-        this.navManager.NavigateTo($"/measurementspeelingknivesangle/{userId}/{measurementPositionId}/{pmachineIdd}");
+        this.navManager.NavigateTo($"/knife/{userId}/{measurementPositionId}/{pmachineIdd}");
     }
+
+    private void NavigatetoGap(MouseEventArgs e)
+    {
+        //"/measurementspeelingknivesangle/{userId}/{measurementPositionId}/{pmachineIdd}"
+        this.navManager.NavigateTo($"/gap/{userId}/{measurementPositionId}/{pmachineIdd}");
+    }
+}
 }

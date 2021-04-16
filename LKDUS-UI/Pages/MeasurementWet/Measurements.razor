@@ -12,7 +12,7 @@
 
 
 
-<div class="card" style="height:100%">
+<div   style="height:100%">
     <div class="container">
         <div class="row">
 
@@ -45,15 +45,10 @@
     }
     else
     {
-
-        <!-- Scroll bar present and enabled when more contents -->
-
-
-
-
-
-        <div class="container pre-scrollable" style="height:75%">
-            <div class="mh-75">
+ 
+        <div class="container pre-scrollable"  style="height:100%;  max-height: 540px;
+    overflow-y: scroll;">
+            <div class="mh-100">
                 <table class="table">
                     <thead>
                         <tr>
@@ -138,11 +133,11 @@
     protected async override Task OnInitializedAsync()
     {
         Model = await pRepo.Get(Endpoints.PacksEndpoint);
-        Model = Model.OrderByDescending(el => el.Id).ToList() ;
+        //odel = Model.OrderByDescending(el => el.Id).ToList() ;
+        Model = Model.OrderByDescending(el => el.Id).Where(el => el.MeasurementTypeName.Equals("Platums")||   el.MeasurementTypeName.Equals("Biezums")||
+              el.MeasurementTypeName.Equals("Kvalitāte")||   el.MeasurementTypeName.Equals("Garums")).ToList();
 
-
-        // Model = Model.Where(e => (e.MeasurementPositionId == 1)).ToList();
-
+ 
         try
         {
             int result = Int32.Parse(measurementPositionId);
@@ -165,8 +160,7 @@
 
     private void OpenCreateForm(MouseEventArgs e)
     {
-        //this.measurementPosition.
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
+         this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
     }
     private void goBack(MouseEventArgs e)
     {

@@ -19,7 +19,8 @@ using Microsoft.AspNetCore.Components.Authorization;
 using Blazored.Localisation;
  
 using Microsoft.AspNetCore.ResponseCompression;
- 
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.AspNetCore.Http;
 
 namespace LKDUS_UI
 {
@@ -52,7 +53,7 @@ namespace LKDUS_UI
             
             
             services.AddScoped<ApiAuthenticationStateProvider>();
-
+           
 
             services.AddTransient<IMeasurementPositionsRepository, MeasurementPositionRepository>();
             services.AddTransient<IMeasurementRepository, MeasurementRepository>();
@@ -79,6 +80,10 @@ namespace LKDUS_UI
 
             //
             services.AddSingleton<WeatherForecastService>();
+            services.AddMvc();
+            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddProgressiveWebApp();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -98,11 +103,11 @@ namespace LKDUS_UI
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+           // app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
-
+           // app.UseHttpsRedirection();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapBlazorHub();
@@ -110,6 +115,7 @@ namespace LKDUS_UI
                //d endpoints.MapFallbackToPage("/index.html");
 
             });
+            
         }
     }
 }

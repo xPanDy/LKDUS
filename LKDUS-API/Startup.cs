@@ -21,6 +21,8 @@ using LKDUS_API.Mapping;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.AspNetCore.Http;
 
 namespace LKDUS_API
 {
@@ -112,6 +114,11 @@ namespace LKDUS_API
 
 
             services.AddControllers();
+            services.AddMvc();
+            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddProgressiveWebApp();
+           services.AddMvc(c => c.Conventions.Add(new ApiExplorerIgnores()));
+             
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -169,6 +176,8 @@ namespace LKDUS_API
                 endpoints.MapControllers();
                // endpoints.MapFallbackToPage("/index.html");
             });
+
+            app.UsePathBase("/LKDUS-UI");
         }
     }
 }

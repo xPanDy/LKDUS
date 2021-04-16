@@ -88,7 +88,7 @@ namespace LKDUS_API.Controllers
          
          
         /// <summary>
-        /// Get the User by id
+        /// Get the measurement by id
         /// </summary>
         /// <param name="id"></param>
         /// <returns>An measurement record by id</returns>

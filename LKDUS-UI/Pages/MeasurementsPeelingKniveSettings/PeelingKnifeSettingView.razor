@@ -1,4 +1,4 @@
-﻿@page "/measurementspeelingknives/{userId}/{measurementPositionId}"
+﻿@page "/measurementspeelingknivessettingview/{userId}/{measurementPositionId}"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
@@ -11,8 +11,7 @@
 @inject IMeasurementPositionsRepository measurementPositionRepo
 
 
-
-<div  style="height:100%">
+<div style="height:100%">
     <div class="container">
         <div class="row">
 
@@ -53,7 +52,7 @@
 
 
         <div class="container pre-scrollable" style="height:75%">
-            <div  >
+            <div>
                 <table class="table">
                     <thead>
                         <tr>
@@ -62,7 +61,7 @@
                             <th scope="col">Iekārta               </th>
                             <th scope="col">Maiņa             </th>
                             <th scope="col">Laborants           </th>
-                            
+
 
 
                             @*<th scope="col">Meistars</th>*@
@@ -78,7 +77,7 @@
                                 <td>@model.Machine</td>
                                 <td>@model.Shift</td>
                                 <td>@model.Author</td>
-                                 
+
 
 
 
@@ -102,6 +101,7 @@
 
     }
 </div>
+
 @code {
 
     [Parameter]
@@ -113,20 +113,20 @@
 
     protected override void OnParametersSet()
     {
-        //the param will be set now
+       
         string test = measurementPositionId;
     }
 
-    // private IList<Measurement> Model;
+    
     private IList<Pack> Model;
     private MeasurementPosition measurementPosition;
 
     protected async override Task OnInitializedAsync()
     {
         Model = await pRepo.Get(Endpoints.PacksEndpoint);
-        //   Model = Model.Where(e => (e.MeasurementPositionId == 4)).ToList();
+        
         Model = Model.OrderByDescending(el => el.Id).ToList();
-        Model = Model.OrderByDescending(el => el.Id).Where(el => el.MeasurementTypeName.Equals("Punkts")|| el.MeasurementTypeName.Equals("Lenķis")).ToList(); 
+        Model = Model.OrderByDescending(el => el.Id).Where(el => el.Id == 9 || el.Id == 10 || el.Id == 12).ToList();
 
         try
         {
@@ -145,7 +145,7 @@
     private void OpenCreateForm(MouseEventArgs e)
     {
         //this.measurementPosition.
-        this.navManager.NavigateTo($"/measurementspeelingknives/{userId}/{measurementPositionId}/create");
+        this.navManager.NavigateTo($"/measurementspeelingknivessettings/{userId}/{measurementPositionId}/create");
     }
     private void goBack(MouseEventArgs e)
     {

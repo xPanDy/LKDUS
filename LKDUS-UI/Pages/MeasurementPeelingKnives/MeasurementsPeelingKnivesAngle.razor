@@ -1,0 +1,404 @@
+﻿@page "/measurementspeelingknivesangle/{userId}/{measurementPositionId}/{pmachineIdd}"
+@*  *@
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+@inject IMachinesRepository machineRepository;
+@inject IMeasurementRepository repo
+@inject NavigationManager navManager
+@inject IJSRuntime JsRuntime;
+@inject IAuthenticationRepository authRepo
+
+@inject IMeasurementTypeRepository measurementTypeRepository;
+@inject IPacksRepository packRepo
+<!--<div class="card border-0 h-100 ">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button type="button" @onclick="@Return" class="btn btn-primary  ">Atpakaļ</button>
+            </div>
+            <div class="col">-->
+@* <button  @onclick="@SaveMeasurement" type="submit" class="btn btn-primary btn-block">Saglabāt</button>*@
+<!--</div>
+            <div class="col">
+                <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
+            </div>
+
+        </div><div class="row">
+            <div class="col w-25"><h3 class="card-title">Nažu izmēri un asināšanas leņķis</h3></div>
+        </div>
+    </div>
+    <div>
+
+
+        <div class="w-100 h-55"></div>
+
+
+
+
+
+    </div>
+
+</div>-->
+
+<div class="vh-100 m-0 p-0" style="overflow: hidden;">
+    <div style="height: 100%;  width:100%; background-color: white ">
+        <!--navigation -->
+        <div class=" col-md-8 mx-auto p-1 m-0 d-inline-block" style="width: 50%; height:10%; float:left; background-color: white">
+            <button class="btn-primary btn btn-block" @onclick="@Return" style="width:100%; height:100%;">Atpakaļ</button>
+        </div>
+        <div class=" col-md-8  mx-auto p-1 m-0  d-inline-block" style="width: 50%;height:10%; float:left;  background-color: white">
+            <button class="btn-primary btn btn-block" @onclick="@SaveMeasurement" style="width:100%; height:100%;">Saglabāt</button>
+        </div>
+        <!--content -->
+        <div class=" col-md-8   mx-auto p-1 m-0 d-inline-block" style="width: 50%; height:55%; float:left; background-color: white">
+            @*<div class="row-md-auto p-1">
+                <h5 style="text-align: center;">Naža garums/platums</h5>
+            </div>*@
+
+
+            <div class="row-md-auto p-1 align-middle">
+                <h5 style="text-align: left;">
+                    <label for="@idOfElement[0]">Naža garums:</label>
+                </h5>
+
+                <div>
+                    @*class="input col-md-8 mx-auto p-1 m-0  d-inline-block form-control" @onclick="el => setPositionValue(0)" style="background-color:@colorBgs[0]; height:80px;" placeholder="">*@
+
+                    <input id="@idOfElement[0]" readonly="readonly" style="        background-color: @colorBgs[0];
+                    text-align: center;
+                    font-size: 44px;
+                    border: none;
+                    height: 80px;
+                    width: 100%"
+                           @bind-value="@positionsAngle[0]" @onclick="el => setPositionValue(0)" />
+                </div>
+
+
+            </div>
+
+
+            <div class="row-md-auto p-1 align-middle">
+                <h5 style="text-align: left;">
+                    <label for="@idOfElement[2]">Naža platums kreisā puse:</label>
+                </h5>
+                @*<div id="@idOfElement[2]" type="text"   bind-value="@positionsAngle[2]" class="col-md-8  mx-auto p-1 m-0  d-inline-block form-control" @onclick="el=>setPositionValue(2)" style="background-color:@colorBgs[2]; height:80px;" placeholder=""></div>*@
+                <input id="@idOfElement[2]" readonly="readonly" style="        background-color: @colorBgs[2];
+                    text-align: center;
+                    font-size: 44px;
+                    border: none;
+                    height: 80px;
+                    width: 100%"
+                       @bind-value="@positionsAngle[2]" @onclick="el => setPositionValue(2)" />
+            </div>
+        </div>
+
+       
+
+        <div class="  col-md-8  mx-auto p-1 m-0 d-inline-block" style="width: 50%; height:55%; float:left;  background-color: white;">
+            @*<div class="row-md-auto p-1 align-middle">
+            <h5 style="text-align: left;"><label for="@idOfElement[3]">Asinājuma leņķis:</label></h5>
+
+            <div class="row-md-auto p-1 ">
+
+                <input id="@idOfElement[3]" readonly="readonly" style="        background-color: @colorBgs[3];
+                text-align: center;
+                font-size: 44px;
+                border: none;
+                height: 80px;
+                width: 100%"
+                       @bind-value="@positionsAngle[3]" @onclick="el => setPositionValue(3)" />
+            </div>
+        </div>*@
+            <div class="row-md-auto p-1 align-middle">
+                <h5 style="text-align: left;">
+                    <label for="@idOfElement[3]">Asinājuma leņķis:</label>
+                </h5>
+
+                <div>
+                    @*class="input col-md-8 mx-auto p-1 m-0  d-inline-block form-control" @onclick="el => setPositionValue(0)" style="background-color:@colorBgs[0]; height:80px;" placeholder="">*@
+
+                    <input id="@idOfElement[3]" readonly="readonly" style="        background-color: @colorBgs[3];
+                    text-align: center;
+                    font-size: 44px;
+                    border: none;
+                    height: 80px;
+                    width: 100%"
+                           @bind-value="@positionsAngle[3]" @onclick="el => setPositionValue(3)" />
+                </div>
+
+
+            </div>
+            <div class="row-md-auto p-1 align-middle">
+                <h5 style="text-align: left;">
+                    <label for="@idOfElement[1]">Naža platums labā puse:</label>
+                </h5>
+                <div>
+                    @*class="col-md-8  mx-auto p-1 m-0  d-inline-block form-control" @onclick="el=>setPositionValue(1)" style="background-color:@colorBgs[1]; height:80px;" placeholder="">*@
+                    <input id="@idOfElement[1]" readonly="readonly" style="        background-color: @colorBgs[1];
+                    text-align: center;
+                    font-size: 44px;
+                    border: none;
+                    height: 80px;
+                    width: 100%"
+                           @bind-value="@positionsAngle[1]" @onclick="el => setPositionValue(1)" />
+                </div>
+
+            </div>
+        </div>
+        <div class="table-responsive" style="height: 40%">
+            <table class="table   p-0 m-0">
+                <tbody>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-success  d-inline-block btn-lg btn-block" style="display:inline-block; width:100%; height:100%;" onclick="document.getElementById('selected').value = document.getElementById('selected').value + '1';">1</button>
+                        </td>
+                        <td> <button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '2';">2</button></td>
+                        <td> <button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '3';">3</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value.slice(0, -1);">&lt;</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '4';">4</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '5';">5</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '6';">6</button></td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '7';">7</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '8';">8</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '9';">9</button></td>
+                        <td rowspan="2"><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + ',';">,</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '0';">0</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+@code {
+    MeasurementType mt = new MeasurementType();
+    Machine machine = new Machine();
+    string[] idOfElement = new string[4];
+
+    private async void SaveMeasurement()
+    {
+        String measurementDateAndTime = DateTime.Now.ToString("g");
+
+        DateTime shiftTime = Convert.ToDateTime("12:00:00");
+        DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
+        // int packId = int.Parse(stringPackValue);
+
+        //String timeOfTheDayNow = DateTime.Now.ToString("t");
+        int shift = 1;
+
+        if (DateTime.Compare(currentMeasurement, shiftTime) >= 0)
+        {
+            shift = 2;
+        }
+
+
+
+
+        IList<Measurement> measurementsToCreate = new List<Measurement>();
+
+
+        Measurement meas = new Measurement();
+        meas.DateCreated = measurementDateAndTime;
+        meas.Shift = shift;
+        meas.UserId = userId;
+        // meas.MachineName = fusMachineName;
+        meas.MeasurementPositionId = int.Parse(measurementPositionId);
+        // meas.PackId = packId;
+        meas.MeasurementTypeId = 8;
+
+        bool isConverted = false;
+        decimal value = 0.00m;
+
+
+        for (int i = 0; i < positionsAngle.GetLength(0); i++)
+        {
+            if (decimal.TryParse(positionsAngle[0].ToString(), out value))
+            {
+                isConverted = true;
+
+                // success - can use kilometro
+            }
+            else
+            {
+                isConverted = false;
+                break;
+            }
+        }
+
+        if (isConverted)
+        {
+            meas.Measurement1 = decimal.Parse(positionsAngle[0]);
+            meas.Measurement2 = decimal.Parse(positionsAngle[1]);
+            meas.Measurement3 = decimal.Parse(positionsAngle[2]);
+            meas.Measurement4 = decimal.Parse(positionsAngle[3]);
+        }
+        meas.PackId = 0;
+        //meas.Measurement5 = positions[4];
+        //meas.Measurement6 = positions[5];
+        //meas.Measurement7 = positions[6];
+        //meas.Measurement8 = positions[7];
+        //meas.Measurement9 = positions[8];
+        //meas.Measurement10 = positions[9];
+
+
+
+
+        measurementsToCreate.Add(meas);
+
+
+        isSuccess = await repo.Create(Endpoints.MeasurementEndpoint, meas);
+
+        Pack pack = new Pack();
+        Machine machine = new Machine();
+
+        machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
+        LoginModel user = new LoginModel();
+        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
+        pack.DateCreated = measurementDateAndTime;
+        // pack.Machine =  machine.Name;
+        pack.Machine = machine.Name;
+        pack.Shift = shift;
+        pack.Author = user.UserName;
+        // pack.FusCode = stringPackValue;
+        pack.MeasurementTypeName = mt.Name;
+
+        isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
+        if (isPackCreated)
+        {   // "/measurementspeelingknives/{userId}/{measurementPositionId}"
+            //this.navManager.NavigateTo($"/measurementspeelingknives/{userId}/{measurementPositionId}");
+            this.navManager.NavigateTo($"/measurementspeelingknivespoints/{userId}/{measurementPositionId}/{pmachineIdd}");
+        }
+    }
+
+    int posId = 0;
+    int lengthPosition;
+    decimal correctedValue = 0.1m;
+    private string bgOk = "";
+    private string visible = "hidden";
+    decimal[] correctedValues = new decimal[10];//0.1m;
+
+    private string[] colorBgs = new string[4];//[tmp]"
+
+
+
+    private void setPositionValue(int position)
+    {
+        for (int i = 0; i < colorBgs.GetLength(0); i++)
+        {
+            colorBgs[i] = "yellow";
+            idOfElement[i] = "notselected";
+        }
+
+        colorBgs[position] = "greenyellow";
+        idOfElement[position] = "selected";
+        //for (int i = 0; i < positions.GetLength(0); i++)
+        //{
+        //    if (position == i)
+        //    {
+        //        posId = i;
+        //        positions[i] = correctedValue;
+
+
+        //    }
+        //}
+
+
+    }
+
+    private IList<Measurement> Model2;
+    public string[] positionsAngle = new string[4];
+    public string[] colors = new string[10];
+
+    [Parameter]
+    public string userId { get; set; }
+    [Parameter]
+    public string measurementPositionId { get; set; }
+
+    [Parameter]
+    public string pmachineIdd { get; set; }
+
+
+
+    protected async override Task OnInitializedAsync()
+    {
+        lengthPosition = 50;
+        for (int i = 0; i < positionsAngle.GetLength(0); i++)
+        {
+            positionsAngle[i] = "";
+
+        }
+
+        Machines = await machineRepository.Get(Endpoints.MachinesEndpoint);
+        Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+        machine.Id = int.Parse(pmachineIdd);
+
+        machine = await machineRepository.Get(Endpoints.MachinesEndpoint, machine.Id);
+        mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 8);
+
+        for (int i = 0; i < idOfElement.GetLength(0); i++)
+        {
+            colorBgs[i] = "yellow";
+
+            idOfElement[0] = "notSelected";
+        }
+    }
+
+    private IList<Machine> Machines;
+
+    private void checkParams()
+    {
+
+
+
+        if (machine.Id == 0)
+        {
+            machine.Id = Machines.FirstOrDefault().Id;
+
+        }
+
+    }
+
+
+    private void OpenCreateForm(MouseEventArgs e)
+    {
+
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
+    }
+
+    bool isSuccess = false;
+    bool isPackCreated = false;
+    private async void Return(MouseEventArgs e)
+    {
+        if (isSuccess && isPackCreated)
+        {
+            this.navManager.NavigateTo($"/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{pmachineIdd}/");
+        }
+        else
+        {
+
+            bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Tiešām vēlies iziet nesaglabājot?");
+            if (confirmed)
+            {
+                this.navManager.NavigateTo($"/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{pmachineIdd}/");
+            }
+        }
+
+    }
+
+
+
+
+
+}

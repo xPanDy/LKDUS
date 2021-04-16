@@ -21,89 +21,66 @@
 @inject ILogger<FusPack> Logger
 
 
-@*<div class="modal alert-popup" tabindex="-1" style="display:block" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                 Edit form for the current item
-                <div class="modal-body">
 
-                    <button class="btn btn-primary p-2 m-1 w-25" id="startButton">Skenēt</button>
-                    <button class="btn btn-secondary p-2 m-1 w-25" id="resetButton">Notīrīt</button>
-                    <button type="button" class="btn btn-info p-2 m-1 w-25" id="closeButton">Aizvērt</button>
-
-                    <div id="sourceSelectPanel" style="display:none">
-                    <label for="sourceSelect">Rez:</label><span class="text-dark" id="result"></span>
-                        <select id="sourceSelect" style="max-width:100%" class="form-control">
-                        </select>
-                    </div>
-                    <div>
-                        <video id="video" style="min-height:150px;max-height:60%; max-width: 100%;border: 1px solid gray"></video>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>*@
-
-@*<button class="btn btn-primary"
-            type="button"
-            @onclick="(() => ShowScanBarcode = !ShowScanBarcode)">
-        testtttt
-    </button>*@
 
 
 <div>
-    <div class="container">
-        <div class="row">
 
-            <div class="col">
+    <div class="row">
 
-
-                <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
-            </div>
-            <div class="col w-25"><h3 class="card-title">@mp.Name</h3></div>
-            <div class="col">
-                @*<button type="submit" class="btn btn-primary btn-block">Saglabāt</button>*@
-            </div>
+        <div class="col">
 
 
+            <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
         </div>
+        <div class="col w-25"><h3 class="card-title">@mp.Name</h3></div>
+        <div class="col">
+            @*<button type="submit" class="btn btn-primary btn-block">Saglabāt</button>*@
+        </div>
+
+
     </div>
 
+    @*kameras kolonna*@
 
 
+    <div class="row">
 
-    <div class="form-group">
-        @{
-            <div class="row">
-                <div class="col">
-                    <button id="startButton" class="btn btn-outline-success" @onclick="isStreamVisible">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">
-                            <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z" />
-                        </svg>Svītrkoda skenēšana
-                    </button>
-                    @if (visibilityOfCamera)
-                    {
-                        <div id="sourceSelectPanel" style="display:none">
-                            <label for="sourceSelect"> </label><span class="text-dark" id="result"></span>
-                            <select id="sourceSelect" style="max-width:100%" class="form-control">
-                            </select>
-                        </div>
-                        <div>
-                            <video id="video" style="min-height:150px;max-height:60%; max-width: 100%;border: 1px solid gray"></video>
-                        </div>
-
-                    }
-                    else
-                    {
-
-                    }
-
+        <div class="col-4">
+            <button id="startButton" class="btn btn-outline-success" @onclick="isStreamVisible">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">
+                    <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z" />
+                </svg>Svītrkoda skenēšana
+            </button>
+            @if (visibilityOfCamera)
+            {
+                <div id="sourceSelectPanel" style="display:none">
+                    <label for="sourceSelect"> </label><span class="text-dark" id="result"></span>
+                    <select id="sourceSelect" style="max-width:100%" class="form-control">
+                    </select>
+                </div>
+                <div>
+                    <video id="video" style="min-height:150px;max-height:60%; max-width: 100%;border: 1px solid gray"></video>
                 </div>
 
+            }
+            else
+            {
+
+            }
+
+        </div>
+
+
+        <div class="col">
+
+            @* dati 1 rinda *@
+            <div class="row">
+
+
 
                 <div class="col">
-                    <label for="code2">Pakas kods</label>
+                    <label for="code2">FUS Pakas kods</label>
 
 
                     @*@bind=@packId*@
@@ -118,12 +95,12 @@
                            type="text">
 
                     @*<input class="form-control"
-                        id="@id100"
-                        @onkeydown="DoSomethingElse"
-                        @onclick="focusToInput100"
-                        @bind="@stringPackValue"
-                        @ref="@input100"
-                        type="text">*@
+                id="@id100"
+                @onkeydown="DoSomethingElse"
+                @onclick="focusToInput100"
+                @bind="@stringPackValue"
+                @ref="@input100"
+                type="text">*@
 
 
 
@@ -213,76 +190,55 @@
                 }
 
             </div>
-        }
-    </div>
+            <div class="row">
+                @*<label for="example-datetime-local-input" class="col-2 col-form-label">Datums     <br /></label>*@
+
+                <div class="col">
+                    <label for="day">Diena</label>
+                    @*// 01.12.2020 09:19:04*@
+                    <select id="day" class="custom-select" @bind="Day">
+                        @for (int i = 1; i <= 31; i++)
+                        {
+                            <option>@i</option>
+                        }
+                    </select>
+
+                </div>
 
 
+                <div class="col">
+                    <label for="month">Mēnesis</label>
+                    <select id="month" class="custom-select" @bind="Month">
+                        @for (int i = 1; i <= 12; i++)
+                        {
+                            <option value="@i">@Months[i - 1]</option>
+                        }
+                    </select>
+
+                </div>
 
 
-    @*<div class="form-group">
-            <label for="machine">Iekārta</label>
-            <select class="custom-select"  @bind="machine.Id"  id ="machine"  >
+                <div class="col">
+                    <label for="year">Gads</label>
+                    <select id="year" class="custom-select" @bind="Year">
+                        @for (int i = DateTime.Now.Year - 5;
+                        i <= DateTime.Now.Year + 5; i++)
+                        {
+                            <option>@i</option>
+                        }
+                    </select>
 
-                @if (Machines != null)
-                {
-                    @foreach (var Mach in Machines)
+                </div>
+                <div class="col">
+
+                    @if (LaborantList == null)
                     {
-                        //pmachineIdd = Mach.Id;
-
-                        <option value="@Mach.Id">@Mach.Name</option>
+                        <LoadingMessage Message="Notiek laborantu ielāde" />
                     }
-                }
-            </select>
-
-        </div>*@
-
-
-
-    <div class="form-group">
-        <label for="example-datetime-local-input" class="col-2 col-form-label">Datums     <br /></label>
-        <div class="row">
-            <div class="col">
-                @*// 01.12.2020 09:19:04*@
-                <select class="custom-select" @bind="Day">
-                    @for (int i = 1; i <= 31; i++)
+                    else
                     {
-                        <option>@i</option>
-                    }
-                </select>
-
-            </div>
-
-
-            <div class="col">
-                <select class="custom-select" @bind="Month">
-                    @for (int i = 1; i <= 12; i++)
-                    {
-                        <option value="@i">@Months[i - 1]</option>
-                    }
-                </select>
-
-            </div>
-
-
-            <div class="col">
-                <select class="custom-select" @bind="Year">
-                    @for (int i = DateTime.Now.Year - 5;
-            i <= DateTime.Now.Year + 5; i++)
-                    {
-                        <option>@i</option>
-                    }
-                </select>
-
-            </div>
-            <div class="col">
-                @if (LaborantList == null)
-                {
-                    <LoadingMessage Message="Notiek laborantu ielāde" />
-                }
-                else
-                {
-                    <div class="form-group">
-                        <label for="operator">Laborants</label>
+                        <label for="operator">Operators</label>
+                        @*<label for="operator">Laborants</label>*@
                         <select disabled="true" class="custom-select" @bind=@defaultUser.UserName id="operator">
 
 
@@ -295,12 +251,12 @@
 
                         </select>
 
-                    </div>
 
-                }
-            </div>
-            <div class="col">
-                <div class="form-group">
+
+                    }
+                </div>
+                <div class="col">
+
                     <label for="shift">Maiņa</label>
                     <select class="custom-select" @bind="@pshift" id="shift">
                         <option selected>1</option>
@@ -310,12 +266,84 @@
 
                     </select>
 
+
                 </div>
             </div>
+
+            <div class="row">
+
+                @if ((stringPackValue == "0" || string.IsNullOrEmpty(stringPackValue)) || fp == null)
+                {
+
+                    <LoadingMessage Message="Lai turpinātu nospied 'Svītrkoda skenēšana' vai ievadiet pakas kodu izmantojot ciparnīcu" />
+                }
+                else
+                {
+                    <nav class="navbar navbar-dark">
+                        <div class="container-fluid">
+                            <div class="navbar-btn">
+
+                                <button type="button" @onclick="@GoToThickness" class="btn btn-primary">Mitrā finiera biezums</button>
+                            </div>
+                            <div class="navbar-btn">
+
+                                <button type="button" @onclick="@GoToDimensions" class="btn btn-primary">Izmērs, platums, garums</button>
+                            </div>
+                            <div class="navbar-btn">
+
+                                <button type="button" @onclick="@GoToQuality" class="btn btn-primary">Kvalitāte</button>
+                            </div>
+
+                        </div>
+                    </nav>
+                }
+
+
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <table class="table table-bordered justify-content-center">
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+1))" onclick="document.getElementById('code2').value = document.getElementById('code2').value + '1';">
+                                            1
+                                        </button>
+                                    </td>
+                                    <td> <button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+2))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '2';">2</button></td>
+                                    <td> <button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+3))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '3';">3</button></td>
+                                    <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>sliceStrPvalue(stringPackValue))" onclick="document.getElementById('code2').value=document.getElementById('code2').value.slice(0, -1);">&lt;</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+4))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '4';">4</button></td>
+                                    <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+5))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '5';">5</button></td>
+                                    <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+6))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '6';">6</button></td>
+                                    <td> </td>
+                                </tr>
+
+                                <tr>
+                                    <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+7))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '7';">7</button></td>
+                                    <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+8))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '8';">8</button></td>
+                                    <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+9))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '9';">9</button></td>
+                                    <td rowspan="2"><button type="button" class="btn btn-success btn-lg btn-block" @onclick="@focusToInput100">Go</button></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+0))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '0';">0</button></td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+
         </div>
 
 
-
+        
 
     </div>
 
@@ -323,72 +351,6 @@
 
 
 
-
-
-    @if ((stringPackValue == "0" || string.IsNullOrEmpty(stringPackValue)) || fp == null)
-    {
-
-        <LoadingMessage Message="Lūdzu ievadi pakas kodu" />
-    }
-    else
-    {
-        <nav class="navbar navbar-dark">
-            <div class="container-fluid">
-                <div class="navbar-btn">
-
-                    <button type="button" @onclick="@GoToThickness" class="btn btn-primary">Mitrā finiera biezums</button>
-                </div>
-                <div class="navbar-btn">
-
-                    <button type="button" @onclick="@GoToDimensions" class="btn btn-primary">Izmērs, platums, garums</button>
-                </div>
-                <div class="navbar-btn">
-
-                    <button type="button" @onclick="@GoToQuality" class="btn btn-primary">Kvalitāte</button>
-                </div>
-
-            </div>
-        </nav>
-    }
-
-
-    <div class="row justify-content-center">
-        <div class="col-auto">
-            <table class="table table-bordered justify-content-center">
-                <tbody>
-
-                    <tr>
-                        <td>
-                            <button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+1))" onclick="document.getElementById('code2').value = document.getElementById('code2').value + '1';">
-                                1
-                            </button>
-                        </td>
-                        <td> <button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+2))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '2';">2</button></td>
-                        <td> <button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+3))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '3';">3</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>sliceStrPvalue(stringPackValue))" onclick="document.getElementById('code2').value=document.getElementById('code2').value.slice(0, -1);">&lt;</button></td>
-                    </tr>
-
-                    <tr>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+4))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '4';">4</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+5))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '5';">5</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+6))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '6';">6</button></td>
-                        <td> </td>
-                    </tr>
-
-                    <tr>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+7))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '7';">7</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+8))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '8';">8</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+9))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '9';">9</button></td>
-                        <td rowspan="2"><button type="button" class="btn btn-success btn-lg btn-block" @onclick="@focusToInput100">Go</button></td>
-                    </tr>
-                    <tr>
-                        <td colspan="3"><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(()=>changeStrPvalue(stringPackValue+0))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '0';">0</button></td>
-
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
 </div>
 
 
@@ -404,10 +366,10 @@
                                       // private ElementReference input1;
 
     public string[] Months { get; set; } = {
-       "January", "February", "March",
-       "April", "May", "June", "July",
-       "August", "September", "October",
-       "November", "December" };
+       "Janvāris", "Februāris", "Marts",
+       "Aprīlis", "Maijs", "Jūnijs", "Jūlijs",
+       "Augusts", "Septembris", "Oktobris",
+       "Novembris", "Decembris" };
 
     bool isPackEntered = false;
 
@@ -484,7 +446,6 @@
             focusToInput100();
 
         }
-        //else { }
     }
 
     public void changeStrPvalue(string pv)

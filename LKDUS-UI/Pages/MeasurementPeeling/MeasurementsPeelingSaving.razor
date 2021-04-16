@@ -18,6 +18,13 @@
         width: 100%;
         height: 100%;
     }
+
+    .btn-success:active
+    {
+        color: #ffffff !important;
+        background-color: #161617;
+        border-color: #494F57;
+    }
 </style>
 
 <div class="container">
@@ -180,12 +187,14 @@
 
     </div>
     <div class="row w-50  mx-auto" style="padding-top:25px">
-        <div class="col  w-20  mx-auto"><button type="button" @onclick="(e => SetFlow(0))" class="btn btn-success btn-lg btn-block">1.Plūsma</button> </div>
+        <div class="col  w-20  mx-auto">
+            <button type="button" @onclick="(e => SetFlow(0))"   style=" background-color:@colorBg1" class="btn btn-success btn-lg btn-block">1.Plūsma</button> 
+        </div>
 
 
 
         <div class="col w-20  mx-auto">
-            <button type="button" @onclick="(e =>SetFlow(1))" class="btn btn-success btn-lg btn-block">2.Plūsma</button>
+            <button type="button" @onclick="(e =>SetFlow(1))"  style=" background-color:@colorBg2" class="btn btn-success btn-lg btn-block">2.Plūsma</button>
         </div>
 
 
@@ -317,6 +326,13 @@
 
     private void select(int value)
     {
+        for (int ii = 0; ii < currentElement.GetLength(0); ii++)
+        {
+            for (int jj = 0; jj < currentElement.GetLength(1); jj++)
+            {
+                elements[ii, jj] = "";
+            }
+        }
         if (isEdit)
         {
             for (int i = 0; i < currentElement.GetLength(0); i++)
@@ -442,8 +458,22 @@
     }
     int lastRow1;
     int lastRow2;
+    string colorBg1;
+    string colorBg2;
     private void SetFlow(int i)
     {
+        if (i == 0)
+        {
+            colorBg1 = "greenyellow";
+            colorBg2 = "green";
+
+        }
+        else if (i == 1)
+        {
+            colorBg2 = "greenyellow";
+            colorBg1 = "green";
+        }
+
 
         for(int ii = 0; ii < currentElement.GetLength(0); ii++)
         {

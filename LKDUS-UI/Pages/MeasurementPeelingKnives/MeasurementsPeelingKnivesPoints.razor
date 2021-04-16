@@ -5,98 +5,70 @@
 @using LKDUS_UI.Contracts
 @using System.Net.Http
 @inject IMachinesRepository machineRepository;
-@inject IMeasurementRepository repo
+@inject IMeasurementRepository measurementRepository
 @inject NavigationManager navManager
+@inject IJSRuntime JsRuntime;
+@inject IAuthenticationRepository authRepo
+ 
+@inject IMeasurementTypeRepository measurementTypeRepository;
+@inject IPacksRepository packRepo
 
 
-
-
-
-<div class="card">
+<div class="card border-0 h-100 ">
     <div class="container">
         <div class="row">
             <div class="col">
                 <button type="button" @onclick="@Return" class="btn btn-primary  ">Atpakaļ</button>
             </div>
             <div class="col">
-                <button type="submit" class="btn btn-primary btn-block">Saglabāt</button>
+                @* <button  @onclick="@SaveMeasurement" type="submit" class="btn btn-primary btn-block">Saglabāt</button>*@
             </div>
-            @*<div class="col">
-                    <button type="submit" class="btn btn-primary btn-block">Saglabāt</button>
-                </div>*@
+            <div class="col">
+                <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
+            </div>
 
         </div><div class="row">
             <div class="col w-25"><h3 class="card-title">Lobnaža asināšana</h3></div>
         </div>
     </div>
     <div>
-        <div class="row">
-            <div class="col w-25 h-25">
-                <button style="background-color:@bgOk" @onclick="(isOk=>ArePointsOk(true))" class="btn btn-warning btn-block">
-                    <h3>Ok</h3>
-                </button>
-            </div>
-            <div class="col w-25 h-25">
-                <button @onclick="(isOk=>ArePointsOk(false))" class="btn btn-warning btn-block">
-                    <h3>Slikti</h3>
-                </button>
-            </div>
-
-            <div style="visibility:@visible" class="col">
-                <div class="row">
-                    <button @onclick="minus" class="btn btn-warning btn-block">
-                        <h3>-</h3>
-                    </button>
-                </div>
-
-                <div class="row">
-                    <input value="@correctedValue" />
-                </div>
-                <div class="row">
-                    <button  @onclick="plus" class="btn btn-warning btn-block">
-                        <h3>+</h3>
-                    </button>
-                </div>
-            </div>
 
 
-            <div class="w-100"></div>
-
-        </div>
+        <div class="w-100 h-55"></div>
 
 
-        <div style="visibility:@visible" class="row">
+
+        <div class="row   w-90">
             @{ int lengthPosition2 = 50;
-            for (int i = 0; i < positions.GetLength(0); i++)
+                for (int i = 0; i < positions.GetLength(0); i++)
 
-            {
-                     
+                {
+
                     var tmp = i;
-                lengthPosition2 = i * 150 + lengthPosition;
+                    lengthPosition2 = i * 150 + lengthPosition;
 
-                <div class="col"><div class="row"><input style="background-color:@colors[i]" @bind-value="@positions[i]"/></div><div class="row"><button @onclick="(el=>setPositionValue(tmp))" class="btn btn-primary">@lengthPosition2</button>  </div></div>
-                
+                    <div class="col">
+                        <div class="row"><input disabled style="background-color:@colors[i]" @bind-value="@positions[i]" /></div>
+                        <div class="row">
+                            @*@onclick="(el=>setPositionValue(tmp))"*@
+                            <button style=" border-color:@colorBgs[tmp]"
+                                    class="btn disabled">
+                                @lengthPosition2
+                            </button>
+                        </div>
+                        <div class="row w-100 p-1 h-80"><button @onclick="el=>plus(tmp)" class="btn btn-primary h-25 w-100">+</button></div>
+                        <div class="row w-100 p-1 h-80"><button @onclick="el=> minus(tmp)" class="btn btn-primary h-25 w-100">-</button></div>
+                    </div>
 
+
+                }
             }
-            }
-            @*<div class="col"><div class="row"><input/></div><div class="row"><button class="btn btn-primary">positions</button> </div></div>
-        <div class="col"><div class="row"><input/></div><div class="row"><button class="btn btn-primary">positions</button> </div></div>
-        <div class="col"><div class="row"><input/></div><div class="row"><button class="btn btn-primary">positions</button> </div></div>
-        <div class="col"><div class="row"><input/></div><div class="row"><button class="btn btn-primary">positions</button> </div></div>
-        <div class="col"><div class="row"><input/></div><div class="row"><button class="btn btn-primary">positions</button> </div></div>
-        <div class="col"><div class="row"><input/></div><div class="row"><button class="btn btn-primary">positions</button> </div></div>
-        <div class="col"><div class="row"><input/></div><div class="row"><button class="btn btn-primary">positions</button></div></div>
-        <div class="col"><div class="row"><input/></div><div class="row"><button class="btn btn-primary">positions</button></div></div>
-        <div class="col"><div class="row"><input/></div><div class="row"><button class="btn btn-primary">positions</button></div></div>*@
+
 
 
 
         </div>
-        @*<div class="btn-group mr-2" role="group" aria-label="First group">
-                <button type="button" class="btn btn-secondary btn-block btn-huge">Lokšņu platums</button>
-                <button type="button" class="btn btn-secondary btn-block btn-huge">Lokšņu garums</button>
 
-            </div>*@
     </div>
 
 </div>
@@ -107,45 +79,176 @@
 
 
 @code {
-    int posId = 0;
-    int lengthPosition ;
-    decimal correctedValue = 0.1m;
-    private string bgOk = "";
-    private string visible = "hidden";
+    MeasurementType mt = new MeasurementType();
+    Machine machine = new Machine();
 
-    private void minus() {
-        if (correctedValue > 0.1m)
+
+    private async void SaveMeasurement()
+    {
+        String measurementDateAndTime = DateTime.Now.ToString("g");
+
+        DateTime shiftTime = Convert.ToDateTime("12:00:00");
+        DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
+        // int packId = int.Parse(stringPackValue);
+
+        //String timeOfTheDayNow = DateTime.Now.ToString("t");
+        int shift = 1;
+
+        if (DateTime.Compare(currentMeasurement, shiftTime) >= 0)
         {
+            shift = 2;
+        }
 
-            correctedValue = Decimal.Add(correctedValue, -.05m);
-            positions[posId] = correctedValue;
-            colors[posId] = "red";
+        //  IList<Measurement> measurementsToCreate = new List<Measurement>();
+
+
+        Measurement meas = new Measurement();
+        meas.DateCreated = measurementDateAndTime;
+        meas.Shift = shift;
+        meas.UserId = userId;
+        // meas.MachineName = fusMachineName;
+        meas.MeasurementPositionId = int.Parse(measurementPositionId);
+        // meas.PackId = packId;
+        meas.MeasurementTypeId = 7;
+        meas.Measurement1 = positions[0];
+        meas.Measurement2 = positions[1];
+        meas.Measurement3 = positions[2];
+        meas.Measurement4 = positions[3];
+        meas.Measurement5 = positions[4];
+        meas.Measurement6 = positions[5];
+        meas.Measurement7 = positions[6];
+        meas.Measurement8 = positions[7];
+        meas.Measurement9 = positions[8];
+        meas.Measurement10 = positions[9];
+        meas.PackId = 0;
+
+
+
+       // measurementsToCreate.Add(meas);
+
+        //   isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas); 
+        // isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
+
+        Pack pack = new Pack();
+        Machine machine = new Machine();
+
+        machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
+        LoginModel user = new LoginModel();
+        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
+        pack.DateCreated = measurementDateAndTime;
+        //pack.Machine = fusMachineName; //machine.Name;
+        pack.Machine = machine.Name;
+        pack.Shift = shift;
+        pack.Author = user.UserName;
+        // pack.FusCode = stringPackValue;
+        pack.MeasurementTypeName = mt.Name;
+
+        isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
+       
+        isSuccess = await measurementRepository.Create(Endpoints.MeasurementEndpoint, meas);
+        
+        if (isPackCreated && isSuccess)
+        {   // "/measurementspeelingknives/{userId}/{measurementPositionId}"
+            // measurementspeelingknivesangle /{ userId}/{ measurementPositionId}/{ pmachineIdd}
+            this.navManager.NavigateTo($"/measurementspeelingknivesangle/{userId}/{measurementPositionId}/{pmachineIdd}");
         }
     }
 
-    private void plus( ) {
+    int posId = 0;
+    int lengthPosition;
+    decimal correctedValue = 0.1m;
+    private string bgOk = "";
+    private string visible = "hidden";
+    decimal[] correctedValues = new decimal[10];//0.1m;
+    private void minus(int number)
+    {
 
-        correctedValue = Decimal.Add(correctedValue, .05m); ;
-        positions[posId] = correctedValue;
-        colors[posId] = "red";
+
+
+        for (int i = 0; i < positions.GetLength(0); i++)
+        {
+            if (number == i)
+            {
+                if (positions[i] > 0.00m)
+                {
+                    //correctedValue = Decimal.Add(correctedValue, -.05m);
+
+                    positions[i] = Decimal.Add(positions[i], -.05m);// Decimal.a positions[i] + correctedValue;
+
+                    if (positions[i] == 0.00m)
+                    {
+
+                        colors[number] = "greenyellow";
+                    }
+                    else if (positions[i] > 0.00m)
+                    {
+                        colors[number] = "yellow";
+                    }
+                }
+            }
+        }
+    }
+
+    private string[] colorBgs = new string[10];//[tmp]"
+
+
+    private void plus(int number)
+    {
+
+        for (int i = 0; i < positions.GetLength(0); i++)
+        {
+            if (number == i)
+            {
+                if (positions[i] >= 0.00m)
+                {
+
+                    positions[i] = Decimal.Add(positions[i], .05m);
+
+
+
+                    if (positions[i] == 0.00m)
+                    {
+
+                        colors[number] = "greenyellow";
+                    }
+                    else if (positions[i] > 0.00m)
+                    {
+                        colors[number] = "yellow";
+                    }
+                }
+            }
+        }
+
+
+
     }
     private void setPositionValue(int position)
     {
+        for (int i = 0; i < colorBgs.GetLength(0); i++)
+        {
+            colorBgs[i] = "";
+        }
+
+        colorBgs[position] = "greenyellow";
         for (int i = 0; i < positions.GetLength(0); i++)
         {
-            if(position ==  i )
+            if (position == i)
             {
 
                 posId = i;
                 positions[i] = correctedValue;
+
+
             }
         }
+
+
     }
     private void ArePointsOk(bool isOk)
     {
         if (isOk)
         {
-            bgOk = "green";
+            bgOk = "greenyellow";
             visible = "hidden";
             isOk = true;
             for (int i = 0; i < positions.GetLength(0); i++)
@@ -172,7 +275,7 @@
     [Parameter]
     public string pmachineIdd { get; set; }
 
-    Machine machine = new Machine();
+
 
     protected async override Task OnInitializedAsync()
     {
@@ -180,13 +283,14 @@
         for (int i = 0; i < positions.GetLength(0); i++)
         {
             positions[i] = 0;
-            colors[i] = "green";
+            colors[i] = "greenyellow";
         }
         Machines = await machineRepository.Get(Endpoints.MachinesEndpoint);
-        Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+    //    Model2 = await this.measurementRepository.Get(Endpoints.MeasurementEndpoint);
         machine.Id = int.Parse(pmachineIdd);
 
         machine = await machineRepository.Get(Endpoints.MachinesEndpoint, machine.Id);
+        mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 7);
     }
 
     private IList<Machine> Machines;
@@ -211,11 +315,24 @@
         this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
     }
 
-
-    private void Return(MouseEventArgs e)
+    bool isSuccess = false;
+    bool isPackCreated = false;
+    private async void Return(MouseEventArgs e)
     {
+        if (isSuccess && isPackCreated)
+        {
+            this.navManager.NavigateTo($"/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{pmachineIdd}/");
+        }
+        else
+        {
 
-        this.navManager.NavigateTo($"/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{pmachineIdd}/");
+            bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Tiešām vēlies iziet nesaglabājot?");
+            if (confirmed)
+            {
+                this.navManager.NavigateTo($"/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{pmachineIdd}/");
+            }
+        }
+
     }
 
 

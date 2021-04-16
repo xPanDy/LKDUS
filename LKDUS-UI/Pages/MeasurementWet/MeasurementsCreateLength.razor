@@ -150,7 +150,7 @@
                     <table class="table  ">
                         <tbody class="h-100">
                             <tr class="text-center">
-                                <td colspan="3"> <button type="button" @onclick="Reduce" style="color:deeppink" class="btn btn-secondary btn-lg">-</button></td>
+                                <td colspan="3"> <button type="button" @onclick="Reduce"  disabled="@isDisabledMinus"  style="color:deeppink" class="btn btn-secondary btn-lg">-</button></td>
                             </tr>
                             <tr class="text-center">
                                 <td>  <button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button></td>
@@ -214,7 +214,7 @@
                             </tr>
 
                             <tr class="text-center">
-                                <td colspan="3">  <button type="button" style="color:lawngreen" @onclick="Add" class="btn btn-secondary btn-lg">+</button></td>
+                                <td colspan="3">  <button type="button" style="color:lawngreen" @onclick="Add" disabled="@isDisabledPlus"  class="btn btn-secondary btn-lg">+</button></td>
                             </tr>
                         </tbody>
                     </table>
@@ -324,7 +324,7 @@
     }
     private int actPos;
 
-    private int[] sizes = new int[99];
+    private int[] sizes = new int[24];
     private int[] poz = new int[10];
     private int start = 1;
 
@@ -461,23 +461,69 @@
 
     private void Reduce(MouseEventArgs e)
     {
+        //for (int i = 0; i < sizes.Length; i++)
+        //{
+
+        //    sizes[i] = sizes[i] - 10;
+        //}
+        int toRemove = 9;
+        if (sizes[0] == 4)
+        {
+            toRemove = 3;
+        }
+        if (sizes[0] == 1)
+        {
+            isDisabledMinus = true;
+            return;
+        }
+        if (sizes[23] <= 99)
+        {
+            isDisabledPlus = false;
+        }
+
         for (int i = 0; i < sizes.Length; i++)
         {
 
-            sizes[i] = sizes[i] - 10;
+            sizes[i] = sizes[i] - toRemove;
+
+
+
         }
-
     }
-
+    bool isDisabledMinus = true;
+    bool isDisabledPlus = false;
 
     private void Add(MouseEventArgs e)
     {
         //  Color = "black";
 
+        //for (int i = 0; i < sizes.Length; i++)
+        //{
+
+        //    sizes[i] = sizes[i] + 10;
+        //}
+        if (sizes[0] >= 1)
+        {
+            isDisabledMinus = false;
+
+        }
+        if (sizes[23] == 99)
+        {
+            isDisabledPlus = true;
+            return;
+
+        }
+
+        int toAdd = 9;
+        if (sizes[23] == 96)
+        {
+            toAdd = 3;
+        }
         for (int i = 0; i < sizes.Length; i++)
         {
 
-            sizes[i] = sizes[i] + 10;
+
+            sizes[i] = sizes[i] + toAdd;
         }
     }
 

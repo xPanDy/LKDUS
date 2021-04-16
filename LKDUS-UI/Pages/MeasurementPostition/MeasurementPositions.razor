@@ -9,10 +9,33 @@
 @inject IMeasurementPositionsRepository measurementPositionsRepository
 @inject NavigationManager navManager
 
-<div class="card">
-    <h3 class="card-title">Mērījumu pozīcijas</h3>
+@*<h3 class="card-title">Mērījumu pozīcijas</h3>*@
+<style>
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 100vh;
+    }
 
+    .flex-item {
+        background-color: #DCDDCD;
+        font-size: 27px;
+        text-align: center;
+        min-width: 50%;
+        min-height: 50%;
+        border: 2px solid #CD982F;
+        border-radius: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
+        .flex-item:hover {
+            background-color: #93929D;
+        }
+   
+</style>
+<div id="app" class="flex-container overflow-hidden">
     @if (Positions == null)
     {
         <LoadingMessage Message="Notiek mērījumu pozīciju ielāde" />
@@ -21,104 +44,128 @@
     {
 
 
-        <div class="container">
-
-            <div class="container">
-
-                @{
-
-                    {
-                        while (j < Positions.Count)
-                        {
-                            var tmp = j;
-                            var tmp2 = j + 1;
-                            <div class="row mt-5">
-                               
-                                <div  class="col"><button id="@tmp" class="btn btn-warning btn-block" @onclick="@(e=> NavigateToMeasurements(e,tmp))">@Positions[j].Name </button></div>
-
-                                @{ 
-
-                                    j++;
-                                    tmp = j;
-                                    tmp2 = j + 1;
-                                    //var tmp2 = j + 1;
-                                    // tmp2 = j + 1;
-                                 }
-                               
-                                <div class="col"><button id="@tmp2" class="btn btn-warning btn-block" @onclick="@(e=> NavigateToMeasurements(e,tmp2))">@Positions[j].Name </button></div>
-
-                                <div class="w-100"></div>
-
-                            </div>
-
-                           j++;
-
-                        }
 
 
-                    }
-               }
 
+
+
+
+
+<div style="position: fixed;
+  left: 0;
+  top: 0;
+  width: 150px; height:50px;
+ "><button type="button"  @onclick="@goBack" style="width:150px; height:50px;" class="btn btn-primary btn-block">Atpakaļ</button></div>
+
+        while (j < Positions.Count)
+        {
+            var tmp = j;
+            var tmp2 = j + 1;
+            @*<div class="row mt-5">*@
+
+            @*<div class="col"><button id="@tmp" class="btn btn-warning btn-block" @onclick="@(e=> NavigateToMeasurements(e,tmp))">@Positions[j].Name </button></div>*@
+
+            @*@{
+
+                    j++;
+                    tmp = j;
+                    tmp2 = j + 1;
+                    //var tmp2 = j + 1;
+                    // tmp2 = j + 1;
+                }*@
+            if (@tmp2 == 1 || @tmp2 == 2 || @tmp2 == 4 || tmp2 == 5)
+            {
+
+                <div id="@tmp2" style="background-color:chartreuse" @onclick="@(e=> NavigateToMeasurements(e,tmp2))" class="flex-item  "><p><h3>@Positions[j].Name </h3> </p></div>
+            }
+            if (@tmp2 != 1 && @tmp2 != 2 && @tmp2 != 4 && @tmp2 != 5)
+            {
+                <div style="pointer-events: none;" id="@tmp2" @onclick="@(e=> NavigateToMeasurements(e,tmp2))" class="flex-item  ">
+                    <p>
+                        <h3>
+                            @Positions[j].Name
+                        <br />(notiek izstrāde)
+                    </h3>
+                </p>
             </div>
-        </div>
+        }
+        @*<div class="col"><button id="@tmp2" class="btn btn-warning btn-block" @onclick="@(e=> NavigateToMeasurements(e,tmp2))">@Positions[j].Name </button></div>*@
+
+        @*<div class="w-100"></div>*@
+
+        @*</div>*@
+
+        j++;
 
     }
 
+
+
+
+
+
+}
 </div>
 
 
-@code {
-
-    [Parameter]
-    public string measurementPositionId { get; set; }
-    [Parameter]
-    public string userId { get; set; }
 
 
-    int j = 0;
+    @code {
 
-    LoginModel user = new LoginModel();
+        [Parameter]
+        public string measurementPositionId { get; set; }
+        [Parameter]
+        public string userId { get; set; }
+
+
+        int j = 0;
+
+        LoginModel user = new LoginModel();
 
 
 
 
 
-    private IList<MeasurementPosition> Positions;
+        private IList<MeasurementPosition> Positions;
 
-    //parame
-    private void NavigateToMeasurements(MouseEventArgs a, int i)
-    {
-        measurementPositionId = i.ToString();
-        if (i == 1) {
-            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}");
-        }
-        else if (i == 2)
+        //parame
+        private void NavigateToMeasurements(MouseEventArgs a, int i)
         {
-            this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
-        }
-        else if (i == 3)
-        {
-            this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
-        }
-        else if (i == 4)
-        {
-            this.navManager.NavigateTo($"/measurementspeelingknives/{userId}/{measurementPositionId}");
-        }
-        else if (i == 5)
-        {
-            this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
-        }
+            measurementPositionId = i.ToString();
+            if (i == 1)
+            {
+                this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}");
+            }
+            else if (i == 2)
+            {
+                this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
+            }
+            else if (i == 3)
+            {
+                this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
+            }
+            else if (i == 4)
+            {
+                this.navManager.NavigateTo($"/measurementspeelingknives/{userId}/{measurementPositionId}");
+            }
+            else if (i == 5)
+            {
+                this.navManager.NavigateTo($"/measurementspeelingknivessettingview/{userId}/{measurementPositionId}");
+            }
 
-        else if (i == 6)
+            else if (i == 6)
+            {
+                this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
+            }
+        }
+        private void goBack(MouseEventArgs e)
         {
-            this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
+            this.navManager.NavigateTo($"/");
+        }
+        protected async override Task OnInitializedAsync()
+        {
+
+
+            Positions = await measurementPositionsRepository.Get(Endpoints.MeasurementPositions); //Model = await _repo.Get(Endpoints.BooksEndpoint);
         }
     }
-
-    protected async override Task OnInitializedAsync()
-    {
-
-
-        Positions = await measurementPositionsRepository.Get(Endpoints.MeasurementPositions); //Model = await _repo.Get(Endpoints.BooksEndpoint);
-    }
-}

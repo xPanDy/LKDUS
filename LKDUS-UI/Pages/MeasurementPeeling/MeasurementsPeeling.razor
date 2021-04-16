@@ -23,7 +23,7 @@
             </div>
            
                 <div class="col">
-                    <button type="submit"   class="btn btn-primary btn-block">Saglabāt</button>
+                    @*<button type="submit"  @onclick="@goBack" class="btn btn-primary btn-block">Saglabāt</button>*@
                 </div>
              
         </div>
@@ -128,7 +128,7 @@
         // Model = await repo.Get(Endpoints.MeasurementEndpoint);
        // Model = await pRepo.Get(Endpoints.PacksEndpoint);
         Model = await pRepo.Get(Endpoints.PacksEndpoint);
-        Model = Model.OrderByDescending(el => el.Id).Where(el=>el.Machine.Equals("Plūsmas")).ToList();
+        Model = Model.OrderByDescending(el => el.Id).Where(el=>el.Machine=="Plūsmas").ToList();
         //  Model = Model.Where(e => (e.MeasurementPositionId == 2)).ToList();
 
 
