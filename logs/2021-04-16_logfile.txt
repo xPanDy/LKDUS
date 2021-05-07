@@ -198,3 +198,581 @@
 2021-04-16 13:43:16.4365 INFO Sucessfully got the measurement position with Id:5
 2021-04-16 13:43:17.1157 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
 2021-04-16 13:43:17.1325 INFO Sucessfully got all measurementPositions
+2021-04-16 13:56:59.8592 INFO Machine-GetMachines: Attempted Call
+2021-04-16 13:57:00.0226 INFO Sucessfully got all machines
+2021-04-16 13:57:00.3781 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 13:57:00.5129 INFO Sucessfully got all Measurements
+2021-04-16 13:57:00.6491 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 13:57:00.6797 INFO Sucessfully got the machine with Id:33
+2021-04-16 13:57:01.2017 INFO Machine-GetMachines: Attempted Call
+2021-04-16 13:57:01.2017 INFO Sucessfully got all machines
+2021-04-16 13:57:01.2432 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 13:57:01.3279 INFO Sucessfully got all Measurements
+2021-04-16 13:57:01.4089 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 13:57:01.4089 INFO Sucessfully got the machine with Id:33
+2021-04-16 13:57:02.4598 INFO Machine-GetMachines: Attempted Call
+2021-04-16 13:57:02.5044 INFO Sucessfully got all machines
+2021-04-16 13:57:02.5293 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 13:57:02.5800 INFO Sucessfully got all Measurements
+2021-04-16 13:57:02.6570 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 13:57:02.6570 INFO Sucessfully got the machine with Id:33
+2021-04-16 13:57:02.6861 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 13:57:02.7137 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 13:57:09.2019 INFO Machine-GetMachines: Attempted Call
+2021-04-16 13:57:09.2162 INFO Sucessfully got all machines
+2021-04-16 13:57:09.2464 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 13:57:09.3508 INFO Sucessfully got all Measurements
+2021-04-16 13:57:09.4715 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 13:57:09.4994 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:00:44.2656 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:00:44.4088 INFO Sucessfully got all machines
+2021-04-16 14:00:44.7628 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:00:44.8553 INFO Sucessfully got all Measurements
+2021-04-16 14:00:44.9744 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:00:45.0084 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:00:45.4872 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:00:45.5154 INFO Sucessfully got all machines
+2021-04-16 14:00:45.5435 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:00:45.6543 INFO Sucessfully got all Measurements
+2021-04-16 14:00:45.7199 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:00:45.7199 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:00:47.2973 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:00:47.3492 INFO Sucessfully got all machines
+2021-04-16 14:00:47.3923 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:00:47.4390 INFO Sucessfully got all Measurements
+2021-04-16 14:00:47.4927 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:00:47.4994 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:00:47.5225 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:00:47.5457 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:08:23.5092 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:08:23.7034 INFO Sucessfully got all machines
+2021-04-16 14:08:24.0149 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:08:24.1269 INFO Sucessfully got all Measurements
+2021-04-16 14:08:24.2651 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:08:24.2963 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:08:24.7909 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:08:24.8188 INFO Sucessfully got all machines
+2021-04-16 14:08:24.8615 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:08:24.9991 INFO Sucessfully got all Measurements
+2021-04-16 14:08:25.0661 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:08:25.0752 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:08:26.2299 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:08:26.2770 INFO Sucessfully got all machines
+2021-04-16 14:08:26.3075 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:08:26.3554 INFO Sucessfully got all Measurements
+2021-04-16 14:08:26.4048 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:08:26.4147 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:08:26.4369 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:08:26.4583 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:10:30.9817 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:10:31.2719 INFO Sucessfully got all machines
+2021-04-16 14:10:31.6802 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:10:31.7889 INFO Sucessfully got all Measurements
+2021-04-16 14:10:31.9439 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:10:31.9751 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:10:32.5456 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:10:32.5785 INFO Sucessfully got all machines
+2021-04-16 14:10:32.6077 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:10:32.6760 INFO Sucessfully got all Measurements
+2021-04-16 14:10:32.7450 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:10:32.7597 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:10:33.4914 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:10:33.5402 INFO Sucessfully got all machines
+2021-04-16 14:10:33.5972 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:10:33.6771 INFO Sucessfully got all Measurements
+2021-04-16 14:10:33.7637 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:10:33.7637 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:10:33.8068 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:10:33.8320 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:18:40.7178 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:18:40.7805 INFO Sucessfully got all machines
+2021-04-16 14:18:40.8136 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:18:40.8647 INFO Sucessfully got all Measurements
+2021-04-16 14:18:40.9209 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:18:40.9339 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:18:41.5695 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:18:41.5844 INFO Sucessfully got all machines
+2021-04-16 14:18:41.6477 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:18:41.7106 INFO Sucessfully got all Measurements
+2021-04-16 14:18:41.7891 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:18:41.7891 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:19:40.9953 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:19:41.0226 INFO Sucessfully got all machines
+2021-04-16 14:19:41.0459 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:19:41.0860 INFO Sucessfully got all Measurements
+2021-04-16 14:19:41.1526 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:19:41.1610 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:19:41.5899 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:19:41.7103 INFO Sucessfully got all machines
+2021-04-16 14:19:41.7417 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:19:41.7808 INFO Sucessfully got all Measurements
+2021-04-16 14:19:41.8623 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:19:41.8715 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:19:45.9534 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:19:45.9619 INFO Sucessfully got all machines
+2021-04-16 14:19:46.0778 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:19:46.2011 INFO Sucessfully got all Measurements
+2021-04-16 14:19:46.2654 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:19:46.2741 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:19:46.3317 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:19:46.3457 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:21:11.9095 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:21:11.9282 INFO Sucessfully got all machines
+2021-04-16 14:21:12.0268 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:21:12.1572 INFO Sucessfully got all Measurements
+2021-04-16 14:21:12.2138 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:21:12.2231 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:21:12.2231 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:21:12.2432 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:21:12.8425 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:21:12.8940 INFO Sucessfully got all machines
+2021-04-16 14:21:12.9621 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:21:13.0340 INFO Sucessfully got all Measurements
+2021-04-16 14:21:13.0786 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:21:13.0876 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:21:13.1562 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:21:13.1753 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:24:16.2034 INFO Measurements-Create: Measurement creation  Attempted
+2021-04-16 14:24:16.5254 INFO Measurements-Create: Measurement creation was created
+2021-04-16 14:24:16.5254 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-04-16 14:24:16.5691 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:24:16.5691 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:24:16.6459 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-04-16 14:24:16.6610 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-04-16 14:24:16.6954 INFO Pack-Create: Pack creation  Attempted
+2021-04-16 14:24:16.7210 INFO Pack-Create: Pack creation was created
+2021-04-16 14:24:16.7210 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-04-16 14:24:21.4306 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:24:21.4451 INFO Sucessfully got all machines
+2021-04-16 14:24:21.4982 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:24:21.5584 INFO Sucessfully got all Measurements
+2021-04-16 14:24:21.6160 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:24:21.6287 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:24:21.6475 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:24:21.6475 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:24:23.8611 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:24:23.8866 INFO Sucessfully got all machines
+2021-04-16 14:24:23.9672 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:24:24.0367 INFO Sucessfully got all Measurements
+2021-04-16 14:24:24.0689 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:24:24.0689 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:24:25.2678 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:24:25.3511 INFO Sucessfully got all Measurements
+2021-04-16 14:24:25.3831 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:24:25.4098 INFO Sucessfully got all Measurements
+2021-04-16 14:24:25.4427 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:24:25.4427 INFO Sucessfully got all machines
+2021-04-16 14:24:25.4713 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:24:25.4930 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:24:26.7981 INFO Pack-GetPacks: Attempted Call
+2021-04-16 14:24:26.8713 INFO Sucessfully got all packs
+2021-04-16 14:24:26.9369 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:24:26.9491 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:24:29.6782 INFO Pack-GetPacks: Attempted Call
+2021-04-16 14:24:29.7108 INFO Sucessfully got all packs
+2021-04-16 14:24:29.8298 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:24:29.8793 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:24:30.4627 INFO Pack-GetPacks: Attempted Call
+2021-04-16 14:24:30.5875 INFO Sucessfully got all packs
+2021-04-16 14:24:30.6095 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:24:30.6293 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:24:30.8685 INFO Pack-GetPacks: Attempted Call
+2021-04-16 14:24:30.8949 INFO Sucessfully got all packs
+2021-04-16 14:24:30.9543 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:24:31.0361 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:24:31.6467 INFO Pack-GetPacks: Attempted Call
+2021-04-16 14:24:31.7539 INFO Sucessfully got all packs
+2021-04-16 14:24:31.7844 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:24:31.7844 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:24:32.8376 INFO Pack-GetPacks: Attempted Call
+2021-04-16 14:24:32.8490 INFO Sucessfully got all packs
+2021-04-16 14:24:32.8708 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:24:32.8849 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:24:33.5248 INFO Pack-GetPacks: Attempted Call
+2021-04-16 14:24:33.5440 INFO Sucessfully got all packs
+2021-04-16 14:24:33.6600 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:24:33.7375 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:24:33.7753 INFO Pack-GetPacks: Attempted Call
+2021-04-16 14:24:33.7923 INFO Sucessfully got all packs
+2021-04-16 14:24:33.8339 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:24:33.8543 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:24:34.3778 INFO Pack-GetPacks: Attempted Call
+2021-04-16 14:24:34.3967 INFO Sucessfully got all packs
+2021-04-16 14:24:34.4530 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:24:34.4604 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:28:41.2355 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:28:41.4169 INFO Sucessfully got all machines
+2021-04-16 14:28:41.8079 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:28:41.9288 INFO Sucessfully got all Measurements
+2021-04-16 14:28:42.0902 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:28:42.1407 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:28:42.6942 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:28:42.7097 INFO Sucessfully got all machines
+2021-04-16 14:28:42.7366 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:28:42.8057 INFO Sucessfully got all Measurements
+2021-04-16 14:28:42.8839 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:28:42.8839 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:28:43.8790 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:28:43.9623 INFO Sucessfully got all machines
+2021-04-16 14:28:44.0164 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:28:44.0663 INFO Sucessfully got all Measurements
+2021-04-16 14:28:44.1377 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:28:44.1462 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:28:44.1685 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:28:44.1899 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:29:11.9569 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:29:11.9849 INFO Sucessfully got all machines
+2021-04-16 14:29:12.1502 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:29:12.2095 INFO Sucessfully got all Measurements
+2021-04-16 14:29:12.2700 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:29:12.2700 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:29:12.2992 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:29:12.2992 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:40:51.3723 INFO Pack-GetPacks: Attempted Call
+2021-04-16 14:40:51.3961 INFO Pack-GetPacks: Attempted Call
+2021-04-16 14:40:51.7833 INFO Sucessfully got all packs
+2021-04-16 14:40:51.7833 INFO Sucessfully got all packs
+2021-04-16 14:40:52.3638 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:40:52.3638 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:40:52.4114 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:40:52.4114 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:40:53.4903 INFO Pack-GetPacks: Attempted Call
+2021-04-16 14:40:53.5370 INFO Sucessfully got all packs
+2021-04-16 14:40:54.0919 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:40:54.1825 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:41:05.0087 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:41:05.1676 INFO Sucessfully got all Measurements
+2021-04-16 14:41:05.2993 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:41:05.3260 INFO Sucessfully got all Measurements
+2021-04-16 14:41:05.3795 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:41:05.3984 INFO Sucessfully got all machines
+2021-04-16 14:41:05.4256 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:41:05.4331 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:41:06.5650 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:41:06.5759 INFO Sucessfully got all machines
+2021-04-16 14:41:06.6025 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:41:06.6820 INFO Sucessfully got all Measurements
+2021-04-16 14:41:06.7404 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:41:06.7558 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:41:09.9533 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:41:09.9715 INFO Sucessfully got all machines
+2021-04-16 14:41:10.0538 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:41:10.1072 INFO Sucessfully got all Measurements
+2021-04-16 14:41:10.1951 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:41:10.2059 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:41:10.2313 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:41:10.2640 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:41:32.7651 INFO Measurements-Create: Measurement creation  Attempted
+2021-04-16 14:41:33.0333 INFO Measurements-Create: Measurement creation was created
+2021-04-16 14:41:33.0333 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-04-16 14:41:33.0636 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:41:33.0636 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:41:33.0963 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-04-16 14:41:33.0963 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-04-16 14:41:33.1280 INFO Pack-Create: Pack creation  Attempted
+2021-04-16 14:41:33.1528 INFO Pack-Create: Pack creation was created
+2021-04-16 14:41:33.1528 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-04-16 14:41:35.3050 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:41:35.3309 INFO Sucessfully got all machines
+2021-04-16 14:41:35.3758 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:41:35.4574 INFO Sucessfully got all Measurements
+2021-04-16 14:41:35.5098 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:41:35.5181 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:41:35.5363 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:41:35.5363 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:41:37.4131 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:41:37.4278 INFO Sucessfully got all machines
+2021-04-16 14:41:37.5037 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:41:37.5454 INFO Sucessfully got all Measurements
+2021-04-16 14:41:37.5876 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:41:37.5960 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:41:38.3980 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:41:38.4507 INFO Sucessfully got all Measurements
+2021-04-16 14:41:38.4940 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:41:38.5275 INFO Sucessfully got all Measurements
+2021-04-16 14:41:38.5656 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:41:38.5656 INFO Sucessfully got all machines
+2021-04-16 14:41:38.5862 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:41:38.5949 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:41:39.2989 INFO Pack-GetPacks: Attempted Call
+2021-04-16 14:41:39.3242 INFO Sucessfully got all packs
+2021-04-16 14:41:39.4545 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:41:39.4545 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:41:41.0950 INFO Pack-GetPacks: Attempted Call
+2021-04-16 14:41:41.1071 INFO Sucessfully got all packs
+2021-04-16 14:41:41.1350 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:41:41.1447 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:41:41.8617 INFO Pack-GetPacks: Attempted Call
+2021-04-16 14:41:41.8871 INFO Sucessfully got all packs
+2021-04-16 14:41:41.9388 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:41:41.9388 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:41:44.6084 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:41:44.7062 INFO Sucessfully got all Measurements
+2021-04-16 14:41:44.7545 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:41:44.7881 INFO Sucessfully got all Measurements
+2021-04-16 14:41:44.8349 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:41:44.8438 INFO Sucessfully got all machines
+2021-04-16 14:41:44.8775 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:41:44.8880 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:41:46.2061 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:41:46.2218 INFO Sucessfully got all machines
+2021-04-16 14:41:46.2414 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:41:46.3580 INFO Sucessfully got all Measurements
+2021-04-16 14:41:46.4281 INFO Machine-GetMachine: Attempted get machine with ID: 34
+2021-04-16 14:41:46.4386 INFO Sucessfully got the machine with Id:34
+2021-04-16 14:41:47.5883 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:41:47.5941 INFO Sucessfully got all machines
+2021-04-16 14:41:47.6109 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:41:47.6498 INFO Sucessfully got all Measurements
+2021-04-16 14:41:47.7599 INFO Machine-GetMachine: Attempted get machine with ID: 34
+2021-04-16 14:41:47.7846 INFO Sucessfully got the machine with Id:34
+2021-04-16 14:41:47.8276 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:41:47.8526 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:43:48.3492 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:43:48.3492 INFO Sucessfully got all machines
+2021-04-16 14:43:48.4080 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:43:48.6096 INFO Sucessfully got all Measurements
+2021-04-16 14:43:48.7190 INFO Machine-GetMachine: Attempted get machine with ID: 34
+2021-04-16 14:43:48.7387 INFO Sucessfully got the machine with Id:34
+2021-04-16 14:43:48.7553 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:43:48.7615 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:43:49.4566 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:43:49.5578 INFO Sucessfully got all machines
+2021-04-16 14:43:49.5780 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:43:49.6204 INFO Sucessfully got all Measurements
+2021-04-16 14:43:49.6555 INFO Machine-GetMachine: Attempted get machine with ID: 34
+2021-04-16 14:43:49.6670 INFO Sucessfully got the machine with Id:34
+2021-04-16 14:43:49.6874 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:43:49.6874 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:43:52.6143 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:43:52.6267 INFO Sucessfully got all machines
+2021-04-16 14:43:52.7508 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:43:52.8584 INFO Sucessfully got all Measurements
+2021-04-16 14:43:52.9823 INFO Machine-GetMachine: Attempted get machine with ID: 34
+2021-04-16 14:43:52.9823 INFO Sucessfully got the machine with Id:34
+2021-04-16 14:43:53.6208 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:43:53.6737 INFO Sucessfully got all Measurements
+2021-04-16 14:43:53.7171 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:43:53.7516 INFO Sucessfully got all Measurements
+2021-04-16 14:43:53.7853 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:43:53.7853 INFO Sucessfully got all machines
+2021-04-16 14:43:53.8300 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:43:53.8300 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:43:55.0437 INFO Pack-GetPacks: Attempted Call
+2021-04-16 14:43:55.0709 INFO Sucessfully got all packs
+2021-04-16 14:44:28.8575 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:44:28.8952 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:44:35.5101 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:44:35.5101 INFO Sucessfully got all machines
+2021-04-16 14:44:35.5455 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:44:35.5455 INFO Sucessfully got all Measurements
+2021-04-16 14:44:35.5744 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:44:35.5744 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:44:36.1498 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:44:36.1839 INFO Sucessfully got all machines
+2021-04-16 14:44:36.2035 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:44:36.2035 INFO Sucessfully got all Measurements
+2021-04-16 14:44:36.2231 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:44:36.2290 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:44:37.0285 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:44:37.0285 INFO Sucessfully got all machines
+2021-04-16 14:44:37.0512 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:44:37.0681 INFO Sucessfully got all Measurements
+2021-04-16 14:44:37.1322 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:44:37.1382 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:44:37.1537 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:44:37.1537 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:44:46.3205 INFO Measurements-Create: Measurement creation  Attempted
+2021-04-16 14:44:46.3440 INFO Measurements-Create: Measurement creation was created
+2021-04-16 14:44:46.3440 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-04-16 14:44:46.3664 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:44:46.3772 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:44:46.3978 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-04-16 14:44:46.4030 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-04-16 14:44:46.4228 INFO Pack-Create: Pack creation  Attempted
+2021-04-16 14:44:46.4340 INFO Pack-Create: Pack creation was created
+2021-04-16 14:44:46.4340 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-04-16 14:44:57.7893 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:44:57.7949 INFO Sucessfully got all machines
+2021-04-16 14:44:57.8183 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:44:57.8270 INFO Sucessfully got all Measurements
+2021-04-16 14:44:57.8447 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:44:57.8447 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:44:57.8800 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:44:57.8869 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:44:59.1397 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:44:59.1397 INFO Sucessfully got all machines
+2021-04-16 14:44:59.1693 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:44:59.1693 INFO Sucessfully got all Measurements
+2021-04-16 14:44:59.1955 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 14:44:59.2015 INFO Sucessfully got the machine with Id:33
+2021-04-16 14:45:01.3048 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:45:01.3116 INFO Sucessfully got all Measurements
+2021-04-16 14:45:01.3402 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:45:01.3781 INFO Sucessfully got all Measurements
+2021-04-16 14:45:01.4270 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:45:01.4626 INFO Sucessfully got all machines
+2021-04-16 14:45:01.4836 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:45:01.4836 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:45:03.8673 INFO Pack-GetPacks: Attempted Call
+2021-04-16 14:45:03.8786 INFO Sucessfully got all packs
+2021-04-16 14:46:23.9399 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:46:23.9481 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:46:30.8365 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:46:30.8501 INFO Sucessfully got all Measurements
+2021-04-16 14:46:30.8714 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:46:30.8714 INFO Sucessfully got all Measurements
+2021-04-16 14:46:30.8987 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:46:30.9061 INFO Sucessfully got all machines
+2021-04-16 14:46:30.9269 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:46:30.9351 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:46:34.6823 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:46:34.6823 INFO Sucessfully got all machines
+2021-04-16 14:46:34.7083 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:46:34.7148 INFO Sucessfully got all Measurements
+2021-04-16 14:46:34.7455 INFO Machine-GetMachine: Attempted get machine with ID: 7
+2021-04-16 14:46:34.9098 INFO Sucessfully got the machine with Id:7
+2021-04-16 14:46:35.9007 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:46:35.9007 INFO Sucessfully got all machines
+2021-04-16 14:46:35.9233 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:46:35.9233 INFO Sucessfully got all Measurements
+2021-04-16 14:46:35.9482 INFO Machine-GetMachine: Attempted get machine with ID: 7
+2021-04-16 14:46:35.9482 INFO Sucessfully got the machine with Id:7
+2021-04-16 14:46:36.1383 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:46:36.1523 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:46:41.9822 INFO Measurements-Create: Measurement creation  Attempted
+2021-04-16 14:46:42.0005 INFO Measurements-Create: Measurement creation was created
+2021-04-16 14:46:42.0005 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-04-16 14:46:42.0225 INFO Machine-GetMachine: Attempted get machine with ID: 7
+2021-04-16 14:46:42.0302 INFO Sucessfully got the machine with Id:7
+2021-04-16 14:46:42.0446 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-04-16 14:46:42.0446 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-04-16 14:46:42.0657 INFO Pack-Create: Pack creation  Attempted
+2021-04-16 14:46:42.0788 INFO Pack-Create: Pack creation was created
+2021-04-16 14:46:42.0788 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-04-16 14:47:02.6431 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:47:02.6716 INFO Sucessfully got all machines
+2021-04-16 14:47:02.7248 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:47:02.7330 INFO Sucessfully got all Measurements
+2021-04-16 14:47:02.7548 INFO Machine-GetMachine: Attempted get machine with ID: 7
+2021-04-16 14:47:02.7646 INFO Sucessfully got the machine with Id:7
+2021-04-16 14:47:02.7793 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:47:02.7793 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:47:06.8376 INFO Measurements-Create: Measurement creation  Attempted
+2021-04-16 14:47:06.8546 INFO Measurements-Create: Measurement creation was created
+2021-04-16 14:47:06.8546 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-04-16 14:47:06.8856 INFO Machine-GetMachine: Attempted get machine with ID: 7
+2021-04-16 14:47:06.8856 INFO Sucessfully got the machine with Id:7
+2021-04-16 14:47:06.9143 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-04-16 14:47:06.9182 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-04-16 14:47:06.9340 INFO Pack-Create: Pack creation  Attempted
+2021-04-16 14:47:06.9340 INFO Pack-Create: Pack creation was created
+2021-04-16 14:47:06.9469 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-04-16 14:47:09.4780 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:47:09.4847 INFO Sucessfully got all machines
+2021-04-16 14:47:09.5108 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:47:09.5108 INFO Sucessfully got all Measurements
+2021-04-16 14:47:09.5347 INFO Machine-GetMachine: Attempted get machine with ID: 7
+2021-04-16 14:47:09.5409 INFO Sucessfully got the machine with Id:7
+2021-04-16 14:47:09.5596 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 14:47:09.5596 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 14:47:11.0025 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:47:11.0095 INFO Sucessfully got all machines
+2021-04-16 14:47:11.0283 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:47:11.0502 INFO Sucessfully got all Measurements
+2021-04-16 14:47:11.1019 INFO Machine-GetMachine: Attempted get machine with ID: 7
+2021-04-16 14:47:11.1092 INFO Sucessfully got the machine with Id:7
+2021-04-16 14:47:12.1311 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:47:12.1423 INFO Sucessfully got all Measurements
+2021-04-16 14:47:12.2210 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 14:47:12.2210 INFO Sucessfully got all Measurements
+2021-04-16 14:47:12.2463 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:47:12.2463 INFO Sucessfully got all machines
+2021-04-16 14:47:12.2672 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 14:47:12.2672 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 14:47:13.4960 INFO Pack-GetPacks: Attempted Call
+2021-04-16 14:47:13.4960 INFO Sucessfully got all packs
+2021-04-16 14:59:59.2720 INFO Machine-GetMachines: Attempted Call
+2021-04-16 14:59:59.5098 INFO Sucessfully got all machines
+2021-04-16 15:00:00.0526 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 15:00:00.1251 INFO Sucessfully got all Measurements
+2021-04-16 15:00:00.2688 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 15:00:00.3050 INFO Sucessfully got the machine with Id:33
+2021-04-16 15:00:01.2045 INFO Machine-GetMachines: Attempted Call
+2021-04-16 15:00:01.2255 INFO Sucessfully got all machines
+2021-04-16 15:00:01.3667 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 15:00:01.3895 INFO Sucessfully got all Measurements
+2021-04-16 15:00:01.4119 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 15:00:01.4119 INFO Sucessfully got the machine with Id:33
+2021-04-16 15:00:02.1229 INFO Machine-GetMachines: Attempted Call
+2021-04-16 15:00:02.2411 INFO Sucessfully got all machines
+2021-04-16 15:00:02.3430 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 15:00:02.3510 INFO Sucessfully got all Measurements
+2021-04-16 15:00:02.3717 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 15:00:02.3793 INFO Sucessfully got the machine with Id:33
+2021-04-16 15:00:02.4015 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-04-16 15:00:02.4212 INFO Sucessfully got the measurement type with Id:12
+2021-04-16 15:00:05.5200 INFO Measurements-Create: Measurement creation  Attempted
+2021-04-16 15:00:05.8097 INFO Measurements-Create: Measurement creation was created
+2021-04-16 15:00:05.8097 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-04-16 15:00:05.8340 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 15:00:05.8340 INFO Sucessfully got the machine with Id:33
+2021-04-16 15:00:05.8725 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-04-16 15:00:05.8835 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-04-16 15:00:05.9319 INFO Pack-Create: Pack creation  Attempted
+2021-04-16 15:00:05.9573 INFO Pack-Create: Pack creation was created
+2021-04-16 15:00:05.9592 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-04-16 15:00:08.1838 INFO Machine-GetMachines: Attempted Call
+2021-04-16 15:00:08.2152 INFO Sucessfully got all machines
+2021-04-16 15:00:08.2391 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 15:00:08.2784 INFO Sucessfully got all Measurements
+2021-04-16 15:00:08.3101 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 15:00:08.3235 INFO Sucessfully got the machine with Id:33
+2021-04-16 15:00:08.6626 INFO Machine-GetMachines: Attempted Call
+2021-04-16 15:00:08.7226 INFO Sucessfully got all machines
+2021-04-16 15:00:08.7873 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 15:00:08.8049 INFO Sucessfully got all Measurements
+2021-04-16 15:00:08.8363 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 15:00:08.8363 INFO Sucessfully got the machine with Id:33
+2021-04-16 15:00:09.3201 INFO Machine-GetMachines: Attempted Call
+2021-04-16 15:00:09.3497 INFO Sucessfully got all machines
+2021-04-16 15:00:09.3788 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 15:00:09.3860 INFO Sucessfully got the machine with Id:33
+2021-04-16 15:00:09.4094 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 7
+2021-04-16 15:00:09.4149 INFO Sucessfully got the measurement type with Id:7
+2021-04-16 15:00:10.0276 INFO Machine-GetMachines: Attempted Call
+2021-04-16 15:00:10.0382 INFO Sucessfully got all machines
+2021-04-16 15:00:10.1159 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 15:00:10.1359 INFO Sucessfully got the machine with Id:33
+2021-04-16 15:00:10.2163 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 7
+2021-04-16 15:00:10.2253 INFO Sucessfully got the measurement type with Id:7
+2021-04-16 15:04:06.7690 INFO Machine-GetMachines: Attempted Call
+2021-04-16 15:04:06.9665 INFO Sucessfully got all machines
+2021-04-16 15:04:07.2501 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 15:04:07.3182 INFO Sucessfully got all Measurements
+2021-04-16 15:04:07.4040 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 15:04:07.4380 INFO Sucessfully got the machine with Id:33
+2021-04-16 15:04:08.3708 INFO Machine-GetMachines: Attempted Call
+2021-04-16 15:04:08.3806 INFO Sucessfully got all machines
+2021-04-16 15:04:08.4183 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 15:04:08.4359 INFO Sucessfully got all Measurements
+2021-04-16 15:04:08.4603 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-04-16 15:04:08.4603 INFO Sucessfully got the machine with Id:33
+2021-04-16 15:04:09.0651 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 15:04:09.0667 INFO Sucessfully got all Measurements
+2021-04-16 15:04:09.1023 INFO Measurements-GetMeasurements: Attempted Call
+2021-04-16 15:04:09.1023 INFO Sucessfully got all Measurements
+2021-04-16 15:04:09.1350 INFO Machine-GetMachines: Attempted Call
+2021-04-16 15:04:09.1350 INFO Sucessfully got all machines
+2021-04-16 15:04:09.1637 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 15:04:09.1880 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 15:04:10.2861 INFO Pack-GetPacks: Attempted Call
+2021-04-16 15:04:10.3870 INFO Sucessfully got all packs
+2021-04-16 15:04:29.1023 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 15:04:29.1156 INFO Sucessfully got the measurement position with Id:5
+2021-04-16 15:04:45.9814 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-04-16 15:04:46.0682 INFO Sucessfully got all measurementPositions
+2021-04-16 15:04:47.2357 INFO Pack-GetPacks: Attempted Call
+2021-04-16 15:04:47.3461 INFO Sucessfully got all packs
+2021-04-16 15:05:00.3126 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-04-16 15:05:00.3572 INFO Sucessfully got the measurement position with Id:5

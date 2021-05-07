@@ -28,7 +28,7 @@
     </div>
     <div>
         <div class="row">
-            <div class="col w-25 h-25">
+            <div class="col ">
                 <button class="btn btn-warning btn-block" @onclick="@NavigatetoShaftHeight">
                     <h3>Lobnaža uzstādīšanas augstums attiecībā pret vārpstu, h, mm</h3>
                 </button>
@@ -36,13 +36,13 @@
 
 
             <div class="col">
-                <button class="btn btn-warning btn-block" @onclick="@NavigatetoKnifeAngle">
+                <button class="btn btn-warning btn-block" @onclick="@NavigatetoPressureLineHeight">
                     <h3>Spiedlīstes augstums virs naža, mm</h3>
                 </button>
             </div>
 
 
-            <div class="w-100"></div>
+             
 
             <div class="col">
                 <button class="btn btn-warning btn-block" @onclick="@NavigatetoGap">
@@ -51,7 +51,7 @@
             </div>
 
 
-            <div class="w-100"></div>
+             
 
         </div>
 
@@ -123,20 +123,20 @@
 
     private void NavigatetoShaftHeight(MouseEventArgs e)
     {
-        ///measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/
+
         this.navManager.NavigateTo($"/shaft/{userId}/{measurementPositionId}/{pmachineIdd}");
     }
 
-    private void NavigatetoKnifeAngle(MouseEventArgs e)
+    private void NavigatetoPressureLineHeight(MouseEventArgs e)
     {
-        //"/measurementspeelingknivesangle/{userId}/{measurementPositionId}/{pmachineIdd}"
-        this.navManager.NavigateTo($"/knife/{userId}/{measurementPositionId}/{pmachineIdd}");
+
+        this.navManager.NavigateTo($"/pressurelineheigh/{userId}/{measurementPositionId}/{pmachineIdd}");
     }
 
     private void NavigatetoGap(MouseEventArgs e)
     {
-        //"/measurementspeelingknivesangle/{userId}/{measurementPositionId}/{pmachineIdd}"
-        this.navManager.NavigateTo($"/gap/{userId}/{measurementPositionId}/{pmachineIdd}");
+        this.navManager.NavigateTo($"/pressurelineheighoverknive/{userId}/{measurementPositionId}/{pmachineIdd}");
+       
     }
 }
-}
+ 

@@ -1,5 +1,5 @@
-﻿@page "/shaft/{userId}/{measurementPositionId}/{pmachineIdd}"
-@*  *@
+﻿@page "/pressurelineheighoverknive/{userId}/{measurementPositionId}/{pmachineIdd}"
+ 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
 @using LKDUS_UI.Contracts
@@ -16,10 +16,10 @@
 <div class="vh-100 m-0 p-0" style="overflow: hidden;">
     <div style="height: 100%;  width:100%; background-color: white ">
         <!--navigation -->
-        <div class=" col-md-8 mx-auto p-1 m-0 d-inline-block"  style="width: 50%; height:10%; float:left; background-color: white">
+        <div class=" col-md-8 mx-auto p-1 m-0 d-inline-block" style="width: 50%; height:10%; float:left; background-color: white">
             <button class="btn-primary btn btn-block" @onclick="@Return" style="width:100%; height:100%;"><h3>Atpakaļ</h3></button>
         </div>
-        <div class=" col-md-8  mx-auto p-1 m-0  d-inline-block"    style="width: 50%;height:10%; float:left;  background-color: white">
+        <div class=" col-md-8  mx-auto p-1 m-0  d-inline-block" style="width: 50%;height:10%; float:left;  background-color: white">
             <button class="btn-primary btn btn-block" @onclick="@SaveMeasurement" style="width:100%; height:100%;"><h3>Saglabāt</h3></button>
         </div>
 
@@ -28,14 +28,54 @@
         padding: 10px;
         text-align: center;
 ">
-            <h3>Lobnaža augstums pret vārpstu </h3>
+            <h3>Sprauga starp lobnazi un loblīsti</h3>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h5 style="text-align: left;">
+                        <label for="@idOfElement[0]">Kreisā mala:</label>
+                    </h5>
+                    <div>
+                        <input id="@idOfElement[0]" readonly="readonly" style="        background-color: @colorBgs[0];
+                    text-align: center;
+                    font-size: 44px;
+                    border: none;
+                    height: 80px;
+                    width: 100%" type="text" @bind-value="@positionsAngle[0]" @onclick="el => setPositionValue(0)" />
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <h5 style="text-align: left;"><label for="@idOfElement[1]">Vidus:</label></h5>
+                    <div class="row-md-auto p-1 ">
+                        <input id="@idOfElement[1]" type="text" readonly="readonly" style="        background-color: @colorBgs[1];
+                text-align: center;
+                font-size: 44px;
+                border: none;
+                height: 80px;
+                width: 100%" @bind-value="@positionsAngle[1]" @onclick="el => setPositionValue(1)" />
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <h5 style="text-align: left;"><label for="@idOfElement[2]">Labā mala:</label></h5>
+                    <div class="row-md-auto p-1 ">
+                        <input id="@idOfElement[2]" type="text" readonly="readonly" style="        background-color: @colorBgs[2];
+                text-align: center;
+                font-size: 44px;
+                border: none;
+                height: 80px;
+                width: 100%" @bind-value="@positionsAngle[2]" @onclick="el => setPositionValue(2)" />
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!--con<div>t<>ent -->
-        <div class=" col-md-8   mx-auto p-1 m-0 d-inline-block" style="width: 50%; height:55%; float:left; background-color: white">
+        @*<div class=" col-md-8   mx-auto p-1 m-0 d-inline-block" style="width: 50%; height:55%; float:left; background-color: white">
             <div class="row-md-auto p-1 align-middle">
                 <h5 style="text-align: left;">
-                    <label for="@idOfElement[0]">Kreisā vārpsta:</label>
+                    <label for="@idOfElement[0]">Kreisā mala:</label>
                 </h5>
                 <div>
                     <input id="@idOfElement[0]" readonly="readonly" style="        background-color: @colorBgs[0];
@@ -43,21 +83,34 @@
                     font-size: 44px;
                     border: none;
                     height: 80px;
-                    width: 100%" type="text" @bind-value="@positionsAngle[0]" @onclick="el => setPositionValue(0)"   />
+                    width: 100%" type="text" @bind-value="@positionsAngle[0]" @onclick="el => setPositionValue(0)" />
                 </div>
             </div>
         </div>
         <div class="  col-md-8  mx-auto p-1 m-0 d-inline-block" style="width: 50%; height:55%; float:left;  background-color: white;">
-            <h5 style="text-align: left;"><label for="@idOfElement[1]">Labā vārpsta:</label></h5>
+            <h5 style="text-align: left;"><label for="@idOfElement[1]">Vidus:</label></h5>
             <div class="row-md-auto p-1 ">
-                <input id="@idOfElement[1]"  type="text" readonly="readonly" style="        background-color: @colorBgs[1];
+                <input id="@idOfElement[1]" type="text" readonly="readonly" style="        background-color: @colorBgs[1];
                 text-align: center;
                 font-size: 44px;
                 border: none;
                 height: 80px;
-                width: 100%" @bind-value="@positionsAngle[1]" @onclick="el => setPositionValue(1)"   />
+                width: 100%" @bind-value="@positionsAngle[1]" @onclick="el => setPositionValue(1)" />
             </div>
         </div>
+        <div class="  col-md-8  mx-auto p-1 m-0 d-inline-block" style="width: 50%; height:55%; float:left;  background-color: white;">
+            <h5 style="text-align: left;"><label for="@idOfElement[2]">Labā mala:</label></h5>
+            <div class="row-md-auto p-1 ">
+                <input id="@idOfElement[2]" type="text" readonly="readonly" style="        background-color: @colorBgs[2];
+                text-align: center;
+                font-size: 44px;
+                border: none;
+                height: 80px;
+                width: 100%" @bind-value="@positionsAngle[2]" @onclick="el => setPositionValue(2)" />
+            </div>
+        </div>*@
+      
+        
         <div class="table-responsive">
             <table class="table   p-0 m-0">
                 <tbody>
@@ -65,24 +118,24 @@
                         <td>
                             <button type="button" class="btn btn-success  d-inline-block btn-lg btn-block" style="display:inline-block; width:100%; height:100%;" @onclick="e=>click('1')">1</button>
                         </td>
-                        <td> <button type="button" class="btn btn-success btn-lg btn-block"   @onclick="e=>click('2')">2</button></td>
-                        <td> <button type="button" class="btn btn-success btn-lg btn-block"   @onclick="e=>click('3')">3</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block"     @onclick="e=>click('-')">&lt;</button></td>
-                    </tr>
-                    <tr>                                                                    
-                        <td><button type="button" class="btn btn-success btn-lg btn-block"  @onclick="e=>click('4')">4</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('5')" >5</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('6')" >6</button></td>
-                        <td> </td>
-                    </tr>
-                    <tr>                                                                       
-                        <td><button type="button" class="btn btn-success btn-lg btn-block"@onclick="e=>click('7')">7</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block"   @onclick="e=>click('8')" >8</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block"   @onclick="e=>click('9')">9</button></td>
-                        <td rowspan="2"><button type="button" class="btn btn-success btn-lg btn-block"  @onclick="e=>click(',')">,</button></td>
+                        <td> <button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('2')">2</button></td>
+                        <td> <button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('3')">3</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('-')">&lt;</button></td>
                     </tr>
                     <tr>
-                        <td colspan="3"><button type="button" class="btn btn-success btn-lg btn-block"  @onclick="e=>click('0')">0</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('4')">4</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('5')">5</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('6')">6</button></td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('7')">7</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('8')">8</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('9')">9</button></td>
+                        <td rowspan="2"><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click(',')">,</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('0')">0</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -99,12 +152,7 @@
 
 
     string bindedValueOfActiveComponent = "";
-    private void clickComma()
-    {
-        bindedValueOfActiveComponent = bindedValueOfActiveComponent + ",";
 
-
-    }
     private void click (char valueToAdd)
     {
 
@@ -119,22 +167,21 @@
                     return;
                 }
 
-                //   if(positionsAngle[i].Contains(',')&& positionsAngle[i].Substring)
-
+               
                 if (positionsAngle[i].Contains(","))
                 {
                     string afterComma = positionsAngle[i].Substring(positionsAngle[i].IndexOf(",") + 1);
                     if (afterComma.Length < 2)
                     {
-                        if (valueToAdd == '-')
+
+                        if(valueToAdd == '-')
                         {
                             if (positionsAngle[i].Length == 0)
                             {
                                 break;
                             }
-                            positionsAngle[i] = positionsAngle[i].Remove(positionsAngle[i].Length - 1, 1);
-                        }
-                        else
+                            positionsAngle[i] = positionsAngle[i].Remove(positionsAngle[i].Length-1,1);
+                        } else
                         {
 
                             positionsAngle[i] = positionsAngle[i] + valueToAdd;
@@ -156,10 +203,8 @@
                     }
                     else
                     {
-
                         positionsAngle[i] = positionsAngle[i] + valueToAdd;
                     }
-
                 }
 
 
@@ -179,9 +224,7 @@
 
         DateTime shiftTime = Convert.ToDateTime("12:00:00");
         DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
-        // int packId = int.Parse(stringPackValue);
-
-        //String timeOfTheDayNow = DateTime.Now.ToString("t");
+        
         int shift = 1;
 
         if (DateTime.Compare(currentMeasurement, shiftTime) >= 0)
@@ -199,10 +242,10 @@
         meas.DateCreated = measurementDateAndTime;
         meas.Shift = shift;
         meas.UserId = userId;
-        //  meas.MachineName = fusMachineName;
+        // meas.MachineName = fusMachineName;
         meas.MeasurementPositionId = int.Parse(measurementPositionId);
         // meas.PackId = packId;
-        meas.MeasurementTypeId = 12;
+        meas.MeasurementTypeId = 10;
 
         bool isConverted = false;
         decimal value = 0.00m;
@@ -214,7 +257,7 @@
             {
                 isConverted = true;
 
-                // success - can use kilometro
+               
             }
             else
             {
@@ -227,6 +270,7 @@
         {
             meas.Measurement1 = decimal.Parse(positionsAngle[0]);
             meas.Measurement2 = decimal.Parse(positionsAngle[1]);
+            meas.Measurement3 = decimal.Parse(positionsAngle[2]);
 
         }
         meas.PackId = 0;
@@ -258,7 +302,7 @@
         if (isPackCreated)
         {   // "/measurementspeelingknives/{userId}/{measurementPositionId}"
             //this.navManager.NavigateTo($"/measurementspeelingknives/{userId}/{measurementPositionId}");
-            this.navManager.NavigateTo($"/pressurelineheigh/{userId}/{measurementPositionId}/{pmachineIdd}");
+            this.navManager.NavigateTo($"/shaft/{userId}/{measurementPositionId}/{pmachineIdd}");
         }
     }
 
@@ -290,8 +334,8 @@
     }
 
     private IList<Measurement> Model2;
-    public string[] positionsAngle = new string[2];
-    public string[] colors = new string[2];
+    public string[] positionsAngle = new string[3];
+    public string[] colors = new string[3];
 
     [Parameter]
     public string userId { get; set; }
@@ -317,7 +361,7 @@
         machine.Id = int.Parse(pmachineIdd);
 
         machine = await machineRepository.Get(Endpoints.MachinesEndpoint, machine.Id);
-        mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 12);
+        mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 10);
 
         for (int i = 0; i < idOfElement.GetLength(0); i++)
         {
@@ -346,11 +390,7 @@
     }
 
 
-    //private void OpenCreateForm(MouseEventArgs e)
-    //{
-
-    //    this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
-    //}
+     
 
     bool isSuccess = false;
     bool isPackCreated = false;
