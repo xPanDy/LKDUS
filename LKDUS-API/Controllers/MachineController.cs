@@ -21,6 +21,8 @@ namespace LKDUS_API.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+
     //[Authorize]
     public class MachineController : ControllerBase
     {
@@ -90,7 +92,7 @@ namespace LKDUS_API.Controllers
         /// <param name="id"></param>
         /// <returns>An machine record by id</returns>
         [HttpGet("{id:int}")]
-       // [Authorize(Roles = "Operator")]
+         
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -135,7 +137,7 @@ namespace LKDUS_API.Controllers
         /// <param name="machineCreateDTO"></param>
         /// <returns></returns>
         [HttpPost]
-        // [Authorize(Roles = "Operator")]
+       //  [Authorize(Roles = "Operator")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]

@@ -51,7 +51,7 @@
         <div class="row">
             <div class="col">
                 @*// 01.12.2020 09:19:04*@
-                <select class="custom-select" @bind="Day">
+                <select disabled="true" class="custom-select" @bind="Day">
                     @for (int i = 1; i <= 31; i++)
                     {
                         <option>@i</option>
@@ -62,7 +62,7 @@
 
 
             <div class="col">
-                <select class="custom-select" @bind="Month">
+                <select disabled="true" class="custom-select" @bind="Month">
                     @for (int i = 1; i <= 12; i++)
                     {
                         <option value="@i">@Months[i - 1]</option>
@@ -73,7 +73,7 @@
 
 
             <div class="col">
-                <select class="custom-select" @bind="Year">
+                <select disabled="true" class="custom-select" @bind="Year">
                     @for (int i = DateTime.Now.Year - 5;
                        i <= DateTime.Now.Year + 5; i++)
                     {
@@ -115,9 +115,9 @@
     }
     <div class="form-group">
         <label for="shift">Maiņa</label>
-        <select class="custom-select" @bind="@pshift" id="shift">
-            <option selected>1</option>
-            <option value="1">2</option>
+        <select class="custom-select" @bind="pshift" id="shift">
+            <option value="1">1</option>
+            <option value="2">2</option>
 
 
             
@@ -151,20 +151,20 @@
 
 
     @code {
-        public string bindUsername { get; set; }
-        public int Day { get; set; }
-        public int Month { get; set; }
-        public int Year { get; set; }
+            public string bindUsername { get; set; }
+            public int Day { get; set; }
+            public int Month { get; set; }
+            public int Year { get; set; }
 
-        public string[] Months { get; set; } = {
+            public string[] Months { get; set; } = {
         "Janvāris", "Februāris", "Marts",
        "Aprīlis", "Maijs", "Jūnijs", "Jūlijs",
        "Augusts", "Septembris", "Oktobris",
        "Novembris", "Decembris"  };
 
 
-        [Parameter]
-        public int pshift { get; set; }
+
+            public int pshift = 1;// { get; set; }
         [Parameter]
         public int pmachineIdd { get; set; }
         [Parameter]
@@ -224,7 +224,7 @@
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
-            pshift = 1;
+
 
             if (firstRender)
             {
@@ -233,6 +233,26 @@
                 today = DateTime.Today;
                 currentLocalTime = browserDateTime.Now.ToString();
                 StateHasChanged();
+
+                String measurementDateAndTime = DateTime.Now.ToString("g");
+                DateTime shiftTimeStart = Convert.ToDateTime("07:00:00");
+
+                DateTime shiftTimeEnd = Convert.ToDateTime("19:00:00");
+
+                DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
+
+                //String timeOfTheDayNow = DateTime.Now.ToString("t");
+
+
+                if (DateTime.Compare(currentMeasurement, shiftTimeStart) >= 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) < 0)
+                {
+                    pshift = 1;
+                }
+
+                if (DateTime.Compare(currentMeasurement, shiftTimeStart) < 0 || DateTime.Compare(currentMeasurement, shiftTimeEnd) >= 0)
+                {
+                    pshift = 2;
+                }
 
             }
 
@@ -296,27 +316,7 @@
             }
         }
 
-        //private void GoToThickness(MouseEventArgs e)
-        //{
 
-        //    checkParams();
-
-        //    //  validateParameters(measurementPositionId, measurementPositionId, stringPackValue, pmachineIdd, pshift);
-        //    this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness");
-        //    //      /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness
-        //    //     {userId}/{measurementPositionId}/{stringPackValue}/{ pmachineIdd}
-
-        //}
-
-        //private bool validateParameters(string p1, string p2, string p3, int p4, int p5 )
-        //{
-        //    //if (string.IsNullOrEmpty(stringPackValue)==true && (string.IsNullOrEmpty(stringPackValue))
-        //    //{
-
-        //    //    return true;
-        //    //}
-        //    //return false;
-        //}
 
         private void GoToKniveSharpening(int knive)
         {
@@ -347,13 +347,13 @@
             }
             pmachineIdd = machine.Id;
             checkParams();
-            this.navManager.NavigateTo($"/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{pmachineIdd}/");
+            this.navManager.NavigateTo($"/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{pmachineIdd}/{pshift}/");
         }
 
 
 
         private void goBack(MouseEventArgs e)
         {
-            this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
+            this.navManager.NavigateTo($"/measurementspeelingknives/{userId}/{measurementPositionId}/");
         }
     }

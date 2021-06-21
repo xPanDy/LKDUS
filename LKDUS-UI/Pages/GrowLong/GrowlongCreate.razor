@@ -271,15 +271,15 @@
                         <div class="container-fluid">
                             <div class="navbar-btn">
 
-                                <button type="button" @onclick="@GoToThickness" class="btn btn-primary">Mitrā finiera biezums</button>
+                                <button type="button" @onclick="@GoToThickness" class="btn btn-primary">Biezums</button>
                             </div>
                             <div class="navbar-btn">
 
-                                <button type="button" @onclick="@GoToDimensions" class="btn btn-primary">Izmērs, platums, garums</button>
+                                <button type="button" @onclick="@GoToLength" class="btn btn-primary">Garums</button>
                             </div>
                             <div class="navbar-btn">
 
-                                <button type="button" @onclick="@GoToQuality" class="btn btn-primary">Kvalitāte</button>
+                                <button type="button" @onclick="@GoToWidth" class="btn btn-primary">Platums</button>
                             </div>
 
                         </div>
@@ -344,7 +344,7 @@
                             <button class="btn btn-primary btn-lg " style="margin:10px; background-color: green;"> C/P     </button>
                             <button class="btn btn-primary btn-lg " style="margin:10px; background-color: black;"       > C        </button>
                             <button class="btn btn-primary btn-lg " style="margin:10px; background-color: red;"        > WG      </button>
-                            <button class="btn btn-primary btn-lg " style="margin:10px; background-color: blue;"        > Zilā      </button>
+                            <button class="btn btn-primary btn-lg " style="margin:10px; background-color: blue;"        > WG10      </button>
                         </div>
 
                         @*<select class="custom-select" @bind="@pshift" id="shift">
@@ -679,7 +679,7 @@
         checkParams();
 
         //  validateParameters(measurementPositionId, measurementPositionId, stringPackValue, pmachineIdd, pshift);
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/thickness");
+        this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/thickness");
         //      /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness
         //     {userId}/{measurementPositionId}/{stringPackValue}/{ pmachineIdd}
 
@@ -695,17 +695,18 @@
     //    //return false;
     //}
 
-    private void GoToDimensions(MouseEventArgs e)
+    private void GoToLength(MouseEventArgs e)
     {
-        checkParams();
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions");
+        checkParams();                  
+        this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/length");
+        //this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions");
     }
 
-    private void GoToQuality(MouseEventArgs e)
+    private void GoToWidth(MouseEventArgs e)
     {
         checkParams();
-
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/quality");
+        this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/width");
+      //  this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/quality");
     }
 
     private void OpenCreateForm(MouseEventArgs e)
@@ -716,7 +717,7 @@
 
     private void goBack(MouseEventArgs e)
     {
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}");
+        this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}");
     }
 
     /* [Parameter]

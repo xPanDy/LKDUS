@@ -95,12 +95,12 @@
                            type="text">
 
                     @*<input class="form-control"
-                id="@id100"
-                @onkeydown="DoSomethingElse"
-                @onclick="focusToInput100"
-                @bind="@stringPackValue"
-                @ref="@input100"
-                type="text">*@
+                        id="@id100"
+                        @onkeydown="DoSomethingElse"
+                        @onclick="focusToInput100"
+                        @bind="@stringPackValue"
+                        @ref="@input100"
+                        type="text">*@
 
 
 
@@ -196,7 +196,7 @@
                 <div class="col">
                     <label for="day">Diena</label>
                     @*// 01.12.2020 09:19:04*@
-                    <select id="day" class="custom-select" @bind="Day">
+                    <select disabled="true" id="day" class="custom-select" @bind="Day">
                         @for (int i = 1; i <= 31; i++)
                         {
                             <option>@i</option>
@@ -208,7 +208,7 @@
 
                 <div class="col">
                     <label for="month">Mēnesis</label>
-                    <select id="month" class="custom-select" @bind="Month">
+                    <select disabled="true" id="month" class="custom-select" @bind="Month">
                         @for (int i = 1; i <= 12; i++)
                         {
                             <option value="@i">@Months[i - 1]</option>
@@ -220,9 +220,9 @@
 
                 <div class="col">
                     <label for="year">Gads</label>
-                    <select id="year" class="custom-select" @bind="Year">
+                    <select disabled="true" id="year" class="custom-select" @bind="Year">
                         @for (int i = DateTime.Now.Year - 5;
-                        i <= DateTime.Now.Year + 5; i++)
+                       i <= DateTime.Now.Year + 5; i++)
                         {
                             <option>@i</option>
                         }
@@ -258,21 +258,21 @@
                 <div class="col">
 
                     <label for="shift">Maiņa</label>
-                    <select class="custom-select" @bind="@pshift" id="shift">
-                        <option selected>1</option>
-                        <option value="1">2</option>
-
+                    <select class="custom-select" @bind=pshift id="shift">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
 
 
                     </select>
 
+                    
 
                 </div>
             </div>
 
             <div class="row">
 
-                @if ((stringPackValue == "0" || string.IsNullOrEmpty(stringPackValue)) || fp == null)
+                @if ((stringPackValue == "0" || string.IsNullOrEmpty(stringPackValue)) || fp == null || stringPackValue =="")
                 {
 
                     <LoadingMessage Message="Lai turpinātu nospied 'Svītrkoda skenēšana' vai ievadiet pakas kodu izmantojot ciparnīcu" />
@@ -343,7 +343,7 @@
         </div>
 
 
-        
+
 
     </div>
 
@@ -373,8 +373,8 @@
 
     bool isPackEntered = false;
 
-    [Parameter]
-    public int pshift { get; set; }
+
+    public int pshift = 1;
     [Parameter]
     public int pmachineIdd { get; set; }
     [Parameter]
@@ -429,13 +429,13 @@
         }
     }
 
-    private void Convert()
-    {
+    //private void Convert()
+    //{
 
-        KeyboardEventArgs ec = new KeyboardEventArgs();
-        ec.Code = "Enter";
-        DoSomethingElse(ec);
-    }
+    //    KeyboardEventArgs ec = new KeyboardEventArgs();
+    //    ec.Code = "Enter";
+    //    DoSomethingElse(ec);
+    //}
 
     public void sliceStrPvalue(string pv)
     {
@@ -465,7 +465,7 @@
 
             StateHasChanged();
         });
-        if (string.IsNullOrEmpty(stringPackValue))
+        if (string.IsNullOrEmpty(stringPackValue) || stringPackValue=="" || stringPackValue.Length==1)
         {
             fp = null;
         }
@@ -488,7 +488,7 @@
         }
 
     }
-    private void DoSomethingElse(KeyboardEventArgs e)
+    private async void DoSomethingElse(KeyboardEventArgs e)
     {
 
         if (e.Code == "Enter")
@@ -502,7 +502,7 @@
                 }
                 else
                 {
-
+                    fusPacks = await frepo.Get(Endpoints.FusPackEndPoint);
                     int packid = int.Parse(stringPackValue);
                     fp = fusPacks.Where(p => p.Id == packid).SingleOrDefault();
                     InvokeAsync(() =>
@@ -554,7 +554,7 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        pshift = 1;
+
 
         if (firstRender)
         {
@@ -567,18 +567,35 @@
             currentLocalTime = browserDateTime.Now.ToString();
             StateHasChanged();
 
-            if (firstRender)
+            String measurementDateAndTime = DateTime.Now.ToString("g");
+            DateTime shiftTimeStart = Convert.ToDateTime("07:00:00");
+
+            DateTime shiftTimeEnd = Convert.ToDateTime("19:00:00");
+
+            DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
+
+            //String timeOfTheDayNow = DateTime.Now.ToString("t");
+
+
+            if (DateTime.Compare(currentMeasurement, shiftTimeStart) >= 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) < 0)
             {
-                //await JsRuntime.InvokeAsync<string>("zxing.start", true, DotNetObjectReference.Create(this));
+                pshift =1;
             }
 
+            if (DateTime.Compare(currentMeasurement, shiftTimeStart) < 0 || DateTime.Compare(currentMeasurement, shiftTimeEnd) >= 0)
+            {
+                pshift =2;
+            }
+
+
         }
+
 
     }
 
 
 
-    private IList<Measurement> Model2;
+    // private IList<Measurement> Model2;
     private IList<Measurement> FusMachines;
     private IList<Machine> Machines;
     public LoginModel defaultUser = new LoginModel();
@@ -593,9 +610,9 @@
 
         defaultUser = LaborantList.Where(o => o.Id == userId).FirstOrDefault();
 
-        Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+        //  Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
         FusMachines = await this.repo.Get(Endpoints.MeasurementEndpoint);
-        fusPacks = await frepo.Get(Endpoints.FusPackEndPoint);
+
         Machines = await machineRepository.Get(Endpoints.MachinesEndpoint);
         try
         {
@@ -621,7 +638,7 @@
 
         if (stringPackValue == null)
         {
-            stringPackValue = "0";
+            stringPackValue = "";
         }
     }
 
@@ -637,7 +654,7 @@
         else { isThere = true; }
         if (stringPackValue == null)
         {
-            stringPackValue = "0";
+            stringPackValue = "";
 
         }
         else
@@ -657,33 +674,25 @@
         checkParams();
 
         //  validateParameters(measurementPositionId, measurementPositionId, stringPackValue, pmachineIdd, pshift);
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/thickness");
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/thickness");
         //      /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness
         //     {userId}/{measurementPositionId}/{stringPackValue}/{ pmachineIdd}
 
     }
 
-    //private bool validateParameters(string p1, string p2, string p3, int p4, int p5 )
-    //{
-    //    //if (string.IsNullOrEmpty(stringPackValue)==true && (string.IsNullOrEmpty(stringPackValue))
-    //    //{
 
-    //    //    return true;
-    //    //}
-    //    //return false;
-    //}
 
     private void GoToDimensions(MouseEventArgs e)
     {
         checkParams();
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions");
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions");
     }
 
     private void GoToQuality(MouseEventArgs e)
     {
         checkParams();
 
-        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/quality");
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/quality");
     }
 
     private void OpenCreateForm(MouseEventArgs e)

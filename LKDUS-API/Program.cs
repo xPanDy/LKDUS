@@ -21,6 +21,9 @@ namespace LKDUS_API
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseUrls("http://localhost:5000");
+                     
+                   // webBuilder.UseUrls("http://lkdus-api.finieris.lv:5000");
                 });
     }
 }

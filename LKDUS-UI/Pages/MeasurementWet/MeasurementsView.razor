@@ -1,5 +1,5 @@
 ﻿@page "/measurements/{fusCode}/{measurementPositionId}/{userId}/{packId}/{measurementTypeName}/view"
-      @*measurements/{fusCode}/{measurementPositionId}/{userId}/{packId}/view*@
+@*measurements/{fusCode}/{measurementPositionId}/{userId}/{packId}/view*@
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
 @using LKDUS_UI.Contracts
@@ -47,135 +47,230 @@
 
 
         <div class="rowcentered">
-            <h4  > Dati par pakas:@ModelPackHeader.FusCode  @ModelPackHeader.MeasurementTypeName mērījumiem </h4>
+            <h4> Dati par pakas:@ModelPackHeader.FusCode  @ModelPackHeader.MeasurementTypeName mērījumiem </h4>
         </div>
 
 
-            <div class="container" style="height:75%">
-                <div class="mh-75">
-                    <table class="table">
-                        <thead>
-                            <tr style=" text-align: right;"></tr>
+        <div class="container" style="height:75%">
+            <div class="mh-75">
+                <table class="table">
+                    <thead>
+                        <tr style=" text-align: right;"></tr>
+                        <tr>
+
+                            <th scope="col">Datums              </th>
+                            <th scope="col">Iekārta               </th>
+                            <th scope="col">Maiņa             </th>
+
+
+
+                            <th scope="col">Rādītājs 1 </th>
+                            <th scope="col">Rādītājs 2</th>
+                            <th scope="col">Rādītājs 3</th>
+
+
+                            @*<th scope="col">Meistars</th>*@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var model in ModelMeasurements)
+                        {
+
                             <tr>
 
-                                <th scope="col">Datums              </th>
-                                <th scope="col">Iekārta               </th>
-                                <th scope="col">Maiņa             </th>
+                                <td>@model.DateCreated</td>
+                                <td>@ModelPackHeader.Machine</td>
+                                <td>@model.Shift</td>
 
-
-
-                                <th scope="col">Rādītājs 1 </th>
-                                <th scope="col">Rādītājs 2</th>
-                                <th scope="col">Rādītājs 3</th>
-
-
-                                @*<th scope="col">Meistars</th>*@
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var model in ModelMeasurements)
-                            {
-
-                                <tr>
-
-                                    <td>@model.DateCreated</td>
-                                    <td>@ModelPackHeader.Machine</td>
-                                    <td>@model.Shift</td>
-
+                                @if (ModelPackHeader.MeasurementTypeName != "Biezums")
+                                {
                                     <td>@model.Measurement1</td>
                                     <td>@model.Measurement2</td>
                                     <td>@model.Measurement3</td>
+                                }
+                                else
+                                {
+
+                                    @if (model.Measurement1 == 1.53m ||
+                                         model.Measurement1 == 1.54m ||
+                                         model.Measurement1 == 1.55m ||
+                                         model.Measurement1 == 1.63m ||
+                                         model.Measurement1 == 1.64m ||
+                                         model.Measurement1 == 1.65m)
+                                    {
+                                        <td style="        background-color: skyblue;">@model.Measurement1</td>
+                                    }
+
+                                    @if (model.Measurement2 == 1.53m ||
+                                          model.Measurement2 == 1.54m ||
+                                          model.Measurement2 == 1.55m ||
+                                          model.Measurement2 == 1.63m ||
+                                          model.Measurement2 == 1.64m ||
+                                          model.Measurement2 == 1.65m)
+                                    {
+                                        <td style="        background-color: skyblue;">@model.Measurement2</td>
+ 
+                                    }
+                                    @if (model.Measurement3 == 1.53m ||
+                                       model.Measurement3 == 1.54m ||
+                                       model.Measurement3 == 1.55m ||
+                                       model.Measurement3 == 1.63m ||
+                                       model.Measurement3 == 1.64m ||
+                                       model.Measurement3 == 1.65m )    
+                                       {
+                                        <td style="background-color:skyblue;">@model.Measurement3</td>
+                                     }
+
+                                    @if (model.Measurement1 <= 1.52m || 
+                                        model.Measurement1 >= 1.66m )
+                                    {
+                                        <td style="background-color:red;">@model.Measurement1</td>
+                                    }
+
+                                    @if (model.Measurement2 <= 1.52m ||
+                                        model.Measurement2 >= 1.66m )
+                                    {
+                                        <td style="background-color:red;">@model.Measurement2</td>
+
+
+                                    }
 
 
 
+                                    @if (model.Measurement3 <= 1.52m ||
+                                        model.Measurement3 >= 1.66m )
+                                    {
+                                        <td style="background-color:red;">@model.Measurement3</td>
+                                    }
 
 
-
-                                </tr>
-
-                            }
-
-
-                        </tbody>
-                    </table>
-                </div>
+                                    @if (model.Measurement1 >= 1.56m && 
+                                        model.Measurement3 <= 1.62m )
+                                    {
+                                        <td>@model.Measurement1</td>
 
 
+                                    }
 
+
+                                    @if (model.Measurement2 >= 1.56m &&
+                                        model.Measurement2 <= 1.62m )
+                                    {
+                                        <td>@model.Measurement2</td>
+
+
+                                    }
+
+                                    @if ( model.Measurement3 >= 1.56m && 
+                                        model.Measurement3 <= 1.62m )
+                                    {
+                                        <td>@model.Measurement3</td>
+                                    }
+                                }
+                            </tr>
+
+                        }
+
+
+                    </tbody>
+                </table>
             </div>
 
 
 
-
-            }
         </div>
-        @code {
 
-            [Parameter]
-            public string fusCode { get; set; }
-            [Parameter]
-            public string measurementTypeName { get; set; }
-            [Parameter]
-            public string measurementPositionId { get; set; }
 
-            [Parameter]
-            public string packId { get; set; }
 
-            [Parameter]
-            public string userId { get; set; }
+
+    }
+</div>
+@code {
+
+    [Parameter]
+    public string fusCode { get; set; }
+    [Parameter]
+    public string measurementTypeName { get; set; }
+    [Parameter]
+    public string measurementPositionId { get; set; }
+
+    [Parameter]
+    public string packId { get; set; }
+
+    [Parameter]
+    public string userId { get; set; }
 
     //private IList<Measurement> Model;
-        private Pack ModelPackHeader;
+    private Pack ModelPackHeader;
 
 
-        private IList<Measurement> ModelMeasurements;
+    private IList<Measurement> ModelMeasurements;
+    public string[,] colors = new string[40, 3];
 
+    private MeasurementPosition measurementPosition;
+    private IList<MeasurementType> measurementTypelIST;
+    private MeasurementType measurementType;
 
-        private MeasurementPosition measurementPosition;
-        private IList<MeasurementType> measurementTypelIST;
-        private MeasurementType measurementType;
-
-        protected async override Task OnInitializedAsync()
+    protected async override Task OnInitializedAsync()
+    {
+        int packIdInt = 0;
+        int fuspackIntId = 0;
+        if (fusCode != "0")
         {
-            int packIdInt = 0;
-            int fuspackIntId = 0;
-            if (fusCode != "0")
+            try
             {
-                try
-                {
-                    fuspackIntId = int.Parse(fusCode);
-                    packIdInt = int.Parse(packId);
-                    ModelPackHeader = await packsRepository.Get(Endpoints.PacksEndpoint, packIdInt);
-                    measurementTypelIST = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint);
-                    measurementType = measurementTypelIST.Where(e => e.Name == measurementTypeName).SingleOrDefault();
+                fuspackIntId = int.Parse(fusCode);
+                packIdInt = int.Parse(packId);
+                ModelPackHeader = await packsRepository.Get(Endpoints.PacksEndpoint, packIdInt);
+                measurementTypelIST = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint);
+                measurementType = measurementTypelIST.Where(e => e.Name == measurementTypeName).SingleOrDefault();
 
-                    //ModelPackHeader = ModelPackHeader.Where(ph=> ph. packIdInt);
-                    //   Model = await machineRepo.Get(Endpoints.MachinesEndpoint, id);
-                }
-                catch (Exception)
-                {
+                //ModelPackHeader = ModelPackHeader.Where(ph=> ph. packIdInt);
+                //   Model = await machineRepo.Get(Endpoints.MachinesEndpoint, id);
+            }
+            catch (Exception)
+            {
 
-                    Console.WriteLine($"Unable to parse");
-
-                }
-
+                Console.WriteLine($"Unable to parse");
 
             }
 
 
-            ModelMeasurements = await measurementRepository.Get(Endpoints.MeasurementEndpoint);
-            //ModelPacksHeader = ModelPacksHeader.Where(p=>p.FusCode==fusCode)..ToList() ;
-
-            ModelMeasurements = ModelMeasurements.Where(m => m.PackId == fuspackIntId && m.MeasurementTypeId == measurementType.Id).ToList();
-            // Model = Model.Where(e => (e.MeasurementPositionId == 1)).ToList();
-
-
         }
 
 
+        ModelMeasurements = await measurementRepository.Get(Endpoints.MeasurementEndpoint);
+        //ModelPacksHeader = ModelPacksHeader.Where(p=>p.FusCode==fusCode)..ToList() ;
 
-        private void goBack(MouseEventArgs e)
-        {
-            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}");
-        }
-        }
+        // ModelMeasurements = ModelMeasurements.Where(m => m.PackId == fuspackIntId && m.MeasurementTypeId == measurementType.Id).ToList();
+        ModelMeasurements = ModelMeasurements.Where(m => m.PackId == packIdInt).ToList();
+        // Model = Model.Where(e => (e.MeasurementPositionId == 1)).ToList();
+
+
+        //for (int i = 0; i < colors.GetLength(0); i++)
+        //{
+        //    for (int j = 0; j < colors.GetLength(1); j++)
+        //    {
+        //        int row = 0;
+
+        //        foreach (var el in ModelMeasurements)
+        //        {
+        //            row++;
+        //            if(el.Measurement1==1.53m || el.Measurement1 == 1.54m || el.Measurement1 == 1.55m ||
+        //                el.Measurement1 == 1.63m || el.Measurement1 == 1.64m || el.Measurement1 == 1.65m)
+        //                {
+
+        //                }
+        //        }
+        //    }
+        //}
+
+    }
+
+
+
+    private void goBack(MouseEventArgs e)
+    {
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}");
+    }
+}

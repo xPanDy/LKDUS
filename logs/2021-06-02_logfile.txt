@@ -1,0 +1,1434 @@
+2021-06-02 12:39:07.5438 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-06-02 12:39:07.8259 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-06-02 12:39:08.3174 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 12:39:08.3715 INFO Sucessfully got all measurementPositions
+2021-06-02 12:39:15.4842 INFO Pack-GetPacks: Attempted Call
+2021-06-02 12:39:15.5608 INFO Sucessfully got all packs
+2021-06-02 12:39:15.6185 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 12:39:15.6466 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 12:39:16.5504 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 12:39:16.6842 INFO Sucessfully got all Measurements
+2021-06-02 12:39:16.9130 INFO Machine-GetMachines: Attempted Call
+2021-06-02 12:39:17.0147 INFO Sucessfully got all machines
+2021-06-02 12:39:17.0343 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 12:39:17.0343 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 12:39:18.8259 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 12:39:18.9565 INFO Sucessfully got all FUS packs
+2021-06-02 12:39:21.1079 INFO Machine-GetMachines: Attempted Call
+2021-06-02 12:39:21.1079 INFO Sucessfully got all machines
+2021-06-02 12:39:21.1414 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 12:39:21.1553 INFO Sucessfully got all Measurements
+2021-06-02 12:39:22.4659 INFO Pack-GetPacks: Attempted Call
+2021-06-02 12:39:22.4659 INFO Sucessfully got all packs
+2021-06-02 12:39:22.4970 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 12:39:22.5122 INFO Sucessfully got all Measurements
+2021-06-02 12:39:33.1918 INFO Machine-GetMachines: Attempted Call
+2021-06-02 12:39:33.2101 INFO Sucessfully got all machines
+2021-06-02 12:39:33.2253 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 12:39:33.2419 INFO Sucessfully got all Measurements
+2021-06-02 12:40:14.6056 INFO Pack-GetPacks: Attempted Call
+2021-06-02 12:40:14.6525 INFO Sucessfully got all packs
+2021-06-02 12:40:14.6829 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 12:40:14.7031 INFO Sucessfully got all Measurements
+2021-06-02 13:05:02.5993 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-06-02 13:05:02.8902 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-06-02 13:05:03.2811 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 13:05:03.3295 INFO Sucessfully got all measurementPositions
+2021-06-02 13:05:04.3876 INFO Pack-GetPacks: Attempted Call
+2021-06-02 13:05:04.4461 INFO Sucessfully got all packs
+2021-06-02 13:05:04.5014 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 13:05:04.5315 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 13:05:05.8129 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:05:05.9068 INFO Sucessfully got all Measurements
+2021-06-02 13:05:05.9618 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:05:05.9939 INFO Sucessfully got all machines
+2021-06-02 13:05:06.0150 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 13:05:06.0212 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 13:05:16.8788 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:05:16.9035 INFO Sucessfully got all Measurements
+2021-06-02 13:05:16.9849 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:05:16.9898 INFO Sucessfully got all machines
+2021-06-02 13:05:17.0149 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 13:05:17.0291 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 13:05:21.3541 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 13:05:21.5093 INFO Sucessfully got all FUS packs
+2021-06-02 13:05:22.6312 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:05:22.6312 INFO Sucessfully got all machines
+2021-06-02 13:05:22.6527 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:05:22.6695 INFO Sucessfully got all Measurements
+2021-06-02 13:05:23.5720 INFO Pack-GetPacks: Attempted Call
+2021-06-02 13:05:23.5836 INFO Sucessfully got all packs
+2021-06-02 13:05:23.6037 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:05:23.6189 INFO Sucessfully got all Measurements
+2021-06-02 13:05:28.3874 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:05:28.3874 INFO Sucessfully got all machines
+2021-06-02 13:05:28.4182 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:05:28.4331 INFO Sucessfully got all Measurements
+2021-06-02 13:05:29.3562 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:05:29.3696 INFO Sucessfully got all Measurements
+2021-06-02 13:05:29.3981 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:05:29.3981 INFO Sucessfully got all machines
+2021-06-02 13:05:29.4222 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 13:05:29.4444 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 13:05:31.8792 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 13:05:31.9642 INFO Sucessfully got all FUS packs
+2021-06-02 13:05:33.7453 INFO Pack-GetPacks: Attempted Call
+2021-06-02 13:05:33.7563 INFO Sucessfully got all packs
+2021-06-02 13:05:33.7793 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1
+2021-06-02 13:05:33.8031 INFO Sucessfully got the measurement type with Id:1
+2021-06-02 13:05:36.7852 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:05:36.8512 INFO Sucessfully got all Measurements
+2021-06-02 13:05:36.9364 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:05:36.9521 INFO Sucessfully got all machines
+2021-06-02 13:05:37.0064 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 13:05:37.0064 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 13:05:39.0724 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 13:05:39.1503 INFO Sucessfully got all FUS packs
+2021-06-02 13:05:40.5191 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:05:40.5371 INFO Sucessfully got all machines
+2021-06-02 13:05:40.5371 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:05:40.5618 INFO Sucessfully got all Measurements
+2021-06-02 13:05:41.7624 INFO Pack-GetPacks: Attempted Call
+2021-06-02 13:05:41.7710 INFO Sucessfully got all packs
+2021-06-02 13:05:41.8010 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:05:41.8010 INFO Sucessfully got all Measurements
+2021-06-02 13:05:44.9597 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:05:44.9597 INFO Sucessfully got all machines
+2021-06-02 13:05:44.9882 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:05:45.0169 INFO Sucessfully got all Measurements
+2021-06-02 13:05:46.3905 INFO Pack-GetPacks: Attempted Call
+2021-06-02 13:05:46.3993 INFO Sucessfully got all packs
+2021-06-02 13:05:51.2853 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:05:51.2933 INFO Sucessfully got all machines
+2021-06-02 13:05:51.3079 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:05:51.3267 INFO Sucessfully got all Measurements
+2021-06-02 13:05:52.0535 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:05:52.0705 INFO Sucessfully got all Measurements
+2021-06-02 13:05:52.0913 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:05:52.1007 INFO Sucessfully got all machines
+2021-06-02 13:05:52.1166 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 13:05:52.1166 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 13:05:55.0876 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 13:05:55.1759 INFO Sucessfully got all FUS packs
+2021-06-02 13:05:56.3915 INFO Pack-GetPacks: Attempted Call
+2021-06-02 13:05:56.3996 INFO Sucessfully got all packs
+2021-06-02 13:05:56.4188 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1
+2021-06-02 13:05:56.4188 INFO Sucessfully got the measurement type with Id:1
+2021-06-02 13:06:00.2764 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:06:00.2986 INFO Sucessfully got all Measurements
+2021-06-02 13:06:00.3527 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:06:00.3819 INFO Sucessfully got all machines
+2021-06-02 13:06:00.4009 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 13:06:00.4009 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 13:06:03.3837 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 13:06:03.4684 INFO Sucessfully got all FUS packs
+2021-06-02 13:06:04.9537 INFO Pack-GetPacks: Attempted Call
+2021-06-02 13:06:04.9626 INFO Sucessfully got all packs
+2021-06-02 13:06:04.9882 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:06:04.9994 INFO Sucessfully got all Measurements
+2021-06-02 13:06:08.3503 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:06:08.3672 INFO Sucessfully got all Measurements
+2021-06-02 13:06:08.3970 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:06:08.3970 INFO Sucessfully got all machines
+2021-06-02 13:06:08.4327 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 13:06:08.4472 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 13:06:11.6637 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 13:06:11.7448 INFO Sucessfully got all FUS packs
+2021-06-02 13:06:12.8599 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:06:12.8680 INFO Sucessfully got all machines
+2021-06-02 13:06:12.8898 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:06:12.9031 INFO Sucessfully got all Measurements
+2021-06-02 13:06:13.8221 INFO Pack-GetPacks: Attempted Call
+2021-06-02 13:06:13.8221 INFO Sucessfully got all packs
+2021-06-02 13:06:13.8501 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:06:13.8633 INFO Sucessfully got all Measurements
+2021-06-02 13:14:08.7943 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:14:08.8663 INFO Sucessfully got all machines
+2021-06-02 13:14:08.9075 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:14:08.9284 INFO Sucessfully got all Measurements
+2021-06-02 13:14:10.4029 INFO Pack-GetPacks: Attempted Call
+2021-06-02 13:14:10.4217 INFO Sucessfully got all packs
+2021-06-02 13:14:35.2001 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:14:35.2143 INFO Sucessfully got all machines
+2021-06-02 13:14:35.2339 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:14:35.2567 INFO Sucessfully got all Measurements
+2021-06-02 13:14:35.7285 INFO Pack-GetPacks: Attempted Call
+2021-06-02 13:14:35.7432 INFO Sucessfully got all packs
+2021-06-02 13:14:35.7627 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:14:35.7748 INFO Sucessfully got all Measurements
+2021-06-02 13:15:05.3649 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:15:05.3817 INFO Sucessfully got all machines
+2021-06-02 13:15:05.3956 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:15:05.4199 INFO Sucessfully got all Measurements
+2021-06-02 13:15:05.5369 INFO Pack-GetPacks: Attempted Call
+2021-06-02 13:15:05.5369 INFO Sucessfully got all packs
+2021-06-02 13:15:25.0137 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:15:25.0194 INFO Sucessfully got all machines
+2021-06-02 13:15:25.0419 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:15:25.0545 INFO Sucessfully got all Measurements
+2021-06-02 13:15:25.6336 INFO Pack-GetPacks: Attempted Call
+2021-06-02 13:15:25.6336 INFO Sucessfully got all packs
+2021-06-02 13:15:25.6582 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:15:25.6582 INFO Sucessfully got all Measurements
+2021-06-02 13:27:18.8755 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-06-02 13:27:19.1328 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-06-02 13:27:19.5204 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 13:27:19.5707 INFO Sucessfully got all measurementPositions
+2021-06-02 13:27:22.3669 INFO Pack-GetPacks: Attempted Call
+2021-06-02 13:27:22.4377 INFO Sucessfully got all packs
+2021-06-02 13:27:22.5025 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 13:27:22.5300 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 13:27:29.0389 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:27:29.1489 INFO Sucessfully got all Measurements
+2021-06-02 13:27:29.2072 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:27:29.2308 INFO Sucessfully got all machines
+2021-06-02 13:27:29.2507 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 13:27:29.2507 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 13:27:32.0492 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 13:27:32.2225 INFO Sucessfully got all FUS packs
+2021-06-02 13:27:33.9977 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:27:34.0056 INFO Sucessfully got all machines
+2021-06-02 13:27:34.0198 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:27:34.0387 INFO Sucessfully got all Measurements
+2021-06-02 13:40:58.2690 INFO Pack-GetPacks: Attempted Call
+2021-06-02 13:40:58.3115 INFO Sucessfully got all packs
+2021-06-02 13:40:58.3508 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:40:58.3724 INFO Sucessfully got all Measurements
+2021-06-02 13:45:00.7121 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-06-02 13:45:00.9697 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-06-02 13:45:01.3730 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 13:45:01.4119 INFO Sucessfully got all measurementPositions
+2021-06-02 13:45:04.5065 INFO Pack-GetPacks: Attempted Call
+2021-06-02 13:45:04.5791 INFO Sucessfully got all packs
+2021-06-02 13:45:04.6316 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 13:45:04.6602 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 13:45:05.8524 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:45:05.9388 INFO Sucessfully got all Measurements
+2021-06-02 13:45:05.9913 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:45:06.0150 INFO Sucessfully got all machines
+2021-06-02 13:45:06.0397 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 13:45:06.0536 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 13:47:27.7250 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 13:47:27.8976 INFO Sucessfully got all FUS packs
+2021-06-02 13:47:29.3773 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:47:29.3854 INFO Sucessfully got all machines
+2021-06-02 13:47:29.4173 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:47:29.4339 INFO Sucessfully got all Measurements
+2021-06-02 13:47:30.6779 INFO Pack-GetPacks: Attempted Call
+2021-06-02 13:47:30.6894 INFO Sucessfully got all packs
+2021-06-02 13:47:32.6964 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:47:32.7193 INFO Sucessfully got all machines
+2021-06-02 13:47:32.7488 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:47:32.7822 INFO Sucessfully got all Measurements
+2021-06-02 13:47:33.4433 INFO Pack-GetPacks: Attempted Call
+2021-06-02 13:47:33.4528 INFO Sucessfully got all packs
+2021-06-02 13:47:33.4745 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:47:33.5048 INFO Sucessfully got all Measurements
+2021-06-02 13:48:04.0394 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:48:04.0394 INFO Sucessfully got all machines
+2021-06-02 13:48:04.0965 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:48:04.1286 INFO Sucessfully got all Measurements
+2021-06-02 13:48:05.6320 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:48:05.6492 INFO Sucessfully got all Measurements
+2021-06-02 13:48:05.6733 INFO Machine-GetMachines: Attempted Call
+2021-06-02 13:48:05.6807 INFO Sucessfully got all machines
+2021-06-02 13:48:05.7033 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 13:48:05.7033 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 13:48:08.4958 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 13:48:08.6688 INFO Sucessfully got all FUS packs
+2021-06-02 13:48:10.2244 INFO Pack-GetPacks: Attempted Call
+2021-06-02 13:48:10.2412 INFO Sucessfully got all packs
+2021-06-02 13:48:10.2645 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 13:48:10.2819 INFO Sucessfully got all Measurements
+2021-06-02 14:04:00.9279 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-06-02 14:04:01.0421 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-06-02 14:04:01.2013 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-06-02 14:04:01.2013 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-06-02 14:04:01.6420 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 14:04:01.6867 INFO Sucessfully got all measurementPositions
+2021-06-02 14:04:04.4347 INFO Pack-GetPacks: Attempted Call
+2021-06-02 14:04:04.5050 INFO Sucessfully got all packs
+2021-06-02 14:04:04.5733 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 14:04:04.5974 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 14:04:05.9146 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 14:04:06.0231 INFO Sucessfully got all Measurements
+2021-06-02 14:04:06.0798 INFO Machine-GetMachines: Attempted Call
+2021-06-02 14:04:06.1008 INFO Sucessfully got all machines
+2021-06-02 14:04:06.1223 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 14:04:06.1223 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 14:04:15.7933 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 14:04:15.9332 INFO Sucessfully got all FUS packs
+2021-06-02 14:04:17.2754 INFO Machine-GetMachines: Attempted Call
+2021-06-02 14:04:17.2754 INFO Sucessfully got all machines
+2021-06-02 14:04:17.3028 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 14:04:17.3169 INFO Sucessfully got all Measurements
+2021-06-02 14:04:18.6357 INFO Pack-GetPacks: Attempted Call
+2021-06-02 14:04:18.6512 INFO Sucessfully got all packs
+2021-06-02 14:04:18.6701 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 14:04:18.6950 INFO Sucessfully got all Measurements
+2021-06-02 14:07:33.2607 INFO Pack-GetPacks: Attempted Call
+2021-06-02 14:07:33.2863 INFO Sucessfully got all packs
+2021-06-02 14:07:33.3519 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 14:07:33.3756 INFO Sucessfully got all Measurements
+2021-06-02 14:07:41.9646 INFO Pack-GetPacks: Attempted Call
+2021-06-02 14:07:41.9916 INFO Sucessfully got all packs
+2021-06-02 14:07:42.0244 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 14:07:42.0433 INFO Sucessfully got all Measurements
+2021-06-02 14:08:08.6237 INFO Pack-GetPacks: Attempted Call
+2021-06-02 14:08:08.6421 INFO Sucessfully got all packs
+2021-06-02 14:08:08.6836 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 14:08:08.6836 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 14:08:09.0639 INFO Pack-GetPacks: Attempted Call
+2021-06-02 14:08:09.0970 INFO Sucessfully got all packs
+2021-06-02 14:08:09.1190 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 14:08:09.1190 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 14:08:10.8244 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 14:08:10.8526 INFO Sucessfully got all Measurements
+2021-06-02 14:08:10.8847 INFO Machine-GetMachines: Attempted Call
+2021-06-02 14:08:10.8964 INFO Sucessfully got all machines
+2021-06-02 14:08:10.9104 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 14:08:10.9104 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 14:08:15.1093 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 14:08:15.2082 INFO Sucessfully got all FUS packs
+2021-06-02 14:08:18.4495 INFO Machine-GetMachines: Attempted Call
+2021-06-02 14:08:18.4589 INFO Sucessfully got all machines
+2021-06-02 14:08:18.4946 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 14:08:18.5103 INFO Sucessfully got all Measurements
+2021-06-02 14:08:20.3422 INFO Pack-GetPacks: Attempted Call
+2021-06-02 14:08:20.3512 INFO Sucessfully got all packs
+2021-06-02 14:08:20.3727 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 14:08:20.3867 INFO Sucessfully got all Measurements
+2021-06-02 14:08:36.0361 INFO Machine-GetMachines: Attempted Call
+2021-06-02 14:08:36.0504 INFO Sucessfully got all machines
+2021-06-02 14:08:36.0749 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 14:08:36.1049 INFO Sucessfully got all Measurements
+2021-06-02 14:08:36.9630 INFO Pack-GetPacks: Attempted Call
+2021-06-02 14:08:36.9723 INFO Sucessfully got all packs
+2021-06-02 14:08:36.9933 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 14:08:37.0052 INFO Sucessfully got all Measurements
+2021-06-02 15:51:50.8353 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-06-02 15:51:51.1126 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-06-02 15:51:51.5355 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 15:51:51.5860 INFO Sucessfully got all measurementPositions
+2021-06-02 15:51:56.3471 INFO Pack-GetPacks: Attempted Call
+2021-06-02 15:51:56.4267 INFO Sucessfully got all packs
+2021-06-02 15:51:56.4844 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 15:51:56.5116 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 15:51:57.3576 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 15:51:57.4681 INFO Sucessfully got all Measurements
+2021-06-02 15:51:57.5253 INFO Machine-GetMachines: Attempted Call
+2021-06-02 15:51:57.5480 INFO Sucessfully got all machines
+2021-06-02 15:51:57.5901 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 15:51:57.5901 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 15:52:00.6668 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 15:52:00.9385 INFO Sucessfully got all FUS packs
+2021-06-02 15:52:02.2866 INFO Machine-GetMachines: Attempted Call
+2021-06-02 15:52:02.2979 INFO Sucessfully got all machines
+2021-06-02 15:52:02.3211 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 15:52:02.3428 INFO Sucessfully got all Measurements
+2021-06-02 15:52:03.3678 INFO Pack-GetPacks: Attempted Call
+2021-06-02 15:52:03.3678 INFO Sucessfully got all packs
+2021-06-02 15:52:03.4031 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 15:52:03.4238 INFO Sucessfully got all Measurements
+2021-06-02 16:01:19.2228 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-06-02 16:01:19.5632 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-06-02 16:01:19.9662 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 16:01:20.0166 INFO Sucessfully got all measurementPositions
+2021-06-02 16:01:20.9494 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:01:21.0249 INFO Sucessfully got all packs
+2021-06-02 16:01:21.0869 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 16:01:21.1147 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 16:01:22.1685 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:01:22.2593 INFO Sucessfully got all Measurements
+2021-06-02 16:01:22.3480 INFO Machine-GetMachines: Attempted Call
+2021-06-02 16:01:22.3706 INFO Sucessfully got all machines
+2021-06-02 16:01:22.3892 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 16:01:22.3991 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 16:01:25.1225 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 16:01:25.3377 INFO Sucessfully got all FUS packs
+2021-06-02 16:01:27.7506 INFO Machine-GetMachines: Attempted Call
+2021-06-02 16:01:27.7583 INFO Sucessfully got all machines
+2021-06-02 16:01:27.7815 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:01:27.8007 INFO Sucessfully got all Measurements
+2021-06-02 16:01:28.8043 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:01:28.8043 INFO Sucessfully got all packs
+2021-06-02 16:01:28.8358 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:01:28.8494 INFO Sucessfully got all Measurements
+2021-06-02 16:01:39.6224 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:01:39.6519 INFO Sucessfully got all packs
+2021-06-02 16:01:39.6850 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:01:39.6995 INFO Sucessfully got all Measurements
+2021-06-02 16:01:40.0580 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:01:40.0674 INFO Sucessfully got all packs
+2021-06-02 16:01:40.0864 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:01:40.0991 INFO Sucessfully got all Measurements
+2021-06-02 16:01:47.2277 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:01:47.2424 INFO Sucessfully got all packs
+2021-06-02 16:01:47.2615 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:01:47.2842 INFO Sucessfully got all Measurements
+2021-06-02 16:02:47.0215 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:02:47.0440 INFO Sucessfully got all packs
+2021-06-02 16:02:47.0669 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:02:47.0974 INFO Sucessfully got all Measurements
+2021-06-02 16:02:53.4888 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:02:53.4888 INFO Sucessfully got all packs
+2021-06-02 16:02:58.5688 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:02:58.5959 INFO Sucessfully got all Measurements
+2021-06-02 16:04:19.4654 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:04:19.4781 INFO Sucessfully got all packs
+2021-06-02 16:04:19.5124 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:04:19.5324 INFO Sucessfully got all Measurements
+2021-06-02 16:04:31.5628 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:04:31.5949 INFO Sucessfully got all packs
+2021-06-02 16:04:31.6914 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:04:31.8158 INFO Sucessfully got all Measurements
+2021-06-02 16:04:55.2274 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:04:55.2592 INFO Sucessfully got all packs
+2021-06-02 16:04:55.3497 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:04:55.3706 INFO Sucessfully got all Measurements
+2021-06-02 16:05:41.1087 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:05:41.1303 INFO Sucessfully got all packs
+2021-06-02 16:05:41.1587 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:05:41.1753 INFO Sucessfully got all Measurements
+2021-06-02 16:06:52.2825 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-06-02 16:06:52.3351 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-06-02 16:06:52.4471 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 16:06:52.4599 INFO Sucessfully got all measurementPositions
+2021-06-02 16:06:53.6612 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:06:53.6612 INFO Sucessfully got all packs
+2021-06-02 16:06:53.6932 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 16:06:53.6932 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 16:06:55.6983 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:06:55.7163 INFO Sucessfully got all Measurements
+2021-06-02 16:06:55.7432 INFO Machine-GetMachines: Attempted Call
+2021-06-02 16:06:55.7432 INFO Sucessfully got all machines
+2021-06-02 16:06:55.7651 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 16:06:55.7843 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 16:07:18.7546 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 16:07:18.8870 INFO Sucessfully got all FUS packs
+2021-06-02 16:07:20.0044 INFO Machine-GetMachines: Attempted Call
+2021-06-02 16:07:20.0044 INFO Sucessfully got all machines
+2021-06-02 16:07:20.0330 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:07:20.0504 INFO Sucessfully got all Measurements
+2021-06-02 16:07:21.3702 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:07:21.3852 INFO Sucessfully got all packs
+2021-06-02 16:07:21.4112 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:07:21.4361 INFO Sucessfully got all Measurements
+2021-06-02 16:07:34.4273 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:07:34.4273 INFO Sucessfully got all packs
+2021-06-02 16:07:34.4593 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:07:34.4874 INFO Sucessfully got all Measurements
+2021-06-02 16:07:35.7456 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:07:35.7535 INFO Sucessfully got all packs
+2021-06-02 16:07:35.7785 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:07:35.7907 INFO Sucessfully got all Measurements
+2021-06-02 16:07:43.6058 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:07:43.6227 INFO Sucessfully got all packs
+2021-06-02 16:07:43.6497 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 16:07:43.6497 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 16:07:43.9603 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:07:43.9751 INFO Sucessfully got all packs
+2021-06-02 16:07:44.0019 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 16:07:44.0019 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 16:07:45.6333 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:07:45.6512 INFO Sucessfully got all Measurements
+2021-06-02 16:07:45.6756 INFO Machine-GetMachines: Attempted Call
+2021-06-02 16:07:45.6756 INFO Sucessfully got all machines
+2021-06-02 16:07:45.6971 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 16:07:45.6971 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 16:07:49.9813 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 16:07:50.0868 INFO Sucessfully got all FUS packs
+2021-06-02 16:07:53.2679 INFO Machine-GetMachines: Attempted Call
+2021-06-02 16:07:53.2679 INFO Sucessfully got all machines
+2021-06-02 16:07:53.2912 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:07:53.3126 INFO Sucessfully got all Measurements
+2021-06-02 16:07:54.7154 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:07:54.7268 INFO Sucessfully got all packs
+2021-06-02 16:07:54.7466 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:07:54.7600 INFO Sucessfully got all Measurements
+2021-06-02 16:08:14.9446 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:08:14.9718 INFO Sucessfully got all packs
+2021-06-02 16:08:15.0119 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:08:15.0344 INFO Sucessfully got all Measurements
+2021-06-02 16:10:47.4306 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:10:47.4471 INFO Sucessfully got all packs
+2021-06-02 16:10:47.4736 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:10:47.4921 INFO Sucessfully got all Measurements
+2021-06-02 16:10:55.2116 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:10:55.2235 INFO Sucessfully got all packs
+2021-06-02 16:10:55.2427 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:10:55.2602 INFO Sucessfully got all Measurements
+2021-06-02 16:11:31.9803 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:11:31.9997 INFO Sucessfully got all packs
+2021-06-02 16:11:32.0310 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:11:32.0433 INFO Sucessfully got all Measurements
+2021-06-02 16:45:40.5541 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-06-02 16:45:40.8296 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-06-02 16:45:41.2345 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 16:45:41.2759 INFO Sucessfully got all measurementPositions
+2021-06-02 16:45:42.4926 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:42.5531 INFO Sucessfully got all packs
+2021-06-02 16:45:42.6046 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 16:45:42.6288 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 16:45:44.0519 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:45:44.1743 INFO Sucessfully got all Measurements
+2021-06-02 16:45:44.2513 INFO Machine-GetMachines: Attempted Call
+2021-06-02 16:45:44.2749 INFO Sucessfully got all machines
+2021-06-02 16:45:44.2928 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 16:45:44.2928 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 16:45:47.4142 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:47.4318 INFO Sucessfully got all packs
+2021-06-02 16:45:47.4575 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 16:45:47.4667 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 16:45:48.9897 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 16:45:49.0068 INFO Sucessfully got all measurementPositions
+2021-06-02 16:45:49.8332 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:49.8564 INFO Sucessfully got all packs
+2021-06-02 16:45:49.8757 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-06-02 16:45:49.8834 INFO Sucessfully got the measurement position with Id:2
+2021-06-02 16:45:52.4865 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:45:52.5059 INFO Sucessfully got all Measurements
+2021-06-02 16:45:52.5296 INFO Machine-GetMachines: Attempted Call
+2021-06-02 16:45:52.5441 INFO Sucessfully got all machines
+2021-06-02 16:45:52.5658 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-06-02 16:45:52.5722 INFO Sucessfully got the measurement position with Id:2
+2021-06-02 16:45:54.2929 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:54.2929 INFO Sucessfully got all packs
+2021-06-02 16:45:54.3218 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:54.3218 INFO Sucessfully got all packs
+2021-06-02 16:45:57.1439 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:57.1520 INFO Sucessfully got all packs
+2021-06-02 16:45:57.1751 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:57.1845 INFO Sucessfully got all packs
+2021-06-02 16:45:57.3981 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:57.3981 INFO Sucessfully got all packs
+2021-06-02 16:45:57.4358 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:57.4505 INFO Sucessfully got all packs
+2021-06-02 16:45:57.6079 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:57.6173 INFO Sucessfully got all packs
+2021-06-02 16:45:57.6345 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:57.6345 INFO Sucessfully got all packs
+2021-06-02 16:45:57.8626 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:57.8834 INFO Sucessfully got all packs
+2021-06-02 16:45:57.9235 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:57.9312 INFO Sucessfully got all packs
+2021-06-02 16:45:58.2627 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:58.2627 INFO Sucessfully got all packs
+2021-06-02 16:45:58.2862 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:58.2957 INFO Sucessfully got all packs
+2021-06-02 16:45:58.4955 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:58.5168 INFO Sucessfully got all packs
+2021-06-02 16:45:58.5436 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:58.5634 INFO Sucessfully got all packs
+2021-06-02 16:45:58.5728 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:58.5868 INFO Sucessfully got all packs
+2021-06-02 16:45:58.6087 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:58.6195 INFO Sucessfully got all packs
+2021-06-02 16:45:58.9647 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:58.9749 INFO Sucessfully got all packs
+2021-06-02 16:45:58.9928 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:58.9928 INFO Sucessfully got all packs
+2021-06-02 16:45:59.1342 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:59.1342 INFO Sucessfully got all packs
+2021-06-02 16:45:59.1636 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:45:59.1636 INFO Sucessfully got all packs
+2021-06-02 16:46:00.9605 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:00.9605 INFO Sucessfully got all packs
+2021-06-02 16:46:00.9937 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:01.0095 INFO Sucessfully got all packs
+2021-06-02 16:46:01.1960 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:01.2286 INFO Sucessfully got all packs
+2021-06-02 16:46:01.2448 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:01.2610 INFO Sucessfully got all packs
+2021-06-02 16:46:01.3518 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:01.3518 INFO Sucessfully got all packs
+2021-06-02 16:46:01.3864 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:01.3987 INFO Sucessfully got all packs
+2021-06-02 16:46:01.5511 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:01.5610 INFO Sucessfully got all packs
+2021-06-02 16:46:01.5845 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:01.6024 INFO Sucessfully got all packs
+2021-06-02 16:46:04.2348 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:46:04.2488 INFO Sucessfully got all Measurements
+2021-06-02 16:46:04.2953 INFO Machine-GetMachines: Attempted Call
+2021-06-02 16:46:04.2953 INFO Sucessfully got all machines
+2021-06-02 16:46:04.3244 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-06-02 16:46:04.3244 INFO Sucessfully got the measurement position with Id:2
+2021-06-02 16:46:05.5446 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:05.5534 INFO Sucessfully got all packs
+2021-06-02 16:46:05.5724 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-06-02 16:46:05.5724 INFO Sucessfully got the measurement position with Id:2
+2021-06-02 16:46:06.5373 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 16:46:06.5373 INFO Sucessfully got all measurementPositions
+2021-06-02 16:46:07.4619 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:07.4619 INFO Sucessfully got all packs
+2021-06-02 16:46:07.4878 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 16:46:07.4963 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 16:46:08.5057 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:46:08.5240 INFO Sucessfully got all Measurements
+2021-06-02 16:46:08.5497 INFO Machine-GetMachines: Attempted Call
+2021-06-02 16:46:08.5543 INFO Sucessfully got all machines
+2021-06-02 16:46:08.5685 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 16:46:08.5685 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 16:46:24.9942 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 16:46:25.1772 INFO Sucessfully got all FUS packs
+2021-06-02 16:46:26.6680 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:26.6680 INFO Sucessfully got all packs
+2021-06-02 16:46:26.7028 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:46:26.7142 INFO Sucessfully got all Measurements
+2021-06-02 16:46:28.4403 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:28.4489 INFO Sucessfully got all packs
+2021-06-02 16:46:28.4641 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:46:28.4824 INFO Sucessfully got all Measurements
+2021-06-02 16:46:29.5769 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:29.5842 INFO Sucessfully got all packs
+2021-06-02 16:46:29.6136 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:46:29.6245 INFO Sucessfully got all Measurements
+2021-06-02 16:46:35.3136 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:35.3248 INFO Sucessfully got all packs
+2021-06-02 16:46:35.3388 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:46:35.3538 INFO Sucessfully got all Measurements
+2021-06-02 16:46:36.2898 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:36.2898 INFO Sucessfully got all packs
+2021-06-02 16:46:36.3128 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:46:36.3252 INFO Sucessfully got all Measurements
+2021-06-02 16:46:37.1514 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:37.1514 INFO Sucessfully got all packs
+2021-06-02 16:46:37.1749 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:46:37.1858 INFO Sucessfully got all Measurements
+2021-06-02 16:46:37.6997 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:37.7192 INFO Sucessfully got all packs
+2021-06-02 16:46:37.7364 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:46:37.7508 INFO Sucessfully got all Measurements
+2021-06-02 16:46:38.0134 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:38.0237 INFO Sucessfully got all packs
+2021-06-02 16:46:38.0389 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:46:38.0389 INFO Sucessfully got all Measurements
+2021-06-02 16:46:38.4433 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:38.4433 INFO Sucessfully got all packs
+2021-06-02 16:46:38.4668 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:46:38.4823 INFO Sucessfully got all Measurements
+2021-06-02 16:46:38.8371 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:38.8371 INFO Sucessfully got all packs
+2021-06-02 16:46:38.8629 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:46:38.8742 INFO Sucessfully got all Measurements
+2021-06-02 16:46:39.2306 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:39.2306 INFO Sucessfully got all packs
+2021-06-02 16:46:39.2575 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:46:39.2575 INFO Sucessfully got all Measurements
+2021-06-02 16:46:46.2863 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:46.2992 INFO Sucessfully got all packs
+2021-06-02 16:46:46.3177 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:46:46.3321 INFO Sucessfully got all Measurements
+2021-06-02 16:46:53.7148 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:46:53.7285 INFO Sucessfully got all Measurements
+2021-06-02 16:46:53.7559 INFO Machine-GetMachines: Attempted Call
+2021-06-02 16:46:53.7559 INFO Sucessfully got all machines
+2021-06-02 16:46:53.7742 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 16:46:53.7742 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 16:46:53.9251 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:46:53.9382 INFO Sucessfully got all Measurements
+2021-06-02 16:46:53.9711 INFO Machine-GetMachines: Attempted Call
+2021-06-02 16:46:53.9776 INFO Sucessfully got all machines
+2021-06-02 16:46:54.0030 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 16:46:54.0122 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 16:46:56.9651 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 16:46:57.1099 INFO Sucessfully got all FUS packs
+2021-06-02 16:46:59.1731 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:46:59.1844 INFO Sucessfully got all packs
+2021-06-02 16:46:59.2060 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:46:59.2191 INFO Sucessfully got all Measurements
+2021-06-02 16:51:32.6169 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:51:32.6679 INFO Sucessfully got all packs
+2021-06-02 16:51:32.6930 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:51:32.7100 INFO Sucessfully got all Measurements
+2021-06-02 16:51:35.6373 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:51:35.6373 INFO Sucessfully got all packs
+2021-06-02 16:51:35.6718 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:51:35.6987 INFO Sucessfully got all Measurements
+2021-06-02 16:51:36.0831 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:51:36.0831 INFO Sucessfully got all packs
+2021-06-02 16:51:36.1111 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:51:36.1229 INFO Sucessfully got all Measurements
+2021-06-02 16:51:36.4733 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:51:36.4733 INFO Sucessfully got all packs
+2021-06-02 16:51:36.4982 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:51:36.5139 INFO Sucessfully got all Measurements
+2021-06-02 16:52:29.7275 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:52:29.7448 INFO Sucessfully got all packs
+2021-06-02 16:52:29.7758 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:52:29.7917 INFO Sucessfully got all Measurements
+2021-06-02 16:52:30.7697 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:52:30.7697 INFO Sucessfully got all packs
+2021-06-02 16:52:30.7969 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:52:30.8086 INFO Sucessfully got all Measurements
+2021-06-02 16:52:31.2876 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:52:31.3038 INFO Sucessfully got all packs
+2021-06-02 16:52:31.3200 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:52:31.3200 INFO Sucessfully got all Measurements
+2021-06-02 16:52:31.6981 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:52:31.6981 INFO Sucessfully got all packs
+2021-06-02 16:52:31.7223 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:52:31.7337 INFO Sucessfully got all Measurements
+2021-06-02 16:52:32.0774 INFO Pack-GetPacks: Attempted Call
+2021-06-02 16:52:32.0916 INFO Sucessfully got all packs
+2021-06-02 16:52:32.1155 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 16:52:32.1339 INFO Sucessfully got all Measurements
+2021-06-02 19:13:13.3249 INFO AspNetUsers-Login: Login attempted call from user Linards
+2021-06-02 19:13:13.6270 INFO AspNetUsers-Login: Linards Sucessfully Authenticated
+2021-06-02 19:13:14.0595 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 19:13:14.1313 INFO Sucessfully got all measurementPositions
+2021-06-02 19:13:16.0752 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:13:16.1536 INFO Sucessfully got all packs
+2021-06-02 19:13:16.2047 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-02 19:13:16.2316 INFO Sucessfully got the measurement position with Id:5
+2021-06-02 19:13:17.2019 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:13:17.2998 INFO Sucessfully got all Measurements
+2021-06-02 19:13:17.3693 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:13:17.3812 INFO Sucessfully got all Measurements
+2021-06-02 19:13:17.4165 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:13:17.4376 INFO Sucessfully got all machines
+2021-06-02 19:13:17.4545 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-02 19:13:17.4545 INFO Sucessfully got the measurement position with Id:5
+2021-06-02 19:13:19.5858 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:13:19.6142 INFO Sucessfully got all machines
+2021-06-02 19:13:19.6508 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:13:19.6700 INFO Sucessfully got all Measurements
+2021-06-02 19:13:19.7159 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-06-02 19:13:19.7296 INFO Sucessfully got the machine with Id:33
+2021-06-02 19:13:20.6916 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:13:20.7082 INFO Sucessfully got all packs
+2021-06-02 19:13:20.7345 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:13:20.7345 INFO Sucessfully got all machines
+2021-06-02 19:13:20.7639 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:13:20.7881 INFO Sucessfully got all Measurements
+2021-06-02 19:13:20.8229 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-06-02 19:13:20.8336 INFO Sucessfully got the machine with Id:33
+2021-06-02 19:13:20.8618 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-06-02 19:13:20.8941 INFO Sucessfully got the measurement type with Id:12
+2021-06-02 19:13:22.2628 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:13:22.2841 INFO Sucessfully got all packs
+2021-06-02 19:13:22.3073 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:13:22.3134 INFO Sucessfully got all machines
+2021-06-02 19:13:22.3354 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:13:22.3541 INFO Sucessfully got all Measurements
+2021-06-02 19:13:22.3787 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-06-02 19:13:22.3864 INFO Sucessfully got the machine with Id:33
+2021-06-02 19:13:22.4043 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-06-02 19:13:22.4043 INFO Sucessfully got the measurement type with Id:12
+2021-06-02 19:13:22.5795 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:13:22.5963 INFO Sucessfully got all packs
+2021-06-02 19:13:22.6202 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:13:22.6202 INFO Sucessfully got all machines
+2021-06-02 19:13:22.6428 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:13:22.6553 INFO Sucessfully got all Measurements
+2021-06-02 19:13:22.6855 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-06-02 19:13:22.6855 INFO Sucessfully got the machine with Id:33
+2021-06-02 19:13:22.7396 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-06-02 19:13:22.7476 INFO Sucessfully got the measurement type with Id:12
+2021-06-02 19:13:23.0891 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:13:23.0891 INFO Sucessfully got all packs
+2021-06-02 19:13:23.1388 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:13:23.1388 INFO Sucessfully got all machines
+2021-06-02 19:13:23.1731 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:13:23.2037 INFO Sucessfully got all Measurements
+2021-06-02 19:13:23.2542 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-06-02 19:13:23.2672 INFO Sucessfully got the machine with Id:33
+2021-06-02 19:13:23.3226 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-06-02 19:13:23.3337 INFO Sucessfully got the measurement type with Id:12
+2021-06-02 19:13:23.4909 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:13:23.5076 INFO Sucessfully got all packs
+2021-06-02 19:13:23.5290 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:13:23.5290 INFO Sucessfully got all machines
+2021-06-02 19:13:23.5495 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:13:23.5620 INFO Sucessfully got all Measurements
+2021-06-02 19:13:23.5868 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-06-02 19:13:23.5930 INFO Sucessfully got the machine with Id:33
+2021-06-02 19:13:23.6053 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-06-02 19:13:23.6053 INFO Sucessfully got the measurement type with Id:12
+2021-06-02 19:13:23.9763 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:13:23.9847 INFO Sucessfully got all packs
+2021-06-02 19:13:24.0040 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:13:24.0040 INFO Sucessfully got all machines
+2021-06-02 19:13:24.0255 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:13:24.0404 INFO Sucessfully got all Measurements
+2021-06-02 19:13:24.0670 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-06-02 19:13:24.0670 INFO Sucessfully got the machine with Id:33
+2021-06-02 19:13:24.0895 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-06-02 19:13:24.0895 INFO Sucessfully got the measurement type with Id:12
+2021-06-02 19:13:24.2420 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:13:24.2609 INFO Sucessfully got all packs
+2021-06-02 19:13:24.2894 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:13:24.2976 INFO Sucessfully got all machines
+2021-06-02 19:13:24.3211 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:13:24.3358 INFO Sucessfully got all Measurements
+2021-06-02 19:13:24.3596 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-06-02 19:13:24.3596 INFO Sucessfully got the machine with Id:33
+2021-06-02 19:13:24.3887 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-06-02 19:13:24.3887 INFO Sucessfully got the measurement type with Id:12
+2021-06-02 19:13:25.2188 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:13:25.2188 INFO Sucessfully got all machines
+2021-06-02 19:13:25.2464 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:13:25.2607 INFO Sucessfully got all Measurements
+2021-06-02 19:13:25.2854 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-06-02 19:13:25.2854 INFO Sucessfully got the machine with Id:33
+2021-06-02 19:13:25.9428 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:13:25.9630 INFO Sucessfully got all Measurements
+2021-06-02 19:13:25.9828 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:13:26.0023 INFO Sucessfully got all Measurements
+2021-06-02 19:13:26.0280 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:13:26.0280 INFO Sucessfully got all machines
+2021-06-02 19:13:26.0496 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-02 19:13:26.0496 INFO Sucessfully got the measurement position with Id:5
+2021-06-02 19:13:26.6963 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:13:26.7063 INFO Sucessfully got all packs
+2021-06-02 19:13:26.7229 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-02 19:13:26.7229 INFO Sucessfully got the measurement position with Id:5
+2021-06-02 19:13:27.7593 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:13:27.7896 INFO Sucessfully got all Measurements
+2021-06-02 19:13:27.8862 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:13:27.8862 INFO Sucessfully got all Measurements
+2021-06-02 19:13:27.9184 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:13:27.9184 INFO Sucessfully got all machines
+2021-06-02 19:13:27.9379 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-02 19:13:27.9379 INFO Sucessfully got the measurement position with Id:5
+2021-06-02 19:13:32.1397 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:13:32.1535 INFO Sucessfully got all packs
+2021-06-02 19:13:32.1709 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-02 19:13:32.1709 INFO Sucessfully got the measurement position with Id:5
+2021-06-02 19:13:33.9702 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 19:13:33.9792 INFO Sucessfully got all measurementPositions
+2021-06-02 19:13:34.9194 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:13:34.9348 INFO Sucessfully got all packs
+2021-06-02 19:13:34.9524 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:13:34.9524 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:13:35.7542 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:13:35.7685 INFO Sucessfully got all Measurements
+2021-06-02 19:13:35.7970 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:13:35.7970 INFO Sucessfully got all machines
+2021-06-02 19:13:35.8237 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:13:35.8237 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:13:37.8838 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:13:38.0271 INFO Sucessfully got all FUS packs
+2021-06-02 19:13:39.8597 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:13:39.9733 INFO Sucessfully got all FUS packs
+2021-06-02 19:13:40.3810 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:13:40.5157 INFO Sucessfully got all FUS packs
+2021-06-02 19:13:40.6346 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:13:40.7679 INFO Sucessfully got all FUS packs
+2021-06-02 19:13:40.8757 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:13:41.0104 INFO Sucessfully got all FUS packs
+2021-06-02 19:13:47.8912 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:13:48.0179 INFO Sucessfully got all FUS packs
+2021-06-02 19:13:48.0641 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:13:48.2069 INFO Sucessfully got all FUS packs
+2021-06-02 19:13:48.2816 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:13:48.4216 INFO Sucessfully got all FUS packs
+2021-06-02 19:13:49.5127 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:13:49.6409 INFO Sucessfully got all FUS packs
+2021-06-02 19:13:49.8687 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:13:49.9892 INFO Sucessfully got all FUS packs
+2021-06-02 19:13:50.0702 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:13:50.2163 INFO Sucessfully got all FUS packs
+2021-06-02 19:13:50.2627 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:13:50.3906 INFO Sucessfully got all FUS packs
+2021-06-02 19:13:50.4384 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:13:50.6072 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:13:50.6072 INFO Sucessfully got all FUS packs
+2021-06-02 19:13:50.7337 INFO Sucessfully got all FUS packs
+2021-06-02 19:13:54.6310 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:13:54.7549 INFO Sucessfully got all FUS packs
+2021-06-02 19:13:55.2014 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:13:55.4226 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:13:55.4417 INFO Sucessfully got all FUS packs
+2021-06-02 19:13:55.7396 INFO Sucessfully got all FUS packs
+2021-06-02 19:14:07.1873 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:14:07.4044 INFO Sucessfully got all FUS packs
+2021-06-02 19:14:08.3155 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:14:08.4567 INFO Sucessfully got all FUS packs
+2021-06-02 19:14:08.5382 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:14:08.6711 INFO Sucessfully got all FUS packs
+2021-06-02 19:14:08.7133 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:14:08.8519 INFO Sucessfully got all FUS packs
+2021-06-02 19:14:09.0242 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:14:09.1590 INFO Sucessfully got all FUS packs
+2021-06-02 19:14:09.2475 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:14:09.3781 INFO Sucessfully got all FUS packs
+2021-06-02 19:14:11.1126 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:14:11.1470 INFO Sucessfully got all Measurements
+2021-06-02 19:14:11.1840 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:14:11.1840 INFO Sucessfully got all machines
+2021-06-02 19:14:11.2350 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:14:11.2647 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:14:11.5892 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:14:11.6651 INFO Sucessfully got all Measurements
+2021-06-02 19:14:11.7042 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:14:11.7042 INFO Sucessfully got all machines
+2021-06-02 19:14:11.7345 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:14:11.7345 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:14:14.0878 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:14:14.2872 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:14:14.3235 INFO Sucessfully got all FUS packs
+2021-06-02 19:14:14.4147 INFO Sucessfully got all FUS packs
+2021-06-02 19:14:14.4817 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:14:14.6451 INFO Sucessfully got all FUS packs
+2021-06-02 19:14:23.3879 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:14:23.5990 INFO Sucessfully got all FUS packs
+2021-06-02 19:14:23.6829 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:14:23.7887 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:14:23.8491 INFO Sucessfully got all FUS packs
+2021-06-02 19:14:23.9077 INFO Sucessfully got all FUS packs
+2021-06-02 19:14:44.5948 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:14:44.7134 INFO Sucessfully got all FUS packs
+2021-06-02 19:14:44.8263 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:14:44.9249 INFO Sucessfully got all FUS packs
+2021-06-02 19:14:45.8836 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:14:46.0321 INFO Sucessfully got all FUS packs
+2021-06-02 19:14:47.9473 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:14:47.9546 INFO Sucessfully got all packs
+2021-06-02 19:14:47.9791 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:14:47.9791 INFO Sucessfully got all Measurements
+2021-06-02 19:14:51.1540 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:14:51.1540 INFO Sucessfully got all packs
+2021-06-02 19:14:51.1837 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:14:51.2004 INFO Sucessfully got all Measurements
+2021-06-02 19:14:53.6273 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:14:53.6360 INFO Sucessfully got all packs
+2021-06-02 19:14:53.6601 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:14:53.6747 INFO Sucessfully got all Measurements
+2021-06-02 19:14:54.0756 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:14:54.1005 INFO Sucessfully got all packs
+2021-06-02 19:14:54.1210 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:14:54.1426 INFO Sucessfully got all Measurements
+2021-06-02 19:14:54.8514 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:14:54.8589 INFO Sucessfully got all packs
+2021-06-02 19:14:54.8792 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:14:54.8914 INFO Sucessfully got all Measurements
+2021-06-02 19:15:17.2911 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:15:17.2934 INFO Sucessfully got all packs
+2021-06-02 19:15:17.3225 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:15:17.3225 INFO Sucessfully got all Measurements
+2021-06-02 19:15:55.8124 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-06-02 19:15:55.8438 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-06-02 19:15:55.8936 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 19:15:55.9071 INFO Sucessfully got all measurementPositions
+2021-06-02 19:15:56.9878 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:15:57.0033 INFO Sucessfully got all packs
+2021-06-02 19:15:57.0201 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:15:57.0343 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:15:58.1605 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:15:58.1870 INFO Sucessfully got all Measurements
+2021-06-02 19:15:58.2254 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:15:58.2448 INFO Sucessfully got all machines
+2021-06-02 19:15:58.2619 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:15:58.2619 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:16:05.7248 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:16:05.8120 INFO Sucessfully got all FUS packs
+2021-06-02 19:16:10.1191 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:16:10.1389 INFO Sucessfully got all Measurements
+2021-06-02 19:16:10.1656 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:16:10.1742 INFO Sucessfully got all machines
+2021-06-02 19:16:10.1963 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:16:10.2037 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:16:10.4752 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:16:10.4875 INFO Sucessfully got all Measurements
+2021-06-02 19:16:10.5183 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:16:10.5362 INFO Sucessfully got all machines
+2021-06-02 19:16:10.5529 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:16:10.5636 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:16:11.9376 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:16:11.9513 INFO Sucessfully got all Measurements
+2021-06-02 19:16:11.9780 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:16:11.9832 INFO Sucessfully got all machines
+2021-06-02 19:16:12.0039 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:16:12.0114 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:16:12.2248 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:16:12.2359 INFO Sucessfully got all Measurements
+2021-06-02 19:16:12.2784 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:16:12.2970 INFO Sucessfully got all machines
+2021-06-02 19:16:12.3231 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:16:12.3231 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:16:12.9770 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:16:12.9872 INFO Sucessfully got all Measurements
+2021-06-02 19:16:13.0309 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:16:13.0309 INFO Sucessfully got all machines
+2021-06-02 19:16:13.0643 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:16:13.0643 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:16:13.2846 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:16:13.3004 INFO Sucessfully got all Measurements
+2021-06-02 19:16:13.3268 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:16:13.3268 INFO Sucessfully got all machines
+2021-06-02 19:16:13.3530 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:16:13.3530 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:16:13.8222 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:16:13.8559 INFO Sucessfully got all Measurements
+2021-06-02 19:16:13.8920 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:16:13.8920 INFO Sucessfully got all machines
+2021-06-02 19:16:13.9215 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:16:13.9215 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:16:14.1448 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:16:14.1872 INFO Sucessfully got all Measurements
+2021-06-02 19:16:14.2054 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:16:14.2054 INFO Sucessfully got all machines
+2021-06-02 19:16:14.2302 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:16:14.2302 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:16:34.8520 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:16:34.8674 INFO Sucessfully got all Measurements
+2021-06-02 19:16:34.9115 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:16:34.9173 INFO Sucessfully got all machines
+2021-06-02 19:16:34.9427 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:16:34.9644 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:16:35.1751 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:16:35.1916 INFO Sucessfully got all Measurements
+2021-06-02 19:16:35.2202 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:16:35.2202 INFO Sucessfully got all machines
+2021-06-02 19:16:35.2608 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:16:35.2752 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:16:47.9202 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:16:47.9396 INFO Sucessfully got all packs
+2021-06-02 19:16:47.9677 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:16:47.9677 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:16:50.3590 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 19:16:50.3745 INFO Sucessfully got all measurementPositions
+2021-06-02 19:16:51.4110 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:16:51.4185 INFO Sucessfully got all packs
+2021-06-02 19:16:51.4371 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-06-02 19:16:51.4371 INFO Sucessfully got the measurement position with Id:2
+2021-06-02 19:16:55.1961 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:16:55.2150 INFO Sucessfully got all Measurements
+2021-06-02 19:16:55.2399 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:16:55.2506 INFO Sucessfully got all machines
+2021-06-02 19:16:55.2663 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-06-02 19:16:55.2663 INFO Sucessfully got the measurement position with Id:2
+2021-06-02 19:16:56.4192 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:16:56.4567 INFO Sucessfully got all packs
+2021-06-02 19:16:56.4875 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:16:56.5020 INFO Sucessfully got all packs
+2021-06-02 19:17:15.5020 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:17:15.6575 INFO Sucessfully got all FUS packs
+2021-06-02 19:17:17.4199 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:17:17.4199 INFO Sucessfully got all machines
+2021-06-02 19:17:17.4508 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:17:17.4670 INFO Sucessfully got all Measurements
+2021-06-02 19:17:20.6362 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:17:20.6362 INFO Sucessfully got all machines
+2021-06-02 19:17:20.6633 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:17:20.6810 INFO Sucessfully got all Measurements
+2021-06-02 19:17:20.9017 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:17:20.9017 INFO Sucessfully got all machines
+2021-06-02 19:17:20.9272 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:17:20.9440 INFO Sucessfully got all Measurements
+2021-06-02 19:17:21.0384 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:17:21.0429 INFO Sucessfully got all machines
+2021-06-02 19:17:21.0585 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:17:21.0585 INFO Sucessfully got all Measurements
+2021-06-02 19:17:21.2582 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:17:21.2668 INFO Sucessfully got all machines
+2021-06-02 19:17:21.2885 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:17:21.2997 INFO Sucessfully got all Measurements
+2021-06-02 19:17:21.4947 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:17:21.4947 INFO Sucessfully got all machines
+2021-06-02 19:17:21.5466 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:17:21.5614 INFO Sucessfully got all Measurements
+2021-06-02 19:17:21.7619 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:17:21.7619 INFO Sucessfully got all machines
+2021-06-02 19:17:21.7867 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:17:21.8024 INFO Sucessfully got all Measurements
+2021-06-02 19:17:26.2630 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:17:26.2840 INFO Sucessfully got all Measurements
+2021-06-02 19:17:26.3093 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:17:26.3093 INFO Sucessfully got all machines
+2021-06-02 19:17:26.3395 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-06-02 19:17:26.3395 INFO Sucessfully got the measurement position with Id:2
+2021-06-02 19:17:30.1353 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:17:30.1353 INFO Sucessfully got all packs
+2021-06-02 19:17:30.1657 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-06-02 19:17:30.1657 INFO Sucessfully got the measurement position with Id:2
+2021-06-02 19:17:30.7529 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 19:17:30.7529 INFO Sucessfully got all measurementPositions
+2021-06-02 19:17:32.4134 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:17:32.4206 INFO Sucessfully got all packs
+2021-06-02 19:17:32.4415 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:17:32.4473 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:17:39.7870 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:17:39.8243 INFO Sucessfully got all Measurements
+2021-06-02 19:17:39.8698 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:17:39.8698 INFO Sucessfully got all machines
+2021-06-02 19:17:39.9080 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:17:39.9158 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:17:41.5489 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:17:41.6420 INFO Sucessfully got all FUS packs
+2021-06-02 19:17:43.6298 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:17:43.6382 INFO Sucessfully got all machines
+2021-06-02 19:17:43.6607 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:17:43.6750 INFO Sucessfully got all Measurements
+2021-06-02 19:17:44.9731 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:17:44.9799 INFO Sucessfully got all machines
+2021-06-02 19:17:45.0004 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:17:45.0141 INFO Sucessfully got all Measurements
+2021-06-02 19:17:45.8111 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:17:45.8111 INFO Sucessfully got all machines
+2021-06-02 19:17:45.8364 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:17:45.8505 INFO Sucessfully got all Measurements
+2021-06-02 19:55:59.1932 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:55:59.2387 INFO Sucessfully got all machines
+2021-06-02 19:55:59.2727 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:55:59.2840 INFO Sucessfully got all Measurements
+2021-06-02 19:55:59.5702 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:55:59.5913 INFO Sucessfully got all machines
+2021-06-02 19:55:59.6132 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:55:59.6262 INFO Sucessfully got all Measurements
+2021-06-02 19:56:00.2447 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:00.2500 INFO Sucessfully got all machines
+2021-06-02 19:56:00.2500 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:00.2899 INFO Sucessfully got all Measurements
+2021-06-02 19:56:00.4657 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:00.4719 INFO Sucessfully got all machines
+2021-06-02 19:56:00.4934 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:00.5071 INFO Sucessfully got all Measurements
+2021-06-02 19:56:00.9876 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:00.9876 INFO Sucessfully got all machines
+2021-06-02 19:56:01.0186 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:01.0544 INFO Sucessfully got all Measurements
+2021-06-02 19:56:01.2228 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:01.2574 INFO Sucessfully got all machines
+2021-06-02 19:56:01.2859 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:01.3044 INFO Sucessfully got all Measurements
+2021-06-02 19:56:01.6885 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:01.6885 INFO Sucessfully got all machines
+2021-06-02 19:56:01.7106 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:01.7223 INFO Sucessfully got all Measurements
+2021-06-02 19:56:01.8672 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:01.8760 INFO Sucessfully got all machines
+2021-06-02 19:56:01.8981 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:01.9093 INFO Sucessfully got all Measurements
+2021-06-02 19:56:02.2848 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:02.2848 INFO Sucessfully got all machines
+2021-06-02 19:56:02.3100 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:02.3220 INFO Sucessfully got all Measurements
+2021-06-02 19:56:02.4842 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:02.4842 INFO Sucessfully got all machines
+2021-06-02 19:56:02.5295 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:02.5479 INFO Sucessfully got all Measurements
+2021-06-02 19:56:02.6097 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:02.6097 INFO Sucessfully got all machines
+2021-06-02 19:56:02.6278 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:02.6400 INFO Sucessfully got all Measurements
+2021-06-02 19:56:02.8222 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:02.8436 INFO Sucessfully got all machines
+2021-06-02 19:56:02.8677 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:02.8925 INFO Sucessfully got all Measurements
+2021-06-02 19:56:02.9340 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:02.9395 INFO Sucessfully got all machines
+2021-06-02 19:56:02.9626 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:02.9819 INFO Sucessfully got all Measurements
+2021-06-02 19:56:03.1446 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:03.1572 INFO Sucessfully got all machines
+2021-06-02 19:56:03.2343 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:03.2686 INFO Sucessfully got all Measurements
+2021-06-02 19:56:03.2686 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:03.2835 INFO Sucessfully got all machines
+2021-06-02 19:56:03.3205 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:03.3967 INFO Sucessfully got all Measurements
+2021-06-02 19:56:03.5570 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:03.5652 INFO Sucessfully got all machines
+2021-06-02 19:56:03.5879 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:03.6034 INFO Sucessfully got all Measurements
+2021-06-02 19:56:03.9784 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:03.9888 INFO Sucessfully got all machines
+2021-06-02 19:56:04.0042 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:04.0691 INFO Sucessfully got all Measurements
+2021-06-02 19:56:04.2798 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:04.2798 INFO Sucessfully got all machines
+2021-06-02 19:56:04.3044 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:04.3335 INFO Sucessfully got all Measurements
+2021-06-02 19:56:04.7216 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:04.7216 INFO Sucessfully got all machines
+2021-06-02 19:56:04.7490 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:04.7642 INFO Sucessfully got all Measurements
+2021-06-02 19:56:04.9306 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:04.9371 INFO Sucessfully got all machines
+2021-06-02 19:56:04.9593 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:04.9722 INFO Sucessfully got all Measurements
+2021-06-02 19:56:05.0878 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:05.0944 INFO Sucessfully got all machines
+2021-06-02 19:56:05.1115 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:05.1258 INFO Sucessfully got all Measurements
+2021-06-02 19:56:05.3129 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:05.3514 INFO Sucessfully got all machines
+2021-06-02 19:56:05.3713 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:05.3834 INFO Sucessfully got all Measurements
+2021-06-02 19:56:05.4142 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:05.4230 INFO Sucessfully got all machines
+2021-06-02 19:56:05.4230 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:05.4449 INFO Sucessfully got all Measurements
+2021-06-02 19:56:05.6492 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:56:05.6589 INFO Sucessfully got all machines
+2021-06-02 19:56:05.6932 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:56:05.7117 INFO Sucessfully got all Measurements
+2021-06-02 19:57:18.8004 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:57:18.8250 INFO Sucessfully got all Measurements
+2021-06-02 19:57:18.8597 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:57:18.8597 INFO Sucessfully got all machines
+2021-06-02 19:57:18.8840 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:57:18.8981 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:57:21.1021 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 19:57:21.2379 INFO Sucessfully got all FUS packs
+2021-06-02 19:57:25.2758 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:57:25.2813 INFO Sucessfully got all machines
+2021-06-02 19:57:25.3022 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:57:25.3159 INFO Sucessfully got all Measurements
+2021-06-02 19:57:27.3936 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:57:27.3936 INFO Sucessfully got all machines
+2021-06-02 19:57:27.4145 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:57:27.4289 INFO Sucessfully got all Measurements
+2021-06-02 19:58:32.3724 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:58:32.3773 INFO Sucessfully got all machines
+2021-06-02 19:58:32.3946 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:58:32.4082 INFO Sucessfully got all Measurements
+2021-06-02 19:58:33.4456 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:58:33.4536 INFO Sucessfully got all machines
+2021-06-02 19:58:33.4536 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:58:33.4763 INFO Sucessfully got all Measurements
+2021-06-02 19:58:51.1611 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-06-02 19:58:51.1934 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-06-02 19:58:51.2405 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 19:58:51.2535 INFO Sucessfully got all measurementPositions
+2021-06-02 19:58:52.8620 INFO Pack-GetPacks: Attempted Call
+2021-06-02 19:58:52.8733 INFO Sucessfully got all packs
+2021-06-02 19:58:52.8948 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:58:52.9116 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 19:58:53.7475 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 19:58:53.7613 INFO Sucessfully got all Measurements
+2021-06-02 19:58:53.7871 INFO Machine-GetMachines: Attempted Call
+2021-06-02 19:58:53.7871 INFO Sucessfully got all machines
+2021-06-02 19:58:53.8150 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 19:58:53.8150 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 20:00:07.4746 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 20:00:07.5632 INFO Sucessfully got all FUS packs
+2021-06-02 20:00:11.4486 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:00:11.4580 INFO Sucessfully got all machines
+2021-06-02 20:00:11.4836 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:00:11.4984 INFO Sucessfully got all Measurements
+2021-06-02 20:00:12.8193 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:00:12.8291 INFO Sucessfully got all machines
+2021-06-02 20:00:12.8416 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:00:12.8416 INFO Sucessfully got all Measurements
+2021-06-02 20:00:13.0115 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:00:13.0184 INFO Sucessfully got all machines
+2021-06-02 20:00:13.0466 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:00:13.0649 INFO Sucessfully got all Measurements
+2021-06-02 20:00:13.3622 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:00:13.3622 INFO Sucessfully got all machines
+2021-06-02 20:00:13.3825 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:00:13.4078 INFO Sucessfully got all Measurements
+2021-06-02 20:00:13.5899 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:00:13.6020 INFO Sucessfully got all machines
+2021-06-02 20:00:13.6247 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:00:13.6247 INFO Sucessfully got all Measurements
+2021-06-02 20:00:13.8079 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:00:13.8205 INFO Sucessfully got all machines
+2021-06-02 20:00:13.8383 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:00:13.8492 INFO Sucessfully got all Measurements
+2021-06-02 20:00:14.0592 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:00:14.0643 INFO Sucessfully got all machines
+2021-06-02 20:00:14.0873 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:00:14.1178 INFO Sucessfully got all Measurements
+2021-06-02 20:00:14.1952 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:00:14.2039 INFO Sucessfully got all machines
+2021-06-02 20:00:14.2203 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:00:14.2337 INFO Sucessfully got all Measurements
+2021-06-02 20:00:14.5862 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:00:14.5917 INFO Sucessfully got all machines
+2021-06-02 20:00:14.6109 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:00:14.6227 INFO Sucessfully got all Measurements
+2021-06-02 20:00:14.8191 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:00:14.8321 INFO Sucessfully got all machines
+2021-06-02 20:00:14.8511 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:00:14.8900 INFO Sucessfully got all Measurements
+2021-06-02 20:00:15.2870 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:00:15.2991 INFO Sucessfully got all machines
+2021-06-02 20:00:15.3120 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:00:15.3120 INFO Sucessfully got all Measurements
+2021-06-02 20:00:15.4805 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:00:15.4869 INFO Sucessfully got all machines
+2021-06-02 20:00:15.5052 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:00:15.5198 INFO Sucessfully got all Measurements
+2021-06-02 20:04:52.7309 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-06-02 20:04:53.0025 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-06-02 20:04:53.4069 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 20:04:53.4480 INFO Sucessfully got all measurementPositions
+2021-06-02 20:04:54.3196 INFO Pack-GetPacks: Attempted Call
+2021-06-02 20:04:54.3816 INFO Sucessfully got all packs
+2021-06-02 20:04:54.4325 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 20:04:54.4551 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 20:04:55.6054 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:04:55.6938 INFO Sucessfully got all Measurements
+2021-06-02 20:04:55.7629 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:04:55.7908 INFO Sucessfully got all machines
+2021-06-02 20:04:55.8101 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 20:04:55.8101 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 20:05:01.6566 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 20:05:01.7785 INFO Sucessfully got all FUS packs
+2021-06-02 20:05:03.2072 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:05:03.2072 INFO Sucessfully got all machines
+2021-06-02 20:05:03.2309 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:05:03.2486 INFO Sucessfully got all Measurements
+2021-06-02 20:05:04.7226 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:05:04.7308 INFO Sucessfully got all machines
+2021-06-02 20:05:04.7535 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:05:04.7781 INFO Sucessfully got all Measurements
+2021-06-02 20:05:05.8369 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:05:05.8436 INFO Sucessfully got all machines
+2021-06-02 20:05:05.8600 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:05:05.8734 INFO Sucessfully got all Measurements
+2021-06-02 20:05:06.6200 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:05:06.6268 INFO Sucessfully got all machines
+2021-06-02 20:05:06.6418 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:05:06.6557 INFO Sucessfully got all Measurements
+2021-06-02 20:05:07.0221 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:05:07.0285 INFO Sucessfully got all machines
+2021-06-02 20:05:07.0788 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:05:07.0933 INFO Sucessfully got all Measurements
+2021-06-02 20:05:07.7225 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:05:07.7321 INFO Sucessfully got all machines
+2021-06-02 20:05:07.7321 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:05:07.7636 INFO Sucessfully got all Measurements
+2021-06-02 20:05:08.0679 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:05:08.0756 INFO Sucessfully got all machines
+2021-06-02 20:05:08.0898 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:05:08.0898 INFO Sucessfully got all Measurements
+2021-06-02 20:05:08.4754 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:05:08.4832 INFO Sucessfully got all machines
+2021-06-02 20:05:08.5012 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:05:08.5238 INFO Sucessfully got all Measurements
+2021-06-02 20:05:08.8507 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:05:08.8578 INFO Sucessfully got all machines
+2021-06-02 20:05:08.8722 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:05:08.8895 INFO Sucessfully got all Measurements
+2021-06-02 20:05:09.2099 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:05:09.2152 INFO Sucessfully got all machines
+2021-06-02 20:05:09.2152 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:05:09.2400 INFO Sucessfully got all Measurements
+2021-06-02 20:05:09.4843 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:05:09.4843 INFO Sucessfully got all machines
+2021-06-02 20:05:09.5095 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:05:09.5288 INFO Sucessfully got all Measurements
+2021-06-02 20:05:12.4057 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:05:12.4202 INFO Sucessfully got all machines
+2021-06-02 20:05:12.4501 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:05:12.4838 INFO Sucessfully got all Measurements
+2021-06-02 20:28:30.0428 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:28:30.0843 INFO Sucessfully got all machines
+2021-06-02 20:28:30.1478 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:28:30.1907 INFO Sucessfully got all Measurements
+2021-06-02 20:58:58.5457 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-06-02 20:58:58.6791 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-06-02 20:58:58.7291 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 20:58:58.7397 INFO Sucessfully got all measurementPositions
+2021-06-02 20:59:02.8630 INFO Pack-GetPacks: Attempted Call
+2021-06-02 20:59:02.8839 INFO Sucessfully got all packs
+2021-06-02 20:59:02.9060 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 20:59:02.9060 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 20:59:04.0477 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 20:59:04.0775 INFO Sucessfully got all Measurements
+2021-06-02 20:59:04.1027 INFO Machine-GetMachines: Attempted Call
+2021-06-02 20:59:04.1148 INFO Sucessfully got all machines
+2021-06-02 20:59:04.1365 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 20:59:04.1419 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 20:59:07.1170 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 20:59:07.3662 INFO Sucessfully got all FUS packs
+2021-06-02 21:02:15.0805 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 21:02:15.2171 INFO Sucessfully got all FUS packs
+2021-06-02 21:02:16.4523 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 21:02:16.5452 INFO Sucessfully got all FUS packs
+2021-06-02 21:02:16.9801 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 21:02:17.1215 INFO Sucessfully got all FUS packs
+2021-06-02 21:02:17.1543 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 21:02:17.2453 INFO Sucessfully got all FUS packs
+2021-06-02 21:02:23.7398 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 21:02:23.8600 INFO Sucessfully got all FUS packs
+2021-06-02 21:02:24.8473 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 21:02:24.9374 INFO Sucessfully got all FUS packs
+2021-06-02 21:02:26.8331 INFO Machine-GetMachines: Attempted Call
+2021-06-02 21:02:26.8456 INFO Sucessfully got all machines
+2021-06-02 21:02:26.8617 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 21:02:26.8777 INFO Sucessfully got all Measurements
+2021-06-02 21:02:33.1877 INFO Pack-GetPacks: Attempted Call
+2021-06-02 21:02:33.1877 INFO Sucessfully got all packs
+2021-06-02 21:02:33.2297 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 21:02:33.2494 INFO Sucessfully got all Measurements
+2021-06-02 21:02:41.5718 INFO Pack-GetPacks: Attempted Call
+2021-06-02 21:02:41.5825 INFO Sucessfully got all packs
+2021-06-02 21:02:41.6099 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 21:02:41.6271 INFO Sucessfully got all Measurements
+2021-06-02 21:02:56.2241 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-06-02 21:02:56.2697 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-06-02 21:02:56.3513 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 21:02:56.3624 INFO Sucessfully got all measurementPositions
+2021-06-02 21:02:57.1066 INFO Pack-GetPacks: Attempted Call
+2021-06-02 21:02:57.1300 INFO Sucessfully got all packs
+2021-06-02 21:02:57.1534 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 21:02:57.1534 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 21:02:58.0155 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 21:02:58.0360 INFO Sucessfully got all Measurements
+2021-06-02 21:02:58.0544 INFO Machine-GetMachines: Attempted Call
+2021-06-02 21:02:58.0635 INFO Sucessfully got all machines
+2021-06-02 21:02:58.0770 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 21:02:58.0770 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 21:02:59.9887 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 21:03:00.0984 INFO Sucessfully got all FUS packs
+2021-06-02 21:03:01.8992 INFO Machine-GetMachines: Attempted Call
+2021-06-02 21:03:01.9093 INFO Sucessfully got all machines
+2021-06-02 21:03:01.9228 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 21:03:01.9403 INFO Sucessfully got all Measurements
+2021-06-02 21:03:04.2342 INFO Pack-GetPacks: Attempted Call
+2021-06-02 21:03:04.2342 INFO Sucessfully got all packs
+2021-06-02 21:03:04.2648 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 21:03:04.2815 INFO Sucessfully got all Measurements
+2021-06-02 21:03:07.0199 INFO Machine-GetMachines: Attempted Call
+2021-06-02 21:03:07.0362 INFO Sucessfully got all machines
+2021-06-02 21:03:07.0532 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 21:03:07.0708 INFO Sucessfully got all Measurements
+2021-06-02 21:03:08.5244 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 21:03:08.5442 INFO Sucessfully got all Measurements
+2021-06-02 21:03:08.5671 INFO Machine-GetMachines: Attempted Call
+2021-06-02 21:03:08.5671 INFO Sucessfully got all machines
+2021-06-02 21:03:08.5889 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 21:03:08.5990 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 21:03:13.9367 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 21:03:14.0442 INFO Sucessfully got all FUS packs
+2021-06-02 21:03:47.1037 INFO Machine-GetMachines: Attempted Call
+2021-06-02 21:03:47.1171 INFO Sucessfully got all machines
+2021-06-02 21:03:47.1455 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 21:03:47.1666 INFO Sucessfully got all Measurements
+2021-06-02 21:04:07.3318 INFO Pack-GetPacks: Attempted Call
+2021-06-02 21:04:07.3547 INFO Sucessfully got all packs
+2021-06-02 21:04:07.3834 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 21:04:07.3950 INFO Sucessfully got all Measurements
+2021-06-02 23:52:58.5605 INFO Machine-GetMachines: Attempted Call
+2021-06-02 23:52:58.6333 INFO Sucessfully got all machines
+2021-06-02 23:53:14.9685 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-06-02 23:53:15.0690 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-06-02 23:53:15.1319 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-02 23:53:15.1464 INFO Sucessfully got all measurementPositions
+2021-06-02 23:53:17.2631 INFO Pack-GetPacks: Attempted Call
+2021-06-02 23:53:17.2794 INFO Sucessfully got all packs
+2021-06-02 23:53:17.3267 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 23:53:17.3492 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 23:53:18.6912 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 23:53:18.7088 INFO Sucessfully got all Measurements
+2021-06-02 23:53:18.7287 INFO Machine-GetMachines: Attempted Call
+2021-06-02 23:53:18.7378 INFO Sucessfully got all machines
+2021-06-02 23:53:18.7510 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-02 23:53:18.7510 INFO Sucessfully got the measurement position with Id:1
+2021-06-02 23:53:25.5619 INFO FusPack-GetFusPacks: Attempted Call
+2021-06-02 23:53:25.9347 INFO Sucessfully got all FUS packs
+2021-06-02 23:53:27.4640 INFO Machine-GetMachines: Attempted Call
+2021-06-02 23:53:27.4706 INFO Sucessfully got all machines
+2021-06-02 23:53:27.4925 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 23:53:27.5034 INFO Sucessfully got all Measurements
+2021-06-02 23:53:36.9746 INFO Pack-GetPacks: Attempted Call
+2021-06-02 23:53:37.0071 INFO Sucessfully got all packs
+2021-06-02 23:53:37.0360 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-02 23:53:37.0661 INFO Sucessfully got all Measurements

@@ -213,7 +213,7 @@ namespace LKDUS_API.Controllers
                     return BadRequest(ModelState);
 
                 }
-                measurementCreateDTO.DateCreated = DateTime.Now.ToString();
+                measurementCreateDTO.DateCreated = DateTime.Now;//.ToString();
                 var measurement = this.mapper.Map<Measurement>(measurementCreateDTO);
                 var isGood = await measurementRepository.Create(measurement);
                 if (!isGood)
@@ -340,7 +340,7 @@ namespace LKDUS_API.Controllers
                     return BadRequest(ModelState);
 
                 }
-                measurementUpdateDTO.DateCreated = DateTime.Now.ToString();
+                measurementUpdateDTO.DateCreated = DateTime.Now;//.ToString();
                 var measurement = this.mapper.Map<Measurement>(measurementUpdateDTO);
                 var isGood = await this.measurementRepository.Update(measurement);
                 if (!isGood)

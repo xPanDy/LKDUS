@@ -1,0 +1,740 @@
+2021-06-14 08:10:30.6257 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 08:10:31.4513 INFO Machine-Create: Machine creation was created
+2021-06-14 08:10:31.4539 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 08:15:38.9242 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:15:39.0643 INFO Sucessfully got all packs
+2021-06-14 08:15:39.1225 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:15:39.1433 INFO Sucessfully got all packs
+2021-06-14 08:15:39.6223 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:15:39.6394 INFO Sucessfully got all packs
+2021-06-14 08:15:39.6827 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:15:39.6979 INFO Sucessfully got all packs
+2021-06-14 08:15:39.7272 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:15:39.7435 INFO Sucessfully got all packs
+2021-06-14 08:15:39.7573 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:15:39.7847 INFO Sucessfully got all packs
+2021-06-14 08:15:40.1609 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:15:40.1609 INFO Sucessfully got all packs
+2021-06-14 08:15:40.1931 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:15:40.1931 INFO Sucessfully got all packs
+2021-06-14 08:15:41.5554 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-14 08:15:41.6505 INFO Sucessfully got the measurement type with Id:11
+2021-06-14 08:15:41.7003 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 08:15:41.7050 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 08:16:14.5229 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:16:14.5455 INFO Sucessfully got all packs
+2021-06-14 08:16:14.5892 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-14 08:16:14.6166 INFO Sucessfully got the measurement position with Id:5
+2021-06-14 08:16:14.9461 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:16:14.9595 INFO Sucessfully got all packs
+2021-06-14 08:16:15.0066 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-14 08:16:15.0199 INFO Sucessfully got the measurement position with Id:5
+2021-06-14 08:16:18.4271 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-14 08:16:18.4700 INFO Sucessfully got all Measurements
+2021-06-14 08:16:18.5216 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-14 08:16:18.5216 INFO Sucessfully got all Measurements
+2021-06-14 08:16:18.5562 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:16:18.5945 INFO Sucessfully got all machines
+2021-06-14 08:16:18.6224 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-14 08:16:18.6328 INFO Sucessfully got the measurement position with Id:5
+2021-06-14 08:19:04.7050 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:04.7341 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:05.1396 INFO Sucessfully got all packs
+2021-06-14 08:19:05.1396 INFO Sucessfully got all packs
+2021-06-14 08:19:05.3149 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:05.3149 INFO Sucessfully got all packs
+2021-06-14 08:19:05.3594 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-14 08:19:05.3778 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:05.4191 INFO Sucessfully got all packs
+2021-06-14 08:19:05.4671 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-14 08:19:05.4792 INFO Sucessfully got the measurement position with Id:5
+2021-06-14 08:19:05.4792 INFO Sucessfully got the measurement position with Id:5
+2021-06-14 08:19:07.4007 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:07.4646 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:07.4726 INFO Sucessfully got all packs
+2021-06-14 08:19:07.4726 INFO Sucessfully got all packs
+2021-06-14 08:19:07.4969 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:07.5131 INFO Sucessfully got all packs
+2021-06-14 08:19:07.5131 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-14 08:19:07.5234 INFO Sucessfully got the measurement position with Id:5
+2021-06-14 08:19:08.3815 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:08.3815 INFO Sucessfully got all packs
+2021-06-14 08:19:08.4017 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:08.4173 INFO Sucessfully got all packs
+2021-06-14 08:19:08.7387 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:08.8325 INFO Sucessfully got all packs
+2021-06-14 08:19:08.8806 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:08.8806 INFO Sucessfully got all packs
+2021-06-14 08:19:10.9295 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:10.9451 INFO Sucessfully got all packs
+2021-06-14 08:19:10.9643 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:10.9786 INFO Sucessfully got all packs
+2021-06-14 08:19:11.6756 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:11.6756 INFO Sucessfully got all packs
+2021-06-14 08:19:11.7200 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:11.7327 INFO Sucessfully got all packs
+2021-06-14 08:19:12.3404 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-14 08:19:12.3694 INFO Sucessfully got the measurement type with Id:11
+2021-06-14 08:19:12.4232 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 08:19:12.4287 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 08:19:18.2719 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:18.2719 INFO Sucessfully got all packs
+2021-06-14 08:19:18.3271 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:18.3330 INFO Sucessfully got all packs
+2021-06-14 08:19:40.7976 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:40.8445 INFO Sucessfully got all packs
+2021-06-14 08:19:40.8800 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:19:40.8800 INFO Sucessfully got all packs
+2021-06-14 08:19:45.9765 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-14 08:19:45.9765 INFO Sucessfully got the measurement type with Id:11
+2021-06-14 08:19:46.0086 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 08:19:46.0086 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 08:22:51.5001 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:22:51.5405 INFO Sucessfully got all machines
+2021-06-14 08:22:51.8302 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:22:51.8572 INFO Sucessfully got all machines
+2021-06-14 08:23:21.3423 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 08:23:22.6532 INFO Machine-Create: Machine creation was created
+2021-06-14 08:23:22.6532 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 08:24:13.1178 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 08:24:15.1230 INFO Machine-Create: Machine creation was created
+2021-06-14 08:24:15.1230 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 08:24:17.3376 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:24:17.3376 INFO Sucessfully got all machines
+2021-06-14 08:25:01.1253 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 08:25:08.0872 INFO Machine-Create: Machine creation was created
+2021-06-14 08:25:08.0872 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 08:25:47.6849 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 08:25:53.0584 INFO Machine-Create: Machine creation was created
+2021-06-14 08:25:53.8405 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 08:26:17.9686 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:26:19.7331 INFO Sucessfully got all machines
+2021-06-14 08:26:26.3069 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 08:26:42.2809 INFO Machine-Create: Machine creation was created
+2021-06-14 08:26:42.2809 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 08:32:04.2703 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:32:04.4040 INFO Sucessfully got all machines
+2021-06-14 08:32:04.7400 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:32:04.7609 INFO Sucessfully got all machines
+2021-06-14 08:32:21.7737 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:32:21.7990 INFO Sucessfully got all machines
+2021-06-14 08:32:25.9982 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:32:26.0161 INFO Sucessfully got all machines
+2021-06-14 08:32:46.1603 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:32:46.1832 INFO Sucessfully got all machines
+2021-06-14 08:32:51.0850 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:32:51.1015 INFO Sucessfully got all machines
+2021-06-14 08:33:09.5617 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 08:33:09.5728 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 08:33:14.3191 WARN AspNetUsers-Update: user update atempted - id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 08:33:14.6994 INFO AspNetUsers-Update: user Data with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7 was updated
+2021-06-14 08:33:15.4038 INFO AspNetUsers-GetUser: Attempted Call for id: 0a0ea750-9752-4c3a-9bb7-8c8ef4dfc65a
+2021-06-14 08:33:15.4162 INFO AspNetUsers-GetUser: Successfully got record with id: 0a0ea750-9752-4c3a-9bb7-8c8ef4dfc65a
+2021-06-14 08:33:18.4115 WARN AspNetUsers-Update: user update atempted - id: 0a0ea750-9752-4c3a-9bb7-8c8ef4dfc65a
+2021-06-14 08:33:18.4439 INFO AspNetUsers-Update: user Data with id: 0a0ea750-9752-4c3a-9bb7-8c8ef4dfc65a was updated
+2021-06-14 08:33:35.1515 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 08:33:35.1515 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 08:33:36.9329 WARN AspNetUsers-Update: user update atempted - id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 08:33:36.9576 INFO AspNetUsers-Update: user Data with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7 was updated
+2021-06-14 08:34:00.3313 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 08:34:00.3384 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 08:34:02.2618 WARN AspNetUsers-Update: user update atempted - id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 08:34:02.3093 INFO AspNetUsers-Update: user Data with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7 was updated
+2021-06-14 08:37:13.1205 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:37:13.2054 INFO Sucessfully got all packs
+2021-06-14 08:38:18.8326 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:38:18.8563 INFO Sucessfully got all packs
+2021-06-14 08:38:20.4555 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:38:20.4641 INFO Sucessfully got all packs
+2021-06-14 08:38:20.9469 INFO Pack-GetPacks: Attempted Call
+2021-06-14 08:38:20.9469 INFO Sucessfully got all packs
+2021-06-14 08:38:41.1119 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:38:41.1317 INFO Sucessfully got all machines
+2021-06-14 08:38:42.9168 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:38:42.9471 INFO Sucessfully got all machines
+2021-06-14 08:39:55.2137 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:39:55.2456 INFO Sucessfully got all machines
+2021-06-14 08:40:17.8542 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:40:17.8542 INFO Sucessfully got all machines
+2021-06-14 08:41:53.0656 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:41:53.0972 INFO Sucessfully got all machines
+2021-06-14 08:42:02.6843 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:42:02.7054 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:42:02.7449 INFO Sucessfully got all machines
+2021-06-14 08:42:02.7795 INFO Sucessfully got all machines
+2021-06-14 08:42:03.1260 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:42:03.1399 INFO Sucessfully got all machines
+2021-06-14 08:42:51.0810 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:42:51.0909 INFO Sucessfully got all machines
+2021-06-14 08:43:42.9552 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 08:43:51.7312 INFO Machine-Create: Machine creation was created
+2021-06-14 08:43:51.7312 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 08:44:23.1764 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 08:44:23.1901 INFO Machine-Create: Machine creation was created
+2021-06-14 08:44:23.1901 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 08:55:20.3945 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:55:20.5591 INFO Sucessfully got all machines
+2021-06-14 08:55:20.9964 INFO Machine-GetMachines: Attempted Call
+2021-06-14 08:55:21.0302 INFO Sucessfully got all machines
+2021-06-14 08:55:27.3719 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 08:55:27.6150 INFO Machine-Create: Machine creation was created
+2021-06-14 08:55:27.6150 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 08:57:13.2045 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 08:57:13.2570 INFO Machine-Create: Machine creation was created
+2021-06-14 08:57:13.2570 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 09:14:55.5879 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:14:55.6858 INFO Sucessfully got all machines
+2021-06-14 09:14:56.0874 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:14:56.1466 INFO Sucessfully got all machines
+2021-06-14 09:15:02.0366 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 09:15:02.2664 INFO Machine-Create: Machine creation was created
+2021-06-14 09:15:02.2664 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 09:16:04.5576 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 09:16:04.5838 INFO Machine-Create: Machine creation was created
+2021-06-14 09:16:04.5838 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 09:16:18.9662 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:16:18.9662 INFO Sucessfully got all machines
+2021-06-14 09:20:29.9205 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:20:30.0280 INFO Sucessfully got all machines
+2021-06-14 09:20:30.3310 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:20:30.3652 INFO Sucessfully got all machines
+2021-06-14 09:20:38.3814 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 09:20:38.6123 INFO Machine-Create: Machine creation was created
+2021-06-14 09:20:38.6123 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 09:22:16.2541 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:22:16.2541 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:22:16.4572 INFO Sucessfully got all machines
+2021-06-14 09:22:16.5613 INFO Sucessfully got all machines
+2021-06-14 09:22:18.0481 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:22:18.0667 INFO Sucessfully got all machines
+2021-06-14 09:22:18.4424 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:22:18.4424 INFO Sucessfully got all machines
+2021-06-14 09:22:18.9317 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:22:19.0716 INFO Sucessfully got all machines
+2021-06-14 09:22:22.9748 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 09:22:23.2615 INFO Machine-Create: Machine creation was created
+2021-06-14 09:22:23.2615 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 09:23:00.1015 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 09:23:00.1633 INFO Machine-Create: Machine creation was created
+2021-06-14 09:23:00.1633 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 09:24:15.1997 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 09:24:15.2640 INFO Machine-Create: Machine creation was created
+2021-06-14 09:24:15.2640 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 09:25:22.4574 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 09:25:22.4653 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 09:25:41.8538 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 09:25:41.8538 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 09:25:59.3056 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 09:25:59.3354 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-14 09:39:22.8366 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:39:22.8366 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:39:22.8366 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:39:22.9981 INFO Sucessfully got all machines
+2021-06-14 09:39:22.9981 INFO Sucessfully got all machines
+2021-06-14 09:39:22.9981 INFO Sucessfully got all machines
+2021-06-14 09:39:23.8120 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:39:23.8288 INFO Sucessfully got all machines
+2021-06-14 09:39:28.7073 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 09:39:28.9324 INFO Machine-Create: Machine creation was created
+2021-06-14 09:39:28.9324 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 09:39:42.3580 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 09:39:42.3720 INFO Machine-Create: Machine creation was created
+2021-06-14 09:39:42.3720 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 09:40:11.2356 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 09:40:11.2433 INFO Machine-Create: Machine creation was created
+2021-06-14 09:40:11.2433 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 09:40:25.5957 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:40:25.6386 INFO Sucessfully got all machines
+2021-06-14 09:43:01.6819 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:43:01.6819 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:43:01.8542 INFO Sucessfully got all machines
+2021-06-14 09:43:01.8542 INFO Sucessfully got all machines
+2021-06-14 09:43:02.3176 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:43:02.3322 INFO Sucessfully got all machines
+2021-06-14 09:43:02.7350 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:43:02.7476 INFO Sucessfully got all machines
+2021-06-14 09:43:02.9315 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:43:02.9315 INFO Sucessfully got all machines
+2021-06-14 09:43:02.9691 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:43:02.9798 INFO Sucessfully got all machines
+2021-06-14 09:43:03.3663 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:43:03.3702 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:43:03.3702 INFO Sucessfully got all machines
+2021-06-14 09:43:03.3884 INFO Sucessfully got all machines
+2021-06-14 09:43:03.7141 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:43:03.7141 INFO Sucessfully got all machines
+2021-06-14 09:43:03.7420 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:43:03.7673 INFO Sucessfully got all machines
+2021-06-14 09:43:03.9707 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:43:03.9956 INFO Sucessfully got all machines
+2021-06-14 09:43:04.3155 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:43:04.3449 INFO Sucessfully got all machines
+2021-06-14 09:43:04.3995 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:43:04.4243 INFO Sucessfully got all machines
+2021-06-14 09:43:04.9169 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:43:04.9697 INFO Sucessfully got all machines
+2021-06-14 09:43:08.1297 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 09:43:08.3624 INFO Machine-Create: Machine creation was created
+2021-06-14 09:43:08.3624 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 09:43:33.0707 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 09:43:33.0800 INFO Machine-Create: Machine creation was created
+2021-06-14 09:43:33.0800 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 09:43:53.0353 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 09:43:53.0603 INFO Machine-Create: Machine creation was created
+2021-06-14 09:43:53.0603 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 09:44:25.5147 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:44:25.5630 INFO Sucessfully got all machines
+2021-06-14 09:51:34.2533 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:51:34.4094 INFO Sucessfully got all machines
+2021-06-14 09:51:34.9028 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:51:34.9943 INFO Sucessfully got all machines
+2021-06-14 09:51:55.2858 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:51:55.2858 INFO Sucessfully got all machines
+2021-06-14 09:51:55.5471 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:51:55.5752 INFO Sucessfully got all machines
+2021-06-14 09:52:16.8113 INFO Machine-GetMachines: Attempted Call
+2021-06-14 09:52:16.8210 INFO Sucessfully got all machines
+2021-06-14 10:07:33.1332 INFO Machine-GetMachines: Attempted Call
+2021-06-14 10:07:33.1332 INFO Machine-GetMachines: Attempted Call
+2021-06-14 10:07:33.3592 INFO Sucessfully got all machines
+2021-06-14 10:07:33.3690 INFO Sucessfully got all machines
+2021-06-14 10:07:34.0143 INFO Machine-GetMachines: Attempted Call
+2021-06-14 10:07:34.0271 INFO Sucessfully got all machines
+2021-06-14 10:07:40.0538 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 10:07:40.3311 INFO Machine-Create: Machine creation was created
+2021-06-14 10:07:40.3332 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 10:08:43.0065 INFO Machine-GetMachines: Attempted Call
+2021-06-14 10:08:43.1841 INFO Sucessfully got all machines
+2021-06-14 10:08:43.6209 INFO Machine-GetMachines: Attempted Call
+2021-06-14 10:08:43.6423 INFO Sucessfully got all machines
+2021-06-14 10:08:46.6999 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 10:08:46.9447 INFO Machine-Create: Machine creation was created
+2021-06-14 10:08:46.9447 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 10:08:55.0634 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 10:09:36.2402 INFO Machine-Create: Machine creation was created
+2021-06-14 10:09:36.2608 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 10:09:42.4735 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 10:09:42.4900 INFO Machine-Create: Machine creation was created
+2021-06-14 10:09:42.4900 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 10:09:45.9090 INFO Machine-GetMachines: Attempted Call
+2021-06-14 10:09:45.9219 INFO Sucessfully got all machines
+2021-06-14 10:09:51.7830 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 10:09:51.8083 INFO Machine-Create: Machine creation was created
+2021-06-14 10:09:51.8083 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 10:10:11.0105 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 10:10:34.6910 INFO Machine-Create: Machine creation was created
+2021-06-14 10:10:34.6946 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 10:10:34.7196 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 10:10:34.7412 INFO Machine-Create: Machine creation was created
+2021-06-14 10:10:34.7412 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 10:18:02.5514 INFO Machine-GetMachines: Attempted Call
+2021-06-14 10:18:02.6807 INFO Sucessfully got all machines
+2021-06-14 10:18:03.2283 INFO Machine-GetMachines: Attempted Call
+2021-06-14 10:18:03.2594 INFO Sucessfully got all machines
+2021-06-14 10:18:07.5310 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 10:18:07.7638 INFO Machine-Create: Machine creation was created
+2021-06-14 10:18:07.7638 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 10:18:17.8321 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 10:19:19.0750 INFO Machine-Create: Machine creation was created
+2021-06-14 10:19:19.0972 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 10:19:19.1522 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 10:19:19.2278 INFO Machine-Create: Machine creation was created
+2021-06-14 10:19:19.2278 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 10:22:08.2375 INFO Machine-GetMachines: Attempted Call
+2021-06-14 10:22:08.3419 INFO Sucessfully got all machines
+2021-06-14 10:22:08.8412 INFO Machine-GetMachines: Attempted Call
+2021-06-14 10:22:08.8566 INFO Sucessfully got all machines
+2021-06-14 10:22:13.3029 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 10:22:13.5427 INFO Machine-Create: Machine creation was created
+2021-06-14 10:22:13.5427 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 10:22:13.5662 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 10:22:13.5662 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 10:22:13.5980 INFO Machine-Create: Machine creation was created
+2021-06-14 10:22:13.5980 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 10:22:13.5980 INFO Machine-Create: Machine creation was created
+2021-06-14 10:22:13.6125 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 10:25:14.3847 INFO Machine-GetMachines: Attempted Call
+2021-06-14 10:25:14.4881 INFO Sucessfully got all machines
+2021-06-14 10:25:14.8293 INFO Machine-GetMachines: Attempted Call
+2021-06-14 10:25:14.9026 INFO Sucessfully got all machines
+2021-06-14 10:25:20.3631 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 10:25:20.5914 INFO Machine-Create: Machine creation was created
+2021-06-14 10:25:20.5914 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 10:25:20.6176 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 10:25:20.6176 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 10:25:20.6407 INFO Machine-Create: Machine creation was created
+2021-06-14 10:25:20.6470 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 10:25:20.6470 INFO Machine-Create: Machine creation was created
+2021-06-14 10:25:20.6470 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:05:17.7649 INFO Machine-GetMachines: Attempted Call
+2021-06-14 11:05:18.0264 INFO Sucessfully got all machines
+2021-06-14 11:05:19.4041 INFO Machine-GetMachines: Attempted Call
+2021-06-14 11:05:19.4313 INFO Sucessfully got all machines
+2021-06-14 11:05:24.3225 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:05:24.5877 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:05:24.6534 INFO Machine-Create: Machine creation was created
+2021-06-14 11:05:24.6534 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:05:24.6534 INFO Machine-Create: Machine creation was created
+2021-06-14 11:05:24.6534 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:05:24.6892 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:05:24.6892 INFO Machine-Create: Machine creation was created
+2021-06-14 11:05:24.6892 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:05:24.7460 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:05:24.7460 INFO Machine-Create: Machine creation was created
+2021-06-14 11:05:24.7460 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:05:25.1427 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:05:25.1577 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:05:25.1577 INFO Machine-Create: Machine creation was created
+2021-06-14 11:05:25.1577 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:05:25.1700 INFO Machine-Create: Machine creation was created
+2021-06-14 11:05:25.1700 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:05:33.2761 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:05:33.2971 INFO Machine-Create: Machine creation was created
+2021-06-14 11:05:33.2971 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:05:33.3298 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:05:33.3298 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:05:33.3424 INFO Machine-Create: Machine creation was created
+2021-06-14 11:05:33.3424 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:05:33.3424 INFO Machine-Create: Machine creation was created
+2021-06-14 11:05:33.3551 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:06:24.5282 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:06:24.5526 INFO Machine-Create: Machine creation was created
+2021-06-14 11:06:24.5526 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:06:26.7492 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:06:26.7492 INFO Machine-Create: Machine creation was created
+2021-06-14 11:06:26.7768 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:06:28.5105 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:06:28.5251 INFO Machine-Create: Machine creation was created
+2021-06-14 11:06:28.5273 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:07:03.4989 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:07:03.5329 INFO Machine-Create: Machine creation was created
+2021-06-14 11:07:03.5329 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:07:03.5616 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:07:03.5753 INFO Machine-Create: Machine creation was created
+2021-06-14 11:07:03.5753 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:07:46.4822 INFO Machine-GetMachines: Attempted Call
+2021-06-14 11:07:46.8929 INFO Sucessfully got all machines
+2021-06-14 11:07:47.8165 INFO Machine-GetMachines: Attempted Call
+2021-06-14 11:07:47.8352 INFO Sucessfully got all machines
+2021-06-14 11:07:51.8323 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:07:52.0989 INFO Machine-Create: Machine creation was created
+2021-06-14 11:07:52.0989 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:07:52.1245 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:07:52.1526 INFO Machine-Create: Machine creation was created
+2021-06-14 11:07:52.1547 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:08:01.6063 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:08:01.6373 INFO Machine-Create: Machine creation was created
+2021-06-14 11:08:01.6395 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:08:38.9683 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:08:39.0652 INFO Machine-Create: Machine creation was created
+2021-06-14 11:08:39.0652 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:08:49.1607 INFO Machine-GetMachines: Attempted Call
+2021-06-14 11:08:49.2314 INFO Sucessfully got all machines
+2021-06-14 11:09:44.0800 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:09:44.0966 INFO Machine-Create: Machine creation was created
+2021-06-14 11:09:44.0966 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:09:44.1238 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:09:47.1377 INFO Machine-Create: Machine creation was created
+2021-06-14 11:09:47.1402 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:10:00.1472 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:10:00.1725 INFO Machine-Create: Machine creation was created
+2021-06-14 11:10:00.1725 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:18:37.9023 INFO Machine-GetMachines: Attempted Call
+2021-06-14 11:18:38.0350 INFO Sucessfully got all machines
+2021-06-14 11:18:38.7640 INFO Machine-GetMachines: Attempted Call
+2021-06-14 11:18:38.8038 INFO Sucessfully got all machines
+2021-06-14 11:18:50.9576 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:18:51.1910 INFO Machine-Create: Machine creation was created
+2021-06-14 11:18:51.1910 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:18:51.2126 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:18:51.2425 INFO Machine-Create: Machine creation was created
+2021-06-14 11:18:51.2425 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:19:00.2444 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:19:00.2631 INFO Machine-Create: Machine creation was created
+2021-06-14 11:19:00.2631 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:43:29.7032 INFO Machine-GetMachines: Attempted Call
+2021-06-14 11:43:29.8612 INFO Sucessfully got all machines
+2021-06-14 11:43:30.3525 INFO Machine-GetMachines: Attempted Call
+2021-06-14 11:43:30.4205 INFO Sucessfully got all machines
+2021-06-14 11:43:38.6495 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:43:38.9096 INFO Machine-Create: Machine creation was created
+2021-06-14 11:43:38.9096 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:43:38.9379 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:43:38.9694 INFO Machine-Create: Machine creation was created
+2021-06-14 11:43:38.9694 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:43:47.3142 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:43:47.3424 INFO Machine-Create: Machine creation was created
+2021-06-14 11:43:47.3424 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:44:48.3320 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:44:48.3743 INFO Machine-Create: Machine creation was created
+2021-06-14 11:44:48.3743 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:44:50.7780 INFO Machine-GetMachines: Attempted Call
+2021-06-14 11:44:50.8266 INFO Sucessfully got all machines
+2021-06-14 11:44:59.0521 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:44:59.0718 INFO Machine-Create: Machine creation was created
+2021-06-14 11:44:59.0718 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:44:59.0946 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:44:59.1137 INFO Machine-Create: Machine creation was created
+2021-06-14 11:44:59.1291 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 11:45:04.4995 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 11:45:04.5421 INFO Machine-Create: Machine creation was created
+2021-06-14 11:45:04.5421 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 12:04:09.8894 INFO Machine-GetMachines: Attempted Call
+2021-06-14 12:04:10.0147 INFO Sucessfully got all machines
+2021-06-14 12:04:10.4667 INFO Machine-GetMachines: Attempted Call
+2021-06-14 12:04:10.5054 INFO Sucessfully got all machines
+2021-06-14 12:04:15.5180 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 12:04:15.7525 INFO Machine-Create: Machine creation was created
+2021-06-14 12:04:15.7525 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 12:04:15.7764 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 12:04:15.8014 INFO Machine-Create: Machine creation was created
+2021-06-14 12:04:15.8014 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 12:04:24.1976 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 12:04:24.2190 INFO Machine-Create: Machine creation was created
+2021-06-14 12:04:24.2190 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 12:07:23.6627 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 12:07:23.6958 INFO Machine-Create: Machine creation was created
+2021-06-14 12:07:23.6958 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 12:07:26.9706 INFO Machine-GetMachines: Attempted Call
+2021-06-14 12:07:27.0275 INFO Sucessfully got all machines
+2021-06-14 12:07:29.6610 INFO Machine-GetMachines: Attempted Call
+2021-06-14 12:07:29.6745 INFO Sucessfully got all machines
+2021-06-14 12:07:30.0994 INFO Machine-GetMachines: Attempted Call
+2021-06-14 12:07:30.1262 INFO Sucessfully got all machines
+2021-06-14 12:07:34.0988 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 12:07:34.1280 INFO Machine-Create: Machine creation was created
+2021-06-14 12:07:34.1280 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 12:07:34.1495 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 12:07:40.1530 INFO Machine-Create: Machine creation was created
+2021-06-14 12:07:40.1576 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 12:07:43.1766 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 12:07:43.1919 INFO Machine-Create: Machine creation was created
+2021-06-14 12:07:43.1919 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 13:01:42.8372 INFO Machine-GetMachines: Attempted Call
+2021-06-14 13:01:43.0345 INFO Sucessfully got all machines
+2021-06-14 13:01:43.7008 INFO Machine-GetMachines: Attempted Call
+2021-06-14 13:01:43.7618 INFO Sucessfully got all machines
+2021-06-14 13:12:24.2451 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 13:12:24.5088 INFO Machine-Create: Machine creation was created
+2021-06-14 13:12:24.5088 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 13:12:24.5352 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 13:12:24.5609 INFO Machine-Create: Machine creation was created
+2021-06-14 13:12:24.5629 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 13:12:38.7811 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 13:12:38.8045 INFO Machine-Create: Machine creation was created
+2021-06-14 13:12:38.8045 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 13:26:23.0271 INFO Machine-GetMachines: Attempted Call
+2021-06-14 13:26:23.1484 INFO Sucessfully got all machines
+2021-06-14 13:26:24.2835 INFO Machine-GetMachines: Attempted Call
+2021-06-14 13:26:24.3265 INFO Sucessfully got all machines
+2021-06-14 13:28:51.3779 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 13:28:51.6114 INFO Machine-Create: Machine creation was created
+2021-06-14 13:28:51.6114 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 13:28:51.6311 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 13:28:51.6703 INFO Machine-Create: Machine creation was created
+2021-06-14 13:28:51.6703 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 13:29:00.7625 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 13:29:00.7940 INFO Machine-Create: Machine creation was created
+2021-06-14 13:29:00.7940 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 13:34:58.4360 INFO Machine-GetMachines: Attempted Call
+2021-06-14 13:34:58.5557 INFO Sucessfully got all machines
+2021-06-14 13:34:59.1883 INFO Machine-GetMachines: Attempted Call
+2021-06-14 13:34:59.2150 INFO Sucessfully got all machines
+2021-06-14 13:35:02.8319 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 13:35:03.0935 INFO Machine-Create: Machine creation was created
+2021-06-14 13:35:03.0935 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 13:35:03.1144 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 13:35:03.1524 INFO Machine-Create: Machine creation was created
+2021-06-14 13:35:03.1544 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 13:35:07.4975 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 13:35:07.5133 INFO Machine-Create: Machine creation was created
+2021-06-14 13:35:07.5133 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 13:37:56.4988 INFO Machine-GetMachines: Attempted Call
+2021-06-14 13:37:56.6342 INFO Sucessfully got all machines
+2021-06-14 13:37:57.1795 INFO Machine-GetMachines: Attempted Call
+2021-06-14 13:37:57.2926 INFO Sucessfully got all machines
+2021-06-14 13:38:03.0719 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 13:38:03.3059 INFO Machine-Create: Machine creation was created
+2021-06-14 13:38:03.3059 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 13:38:03.3308 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 13:38:03.3633 INFO Machine-Create: Machine creation was created
+2021-06-14 13:38:15.6377 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 13:38:17.2804 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 13:38:17.2804 INFO Machine-Create: Machine creation was created
+2021-06-14 13:38:17.2804 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 13:46:00.4212 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 13:46:00.4657 INFO Machine-Create: Machine creation was created
+2021-06-14 13:46:00.4657 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 13:57:55.5402 INFO Machine-GetMachines: Attempted Call
+2021-06-14 13:57:55.6791 INFO Sucessfully got all machines
+2021-06-14 13:57:56.2347 INFO Machine-GetMachines: Attempted Call
+2021-06-14 13:57:56.3592 INFO Sucessfully got all machines
+2021-06-14 13:58:02.3345 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 13:58:02.5596 INFO Machine-Create: Machine creation was created
+2021-06-14 13:58:02.5596 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 13:58:02.5871 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 13:58:02.6153 INFO Machine-Create: Machine creation was created
+2021-06-14 13:58:02.6174 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 13:58:12.6047 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 13:58:12.6047 INFO Machine-Create: Machine creation was created
+2021-06-14 13:58:12.6047 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 13:58:12.6283 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 13:58:12.6419 INFO Machine-Create: Machine creation was created
+2021-06-14 13:58:12.6419 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 15:40:02.7996 INFO Machine-GetMachines: Attempted Call
+2021-06-14 15:40:03.0094 INFO Sucessfully got all machines
+2021-06-14 15:40:03.6359 INFO Machine-GetMachines: Attempted Call
+2021-06-14 15:40:03.6655 INFO Sucessfully got all machines
+2021-06-14 15:40:09.1648 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 15:40:09.4238 INFO Machine-Create: Machine creation was created
+2021-06-14 15:40:09.4238 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 15:40:09.4499 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 15:40:09.4713 INFO Machine-Create: Machine creation was created
+2021-06-14 15:40:09.4713 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 15:40:14.2299 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 15:40:14.2610 INFO Machine-Create: Machine creation was created
+2021-06-14 15:40:14.2610 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 15:40:14.2732 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 15:40:14.3006 INFO Machine-Create: Machine creation was created
+2021-06-14 15:40:14.3006 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 15:43:37.2506 INFO Machine-GetMachines: Attempted Call
+2021-06-14 15:43:37.3979 INFO Sucessfully got all machines
+2021-06-14 15:43:38.0289 INFO Machine-GetMachines: Attempted Call
+2021-06-14 15:43:38.0636 INFO Sucessfully got all machines
+2021-06-14 15:43:47.2043 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 15:43:47.6425 INFO Machine-Create: Machine creation was created
+2021-06-14 15:43:47.6425 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 15:43:47.6648 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 15:43:47.7042 INFO Machine-Create: Machine creation was created
+2021-06-14 15:43:47.7042 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 15:43:53.8318 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 15:43:54.0176 INFO Machine-Create: Machine creation was created
+2021-06-14 15:43:54.0176 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 15:43:54.0328 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 15:43:54.3481 INFO Machine-Create: Machine creation was created
+2021-06-14 15:43:54.3481 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 15:52:39.3491 INFO Machine-GetMachines: Attempted Call
+2021-06-14 15:52:39.5133 INFO Sucessfully got all machines
+2021-06-14 15:52:40.0110 INFO Machine-GetMachines: Attempted Call
+2021-06-14 15:52:40.0598 INFO Sucessfully got all machines
+2021-06-14 15:52:44.6735 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 15:52:44.9231 INFO Machine-Create: Machine creation was created
+2021-06-14 15:52:44.9251 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 15:52:44.9461 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 15:52:44.9843 INFO Machine-Create: Machine creation was created
+2021-06-14 15:52:44.9843 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 15:53:02.1849 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 15:53:02.1986 INFO Machine-Create: Machine creation was created
+2021-06-14 15:53:02.1986 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 15:53:02.2257 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 15:53:02.2384 INFO Machine-Create: Machine creation was created
+2021-06-14 15:53:02.2384 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:10:25.3665 INFO Machine-GetMachines: Attempted Call
+2021-06-14 16:10:25.4878 INFO Sucessfully got all machines
+2021-06-14 16:10:25.9566 INFO Machine-GetMachines: Attempted Call
+2021-06-14 16:10:26.0639 INFO Sucessfully got all machines
+2021-06-14 16:10:38.3202 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:10:38.5583 INFO Machine-Create: Machine creation was created
+2021-06-14 16:10:38.5583 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:10:38.5844 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:10:38.6157 INFO Machine-Create: Machine creation was created
+2021-06-14 16:10:38.6180 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:10:43.7873 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:10:43.8060 INFO Machine-Create: Machine creation was created
+2021-06-14 16:10:43.8060 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:10:43.8220 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:10:43.8373 INFO Machine-Create: Machine creation was created
+2021-06-14 16:10:43.8373 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:15:02.0571 INFO Machine-GetMachines: Attempted Call
+2021-06-14 16:15:02.1801 INFO Sucessfully got all machines
+2021-06-14 16:15:02.5829 INFO Machine-GetMachines: Attempted Call
+2021-06-14 16:15:02.6458 INFO Sucessfully got all machines
+2021-06-14 16:15:14.0520 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:15:14.3075 INFO Machine-Create: Machine creation was created
+2021-06-14 16:15:14.3075 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:15:14.3367 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:15:14.3644 INFO Machine-Create: Machine creation was created
+2021-06-14 16:15:14.3644 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:15:22.2927 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:15:22.2927 INFO Machine-Create: Machine creation was created
+2021-06-14 16:15:22.2927 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:15:22.3137 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:15:22.3276 INFO Machine-Create: Machine creation was created
+2021-06-14 16:15:22.3276 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:35:32.9984 INFO Machine-GetMachines: Attempted Call
+2021-06-14 16:35:33.2518 INFO Sucessfully got all machines
+2021-06-14 16:35:33.7876 INFO Machine-GetMachines: Attempted Call
+2021-06-14 16:35:33.8357 INFO Sucessfully got all machines
+2021-06-14 16:35:38.8438 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:35:39.0743 INFO Machine-Create: Machine creation was created
+2021-06-14 16:35:39.0762 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:35:39.0933 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:35:39.1270 INFO Machine-Create: Machine creation was created
+2021-06-14 16:35:39.1270 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:35:44.5017 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:35:44.5185 INFO Machine-Create: Machine creation was created
+2021-06-14 16:35:44.5185 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:35:44.5486 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:35:44.5640 INFO Machine-Create: Machine creation was created
+2021-06-14 16:35:44.5640 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:36:08.6878 INFO Machine-GetMachines: Attempted Call
+2021-06-14 16:36:08.7357 INFO Sucessfully got all machines
+2021-06-14 16:36:23.1021 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:36:23.1200 INFO Machine-Create: Machine creation was created
+2021-06-14 16:36:23.1200 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:36:23.1521 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:36:23.1653 INFO Machine-Create: Machine creation was created
+2021-06-14 16:36:23.1653 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:36:28.1920 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:36:28.2177 INFO Machine-Create: Machine creation was created
+2021-06-14 16:36:28.2177 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:36:28.2668 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:36:28.2668 INFO Machine-Create: Machine creation was created
+2021-06-14 16:36:28.2668 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:36:28.3194 INFO Machine-GetMachines: Attempted Call
+2021-06-14 16:36:28.3503 INFO Sucessfully got all machines
+2021-06-14 16:37:42.3896 INFO Machine-GetMachines: Attempted Call
+2021-06-14 16:37:42.5041 INFO Sucessfully got all machines
+2021-06-14 16:37:43.0341 INFO Machine-GetMachines: Attempted Call
+2021-06-14 16:37:43.1262 INFO Sucessfully got all machines
+2021-06-14 16:37:49.0044 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:37:49.2499 INFO Machine-Create: Machine creation was created
+2021-06-14 16:37:49.2499 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:37:49.2729 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:37:49.2890 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:37:49.3076 INFO Machine-Create: Machine creation was created
+2021-06-14 16:37:49.3076 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:37:49.3170 INFO Machine-Create: Machine creation was created
+2021-06-14 16:37:49.3170 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:37:49.3324 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:37:49.3324 INFO Machine-Create: Machine creation was created
+2021-06-14 16:37:49.3428 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:37:49.3792 INFO Machine-GetMachines: Attempted Call
+2021-06-14 16:37:49.3957 INFO Sucessfully got all machines
+2021-06-14 16:48:17.2708 INFO Machine-GetMachines: Attempted Call
+2021-06-14 16:48:17.3814 INFO Sucessfully got all machines
+2021-06-14 16:48:18.0136 INFO Machine-GetMachines: Attempted Call
+2021-06-14 16:48:18.0483 INFO Sucessfully got all machines
+2021-06-14 16:48:30.5514 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:48:30.7921 INFO Machine-Create: Machine creation was created
+2021-06-14 16:48:30.7921 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:48:30.8165 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:48:30.8165 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:48:30.8358 INFO Machine-Create: Machine creation was created
+2021-06-14 16:48:30.8358 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:48:30.8518 INFO Machine-Create: Machine creation was created
+2021-06-14 16:48:30.8518 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:48:41.6717 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:48:41.6840 INFO Machine-Create: Machine creation was created
+2021-06-14 16:48:41.6840 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:48:41.8221 INFO Machine-GetMachines: Attempted Call
+2021-06-14 16:48:41.9471 INFO Sucessfully got all machines
+2021-06-14 16:48:51.2152 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:48:51.2356 INFO Machine-Create: Machine creation was created
+2021-06-14 16:48:51.2356 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:48:51.2579 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:48:51.2733 INFO Machine-Create: Machine creation  Attempted
+2021-06-14 16:48:51.2829 INFO Machine-Create: Machine creation was created
+2021-06-14 16:48:51.2829 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-14 16:48:51.2829 INFO Machine-Create: Machine creation was created
+2021-06-14 16:48:51.2991 INFO Machine-Create: LKDUS_API.Data.Machine

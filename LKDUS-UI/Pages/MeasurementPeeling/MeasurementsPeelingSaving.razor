@@ -1,13 +1,15 @@
-﻿@page "/measurementspeeling/{userId}/{measurementPositionId}/{stringPackValue}/saving"
+﻿@page "/measurementspeeling/{userId}/{measurementPositionId}/{stringPackValue}/{pshift}/saving"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
 @using LKDUS_UI.Contracts
 @using System.Net.Http
-
+@using LKDUS_UI.Service
+@inject ToastService toastService
 @inject IMeasurementRepository repo
 @inject NavigationManager navManager
 @inject IMeasurementRepository measurementRepo
+@inject IPacksRepository packRepo
 @inject IMachinesRepository machineRepository
 @inject IAuthenticationRepository authRepo
 @inject IPacksRepository packRepo
@@ -19,8 +21,7 @@
         height: 100%;
     }
 
-    .btn-success:active
-    {
+    .btn-success:active {
         color: #ffffff !important;
         background-color: #161617;
         border-color: #494F57;
@@ -72,12 +73,14 @@
                             @for (int j = 0; j < positions.GetLength(1); j++)
                             {
                                 var tmpJ = j;
-                                
-                                    <td style="background-color:@elements[i, j];" id="@currentElement[i,j]"
-                                         @onclick="( e => selectTableCell(tmpI,tmpJ))">@positions[i, j]</td>
-                                     
 
-                                }
+                                <td style="background-color:@elements[i, j];" id="@currentElement[i,j]"
+                                    @onclick="( e => selectTableCell(tmpI,tmpJ))">
+                                    @positions[i, j]
+                                </td>
+
+
+                            }
 
 
 
@@ -118,12 +121,14 @@
                             @for (int j = 0; j < positions.GetLength(1); j++)
                             {
                                 var tmpJ = j;
-                                 
-                                    <td @onclick="( e => selectTableCell(tmpI,tmpJ))"
-                                         style="background-color:@elements[i, j];" id="@currentElement[i,j]">@positions[i, j]</td>
-                                    
 
-                                }
+                                <td @onclick="( e => selectTableCell(tmpI,tmpJ))"
+                                    style="background-color:@elements[i, j];" id="@currentElement[i,j]">
+                                    @positions[i, j]
+                                </td>
+
+
+                            }
 
 
 
@@ -163,12 +168,14 @@
                             @for (int j = 0; j < positions.GetLength(1); j++)
                             {
                                 var tmpJ = j;
-                                 
-                                    <td style="background-color:@elements[i, j];" id="@currentElement[i,j]"
-                                         @onclick="( e => selectTableCell(tmpI,tmpJ))">@positions[i, j]</td>
-                                   
 
-                                }
+                                <td style="background-color:@elements[i, j];" id="@currentElement[i,j]"
+                                    @onclick="( e => selectTableCell(tmpI,tmpJ))">
+                                    @positions[i, j]
+                                </td>
+
+
+                            }
 
 
 
@@ -188,13 +195,13 @@
     </div>
     <div class="row w-50  mx-auto" style="padding-top:25px">
         <div class="col  w-20  mx-auto">
-            <button type="button" @onclick="(e => SetFlow(0))"   style=" background-color:@colorBg1" class="btn btn-success btn-lg btn-block">1.Plūsma</button> 
+            <button type="button" @onclick="(e => SetFlow(0))" style=" background-color:@colorBg1" class="btn btn-success btn-lg btn-block">1.Plūsma</button>
         </div>
 
 
 
         <div class="col w-20  mx-auto">
-            <button type="button" @onclick="(e =>SetFlow(1))"  style=" background-color:@colorBg2" class="btn btn-success btn-lg btn-block">2.Plūsma</button>
+            <button type="button" @onclick="(e =>SetFlow(1))" style=" background-color:@colorBg2" class="btn btn-success btn-lg btn-block">2.Plūsma</button>
         </div>
 
 
@@ -262,14 +269,20 @@
     [Parameter]
     public string pmachineIdd { get; set; }
 
+    [Parameter]
+    public string pshift { get; set; }
+
     private IList<Measurement> Model2;
+
 
 
     private string[,] currentElement = new string[30, 2];
     protected async override Task OnInitializedAsync()
     {
-        Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+        ModelPacks = await this.packRepo.Get(Endpoints.PacksEndpoint);
+        // Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
 
+        ModelPacks = await this.packRepo.Get(Endpoints.PacksEndpoint);
         for (int i = 0; i < positions.GetLength(0); i++)
         {
             for (int j = 0; j < positions.GetLength(1); j++)
@@ -392,7 +405,8 @@
                     positions[i, column] = value;
                     return;
 
-                } else
+                }
+                else
                 {
 
                 }
@@ -475,7 +489,7 @@
         }
 
 
-        for(int ii = 0; ii < currentElement.GetLength(0); ii++)
+        for (int ii = 0; ii < currentElement.GetLength(0); ii++)
         {
             for (int jj = 0; jj < currentElement.GetLength(1); jj++)
             {
@@ -584,44 +598,85 @@
         }
         //   this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}/create");
     }
-
+    private IList<Pack> ModelPacks;
     bool isSuccess = false;
     bool isPackCreated = false;
     MeasurementType mt = new MeasurementType();
     private async void SaveMeasurement()
     {
-        mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 11);
-        String measurementDateAndTime = DateTime.Now.ToString("g");
 
-        DateTime shiftTime = Convert.ToDateTime("12:00:00");
-        DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
         int packId = int.Parse(stringPackValue);
 
-        //String timeOfTheDayNow = DateTime.Now.ToString("t");
+
+        mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 11);
+        String measurementDateAndTime = DateTime.Now.ToString("g");
+        DateTime shiftTimeStart = Convert.ToDateTime("07:00:00");
+        DateTime shiftTimeEnd = Convert.ToDateTime("19:00:00");
+
+        DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
+
+
         int shift = 1;
 
-        if (DateTime.Compare(currentMeasurement, shiftTime) >= 0)
+        if (DateTime.Compare(currentMeasurement, shiftTimeStart) >= 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) < 0)
+        {
+            shift = 1;
+        }
+
+        if (DateTime.Compare(currentMeasurement, shiftTimeStart) < 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) >= 0)
         {
             shift = 2;
         }
 
 
-
+        if (pshift != shift.ToString())
+        {
+            shift = int.Parse(pshift);
+        }
 
         IList<Measurement> measurementsToCreate = new List<Measurement>();
+        Pack pack = new Pack();
+        Machine machine = new Machine();
+        LoginModel user = new LoginModel();
+        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
+        pack.DateCreated = DateTime.Parse(measurementDateAndTime);
+        pack.MeasurementTypeName = mt.Name;
+
+
+        pack.Machine = "Plūsmas";
+
+
+        pack.Shift = shift;
+        pack.Author = user.UserName;
+      
+        var packToCreate = packRepo.CreateObjectAndReturnId(Endpoints.PacksEndpoint, pack);
+        string packStringResult = packToCreate.Result.ToString();
+
+        string firstString = "id";
+        string lastString = ",";
+
+        int pos1 = packStringResult.IndexOf(firstString);
+        int pos2 = packStringResult.IndexOf(lastString);
+
+        string final = packStringResult.Substring(pos1, pos2 - pos1);
+
+        string[] elements = final.Split(':');
+
 
         for (int i = 0; i < positions.GetLength(0); i++)
         {
 
             Measurement meas = new Measurement();
-            meas.DateCreated = measurementDateAndTime;
+            meas.DateCreated = DateTime.Parse(measurementDateAndTime);
             meas.Shift = shift;
             // meas.MachineName = int.Parse(pmachineIdd); //machine.Id;
             meas.UserId = userId;
             meas.MeasurementPositionId = int.Parse(measurementPositionId);
-            meas.PackId = packId;
-            meas.MeasurementTypeId = 6;
+            meas.PackId = int.Parse(elements[1]);
 
+            meas.FusPackId = 0;
+            meas.MeasurementTypeId = 6;
+            // meas.Pack = pack;
             for (int j = 0; j < positions.GetLength(1); j++)
             {
 
@@ -639,41 +694,16 @@
                     meas.Measurement2 = Convert.ToDecimal(positions[i, j]);
                 }
 
-
-
-
             }
-
-
-
-
-
-
-
             measurementsToCreate.Add(meas);
 
             isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
         }
-        Pack pack = new Pack();
-        Machine machine = new Machine();
-        // machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
-        LoginModel user = new LoginModel();
-        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
-        pack.DateCreated = measurementDateAndTime;
-        pack.MeasurementTypeName = mt.Name;
 
-
-        pack.Machine = "Plūsmas";
-
-
-        pack.Shift = shift;
-        pack.Author = user.UserName;
-
-        isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
-        // pack.FusCode = stringPackValue;
-
-        if (isPackCreated)
+        if (packToCreate != null && isSuccess)
         {
+            isPackCreated = true;
+            toastService.ShowToast("Mērījuma dati saglabāti", ToastLevel.Success);
             this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}/create");
         }
     }

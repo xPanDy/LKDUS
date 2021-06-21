@@ -1,9 +1,13 @@
-﻿@page "/pressurelineheighoverknive/{userId}/{measurementPositionId}/{pmachineIdd}"
- 
+﻿@page "/pressurelineheighoverknive/{userId}/{measurementPositionId}/{pmachineIdd}/{pshift}/"
+
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
 @using LKDUS_UI.Contracts
 @using System.Net.Http
+@using LKDUS_UI.Service
+@using System.Globalization
+
+@inject ToastService toastService
 @inject IMachinesRepository machineRepository;
 @inject IMeasurementRepository repo
 @inject NavigationManager navManager
@@ -12,7 +16,7 @@
 
 @inject IMeasurementTypeRepository measurementTypeRepository;
 @inject IPacksRepository packRepo
- 
+
 <div class="vh-100 m-0 p-0" style="overflow: hidden;">
     <div style="height: 100%;  width:100%; background-color: white ">
         <!--navigation -->
@@ -73,44 +77,44 @@
 
         <!--con<div>t<>ent -->
         @*<div class=" col-md-8   mx-auto p-1 m-0 d-inline-block" style="width: 50%; height:55%; float:left; background-color: white">
-            <div class="row-md-auto p-1 align-middle">
-                <h5 style="text-align: left;">
-                    <label for="@idOfElement[0]">Kreisā mala:</label>
-                </h5>
-                <div>
-                    <input id="@idOfElement[0]" readonly="readonly" style="        background-color: @colorBgs[0];
+                <div class="row-md-auto p-1 align-middle">
+                    <h5 style="text-align: left;">
+                        <label for="@idOfElement[0]">Kreisā mala:</label>
+                    </h5>
+                    <div>
+                        <input id="@idOfElement[0]" readonly="readonly" style="        background-color: @colorBgs[0];
+                        text-align: center;
+                        font-size: 44px;
+                        border: none;
+                        height: 80px;
+                        width: 100%" type="text" @bind-value="@positionsAngle[0]" @onclick="el => setPositionValue(0)" />
+                    </div>
+                </div>
+            </div>
+            <div class="  col-md-8  mx-auto p-1 m-0 d-inline-block" style="width: 50%; height:55%; float:left;  background-color: white;">
+                <h5 style="text-align: left;"><label for="@idOfElement[1]">Vidus:</label></h5>
+                <div class="row-md-auto p-1 ">
+                    <input id="@idOfElement[1]" type="text" readonly="readonly" style="        background-color: @colorBgs[1];
                     text-align: center;
                     font-size: 44px;
                     border: none;
                     height: 80px;
-                    width: 100%" type="text" @bind-value="@positionsAngle[0]" @onclick="el => setPositionValue(0)" />
+                    width: 100%" @bind-value="@positionsAngle[1]" @onclick="el => setPositionValue(1)" />
                 </div>
             </div>
-        </div>
-        <div class="  col-md-8  mx-auto p-1 m-0 d-inline-block" style="width: 50%; height:55%; float:left;  background-color: white;">
-            <h5 style="text-align: left;"><label for="@idOfElement[1]">Vidus:</label></h5>
-            <div class="row-md-auto p-1 ">
-                <input id="@idOfElement[1]" type="text" readonly="readonly" style="        background-color: @colorBgs[1];
-                text-align: center;
-                font-size: 44px;
-                border: none;
-                height: 80px;
-                width: 100%" @bind-value="@positionsAngle[1]" @onclick="el => setPositionValue(1)" />
-            </div>
-        </div>
-        <div class="  col-md-8  mx-auto p-1 m-0 d-inline-block" style="width: 50%; height:55%; float:left;  background-color: white;">
-            <h5 style="text-align: left;"><label for="@idOfElement[2]">Labā mala:</label></h5>
-            <div class="row-md-auto p-1 ">
-                <input id="@idOfElement[2]" type="text" readonly="readonly" style="        background-color: @colorBgs[2];
-                text-align: center;
-                font-size: 44px;
-                border: none;
-                height: 80px;
-                width: 100%" @bind-value="@positionsAngle[2]" @onclick="el => setPositionValue(2)" />
-            </div>
-        </div>*@
-      
-        
+            <div class="  col-md-8  mx-auto p-1 m-0 d-inline-block" style="width: 50%; height:55%; float:left;  background-color: white;">
+                <h5 style="text-align: left;"><label for="@idOfElement[2]">Labā mala:</label></h5>
+                <div class="row-md-auto p-1 ">
+                    <input id="@idOfElement[2]" type="text" readonly="readonly" style="        background-color: @colorBgs[2];
+                    text-align: center;
+                    font-size: 44px;
+                    border: none;
+                    height: 80px;
+                    width: 100%" @bind-value="@positionsAngle[2]" @onclick="el => setPositionValue(2)" />
+                </div>
+            </div>*@
+
+
         <div class="table-responsive">
             <table class="table   p-0 m-0">
                 <tbody>
@@ -149,46 +153,52 @@
     MeasurementType mt = new MeasurementType();
     Machine machine = new Machine();
     string[] idOfElement = new string[4];
-
+    [Parameter]
+    public string pshift { get; set; }
 
     string bindedValueOfActiveComponent = "";
 
-    private void click (char valueToAdd)
+    private void click(char valueToAdd)
     {
 
 
 
-        for(int i = 0; i < positionsAngle.GetLength(0); i++)
+        for (int i = 0; i < positionsAngle.GetLength(0); i++)
         {
-            if(idOfElement[i] == "selected") {
+            if (idOfElement[i] == "selected")
+            {
 
                 if (positionsAngle[i].Contains(',') && valueToAdd == ',')
                 {
                     return;
                 }
 
-               
+
                 if (positionsAngle[i].Contains(","))
                 {
                     string afterComma = positionsAngle[i].Substring(positionsAngle[i].IndexOf(",") + 1);
-                    if (afterComma.Length < 2)
+
+
+
+                    if (valueToAdd == '-')
                     {
-
-                        if(valueToAdd == '-')
+                        if (positionsAngle[i].Length == 0)
                         {
-                            if (positionsAngle[i].Length == 0)
-                            {
-                                break;
-                            }
-                            positionsAngle[i] = positionsAngle[i].Remove(positionsAngle[i].Length-1,1);
-                        } else
-                        {
-
-                            positionsAngle[i] = positionsAngle[i] + valueToAdd;
+                            break;
                         }
-
-
+                        positionsAngle[i] = positionsAngle[i].Remove(positionsAngle[i].Length - 1, 1);
                     }
+                    else
+                    {
+                        if (afterComma.Length >= 2)
+                        {
+                            break;
+                        }
+                        positionsAngle[i] = positionsAngle[i] + valueToAdd;
+                    }
+
+
+
 
                 }
                 else
@@ -217,29 +227,69 @@
 
     }
 
-
+    private IList<Pack> ModelPacks;
     private async void SaveMeasurement()
     {
+        //var pid = ModelPacks.Max(el => el.Id) + 1;
         String measurementDateAndTime = DateTime.Now.ToString("g");
 
-        DateTime shiftTime = Convert.ToDateTime("12:00:00");
+        DateTime shiftTimeStart = Convert.ToDateTime("07:00:00");
+
+        DateTime shiftTimeEnd = Convert.ToDateTime("19:00:00");
+
         DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
-        
+
+        //String timeOfTheDayNow = DateTime.Now.ToString("t");
         int shift = 1;
 
-        if (DateTime.Compare(currentMeasurement, shiftTime) >= 0)
+        if (DateTime.Compare(currentMeasurement, shiftTimeStart) >= 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) < 0)
+        {
+            shift = 1;
+        }
+
+        if (DateTime.Compare(currentMeasurement, shiftTimeStart) < 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) >= 0)
         {
             shift = 2;
         }
 
-
+        if (pshift != shift.ToString())
+        {
+            shift = int.Parse(pshift);
+        }
 
 
         IList<Measurement> measurementsToCreate = new List<Measurement>();
 
+        Pack pack = new Pack();
+        Machine machine = new Machine();
+
+        machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
+        LoginModel user = new LoginModel();
+        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
+        pack.DateCreated = DateTime.Parse(measurementDateAndTime);
+        // pack.Machine =  machine.Name;
+        pack.Machine = machine.Name;
+        pack.Shift = shift;
+        pack.Author = user.UserName;
+        // pack.FusCode = stringPackValue;
+        pack.MeasurementTypeName = mt.Name;
+
+        var packToCreate = packRepo.CreateObjectAndReturnId(Endpoints.PacksEndpoint, pack);
+        string packStringResult = packToCreate.Result.ToString();
+
+        string firstString = "id";
+        string lastString = ",";
+
+        int pos1 = packStringResult.IndexOf(firstString);
+        int pos2 = packStringResult.IndexOf(lastString);
+
+        string final = packStringResult.Substring(pos1, pos2 - pos1);
+
+        string[] elements = final.Split(':');
+
 
         Measurement meas = new Measurement();
-        meas.DateCreated = measurementDateAndTime;
+        meas.DateCreated = DateTime.Parse(measurementDateAndTime);
         meas.Shift = shift;
         meas.UserId = userId;
         // meas.MachineName = fusMachineName;
@@ -253,11 +303,11 @@
 
         for (int i = 0; i < positionsAngle.GetLength(0); i++)
         {
-            if (decimal.TryParse(positionsAngle[0].ToString(), out value))
+            if (decimal.TryParse(positionsAngle[i].ToString(), out value))
             {
                 isConverted = true;
 
-               
+
             }
             else
             {
@@ -268,14 +318,24 @@
 
         if (isConverted)
         {
-            meas.Measurement1 = decimal.Parse(positionsAngle[0]);
-            meas.Measurement2 = decimal.Parse(positionsAngle[1]);
-            meas.Measurement3 = decimal.Parse(positionsAngle[2]);
+
+            meas.Measurement1 = Convert.ToDecimal(positionsAngle[0].Replace(",", "."), CultureInfo.InvariantCulture);
+            meas.Measurement2 = Convert.ToDecimal(positionsAngle[1].Replace(",", "."), CultureInfo.InvariantCulture);
+            meas.Measurement3 = Convert.ToDecimal(positionsAngle[2].Replace(",", "."), CultureInfo.InvariantCulture);
+            //meas.Measurement1 = decimal.Parse(positionsAngle[0]);
+            //meas.Measurement2 = decimal.Parse(positionsAngle[1]);
+            //meas.Measurement3 = decimal.Parse(positionsAngle[2]);
 
         }
-        meas.PackId = 0;
+        else
+        {
 
+            toastService.ShowToast("Lūdzu, aizpildiet visus laukus", ToastLevel.Error);
+            return;
+        }
+        meas.FusPackId = 0;
 
+        meas.PackId = int.Parse(elements[1]);// pid;
 
 
 
@@ -284,25 +344,13 @@
 
         isSuccess = await repo.Create(Endpoints.MeasurementEndpoint, meas);
 
-        Pack pack = new Pack();
-        Machine machine = new Machine();
-
-        machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
-        LoginModel user = new LoginModel();
-        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
-        pack.DateCreated = measurementDateAndTime;
-        // pack.Machine =  machine.Name;
-        pack.Machine = machine.Name;
-        pack.Shift = shift;
-        pack.Author = user.UserName;
-        // pack.FusCode = stringPackValue;
-        pack.MeasurementTypeName = mt.Name;
-
-        isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
-        if (isPackCreated)
-        {   // "/measurementspeelingknives/{userId}/{measurementPositionId}"
-            //this.navManager.NavigateTo($"/measurementspeelingknives/{userId}/{measurementPositionId}");
-            this.navManager.NavigateTo($"/shaft/{userId}/{measurementPositionId}/{pmachineIdd}");
+        if (packToCreate != null && isSuccess)
+        {
+            isPackCreated = true;   // "/measurementspeelingknives/{userId}/{measurementPositionId}"
+                                    //this.navManager.NavigateTo($"/measurementspeelingknives/{userId}/{measurementPositionId}");
+            toastService.ShowToast("Mērījuma dati saglabāti", ToastLevel.Success);
+            // this.navManager.NavigateTo($"/shaft/{userId}/{measurementPositionId}/{pmachineIdd}");
+            this.navManager.NavigateTo($"/measurementspeelingknivessettings/{userId}/{measurementPositionId}/create");
         }
     }
 
@@ -349,6 +397,7 @@
 
     protected async override Task OnInitializedAsync()
     {
+        ModelPacks = await this.packRepo.Get(Endpoints.PacksEndpoint);
         lengthPosition = 50;
         for (int i = 0; i < positionsAngle.GetLength(0); i++)
         {
@@ -390,7 +439,7 @@
     }
 
 
-     
+
 
     bool isSuccess = false;
     bool isPackCreated = false;
@@ -398,7 +447,7 @@
     {
         if (isSuccess && isPackCreated)
         {
-            this.navManager.NavigateTo($"/measurementspeelingknivessettingoptions/{userId}/{measurementPositionId}/{pmachineIdd}/");
+            this.navManager.NavigateTo($"/measurementspeelingknivessettingoptions/{userId}/{measurementPositionId}/{pmachineIdd}/{pshift}");
         }
         else
         {
@@ -406,7 +455,7 @@
             bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Tiešām vēlies iziet nesaglabājot?");
             if (confirmed)
             {
-                this.navManager.NavigateTo($"/measurementspeelingknivessettingoptions/{userId}/{measurementPositionId}/{pmachineIdd}/");
+                this.navManager.NavigateTo($"/measurementspeelingknivessettingoptions/{userId}/{measurementPositionId}/{pmachineIdd}/{pshift}");
             }
         }
 

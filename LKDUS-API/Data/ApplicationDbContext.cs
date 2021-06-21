@@ -18,8 +18,9 @@ namespace LKDUS_API.Data
         public DbSet<Role> Roles { get; set; }
         public DbSet<Machine> Machines { get; set; }
         public DbSet<Pack> Packs { get; set; }
+        public DbSet<Dimension> Dimensions { get; set; }
         
-
+      
 
         //public DbSet<FusPack> FusPacks { get; set; }
 
@@ -29,6 +30,12 @@ namespace LKDUS_API.Data
         {
 
             base.OnModelCreating(builder);
+
+          /*  builder.Entity<Pack>()
+                .HasMany(c => c.Measurements)
+                .WithOne(e => e.Pack);
+                */
+
             builder.Entity<Measurement>()
                 .Property(p => p.Measurement1 )
                 .HasColumnType("decimal(6,2)");

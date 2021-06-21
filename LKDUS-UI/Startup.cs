@@ -79,7 +79,7 @@ namespace LKDUS_UI
             services.AddScoped<JwtSecurityTokenHandler>();
 
             //
-            services.AddSingleton<WeatherForecastService>();
+            services.AddSingleton<ToastService>();
             services.AddMvc();
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddProgressiveWebApp();
@@ -112,9 +112,11 @@ namespace LKDUS_UI
             {
                 endpoints.MapBlazorHub();
               endpoints.MapFallbackToPage("/_Host");
-               //d endpoints.MapFallbackToPage("/index.html");
+                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+                //d endpoints.MapFallbackToPage("/index.html");
 
             });
+
             
         }
     }

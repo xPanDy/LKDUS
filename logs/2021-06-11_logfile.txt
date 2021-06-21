@@ -1,0 +1,544 @@
+2021-06-11 01:08:11.9712 INFO Pack-GetPacks: Attempted Call
+2021-06-11 01:08:12.1134 INFO Sucessfully got all packs
+2021-06-11 01:08:12.2572 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-11 01:08:12.5944 INFO Sucessfully got the measurement position with Id:5
+2021-06-11 01:08:13.6210 INFO Pack-GetPacks: Attempted Call
+2021-06-11 01:08:13.6359 INFO Sucessfully got all packs
+2021-06-11 01:08:13.6636 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-11 01:08:13.6636 INFO Sucessfully got the measurement position with Id:5
+2021-06-11 01:08:15.4189 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-11 01:08:15.4471 INFO Sucessfully got all Measurements
+2021-06-11 01:08:15.4654 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-11 01:08:15.4654 INFO Sucessfully got all Measurements
+2021-06-11 01:08:15.4910 INFO Machine-GetMachines: Attempted Call
+2021-06-11 01:08:15.5130 INFO Sucessfully got all machines
+2021-06-11 01:08:15.5354 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-11 01:08:15.5354 INFO Sucessfully got the measurement position with Id:5
+2021-06-11 01:08:17.0154 INFO Machine-GetMachines: Attempted Call
+2021-06-11 01:08:17.0244 INFO Sucessfully got all machines
+2021-06-11 01:08:17.0473 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-11 01:08:17.0593 INFO Sucessfully got all Measurements
+2021-06-11 01:08:17.0832 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-06-11 01:08:17.1047 INFO Sucessfully got the machine with Id:33
+2021-06-11 01:08:18.1474 INFO Pack-GetPacks: Attempted Call
+2021-06-11 01:08:18.1474 INFO Sucessfully got all packs
+2021-06-11 01:08:18.1672 INFO Machine-GetMachines: Attempted Call
+2021-06-11 01:08:18.1672 INFO Sucessfully got all machines
+2021-06-11 01:08:18.1953 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-11 01:08:18.1953 INFO Sucessfully got all Measurements
+2021-06-11 01:08:18.2217 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-06-11 01:08:18.2217 INFO Sucessfully got the machine with Id:33
+2021-06-11 01:08:18.2542 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-06-11 01:08:18.2836 INFO Sucessfully got the measurement type with Id:12
+2021-06-11 01:08:39.7888 INFO Measurements-Create: Measurement creation  Attempted
+2021-06-11 01:08:43.2047 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Measurements_Packs". The conflict occurred in database "LKDUS", table "dbo.Packs", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:49b00929-4072-4b37-aac1-a9dfd2d8a1fc
+Error Number:547,State:0,Class:16
+2021-06-11 01:08:43.2325 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-06-11 01:08:43.2393 INFO Sucessfully got the machine with Id:33
+2021-06-11 01:08:43.2628 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 01:08:43.2628 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 01:08:55.7161 INFO Pack-Create: Pack creation  Attempted
+2021-06-11 01:08:55.8112 INFO Pack-Create: Pack creation was created
+2021-06-11 01:08:55.8112 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-06-11 01:09:15.0541 INFO Pack-GetPacks: Attempted Call
+2021-06-11 01:09:15.0541 INFO Sucessfully got all packs
+2021-06-11 01:09:15.1092 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-11 01:09:15.1190 INFO Sucessfully got the measurement position with Id:5
+2021-06-11 01:09:15.4512 INFO Pack-GetPacks: Attempted Call
+2021-06-11 01:09:15.4649 INFO Sucessfully got all packs
+2021-06-11 01:09:15.6024 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-11 01:09:15.6024 INFO Sucessfully got the measurement position with Id:5
+2021-06-11 01:09:19.4482 INFO Pack-GetPack: Attempted Get pack with ID: 7
+2021-06-11 08:24:23.9310 INFO Sucessfully got the pack with Id:7
+2021-06-11 08:26:21.4573 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:26:21.5809 INFO Sucessfully got all packs
+2021-06-11 08:26:21.8085 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:26:21.8273 INFO Sucessfully got all packs
+2021-06-11 08:26:22.1621 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:26:22.1779 INFO Sucessfully got all packs
+2021-06-11 08:26:22.2310 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:26:22.2564 INFO Sucessfully got all packs
+2021-06-11 08:26:24.8414 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-11 08:26:24.9354 INFO Sucessfully got the measurement type with Id:11
+2021-06-11 08:26:25.0018 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 08:26:25.0092 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 08:29:22.2447 INFO Pack-Create: Pack creation  Attempted
+2021-06-11 08:48:26.1379 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:48:26.3142 INFO Sucessfully got all packs
+2021-06-11 08:48:26.4116 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:48:26.4243 INFO Sucessfully got all packs
+2021-06-11 08:48:27.0488 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:48:27.0661 INFO Sucessfully got all packs
+2021-06-11 08:48:27.1083 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:48:27.1083 INFO Sucessfully got all packs
+2021-06-11 08:48:28.2109 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-11 08:48:28.2568 INFO Sucessfully got the measurement type with Id:11
+2021-06-11 08:48:28.3094 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 08:48:28.3094 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 08:49:44.4181 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:49:44.5200 INFO Sucessfully got all packs
+2021-06-11 08:49:44.5486 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:49:44.5586 INFO Sucessfully got all packs
+2021-06-11 08:49:44.8819 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:49:44.9101 INFO Sucessfully got all packs
+2021-06-11 08:49:44.9318 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:49:44.9584 INFO Sucessfully got all packs
+2021-06-11 08:49:45.9990 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-11 08:49:46.0496 INFO Sucessfully got the measurement type with Id:11
+2021-06-11 08:49:46.0980 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 08:49:46.0980 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 08:49:57.7451 INFO Pack-Create: Pack creation  Attempted
+2021-06-11 08:49:59.5015 INFO Pack-Create: Pack creation was created
+2021-06-11 08:49:59.5015 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-06-11 08:54:47.9268 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:54:48.0250 INFO Sucessfully got all packs
+2021-06-11 08:54:48.0556 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:54:48.0556 INFO Sucessfully got all packs
+2021-06-11 08:54:48.4194 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:54:48.4506 INFO Sucessfully got all packs
+2021-06-11 08:54:48.4793 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:54:48.4908 INFO Sucessfully got all packs
+2021-06-11 08:54:55.1291 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-11 08:54:55.1845 INFO Sucessfully got the measurement type with Id:11
+2021-06-11 08:54:55.2468 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 08:54:55.2583 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 08:55:10.5433 INFO Pack-Create: Pack creation  Attempted
+2021-06-11 08:55:12.2031 INFO Pack-Create: Pack creation was created
+2021-06-11 08:55:12.2031 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-06-11 08:57:58.9446 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:58:03.0126 INFO Sucessfully got all packs
+2021-06-11 08:58:04.7936 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:58:06.1300 INFO Sucessfully got all packs
+2021-06-11 08:58:07.4699 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:58:09.7133 INFO Sucessfully got all packs
+2021-06-11 08:58:11.1520 INFO Pack-GetPacks: Attempted Call
+2021-06-11 08:58:12.2160 INFO Sucessfully got all packs
+2021-06-11 08:58:16.7865 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-11 08:58:16.8398 INFO Sucessfully got the measurement type with Id:11
+2021-06-11 08:58:16.8920 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 08:58:16.8983 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 09:00:32.1754 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:00:37.2710 INFO Sucessfully got all packs
+2021-06-11 09:00:37.6401 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:00:37.9743 INFO Sucessfully got all packs
+2021-06-11 09:00:37.9893 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:00:38.4660 INFO Sucessfully got all packs
+2021-06-11 09:00:38.4660 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:00:39.0607 INFO Sucessfully got all packs
+2021-06-11 09:00:39.9554 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:00:40.1794 INFO Sucessfully got all packs
+2021-06-11 09:00:40.6963 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:00:41.0214 INFO Sucessfully got all packs
+2021-06-11 09:00:44.0807 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-11 09:00:44.1857 INFO Sucessfully got the measurement type with Id:11
+2021-06-11 09:00:44.2179 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 09:00:44.2179 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 09:03:17.6392 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:03:19.3134 INFO Sucessfully got all packs
+2021-06-11 09:03:19.9277 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:03:20.2292 INFO Sucessfully got all packs
+2021-06-11 09:03:21.0884 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:03:21.7239 INFO Sucessfully got all packs
+2021-06-11 09:03:22.2695 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:03:23.0095 INFO Sucessfully got all packs
+2021-06-11 09:03:28.7745 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-11 09:03:28.8327 INFO Sucessfully got the measurement type with Id:11
+2021-06-11 09:03:28.8793 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 09:03:28.8793 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 09:04:33.8308 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:05:16.8225 INFO Sucessfully got all packs
+2021-06-11 09:05:17.5510 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:05:17.7777 INFO Sucessfully got all packs
+2021-06-11 09:07:26.3911 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:07:28.4879 INFO Sucessfully got all packs
+2021-06-11 09:07:28.7257 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:07:29.0011 INFO Sucessfully got all packs
+2021-06-11 09:07:29.2104 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:07:29.3911 INFO Sucessfully got all packs
+2021-06-11 09:07:29.7476 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:07:30.0197 INFO Sucessfully got all packs
+2021-06-11 09:07:31.4656 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:07:37.3091 INFO Sucessfully got all packs
+2021-06-11 09:07:37.5619 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-11 09:07:37.6082 INFO Sucessfully got the measurement type with Id:11
+2021-06-11 09:07:37.8855 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:07:39.0082 INFO Sucessfully got all packs
+2021-06-11 09:07:39.0301 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 09:07:39.0301 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 09:08:50.9021 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:08:58.7361 INFO Sucessfully got all packs
+2021-06-11 09:09:04.4669 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:09:04.4669 INFO Sucessfully got all packs
+2021-06-11 09:09:04.7739 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:09:04.7968 INFO Sucessfully got all packs
+2021-06-11 09:09:04.8331 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:09:04.8380 INFO Sucessfully got all packs
+2021-06-11 09:09:09.3669 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-11 09:09:09.3669 INFO Sucessfully got the measurement type with Id:11
+2021-06-11 09:09:09.3994 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 09:09:09.3994 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 09:09:29.4232 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:09:29.4301 INFO Sucessfully got all packs
+2021-06-11 09:09:29.4583 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:09:29.4646 INFO Sucessfully got all packs
+2021-06-11 09:09:29.7421 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:09:29.7685 INFO Sucessfully got all packs
+2021-06-11 09:09:29.8089 INFO Pack-GetPacks: Attempted Call
+2021-06-11 09:09:29.8290 INFO Sucessfully got all packs
+2021-06-11 09:09:41.3807 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-11 09:09:41.3904 INFO Sucessfully got the measurement type with Id:11
+2021-06-11 09:09:41.4058 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 09:09:41.4058 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 10:50:05.0195 INFO Pack-GetPacks: Attempted Call
+2021-06-11 10:50:05.1810 INFO Sucessfully got all packs
+2021-06-11 10:50:05.2405 INFO Pack-GetPacks: Attempted Call
+2021-06-11 10:50:05.2405 INFO Sucessfully got all packs
+2021-06-11 10:50:05.6820 INFO Pack-GetPacks: Attempted Call
+2021-06-11 10:50:05.7392 INFO Sucessfully got all packs
+2021-06-11 10:50:05.7625 INFO Pack-GetPacks: Attempted Call
+2021-06-11 10:50:05.9451 INFO Sucessfully got all packs
+2021-06-11 10:50:12.9084 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-11 10:50:12.9592 INFO Sucessfully got the measurement type with Id:11
+2021-06-11 10:50:13.0104 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 10:50:13.0104 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 10:54:06.2636 INFO Pack-GetPacks: Attempted Call
+2021-06-11 10:54:06.2636 INFO Sucessfully got all packs
+2021-06-11 10:54:06.3042 INFO Pack-GetPacks: Attempted Call
+2021-06-11 10:54:06.3047 INFO Sucessfully got all packs
+2021-06-11 10:54:06.6503 INFO Pack-GetPacks: Attempted Call
+2021-06-11 10:54:06.6707 INFO Sucessfully got all packs
+2021-06-11 10:54:06.7245 INFO Pack-GetPacks: Attempted Call
+2021-06-11 10:54:06.7427 INFO Sucessfully got all packs
+2021-06-11 10:54:15.5330 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-11 10:54:15.5520 INFO Sucessfully got the measurement type with Id:11
+2021-06-11 10:54:15.5697 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 10:54:15.5806 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 12:15:48.6650 INFO Pack-GetPacks: Attempted Call
+2021-06-11 12:15:48.7604 INFO Sucessfully got all packs
+2021-06-11 12:15:48.7877 INFO Pack-GetPacks: Attempted Call
+2021-06-11 12:15:48.7877 INFO Sucessfully got all packs
+2021-06-11 12:15:49.1179 INFO Pack-GetPacks: Attempted Call
+2021-06-11 12:15:49.1698 INFO Sucessfully got all packs
+2021-06-11 12:15:49.2225 INFO Pack-GetPacks: Attempted Call
+2021-06-11 12:15:49.2305 INFO Sucessfully got all packs
+2021-06-11 12:15:51.4766 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-11 12:15:51.5281 INFO Sucessfully got the measurement type with Id:11
+2021-06-11 12:15:51.5795 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 12:15:51.5840 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-11 13:00:20.6375 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 13:00:21.4724 ERROR Machine-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'LKDUS.dbo.Machines'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:e433220c-ebf6-4a1b-8f0a-5c162d450a0f
+Error Number:515,State:2,Class:16
+2021-06-11 13:01:42.8130 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 13:01:43.1117 ERROR Machine-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'LKDUS.dbo.Machines'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:e433220c-ebf6-4a1b-8f0a-5c162d450a0f
+Error Number:515,State:2,Class:16
+2021-06-11 13:02:36.1505 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 13:03:46.2997 ERROR Machine-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'LKDUS.dbo.Machines'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:e433220c-ebf6-4a1b-8f0a-5c162d450a0f
+Error Number:515,State:2,Class:16
+2021-06-11 13:03:58.7946 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 13:03:59.1374 ERROR Machine-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'LKDUS.dbo.Machines'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:e433220c-ebf6-4a1b-8f0a-5c162d450a0f
+Error Number:515,State:2,Class:16
+2021-06-11 13:09:21.1842 INFO AspNetUsers-Create: User creation  Attempted
+2021-06-11 13:09:21.6718 INFO AspNetUsers-Create: User creation was created
+2021-06-11 13:09:21.6718 INFO AspNetUsers-Create: testa
+2021-06-11 13:09:29.2882 INFO Machine-GetMachines: Attempted Call
+2021-06-11 13:09:29.3677 INFO Sucessfully got all machines
+2021-06-11 13:09:29.7572 INFO Machine-GetMachines: Attempted Call
+2021-06-11 13:09:29.8023 INFO Sucessfully got all machines
+2021-06-11 13:09:50.2701 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 13:09:50.8047 ERROR Machine-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'LKDUS.dbo.Machines'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:e3a15ed3-5341-4ab6-81db-c319765c65a4
+Error Number:515,State:2,Class:16
+2021-06-11 13:13:14.5580 INFO MeasurementsType-Create: Measurement TYPE creation  Attempted
+2021-06-11 13:13:14.6472 INFO MeasurementsType-Create: Measurement type creation was created
+2021-06-11 13:13:14.6472 INFO MeasurementsType-Create: LKDUS_API.Data.MeasurementType
+2021-06-11 13:13:17.2889 INFO MeasurementsType-Create: Measurement TYPE creation  Attempted
+2021-06-11 13:13:17.3169 INFO MeasurementsType-Create: Measurement type creation was created
+2021-06-11 13:13:17.3169 INFO MeasurementsType-Create: LKDUS_API.Data.MeasurementType
+2021-06-11 13:13:35.2443 INFO MeasurementsType-Create: Measurement TYPE creation  Attempted
+2021-06-11 13:13:35.2684 INFO MeasurementsType-Create: Measurement type creation was created
+2021-06-11 13:13:35.2684 INFO MeasurementsType-Create: LKDUS_API.Data.MeasurementType
+2021-06-11 13:14:30.6711 INFO MeasurementsType-Create: Measurement TYPE creation  Attempted
+2021-06-11 13:14:30.6959 INFO MeasurementsType-Create: Measurement type creation was created
+2021-06-11 13:14:30.6959 INFO MeasurementsType-Create: LKDUS_API.Data.MeasurementType
+2021-06-11 13:14:35.3499 INFO MeasurementsType-Create: Measurement TYPE creation  Attempted
+2021-06-11 13:14:35.3718 INFO MeasurementsType-Create: Measurement type creation was created
+2021-06-11 13:14:35.3743 INFO MeasurementsType-Create: LKDUS_API.Data.MeasurementType
+2021-06-11 13:14:36.1223 INFO MeasurementsType-Create: Measurement TYPE creation  Attempted
+2021-06-11 13:14:36.1368 INFO MeasurementsType-Create: Measurement type creation was created
+2021-06-11 13:14:36.1388 INFO MeasurementsType-Create: LKDUS_API.Data.MeasurementType
+2021-06-11 15:20:06.3422 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 15:20:07.1751 ERROR Machine-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'LKDUS.dbo.Machines'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:4f2ac0d9-6c39-4ab8-82d9-685dc98e5855
+Error Number:515,State:2,Class:16
+2021-06-11 15:21:02.9525 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 15:21:03.2464 ERROR Machine-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'LKDUS.dbo.Machines'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:4f2ac0d9-6c39-4ab8-82d9-685dc98e5855
+Error Number:515,State:2,Class:16
+2021-06-11 15:21:42.9403 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 15:21:43.2567 ERROR Machine-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'LKDUS.dbo.Machines'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:4f2ac0d9-6c39-4ab8-82d9-685dc98e5855
+Error Number:515,State:2,Class:16
+2021-06-11 15:22:32.2190 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 15:22:32.5142 ERROR Machine-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'LKDUS.dbo.Machines'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:4f2ac0d9-6c39-4ab8-82d9-685dc98e5855
+Error Number:515,State:2,Class:16
+2021-06-11 15:26:54.2306 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 15:26:55.1316 ERROR Machine-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'LKDUS.dbo.Machines'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:ae042552-d3a2-4120-88ee-02b0c3c4bc1f
+Error Number:515,State:2,Class:16
+2021-06-11 15:33:23.7930 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 15:33:24.5761 ERROR Machine-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'LKDUS.dbo.Machines'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:ffcc6c87-f2e9-463c-ad1b-2407cd5a33ef
+Error Number:515,State:2,Class:16
+2021-06-11 15:38:24.5923 INFO Pack-Create: Pack creation  Attempted
+2021-06-11 15:38:29.8330 INFO Pack-Create: Pack creation was created
+2021-06-11 15:38:29.8330 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-06-11 15:38:30.0431 ERROR Pack-Create: Unable to cast object of type 'LKDUS_API.Data.Pack' to type 'Microsoft.AspNetCore.Mvc.IActionResult'. - 
+2021-06-11 15:40:09.5716 INFO Pack-Create: Pack creation  Attempted
+2021-06-11 15:40:11.8967 INFO Pack-Create: Pack creation was created
+2021-06-11 15:40:11.8967 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-06-11 15:40:11.9839 ERROR Pack-Create: Unable to cast object of type 'LKDUS_API.Data.Pack' to type 'Microsoft.AspNetCore.Mvc.IActionResult'. - 
+2021-06-11 16:24:11.3137 INFO MeasurementPosition-Create: Measurement  position creation  Attempted
+2021-06-11 16:24:11.7438 INFO MeasurementPosition-Create: Measurement position creation was created
+2021-06-11 16:24:11.7438 INFO MeasurementPosition-Create: LKDUS_API.Data.MeasurementPosition
+2021-06-11 16:27:17.5809 INFO MeasurementPosition-Create: Measurement  position creation  Attempted
+2021-06-11 16:27:17.9416 INFO MeasurementPosition-Create: Measurement position creation was created
+2021-06-11 16:27:17.9416 INFO MeasurementPosition-Create: LKDUS_API.Data.MeasurementPosition
+2021-06-11 16:27:35.5079 INFO MeasurementPosition-Create: Measurement  position creation  Attempted
+2021-06-11 16:27:35.5209 INFO MeasurementPosition-Create: Measurement position creation was created
+2021-06-11 16:27:35.5209 INFO MeasurementPosition-Create: LKDUS_API.Data.MeasurementPosition
+2021-06-11 16:28:43.3633 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 16:28:43.8535 ERROR Machine-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'LKDUS.dbo.Machines'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2ddde822-d9f9-4de0-b1b8-adc668d1f92f
+Error Number:515,State:2,Class:16
+2021-06-11 16:29:38.4908 INFO MeasurementPosition-Create: Measurement  position creation  Attempted
+2021-06-11 16:30:10.8012 INFO MeasurementPosition-Create: Measurement position creation was created
+2021-06-11 16:30:13.2634 INFO MeasurementPosition-Create: LKDUS_API.Data.MeasurementPosition
+2021-06-11 16:30:33.2576 INFO MeasurementPosition-Create: Measurement  position creation  Attempted
+2021-06-11 16:31:42.0557 INFO MeasurementPosition-Create: Measurement position creation was created
+2021-06-11 16:31:42.0774 INFO MeasurementPosition-Create: LKDUS_API.Data.MeasurementPosition
+2021-06-11 16:32:11.5291 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 16:36:23.9095 INFO MeasurementPosition-Create: Measurement  position creation  Attempted
+2021-06-11 16:36:32.8198 INFO MeasurementPosition-Create: Measurement position creation was created
+2021-06-11 16:36:32.8198 INFO MeasurementPosition-Create: LKDUS_API.Data.MeasurementPosition
+2021-06-11 16:37:01.4435 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 16:37:15.2058 ERROR Machine-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'LKDUS.dbo.Machines'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:86380729-3214-409a-80de-5ed665597d7d
+Error Number:515,State:2,Class:16
+2021-06-11 16:44:59.5342 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 16:47:21.2632 ERROR Machine-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'LKDUS.dbo.Machines'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:94d734c7-8d11-47d0-a8ce-ce7cd46c0d8c
+Error Number:515,State:2,Class:16
+2021-06-11 16:57:26.2688 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 16:57:27.9040 INFO Machine-Create: Machine creation was created
+2021-06-11 16:57:27.9040 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-11 16:57:48.2991 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 16:58:23.8172 INFO Machine-Create: Machine creation was created
+2021-06-11 16:58:23.8328 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-11 17:01:27.9411 INFO Pack-GetPacks: Attempted Call
+2021-06-11 17:01:28.0820 INFO Sucessfully got all packs
+2021-06-11 17:01:28.1319 INFO Pack-GetPacks: Attempted Call
+2021-06-11 17:01:28.1474 INFO Sucessfully got all packs
+2021-06-11 17:01:28.4738 INFO Pack-GetPacks: Attempted Call
+2021-06-11 17:01:28.4738 INFO Sucessfully got all packs
+2021-06-11 17:01:28.5664 INFO Pack-GetPacks: Attempted Call
+2021-06-11 17:01:28.5664 INFO Sucessfully got all packs
+2021-06-11 17:01:32.6111 INFO Machine-GetMachines: Attempted Call
+2021-06-11 17:01:32.6612 INFO Sucessfully got all machines
+2021-06-11 17:01:33.0438 INFO Machine-GetMachines: Attempted Call
+2021-06-11 17:01:33.0788 INFO Sucessfully got all machines
+2021-06-11 17:01:44.2769 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 17:01:45.6124 INFO Machine-Create: Machine creation was created
+2021-06-11 17:01:45.6124 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-11 17:03:43.9906 INFO Pack-GetPacks: Attempted Call
+2021-06-11 17:03:44.1677 INFO Sucessfully got all packs
+2021-06-11 17:03:44.2293 INFO Pack-GetPacks: Attempted Call
+2021-06-11 17:03:44.2293 INFO Sucessfully got all packs
+2021-06-11 17:03:44.6605 INFO Pack-GetPacks: Attempted Call
+2021-06-11 17:03:44.6762 INFO Sucessfully got all packs
+2021-06-11 17:03:44.7303 INFO Pack-GetPacks: Attempted Call
+2021-06-11 17:03:44.7303 INFO Sucessfully got all packs
+2021-06-11 17:03:47.4600 INFO Machine-GetMachines: Attempted Call
+2021-06-11 17:03:47.5449 INFO Sucessfully got all machines
+2021-06-11 17:03:47.8981 INFO Machine-GetMachines: Attempted Call
+2021-06-11 17:03:47.9170 INFO Sucessfully got all machines
+2021-06-11 17:04:00.6779 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 17:04:02.5407 INFO Machine-Create: Machine creation was created
+2021-06-11 17:04:02.5407 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-11 17:04:48.8112 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 17:04:50.8667 INFO Machine-Create: Machine creation was created
+2021-06-11 17:04:50.8667 INFO Machine-Create: LKDUS_API.Data.Machine
+2021-06-11 17:06:06.9335 INFO Machine-Create: Machine creation  Attempted
+2021-06-11 17:06:07.6667 INFO Machine-Create: Machine creation was created
+2021-06-11 17:06:07.6667 INFO Machine-Create: LKDUS_API.Data.Machine

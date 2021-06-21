@@ -15,7 +15,7 @@ namespace LKDUS_UI.Models
 
         public int MachineId { get; set; }
         public string MachineName { get; set; }
-        public string DateCreated { get; set; }
+        public DateTime DateCreated { get; set; }
         public string Master {   get; set; }
     }
 

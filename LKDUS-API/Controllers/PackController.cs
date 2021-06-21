@@ -25,16 +25,19 @@ namespace LKDUS_API.Controllers
     public class PackController : ControllerBase
     {
         private readonly IPackRepository packRepository;
+     //   private readonly IMeasurementRepository measurementRepository;
 
         private readonly ILoggerService logger;
         private readonly IMapper mapper;
 
         public PackController(IPackRepository packRepository,
+           
             ILoggerService logger,
             IMapper mapper
             )
         {
             this.packRepository = packRepository;
+           // this.measurementRepository = measurementRepository;
             this.logger = logger;
             this.mapper = mapper;
         }
@@ -127,18 +130,19 @@ namespace LKDUS_API.Controllers
 
         }
 
-         
+
         /// <summary>
         /// Creates a new pack
         /// </summary>
         /// <param name="packCreateDTO"></param>
+         
         /// <returns></returns>
         [HttpPost]
        // [Authorize(Roles = "Operator")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Create([FromBody] PackCreateDTO packCreateDTO)
+        public async Task<IActionResult> Create([FromBody] PackCreateDTO packCreateDTO )
         {
 
             var location = GetControllerActionNames();
@@ -157,9 +161,18 @@ namespace LKDUS_API.Controllers
                     return BadRequest(ModelState);
 
                 }
-                packCreateDTO.DateCreated = DateTime.Now.ToString();
+                packCreateDTO.DateCreated = DateTime.Now;//.ToString();
                 var pack = this.mapper.Map<Pack>(packCreateDTO);
+               
+                
+                //foreach( var meas in measurementListCreateDTO)
+                //{
+                //    var measurement = this.mapper.Map<Measurement>(meas);
+                //    var measrementtocreate = await measurementRepository.Create(measurement);
+                //}
+               
                 var isGood = await packRepository.Create(pack);
+               
                 if (!isGood)
                 {
                     
@@ -169,6 +182,7 @@ namespace LKDUS_API.Controllers
                 this.logger.LogInfo($"{location}: Pack creation was created");
                 this.logger.LogInfo($"{location}: {pack}");
                 return Created("Create", new { pack } );
+               //return (IActionResult)pack;
             }
             catch (Exception e)
             {
@@ -216,7 +230,7 @@ namespace LKDUS_API.Controllers
                     return BadRequest(ModelState);
 
                 }
-                packUpdateDTO.DateCreated = DateTime.Now.ToString();
+                packUpdateDTO.DateCreated = DateTime.Now;//.ToString();
                 var pack = this.mapper.Map<Pack>(packUpdateDTO);
                 var isGood = await this.packRepository.Update(pack);
                 if (!isGood)

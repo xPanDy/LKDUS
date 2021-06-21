@@ -1,4 +1,4 @@
-﻿@page "/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{pmachineIdd}/"
+﻿@page "/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{pmachineIdd}/{pshift}/"
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
 @using LKDUS_UI.Contracts
@@ -65,6 +65,8 @@
     [Parameter]
     public string pmachineIdd { get; set; }
 
+      [Parameter]
+    public string pshift { get; set; }
     Machine machine = new Machine();
 
     protected async override Task OnInitializedAsync()
@@ -112,12 +114,12 @@
     private void NavigatetoPoints(MouseEventArgs e)
     {
         ///measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/
-        this.navManager.NavigateTo($"/measurementspeelingknivespoints/{userId}/{measurementPositionId}/{pmachineIdd}");
+        this.navManager.NavigateTo($"/measurementspeelingknivespoints/{userId}/{measurementPositionId}/{pmachineIdd}/{pshift}/");
     }
 
     private void NavigatetoAngle(MouseEventArgs e)
     {
         //"/measurementspeelingknivesangle/{userId}/{measurementPositionId}/{pmachineIdd}"
-        this.navManager.NavigateTo($"/measurementspeelingknivesangle/{userId}/{measurementPositionId}/{pmachineIdd}");
+        this.navManager.NavigateTo($"/measurementspeelingknivesangle/{userId}/{measurementPositionId}/{pmachineIdd}/{pshift}/");
     }
 }

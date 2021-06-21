@@ -18,7 +18,8 @@
     "LKDUS-UI": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:5001;",
+        "applicationUrl": "http://localhost:5002;https://localhost:5003;",
+    //  "applicationUrl": "http://lkdus.finieris.lv:80;",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

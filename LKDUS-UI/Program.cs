@@ -42,6 +42,8 @@ namespace LKDUS_UI
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                  //  webBuilder.UseUrls("http://lkdus.finieris.lv:80;");
+                    webBuilder.UseUrls("http://localhost:5002", "https://localhost:5003");
                 });
     } 
 }

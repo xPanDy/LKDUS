@@ -1,0 +1,2160 @@
+2021-05-15 11:25:17.9326 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 11:25:18.4729 INFO Sucessfully got all Measurements
+2021-05-15 12:03:36.4801 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 12:03:36.5749 INFO Sucessfully got all Measurements
+2021-05-15 12:03:39.5115 INFO Machine-GetMachines: Attempted Call
+2021-05-15 12:03:39.5277 INFO Sucessfully got all machines
+2021-05-15 12:03:39.5670 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-05-15 12:03:39.5670 INFO Sucessfully got the machine with Id:33
+2021-05-15 12:03:39.5983 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 7
+2021-05-15 12:03:39.6189 INFO Sucessfully got the measurement type with Id:7
+2021-05-15 12:03:39.9212 INFO Machine-GetMachines: Attempted Call
+2021-05-15 12:03:39.9212 INFO Sucessfully got all machines
+2021-05-15 12:03:39.9461 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-05-15 12:03:39.9536 INFO Sucessfully got the machine with Id:33
+2021-05-15 12:03:39.9713 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 7
+2021-05-15 12:03:39.9855 INFO Sucessfully got the measurement type with Id:7
+2021-05-15 12:03:42.4960 INFO Machine-GetMachines: Attempted Call
+2021-05-15 12:03:42.5005 INFO Sucessfully got all machines
+2021-05-15 12:03:42.5209 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 12:03:42.5361 INFO Sucessfully got all Measurements
+2021-05-15 12:03:42.6081 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-05-15 12:03:42.6081 INFO Sucessfully got the machine with Id:33
+2021-05-15 12:03:44.0563 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 12:03:44.0742 INFO Sucessfully got all Measurements
+2021-05-15 12:03:44.1086 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 12:03:44.1309 INFO Sucessfully got all Measurements
+2021-05-15 12:03:44.1552 INFO Machine-GetMachines: Attempted Call
+2021-05-15 12:03:44.1552 INFO Sucessfully got all machines
+2021-05-15 12:03:44.1823 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 4
+2021-05-15 12:03:44.1876 INFO Sucessfully got the measurement position with Id:4
+2021-05-15 12:03:45.4618 INFO Pack-GetPacks: Attempted Call
+2021-05-15 12:03:45.4764 INFO Sucessfully got all packs
+2021-05-15 12:03:45.5117 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 4
+2021-05-15 12:03:45.5117 INFO Sucessfully got the measurement position with Id:4
+2021-05-15 12:03:46.6485 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-05-15 12:03:46.6612 INFO Sucessfully got all measurementPositions
+2021-05-15 12:03:47.5349 INFO Pack-GetPacks: Attempted Call
+2021-05-15 12:03:47.5434 INFO Sucessfully got all packs
+2021-05-15 12:03:47.5620 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 12:03:47.5620 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 12:05:11.5468 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 12:05:11.5834 INFO Sucessfully got all Measurements
+2021-05-15 12:05:11.6324 INFO Machine-GetMachines: Attempted Call
+2021-05-15 12:05:11.6418 INFO Sucessfully got all machines
+2021-05-15 12:05:11.6654 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 12:05:11.6738 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 12:05:13.4916 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 12:05:13.5104 INFO Sucessfully got all Measurements
+2021-05-15 12:05:14.8022 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 12:05:14.8077 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 13:00:14.7535 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 13:00:14.8346 INFO Measurements-Create: Measurement creation was created
+2021-05-15 13:00:14.8346 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 13:00:56.6380 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 13:00:56.8917 INFO Sucessfully got all Measurements
+2021-05-15 13:00:57.5153 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 13:00:57.6929 INFO Sucessfully got all Measurements
+2021-05-15 13:01:05.2331 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 13:01:05.2868 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 13:01:51.5975 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 13:01:51.6227 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 13:02:23.9976 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 13:02:24.3401 INFO Pack-Create: Pack creation was created
+2021-05-15 13:02:24.3401 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 14:38:01.7477 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 14:38:02.0005 INFO Sucessfully got all Measurements
+2021-05-15 14:38:02.8583 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 14:38:02.9083 INFO Sucessfully got all Measurements
+2021-05-15 14:38:05.9858 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 14:38:06.0333 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 14:38:06.6470 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 14:38:06.6692 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 14:38:06.7004 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 14:38:06.9502 INFO Pack-Create: Pack creation was created
+2021-05-15 14:38:06.9532 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 15:34:16.8936 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 15:34:17.2375 INFO Sucessfully got all Measurements
+2021-05-15 15:34:17.8803 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 15:34:17.9347 INFO Sucessfully got all Measurements
+2021-05-15 15:34:25.4530 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 15:34:25.5053 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 15:34:26.1384 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 15:34:26.1600 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 15:34:26.1920 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 15:34:26.4455 INFO Pack-Create: Pack creation was created
+2021-05-15 15:34:26.4455 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 15:34:26.4657 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 15:34:26.4751 INFO Pack-Create: Pack creation was created
+2021-05-15 15:34:26.4751 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 15:42:33.5350 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 15:42:33.6033 INFO Pack-Create: Pack creation was created
+2021-05-15 15:42:33.6033 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 15:43:24.9917 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 15:43:25.0829 INFO Pack-Create: Pack creation was created
+2021-05-15 15:43:25.0829 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 15:59:19.6307 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 15:59:19.8571 INFO Sucessfully got all Measurements
+2021-05-15 15:59:20.5924 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 15:59:20.6506 INFO Sucessfully got all Measurements
+2021-05-15 15:59:22.2733 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 15:59:22.3757 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 15:59:22.9817 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 15:59:23.0000 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 15:59:23.0322 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 15:59:23.2791 INFO Pack-Create: Pack creation was created
+2021-05-15 15:59:23.2791 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 16:09:54.3870 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 16:09:54.6320 INFO Sucessfully got all Measurements
+2021-05-15 16:09:55.3136 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 16:09:55.3758 INFO Sucessfully got all Measurements
+2021-05-15 16:09:57.6515 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 16:09:57.7201 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 16:09:58.4325 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:09:58.4527 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:09:58.4870 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 16:09:58.7324 INFO Pack-Create: Pack creation was created
+2021-05-15 16:09:58.7324 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 16:10:08.8728 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 16:10:08.8836 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 16:10:09.3340 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:10:09.3384 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:10:09.3610 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 16:10:09.3745 INFO Pack-Create: Pack creation was created
+2021-05-15 16:10:09.3745 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 16:10:15.9614 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 16:10:15.9798 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 16:10:16.4134 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:10:16.4183 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:10:16.4357 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 16:10:16.4484 INFO Pack-Create: Pack creation was created
+2021-05-15 16:10:16.4484 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 16:11:10.4443 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 16:11:10.4671 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 16:11:11.2978 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:11:11.3079 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:11:11.3276 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 16:11:11.3393 INFO Pack-Create: Pack creation was created
+2021-05-15 16:11:11.3393 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 16:11:20.3955 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 16:11:20.4064 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 16:11:20.8391 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:11:20.8391 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:11:20.8686 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 16:11:20.8973 INFO Pack-Create: Pack creation was created
+2021-05-15 16:11:20.8998 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 16:13:00.1975 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 16:13:00.1975 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 16:13:00.6264 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:13:00.6264 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:13:00.6424 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 16:13:00.6508 INFO Pack-Create: Pack creation was created
+2021-05-15 16:13:00.6508 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 16:14:39.3058 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 16:14:39.5649 INFO Sucessfully got all Measurements
+2021-05-15 16:14:40.1678 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 16:14:40.2021 INFO Sucessfully got all Measurements
+2021-05-15 16:14:41.2485 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 16:14:41.2920 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 16:14:42.0379 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:14:42.0577 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:14:42.0886 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 16:14:42.3344 INFO Pack-Create: Pack creation was created
+2021-05-15 16:14:42.3344 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 16:15:36.2730 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 16:15:36.3100 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 16:15:36.8209 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:15:36.8272 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:15:36.8465 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 16:15:36.8567 INFO Pack-Create: Pack creation was created
+2021-05-15 16:15:36.8567 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 16:16:30.1137 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 16:16:30.1448 INFO Sucessfully got all Measurements
+2021-05-15 16:16:53.1536 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 16:16:53.1750 INFO Sucessfully got all Measurements
+2021-05-15 16:16:54.0335 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 16:16:54.0542 INFO Sucessfully got all Measurements
+2021-05-15 16:17:01.1959 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 16:17:01.2052 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 16:17:01.7604 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:17:01.7604 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:17:01.7770 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 16:17:01.7770 INFO Pack-Create: Pack creation was created
+2021-05-15 16:17:01.7770 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 16:17:47.2570 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 16:17:47.3748 INFO Sucessfully got all Measurements
+2021-05-15 16:17:47.9663 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 16:17:47.9951 INFO Sucessfully got all Measurements
+2021-05-15 16:19:13.5345 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 16:19:13.6173 INFO Sucessfully got all Measurements
+2021-05-15 16:19:13.8877 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 16:19:13.9319 INFO Sucessfully got all Measurements
+2021-05-15 16:19:15.0433 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 16:19:15.0433 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 16:19:15.5410 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:19:15.5451 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 16:21:21.8968 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 16:21:21.9404 INFO Pack-Create: Pack creation was created
+2021-05-15 16:21:21.9404 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 17:05:27.9927 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 17:05:28.2585 INFO Sucessfully got all Measurements
+2021-05-15 17:05:29.0179 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 17:05:29.0577 INFO Sucessfully got all Measurements
+2021-05-15 17:05:30.2928 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 17:05:30.5301 INFO Sucessfully got all Measurements
+2021-05-15 17:05:30.8171 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 17:05:30.8354 INFO Sucessfully got all Measurements
+2021-05-15 17:05:40.1200 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 17:05:40.1695 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 17:05:40.8213 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 17:05:40.8523 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 17:05:54.6941 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 17:06:11.5799 INFO Pack-Create: Pack creation was created
+2021-05-15 17:06:13.3120 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 17:08:03.0434 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 17:08:03.0719 INFO Sucessfully got all Measurements
+2021-05-15 17:08:03.7521 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 17:08:03.7672 INFO Sucessfully got all Measurements
+2021-05-15 17:08:04.6684 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 17:08:04.6684 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 17:08:05.2195 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 17:08:05.2252 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 17:08:21.6885 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 17:08:21.7106 INFO Pack-Create: Pack creation was created
+2021-05-15 17:08:21.7106 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:22:09.5891 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:22:09.7612 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:22:10.1488 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:22:10.1796 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:22:19.3221 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:22:19.3528 INFO Pack-Create: Pack creation was created
+2021-05-15 19:22:19.3528 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:22:54.4234 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:22:54.4457 INFO Sucessfully got all Measurements
+2021-05-15 19:22:55.1922 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:22:55.2364 INFO Sucessfully got all Measurements
+2021-05-15 19:22:57.8231 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:22:57.8334 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:22:58.2638 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:22:58.2687 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:22:58.2850 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:22:58.2850 INFO Pack-Create: Pack creation was created
+2021-05-15 19:22:58.2999 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:23:03.2238 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:23:03.2422 INFO Sucessfully got all Measurements
+2021-05-15 19:23:03.8099 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:23:04.0103 INFO Sucessfully got all Measurements
+2021-05-15 19:23:06.4337 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:23:06.4429 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:23:06.8257 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:06.8257 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:06.8407 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:23:06.8475 INFO Pack-Create: Pack creation was created
+2021-05-15 19:23:06.8475 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:23:08.8174 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:23:08.8174 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:23:09.2366 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:09.2366 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:09.2565 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:23:09.2565 INFO Pack-Create: Pack creation was created
+2021-05-15 19:23:09.2565 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:23:11.3681 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:23:11.3994 INFO Sucessfully got all Measurements
+2021-05-15 19:23:11.4559 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:23:11.5079 INFO Sucessfully got all machines
+2021-05-15 19:23:11.5643 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:23:11.5940 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:23:13.9964 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:23:14.0202 INFO Sucessfully got all Measurements
+2021-05-15 19:23:15.1123 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:23:15.1123 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:23:15.4937 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:15.4937 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:15.5098 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:23:15.5098 INFO Pack-Create: Pack creation was created
+2021-05-15 19:23:15.5191 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:23:16.5152 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:23:16.5233 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:23:16.7289 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:23:16.7439 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:23:16.9399 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:23:16.9564 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:23:17.0770 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:17.0813 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:17.1207 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:23:17.1312 INFO Pack-Create: Pack creation was created
+2021-05-15 19:23:17.1312 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:23:17.1771 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:23:17.2291 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:23:17.3177 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:23:17.3313 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:23:17.9599 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:17.9599 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:18.0057 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:23:18.0057 INFO Pack-Create: Pack creation was created
+2021-05-15 19:23:18.0188 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:23:18.3004 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:18.3004 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:18.3397 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:23:18.3516 INFO Pack-Create: Pack creation was created
+2021-05-15 19:23:18.3516 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:23:18.6317 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:18.6317 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:18.8842 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:23:18.9085 INFO Pack-Create: Pack creation was created
+2021-05-15 19:23:18.9085 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:23:18.9560 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:18.9560 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:18.9864 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:23:19.0162 INFO Pack-Create: Pack creation was created
+2021-05-15 19:23:19.0182 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:23:21.1171 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:23:21.1171 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:23:21.4919 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:21.4919 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:21.5071 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:23:21.5071 INFO Pack-Create: Pack creation was created
+2021-05-15 19:23:21.5071 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:23:21.8884 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:23:21.8970 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:23:22.2864 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:22.2864 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:22.3158 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:23:22.3369 INFO Pack-Create: Pack creation was created
+2021-05-15 19:23:22.3369 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:23:35.5630 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:23:35.5776 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:23:35.9482 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:35.9482 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:35.9626 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:23:35.9714 INFO Pack-Create: Pack creation was created
+2021-05-15 19:23:39.4984 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:23:50.8292 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:23:50.8292 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:23:51.2102 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:51.2102 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:23:51.2257 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:23:51.2257 INFO Pack-Create: Pack creation was created
+2021-05-15 19:23:57.1203 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:24:00.1059 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:24:00.1141 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:24:00.5066 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:24:00.5066 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:24:00.5217 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:24:00.5313 INFO Pack-Create: Pack creation was created
+2021-05-15 19:24:00.5313 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:24:06.5427 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:24:06.5512 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:24:06.9520 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:24:06.9555 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:24:06.9699 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:24:06.9699 INFO Pack-Create: Pack creation was created
+2021-05-15 19:24:06.9699 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:24:23.8787 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:24:23.9014 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:24:24.2679 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:24:24.2679 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:24:24.2848 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:24:24.2848 INFO Pack-Create: Pack creation was created
+2021-05-15 19:24:24.2848 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:24:25.0118 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:24:25.0175 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:24:25.4246 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:24:25.4246 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:24:25.4403 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:24:25.4545 INFO Pack-Create: Pack creation was created
+2021-05-15 19:24:25.4545 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:24:32.5641 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:24:32.5641 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:24:32.9413 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:24:32.9413 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:24:32.9553 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:24:32.9553 INFO Pack-Create: Pack creation was created
+2021-05-15 19:24:32.9553 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:24:57.7641 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:24:57.7810 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:24:58.2239 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:24:58.2239 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:24:58.2379 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:24:58.2586 INFO Pack-Create: Pack creation was created
+2021-05-15 19:24:58.2586 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:25:00.1734 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:25:00.1975 INFO Sucessfully got all Measurements
+2021-05-15 19:25:00.8649 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:25:00.8895 INFO Sucessfully got all Measurements
+2021-05-15 19:25:15.8657 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:25:15.8792 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:25:16.2370 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:16.2370 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:16.2554 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:25:16.2738 INFO Pack-Create: Pack creation was created
+2021-05-15 19:25:16.2738 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:25:22.5193 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:25:22.5329 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:25:22.8805 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:22.8805 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:22.9001 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:25:22.9080 INFO Pack-Create: Pack creation was created
+2021-05-15 19:25:22.9080 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:25:25.8805 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:25:25.8907 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:25:26.2397 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:26.2397 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:26.2609 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:25:26.2819 INFO Pack-Create: Pack creation was created
+2021-05-15 19:25:26.2819 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:25:26.3009 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:25:26.3264 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:25:26.4991 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:25:26.4991 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:25:26.7036 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:25:26.7196 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:25:26.8755 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:26.8755 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:26.9378 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:25:26.9525 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:25:26.9525 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:25:26.9525 INFO Pack-Create: Pack creation was created
+2021-05-15 19:25:26.9749 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:25:27.1613 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:25:27.1917 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:25:27.6598 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:27.6598 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:27.7063 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:25:27.7197 INFO Pack-Create: Pack creation was created
+2021-05-15 19:25:27.7197 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:25:27.9925 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:27.9925 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:28.0265 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:25:28.0382 INFO Pack-Create: Pack creation was created
+2021-05-15 19:25:28.0382 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:25:28.1695 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:28.1787 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:28.2123 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:25:28.2217 INFO Pack-Create: Pack creation was created
+2021-05-15 19:25:28.2217 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:25:28.2817 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:28.2817 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:28.3233 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:25:28.3352 INFO Pack-Create: Pack creation was created
+2021-05-15 19:25:28.3352 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:25:51.8090 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:25:51.8174 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:25:52.1769 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:52.1769 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:52.1907 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:25:52.1907 INFO Pack-Create: Pack creation was created
+2021-05-15 19:25:52.1907 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:25:58.1980 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:25:58.2057 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:25:58.5400 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:25:58.5698 INFO Sucessfully got all Measurements
+2021-05-15 19:25:58.8762 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:58.8762 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:25:58.9001 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:25:58.9231 INFO Pack-Create: Pack creation was created
+2021-05-15 19:25:58.9231 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:25:59.3036 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:25:59.4515 INFO Sucessfully got all Measurements
+2021-05-15 19:27:28.1568 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:27:28.1705 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:28:02.1378 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:28:02.1378 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:28:02.1567 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:28:02.1567 INFO Pack-Create: Pack creation was created
+2021-05-15 19:28:02.1653 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:28:46.4164 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:28:46.7083 INFO Sucessfully got all Measurements
+2021-05-15 19:28:47.4852 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:28:47.5252 INFO Sucessfully got all Measurements
+2021-05-15 19:29:01.6671 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:29:01.7168 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:29:01.8209 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.0810 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.0810 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.1048 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.1048 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.1176 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.1353 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.1353 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.1353 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.1614 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.1767 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.1873 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.2204 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.2487 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.2487 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.3141 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.3217 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.3217 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.3411 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.3560 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.3560 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.3754 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.3838 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.3838 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.3987 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.3987 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.3987 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.4202 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.4322 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.4322 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.4464 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.4464 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.4464 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.4741 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.4838 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.4838 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.4982 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.4982 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.5077 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.5077 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.5313 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.5313 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.5452 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.5559 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.5559 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.5559 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.5789 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.5789 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.5936 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.6011 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.6011 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.6011 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.6247 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.6247 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.6406 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.6493 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.6493 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.6641 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.6811 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.6811 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.6950 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.6950 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.6950 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.7226 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.7304 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.7304 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.7490 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.7629 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.7629 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.7812 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.7812 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.7899 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.8060 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.8372 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.8372 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.9161 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.9318 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.9318 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.9512 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.9512 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.9621 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:02.9814 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:02.9814 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:02.9814 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:03.0111 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:03.0229 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:03.0229 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:03.0423 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:29:03.0571 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:29:03.0571 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:29:03.0874 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:29:03.1071 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:29:03.1416 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:29:03.1878 INFO Pack-Create: Pack creation was created
+2021-05-15 19:29:03.1878 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:29:05.8519 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:29:05.9112 INFO Sucessfully got all Measurements
+2021-05-15 19:29:05.9625 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:29:05.9882 INFO Sucessfully got all machines
+2021-05-15 19:29:06.0345 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:29:06.0760 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:29:08.7970 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:29:08.8280 INFO Sucessfully got all Measurements
+2021-05-15 19:40:00.3605 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:40:00.3914 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:40:00.4359 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.4480 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.4480 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.4693 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.4768 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.4768 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.4963 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.5090 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.5090 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.5245 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.5245 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.5245 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.5460 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.5460 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.5541 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.5541 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.5707 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.5707 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.5707 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.5892 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.5892 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.6046 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.6046 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.6046 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.6243 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.6319 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.6319 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.6319 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.6517 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.6517 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.6659 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.6659 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.6659 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.6963 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.6963 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.6963 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.7269 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.7269 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.7402 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.7402 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.7596 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.7596 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.7732 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.7732 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.7732 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.7934 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.7934 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.7934 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.8123 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.8194 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.8194 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.8194 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.8453 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.8453 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.8584 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.8732 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.8732 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.8872 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.8872 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.8980 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.9219 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.9405 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.9405 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.9545 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.9715 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.9715 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:00.9853 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:00.9969 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:00.9969 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:01.0146 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:01.0230 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:01.0230 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:01.0447 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:01.0447 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:01.0547 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:01.0547 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:01.0719 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:01.0719 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:01.0864 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:01.0864 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:01.1007 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:01.1159 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:01.1159 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:01.1159 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:01.1423 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:01.1491 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:01.1491 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:01.1654 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:40:01.1654 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:40:01.1654 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:40:01.1957 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:40:01.1957 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:40:01.2117 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:40:01.2117 INFO Pack-Create: Pack creation was created
+2021-05-15 19:40:01.2117 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:40:02.9455 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:40:02.9716 INFO Sucessfully got all Measurements
+2021-05-15 19:40:03.0007 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:40:03.0104 INFO Sucessfully got all machines
+2021-05-15 19:40:03.0283 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:40:03.0486 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:49:34.8824 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:49:35.2585 INFO Sucessfully got all Measurements
+2021-05-15 19:49:35.9665 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:49:36.0098 INFO Sucessfully got all Measurements
+2021-05-15 19:49:37.5064 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:49:37.5778 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:49:37.7051 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.0062 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.0084 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.0290 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.0459 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.0459 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.0695 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.0695 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.0695 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.0931 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.1051 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.1051 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.1220 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.1370 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.1370 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.1534 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.1637 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.1637 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.1801 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.1801 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.1801 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.2026 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.2121 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.2121 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.2283 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.2283 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.2283 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.2532 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.2661 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.2661 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.2821 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.2999 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.2999 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.3138 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.3292 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.3292 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.3448 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.3535 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.3535 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.3694 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.3836 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.3836 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.4002 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.4130 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.4130 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.4318 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.4318 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.4318 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.4616 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.4616 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.4616 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.4966 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.5184 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.5184 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.5425 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.5942 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.5942 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.6437 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.6603 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.6603 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.7154 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.7359 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.7359 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.7569 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.7569 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.7569 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.8594 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.8851 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.8851 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:38.9364 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:38.9892 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:38.9911 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:39.0948 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:39.1043 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:39.1043 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:39.1301 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:39.1417 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:39.1417 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:39.1698 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:39.1854 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:39.1854 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:39.2896 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:39.3141 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:39.3141 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:39.3795 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:39.4126 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:39.4127 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:39.5023 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:49:39.5166 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:49:39.5166 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:49:39.5407 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:49:39.5627 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:49:44.0588 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:49:44.1229 INFO Pack-Create: Pack creation was created
+2021-05-15 19:49:44.1229 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:49:54.9783 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:49:55.1031 INFO Sucessfully got all Measurements
+2021-05-15 19:49:55.1799 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:49:55.2080 INFO Sucessfully got all machines
+2021-05-15 19:49:55.2581 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:49:55.2937 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:49:57.3788 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:49:57.4006 INFO Sucessfully got all Measurements
+2021-05-15 19:50:00.4608 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:50:00.4608 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:50:00.4887 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:00.5021 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:00.5021 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:00.5239 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:00.5534 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:00.5534 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:00.5719 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:00.5719 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:00.5719 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:00.5958 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:00.6053 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:00.6053 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:00.6236 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:00.6321 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:00.6321 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:00.6499 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:00.6499 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:00.6499 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:00.6714 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:00.6812 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:00.6812 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:00.6988 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:00.6988 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:00.7098 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:00.7316 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:00.7454 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:00.7454 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:00.7647 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:00.7767 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:00.7767 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:00.7968 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:00.8084 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:00.8084 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:00.8269 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:00.8413 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:00.8413 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:00.8593 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:00.8748 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:00.8748 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:00.8899 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:00.8975 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:00.8975 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:00.9152 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:00.9152 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:00.9152 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:00.9462 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:00.9662 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:00.9662 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:00.9919 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:00.9919 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:01.0064 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:01.0233 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:01.0233 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:01.0233 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:01.0560 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:01.0771 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:01.0771 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:01.0952 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:01.1220 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:01.1220 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:01.1424 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:01.1527 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:01.1527 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:01.2246 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:01.2376 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:01.2376 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:01.2593 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:01.2593 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:01.2593 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:01.2899 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:01.3030 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:01.3030 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:01.3220 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:01.3382 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:01.3382 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:01.3551 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:01.3694 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:01.3694 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:01.3830 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:01.3984 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:01.3984 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:01.3984 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:01.4197 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:01.4197 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:01.4368 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:01.4368 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:01.4447 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:01.4447 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:50:01.4674 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:50:01.4674 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:50:01.4914 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:50:01.4914 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:51:34.8287 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:51:37.7887 INFO Pack-Create: Pack creation was created
+2021-05-15 19:51:38.7525 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:52:38.2558 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:52:38.4795 INFO Sucessfully got all Measurements
+2021-05-15 19:52:39.2141 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:52:39.2625 INFO Sucessfully got all Measurements
+2021-05-15 19:52:40.1803 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:52:40.2352 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:52:40.3326 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:40.6157 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:40.6157 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:40.6428 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:40.6650 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:40.6650 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:40.6862 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:40.7041 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:40.7060 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:40.7252 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:40.7434 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:40.7434 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:40.7621 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:40.7769 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:40.7769 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:40.7912 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:40.8073 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:40.8073 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:40.8232 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:40.8406 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:40.8406 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:40.8725 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:40.8982 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:40.8982 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:40.9134 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:40.9370 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:40.9370 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:40.9544 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:40.9767 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:40.9767 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:40.9968 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.0189 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.0189 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.0411 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.0612 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.0612 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.0865 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.1263 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.1285 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.1456 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.1639 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.1639 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.1802 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.1968 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.1968 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.2132 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.2303 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.2303 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.2575 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.2754 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.2754 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.2942 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.4236 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.4257 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.4257 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.4569 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.4569 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.4736 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.4914 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.4914 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.5160 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.5330 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.5330 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.5493 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.5661 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.5661 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.5821 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.5995 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.5995 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.6153 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.6328 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.6328 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.6486 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.6698 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.6698 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.6908 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.7150 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.7150 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.7340 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.7548 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.7548 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.8001 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.8352 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.8352 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.9162 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.9330 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.9330 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:41.9473 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:52:41.9732 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:52:41.9732 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:52:42.0014 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:52:42.0251 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:52:46.0947 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:52:46.1427 INFO Pack-Create: Pack creation was created
+2021-05-15 19:52:46.1427 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:52:46.2768 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:52:46.2968 INFO Sucessfully got all Measurements
+2021-05-15 19:52:46.3400 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:52:46.3692 INFO Sucessfully got all machines
+2021-05-15 19:52:46.3907 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:52:46.4171 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:53:00.3137 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:53:00.3468 INFO Sucessfully got all Measurements
+2021-05-15 19:53:10.5771 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:53:10.5947 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:53:10.6116 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:10.6309 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:10.6309 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:10.6584 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:10.6819 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:10.6819 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:10.6983 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:10.7182 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:10.7200 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:10.7468 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:10.7607 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:10.7607 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:10.7781 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:10.7941 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:10.7941 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:10.8118 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:10.8276 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:10.8299 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:10.8299 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:10.8579 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:10.8579 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:10.8734 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:10.8882 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:10.8882 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:10.9012 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:10.9155 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:10.9155 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:10.9308 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:10.9459 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:10.9459 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:10.9636 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:10.9858 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:10.9858 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.0102 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.0460 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.0460 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.0597 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.0768 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.0768 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.0911 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.1076 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.1076 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.1216 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.1349 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.1349 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.1511 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.1653 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.1653 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.1830 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.1987 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.1987 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.2226 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.2382 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.2382 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.2560 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.2747 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.2747 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.2899 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.3052 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.3052 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.3178 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.3326 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.3326 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.3462 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.3462 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.3622 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.3622 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.3905 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.3927 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.4087 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.4419 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.4419 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.4581 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.4873 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.4873 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.4873 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.5149 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.5169 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.5169 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.5452 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.5452 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.5601 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.5760 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.5760 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.5908 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.6132 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.6132 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.6282 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:53:11.6429 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:53:11.6429 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:53:11.6646 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:53:11.6646 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:53:11.6829 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:53:11.6976 INFO Pack-Create: Pack creation was created
+2021-05-15 19:53:11.6976 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:53:36.3076 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:53:36.3330 INFO Pack-Create: Pack creation was created
+2021-05-15 19:53:36.3330 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:53:41.1425 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:53:41.1681 INFO Sucessfully got all Measurements
+2021-05-15 19:53:41.2187 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:53:41.2602 INFO Sucessfully got all machines
+2021-05-15 19:53:41.3832 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:53:41.4134 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:54:24.9661 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:54:25.0465 INFO Sucessfully got all Measurements
+2021-05-15 19:55:00.1487 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:55:00.1579 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:55:00.1853 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.2050 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.2050 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.2275 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.2522 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.2522 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.2752 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.3315 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.3315 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.3458 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.3458 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.3583 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.3583 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.3878 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.3897 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.3897 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.4490 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.4509 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.4509 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.4771 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.4771 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.4927 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.5113 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.5113 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.5267 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.5419 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.5419 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.5618 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.5765 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.5765 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.5930 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.6157 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.6157 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.6299 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.6439 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.6439 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.6584 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.6853 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.6872 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.7040 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.7202 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.7202 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.7387 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.7508 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.7508 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.7671 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.7671 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.7805 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.7805 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.8084 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.8104 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.8104 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.8374 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.8374 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.8515 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.8698 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.8698 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.8838 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.8986 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.8986 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.9131 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.9249 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.9249 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.9428 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:00.9605 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:00.9605 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:00.9766 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:01.0042 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:01.0042 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:01.0221 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:01.0385 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:01.0385 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:01.0517 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:01.0641 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:01.0641 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:01.0783 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:01.0927 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:01.0927 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:01.1176 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:01.1405 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:01.1405 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:01.1606 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:01.2091 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:01.2091 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:01.2230 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:01.2371 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:01.2371 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:01.2543 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:01.2709 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:01.2709 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:01.2842 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:55:01.2842 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:55:01.3065 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:55:01.3215 INFO Pack-Create: Pack creation was created
+2021-05-15 19:55:01.3215 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:55:01.4184 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:55:01.4524 INFO Sucessfully got all Measurements
+2021-05-15 19:55:01.4824 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:55:01.4824 INFO Sucessfully got all machines
+2021-05-15 19:55:01.5057 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:55:01.5057 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:55:03.4046 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:55:03.4367 INFO Sucessfully got all Measurements
+2021-05-15 19:55:10.7243 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:55:10.7501 INFO Sucessfully got all Measurements
+2021-05-15 19:55:11.6478 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:55:11.6772 INFO Sucessfully got all Measurements
+2021-05-15 19:55:20.4258 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:55:20.4467 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:55:20.4613 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:20.4754 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:20.4754 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:20.4935 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:20.5082 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:20.5082 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:20.5280 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:20.5451 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:20.5451 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:20.5451 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:20.5736 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:20.5754 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:20.5754 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:20.6118 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:20.6118 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:20.6242 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:20.6467 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:20.6467 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:20.6608 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:20.6787 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:20.6787 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:20.6930 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:20.7125 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:20.7125 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:20.7270 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:20.7414 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:20.7414 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:20.7568 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:20.7710 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:20.7710 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:20.7858 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:20.8006 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:20.8006 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:20.8180 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:20.8311 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:20.8311 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:20.8459 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:20.8602 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:20.8602 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:20.8752 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:20.8912 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:20.8912 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:20.9067 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:20.9208 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:20.9208 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:20.9369 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:20.9369 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:20.9519 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:20.9519 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:20.9870 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:20.9870 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:21.0164 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:21.0433 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:21.0459 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:21.0684 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:21.0814 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:21.0814 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:21.0970 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:21.1118 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:21.1118 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:21.1260 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:21.1260 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:21.1394 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:21.1394 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:21.1585 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:21.1585 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:21.1782 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:21.1939 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:21.1939 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:21.2146 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:21.2501 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:21.2501 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:21.2652 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:21.2652 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:21.2652 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:21.2877 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:21.3028 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:21.3028 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:21.3193 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:21.3359 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:21.3359 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:21.3508 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:21.3618 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:21.3618 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:21.3757 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:21.3937 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:21.3937 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:21.4073 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:21.4225 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:21.4225 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:21.4361 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:55:21.4361 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:55:21.4548 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:55:21.4707 INFO Pack-Create: Pack creation was created
+2021-05-15 19:55:21.4707 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:55:21.5249 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:55:21.5592 INFO Sucessfully got all Measurements
+2021-05-15 19:55:21.5923 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:55:21.5923 INFO Sucessfully got all machines
+2021-05-15 19:55:21.6202 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:55:21.6254 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:55:28.6704 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:55:28.6944 INFO Sucessfully got all Measurements
+2021-05-15 19:55:37.3721 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:55:37.3721 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:55:37.4028 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.4173 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.4194 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:37.4451 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.4773 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.4773 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:37.4929 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.5111 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.5130 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:37.5130 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.5408 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.5408 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:37.5547 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.5681 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.5681 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:37.5813 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.5954 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.5954 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:37.6092 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.6227 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.6227 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:37.6227 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.6502 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.6502 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:37.6661 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.6806 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.6806 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:37.6961 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.7107 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.7107 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:37.7262 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.7412 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.7412 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:37.7558 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.7767 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.7767 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:37.7893 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.8108 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.8108 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:37.8108 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.8394 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.8414 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:37.8414 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.8675 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.8675 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:37.8833 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.8977 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.8977 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:37.9141 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.9281 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.9281 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:37.9426 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.9586 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.9586 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:37.9741 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:37.9890 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:37.9890 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:38.0052 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:38.0411 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:38.0411 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:38.0557 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:38.0769 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:38.0769 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:38.0950 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:38.1198 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:38.1198 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:38.1334 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:38.1476 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:38.1476 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:38.1640 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:38.1785 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:38.1785 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:38.1930 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:38.2062 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:38.2062 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:38.2232 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:38.2395 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:38.2395 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:38.2555 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:38.2693 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:38.2693 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:38.2859 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:38.3017 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:38.3017 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:38.3152 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:38.3295 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:38.3295 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:38.3422 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:55:38.3422 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:55:38.3589 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:55:38.3589 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:55:38.3764 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:55:38.3888 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:55:38.3888 INFO Pack-Create: Pack creation was created
+2021-05-15 19:55:38.4044 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:55:38.4633 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:55:38.4893 INFO Sucessfully got all Measurements
+2021-05-15 19:55:38.5342 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:55:38.5342 INFO Sucessfully got all machines
+2021-05-15 19:55:38.5628 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:55:38.5628 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:55:47.9685 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:55:48.0241 INFO Sucessfully got all Measurements
+2021-05-15 19:55:48.1279 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:55:48.1279 INFO Sucessfully got all machines
+2021-05-15 19:55:48.1493 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:55:48.1576 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:55:48.8809 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:55:48.9205 INFO Sucessfully got all Measurements
+2021-05-15 19:55:48.9612 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:55:48.9995 INFO Sucessfully got all machines
+2021-05-15 19:55:49.0539 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:55:49.0629 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:55:52.2176 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:55:52.3012 INFO Sucessfully got all Measurements
+2021-05-15 19:56:04.8594 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:56:04.8594 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:56:04.8841 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:05.3253 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:05.3253 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:05.3407 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:05.4674 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:05.4674 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:05.4821 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:05.4978 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:05.4978 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:05.5166 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:05.5312 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:05.5312 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:05.5454 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:05.5454 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:05.5604 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:05.5604 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:05.5889 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:05.5908 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:05.5908 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:05.6165 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:05.6165 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:05.6312 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:05.6439 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:05.6439 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:05.6584 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:05.6745 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:05.6745 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:05.6890 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:05.7051 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:05.7051 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:05.7214 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:05.7354 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:05.7354 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:05.7492 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:05.7686 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:05.7686 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:05.7840 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:05.8009 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:05.8009 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:05.8167 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:05.8325 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:05.8325 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:05.8488 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:05.8630 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:05.8630 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:05.8817 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:05.9151 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:05.9151 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:05.9290 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:05.9422 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:05.9422 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:05.9570 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:05.9726 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:05.9726 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:05.9871 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:06.0002 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:06.0002 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:06.0241 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:06.0427 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:06.0445 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:06.0445 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:06.0769 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:06.0769 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:06.0925 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:06.1084 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:06.1084 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:06.1259 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:06.1402 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:06.1402 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:06.1604 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:06.1764 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:06.1764 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:06.1923 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:06.2153 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:06.2153 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:06.2323 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:06.2323 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:06.2489 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:06.2489 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:06.2735 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:06.2735 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:06.2863 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:06.3011 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:06.3011 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:06.3179 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:06.3318 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:06.3318 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:06.3511 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:06.3653 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:06.3653 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:06.3778 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:56:06.3778 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:56:06.3985 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:56:06.4140 INFO Pack-Create: Pack creation was created
+2021-05-15 19:56:06.4140 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:56:06.4707 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:56:06.4980 INFO Sucessfully got all Measurements
+2021-05-15 19:56:06.5263 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:56:06.5336 INFO Sucessfully got all machines
+2021-05-15 19:56:06.5529 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:56:06.5600 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:56:39.9654 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:56:39.9905 INFO Sucessfully got all Measurements
+2021-05-15 19:56:40.9955 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:56:41.0021 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:56:41.0253 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.0470 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.0470 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.0654 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.0840 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.0840 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.0974 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.1144 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.1144 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.1281 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.1448 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.1448 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.1660 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.1844 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.1844 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.2040 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.2272 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.2297 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.2501 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.2658 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.2658 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.2842 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.2991 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.2991 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.3136 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.3387 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.3408 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.3561 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.3749 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.3749 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.3907 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.4053 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.4053 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.4195 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.4195 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.4345 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.4345 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.4600 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.4600 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.4732 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.4874 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.4874 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.5006 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.5148 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.5148 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.5308 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.5480 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.5480 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.5650 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.5815 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.5815 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.5961 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.6120 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.6120 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.6266 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.6482 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.6482 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.6644 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.6785 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.6785 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.6933 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.7000 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.7000 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.7000 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.7185 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.7185 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.7317 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.7317 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.7317 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.7581 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.7664 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.7664 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.7784 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.7784 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.7784 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.7995 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.7995 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.7995 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.8185 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.8249 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.8249 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.8249 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.8448 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.8448 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.8594 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.8594 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.8594 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.8802 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:41.8886 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:41.8886 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:41.8886 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:56:41.9048 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:56:41.9048 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:56:41.9233 INFO Pack-Create: Pack creation was created
+2021-05-15 19:56:41.9233 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:56:41.9656 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:56:41.9958 INFO Sucessfully got all Measurements
+2021-05-15 19:56:42.0310 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:56:42.0310 INFO Sucessfully got all machines
+2021-05-15 19:56:42.0564 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:56:42.0674 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:56:57.8314 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:56:57.8655 INFO Sucessfully got all Measurements
+2021-05-15 19:56:59.2386 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:56:59.2459 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:56:59.2678 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.2771 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.2771 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.2934 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.2934 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.2934 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.3159 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.3273 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.3273 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.3406 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.3406 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.3406 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.3622 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.3622 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.3703 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.3703 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.3903 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.3903 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.4034 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.4034 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.4034 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.4273 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.4332 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.4332 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.4481 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.4481 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.4481 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.4683 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.4683 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.4683 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.4931 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.5009 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.5009 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.5195 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.5195 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.5275 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.5275 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.5505 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.5505 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.5654 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.5752 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.5752 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.5916 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.5916 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.5916 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.6150 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.6277 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.6277 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.6434 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.6434 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.6519 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.6672 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.6917 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.6917 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.7085 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.7173 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.7173 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.7311 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.7311 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.7311 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.7517 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.7517 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.7517 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.7722 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.7831 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.7831 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.7962 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.7962 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.7962 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.8180 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.8249 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.8249 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.8249 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.8442 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.8442 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.8586 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.8586 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.8586 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.8809 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.8932 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.8932 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.9082 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.9082 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.9171 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.9171 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.9355 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.9355 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.9491 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:56:59.9491 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:56:59.9491 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:56:59.9695 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:56:59.9695 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:56:59.9889 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:56:59.9960 INFO Pack-Create: Pack creation was created
+2021-05-15 19:56:59.9960 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:57:00.0686 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:57:00.1144 INFO Sucessfully got all Measurements
+2021-05-15 19:57:00.1573 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:57:00.1573 INFO Sucessfully got all machines
+2021-05-15 19:57:00.1770 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:57:00.1884 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:57:03.6464 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:57:03.6958 INFO Sucessfully got all Measurements
+2021-05-15 19:57:07.7118 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:57:07.7435 INFO Sucessfully got all Measurements
+2021-05-15 19:57:08.3461 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:57:08.4385 INFO Sucessfully got all Measurements
+2021-05-15 19:57:13.6301 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:57:13.6419 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:57:13.6573 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:13.6741 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:13.6741 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:13.6893 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:13.6986 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:13.6986 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:13.6986 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:13.7229 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:13.7229 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:13.7393 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:13.7491 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:13.7491 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:13.7671 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:13.7771 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:13.7771 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:13.7957 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:13.7957 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:13.7957 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:13.8209 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:13.8278 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:13.8278 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:13.8445 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:13.8445 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:13.8554 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:13.8554 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:13.8763 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:13.8763 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:13.8906 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:13.9115 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:13.9115 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:13.9245 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:13.9245 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:13.9334 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:13.9486 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:13.9486 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:13.9486 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:13.9682 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:13.9853 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:13.9853 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:13.9973 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:13.9973 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:13.9973 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:14.0247 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:14.0392 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:14.0392 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:14.0585 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:14.0585 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:14.0585 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:14.0848 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:14.0920 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:14.0920 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:14.1071 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:14.1071 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:14.1071 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:14.1331 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:14.1415 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:14.1415 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:14.1583 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:14.1680 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:14.1680 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:14.1680 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:14.1897 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:14.1897 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:14.2070 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:14.2180 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:14.2180 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:14.2355 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:14.2355 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:14.2461 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:14.2461 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:14.2671 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:14.2671 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:14.2820 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:14.2820 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:14.2820 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:14.3038 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:14.3111 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:14.3111 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:14.3260 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:14.3260 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:14.3260 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:14.3463 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:14.3463 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:14.3559 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:14.3559 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:14.3752 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:14.3752 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:14.3919 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:14.3919 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:14.4009 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:14.4009 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:57:14.4009 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:57:14.4167 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:57:14.4367 INFO Pack-Create: Pack creation was created
+2021-05-15 19:57:14.4367 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:57:14.4942 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:57:14.5281 INFO Sucessfully got all Measurements
+2021-05-15 19:57:14.5610 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:57:14.5610 INFO Sucessfully got all machines
+2021-05-15 19:57:14.5812 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:57:14.5812 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:57:22.6162 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:57:22.6754 INFO Sucessfully got all Measurements
+2021-05-15 19:57:27.9439 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:57:27.9521 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:57:27.9673 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:27.9815 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:27.9815 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:27.9995 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.0225 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.0225 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.0427 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.0427 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.0427 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.0709 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.0810 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.0810 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.0970 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.1044 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.1044 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.1225 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.1225 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.1225 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.1455 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.1517 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.1517 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.1517 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.1715 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.1715 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.1843 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.1843 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.1843 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.2101 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.2305 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.2305 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.2442 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.2442 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.2442 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.2673 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.2673 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.2759 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.2759 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.2940 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.2940 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.3069 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.3069 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.3069 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.3279 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.3279 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.3279 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.3523 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.3603 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.3603 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.3728 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.3728 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.3728 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.3952 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.4013 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.4013 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.4201 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.4320 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.4320 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.4320 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.4526 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.4526 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.4654 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.4654 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.4654 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.4877 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.4877 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.4953 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.4953 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.5133 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.5133 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.5264 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.5264 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.5264 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.5471 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.5471 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.5471 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.5667 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.5731 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.5731 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.5731 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.5929 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.5929 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.6070 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.6070 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.6070 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.6303 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.6369 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.6369 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.6513 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:28.6513 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:28.6513 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:28.6757 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:57:28.6757 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:57:28.6922 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:57:28.6994 INFO Pack-Create: Pack creation was created
+2021-05-15 19:57:28.6994 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:57:28.7459 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:57:28.7756 INFO Sucessfully got all Measurements
+2021-05-15 19:57:28.8049 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:57:28.8099 INFO Sucessfully got all machines
+2021-05-15 19:57:28.8335 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:57:28.8382 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:57:33.3754 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:57:33.4051 INFO Sucessfully got all Measurements
+2021-05-15 19:57:33.4393 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:57:33.4498 INFO Sucessfully got all machines
+2021-05-15 19:57:33.4671 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:57:33.4842 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:57:33.9531 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:57:33.9962 INFO Sucessfully got all Measurements
+2021-05-15 19:57:34.0470 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:57:34.0582 INFO Sucessfully got all machines
+2021-05-15 19:57:34.0810 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:57:34.0976 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:57:39.5890 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:57:39.6294 INFO Sucessfully got all Measurements
+2021-05-15 19:57:45.0141 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:57:45.0333 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:57:45.0622 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.0933 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.0933 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.1137 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.1509 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.1509 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.1673 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.1947 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.1975 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.1975 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.2355 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.2355 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.2504 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.2767 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.2767 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.2939 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.3174 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.3174 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.3332 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.3583 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.3583 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.3726 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.3960 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.3960 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.4099 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.4305 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.4324 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.4475 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.4721 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.4721 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.4920 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.4988 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.4988 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.5149 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.5149 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.5253 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.5452 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.5720 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.5741 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.5911 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.5911 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.5911 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.6181 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.6257 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.6257 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.6428 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.6600 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.6600 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.6790 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.6851 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.6851 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.7006 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.7006 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.7006 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.7210 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.7210 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.7293 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.7293 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.7474 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.7474 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.7684 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.7684 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.7762 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.7762 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.7972 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.7972 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.8114 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.8114 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.8114 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.8316 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.8373 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.8373 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.8373 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.8571 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.8571 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.8703 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.8703 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.8703 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.8937 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.9004 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.9004 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.9004 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.9257 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.9257 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.9396 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.9396 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.9490 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.9490 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:57:45.9654 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:57:45.9654 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 19:57:45.9654 INFO AspNetUsers-GetUser: Attempted Call for id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:57:45.9810 INFO AspNetUsers-GetUser: Successfully got record with id: 84468707-c246-4b46-aaa1-941caa1f06b6
+2021-05-15 19:57:45.9810 INFO Pack-Create: Pack creation  Attempted
+2021-05-15 19:57:46.0000 INFO Pack-Create: Pack creation was created
+2021-05-15 19:57:46.0000 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-05-15 19:57:46.0554 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:57:46.0850 INFO Sucessfully got all Measurements
+2021-05-15 19:57:46.1142 INFO Machine-GetMachines: Attempted Call
+2021-05-15 19:57:46.1248 INFO Sucessfully got all machines
+2021-05-15 19:57:46.1420 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-15 19:57:46.1420 INFO Sucessfully got the measurement position with Id:2
+2021-05-15 19:59:28.6189 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 19:59:28.7293 INFO Sucessfully got all Measurements
+2021-05-15 19:59:31.4048 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 19:59:31.4048 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 19:59:31.4407 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 19:59:31.4690 INFO Measurements-Create: Measurement creation was created
+2021-05-15 19:59:31.4690 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 20:08:53.2938 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:08:53.4124 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:08:53.5813 INFO Sucessfully got all Measurements
+2021-05-15 20:08:53.5813 INFO Sucessfully got all Measurements
+2021-05-15 20:08:54.3614 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:08:54.4628 INFO Sucessfully got all Measurements
+2021-05-15 20:08:55.7288 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 20:08:55.7853 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 20:08:55.9285 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 20:08:56.1943 INFO Measurements-Create: Measurement creation was created
+2021-05-15 20:08:56.1943 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 20:12:02.1497 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:12:02.4169 INFO Sucessfully got all Measurements
+2021-05-15 20:12:03.1660 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:12:03.2498 INFO Sucessfully got all Measurements
+2021-05-15 20:12:04.3713 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 20:12:04.4281 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 20:12:04.5216 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 20:12:04.8232 INFO Measurements-Create: Measurement creation was created
+2021-05-15 20:12:04.8232 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 20:15:39.5172 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:15:39.7819 INFO Sucessfully got all Measurements
+2021-05-15 20:15:40.5110 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:15:40.5843 INFO Sucessfully got all Measurements
+2021-05-15 20:15:41.3384 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 20:15:41.3886 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 20:15:41.4901 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 20:15:41.7783 INFO Measurements-Create: Measurement creation was created
+2021-05-15 20:15:41.7783 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 20:24:35.7438 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:24:35.9765 INFO Sucessfully got all Measurements
+2021-05-15 20:24:36.7121 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:24:36.7677 INFO Sucessfully got all Measurements
+2021-05-15 20:24:43.6351 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 20:24:43.6851 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 20:25:07.2258 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 20:25:07.4996 INFO Measurements-Create: Measurement creation was created
+2021-05-15 20:25:07.4996 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 20:30:09.4237 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:30:09.6625 INFO Sucessfully got all Measurements
+2021-05-15 20:30:10.3717 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:30:10.4168 INFO Sucessfully got all Measurements
+2021-05-15 20:30:13.9013 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 20:30:13.9517 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 20:30:14.0787 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 20:30:14.3454 INFO Measurements-Create: Measurement creation was created
+2021-05-15 20:30:14.3454 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 20:30:26.3105 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:30:26.3692 INFO Sucessfully got all Measurements
+2021-05-15 20:30:26.6434 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:30:26.6998 INFO Sucessfully got all Measurements
+2021-05-15 20:30:29.8295 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 20:30:29.8449 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 20:30:29.8685 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 20:30:29.8833 INFO Measurements-Create: Measurement creation was created
+2021-05-15 20:30:29.8833 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 20:31:36.1739 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:31:36.4299 INFO Sucessfully got all Measurements
+2021-05-15 20:31:37.1063 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:31:37.2115 INFO Sucessfully got all Measurements
+2021-05-15 20:31:40.5348 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 20:31:40.5831 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 20:31:40.7326 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 20:31:41.0052 INFO Measurements-Create: Measurement creation was created
+2021-05-15 20:31:41.0052 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-05-15 20:32:49.7466 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:32:50.0145 INFO Sucessfully got all Measurements
+2021-05-15 20:32:50.6944 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:32:50.7309 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:32:50.7602 INFO Sucessfully got all Measurements
+2021-05-15 20:32:51.0158 INFO Sucessfully got all Measurements
+2021-05-15 20:32:51.1293 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-15 20:32:51.2349 INFO Sucessfully got all Measurements
+2021-05-15 20:32:51.7066 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-05-15 20:32:51.7519 INFO Sucessfully got the measurement type with Id:11
+2021-05-15 20:32:51.8550 INFO Measurements-Create: Measurement creation  Attempted
+2021-05-15 20:32:52.1630 INFO Measurements-Create: Measurement creation was created
+2021-05-15 20:32:52.1630 INFO Measurements-Create: LKDUS_API.Data.Measurement

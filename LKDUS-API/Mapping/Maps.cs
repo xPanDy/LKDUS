@@ -34,6 +34,10 @@ namespace LKDUS_API.Mapping
             CreateMap<MeasurementType, MeasurementTypeUpdateDTO>().ReverseMap();
             CreateMap<MeasurementType, MeasurementTypeCreateDTO>().ReverseMap();
             
+            CreateMap<Dimension, DimensionDTO>().ReverseMap();
+            CreateMap<Dimension, DimensionCreateDTO>().ReverseMap();
+            
+            
             CreateMap<MeasurementPosition, MeasurementPositionDTO>().ReverseMap();
             CreateMap<MeasurementPosition, MeasurementPositionCreateDTO>().ReverseMap();
             CreateMap<MeasurementPosition, MeasurementPositionUpdateDTO>().ReverseMap();

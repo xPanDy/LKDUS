@@ -306,5 +306,27 @@ namespace LKDUS_UI.Service
         {
             throw new NotImplementedException();
         }
+
+        public Task<LoginModel> CreateObject(string url, LoginModel obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<LoginModelCreate> CreateObject(string url, LoginModelCreate obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<string> CreateObjectAndReturnId(string url, LoginModel obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<string> CreateObjectAndReturnId(string url, LoginModelCreate obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        
     }
 }

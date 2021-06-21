@@ -1,10 +1,11 @@
-﻿@page "/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/quality"
+﻿@page "/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/quality"
 @* /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/quality"*@
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
 @using LKDUS_UI.Contracts
 @using System.Net.Http
-
+@using LKDUS_UI.Service
+@inject ToastService toastService
 @inject IMeasurementRepository repo
 @inject NavigationManager navManager
 @inject IMeasurementRepository measurementRepo
@@ -44,7 +45,7 @@
                 <button @onclick="focusToInput1" type="button" class="btn btn-block btn-lg btn-success">
                     Raupjums
                 </button>
-                <input  style="background-color:@colorBgP1" @onclick="focusToInput1" disabled id="@id1" @ref="input1" @bind="@v1" class="form-control"
+                <input style="background-color:@colorBgP1" @onclick="focusToInput1" disabled id="@id1" @ref="input1" @bind="@v1" class="form-control"
                        min="0"
                        type="number">
             </div>
@@ -79,14 +80,14 @@
                 <button @onclick="focusToInput4" type="button" class="btn btn-success btn-lg btn-block">
                     Atkritumi zem naža
                 </button>
-                <input  style="background-color:@colorBgP4"  @onclick="focusToInput4" disabled id="@id4" @ref="input4" @bind="@v4" class="form-control"
+                <input style="background-color:@colorBgP4" @onclick="focusToInput4" disabled id="@id4" @ref="input4" @bind="@v4" class="form-control"
                        min="0"
                        type="number">
             </div>
         </div>
     </div>
 
-   
+
 
     <div class="row justify-content-center">
         <div class="col-auto">
@@ -96,16 +97,16 @@
                     <tr>
                         <td> <button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>add(1) ">1</button></td>
                         @*<td> <button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('code').value=document.getElementById('code').value + '1' + @v1; document.getElementById('code').click(); ">1</button></td>*@
-                        <td> <button type="button" class="btn btn-success btn-lg btn-block"  @onclick="e=>add(2)">2</button></td>
-                        <td> <button type="button" class="btn btn-success btn-lg btn-block"  @onclick="e=>add(3)">3</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block"  @onclick="e=>add(-1)">&lt;</button></td>
+                        <td> <button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>add(2)">2</button></td>
+                        <td> <button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>add(3)">3</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>add(-1)">&lt;</button></td>
                     </tr>
 
                     <tr>
                         <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>add(4)">4</button></td>
                         <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>add(5)">5</button></td>
                         <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>add(6)">6</button></td>
-                        <td> </td>                                                         
+                        <td> </td>
                     </tr>
 
                     <tr>
@@ -131,7 +132,8 @@
 
 @code {
     MeasurementType mt = new MeasurementType();
-
+    [Parameter]
+    public string pshift { get; set; }
     [Parameter]
     public string userId { get; set; }
     [Parameter]
@@ -150,7 +152,7 @@
     private string v4;
 
     private string @colorBgP1 = "";
-    private string @colorBgP2= "";
+    private string @colorBgP2 = "";
     private string @colorBgP3 = "";
     private string @colorBgP4 = "";
 
@@ -163,12 +165,14 @@
 
         if (i == -1)
         {
-            if (values[selectedindex] !=null ) {
+            if (values[selectedindex] != null)
+            {
 
 
-                if (values[selectedindex].Length > 0) {
+                if (values[selectedindex].Length > 0)
+                {
 
-                    values[selectedindex] = values[selectedindex].Substring(0,values[selectedindex].Length-1);
+                    values[selectedindex] = values[selectedindex].Substring(0, values[selectedindex].Length - 1);
 
                 }
             }
@@ -195,7 +199,7 @@
             {
 
 
-                if (values[selectedindex].Length > 3)
+                if (values[selectedindex].Length >= 3)
                 {
                     await JsRuntime.InvokeVoidAsync("alert", "Mērījuma apjoms nedrīkst pārsniegt 3 ciparu skaitli");
                     return;
@@ -224,6 +228,7 @@
 
     protected async override Task OnInitializedAsync()
     {
+        ModelPacks = await this.packRepo.Get(Endpoints.PacksEndpoint);
         colorBgP1 = "yellow";
         v1 = "0";
         v2 = "0";
@@ -262,7 +267,7 @@
         colorBgP2 = "";
         colorBgP3 = "";
         colorBgP4 = "";
-        if (v1.Length==1 && v1=="0")
+        if (v1.Length == 1 && v1 == "0")
         {
             v1 = "";
         }
@@ -322,9 +327,9 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
     }
     private async void focusToInput4()
     {
-        colorBgP1 ="";
-        colorBgP2 ="";
-        colorBgP3 ="";
+        colorBgP1 = "";
+        colorBgP2 = "";
+        colorBgP3 = "";
         colorBgP4 = "yellow";
         if (values[selectedindex] != null)
         {
@@ -362,43 +367,79 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
 
     bool isSuccess = false;
     bool isPackCreated = false;
-
+    private IList<Pack> ModelPacks;
     private async void SaveMeasurement()
     {
+        //var pid = ModelPacks.Max(el => el.Id) + 1;
         mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 5);
+        int packId = int.Parse(stringPackValue);
 
 
         String measurementDateAndTime = DateTime.Now.ToString("g");
+        DateTime shiftTimeStart = Convert.ToDateTime("07:00:00");
 
-        DateTime shiftTime = Convert.ToDateTime("12:00:00");
+        DateTime shiftTimeEnd = Convert.ToDateTime("19:00:00");
+
         DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
-        int packId = int.Parse(stringPackValue);
 
         //String timeOfTheDayNow = DateTime.Now.ToString("t");
         int shift = 1;
 
-        if (DateTime.Compare(currentMeasurement, shiftTime) >= 0)
+        if (DateTime.Compare(currentMeasurement, shiftTimeStart) >= 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) < 0)
+        {
+            shift = 1;
+        }
+
+        if (DateTime.Compare(currentMeasurement, shiftTimeStart) < 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) >= 0)
         {
             shift = 2;
+        }
+        if (pshift != shift.ToString())
+        {
+            shift = int.Parse(pshift);
         }
 
 
 
-
         IList<Measurement> measurementsToCreate = new List<Measurement>();
+        Pack pack = new Pack();
+        Machine machine = new Machine();
+
+        machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
+        LoginModel user = new LoginModel();
+        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
+        pack.DateCreated = DateTime.Parse(measurementDateAndTime);
+        pack.Machine = fusMachineName;//  machine.Name;
+        pack.Shift = shift;
+        pack.Author = user.UserName;
+        pack.FusCode = stringPackValue;
+        pack.MeasurementTypeName = mt.Name;
+
+        var packToCreate = packRepo.CreateObjectAndReturnId(Endpoints.PacksEndpoint, pack);
+        string packStringResult = packToCreate.Result.ToString();
+
+        string firstString = "id";
+        string lastString = ",";
+
+        int pos1 = packStringResult.IndexOf(firstString);
+        int pos2 = packStringResult.IndexOf(lastString);
+
+        string final = packStringResult.Substring(pos1, pos2 - pos1);
+
+        string[] elements = final.Split(':');
 
 
 
         Measurement meas = new Measurement();
-        meas.DateCreated = measurementDateAndTime;
+        meas.DateCreated = DateTime.Parse(measurementDateAndTime);
         meas.Shift = shift;
         // meas.MachineId = int.Parse(pmachineIdd); //machine.Id;
         meas.MachineName = fusMachineName;
         meas.UserId = userId;
         meas.MeasurementPositionId = int.Parse(measurementPositionId);
-        meas.PackId = packId;
+        meas.FusPackId = packId;
         meas.MeasurementTypeId = 5;
-
+        meas.PackId = int.Parse(elements[1]);
 
         if (v1 == "")
         {
@@ -424,20 +465,6 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
 
 
 
-        Pack pack = new Pack();
-        Machine machine = new Machine();
-
-        machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
-        LoginModel user = new LoginModel();
-        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
-        pack.DateCreated = measurementDateAndTime;
-        pack.Machine = fusMachineName;//  machine.Name;
-        pack.Shift = shift;
-        pack.Author = user.UserName;
-        pack.FusCode = stringPackValue;
-        pack.MeasurementTypeName = mt.Name;
-
-        isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
 
 
 
@@ -446,8 +473,10 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
 
         isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
 
-        if (isPackCreated)
+        if (packToCreate != null && isSuccess)
         {
+            isPackCreated = true;
+            toastService.ShowToast("Mērījuma dati saglabāti", ToastLevel.Success);
             this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
         }
     }

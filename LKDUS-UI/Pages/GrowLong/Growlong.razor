@@ -134,10 +134,9 @@
     {
         Model = await pRepo.Get(Endpoints.PacksEndpoint);
         //odel = Model.OrderByDescending(el => el.Id).ToList() ;
-        Model = Model.OrderByDescending(el => el.Id).Where(el => el.MeasurementTypeName.Equals("Platums")||   el.MeasurementTypeName.Equals("Biezums")||
-              el.MeasurementTypeName.Equals("Kvalitāte")||   el.MeasurementTypeName.Equals("Garums")).ToList();
+        Model = Model.OrderByDescending(el => el.Id).Where(el => el.MeasurementTypeName.Equals("Garansaaudzēšana biezums")).ToList();
 
- 
+
         try
         {
             int result = Int32.Parse(measurementPositionId);
@@ -160,7 +159,7 @@
 
     private void OpenCreateForm(MouseEventArgs e)
     {
-         this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/create");
+        this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/create");
     }
     private void goBack(MouseEventArgs e)
     {

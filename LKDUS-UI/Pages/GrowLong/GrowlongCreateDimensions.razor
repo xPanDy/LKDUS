@@ -100,26 +100,26 @@
         private void OpenCreateForm(MouseEventArgs e)
         {
 
-            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{fusMachineName}/create");
+            this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{fusMachineName}/create");
         }
 
 
         private void Return(MouseEventArgs e)
         {
 
-            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
+            this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/create");
         }
 
 
         private void NavigattetoWidth(MouseEventArgs e)
         {
 
-            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/width");
+            this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/width");
         }
 
         private void GoLength(MouseEventArgs e)
         {
 
-            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/length");
+            this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/length");
         }
     }

@@ -43,7 +43,7 @@
 
 
     <!--<div class="form-group">
-        
+
             <div class="row">
                 <div class="col">
                     <button class="btn btn-primary">
@@ -56,11 +56,9 @@
 
                 <div class="col">
                     <label for="packCode">Pakas kods</label>-->
+    @*@bind=@packId*@
 
-
-                    @*@bind=@packId*@
-
-                    <!--<input class="form-control"
+    <!--<input class="form-control"
                            @bind-value="@stringPackValue"
                            @bind-value:event="oninput"
                            @onkeyup="DoSomethingElse"
@@ -154,26 +152,22 @@
             </div>
         }
     </div>-->
-
-
-
-
     @*<div class="form-group">
-        <label for="machine">Iekārta</label>
-        <select class="custom-select"  @bind="machine.Id"  id ="machine"  >
-            
-            @if (Machines != null)
-            {
-                @foreach (var Mach in Machines)
+            <label for="machine">Iekārta</label>
+            <select class="custom-select"  @bind="machine.Id"  id ="machine"  >
+
+                @if (Machines != null)
                 {
-                    //pmachineIdd = Mach.Id;
+                    @foreach (var Mach in Machines)
+                    {
+                        //pmachineIdd = Mach.Id;
 
-                    <option value="@Mach.Id">@Mach.Name</option>
+                        <option value="@Mach.Id">@Mach.Name</option>
+                    }
                 }
-            }
-        </select>
+            </select>
 
-    </div>*@
+        </div>*@
 
 
 
@@ -182,7 +176,7 @@
         <div class="row">
             <div class="col">
                 @*// 01.12.2020 09:19:04*@
-                <select class="custom-select" @bind="Day">
+                <select disabled="true" class="custom-select" @bind="Day">
                     @for (int i = 1; i <= 31; i++)
                     {
                         <option>@i</option>
@@ -193,7 +187,7 @@
 
 
             <div class="col">
-                <select class="custom-select" @bind="Month">
+                <select disabled="true" class="custom-select" @bind="Month">
                     @for (int i = 1; i <= 12; i++)
                     {
                         <option value="@i">@Months[i - 1]</option>
@@ -204,68 +198,70 @@
 
 
             <div class="col">
-                <select class="custom-select" @bind="Year">
+                <select disabled="true" class="custom-select" @bind="Year">
                     @for (int i = DateTime.Now.Year - 5;
-                       i <= DateTime.Now.Year + 5; i++)
+                      i <= DateTime.Now.Year + 5; i++)
                     {
                         <option>@i</option>
                     }
                 </select>
-                
+
             </div>
-            
+
         </div>
 
 
     </div>
 
 
-    
+
 
     @if (LaborantList == null)
     {
         <LoadingMessage Message="Notiek laborantu ielāde" />
     }
-    else { 
-    <div class="form-group">
-        <label for="operator">Laborants</label>
-        <select disabled="true" class="custom-select" @bind=@defaultUser.UserName id="operator">
+    else
+    {
+        <div class="form-group">
+            <label for="operator">Laborants</label>
+            <select disabled="true" class="custom-select" @bind=@defaultUser.UserName id="operator">
 
-            
-            @foreach (var usr in LaborantList)
-            {
 
-                <option>@usr.UserName</option>
-            } 
+                @foreach (var usr in LaborantList)
+                {
 
-            
-        </select>
+                    <option>@usr.UserName</option>
+                }
 
-    </div>
+
+            </select>
+
+        </div>
 
     }
     <div class="form-group">
         <label for="shift">Maiņa</label>
-        <select class="custom-select" @bind="@pshift" id="shift">
-            <option selected>1</option>
-            <option value="1">2</option>
+        <select class="custom-select" @bind=pshift id="shift">
+            <option value="1">1</option>
+            <option value="2">2</option>
 
 
-            
         </select>
+
+       
 
     </div>
 
- 
+
 
     <nav class="navbar navbar-dark">
         <div class="container-fluid">
-            
+
             <div class="navbar-btn">
 
                 <button type="button" @onclick="@GoToPeeling" class="btn btn-primary">Tālāk</button>
             </div>
-            
+
 
         </div>
     </nav>
@@ -289,8 +285,8 @@
        "Novembris", "Decembris"  };
 
 
-    [Parameter]
-    public int pshift { get; set; }
+
+    public int pshift = 1;
     // [Parameter]
     //  public int pmachineIdd { get; set; }
     [Parameter]
@@ -317,7 +313,7 @@
 
     //  public IList<FusPack> fusPacks;
 
-    public IList<LoginModel> LaborantList ;
+    public IList<LoginModel> LaborantList;
 
 
     // public FusPack fp = new FusPack();
@@ -325,7 +321,7 @@
 
 
 
-    private void changeMachine( )
+    private void changeMachine()
     {
 
     }
@@ -350,7 +346,7 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        pshift = 1;
+        
 
         if (firstRender)
         {
@@ -359,6 +355,26 @@
             today = DateTime.Today;
             currentLocalTime = browserDateTime.Now.ToString();
             StateHasChanged();
+
+            String measurementDateAndTime = DateTime.Now.ToString("g");
+            DateTime shiftTimeStart = Convert.ToDateTime("07:00:00");
+
+            DateTime shiftTimeEnd = Convert.ToDateTime("19:00:00");
+
+            DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
+
+            //String timeOfTheDayNow = DateTime.Now.ToString("t");
+
+
+            if (DateTime.Compare(currentMeasurement, shiftTimeStart) >= 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) < 0)
+            {
+                pshift = 1;
+            }
+
+            if (DateTime.Compare(currentMeasurement, shiftTimeStart) < 0 || DateTime.Compare(currentMeasurement, shiftTimeEnd) >= 0)
+            {
+                pshift = 2;
+            }
 
         }
 
@@ -397,18 +413,18 @@
             Console.WriteLine($"Unable to parse");
         }
         todayLocal = DateTime.Now.ToString("g");// today.ToString("g");
-        //pmachineIdd = machine.Id;
-        //if (pmachineIdd == 0)
-        //{
-        //    pmachineIdd = Machines.FirstOrDefault().Id;
-        //}
+                                                //pmachineIdd = machine.Id;
+                                                //if (pmachineIdd == 0)
+                                                //{
+                                                //    pmachineIdd = Machines.FirstOrDefault().Id;
+                                                //}
         if (stringPackValue == null)
         {
             stringPackValue = "0";
         }
     }
 
-    private void checkParams( )
+    private void checkParams()
     {
         //pmachineIdd = machine.Id;
         //if (pmachineIdd == 0)
@@ -446,7 +462,7 @@
     private void GoToPeeling(MouseEventArgs e)
     {
         checkParams();
-        this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}/{stringPackValue}/saving");
+        this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}/{stringPackValue}/{pshift}/saving");
     }
 
 

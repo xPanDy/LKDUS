@@ -51,7 +51,7 @@
         <div class="row">
             <div class="col">
                 @*// 01.12.2020 09:19:04*@
-                <select class="custom-select" @bind="Day">
+                <select disabled="true" class="custom-select" @bind="Day">
                     @for (int i = 1; i <= 31; i++)
                     {
                         <option>@i</option>
@@ -62,7 +62,7 @@
 
 
             <div class="col">
-                <select class="custom-select" @bind="Month">
+                <select disabled="true" class="custom-select" @bind="Month">
                     @for (int i = 1; i <= 12; i++)
                     {
                         <option value="@i">@Months[i - 1]</option>
@@ -73,7 +73,7 @@
 
 
             <div class="col">
-                <select class="custom-select" @bind="Year">
+                <select disabled="true" class="custom-select" @bind="Year">
                     @for (int i = DateTime.Now.Year - 5;
                        i <= DateTime.Now.Year + 5; i++)
                     {
@@ -115,9 +115,9 @@
     }
     <div class="form-group">
         <label for="shift">Maiņa</label>
-        <select class="custom-select" @bind="@pshift" id="shift">
-            <option selected>1</option>
-            <option value="1">2</option>
+        <select class="custom-select" @bind="pshift" id="shift">
+            <option value="1">1</option>
+            <option value="2">2</option>
 
 
             
@@ -133,12 +133,12 @@
 
 <div class=" col-md-1 mx-auto ">
     
-    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToSetting(1)) " >4.Līnijas nazis</button></div>
-    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToSetting(2)) " >5.Līnijas nazis</button></div>
-    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToSetting(3)) " >6.Līnijas nazis</button></div>
-    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToSetting(4)) " >7.Līnijas nazis</button></div>
-    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToSetting(5)) " >8.Līnijas nazis</button></div>
-    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToSetting(6)) " >9.Līnijas nazis</button></div>
+    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToKniveSharpening(1)) " >4.Līnijas nazis</button></div>
+    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToKniveSharpening(2)) " >5.Līnijas nazis</button></div>
+    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToKniveSharpening(3)) " >6.Līnijas nazis</button></div>
+    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToKniveSharpening(4)) " >7.Līnijas nazis</button></div>
+    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToKniveSharpening(5)) " >8.Līnijas nazis</button></div>
+    <div class="row p-1  "><button type="button" class="btn btn-primary p-2 m-6  " @onclick="(() => GoToKniveSharpening(6)) " >9.Līnijas nazis</button></div>
 
 
 
@@ -163,8 +163,8 @@
        "Novembris", "Decembris"  };
 
 
-        [Parameter]
-        public int pshift { get; set; }
+
+        public int pshift = 1;//{ get; set; }
         [Parameter]
         public int pmachineIdd { get; set; }
         [Parameter]
@@ -224,7 +224,7 @@
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
-            pshift = 1;
+
 
             if (firstRender)
             {
@@ -233,6 +233,26 @@
                 today = DateTime.Today;
                 currentLocalTime = browserDateTime.Now.ToString();
                 StateHasChanged();
+
+                String measurementDateAndTime = DateTime.Now.ToString("g");
+                DateTime shiftTimeStart = Convert.ToDateTime("07:00:00");
+
+                DateTime shiftTimeEnd = Convert.ToDateTime("19:00:00");
+
+                DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
+
+                //String timeOfTheDayNow = DateTime.Now.ToString("t");
+
+
+                if (DateTime.Compare(currentMeasurement, shiftTimeStart) >= 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) < 0)
+                {
+                    pshift = 1;
+                }
+
+                if (DateTime.Compare(currentMeasurement, shiftTimeStart) < 0 || DateTime.Compare(currentMeasurement, shiftTimeEnd) >= 0)
+                {
+                    pshift = 2;
+                }
 
             }
 
@@ -296,29 +316,9 @@
             }
         }
 
-        //private void GoToThickness(MouseEventArgs e)
-        //{
 
-        //    checkParams();
 
-        //    //  validateParameters(measurementPositionId, measurementPositionId, stringPackValue, pmachineIdd, pshift);
-        //    this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness");
-        //    //      /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness
-        //    //     {userId}/{measurementPositionId}/{stringPackValue}/{ pmachineIdd}
-
-        //}
-
-        //private bool validateParameters(string p1, string p2, string p3, int p4, int p5 )
-        //{
-        //    //if (string.IsNullOrEmpty(stringPackValue)==true && (string.IsNullOrEmpty(stringPackValue))
-        //    //{
-
-        //    //    return true;
-        //    //}
-        //    //return false;
-        //}
-
-        private void GoToSetting(int knive)
+        private void GoToKniveSharpening(int knive)
         {
             if (knive == 1)
             {
@@ -345,15 +345,23 @@
             {
                 machine = Machines.Where(m => m.Name.Equals("9.līnija")).FirstOrDefault();
             }
-            pmachineIdd = machine.Id;
-            checkParams();
-            this.navManager.NavigateTo($"/measurementspeelingknivessettingoptions/{userId}/{measurementPositionId}/{pmachineIdd}/");
+            if (machine != null)
+            {
+                pmachineIdd = machine.Id;
+                checkParams();
+
+
+                this.navManager.NavigateTo($"/measurementspeelingknivessettingoptions/{userId}/{measurementPositionId}/{pmachineIdd}/{pshift}/");
+
+            }
+
         }
 
 
 
         private void goBack(MouseEventArgs e)
         {
-            this.navManager.NavigateTo($"/measurementspeelingknivessettingview/{userId}/{measurementPositionId}");
+            ///measurementspeelingknivessettings/00c4acf0-fd20-4959-986d-818d7c40f9e7/5/
+            this.navManager.NavigateTo($"/measurementspeelingknivessetting/{userId}/{measurementPositionId}/");
         }
     }

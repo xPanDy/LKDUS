@@ -1,4 +1,4 @@
-﻿@page "/measurementspeelingknivessettingoptions/{userId}/{measurementPositionId}/{pmachineIdd}/"
+﻿@page "/measurementspeelingknivessettingoptions/{userId}/{measurementPositionId}/{pmachineIdd}/{pshift}"
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
 @using LKDUS_UI.Contracts
@@ -67,7 +67,8 @@
 @code {
     private IList<Measurement> Model2;
 
-
+    [Parameter]
+    public string pshift { get; set; }
     [Parameter]
     public string userId { get; set; }
     [Parameter]
@@ -124,19 +125,19 @@
     private void NavigatetoShaftHeight(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo($"/shaft/{userId}/{measurementPositionId}/{pmachineIdd}");
+        this.navManager.NavigateTo($"/shaft/{userId}/{measurementPositionId}/{pmachineIdd}/{pshift}/");
     }
 
     private void NavigatetoPressureLineHeight(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo($"/pressurelineheigh/{userId}/{measurementPositionId}/{pmachineIdd}");
+        this.navManager.NavigateTo($"/pressurelineheigh/{userId}/{measurementPositionId}/{pmachineIdd}/{pshift}/");
     }
 
     private void NavigatetoGap(MouseEventArgs e)
     {
-        this.navManager.NavigateTo($"/pressurelineheighoverknive/{userId}/{measurementPositionId}/{pmachineIdd}");
-       
+        this.navManager.NavigateTo($"/pressurelineheighoverknive/{userId}/{measurementPositionId}/{pmachineIdd}/{pshift}/");
+
     }
 }
  

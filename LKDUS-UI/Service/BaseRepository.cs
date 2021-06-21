@@ -32,6 +32,7 @@ namespace LKDUS_UI.Service
 
             var client = this.client.CreateClient();
             HttpResponseMessage response = await client.SendAsync(request);
+
             if (response.StatusCode == System.Net.HttpStatusCode.Created)
             {
                 return true;
@@ -250,6 +251,60 @@ namespace LKDUS_UI.Service
            
 
             return false;
+        }
+
+        public async Task<T> CreateObject(string url, T obj)
+        {
+            var request = new HttpRequestMessage(HttpMethod.Post, url);
+           
+            request.Content = new StringContent(JsonConvert.SerializeObject(obj)
+                , Encoding.UTF8, "application/json");
+
+            var client = this.client.CreateClient();
+            HttpResponseMessage response = await client.SendAsync(request);
+            if (response.StatusCode == System.Net.HttpStatusCode.Created)
+            {
+                //return true;
+                var content = await response.Content.ReadAsStringAsync();
+                return  JsonConvert.DeserializeObject<T>(content);
+            }
+
+            return null;
+
+            /*
+             var request = new HttpRequestMessage(HttpMethod.Get, url);
+            var client = this.client.CreateClient();
+
+            HttpResponseMessage response = await client.SendAsync(request);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<IList<T>>(content);
+            }
+
+            return null;*/
+        }
+
+        public async Task<string>  CreateObjectAndReturnId(string url, T obj)
+        {
+            var request = new HttpRequestMessage(HttpMethod.Post, url);
+
+            request.Content = new StringContent(JsonConvert.SerializeObject(obj)
+                , Encoding.UTF8, "application/json");
+
+            var client = this.client.CreateClient();
+            HttpResponseMessage response =   client.Send(request);
+            if (response.StatusCode == System.Net.HttpStatusCode.Created)
+            {
+                //return true;
+                
+                string content =   response.Content.ReadAsStringAsync().Result;
+                
+                 return content;
+            }
+
+            return null;
         }
     }
 }

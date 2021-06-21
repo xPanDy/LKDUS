@@ -21,13 +21,14 @@ using LKDUS_API.Mapping;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using Microsoft.Extensions.DependencyInjection.Extensions;
-using Microsoft.AspNetCore.Http;
+//using Microsoft.Extensions.DependencyInjection.Extensions;
+//using Microsoft.AspNetCore.Http;
 
 namespace LKDUS_API
 {
     public class Startup
     {
+        //private readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -109,14 +110,15 @@ namespace LKDUS_API
            
             services.AddScoped<IFusPackRepository, FusPackRepository>();
             services.AddScoped<IPackRepository, PackRepository>();
+            services.AddScoped<IDimensionRepository, DimensionRepository>();
             services.AddScoped<IMachineRepository, MachineRepository>();
           //  services.AddScoped<IAspUserRepository, AspUserRepository>();
-
+         
 
             services.AddControllers();
-            services.AddMvc();
-            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddProgressiveWebApp();
+           // services.AddMvc();
+           // services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            // services.AddProgressiveWebApp();
            services.AddMvc(c => c.Conventions.Add(new ApiExplorerIgnores()));
              
         }

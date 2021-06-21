@@ -7,7 +7,8 @@ namespace LKDUS_UI.Static
 {
     public static class Endpoints
     {   
-        public static string BaseUrl = "http://localhost:5000/";
+         public static string BaseUrl = "http://localhost:5000/";
+     //   public static string BaseUrl = "http://lkdus-api.finieris.lv:5000";
         public static string UsersEndpoint = $"{BaseUrl}api/users/";
         public static string MeasurementEndpoint = $"{BaseUrl}api/measurements/";
         public static string LoginEndpoint = $"{BaseUrl}api/login/";

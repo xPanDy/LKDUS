@@ -91,6 +91,8 @@
 
         //Model.Image = picName;
         //}
+       // var machine = await machineRepo.Create(Endpoints.MachinesEndpoint, Model);
+      //  var machine = await machineRepo.CreateObject(Endpoints.MachinesEndpoint, Model);
 
         isSuccess = await machineRepo.Create(Endpoints.MachinesEndpoint, Model);
         if (isSuccess)

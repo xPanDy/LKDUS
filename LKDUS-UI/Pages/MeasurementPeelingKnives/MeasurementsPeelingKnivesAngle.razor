@@ -1,9 +1,13 @@
-﻿@page "/measurementspeelingknivesangle/{userId}/{measurementPositionId}/{pmachineIdd}"
+﻿@page "/measurementspeelingknivesangle/{userId}/{measurementPositionId}/{pmachineIdd}/{pshift}/"
 @*  *@
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
 @using LKDUS_UI.Contracts
 @using System.Net.Http
+@using System.Globalization
+
+@using LKDUS_UI.Service
+@inject ToastService toastService
 @inject IMachinesRepository machineRepository;
 @inject IMeasurementRepository repo
 @inject NavigationManager navManager
@@ -72,7 +76,7 @@
                     border: none;
                     height: 80px;
                     width: 100%"
-                           @bind-value="@positionsAngle[0]" @onclick="el => setPositionValue(0)" />
+                           @bind-value="positionsAngle[0]" @onclick="el => setPositionValue(0)" />
                 </div>
 
 
@@ -90,7 +94,7 @@
                     border: none;
                     height: 80px;
                     width: 100%"
-                       @bind-value="@positionsAngle[2]" @onclick="el => setPositionValue(2)" />
+                       @bind-value="positionsAngle[2]" @onclick="el => setPositionValue(2)" />
             </div>
         </div>
 
@@ -123,7 +127,7 @@
                     border: none;
                     height: 80px;
                     width: 100%"
-                           @bind-value="@positionsAngle[3]" @onclick="el => setPositionValue(3)" />
+                           @bind-value="positionsAngle[3]" @onclick="el => setPositionValue(3)" />
                 </div>
 
 
@@ -140,36 +144,65 @@
                     border: none;
                     height: 80px;
                     width: 100%"
-                           @bind-value="@positionsAngle[1]" @onclick="el => setPositionValue(1)" />
+                           @bind-value="positionsAngle[1]" @onclick="el => setPositionValue(1)" />
                 </div>
 
             </div>
         </div>
-        <div class="table-responsive" style="height: 40%">
+        @*<div class="table-responsive" style="height: 40%">
+                <table class="table   p-0 m-0">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <button type="button" class="btn btn-success  d-inline-block btn-lg btn-block" style="display:inline-block; width:100%; height:100%;" onclick="document.getElementById('selected').value = document.getElementById('selected').value + '1';">1</button>
+                            </td>
+                            <td> <button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '2';">2</button></td>
+                            <td> <button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '3';">3</button></td>
+                            <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value.slice(0, -1);">&lt;</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '4';">4</button></td>
+                            <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '5';">5</button></td>
+                            <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '6';">6</button></td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '7';">7</button></td>
+                            <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '8';">8</button></td>
+                            <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '9';">9</button></td>
+                            <td rowspan="2"><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + ',';">,</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '0';">0</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>*@
+        <div class="table-responsive">
             <table class="table   p-0 m-0">
                 <tbody>
                     <tr>
                         <td>
-                            <button type="button" class="btn btn-success  d-inline-block btn-lg btn-block" style="display:inline-block; width:100%; height:100%;" onclick="document.getElementById('selected').value = document.getElementById('selected').value + '1';">1</button>
+                            <button type="button" class="btn btn-success  d-inline-block btn-lg btn-block" style="display:inline-block; width:100%; height:100%;" @onclick="e=>click('1')">1</button>
                         </td>
-                        <td> <button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '2';">2</button></td>
-                        <td> <button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '3';">3</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value.slice(0, -1);">&lt;</button></td>
+                        <td> <button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('2')">2</button></td>
+                        <td> <button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('3')">3</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('-')">&lt;</button></td>
                     </tr>
                     <tr>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '4';">4</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '5';">5</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '6';">6</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('4')">4</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('5')">5</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('6')">6</button></td>
                         <td> </td>
                     </tr>
                     <tr>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '7';">7</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '8';">8</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '9';">9</button></td>
-                        <td rowspan="2"><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + ',';">,</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('7')">7</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('8')">8</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('9')">9</button></td>
+                        <td rowspan="2"><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click(',')">,</button></td>
                     </tr>
                     <tr>
-                        <td colspan="3"><button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('selected').value=document.getElementById('selected').value + '0';">0</button></td>
+                        <td colspan="3"><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>click('0')">0</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -180,39 +213,192 @@
 
 
 @code {
+
+    private void click(char valueToAdd)
+    {
+
+        for (int i = 0; i < positionsAngle.GetLength(0); i++)
+        {
+            if (idOfElement[i] == "selected")
+            {
+                if (!positionsAngle[i].Contains(','))
+                {
+
+                    if (positionsAngle[i].Length >= 4)
+                    {
+
+                        bool canContinue = true;
+                        if (valueToAdd == '-' || valueToAdd == ',')
+                        {
+
+                            canContinue = true;
+                        }
+                        else
+                        {
+                            toastService.ShowToast("Pirms komata nedrīkst būt vairāk par 4 simboliem", ToastLevel.Error);
+                            canContinue = false;
+                        }
+
+
+
+                        if (canContinue)
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            return;
+                        }
+
+                    }
+
+
+                }
+            }
+
+        }
+
+
+        for (int i = 0; i < positionsAngle.GetLength(0); i++)
+        {
+            if (idOfElement[i] == "selected")
+            {
+
+                if (positionsAngle[i].Contains(',') && valueToAdd == ',')
+                {
+                    return;
+                }
+
+                //   if(positionsAngle[i].Contains(',')&& positionsAngle[i].Substring)
+
+                if (positionsAngle[i].Contains(","))
+                {
+                    string afterComma = positionsAngle[i].Substring(positionsAngle[i].IndexOf(",") + 1);
+
+
+                    if (valueToAdd == '-')
+                    {
+                        if (positionsAngle[i].Length == 0)
+                        {
+                            break;
+                        }
+                        positionsAngle[i] = positionsAngle[i].Remove(positionsAngle[i].Length - 1, 1);
+                    }
+                    else
+                    {
+                        if (afterComma.Length >= 2)
+                        {
+                            break;
+                        }
+                        positionsAngle[i] = positionsAngle[i] + valueToAdd;
+                    }
+
+
+
+
+                }
+                else
+                {
+                    if (valueToAdd == '-')
+                    {
+                        if (positionsAngle[i].Length == 0)
+                        {
+                            break;
+                        }
+                        positionsAngle[i] = positionsAngle[i].Remove(positionsAngle[i].Length - 1, 1);
+                    }
+                    else
+                    {
+
+                        positionsAngle[i] = positionsAngle[i] + valueToAdd;
+                    }
+
+                }
+
+
+
+
+
+            }
+        }
+
+
+    }
+
     MeasurementType mt = new MeasurementType();
     Machine machine = new Machine();
     string[] idOfElement = new string[4];
 
+    public void setAngleValue(int activePosition, int value)
+    {
+        positionsAngle[activePosition] = positionsAngle[activePosition] + "" + value;
+    }
+    private IList<Pack> ModelPacks;
     private async void SaveMeasurement()
     {
+        //var pid = ModelPacks.Max(el => el.Id) + 1;
         String measurementDateAndTime = DateTime.Now.ToString("g");
 
-        DateTime shiftTime = Convert.ToDateTime("12:00:00");
+        DateTime shiftTimeStart = Convert.ToDateTime("07:00:00");
+
+        DateTime shiftTimeEnd = Convert.ToDateTime("19:00:00");
+
         DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
-        // int packId = int.Parse(stringPackValue);
 
         //String timeOfTheDayNow = DateTime.Now.ToString("t");
         int shift = 1;
 
-        if (DateTime.Compare(currentMeasurement, shiftTime) >= 0)
+        if (DateTime.Compare(currentMeasurement, shiftTimeStart) >= 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) < 0)
+        {
+            shift = 1;
+        }
+
+        if (DateTime.Compare(currentMeasurement, shiftTimeStart) < 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) >= 0)
         {
             shift = 2;
         }
 
-
-
+        if (pshift != shift.ToString())
+        {
+            shift = int.Parse(pshift);
+        }
 
         IList<Measurement> measurementsToCreate = new List<Measurement>();
+        Pack pack = new Pack();
+        Machine machine = new Machine();
 
+        machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
+        LoginModel user = new LoginModel();
+        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
+        pack.DateCreated = DateTime.Parse(measurementDateAndTime);
+        // pack.Machine =  machine.Name;
+        pack.Machine = machine.Name;
+        pack.Shift = shift;
+        pack.Author = user.UserName;
+        // pack.FusCode = stringPackValue;
+        pack.MeasurementTypeName = mt.Name;
+
+        var packToCreate = packRepo.CreateObjectAndReturnId(Endpoints.PacksEndpoint, pack);
+        string packStringResult = packToCreate.Result.ToString();
+
+        string firstString = "id";
+        string lastString = ",";
+
+        int pos1 = packStringResult.IndexOf(firstString);
+        int pos2 = packStringResult.IndexOf(lastString);
+
+        string final = packStringResult.Substring(pos1, pos2 - pos1);
+
+        string[] elements = final.Split(':');
+        //isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
 
         Measurement meas = new Measurement();
-        meas.DateCreated = measurementDateAndTime;
+        meas.DateCreated = DateTime.Parse(measurementDateAndTime);
         meas.Shift = shift;
         meas.UserId = userId;
-        // meas.MachineName = fusMachineName;
+
         meas.MeasurementPositionId = int.Parse(measurementPositionId);
-        // meas.PackId = packId;
+
         meas.MeasurementTypeId = 8;
 
         bool isConverted = false;
@@ -221,7 +407,7 @@
 
         for (int i = 0; i < positionsAngle.GetLength(0); i++)
         {
-            if (decimal.TryParse(positionsAngle[0].ToString(), out value))
+            if (decimal.TryParse(positionsAngle[i].ToString(), out value))
             {
                 isConverted = true;
 
@@ -236,12 +422,19 @@
 
         if (isConverted)
         {
-            meas.Measurement1 = decimal.Parse(positionsAngle[0]);
-            meas.Measurement2 = decimal.Parse(positionsAngle[1]);
-            meas.Measurement3 = decimal.Parse(positionsAngle[2]);
-            meas.Measurement4 = decimal.Parse(positionsAngle[3]);
+            meas.Measurement1 = Convert.ToDecimal(positionsAngle[0].Replace(",", "."), CultureInfo.InvariantCulture);// decimal.Parse(positionsAngle[0]);
+            meas.Measurement2 = Convert.ToDecimal(positionsAngle[1].Replace(",", "."), CultureInfo.InvariantCulture);// decimal.Parse(positionsAngle[1]);
+            meas.Measurement3 = Convert.ToDecimal(positionsAngle[2].Replace(",", "."), CultureInfo.InvariantCulture);// decimal.Parse(positionsAngle[2]);
+            meas.Measurement4 = Convert.ToDecimal(positionsAngle[3].Replace(",", "."), CultureInfo.InvariantCulture);// decimal.Parse(positionsAngle[3]);
         }
-        meas.PackId = 0;
+        else
+        {
+
+            toastService.ShowToast("Lūdzu, aizpildiet visus laukus", ToastLevel.Error);
+            return;
+        }
+        meas.FusPackId = 0;
+        // meas.PackId = pid;
         //meas.Measurement5 = positions[4];
         //meas.Measurement6 = positions[5];
         //meas.Measurement7 = positions[6];
@@ -249,33 +442,26 @@
         //meas.Measurement9 = positions[8];
         //meas.Measurement10 = positions[9];
 
+        meas.PackId = int.Parse(elements[1]);
 
 
 
         measurementsToCreate.Add(meas);
 
-
         isSuccess = await repo.Create(Endpoints.MeasurementEndpoint, meas);
 
-        Pack pack = new Pack();
-        Machine machine = new Machine();
 
-        machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
-        LoginModel user = new LoginModel();
-        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
-        pack.DateCreated = measurementDateAndTime;
-        // pack.Machine =  machine.Name;
-        pack.Machine = machine.Name;
-        pack.Shift = shift;
-        pack.Author = user.UserName;
-        // pack.FusCode = stringPackValue;
-        pack.MeasurementTypeName = mt.Name;
 
-        isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
-        if (isPackCreated)
-        {   // "/measurementspeelingknives/{userId}/{measurementPositionId}"
-            //this.navManager.NavigateTo($"/measurementspeelingknives/{userId}/{measurementPositionId}");
-            this.navManager.NavigateTo($"/measurementspeelingknivespoints/{userId}/{measurementPositionId}/{pmachineIdd}");
+        if (packToCreate != null && isSuccess)
+        {
+            isPackCreated = true;// "/measurementspeelingknives/{userId}/{measurementPositionId}"
+                                 //this.navManager.NavigateTo($"/measurementspeelingknives/{userId}/{measurementPositionId}");
+            toastService.ShowToast("Mērījuma dati saglabāti", ToastLevel.Success);
+
+
+            this.navManager.NavigateTo($"/measurementspeelingknives/{userId}/{measurementPositionId}/create");
+
+
         }
     }
 
@@ -326,10 +512,12 @@
     [Parameter]
     public string pmachineIdd { get; set; }
 
-
+    [Parameter]
+    public string pshift { get; set; }
 
     protected async override Task OnInitializedAsync()
     {
+        ModelPacks = await this.packRepo.Get(Endpoints.PacksEndpoint);
         lengthPosition = 50;
         for (int i = 0; i < positionsAngle.GetLength(0); i++)
         {
@@ -380,7 +568,7 @@
     {
         if (isSuccess && isPackCreated)
         {
-            this.navManager.NavigateTo($"/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{pmachineIdd}/");
+            this.navManager.NavigateTo($"/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{pmachineIdd}/{pshift}/");
         }
         else
         {
@@ -388,7 +576,7 @@
             bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Tiešām vēlies iziet nesaglabājot?");
             if (confirmed)
             {
-                this.navManager.NavigateTo($"/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{pmachineIdd}/");
+                this.navManager.NavigateTo($"/measurementspeelingknivesoptions/{userId}/{measurementPositionId}/{pmachineIdd}/{pshift}/");
             }
         }
 

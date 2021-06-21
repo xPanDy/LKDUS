@@ -136,7 +136,7 @@ namespace LKDUS_API.Controllers
         /// <param name="measurementPositionCreateDTO"></param>
         /// <returns></returns>
         [HttpPost]
-        [Authorize(Roles = "Operator")]
+        //[Authorize(Roles = "Operator")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]

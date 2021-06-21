@@ -1,0 +1,218 @@
+2021-06-10 14:51:21.2057 INFO Pack-GetPacks: Attempted Call
+2021-06-10 14:51:21.3295 INFO Sucessfully got all packs
+2021-06-10 15:03:05.7921 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:03:05.8374 INFO Sucessfully got all packs
+2021-06-10 15:03:11.7232 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:03:11.7232 INFO Sucessfully got all packs
+2021-06-10 15:03:12.0676 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:03:12.0676 INFO Sucessfully got all packs
+2021-06-10 15:03:12.8629 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:03:12.8699 INFO Sucessfully got all packs
+2021-06-10 15:03:13.4942 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:03:13.4942 INFO Sucessfully got all packs
+2021-06-10 15:03:16.5641 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-10 15:03:16.6189 INFO Sucessfully got the measurement type with Id:11
+2021-06-10 15:03:16.6757 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 15:03:16.6757 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 15:18:55.8223 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:18:55.8223 INFO Sucessfully got all packs
+2021-06-10 15:19:14.8365 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:19:14.8491 INFO Sucessfully got all packs
+2021-06-10 15:19:19.2210 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:19:19.2326 INFO Sucessfully got all packs
+2021-06-10 15:19:20.4915 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:19:20.4975 INFO Sucessfully got all packs
+2021-06-10 15:19:25.4695 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-10 15:19:25.4800 INFO Sucessfully got the measurement type with Id:11
+2021-06-10 15:19:25.5040 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 15:19:25.5189 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 15:37:32.2117 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-10 15:37:32.2557 INFO Sucessfully got the measurement type with Id:11
+2021-06-10 15:37:32.2773 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 15:37:32.2773 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 15:38:14.1850 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-10 15:38:14.4539 ERROR Measurements-GetMeasurements:Invalid column name 'PackId'. - 
+2021-06-10 15:38:14.4728 INFO Machine-GetMachines: Attempted Call
+2021-06-10 15:38:14.4971 INFO Sucessfully got all machines
+2021-06-10 15:38:14.5223 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-06-10 15:38:14.5490 INFO Sucessfully got the measurement position with Id:2
+2021-06-10 15:38:18.4334 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:38:18.4334 INFO Sucessfully got all packs
+2021-06-10 15:38:18.4586 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-06-10 15:38:18.4586 INFO Sucessfully got the measurement position with Id:2
+2021-06-10 15:38:20.7455 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-10 15:38:20.7666 INFO Sucessfully got all measurementPositions
+2021-06-10 15:38:24.6384 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:38:24.6468 INFO Sucessfully got all packs
+2021-06-10 15:38:24.6636 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-10 15:38:24.6636 INFO Sucessfully got the measurement position with Id:5
+2021-06-10 15:38:26.3916 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-10 15:38:26.5302 ERROR Measurements-GetMeasurements:Invalid column name 'PackId'. - 
+2021-06-10 15:38:26.5476 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-10 15:38:26.6753 ERROR Measurements-GetMeasurements:Invalid column name 'PackId'. - 
+2021-06-10 15:38:26.6907 INFO Machine-GetMachines: Attempted Call
+2021-06-10 15:38:26.7021 INFO Sucessfully got all machines
+2021-06-10 15:38:26.7156 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-10 15:38:26.7156 INFO Sucessfully got the measurement position with Id:5
+2021-06-10 15:38:33.5934 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:38:33.6146 INFO Sucessfully got all packs
+2021-06-10 15:38:33.6584 INFO Machine-GetMachines: Attempted Call
+2021-06-10 15:38:33.7815 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:38:33.7815 INFO Sucessfully got all machines
+2021-06-10 15:38:33.7890 INFO Sucessfully got all packs
+2021-06-10 15:38:34.1511 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-10 15:38:34.3327 ERROR Measurements-GetMeasurements:Invalid column name 'PackId'. - 
+2021-06-10 15:38:34.3635 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-06-10 15:38:34.3762 INFO Sucessfully got the machine with Id:33
+2021-06-10 15:38:37.3752 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:38:37.4042 INFO Sucessfully got all packs
+2021-06-10 15:38:37.5312 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:38:37.7057 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:38:37.7105 INFO Sucessfully got all packs
+2021-06-10 15:38:37.7105 INFO Sucessfully got all packs
+2021-06-10 15:38:37.8976 INFO Machine-GetMachines: Attempted Call
+2021-06-10 15:38:37.8976 INFO Sucessfully got all machines
+2021-06-10 15:38:37.9214 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-10 15:38:38.0561 ERROR Measurements-GetMeasurements:Invalid column name 'PackId'. - 
+2021-06-10 15:38:38.0682 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-06-10 15:38:38.0682 INFO Sucessfully got the machine with Id:33
+2021-06-10 15:38:38.0911 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 12
+2021-06-10 15:38:38.0911 INFO Sucessfully got the measurement type with Id:12
+2021-06-10 15:38:45.5770 INFO Measurements-Create: Measurement creation  Attempted
+2021-06-10 15:38:54.0390 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'PackId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:a5a5670c-57ee-4b70-990f-8e64906dfa7a
+Error Number:207,State:1,Class:16
+2021-06-10 15:38:54.0648 INFO Machine-GetMachine: Attempted get machine with ID: 33
+2021-06-10 15:38:54.0724 INFO Sucessfully got the machine with Id:33
+2021-06-10 15:38:54.0941 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 15:38:54.0992 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 15:39:07.7994 INFO Pack-Create: Pack creation  Attempted
+2021-06-10 15:39:18.1114 INFO Pack-Create: Pack creation was created
+2021-06-10 15:39:18.1114 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-06-10 15:52:20.9904 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:52:21.3956 INFO Sucessfully got all packs
+2021-06-10 15:52:22.0457 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:52:22.3837 INFO Sucessfully got all packs
+2021-06-10 15:52:24.0769 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:52:26.0738 INFO Sucessfully got all packs
+2021-06-10 15:52:26.8289 INFO Pack-GetPacks: Attempted Call
+2021-06-10 15:52:27.0587 INFO Sucessfully got all packs
+2021-06-10 15:52:35.8966 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-10 15:52:35.9204 INFO Sucessfully got the measurement type with Id:11
+2021-06-10 15:52:35.9432 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 15:52:35.9524 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 19:08:37.3409 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:08:37.9070 INFO Sucessfully got all packs
+2021-06-10 19:08:39.9017 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:08:40.4910 INFO Sucessfully got all packs
+2021-06-10 19:08:59.7177 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-06-10 19:09:00.1074 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-06-10 19:09:02.1727 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:09:02.4523 INFO Sucessfully got all packs
+2021-06-10 19:09:02.9002 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:09:03.9005 INFO Sucessfully got all packs
+2021-06-10 19:09:09.1759 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-10 19:09:09.2198 INFO Sucessfully got the measurement type with Id:11
+2021-06-10 19:09:09.2642 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 19:09:09.2642 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 19:11:19.0496 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:11:23.7298 INFO Sucessfully got all packs
+2021-06-10 19:11:26.0187 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:11:26.8268 INFO Sucessfully got all packs
+2021-06-10 19:11:36.4454 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:11:37.8820 INFO Sucessfully got all packs
+2021-06-10 19:11:39.7650 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:11:40.5058 INFO Sucessfully got all packs
+2021-06-10 19:11:41.0627 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-10 19:11:41.1145 INFO Sucessfully got the measurement type with Id:11
+2021-06-10 19:11:41.1537 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 19:11:41.1537 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 19:13:30.8115 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:13:30.9438 INFO Sucessfully got all packs
+2021-06-10 19:13:30.9853 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:13:30.9853 INFO Sucessfully got all packs
+2021-06-10 19:13:31.2561 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:13:31.2824 INFO Sucessfully got all packs
+2021-06-10 19:13:31.3742 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:13:31.3920 INFO Sucessfully got all packs
+2021-06-10 19:13:34.0653 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-10 19:13:34.1294 INFO Sucessfully got the measurement type with Id:11
+2021-06-10 19:13:34.1855 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 19:13:34.1855 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 19:14:02.1564 INFO Pack-Create: Pack creation  Attempted
+2021-06-10 19:14:24.9545 INFO Pack-Create: Pack creation was created
+2021-06-10 19:14:28.6498 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-06-10 19:18:51.1410 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:18:51.2764 INFO Sucessfully got all packs
+2021-06-10 19:18:51.3216 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:18:51.3402 INFO Sucessfully got all packs
+2021-06-10 19:18:51.6658 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:18:51.6771 INFO Sucessfully got all packs
+2021-06-10 19:18:51.7047 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:18:51.7231 INFO Sucessfully got all packs
+2021-06-10 19:18:53.3012 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-10 19:18:53.3433 INFO Sucessfully got the measurement type with Id:11
+2021-06-10 19:18:53.3865 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 19:18:53.3929 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 19:19:08.4779 INFO Pack-Create: Pack creation  Attempted
+2021-06-10 19:19:10.3859 INFO Pack-Create: Pack creation was created
+2021-06-10 19:19:10.3859 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-06-10 19:22:42.3162 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:22:42.4444 INFO Sucessfully got all packs
+2021-06-10 19:22:42.4966 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:22:42.5032 INFO Sucessfully got all packs
+2021-06-10 19:22:42.9102 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:22:42.9102 INFO Sucessfully got all packs
+2021-06-10 19:22:42.9401 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:22:42.9401 INFO Sucessfully got all packs
+2021-06-10 19:23:06.9712 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-10 19:23:07.0319 INFO Sucessfully got the measurement type with Id:11
+2021-06-10 19:23:07.0801 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 19:23:07.0801 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 19:23:24.4514 INFO Pack-Create: Pack creation  Attempted
+2021-06-10 19:23:32.3750 INFO Pack-Create: Pack creation was created
+2021-06-10 19:23:32.3808 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-06-10 19:25:12.1742 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:25:12.3339 INFO Sucessfully got all packs
+2021-06-10 19:25:12.3858 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:25:12.3978 INFO Sucessfully got all packs
+2021-06-10 19:25:12.6913 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:25:12.6913 INFO Sucessfully got all packs
+2021-06-10 19:25:12.7261 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:25:12.7261 INFO Sucessfully got all packs
+2021-06-10 19:25:14.4529 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-10 19:25:14.5060 INFO Sucessfully got the measurement type with Id:11
+2021-06-10 19:25:14.5528 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 19:25:14.5528 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-06-10 19:25:17.5995 INFO Pack-Create: Pack creation  Attempted
+2021-06-10 19:25:17.8439 INFO Pack-Create: Pack creation was created
+2021-06-10 19:25:17.8459 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-06-10 19:32:30.4424 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-06-10 19:32:30.7050 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-06-10 19:32:31.1895 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-10 19:32:31.3909 INFO Sucessfully got all measurementPositions
+2021-06-10 19:32:32.1997 INFO Pack-GetPacks: Attempted Call
+2021-06-10 19:32:32.2284 INFO Sucessfully got all packs
+2021-06-10 19:32:32.2558 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 5
+2021-06-10 19:32:32.2810 INFO Sucessfully got the measurement position with Id:5
+2021-06-10 19:32:53.9462 INFO Pack-GetPack: Attempted Get pack with ID: 2
+2021-06-10 19:32:53.9815 INFO Sucessfully got the pack with Id:2
+2021-06-10 19:32:54.0097 INFO MeasurementsType-GetMeasurementsType: Attempted Call
+2021-06-10 19:32:54.0375 INFO Sucessfully got all Measurements types
+2021-06-10 19:32:54.0676 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-10 19:32:54.3207 ERROR Measurements-GetMeasurements:Invalid column name 'PackId'. - 
+2021-06-10 19:33:05.1871 INFO Pack-GetPack: Attempted Get pack with ID: 2
+2021-06-10 19:33:05.2013 INFO Sucessfully got the pack with Id:2
+2021-06-10 19:33:05.2160 INFO MeasurementsType-GetMeasurementsType: Attempted Call
+2021-06-10 19:33:05.2283 INFO Sucessfully got all Measurements types
+2021-06-10 19:33:05.2440 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-10 19:33:05.4109 ERROR Measurements-GetMeasurements:Invalid column name 'PackId'. - 

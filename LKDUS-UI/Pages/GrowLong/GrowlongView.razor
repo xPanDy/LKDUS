@@ -166,7 +166,7 @@
             ModelMeasurements = await measurementRepository.Get(Endpoints.MeasurementEndpoint);
             //ModelPacksHeader = ModelPacksHeader.Where(p=>p.FusCode==fusCode)..ToList() ;
 
-            ModelMeasurements = ModelMeasurements.Where(m => m.PackId == fuspackIntId && m.MeasurementTypeId == measurementType.Id).ToList();
+            ModelMeasurements = ModelMeasurements.Where(m => m.FusPackId == fuspackIntId && m.MeasurementTypeId == measurementType.Id).ToList();
             // Model = Model.Where(e => (e.MeasurementPositionId == 1)).ToList();
 
 

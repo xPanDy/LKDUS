@@ -1,10 +1,11 @@
-﻿@page "/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/length"
+﻿@page "/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/length"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
 @using LKDUS_UI.Contracts
 @using System.Net.Http
-
+@using LKDUS_UI.Service
+@inject ToastService toastService
 @inject IMeasurementRepository repo
 @inject NavigationManager navManager
 @inject IMeasurementRepository measurementRepo
@@ -150,7 +151,7 @@
                     <table class="table  ">
                         <tbody class="h-100">
                             <tr class="text-center">
-                                <td colspan="3"> <button type="button" @onclick="Reduce"  disabled="@isDisabledMinus"  style="color:deeppink" class="btn btn-secondary btn-lg">-</button></td>
+                                <td colspan="3"> <button type="button" @onclick="Reduce" disabled="@isDisabledMinus" style="color:deeppink" class="btn btn-secondary btn-lg">-</button></td>
                             </tr>
                             <tr class="text-center">
                                 <td>  <button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button></td>
@@ -214,7 +215,7 @@
                             </tr>
 
                             <tr class="text-center">
-                                <td colspan="3">  <button type="button" style="color:lawngreen" @onclick="Add" disabled="@isDisabledPlus"  class="btn btn-secondary btn-lg">+</button></td>
+                                <td colspan="3">  <button type="button" style="color:lawngreen" @onclick="Add" disabled="@isDisabledPlus" class="btn btn-secondary btn-lg">+</button></td>
                             </tr>
                         </tbody>
                     </table>
@@ -247,7 +248,8 @@
     [Parameter]
     public string userId { get; set; }
     public int[] positions = new int[10];
-
+    [Parameter]
+    public string pshift { get; set; }
     private string[] elements { get; set; } = new string[10];
 
     [Parameter]
@@ -261,6 +263,7 @@
     private string[] currentElement = new string[10];
     protected async override Task OnInitializedAsync()
     {
+        ModelPacks = await this.packRepo.Get(Endpoints.PacksEndpoint);
         // Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
         for (int i = 0; i < sizes.Length; i++)
         {
@@ -291,6 +294,7 @@
 
     }
 
+    int dimension = 0;
 
     public string colorBg1 = "white";
     public string colorBg2 = "white";
@@ -299,6 +303,8 @@
     int selecteSizeType = 0;
     private void changecolor1AndSetSizes()
     {
+        dimension = 1;
+
         isTypeCklicked = true;
         selecteSizeType = 13;
         colorBg1 = "greenyellow";
@@ -308,6 +314,7 @@
     }
     private void changecolor2AndSetSizes()
     {
+        dimension = 2;
         isTypeCklicked = true;
         selecteSizeType = 28;
         colorBg1 = "white";
@@ -316,6 +323,7 @@
     }
     private void changecolor3AndSetSizes()
     {
+        dimension = 3;
         isTypeCklicked = true;
         selecteSizeType = 13;
         colorBg1 = "white";
@@ -428,7 +436,7 @@
 
     }
 
-    private  async void BacktochooseDimension(MouseEventArgs e)
+    private async void BacktochooseDimension(MouseEventArgs e)
     {
         /*
 
@@ -445,7 +453,7 @@
         */
         if (isMeasurementCreated && isPackCreated)
         {
-            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions");
+            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions");
         }
         else
         {
@@ -453,7 +461,7 @@
             bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Tiešām vēlies iziet nesaglabājot?");
             if (confirmed)
             {
-                this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions");
+                this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions");
             }
         }
     }
@@ -527,45 +535,87 @@
         }
     }
 
-
+    private IList<Pack> ModelPacks;
     MeasurementType mt = new MeasurementType();
     bool isMeasurementCreated = false;
     bool isPackCreated = false;
     private async void SaveMeasurement()
     {
+        //var pid = ModelPacks.Max(el => el.Id) + 1;
         mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 4);
+        int packId = int.Parse(stringPackValue);
 
         String measurementDateAndTime = DateTime.Now.ToString("g");
 
-        DateTime shiftTime = Convert.ToDateTime("12:00:00");
+        DateTime shiftTimeStart = Convert.ToDateTime("07:00:00");
+
+        DateTime shiftTimeEnd = Convert.ToDateTime("19:00:00");
+
         DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
-        int packId = int.Parse(stringPackValue);
 
         //String timeOfTheDayNow = DateTime.Now.ToString("t");
         int shift = 1;
 
-        if (DateTime.Compare(currentMeasurement, shiftTime) >= 0)
+        if (DateTime.Compare(currentMeasurement, shiftTimeStart) >= 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) < 0)
+        {
+            shift = 1;
+        }
+
+        if (DateTime.Compare(currentMeasurement, shiftTimeStart) < 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) >= 0)
         {
             shift = 2;
         }
 
 
-
+        if (pshift != shift.ToString())
+        {
+            shift = int.Parse(pshift);
+        }
 
 
         IList<Measurement> measurementsToCreate = new List<Measurement>();
+
+        Pack pack = new Pack();
+        // Machine machine = new Machine();
+
+        //machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
+        LoginModel user = new LoginModel();
+        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
+        pack.DateCreated = DateTime.Parse(measurementDateAndTime);
+        pack.Machine = fusMachineName; //machine.Name;
+        pack.Shift = shift;
+        pack.Author = user.UserName;
+        pack.FusCode = stringPackValue;
+        pack.DimensionId = dimension;
+        pack.MeasurementTypeName = mt.Name;
+
+        var packToCreate = packRepo.CreateObjectAndReturnId(Endpoints.PacksEndpoint, pack);
+        string packStringResult = packToCreate.Result.ToString();
+
+        string firstString = "id";
+        string lastString = ",";
+
+        int pos1 = packStringResult.IndexOf(firstString);
+        int pos2 = packStringResult.IndexOf(lastString);
+
+        string final = packStringResult.Substring(pos1, pos2 - pos1);
+
+        string[] elements = final.Split(':');
+
+
         for (int j = 0; j < positions.Length; j++)
         {
 
 
             Measurement meas = new Measurement();
-            meas.DateCreated = measurementDateAndTime;
+            meas.DateCreated = DateTime.Parse(measurementDateAndTime);
             meas.Shift = shift;
             meas.MachineName = fusMachineName; //machine.Id;
             meas.UserId = userId;
             meas.MeasurementPositionId = int.Parse(measurementPositionId);
-            meas.PackId = packId;
+            meas.FusPackId = packId;
             meas.MeasurementTypeId = 4;
+            meas.PackId = int.Parse(elements[1]);
 
             string newMeasSize = selecteSizeType.ToString();
 
@@ -598,24 +648,12 @@
             isMeasurementCreated = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
 
         }
-        Pack pack = new Pack();
-        // Machine machine = new Machine();
-
-        //machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
-        LoginModel user = new LoginModel();
-        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
-        pack.DateCreated = measurementDateAndTime;
-        pack.Machine = fusMachineName; //machine.Name;
-        pack.Shift = shift;
-        pack.Author = user.UserName;
-        pack.FusCode = stringPackValue;
-
-        pack.MeasurementTypeName = mt.Name;
-        isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
 
 
-        if (isPackCreated)
+        if (packToCreate != null && isMeasurementCreated)
         {
+            isPackCreated = true;
+            toastService.ShowToast("Mērījuma dati saglabāti", ToastLevel.Success);
             this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
         }
     }

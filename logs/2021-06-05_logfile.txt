@@ -1,0 +1,36 @@
+2021-06-05 10:49:11.3648 INFO AspNetUsers-Login: Login attempted call from user Kristaps
+2021-06-05 10:49:11.6515 INFO AspNetUsers-Login: Kristaps Sucessfully Authenticated
+2021-06-05 10:49:12.1230 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-05 10:49:12.1693 INFO Sucessfully got all measurementPositions
+2021-06-05 10:49:16.5592 INFO Pack-GetPacks: Attempted Call
+2021-06-05 10:49:16.5901 INFO Sucessfully got all packs
+2021-06-05 10:49:16.6307 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-05 10:49:16.6680 INFO Sucessfully got the measurement position with Id:1
+2021-06-05 10:49:18.4232 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-05 10:49:18.4526 INFO Sucessfully got all Measurements
+2021-06-05 10:49:18.4844 INFO Machine-GetMachines: Attempted Call
+2021-06-05 10:49:18.5290 INFO Sucessfully got all machines
+2021-06-05 10:49:18.5673 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-05 10:49:18.5735 INFO Sucessfully got the measurement position with Id:1
+2021-06-05 10:49:21.0466 INFO Pack-GetPacks: Attempted Call
+2021-06-05 10:49:21.0526 INFO Sucessfully got all packs
+2021-06-05 10:49:21.0825 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-06-05 10:49:21.0887 INFO Sucessfully got the measurement position with Id:1
+2021-06-05 10:49:22.2753 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-06-05 10:49:22.2934 INFO Sucessfully got all measurementPositions
+2021-06-05 10:49:23.2414 INFO Pack-GetPacks: Attempted Call
+2021-06-05 10:49:23.2568 INFO Sucessfully got all packs
+2021-06-05 10:49:23.2744 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-06-05 10:49:23.2744 INFO Sucessfully got the measurement position with Id:2
+2021-06-05 10:49:24.2472 INFO Measurements-GetMeasurements: Attempted Call
+2021-06-05 10:49:24.2609 INFO Sucessfully got all Measurements
+2021-06-05 10:49:24.2767 INFO Machine-GetMachines: Attempted Call
+2021-06-05 10:49:24.2767 INFO Sucessfully got all machines
+2021-06-05 10:49:24.3059 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-06-05 10:49:24.3059 INFO Sucessfully got the measurement position with Id:2
+2021-06-05 10:49:36.8632 INFO Pack-GetPacks: Attempted Call
+2021-06-05 10:49:36.8698 INFO Sucessfully got all packs
+2021-06-05 10:49:36.9005 INFO Pack-GetPacks: Attempted Call
+2021-06-05 10:49:36.9119 INFO Sucessfully got all packs
+2021-06-05 10:49:38.8860 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 11
+2021-06-05 10:49:38.9095 INFO Sucessfully got the measurement type with Id:11

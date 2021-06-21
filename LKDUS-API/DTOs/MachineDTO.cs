@@ -13,8 +13,7 @@ namespace LKDUS_API.DTOs
     }
     public class MachineCreateDTO
     {
-
-
+       
         public string Name { get; set; }
         public string Description { get; set; }
     }

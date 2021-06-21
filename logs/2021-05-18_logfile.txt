@@ -1,0 +1,48 @@
+2021-05-18 10:05:34.1376 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1
+2021-05-18 10:05:34.3663 INFO Sucessfully got the measurement type with Id:1
+2021-05-18 10:32:37.3117 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1
+2021-05-18 10:32:37.5981 INFO Sucessfully got the measurement type with Id:1
+2021-05-18 10:32:52.7452 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1
+2021-05-18 10:32:52.7452 INFO Sucessfully got the measurement type with Id:1
+2021-05-18 10:32:53.2003 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1
+2021-05-18 10:32:53.2116 INFO Sucessfully got the measurement type with Id:1
+2021-05-18 15:44:54.4426 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-05-18 15:44:54.8416 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-05-18 15:44:55.4692 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-05-18 15:44:55.4881 INFO Sucessfully got all measurementPositions
+2021-05-18 15:44:58.2080 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-18 15:44:58.2855 INFO Sucessfully got all Measurements
+2021-05-18 15:44:58.3777 INFO Machine-GetMachines: Attempted Call
+2021-05-18 15:44:58.3888 INFO Sucessfully got all machines
+2021-05-18 15:44:58.4056 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-05-18 15:44:58.4056 INFO Sucessfully got the measurement position with Id:1
+2021-05-18 15:45:00.3124 INFO Pack-GetPacks: Attempted Call
+2021-05-18 15:45:00.3124 INFO Sucessfully got all packs
+2021-05-18 15:45:00.3353 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-05-18 15:45:00.3451 INFO Sucessfully got the measurement position with Id:1
+2021-05-18 15:45:02.1104 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-05-18 15:45:02.1104 INFO Sucessfully got all measurementPositions
+2021-05-18 15:45:03.0809 INFO Pack-GetPacks: Attempted Call
+2021-05-18 15:45:03.0809 INFO Sucessfully got all packs
+2021-05-18 15:45:03.1035 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-18 15:45:03.1111 INFO Sucessfully got the measurement position with Id:2
+2021-05-18 15:45:04.1428 INFO Measurements-GetMeasurements: Attempted Call
+2021-05-18 15:45:04.1627 INFO Sucessfully got all Measurements
+2021-05-18 15:45:04.1886 INFO Machine-GetMachines: Attempted Call
+2021-05-18 15:45:04.1886 INFO Sucessfully got all machines
+2021-05-18 15:45:04.2083 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-05-18 15:45:04.2202 INFO Sucessfully got the measurement position with Id:2
+2021-05-18 15:45:04.8500 INFO Pack-GetPacks: Attempted Call
+2021-05-18 15:45:04.8562 INFO Sucessfully got all packs
+2021-05-18 15:45:22.6820 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1
+2021-05-18 15:45:22.6930 INFO Sucessfully got the measurement type with Id:1
+2021-05-18 15:45:27.3702 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1
+2021-05-18 15:45:27.3834 INFO Sucessfully got the measurement type with Id:1
+2021-05-18 17:03:40.1108 INFO Pack-GetPacks: Attempted Call
+2021-05-18 17:03:40.4649 INFO Sucessfully got all packs
+2021-05-18 17:03:40.8267 INFO Pack-GetPacks: Attempted Call
+2021-05-18 17:03:40.8575 INFO Sucessfully got all packs
+2021-05-18 17:03:45.5483 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1
+2021-05-18 17:03:45.7616 INFO Sucessfully got the measurement type with Id:1
+2021-05-18 17:03:46.1735 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1
+2021-05-18 17:03:46.1937 INFO Sucessfully got the measurement type with Id:1

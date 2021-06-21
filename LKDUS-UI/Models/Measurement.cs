@@ -11,7 +11,7 @@ namespace LKDUS_UI.Models
         public int Id { get; set; }
 
 
-        public string DateCreated { get; set; }
+        public DateTime DateCreated { get; set; }
         public string MachineName { get; set; }
         public int Shift { get; set; }
 
@@ -22,9 +22,13 @@ namespace LKDUS_UI.Models
        
 
         public int? MeasurementPositionId { get; set; }
+        public int? FusPackId { get; set; }
+
+        //public virtual Pack Pack { get; set; }
+        
+        
         public int? PackId { get; set; }
         public int? MeasurementTypeId { get; set; }
-
 
 
         public decimal Measurement1 { get; set; }

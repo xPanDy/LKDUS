@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LKDUS_API.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace LKDUS_API.DTOs
     public class MeasurementDTO
     {
         public int Id { get; set; }
-        public string DateCreated { get; set; }
+        public DateTime DateCreated { get; set; }
         public string MachineName { get; set; }
         public int Shift { get; set; }
 
@@ -20,7 +21,10 @@ namespace LKDUS_API.DTOs
        
 
         public int MeasurementPositionId { get; set; }
-        public int PackId { get; set; }
+        public int FusPackId { get; set; }
+        public  Pack Pack { get; set; }
+        public int? PackId { get; set; }
+       // public int? Pid { get; set; }
         public int MeasurementTypeId { get; set; }
         public decimal Measurement1 { get; set; }
         public decimal Measurement2 { get; set; }
@@ -38,7 +42,7 @@ namespace LKDUS_API.DTOs
     {
 
       
-        public string DateCreated { get; set; }
+        public DateTime DateCreated { get; set; }
         public string MachineName { get; set; }
         
         public int Shift { get; set; }
@@ -48,7 +52,11 @@ namespace LKDUS_API.DTOs
          public string UserId { get; set; }
 
          public int MeasurementPositionId { get; set; }
-        public int PackId { get; set; }
+        //public int PackId { get; set; }
+        //public int? Pid { get; set; }
+        public int FusPackId { get; set; }
+        public  Pack Pack { get; set; }
+        public int? PackId { get; set; }
         public int MeasurementTypeId { get; set; }
         public decimal Measurement1 { get; set; }
         public decimal Measurement2 { get; set; }
@@ -71,7 +79,7 @@ namespace LKDUS_API.DTOs
         public int Id { get; set; }
 
         [Required]
-        public string DateCreated { get; set; }
+        public DateTime DateCreated { get; set; }
         public string MachineName { get; set; }
 
         [Required]
@@ -85,7 +93,8 @@ namespace LKDUS_API.DTOs
 
         [Required]
         public int MeasurementPositionId { get; set; }
-        
+        public int? Pid { get; set; }
+
     }
 
 }

@@ -1,4 +1,4 @@
-﻿@page "/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions"
+﻿@page "/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions"
        @*/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions")*@
     @* // /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions*@
     @using LKDUS_UI.Models
@@ -55,7 +55,8 @@
     @code {
         private IList<Measurement> Model2;
 
-
+        [Parameter]
+        public string pshift { get; set; }
         [Parameter]
         public string userId { get; set; }
         [Parameter]
@@ -114,12 +115,12 @@
         private void NavigattetoWidth(MouseEventArgs e)
         {
 
-            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/width");
+            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/width");
         }
 
         private void GoLength(MouseEventArgs e)
         {
 
-            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/length");
+            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/length");
         }
     }
