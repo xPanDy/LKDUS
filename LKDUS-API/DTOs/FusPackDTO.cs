@@ -17,6 +17,8 @@ namespace LKDUS_API.DTOs
         public string MachineName { get; set; }
         public DateTime DateCreated { get; set; }
         public string Master { get; set; }
+
+        public string ItemName { get; set; }
     }
 
     

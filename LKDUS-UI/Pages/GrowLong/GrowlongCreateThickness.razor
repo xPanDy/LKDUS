@@ -102,7 +102,7 @@
         <div class="col">
 
             <button type="button" style="background-color:@colorBgP1" @onclick="changecolor1AndSetSizes" class="btn btn-outline-secondary btn-block">
-                <h4>4x8</h4>
+                <h4>1.kabata</h4>
 
             </button>
 
@@ -114,7 +114,7 @@
         <div class="col">
 
             <button type="button" style="background-color:@colorBgP2;" @onclick="changecolor2AndSetSizes" class="btn btn-outline-secondary btn-block">
-                <h4>8x4</h4>
+                <h4>2.kabata</h4>
 
 
             </button>
@@ -127,7 +127,19 @@
         <div class="col">
 
             <button type="button" style="background-color:@colorBgP3;" @onclick="changecolor3AndSetSizes" class="btn btn-outline-secondary btn-block">
-                <h4>4x4</h4>
+                <h4>3.kabata</h4>
+
+
+
+            </button>
+
+        </div>
+        <div class="col w-25"></div>
+
+        <div class="col">
+
+            <button type="button" style="background-color:@colorBgP4;" @onclick="changecolor4AndSetSizes" class="btn btn-outline-secondary btn-block">
+                <h4>4.kabata</h4>
 
 
 
@@ -287,7 +299,7 @@
     }
     else
     {
-        <LoadingMessage Message="Izvēlies izmēru lai sāktu mērījumu"></LoadingMessage>
+        <LoadingMessage Message="Izvēlies iekārtu lai sāktu mērījumu"></LoadingMessage>
     }
 </div>
 
@@ -297,10 +309,12 @@
     public string colorBgP1 = "white";
     public string colorBgP2 = "white";
     public string colorBgP3 = "white";
+    public string colorBgP4 = "white";
     public bool isTypeCklicked = false;
     public string colorBg1 = "white";
     public string colorBg2 = "white";
     public string colorBg3 = "white";
+    public string colorBg4 = "white";
 
     public string[] rows = new string[10];
 
@@ -350,7 +364,7 @@
     private void changecolor1AndSetSizes()
     {
 
-
+        fusMachineName = "1.kabata";
         for (int i = 0; i < colors.GetLength(0); i++)
         {
             for (int j = 0; j < colors.GetLength(1); j++)
@@ -367,10 +381,11 @@
         colorBgP1 = "greenyellow";
         colorBgP2 = "white";
         colorBgP3 = "white";
-
+        colorBgP4 = "white";
     }
     private void changecolor2AndSetSizes()
     {
+        fusMachineName = "2.kabata";
         for (int i = 0; i < colors.GetLength(0); i++)
         {
             for (int j = 0; j < colors.GetLength(1); j++)
@@ -388,9 +403,11 @@
         colorBgP1 = "white";
         colorBgP2 = "greenyellow";
         colorBgP3 = "white";
+        colorBgP4 = "white";
     }
     private void changecolor3AndSetSizes()
     {
+        fusMachineName = "3.kabata";
         for (int i = 0; i < colors.GetLength(0); i++)
         {
             for (int j = 0; j < colors.GetLength(1); j++)
@@ -406,6 +423,28 @@
         colorBgP1 = "white";
         colorBgP2 = "white";
         colorBgP3 = "greenyellow";
+        colorBgP4 = "white";
+    }
+
+    private void changecolor4AndSetSizes()
+    {
+        fusMachineName = "4.kabata";
+        for (int i = 0; i < colors.GetLength(0); i++)
+        {
+            for (int j = 0; j < colors.GetLength(1); j++)
+            {
+                colors[i, j] = "";
+            }
+        }
+        activePosition = "cell00";
+        colors[0, 0] = "red";
+
+        isTypeCklicked = true;
+        selecteSizeType = 2;
+        colorBgP1 = "white";
+        colorBgP2 = "white";
+        colorBgP3 = "white";
+        colorBgP4 = "greenyellow";
     }
     [Parameter]
     public string userId { get; set; }
@@ -811,7 +850,7 @@
 
     private decimal[,] sizesArray = new decimal[10, 3];
 
-    private decimal start = 1.51m;
+    private decimal start = 1.3m;
 
     private decimal selectedValue;
     private decimal[] rowPositionValues = new decimal[3];

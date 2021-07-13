@@ -1,12 +1,10 @@
 ﻿@page "/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/width"
 
-
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
 @using LKDUS_UI.Contracts
 @using System.Net.Http
 @using LKDUS_UI.Service
-@inject ToastService toastService
 @inject IMeasurementRepository repo
 @inject NavigationManager navManager
 @inject IMeasurementRepository measurementRepo
@@ -15,6 +13,7 @@
 @inject IPacksRepository packRepo
 @inject IMeasurementTypeRepository measurementTypeRepository
 @inject IJSRuntime JsRuntime
+@inject ToastService toastService
 <style>
     .button {
         width: 100%;
@@ -63,13 +62,15 @@
                 </thead>
                 <tbody>
 
-                    @for (int i = 0; i < positions.GetLength(0) - 20; i++)
+                    @for (int i = 0; i < positions.GetLength(0); i++)
                     {
                         int local = i;
                         int npk = i + 1;
                         var tmpI = i;
                         <tr>
                             <td>@npk</td>
+
+
                             @for (int j = 0; j < positions.GetLength(1); j++)
                             {
                                 var tmpJ = j;
@@ -95,113 +96,113 @@
             </table>
         </div>
 
-        <div class="col">
-            <table class="table table-hover">
+        @*<div class="col">
+                <table class="table table-hover">
 
-                <thead>
+                    <thead>
 
 
-                    <tr>
-
-                        <th>Nr.p.k.</th>
-                        <th>Labā mala</th>
-                        <th>Kreisā puse</th>
-                    </tr>
-
-                </thead>
-                <tbody>
-
-                    @for (int i = 10; i < positions.GetLength(0) - 10; i++)
-                    {
-                        int local = i;
-                        int npk = i + 1;
-                        var tmpI = i;
                         <tr>
-                            <td>@npk</td>
-                            @for (int j = 0; j < positions.GetLength(1); j++)
-                            {
-                                var tmpJ = j;
 
-                                <td @onclick="( e => selectTableCell(tmpI,tmpJ))"
-                                    style="background-color:@elements[i, j];" id="@currentElement[i,j]">
-                                    @positions[i, j]
-                                </td>
-
-
-                            }
-
-
-
-
-
+                            <th>Nr.p.k.</th>
+                            <th>Labā mala</th>
+                            <th>Kreisā puse</th>
                         </tr>
-                    }
+
+                    </thead>
+                    <tbody>
+
+                        @for (int i = 10; i < positions.GetLength(0) - 10; i++)
+                        {
+                            int local = i;
+                            int npk = i + 1;
+                            var tmpI = i;
+                            <tr>
+                                <td>@npk</td>
+                                @for (int j = 0; j < positions.GetLength(1); j++)
+                                {
+                                    var tmpJ = j;
+
+                                    <td @onclick="( e => selectTableCell(tmpI,tmpJ))"
+                                        style="background-color:@elements[i, j];" id="@currentElement[i,j]">
+                                        @positions[i, j]
+                                    </td>
 
 
-                </tbody>
-
-            </table>
-        </div>
-        <div class="col">
-            <table class="table table-hover">
-
-                <thead>
+                                }
 
 
-                    <tr>
 
-                        <th>Nr.p.k.</th>
-                        <th>1.pl.</th>
-                        <th>2.pl.</th>
-                    </tr>
 
-                </thead>
-                <tbody>
 
-                    @for (int i = 20; i < positions.GetLength(0); i++)
-                    {
-                        int local = i;
-                        int npk = i + 1;
-                        var tmpI = i;
+                            </tr>
+                        }
+
+
+                    </tbody>
+
+                </table>
+            </div>*@
+        @*<div class="col">
+                <table class="table table-hover">
+
+                    <thead>
+
+
                         <tr>
-                            <td>@npk</td>
-                            @for (int j = 0; j < positions.GetLength(1); j++)
-                            {
-                                var tmpJ = j;
 
-                                <td style="background-color:@elements[i, j];" id="@currentElement[i,j]"
-                                    @onclick="( e => selectTableCell(tmpI,tmpJ))">
-                                    @positions[i, j]
-                                </td>
-
-
-                            }
-
-
-
-
-
+                            <th>Nr.p.k.</th>
+                            <th>1.pl.</th>
+                            <th>2.pl.</th>
                         </tr>
-                    }
+
+                    </thead>
+                    <tbody>
+
+                        @for (int i = 20; i < positions.GetLength(0); i++)
+                        {
+                            int local = i;
+                            int npk = i + 1;
+                            var tmpI = i;
+                            <tr>
+                                <td>@npk</td>
+                                @for (int j = 0; j < positions.GetLength(1); j++)
+                                {
+                                    var tmpJ = j;
+
+                                    <td style="background-color:@elements[i, j];" id="@currentElement[i,j]"
+                                        @onclick="( e => selectTableCell(tmpI,tmpJ))">
+                                        @positions[i, j]
+                                    </td>
 
 
-                </tbody>
+                                }
 
-            </table>
-        </div>
+
+
+
+
+                            </tr>
+                        }
+
+
+                    </tbody>
+
+                </table>
+            </div>*@
 
 
 
     </div>
     <div class="row w-50  mx-auto" style="padding-top:25px">
         <div class="col  w-20  mx-auto">
-            <button type="button" @onclick="(e => SetFlow(0))" style=" background-color:@colorBg1" class="btn btn-success btn-lg btn-block">1.Plūsma</button>
+            <button type="button" @onclick="(e => SetFlow(0))" style=" background-color:@colorBg1" class="btn btn-success btn-lg btn-block">labā mala</button>
         </div>
 
 
 
         <div class="col w-20  mx-auto">
-            <button type="button" @onclick="(e =>SetFlow(1))" style=" background-color:@colorBg2" class="btn btn-success btn-lg btn-block">2.Plūsma</button>
+            <button type="button" @onclick="(e =>SetFlow(1))" style=" background-color:@colorBg2" class="btn btn-success btn-lg btn-block">Kreisā puse</button>
         </div>
 
 
@@ -236,9 +237,59 @@
 
     </div>
 
+    <div class="row w-100" style="padding-top:25px">
+        <div class="col"><button type="button" @onclick="(()=>select(sizes[5]))" class="btn btn-info btn-lg btn-block">@sizes[5]</button> </div>
 
 
 
+        <div class="col">
+            <button type="button" @onclick="(()=>select(sizes[6]))" class="btn btn-info btn-lg btn-block">@sizes[6]</button>
+        </div>
+
+
+        <div class="col">
+            <button type="button" @onclick="(()=>select(sizes[7]))" class="btn btn-info btn-lg btn-block">@sizes[7]</button>
+        </div>
+
+
+
+        <div class="col">
+            <button type="button" @onclick="(()=>select(sizes[8]))" class="btn btn-info btn-lg btn-block">@sizes[8]</button>
+        </div>
+
+        <div class="col">
+            <button type="button" @onclick="(()=>select(sizes[9]))" class="btn btn-info btn-lg btn-block">@sizes[9]</button>
+        </div>
+
+
+    </div>
+
+    <div class="row w-100" style="padding-top:25px">
+        @*<div class="col"><button type="button" @onclick="(()=>select(sizes[10]))" class="btn btn-info btn-lg btn-block">@sizes[10]</button> </div>*@
+
+
+
+        <div class="col">
+
+        </div>
+
+
+        <div class="col">
+
+        </div>
+
+
+
+        <div class="col">
+
+        </div>
+
+        <div class="col">
+
+        </div>
+
+
+    </div>
 
 
 
@@ -259,10 +310,7 @@
 
 
 @code {
-    [Parameter]
-    public string fusMachineName { get; set; }
-    [Parameter]
-    public string pshift { get; set; }
+
     [Parameter]
     public string userId { get; set; }
     [Parameter]
@@ -271,11 +319,14 @@
     public string stringPackValue { get; set; }
     [Parameter]
     public string pmachineIdd { get; set; }
-
+    [Parameter]
+    public string fusMachineName { get; set; }
+    [Parameter]
+    public string pshift { get; set; }
     private IList<Measurement> Model2;
 
 
-    private string[,] currentElement = new string[30, 2];
+    private string[,] currentElement = new string[10, 2];
     protected async override Task OnInitializedAsync()
     {
         Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
@@ -319,7 +370,7 @@
 
     private int actPos;
 
-    private int[] sizes = new int[5];
+    private int[] sizes = new int[10];
     private int start = 1;
 
     private int selectedCellI = 0;
@@ -330,7 +381,7 @@
 
 
 
-    private string[,] elements { get; set; } = new string[30, 2];
+    private string[,] elements = new string[10, 2];
 
     int column = 0;
 
@@ -455,7 +506,7 @@
     private string id3 = "inactive";
     private string id4 = "inactive";
 
-    private int[,] positions = new int[30, 2];
+    private int[,] positions = new int[10, 2];
     protected async override Task OnAfterRenderAsync(bool firstRender)
     {
 
@@ -596,16 +647,16 @@
         //   this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}/create");
     }
 
-    private IList<Pack> ModelPacks;
     bool isSuccess = false;
     bool isPackCreated = false;
     MeasurementType mt = new MeasurementType();
+
+    private IList<Pack> ModelPacks;
     private async void SaveMeasurement()
     {
-        //var pid = ModelPacks.Max(el => el.Id) + 1;
+        int packId = int.Parse(stringPackValue);
         mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 1014);
         String measurementDateAndTime = DateTime.Now.ToString("g");
-        int packId = int.Parse(stringPackValue);
 
         DateTime shiftTimeStart = Convert.ToDateTime("07:00:00");
 
@@ -613,7 +664,7 @@
 
         DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
 
-        //String timeOfTheDayNow = DateTime.Now.ToString("t");
+
         int shift = 1;
 
         if (DateTime.Compare(currentMeasurement, shiftTimeStart) >= 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) < 0)
@@ -625,29 +676,29 @@
         {
             shift = 2;
         }
-
         if (pshift != shift.ToString())
         {
             shift = int.Parse(pshift);
         }
-
+        //var pid = ModelPacks.Max(el => el.Id) + 1;
 
         IList<Measurement> measurementsToCreate = new List<Measurement>();
         Pack pack = new Pack();
         Machine machine = new Machine();
+        // machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
         LoginModel user = new LoginModel();
         user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
         pack.DateCreated = DateTime.Parse(measurementDateAndTime);
         pack.MeasurementTypeName = mt.Name;
 
 
-        pack.Machine = "";
-
+        pack.Machine = fusMachineName;
+        //pack.Machine = "Plūsmas";
+        pack.FusCode = stringPackValue;
 
         pack.Shift = shift;
         pack.Author = user.UserName;
-
-        // isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
+        pack.DimensionId = 6;
         var packToCreate = packRepo.CreateObjectAndReturnId(Endpoints.PacksEndpoint, pack);
         string packStringResult = packToCreate.Result.ToString();
 
@@ -660,12 +711,19 @@
         string final = packStringResult.Substring(pos1, pos2 - pos1);
 
         string[] elements = final.Split(':');
-        // pack.FusCode = stringPackValue;
+
+
+
+
+
+
+        //   isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
         for (int i = 0; i < positions.GetLength(0); i++)
         {
 
             Measurement meas = new Measurement();
             meas.DateCreated = DateTime.Parse(measurementDateAndTime);
+            // var packId = ModelPacks. Max(el => el.Id) + 1;
             meas.Shift = shift;
             // meas.MachineName = int.Parse(pmachineIdd); //machine.Id;
             meas.UserId = userId;
@@ -674,6 +732,9 @@
             meas.MeasurementTypeId = 1014
                 ;
             meas.PackId = int.Parse(elements[1]);
+
+
+
             for (int j = 0; j < positions.GetLength(1); j++)
             {
 
@@ -706,6 +767,7 @@
 
             isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
         }
+
 
 
         if (packToCreate != null && isSuccess)

@@ -1,0 +1,44 @@
+2021-07-08 17:12:22.7171 INFO Pack-GetPacks: Attempted Call
+2021-07-08 17:12:23.2710 ERROR Pack-GetPacks:Invalid column name 'ItemName'. - 
+2021-07-08 17:12:23.3321 INFO Pack-GetPacks: Attempted Call
+2021-07-08 17:12:23.5150 ERROR Pack-GetPacks:Invalid column name 'ItemName'. - 
+2021-07-08 17:12:24.7505 INFO Pack-GetPacks: Attempted Call
+2021-07-08 17:12:24.9859 ERROR Pack-GetPacks:Invalid column name 'ItemName'. - 
+2021-07-08 17:12:25.0028 INFO Pack-GetPacks: Attempted Call
+2021-07-08 17:12:25.2623 ERROR Pack-GetPacks:Invalid column name 'ItemName'. - 
+2021-07-08 17:12:28.6445 INFO Measurements-GetMeasurements: Attempted Call
+2021-07-08 17:12:28.8096 INFO Sucessfully got all Measurements
+2021-07-08 17:12:28.8969 INFO Machine-GetMachines: Attempted Call
+2021-07-08 17:12:28.9232 INFO Sucessfully got all machines
+2021-07-08 17:12:28.9900 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-07-08 17:12:29.0422 INFO Sucessfully got the measurement position with Id:2
+2021-07-08 17:12:29.6464 INFO Pack-GetPacks: Attempted Call
+2021-07-08 17:12:29.8132 ERROR Pack-GetPacks:Invalid column name 'ItemName'. - 
+2021-07-08 17:12:32.4025 INFO Pack-GetPacks: Attempted Call
+2021-07-08 17:12:32.5906 ERROR Pack-GetPacks:Invalid column name 'ItemName'. - 
+2021-07-08 17:13:15.0869 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-07-08 17:13:15.3847 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-07-08 17:13:15.8651 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-07-08 17:13:15.9120 INFO Sucessfully got all measurementPositions
+2021-07-08 17:13:17.0868 INFO Pack-GetPacks: Attempted Call
+2021-07-08 17:13:17.4084 ERROR Pack-GetPacks:Invalid column name 'ItemName'. - 
+2021-07-08 17:13:17.4546 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 7
+2021-07-08 17:13:17.4852 INFO Sucessfully got the measurement position with Id:7
+2021-07-08 17:13:20.1445 INFO Measurements-GetMeasurements: Attempted Call
+2021-07-08 17:13:20.3003 INFO Sucessfully got all Measurements
+2021-07-08 17:13:20.3926 INFO Measurements-GetMeasurements: Attempted Call
+2021-07-08 17:13:20.3926 INFO Sucessfully got all Measurements
+2021-07-08 17:13:20.4197 INFO FusPack-GetFusPacks: Attempted Call
+2021-07-08 17:13:21.3619 INFO Sucessfully got all FUS packs
+2021-07-08 17:13:21.4321 INFO Machine-GetMachines: Attempted Call
+2021-07-08 17:13:21.4705 INFO Sucessfully got all machines
+2021-07-08 17:13:21.4992 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 7
+2021-07-08 17:13:21.5119 INFO Sucessfully got the measurement position with Id:7
+2021-07-08 17:13:22.0894 INFO Pack-GetPacks: Attempted Call
+2021-07-08 17:13:22.2705 ERROR Pack-GetPacks:Invalid column name 'ItemName'. - 
+2021-07-08 17:13:22.2823 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 7
+2021-07-08 17:13:22.2823 INFO Sucessfully got the measurement position with Id:7
+2021-07-08 17:13:23.1439 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-07-08 17:13:23.1495 INFO Sucessfully got all measurementPositions
+2021-07-08 17:13:24.3609 INFO Pack-GetPacks: Attempted Call
+2021-07-08 17:13:24.5264 ERROR Pack-GetPacks:Invalid column name 'ItemName'. - 

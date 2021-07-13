@@ -17,5 +17,7 @@ namespace LKDUS_API.Data
       
         public DateTime DateCreated { get; set; }
         public string Master { get; set; }
+
+        public string ItemName { get; set; }
     }
 }

@@ -134,7 +134,15 @@
     {
         Model = await pRepo.Get(Endpoints.PacksEndpoint);
         //odel = Model.OrderByDescending(el => el.Id).ToList() ;
-        Model = Model.OrderByDescending(el => el.Id).Where(el => el.MeasurementTypeName.Equals("Garansaaudzēšana biezums")).ToList();
+        if (Model != null) {
+            Model = Model.OrderByDescending(el => el.Id).Where(el => el.MeasurementTypeName.Contains("Garansaaudzēšana biezums")||
+            el.MeasurementTypeName.Contains("Garansaaudzēšana garums") ||
+            el.MeasurementTypeName.Contains("Garansaaudzēšana platums") 
+
+
+
+            ).ToList();
+        }
 
 
         try

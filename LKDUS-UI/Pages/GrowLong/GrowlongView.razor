@@ -124,58 +124,64 @@
             [Parameter]
             public string userId { get; set; }
 
-    //private IList<Measurement> Model;
-        private Pack ModelPackHeader;
+            //private IList<Measurement> Model;
+            private Pack ModelPackHeader;
 
 
-        private IList<Measurement> ModelMeasurements;
+            private IList<Measurement> ModelMeasurements;
 
 
-        private MeasurementPosition measurementPosition;
-        private IList<MeasurementType> measurementTypelIST;
-        private MeasurementType measurementType;
+            private MeasurementPosition measurementPosition;
+            private IList<MeasurementType> measurementTypelIST;
+            private MeasurementType measurementType;
 
-        protected async override Task OnInitializedAsync()
-        {
-            int packIdInt = 0;
-            int fuspackIntId = 0;
-            if (fusCode != "0")
+            protected async override Task OnInitializedAsync()
             {
-                try
+                int packIdInt = 0;
+                int fuspackIntId = 0;
+                if (fusCode != "0")
                 {
-                    fuspackIntId = int.Parse(fusCode);
-                    packIdInt = int.Parse(packId);
-                    ModelPackHeader = await packsRepository.Get(Endpoints.PacksEndpoint, packIdInt);
-                    measurementTypelIST = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint);
-                    measurementType = measurementTypelIST.Where(e => e.Name == measurementTypeName).SingleOrDefault();
+                    try
+                    {
+                        fuspackIntId = int.Parse(fusCode);
+                        packIdInt = int.Parse(packId);
+                        ModelPackHeader = await packsRepository.Get(Endpoints.PacksEndpoint, packIdInt);
+                        measurementTypelIST = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint);
+                        measurementType = measurementTypelIST.Where(e => e.Name == measurementTypeName).SingleOrDefault();
 
-                    //ModelPackHeader = ModelPackHeader.Where(ph=> ph. packIdInt);
-                    //   Model = await machineRepo.Get(Endpoints.MachinesEndpoint, id);
+                        //ModelPackHeader = ModelPackHeader.Where(ph=> ph. packIdInt);
+                        //   Model = await machineRepo.Get(Endpoints.MachinesEndpoint, id);
+                    }
+                    catch (Exception)
+                    {
+
+                        Console.WriteLine($"Unable to parse");
+
+                    }
+
+
                 }
-                catch (Exception)
+
+
+                ModelMeasurements = await measurementRepository.Get(Endpoints.MeasurementEndpoint);
+                //ModelPacksHeader = ModelPacksHeader.Where(p=>p.FusCode==fusCode)..ToList() ;
+
+                ModelMeasurements = ModelMeasurements.Where(m => m.PackId == packIdInt  ).ToList();
+                foreach(var el in ModelMeasurements)
                 {
-
-                    Console.WriteLine($"Unable to parse");
-
+                    el.DateCreated.ToString("dd.MM.yyyy HH:mm:ss");
                 }
+                //   ModelMeasurements = ModelMeasurements.Where(m => m.FusPackId == fuspackIntId && m.MeasurementTypeId == measurementType.Id).ToList();
+                // Model = Model.Where(e => (e.MeasurementPositionId == 1)).ToList();
 
 
             }
 
 
-            ModelMeasurements = await measurementRepository.Get(Endpoints.MeasurementEndpoint);
-            //ModelPacksHeader = ModelPacksHeader.Where(p=>p.FusCode==fusCode)..ToList() ;
 
-            ModelMeasurements = ModelMeasurements.Where(m => m.FusPackId == fuspackIntId && m.MeasurementTypeId == measurementType.Id).ToList();
-            // Model = Model.Where(e => (e.MeasurementPositionId == 1)).ToList();
-
-
-        }
-
-
-
-        private void goBack(MouseEventArgs e)
-        {
-            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}");
-        }
+            private void goBack(MouseEventArgs e)
+            {
+                // this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}");
+                this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}");
+            }
         }

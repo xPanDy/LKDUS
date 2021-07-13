@@ -95,12 +95,12 @@
                            type="text">
 
                     @*<input class="form-control"
-                        id="@id100"
-                        @onkeydown="DoSomethingElse"
-                        @onclick="focusToInput100"
-                        @bind="@stringPackValue"
-                        @ref="@input100"
-                        type="text">*@
+            id="@id100"
+            @onkeydown="DoSomethingElse"
+            @onclick="focusToInput100"
+            @bind="@stringPackValue"
+            @ref="@input100"
+            type="text">*@
 
 
 
@@ -134,7 +134,7 @@
                     <div class="col">
                         <label for="pack">Pakas datums</label>
 
-                        <input class="form-control" type="text"
+                        <input  class="form-control" type="text"
                                @bind="@fp.DateCreated"
                                readonly id="packDate">
                     </div>
@@ -145,10 +145,16 @@
                                @bind-value="@fp.MachineName" type="text" readonly id="packMachine">
                     </div>
                     <div class="col">
-                        <label for="packMaster">Meistars</label>
+                        <label for="packMaster">Maiņa</label>
 
                         <input class="form-control"
-                               @bind-value="@fp.Master" type="text" readonly id="packMaster">
+                               @bind-value="@fp.Master" style="background-color:@shiftsColor" type="text" readonly id="packMaster">
+                    </div>
+                    <div class="col">
+                        <label for="packMaster">Klase</label>
+
+                        <input class="form-control"
+                               @bind-value="@fp.ItemName" type="text" readonly id="packItem">
                     </div>
                 }
                 else
@@ -169,7 +175,7 @@
 
 
                     <div class="col">
-                        <label for="pack">Pakas datums</label>
+                        <label for="packDate">Pakas datums</label>
 
                         <input class="form-control" type="text"
                                readonly id="packDate">
@@ -182,10 +188,16 @@
                     </div>
 
                     <div class="col">
-                        <label for="pack">Meistars</label>
+                        <label for="pack">Maiņa</label>
 
                         <input class="form-control"
                                type="text" readonly id="packMaster">
+                    </div>
+                    <div class="col">
+                        <label for="pack">Klase</label>
+
+                        <input class="form-control"
+                               type="text" readonly id="packItem">
                     </div>
                 }
 
@@ -196,7 +208,7 @@
                 <div class="col">
                     <label for="day">Diena</label>
                     @*// 01.12.2020 09:19:04*@
-                    <select id="day" class="custom-select" @bind="Day">
+                    <select id="day" disabled="true" class="custom-select" @bind="Day">
                         @for (int i = 1; i <= 31; i++)
                         {
                             <option>@i</option>
@@ -208,7 +220,7 @@
 
                 <div class="col">
                     <label for="month">Mēnesis</label>
-                    <select id="month" class="custom-select" @bind="Month">
+                    <select id="month" disabled="true" class="custom-select" @bind="Month">
                         @for (int i = 1; i <= 12; i++)
                         {
                             <option value="@i">@Months[i - 1]</option>
@@ -220,9 +232,9 @@
 
                 <div class="col">
                     <label for="year">Gads</label>
-                    <select id="year" class="custom-select" @bind="Year">
+                    <select id="year" disabled="true" class="custom-select" @bind="Year">
                         @for (int i = DateTime.Now.Year - 5;
-                       i <= DateTime.Now.Year + 5; i++)
+                      i <= DateTime.Now.Year + 5; i++)
                         {
                             <option>@i</option>
                         }
@@ -325,27 +337,27 @@
                     </div>
                     <div class="col">
 
-                        <div class="row w-100">
+                        @*<div class="row w-100">
                             <label for="shift">Maiņa</label>
-                        </div>
-                        <div class="row w-100">
-                            <button class="btn btn-primary  btn-lg" style="margin:10px;  background-color: green;"    >Zaļā            </button>
-                            <button class="btn btn-primary btn-lg"  style="margin:10px;  background-color: black;"    >Melnā          </button>
-                            <button class="btn btn-primary btn-lg"  style="margin:10px;  background-color: red;"      >Sarkanā       </button>
-                            <button class="btn btn-primary btn-lg"  style="margin:10px;  background-color: blue;"     >Zilā           </button>
-                        </div>
-                     
-                  
-                        <div class="row">
+                        </div>*@
+                        @*<div class="row w-100">
+                            <button class="btn btn-primary  btn-lg" style="margin:10px;  background-color: green;">Zaļā            </button>
+                            <button class="btn btn-primary btn-lg" style="margin:10px;  background-color: black;">Melnā          </button>
+                            <button class="btn btn-primary btn-lg" style="margin:10px;  background-color: red;">Sarkanā       </button>
+                            <button class="btn btn-primary btn-lg" style="margin:10px;  background-color: blue;">Zilā           </button>
+                        </div>*@
+
+
+                        @*<div class="row">
 
                             <label for="shift">Šķira</label>
                         </div>
                         <div class="row">
                             <button class="btn btn-primary btn-lg " style="margin:10px; background-color: green;"> C/P     </button>
-                            <button class="btn btn-primary btn-lg " style="margin:10px; background-color: black;"       > C        </button>
-                            <button class="btn btn-primary btn-lg " style="margin:10px; background-color: red;"        > WG      </button>
-                            <button class="btn btn-primary btn-lg " style="margin:10px; background-color: blue;"        > WG10      </button>
-                        </div>
+                            <button class="btn btn-primary btn-lg " style="margin:10px; background-color: black;"> C        </button>
+                            <button class="btn btn-primary btn-lg " style="margin:10px; background-color: red;"> WG      </button>
+                            <button class="btn btn-primary btn-lg " style="margin:10px; background-color: blue;"> WG10      </button>
+                        </div>*@
 
                         @*<select class="custom-select" @bind="@pshift" id="shift">
                                 <option selected>1</option>
@@ -384,6 +396,9 @@
     public int Day { get; set; }
     public int Month { get; set; }
     public int Year { get; set; }
+
+    public string shiftsColor = "white";
+
     private ElementReference input100;//= "code2";
                                       // private ElementReference input1;
 
@@ -510,6 +525,8 @@
         }
 
     }
+
+    string fontColor = "white";
     private void DoSomethingElse(KeyboardEventArgs e)
     {
 
@@ -527,6 +544,51 @@
 
                     int packid = int.Parse(stringPackValue);
                     fp = fusPacks.Where(p => p.Id == packid).SingleOrDefault();
+                    if(fp != null)
+                    {
+                        if (fp.Master.Contains("Zaļā"))
+                        {
+                            shiftsColor = "#00ff00";
+                        }
+                        else if (fp.Master.Contains("Melnā") )
+                        {
+                            shiftsColor = "#000000";
+                            fontColor = "white";
+
+                        }
+                        else if (fp.Master.Contains("Sarkanā") )
+                        {
+                            shiftsColor = "#ff3300";
+                        }
+                        else if (fp.Master.Contains("Zilā")  )
+                        {
+                            shiftsColor = "#3399ff";
+                        }
+                        else
+                        {
+                            shiftsColor = "white";
+                        }
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     InvokeAsync(() =>
                     {
 
@@ -542,12 +604,15 @@
             {
 
                 Logger.LogWarning(ex, "Failed to load fuspack {packid}", stringPackValue);
+
             }
 
         }
         else
         {
             fp = null;
+
+
         }
     }
 
@@ -679,8 +744,12 @@
         checkParams();
 
         //  validateParameters(measurementPositionId, measurementPositionId, stringPackValue, pmachineIdd, pshift);
-        this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/thickness");
-        //      /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness
+
+        //this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/thickness");
+        this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/thickness");
+
+
+        // //      /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness
         //     {userId}/{measurementPositionId}/{stringPackValue}/{ pmachineIdd}
 
     }
@@ -697,16 +766,18 @@
 
     private void GoToLength(MouseEventArgs e)
     {
-        checkParams();                  
-        this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/length");
+        checkParams();
+        //this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/length");
+        this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/length");
         //this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions");
     }
 
     private void GoToWidth(MouseEventArgs e)
     {
         checkParams();
-        this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/width");
-      //  this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/quality");
+        //his.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/width");
+        this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/width");
+        //  this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/quality");
     }
 
     private void OpenCreateForm(MouseEventArgs e)
