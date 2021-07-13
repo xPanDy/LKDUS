@@ -148,7 +148,7 @@
                         <label for="packMaster">Maiņa</label>
 
                         <input class="form-control"
-                               @bind-value="@fp.Master" style="background-color:@shiftsColor" type="text" readonly id="packMaster">
+                               @bind-value="@fp.Master"  style="background-color:@shiftsColor; color:@fontColor" type="text" readonly id="packMaster">
                     </div>
                     <div class="col">
                         <label for="packMaster">Klase</label>
@@ -526,7 +526,7 @@
 
     }
 
-    string fontColor = "white";
+    string fontColor = "black";
     private void DoSomethingElse(KeyboardEventArgs e)
     {
 
@@ -549,6 +549,7 @@
                         if (fp.Master.Contains("Zaļā"))
                         {
                             shiftsColor = "#00ff00";
+                            fontColor = "white";
                         }
                         else if (fp.Master.Contains("Melnā") )
                         {
@@ -559,10 +560,12 @@
                         else if (fp.Master.Contains("Sarkanā") )
                         {
                             shiftsColor = "#ff3300";
+                            fontColor = "white";
                         }
                         else if (fp.Master.Contains("Zilā")  )
                         {
                             shiftsColor = "#3399ff";
+                            fontColor = "black";
                         }
                         else
                         {
