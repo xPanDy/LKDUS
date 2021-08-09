@@ -1,4 +1,4 @@
-﻿@page "/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/length"
+﻿@page "/growwidth/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/width"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
@@ -27,28 +27,26 @@
     }
 </style>
 
-
-
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <button type="button" @onclick="@Return" class="btn btn-primary btn-block">Atpakaļ</button>
-        </div>
-        <div class="col w-25"><h3 class="card-title">Garums</h3></div>
-        <div class="col">
-            <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
-        </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button type="button" @onclick="@Return" class="btn btn-primary btn-block">Atpakaļ</button>
+            </div>
+            <div class="col w-25"><h3 class="card-title">Platums</h3></div>
+            <div class="col">
+                <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
+            </div>
+
+        </div>
     </div>
-</div>
-<div class="container">
-
     <div class="row">
 
         <div class="col">
 
             <button type="button" style="background-color:@colorBgP1" @onclick="changecolor1AndSetSizes" class="btn btn-outline-secondary btn-block">
-                <h4>8x4</h4>
+                <h4>4x8</h4>
 
             </button>
 
@@ -60,7 +58,7 @@
         <div class="col">
 
             <button type="button" style="background-color:@colorBgP2;" @onclick="changecolor2AndSetSizes" class="btn btn-outline-secondary btn-block">
-                <h4>9x4</h4>
+                <h4>4x9</h4>
 
             </button>
 
@@ -72,19 +70,28 @@
         <div class="col">
 
             <button type="button" style="background-color:@colorBgP3;" @onclick="changecolor3AndSetSizes" class="btn btn-outline-secondary btn-block">
-                <h4>10x4</h4>
+                <h4>4x10</h4>
 
 
             </button>
 
         </div>
 
+        <div class="col w-25"></div>
+
+        <div class="col">
+
+            <button type="button" style="background-color:@colorBgP4;" @onclick="changecolor4AndSetSizes" class="btn btn-outline-secondary btn-block">
+                <h4>8x4</h4>
+
+
+            </button>
+
+        </div>
     </div>
+
     @if (isTypeCklicked)
     {
-
-
-
 
         <div class="row">
 
@@ -119,8 +126,8 @@
                                 {
                                     var tmpJ = j;
 
-                                    <td style="background-color:@elements[i, j];" id="@currentElement[i,j]"
-                                        @onclick="( e => selectTableCell(tmpI,tmpJ))">
+                                    <td style="background-color:@elements[i, j];" id="@currentElement[i, j]"
+                                        @onclick="(e => selectTableCell(tmpI, tmpJ))">
                                         @positions[i, j]
                                     </td>
 
@@ -238,7 +245,6 @@
 
 
         </div>
-
         <div class="row w-50  mx-auto" style="padding-top:25px">
             <div class="col  w-20  mx-auto">
                 <button type="button" @onclick="(e => SetFlow(0))" style=" background-color:@colorBg1" class="btn btn-success btn-lg btn-block">labā mala</button>
@@ -247,7 +253,7 @@
 
 
             <div class="col w-20  mx-auto">
-                <button type="button" @onclick="(e =>SetFlow(1))" style=" background-color:@colorBg2" class="btn btn-success btn-lg btn-block">Kreisā puse</button>
+                <button type="button" @onclick="(e => SetFlow(1))" style=" background-color:@colorBg2" class="btn btn-success btn-lg btn-block">Kreisā puse</button>
             </div>
 
 
@@ -256,58 +262,59 @@
         </div>
 
         <div class="row w-100" style="padding-top:25px">
-            <div class="col"><button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button> </div>
+            <div class="col"><button type="button" @onclick="(() => select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button> </div>
 
 
 
             <div class="col">
-                <button type="button" @onclick="(()=>select(sizes[1]))" class="btn btn-info btn-lg btn-block">@sizes[1]</button>
+                <button type="button" @onclick="(() => select(sizes[1]))" class="btn btn-info btn-lg btn-block">@sizes[1]</button>
             </div>
 
 
             <div class="col">
-                <button type="button" @onclick="(()=>select(sizes[2]))" class="btn btn-info btn-lg btn-block">@sizes[2]</button>
+                <button type="button" @onclick="(() => select(sizes[2]))" class="btn btn-info btn-lg btn-block">@sizes[2]</button>
             </div>
 
 
 
             <div class="col">
-                <button type="button" @onclick="(()=>select(sizes[3]))" class="btn btn-info btn-lg btn-block">@sizes[3]</button>
+                <button type="button" @onclick="(() => select(sizes[3]))" class="btn btn-info btn-lg btn-block">@sizes[3]</button>
             </div>
 
             <div class="col">
-                <button type="button" @onclick="(()=>select(sizes[4]))" class="btn btn-info btn-lg btn-block">@sizes[4]</button>
+                <button type="button" @onclick="(() => select(sizes[4]))" class="btn btn-info btn-lg btn-block">@sizes[4]</button>
             </div>
 
 
         </div>
 
         <div class="row w-100" style="padding-top:25px">
-            <div class="col"><button type="button" @onclick="(()=>select(sizes[5]))" class="btn btn-info btn-lg btn-block">@sizes[5]</button> </div>
+            <div class="col"><button type="button" @onclick="(() => select(sizes[5]))" class="btn btn-info btn-lg btn-block">@sizes[5]</button> </div>
 
 
 
             <div class="col">
-                <button type="button" @onclick="(()=>select(sizes[6]))" class="btn btn-info btn-lg btn-block">@sizes[6]</button>
+                <button type="button" @onclick="(() => select(sizes[6]))" class="btn btn-info btn-lg btn-block">@sizes[6]</button>
             </div>
 
 
             <div class="col">
-                <button type="button" @onclick="(()=>select(sizes[7]))" class="btn btn-info btn-lg btn-block">@sizes[7]</button>
+                <button type="button" @onclick="(() => select(sizes[7]))" class="btn btn-info btn-lg btn-block">@sizes[7]</button>
             </div>
 
 
 
             <div class="col">
-                <button type="button" @onclick="(()=>select(sizes[8]))" class="btn btn-info btn-lg btn-block">@sizes[8]</button>
+                <button type="button" @onclick="(() => select(sizes[8]))" class="btn btn-info btn-lg btn-block">@sizes[8]</button>
             </div>
 
             <div class="col">
-                <button type="button" @onclick="(()=>select(sizes[9]))" class="btn btn-info btn-lg btn-block">@sizes[9]</button>
+                <button type="button" @onclick="(() => select(sizes[9]))" class="btn btn-info btn-lg btn-block">@sizes[9]</button>
             </div>
             <div class="col">
-                <button type="button" @onclick="(()=>select(sizes[10]))" class="btn btn-info btn-lg btn-block">@sizes[10]</button>
+                <button type="button" @onclick="(() => select(sizes[10]))" class="btn btn-info btn-lg btn-block">@sizes[10]</button>
             </div>
+
 
         </div>
 
@@ -343,6 +350,8 @@
 
 
 
+
+
     }
     else
     {
@@ -351,169 +360,13 @@
 
 
 
-
-
-
-
 </div>
-
+    
 
 
 
 @code {
-    int selecteSizeType = 0;
-    private void changecolor1AndSetSizes()
-    {
 
-        for (int i = 0; i < elements.GetLength(0); i++)
-        {
-            for (int j = 0; j < elements.GetLength(1); j++)
-            {
-                elements[i, j] = "";
-            }
-        }
-        activePosition = "current00";
-        elements[0, 0] = "red";
-
-        isTypeCklicked = true;
-        selecteSizeType = 2;
-        colorBgP1 = "greenyellow";
-        colorBgP2 = "white";
-        colorBgP3 = "white";
-
-    }
-    private void changecolor2AndSetSizes()
-    {
-
-        for (int i = 0; i < elements.GetLength(0); i++)
-        {
-            for (int j = 0; j < elements.GetLength(1); j++)
-            {
-                elements[i, j] = "";
-            }
-        }
-        activePosition = "current00";
-        elements[0, 0] = "red";
-
-        isTypeCklicked = true;
-        selecteSizeType = 4;
-        colorBgP1 = "white";
-        colorBgP2 = "greenyellow";
-        colorBgP3 = "white";
-        // colorBgP4 = "white";
-    }
-    private void changecolor3AndSetSizes()
-    {
-
-        for (int i = 0; i < elements.GetLength(0); i++)
-        {
-            for (int j = 0; j < elements.GetLength(1); j++)
-            {
-                elements[i, j] = "";
-            }
-        }
-        activePosition = "current00";
-        elements[0, 0] = "red";
-
-        isTypeCklicked = true;
-        selecteSizeType = 5;
-        colorBgP1 = "white";
-        colorBgP2 = "white";
-        colorBgP3 = "greenyellow";
-        // colorBgP4 = "white";
-    }
-    private void changecolor4AndSetSizes()
-    {
-
-        for (int i = 0; i < elements.GetLength(0); i++)
-        {
-            for (int j = 0; j < elements.GetLength(1); j++)
-            {
-                elements[i, j] = "";
-            }
-        }
-        activePosition = "current00";
-        elements[0, 0] = "red";
-
-        isTypeCklicked = true;
-        selecteSizeType = 5;
-        colorBgP4 = "greenyellow";
-        colorBgP5 = "white";
-        colorBgP6 = "white";
-        colorBgP7 = "white";
-        // colorBgP4 = "white";
-    }
-    private void changecolor5AndSetSizes()
-    {
-
-        for (int i = 0; i < elements.GetLength(0); i++)
-        {
-            for (int j = 0; j < elements.GetLength(1); j++)
-            {
-                elements[i, j] = "";
-            }
-        }
-        activePosition = "current00";
-        elements[0, 0] = "red";
-
-        isTypeCklicked = true;
-        selecteSizeType = 5;
-        colorBgP4 = "white";
-        colorBgP5 = "greenyellow";
-        colorBgP6 = "white";
-        colorBgP7 = "white";
-        // colorBgP4 = "white";
-    }
-    private void changecolor6AndSetSizes()
-    {
-
-        for (int i = 0; i < elements.GetLength(0); i++)
-        {
-            for (int j = 0; j < elements.GetLength(1); j++)
-            {
-                elements[i, j] = "";
-            }
-        }
-        activePosition = "current00";
-        elements[0, 0] = "red";
-
-        isTypeCklicked = true;
-        selecteSizeType = 5;
-        colorBgP4 = "white";
-        colorBgP5 = "white";
-        colorBgP6 = "greenyellow";
-        colorBgP7 = "white";
-        // colorBgP4 = "white";
-    }
-    private void changecolor7AndSetSizes()
-    {
-
-        for (int i = 0; i < elements.GetLength(0); i++)
-        {
-            for (int j = 0; j < elements.GetLength(1); j++)
-            {
-                elements[i, j] = "";
-            }
-        }
-        activePosition = "current00";
-        elements[0, 0] = "red";
-
-        isTypeCklicked = true;
-        selecteSizeType = 5;
-        colorBgP4 = "white";
-        colorBgP5 = "white";
-        colorBgP6 = "white";
-        colorBgP7 = "greenyellow";
-        // colorBgP4 = "white";
-    }
-
-    public string colorBgP1 = "white";
-    public string colorBgP2 = "white";
-    public string colorBgP3 = "white";
-    public string colorBgP4 = "white";
-    public string colorBgP5 = "white";
-    public string colorBgP6 = "white";
-    public string colorBgP7 = "white";
     [Parameter]
     public string userId { get; set; }
     [Parameter]
@@ -528,7 +381,6 @@
     public string pshift { get; set; }
     private IList<Measurement> Model2;
 
-    public bool isTypeCklicked = false;
 
     private string[,] currentElement = new string[10, 2];
     protected async override Task OnInitializedAsync()
@@ -608,7 +460,7 @@
 
                     if (currentElement[i, j] == editPosition)
                     {
-                        positions[i, j] = value.ToString() ;
+                        positions[i, j] = value.ToString();
                     }
 
                 }
@@ -837,7 +689,7 @@
     {
         if (isSuccess && isPackCreated)
         {
-            this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/create");
+            this.navManager.NavigateTo($"/growwidth/{userId}/{measurementPositionId}/create");
         }
         else
         {
@@ -845,10 +697,101 @@
             bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Tiešām vēlies iziet nesaglabājot?");
             if (confirmed)
             {
-                this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/create");
+                this.navManager.NavigateTo($"/growwidth/{userId}/{measurementPositionId}/create");
             }
         }
         //   this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}/create");
+    }
+
+    public string colorBgP1 = "white";
+    public string colorBgP2 = "white";
+    public string colorBgP3 = "white";
+    public string colorBgP4 = "white";
+    public string colorBgP5 = "white";
+    public string colorBgP6 = "white";
+    public string colorBgP7 = "white";
+    int selecteSizeType = 0;
+
+    private void changecolor1AndSetSizes()
+    {
+
+        for (int i = 0; i < elements.GetLength(0); i++)
+        {
+            for (int j = 0; j < elements.GetLength(1); j++)
+            {
+                elements[i, j] = "";
+            }
+        }
+        activePosition = "current00";
+        elements[0, 0] = "red";
+
+        isTypeCklicked = true;
+        selecteSizeType = 1;
+        colorBgP1 = "greenyellow";
+        colorBgP2 = "white";
+        colorBgP3 = "white";
+        colorBgP4 = "white";
+    }
+    private void changecolor2AndSetSizes()
+    {
+
+        for (int i = 0; i < elements.GetLength(0); i++)
+        {
+            for (int j = 0; j < elements.GetLength(1); j++)
+            {
+                elements[i, j] = "";
+            }
+        }
+        activePosition = "current00";
+        elements[0, 0] = "red";
+
+        isTypeCklicked = true;
+        selecteSizeType = 7;
+        colorBgP1 = "white";
+        colorBgP2 = "greenyellow";
+        colorBgP3 = "white";
+        colorBgP4 = "white";
+    }
+    private void changecolor3AndSetSizes()
+    {
+
+        for (int i = 0; i < elements.GetLength(0); i++)
+        {
+            for (int j = 0; j < elements.GetLength(1); j++)
+            {
+                elements[i, j] = "";
+            }
+        }
+        activePosition = "current00";
+        elements[0, 0] = "red";
+
+        isTypeCklicked = true;
+        selecteSizeType =8;
+        colorBgP1 = "white";
+        colorBgP2 = "white";
+        colorBgP3 = "greenyellow";
+        colorBgP4 = "white";
+    }
+    public bool isTypeCklicked = false;
+    private void changecolor4AndSetSizes()
+    {
+
+        for (int i = 0; i < elements.GetLength(0); i++)
+        {
+            for (int j = 0; j < elements.GetLength(1); j++)
+            {
+                elements[i, j] = "";
+            }
+        }
+        activePosition = "current00";
+        elements[0, 0] = "red";
+
+        isTypeCklicked = true;
+        selecteSizeType =2;
+        colorBgP1 = "white";
+        colorBgP2 = "white";
+        colorBgP3 = "white";
+        colorBgP4 = "greenyellow";
     }
 
     bool isSuccess = false;
@@ -859,7 +802,7 @@
     private async void SaveMeasurement()
     {
         int packId = int.Parse(stringPackValue);
-        mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 1013);
+        mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 1017);
         String measurementDateAndTime = DateTime.Now.ToString("g");
 
         DateTime shiftTimeStart = Convert.ToDateTime("07:00:00");
@@ -894,15 +837,15 @@
         user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
         pack.DateCreated = DateTime.Parse(measurementDateAndTime);
         pack.MeasurementTypeName = mt.Name;
-        pack.DimensionId = selecteSizeType;
+
 
         pack.Machine = fusMachineName;
-        //   pack.Machine = "Plūsmas";
-
+        //pack.Machine = "Plūsmas";
         pack.FusCode = stringPackValue;
+
         pack.Shift = shift;
         pack.Author = user.UserName;
-
+        pack.DimensionId = selecteSizeType;
         var packToCreate = packRepo.CreateObjectAndReturnId(Endpoints.PacksEndpoint, pack);
         string packStringResult = packToCreate.Result.ToString();
 
@@ -929,15 +872,16 @@
             meas.DateCreated = DateTime.Parse(measurementDateAndTime);
             // var packId = ModelPacks. Max(el => el.Id) + 1;
             meas.Shift = shift;
-            // meas.MachineName = int.Parse(pmachineIdd); //machine.Id;'
-            meas.MachineName = fusMachineName;
-
+            // meas.MachineName = int.Parse(pmachineIdd); //machine.Id;
             meas.UserId = userId;
             meas.MeasurementPositionId = int.Parse(measurementPositionId);
             meas.FusPackId = packId;
-            meas.MeasurementTypeId = 1013
+            meas.MeasurementTypeId = 1017
                 ;
+            meas.MachineName = fusMachineName;
             meas.PackId = int.Parse(elements[1]);
+
+
 
             for (int j = 0; j < positions.GetLength(1); j++)
             {
@@ -947,7 +891,8 @@
                 if (j == 0)
                 {
 
-                    if (positions[i, j] == "") {
+                    if (positions[i, j] == "")
+                    {
                         positions[i, j] = "0";
                     }
                     meas.Measurement1 = Convert.ToDecimal(positions[i, j]);
@@ -983,7 +928,7 @@
         {
             isPackCreated = true;
             toastService.ShowToast("Mērījuma dati saglabāti", ToastLevel.Success);
-            this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/create");
+            this.navManager.NavigateTo($"/growwidth/{userId}/{measurementPositionId}/create");
         }
     }
 }

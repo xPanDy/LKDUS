@@ -1,4 +1,4 @@
-﻿@page "/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/thickness"
+﻿@page "/growwidth/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/thickness"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
@@ -277,7 +277,7 @@
     }
 
 
-  static  bool isEdit = true;
+    static  bool isEdit = true;
     string editPosition = "";
     private void HighlightSelected(int a, int b)
     {
@@ -367,12 +367,14 @@
     bool right = false;
     bool up = false;
     bool left = false;
-    decimal avg1 = 0;
-    decimal avg2 = 0;
-    decimal avg3 = 0;
+    private decimal avg1 = 0;
+    private decimal avg2 = 0;
+    private decimal avg3 = 0;
     private async void select(decimal value)
     {
-
+        decimal sum1 = 0;
+        decimal sum2 = 0;
+        decimal sum3 = 0;
         if (isEdit)
         {
             for (int i = 0; i < idsForCells.GetLength(0); i++)
@@ -388,29 +390,17 @@
                 }
             }
             isEdit = false;
-            
+
         }
         else
         {
-            decimal sum1 = 0;
-            decimal sum2 = 0;
-            decimal sum3 = 0;
-            for (int i = 0; i < sizesArray.GetLength(0); i++)
-            {
 
-                sum1 = sum1 + sizesArray[i, 0];
-                sum2 = sum2 + sizesArray[i, 1];
-                sum3 = sum3 + sizesArray[i, 2];
-
-            }
-            avg1 = sum1 / 10;
-            avg2 = sum2 / 10;
-            avg3 = sum3 / 10;
             if (selecteSizeType == 1)
             {
 
                 if (down)
                 {
+
 
                     for (int i = 0; i < idsForCells.GetLength(0); i++)
                     {
@@ -449,6 +439,18 @@
 
                         }
                     }
+                    for (int i = 0; i < sizesArray.GetLength(0); i++)
+                    {
+
+                        sum1 = sum1 + sizesArray[i, 0];
+                        sum2 = sum2 + sizesArray[i, 1];
+                        sum3 = sum3 + sizesArray[i, 2];
+
+                    }
+                    avg1 = sum1 / 10;
+                    avg2 = sum2 / 10;
+                    avg3 = sum3 / 10;
+
                     focusToNext();
                     return;
                 }
@@ -487,6 +489,18 @@
 
                         }
                     }
+                    for (int i = 0; i < sizesArray.GetLength(0); i++)
+                    {
+
+                        sum1 = sum1 + sizesArray[i, 0];
+                        sum2 = sum2 + sizesArray[i, 1];
+                        sum3 = sum3 + sizesArray[i, 2];
+
+                    }
+                    avg1 = sum1 / 10;
+                    avg2 = sum2 / 10;
+                    avg3 = sum3 / 10;
+
                     focusToNext();
                     return;
                 }
@@ -540,6 +554,18 @@
                         }
 
                     }
+                    for (int i = 0; i < sizesArray.GetLength(0); i++)
+                    {
+
+                        sum1 = sum1 + sizesArray[i, 0];
+                        sum2 = sum2 + sizesArray[i, 1];
+                        sum3 = sum3 + sizesArray[i, 2];
+
+                    }
+                    avg1 = sum1 / 10;
+                    avg2 = sum2 / 10;
+                    avg3 = sum3 / 10;
+
                     focusToNext();
                     return;
                 }
@@ -577,6 +603,18 @@
                         }
 
                     }
+                    for (int i = 0; i < sizesArray.GetLength(0); i++)
+                    {
+
+                        sum1 = sum1 + sizesArray[i, 0];
+                        sum2 = sum2 + sizesArray[i, 1];
+                        sum3 = sum3 + sizesArray[i, 2];
+
+                    }
+                    avg1 = sum1 / 10;
+                    avg2 = sum2 / 10;
+                    avg3 = sum3 / 10;
+
                     focusToNext();
                     return;
                 }
@@ -637,6 +675,9 @@
             }
 
         }
+
+
+
 
 
 
@@ -717,7 +758,7 @@
 
     private decimal[,] sizesArray = new decimal[10, 3];
 
-    private decimal start = 1.3m;
+    private decimal start = 1.45m;
 
     private decimal selectedValue;
     private decimal[] rowPositionValues = new decimal[3];
@@ -795,21 +836,21 @@
             rows[i] = "current" + i;
         }
 
-        mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 1012);//measPositionRepo.Get(Endpoints.MeasurementPositions, result);
+        mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 1018);//measPositionRepo.Get(Endpoints.MeasurementPositions, result);
     }
 
 
     private void OpenCreateForm(MouseEventArgs e)
     {
 
-        this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/create");
+        this.navManager.NavigateTo($"/growwidth/{userId}/{measurementPositionId}/create");
     }
 
     private async void GoToCreation(MouseEventArgs e)
     {
         if (isSuccess && isPackCreated)
         {
-            this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/create");
+            this.navManager.NavigateTo($"/growwidth/{userId}/{measurementPositionId}/create");
         }
         else
         {
@@ -817,7 +858,7 @@
             bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Tiešām vēlies iziet nesaglabājot?");
             if (confirmed)
             {
-                this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/create");
+                this.navManager.NavigateTo($"/growwidth/{userId}/{measurementPositionId}/create");
             }
         }
         // this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
@@ -894,7 +935,7 @@
             meas.MachineName = fusMachineName;
             meas.MeasurementPositionId = int.Parse(measurementPositionId);
             meas.FusPackId = packId;
-            meas.MeasurementTypeId = 1012;
+            meas.MeasurementTypeId = 1018;
             meas.PackId = int.Parse(elements[1]);
             for (int j = 0; j < sizesArray.GetLength(1); j++)
             {
@@ -928,7 +969,7 @@
             isPackCreated = true;
 
             toastService.ShowToast("Mērījuma dati saglabāti", ToastLevel.Success);
-            this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/create");
+            this.navManager.NavigateTo($"/growwidth/{userId}/{measurementPositionId}/create");
         }
     }
 

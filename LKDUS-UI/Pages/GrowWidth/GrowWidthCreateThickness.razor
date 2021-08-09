@@ -1,4 +1,4 @@
-﻿@page "/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/thickness"
+﻿@page "/growwidth/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/thickness"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
@@ -101,11 +101,11 @@
     @if (isTypeCklicked)
     {
 
-        @*<div class="form-group">
+        <div class="form-group">
             <label for="machine">Iekārta</label>
             <input id="machine" class="form-control" type="text" placeholder=@fusMachineName readonly>
 
-        </div>*@
+        </div>
 
         <div class="form-group">
 
@@ -277,7 +277,7 @@
     }
 
 
-  static  bool isEdit = true;
+    bool isEdit = false;
     string editPosition = "";
     private void HighlightSelected(int a, int b)
     {
@@ -311,7 +311,7 @@
     int selecteSizeType = 0;
     int selectionType = 0;
     string activePosition = "";
-
+    
     [Parameter]
     public string userId { get; set; }
     [Parameter]
@@ -388,7 +388,6 @@
                 }
             }
             isEdit = false;
-            
         }
         else
         {
@@ -731,28 +730,6 @@
     string current = "current";
 
     MeasurementType mt = new MeasurementType();
-
-
-    protected override void OnAfterRender(bool firstRender)
-    {
-        if (firstRender)
-        {
-
-            for (int i = 0; i < colors.GetLength(0); i++)
-            {
-                for (int j = 0; j < colors.GetLength(1); j++)
-                {
-                    colors[i, j] = "";
-                }
-            }
-            activePosition = "cell00";
-            colors[0, 0] = "red";
-
-            isTypeCklicked = true;
-
-            selecteSizeType = 1;
-        }
-    }
 
     protected async override Task OnInitializedAsync()
     {

@@ -1,0 +1,450 @@
+﻿@page "/growwidth/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/gluepoints"
+
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+@using LKDUS_UI.Service
+@inject IMeasurementRepository repo
+@inject NavigationManager navManager
+@inject IMeasurementRepository measurementRepo
+@inject IMachinesRepository machineRepository
+@inject IAuthenticationRepository authRepo
+@inject IPacksRepository packRepo
+@inject IMeasurementTypeRepository measurementTypeRepository
+@inject IJSRuntime JsRuntime
+@inject ToastService toastService
+<style>
+    .button {
+        width: 100%;
+        height: 100%;
+    }
+
+    .btn-success:active {
+        color: #ffffff !important;
+        background-color: #161617;
+        border-color: #494F57;
+    }
+</style>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <button type="button" @onclick="@Return" class="btn btn-primary btn-block">Atpakaļ</button>
+        </div>
+        <div class="col w-25"><h3 style="text-align: center; " class="card-title">Līmes punkti</h3></div>
+        <div class="col">
+            <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
+        </div>
+
+    </div>
+</div>
+<div class="container">
+
+    <div class="row">
+
+        @*<div class="col">
+
+            <button type="button" style="background-color:@colorBgP1" @onclick="changecolor1AndSetSizes" class="btn btn-outline-secondary btn-block">
+                <h4>4 pēdas</h4>
+
+            </button>
+
+        </div>*@
+
+
+
+
+    </div>
+    @if (isTypeCklicked)
+    {
+
+
+
+
+        <div class="row">
+
+
+
+            <div class="col">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+
+                                        <th scope="col">Defekta veids</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+
+                                        <td>1.Punkts</td>
+
+
+                                        <td>
+                                            <button type="button" @onclick="e=>select(0,1)" style="background-color:@colors[0, 0]; color: black; border: 2px solid #4CAF50; " class="btn  btn-danger h-33 w-33">OK</button>
+
+                                            <button type="button" @onclick="e=>select(0,0)" style="background-color:@colors[0, 1];color: black;border: 2px solid #008CBA" class="btn btn-success  h-33 w-33">NOK</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>2.Punkts</td>
+
+                                        <td>
+                                            <button type="button" @onclick="e=>select(1,1)" style="background-color:@colors[1,0]; color: black; border: 2px solid #4CAF50; " class="btn  btn-danger h-33 w-33">OK</button>
+
+                                            <button type="button" @onclick="e=>select(1,0)" style="background-color:@colors[1,1]; color: black;border: 2px solid #008CBA" class="btn btn-success  h-33 w-33">NOK</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>3.Punkts</td>
+
+                                        <td>
+                                            <button type="button" @onclick="e=>select(2,1)" style="background-color:@colors[2,0]; color: black; border: 2px solid #4CAF50; " class="btn  btn-danger h-33 w-33">OK</button>
+
+                                            <button type="button" @onclick="e=>select(2,0)" style="background-color:@colors[2,1]; color: black;border: 2px solid #008CBA" class="btn btn-success  h-33 w-33">NOK</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>4.Punkts</td>
+
+                                        <td>
+                                            <button type="button" @onclick="e=>select(3,1)" style="background-color:@colors[3,0]; color: black; border: 2px solid #4CAF50; " class="btn  btn-danger h-33 w-33">OK</button>
+
+                                            <button type="button" @onclick="e=>select(3,0)" style="background-color:@colors[3,1]; color: black; border: 2px solid #008CBA" class="btn btn-success  h-33 w-33">NOK</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>5.Punkts</td>
+
+                                        <td>
+                                            <button type="button" @onclick="e=>select(4,1)" style="background-color:@colors[4,0]; color: black; border: 2px solid #4CAF50; " class="btn  btn-danger h-33 w-33">OK</button>
+
+                                            <button type="button" @onclick="e=>select(4,0)" style="background-color:@colors[4,1]; color: black;border: 2px solid #008CBA;" class="btn btn-success  h-33 w-33">NOK</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>6.Punkts</td>
+
+                                        <td>
+                                            <button type="button" @onclick="e=>select(5,1)" style="background-color:@colors[5, 0]; color: black; border: 2px solid #4CAF50;  " class="btn  btn-danger h-33 w-33">OK</button>
+
+                                            <button type="button" @onclick="e=>select(5,0)" style="background-color:@colors[5, 1];  color: black;border: 2px solid #008CBA;" class="btn btn-success  h-33 w-33">NOK</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>7.Punkts</td>
+
+                                        <td>
+                                            <button type="button" @onclick="e=>select(6,1)" style="background-color:@colors[6, 0]; color: black; border: 2px solid #4CAF50;  " class="btn  btn-danger h-33 w-33">OK</button>
+
+                                            <button type="button" @onclick="e=>select(6,0)" style="background-color:@colors[6, 1];  color: black;border: 2px solid #008CBA;" class="btn btn-success  h-33 w-33">NOK</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>8.Punkts</td>
+
+                                        <td>
+                                            <button type="button" @onclick="e=>select(7,1)" style="background-color:@colors[7, 0]; color: black; border: 2px solid #4CAF50;  " class="btn  btn-danger h-33 w-33">OK</button>
+
+                                            <button type="button" @onclick="e=>select(7,0)" style="background-color:@colors[7, 1];  color: black;border: 2px solid #008CBA;" class="btn btn-success  h-33 w-33">NOK</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+    }
+    else
+    {
+        <LoadingMessage Message="Izvēlies izmēru lai sāktu mērījumu"></LoadingMessage>
+    }
+
+
+
+
+
+
+
+</div>
+
+
+
+
+@code {
+    int selecteSizeType = 0;
+    private void changecolor1AndSetSizes()
+    {
+
+        isTypeCklicked = true;
+
+    }
+
+
+
+    public string colorBgP1 = "white";
+    public string colorBgP2 = "white";
+    public string colorBgP3 = "white";
+    public string colorBgP4 = "white";
+    public string colorBgP5 = "white";
+    public string colorBgP6 = "white";
+    public string colorBgP7 = "white";
+    [Parameter]
+    public string userId { get; set; }
+    [Parameter]
+    public string measurementPositionId { get; set; }
+    [Parameter]
+    public string stringPackValue { get; set; }
+    [Parameter]
+    public string pmachineIdd { get; set; }
+    [Parameter]
+    public string fusMachineName { get; set; }
+    [Parameter]
+    public string pshift { get; set; }
+    private IList<Measurement> Model2;
+
+    public bool isTypeCklicked = true;
+
+    private string[,] currentElement = new string[10, 2];
+    protected async override Task OnInitializedAsync()
+    {
+        Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+        ModelPacks = await this.packRepo.Get(Endpoints.PacksEndpoint);
+
+
+
+
+
+    }
+
+
+
+
+    bool[] isDisabledMinus = new bool[8];
+
+    public string[,] colors = new string[8, 2];
+
+    private void select(int index, int valuetoadd)
+    {
+
+
+        positions[index] = valuetoadd;
+
+        if (valuetoadd == 0)
+        {
+            colors[index, 1] = "#f44336";
+            colors[index, 0] = "white";
+        }
+        if (valuetoadd == 1)
+        {
+
+            colors[index, 0] = "#4CAF50";
+            colors[index, 1] = "white";
+
+        }
+    }
+    private ElementReference input1;
+    [Inject] IJSRuntime JSRuntime { get; set; }
+
+
+
+    private int[] positions = new int[8];
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+
+        if (firstRender)
+        {
+            for (int i = 0; i < colors.GetLength(0); i++)
+            {
+                for (int j = 0; j < colors.GetLength(1); j++)
+                {
+                    colors[i, j] = "white";
+                }
+
+            }
+
+
+        }
+
+    }
+    int lastRow1;
+    int lastRow2;
+    string colorBg1;
+    string colorBg2;
+
+
+
+
+
+
+    private async void Return(MouseEventArgs e)
+    {
+        if (isSuccess && isPackCreated)
+        {
+            this.navManager.NavigateTo($"/growwidth/{userId}/{measurementPositionId}/create");
+        }
+        else
+        {
+
+            bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Tiešām vēlies iziet nesaglabājot?");
+            if (confirmed)
+            {
+                this.navManager.NavigateTo($"/growwidth/{userId}/{measurementPositionId}/create");
+            }
+        }
+
+    }
+
+    bool isSuccess = false;
+    bool isPackCreated = false;
+    MeasurementType mt = new MeasurementType();
+
+    private IList<Pack> ModelPacks;
+    private async void SaveMeasurement()
+    {
+        int packId = int.Parse(stringPackValue);
+        mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 1016);
+        String measurementDateAndTime = DateTime.Now.ToString("g");
+
+        DateTime shiftTimeStart = Convert.ToDateTime("07:00:00");
+
+        DateTime shiftTimeEnd = Convert.ToDateTime("19:00:00");
+
+        DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
+
+
+        int shift = 1;
+
+        if (DateTime.Compare(currentMeasurement, shiftTimeStart) >= 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) < 0)
+        {
+            shift = 1;
+        }
+
+        if (DateTime.Compare(currentMeasurement, shiftTimeStart) < 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) >= 0)
+        {
+            shift = 2;
+        }
+        if (pshift != shift.ToString())
+        {
+            shift = int.Parse(pshift);
+        }
+        //var pid = ModelPacks.Max(el => el.Id) + 1;
+
+        IList<Measurement> measurementsToCreate = new List<Measurement>();
+        Pack pack = new Pack();
+        Machine machine = new Machine();
+        // machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
+        LoginModel user = new LoginModel();
+        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
+        pack.DateCreated = DateTime.Parse(measurementDateAndTime);
+        pack.MeasurementTypeName = mt.Name;
+        pack.DimensionId = selecteSizeType;
+
+        pack.Machine = fusMachineName;
+        //   pack.Machine = "Plūsmas";
+
+        pack.FusCode = stringPackValue;
+        pack.Shift = shift;
+        pack.Author = user.UserName;
+
+        var packToCreate = packRepo.CreateObjectAndReturnId(Endpoints.PacksEndpoint, pack);
+        string packStringResult = packToCreate.Result.ToString();
+
+        string firstString = "id";
+        string lastString = ",";
+
+        int pos1 = packStringResult.IndexOf(firstString);
+        int pos2 = packStringResult.IndexOf(lastString);
+
+        string final = packStringResult.Substring(pos1, pos2 - pos1);
+
+        string[] elements = final.Split(':');
+
+
+
+
+
+
+        //   isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
+
+
+        Measurement meas = new Measurement();
+        meas.DateCreated = DateTime.Parse(measurementDateAndTime);
+        // var packId = ModelPacks. Max(el => el.Id) + 1;
+        meas.Shift = shift;
+        // meas.MachineName = int.Parse(pmachineIdd); //machine.Id;'
+        meas.MachineName = fusMachineName;
+
+        meas.UserId = userId;
+        meas.MeasurementPositionId = int.Parse(measurementPositionId);
+        meas.FusPackId = packId;
+        meas.MeasurementTypeId = 1016;
+        ;
+        meas.PackId = int.Parse(elements[1]);
+
+        meas.Measurement1 = Convert.ToDecimal(positions[0]);
+        meas.Measurement2 = Convert.ToDecimal(positions[1]);
+        meas.Measurement3 = Convert.ToDecimal(positions[2]);
+        meas.Measurement4 = Convert.ToDecimal(positions[3]);
+        meas.Measurement5 = Convert.ToDecimal(positions[4]);
+        meas.Measurement6 = Convert.ToDecimal(positions[5]);
+
+
+
+
+
+        isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
+
+
+
+
+
+        if (packToCreate != null && isSuccess)
+        {
+            isPackCreated = true;
+            toastService.ShowToast("Mērījuma dati saglabāti", ToastLevel.Success);
+            this.navManager.NavigateTo($"/growwidth/{userId}/{measurementPositionId}/create");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

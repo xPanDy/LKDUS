@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\GrowWidth\GrowWidth.razor" />
+    <Content Remove="Pages\GrowWidth\GrowWidthCreate.razor" />
+    <Content Remove="Pages\GrowWidth\GrowWidthCreateDimensions.razor" />
+    <Content Remove="Pages\GrowWidth\GrowWidthCreateLength.razor" />
+    <Content Remove="Pages\GrowWidth\GrowWidthCreateQuality.razor" />
+    <Content Remove="Pages\GrowWidth\GrowWidthCreateThickness.razor" />
+    <Content Remove="Pages\GrowWidth\GrowWidthCreateWidth.razor" />
+    <Content Remove="Pages\GrowWidth\GrowWidthView.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\js\barcode.js" />
     <None Include="wwwroot\js\my_lib.js" />
     <None Include="wwwroot\js\zxing.js" />

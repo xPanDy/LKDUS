@@ -1,0 +1,487 @@
+﻿@page "/growwidth/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/quality"
+@* /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/quality"*@
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using LKDUS_UI.Service
+@using System.Net.Http
+
+@inject IMeasurementRepository repo
+@inject NavigationManager navManager
+@inject IMeasurementRepository measurementRepo
+@inject IMachinesRepository machineRepository
+@inject IMeasurementTypeRepository measurementTypeRepository
+@inject IJSRuntime JsRuntime;
+@inject ToastService toastService
+@inject IPacksRepository packRepo
+@inject IAuthenticationRepository authRepo
+<style>
+    .button {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button type="button" @onclick="@Return" class="btn btn-primary btn-block">Atpakaļ</button>
+            </div>
+            <div class="col w-25"><h3 class="card-title">Mitrā finiera kvalitāte</h3></div>
+            <div class="col">
+                <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row h-30">
+
+            <div class="col-md-3">
+
+                <button @onclick="focusToInput1" type="button" class="btn btn-block btn-lg btn-success">
+                    Raupjums
+                </button>
+                <input style="background-color:@colorBgP1" @onclick="focusToInput1" disabled id="@id1" @ref="input1" @bind="@v1" class="form-control"
+                       min="0"
+                       type="number">
+            </div>
+
+
+
+            <div class="col-md-3">
+
+                <button @onclick="focusToInput2" type="button" class="btn btn-success btn-block btn-lg">
+                    Risas
+                </button>
+                <input style="background-color:@colorBgP2" @onclick="focusToInput2" disabled id="@id2" @ref="input2" @bind="@v2" class="form-control"
+                       min="0"
+                       type="number">
+            </div>
+
+
+
+            <div class="col-md-3">
+
+                <button @onclick="focusToInput3" type="button" class="btn btn-success btn-block btn-lg">
+                    Zilās svītras
+                </button>
+                <input style="background-color:@colorBgP3" @onclick="focusToInput3" disabled id="@id3" @ref="input3" @bind="@v3" class="form-control"
+                       min="0"
+                       type="number">
+            </div>
+
+
+            <div class="col-md-3">
+
+                <button @onclick="focusToInput4" type="button" class="btn btn-success btn-lg btn-block">
+                    Atkritumi zem naža
+                </button>
+                <input style="background-color:@colorBgP4" @onclick="focusToInput4" disabled id="@id4" @ref="input4" @bind="@v4" class="form-control"
+                       min="0"
+                       type="number">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <table class="table table-bordered justify-content-center">
+                <tbody>
+
+                    <tr>
+                        <td> <button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>add(1) ">1</button></td>
+                        @*<td> <button type="button" class="btn btn-success btn-lg btn-block" onclick="document.getElementById('code').value=document.getElementById('code').value + '1' + @v1; document.getElementById('code').click(); ">1</button></td>*@
+                        <td> <button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>add(2)">2</button></td>
+                        <td> <button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>add(3)">3</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>add(-1)">&lt;</button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>add(4)">4</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>add(5)">5</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>add(6)">6</button></td>
+                        <td> </td>
+                    </tr>
+
+                    <tr>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>add(7)">7</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>add(8)">8</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>add(9)">9</button></td>
+                        @*<td rowspan="2"><button type="button" class="btn btn-success btn-lg btn-block" onclick="">Go</button></td>*@
+                    </tr>
+                    <tr>
+                        <td colspan="3"><button type="button" class="btn btn-success btn-lg btn-block" @onclick="e=>add(0)">0</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+@code {
+    MeasurementType mt = new MeasurementType();
+
+    [Parameter]
+    public string userId { get; set; }
+    [Parameter]
+    public string measurementPositionId { get; set; }
+    [Parameter]
+    public string stringPackValue { get; set; }
+    [Parameter]
+    public string pmachineIdd { get; set; }
+    [Parameter]
+    public string pshift { get; set; }
+
+    [Parameter]
+    public string fusMachineName { get; set; }
+    private IList<Measurement> Model2;
+    private string v1;
+    private string v2;
+    private string v3;
+    private string v4;
+
+    private string @colorBgP1 = "";
+    private string @colorBgP2 = "";
+    private string @colorBgP3 = "";
+    private string @colorBgP4 = "";
+
+    string[] values = new string[4];// "";
+    string selected1 = "";
+    int selectedindex = 0;
+    public async void add(int i)
+    {
+
+
+        if (i == -1)
+        {
+            if (values[selectedindex] != null)
+            {
+
+
+                if (values[selectedindex].Length > 0)
+                {
+
+                    values[selectedindex] = values[selectedindex].Substring(0, values[selectedindex].Length - 1);
+
+                }
+            }
+            if (selectedindex == 0)
+            {
+                v1 = values[selectedindex];
+            }
+            if (selectedindex == 1)
+            {
+                v2 = values[selectedindex];
+            }
+            if (selectedindex == 2)
+            {
+                v3 = values[selectedindex];
+            }
+            if (selectedindex == 3)
+            {
+                v4 = values[selectedindex];
+            }
+        }
+        else
+        {
+            if (values[selectedindex] != null)
+            {
+
+
+                if (values[selectedindex].Length >= 3)
+                {
+                    await JsRuntime.InvokeVoidAsync("alert", "Mērījuma apjoms nedrīkst pārsniegt 3 ciparu skaitli");
+                    return;
+                }
+            }
+
+            values[selectedindex] = values[selectedindex] + "" + i;
+            if (selectedindex == 0)
+            {
+                v1 = values[selectedindex];
+            }
+            if (selectedindex == 1)
+            {
+                v2 = values[selectedindex];
+            }
+            if (selectedindex == 2)
+            {
+                v3 = values[selectedindex];
+            }
+            if (selectedindex == 3)
+            {
+                v4 = values[selectedindex];
+            }
+        }
+    }
+
+    protected async override Task OnInitializedAsync()
+    {
+        ModelPacks = await this.packRepo.Get(Endpoints.PacksEndpoint);
+        colorBgP1 = "yellow";
+        v1 = "0";
+        v2 = "0";
+        v3 = "0";
+        v4 = "0";
+        Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+    }
+
+    private ElementReference input1;
+    [Inject] IJSRuntime JSRuntime { get; set; }
+
+    private ElementReference input2;
+    private ElementReference input3;
+    private ElementReference input4;
+    private string id1 = "inactive";
+    private string id2 = "inactive";
+    private string id3 = "inactive";
+    private string id4 = "inactive";
+
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            id1 = "code";
+            await
+            JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
+        }
+
+    }
+
+    private async void focusToInput1()
+    {
+
+        colorBgP1 = "yellow";
+        colorBgP2 = "";
+        colorBgP3 = "";
+        colorBgP4 = "";
+        if (v1.Length == 1 && v1 == "0")
+        {
+            v1 = "";
+        }
+
+        selectedindex = 0;
+
+        id1 = "code";
+        id2 = "inactive";
+        id3 = "inactive";
+        id4 = "inactive";
+        await
+JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
+
+    }
+
+    private async void focusToInput2()
+    {
+        colorBgP1 = "";
+        colorBgP2 = "yellow";
+        colorBgP3 = "";
+        colorBgP4 = "";
+        if (values[selectedindex] != null)
+        {
+            if (v2.Length == 1 && v2 == "0")
+            {
+                v2 = "";
+            }
+            selectedindex = 1;
+            id1 = "inactive";
+            id2 = "code";
+            id3 = "inactive";
+            id4 = "inactive";
+            await
+            JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input2);
+        }
+    }
+    private async void focusToInput3()
+    {
+        colorBgP1 = "";
+        colorBgP2 = "";
+        colorBgP3 = "yellow";
+        colorBgP4 = "";
+        if (values[selectedindex] != null)
+        {
+            if (v3.Length == 1 && v3 == "0")
+            {
+                v3 = "";
+            }
+            selectedindex = 2;
+            id1 = "inactive";
+            id2 = "inactive";
+            id3 = "code";
+            id4 = "inactive";
+            await
+            JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input3);
+        }
+    }
+    private async void focusToInput4()
+    {
+        colorBgP1 = "";
+        colorBgP2 = "";
+        colorBgP3 = "";
+        colorBgP4 = "yellow";
+        if (values[selectedindex] != null)
+        {
+            if (v4.Length == 1 && v4 == "0")
+            {
+                v4 = "";
+            }
+            selectedindex = 3;
+            id1 = "inactive";
+            id2 = "inactive";
+            id3 = "inactive";
+            id4 = "code";
+            await
+            JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input4);
+        }
+    }
+
+    private async void Return(MouseEventArgs e)
+    {
+        if (isSuccess && isPackCreated)
+        {
+            this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/create");
+        }
+        else
+        {
+
+            bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Tiešām vēlies iziet nesaglabājot?");
+            if (confirmed)
+            {
+                this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/create");
+            }
+        }
+
+    }
+
+    bool isSuccess = false;
+    bool isPackCreated = false;
+    private IList<Pack> ModelPacks;
+    private async void SaveMeasurement()
+    {
+        mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 5);
+        //var pid = ModelPacks.Max(el => el.Id) + 1;
+        int packId = int.Parse(stringPackValue);
+
+        String measurementDateAndTime = DateTime.Now.ToString("g");
+
+
+        DateTime shiftTimeStart = Convert.ToDateTime("07:00:00");
+
+        DateTime shiftTimeEnd = Convert.ToDateTime("19:00:00");
+
+        DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
+
+        //String timeOfTheDayNow = DateTime.Now.ToString("t");
+        int shift = 1;
+
+        if (DateTime.Compare(currentMeasurement, shiftTimeStart) >= 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) < 0)
+        {
+            shift = 1;
+        }
+
+        if (DateTime.Compare(currentMeasurement, shiftTimeStart) < 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) >= 0)
+        {
+            shift = 2;
+        }
+        if (pshift != shift.ToString())
+        {
+            shift = int.Parse(pshift);
+        }
+        IList<Measurement> measurementsToCreate = new List<Measurement>();
+        Pack pack = new Pack();
+        Machine machine = new Machine();
+
+        machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
+        LoginModel user = new LoginModel();
+        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
+        pack.DateCreated = DateTime.Parse(measurementDateAndTime);
+        pack.Machine = fusMachineName;//  machine.Name;
+        pack.Shift = shift;
+        pack.Author = user.UserName;
+        pack.FusCode = stringPackValue;
+        pack.MeasurementTypeName = mt.Name;
+
+        // isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
+        var packToCreate = packRepo.CreateObjectAndReturnId(Endpoints.PacksEndpoint, pack);
+        string packStringResult = packToCreate.Result.ToString();
+
+        string firstString = "id";
+        string lastString = ",";
+
+        int pos1 = packStringResult.IndexOf(firstString);
+        int pos2 = packStringResult.IndexOf(lastString);
+
+        string final = packStringResult.Substring(pos1, pos2 - pos1);
+
+        string[] elements = final.Split(':');
+
+        Measurement meas = new Measurement();
+        meas.DateCreated = DateTime.Parse(measurementDateAndTime);
+        meas.Shift = shift;
+        // meas.MachineId = int.Parse(pmachineIdd); //machine.Id;
+        meas.MachineName = fusMachineName;
+        meas.UserId = userId;
+        meas.MeasurementPositionId = int.Parse(measurementPositionId);
+        meas.FusPackId = packId;
+        meas.MeasurementTypeId = 5;
+        meas.PackId = int.Parse(elements[1]);// pid;
+
+        if (v1 == "")
+        {
+            v1 = "0";
+        }
+        if (v2 == "")
+        {
+            v2 = "0";
+        }
+        if (v3 == "")
+        {
+            v3 = "0";
+        }
+        if (v4 == "")
+        {
+            v4 = "0";
+        }
+
+        meas.Measurement1 = Convert.ToDecimal(v1);
+        meas.Measurement2 = Convert.ToDecimal(v2);
+        meas.Measurement3 = Convert.ToDecimal(v3);
+        meas.Measurement4 = Convert.ToDecimal(v4);
+
+
+
+
+
+
+
+
+        measurementsToCreate.Add(meas);
+
+        isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
+
+        if (packToCreate != null && isSuccess)
+        {
+            isPackCreated = true;
+            this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/create");
+        }
+    }
+
+
+}
+
+
+
+

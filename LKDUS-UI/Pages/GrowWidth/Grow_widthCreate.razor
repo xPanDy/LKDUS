@@ -1,4 +1,4 @@
-﻿@page "/growlong/{userId}/{measurementPositionId}/create"
+﻿@page "/growwidth/{userId}/{measurementPositionId}/create"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
@@ -283,44 +283,70 @@ i <= DateTime.Now.Year + 5; i++)
                         <div class="container-fluid">
                             <div class="navbar-btn">
 
-                                <button type="button" @onclick="e => SelectMachine(1)" class="btn btn-primary">1.kabata</button>
+                                <button type="button" @onclick="e => SelectMachine(1)" class="btn btn-primary">N (pārš) 4x4</button>
                             </div>
                             <div class="navbar-btn">
 
-                                <button type="button" @onclick="e => SelectMachine(2)" class="btn btn-primary">2.kabata</button>
+                                <button type="button" @onclick="e => SelectMachine(2)" class="btn btn-primary">N (pārš) 4x8</button>
                             </div>
                             <div class="navbar-btn">
 
-                                <button type="button" @onclick="e => SelectMachine(3)" class="btn btn-primary">3.kabata</button>
+                                <button type="button" @onclick="e => SelectMachine(3)" class="btn btn-primary">C gab</button>
                             </div>
                             <div class="navbar-btn">
 
-                                <button type="button" @onclick="e => SelectMachine(4)" class="btn btn-primary">4.kabata</button>
+                                <button type="button" @onclick="e => SelectMachine(4)" class="btn btn-primary">WG gab</button>
+                            </div>
+                        </div>
+                    </nav>
+                    <nav class="navbar navbar-dark">
+                        <div class="container-fluid">
+                            <div class="navbar-btn">
+
+                                <button type="button" @onclick="e => SelectMachine(5)" class="btn btn-primary">C (1.galds)</button>
+                            </div>
+                            <div class="navbar-btn">
+
+                                <button type="button" @onclick="e => SelectMachine(6)" class="btn btn-primary">Uroco</button>
+                            </div>
+                            <div class="navbar-btn">
+
+                                <button type="button" @onclick="e => SelectMachine(7)" class="btn btn-primary">N (pārš) 8x4</button>
+                            </div>
+                            <div class="navbar-btn">
+
+                                <button type="button" @onclick="e => SelectMachine(8)" class="btn btn-primary">8" gabali</button>
                             </div>
                         </div>
                     </nav>
                     @if (fusMachineName == null)
                     {
                         <LoadingMessage Message="Lai turpinātu izvēlies kabatu" />
-                }
-                    else { 
-                    <nav class="navbar navbar-dark">
-                        <div class="container-fluid">
-                            <div class="navbar-btn">
+                    }
+                    else
+                    {
+                        <nav class="navbar navbar-dark">
+                            <div class="container-fluid">
+                                <div class="navbar-btn">
 
-                                <button type="button" @onclick="@GoToThickness" class="btn btn-primary">Biezums</button>
+                                    <button type="button" @onclick="@GoToThickness" class="btn btn-primary">Biezums</button>
+                                </div>
+
+                                <div class="navbar-btn">
+
+                                    <button type="button" @onclick="@GoToWidth" class="btn btn-primary">Platums</button>
+                                </div>
+                                <div class="navbar-btn">
+
+                                    <button type="button" @onclick="@GoDefects" class="btn btn-primary">Defekti</button>
+                                </div>
+
+                                <div class="navbar-btn">
+
+                                    <button type="button" @onclick="@GoGluePoints" class="btn btn-primary">Līmes punkti</button>
+                                </div>
                             </div>
-                            <div class="navbar-btn">
-
-                                <button type="button" @onclick="@GoToLength" class="btn btn-primary">Garums</button>
-                            </div>
-                            <div class="navbar-btn">
-
-                                <button type="button" @onclick="@GoToWidth" class="btn btn-primary">Platums</button>
-                            </div>
-
-                        </div>
-                    </nav>
+                        </nav>
                     }
                 }
 
@@ -450,7 +476,7 @@ i <= DateTime.Now.Year + 5; i++)
     public string packId { get; set; }
     [Parameter]
     public int pmeasurementTypeId { get; set; }
-    
+
     public string fusMachineName { get; set; }
 
     public string stringPackValue { get; set; }
@@ -553,7 +579,7 @@ i <= DateTime.Now.Year + 5; i++)
     }
 
     string fontColor = "black";
-    private void DoSomethingElse(KeyboardEventArgs e)
+    private async void DoSomethingElse(KeyboardEventArgs e)
     {
 
         if (e.Code == "Enter")
@@ -567,7 +593,7 @@ i <= DateTime.Now.Year + 5; i++)
                 }
                 else
                 {
-
+                    fusPacks = await frepo.Get(Endpoints.FusPackEndPoint);
                     int packid = int.Parse(stringPackValue);
                     fp = fusPacks.Where(p => p.Id == packid).SingleOrDefault();
                     if (fp != null)
@@ -711,7 +737,7 @@ i <= DateTime.Now.Year + 5; i++)
 
         Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
         FusMachines = await this.repo.Get(Endpoints.MeasurementEndpoint);
-        fusPacks = await frepo.Get(Endpoints.FusPackEndPoint);
+
         Machines = await machineRepository.Get(Endpoints.MachinesEndpoint);
         try
         {
@@ -762,7 +788,7 @@ i <= DateTime.Now.Year + 5; i++)
         }
         if (isThere)
         {
-          //  fusMachineName = fp.MachineName;
+            //  fusMachineName = fp.MachineName;
         }
     }
 
@@ -775,7 +801,7 @@ i <= DateTime.Now.Year + 5; i++)
         //  validateParameters(measurementPositionId, measurementPositionId, stringPackValue, pmachineIdd, pshift);
 
         //this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/thickness");
-        this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/thickness");
+        this.navManager.NavigateTo($"/growwidth/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/thickness");
 
 
         // //      /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness
@@ -793,32 +819,54 @@ i <= DateTime.Now.Year + 5; i++)
     //    //return false;
     //}
 
-    private void GoToLength(MouseEventArgs e)
+    private void GoDefects(MouseEventArgs e)
     {
         checkParams();
         //this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/length");
-        this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/length");
+        this.navManager.NavigateTo($"/growwidth/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/defects");
         //this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions");
     }
-
+    private void GoGluePoints(MouseEventArgs e)
+    {
+        checkParams();
+        //this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/length");
+        this.navManager.NavigateTo($"/growwidth/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/gluepoints");
+        //this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions");
+    }
 
     private void SelectMachine(int machinenmber){
 
         if (machinenmber == 1)
         {
-            fusMachineName = "1.kabata";
+            fusMachineName = "N (pārš) 4x4";
         }
         if (machinenmber == 2)
         {
-            fusMachineName = "2.kabata";
+            fusMachineName = "N (pārš) 4x8";
         }
         if (machinenmber == 3)
         {
-            fusMachineName = "3.kabata";
+            fusMachineName = "C gab";
         }
         if (machinenmber == 4)
         {
-            fusMachineName = "4.kabata";
+            fusMachineName = "WG gab";
+        }
+        if (machinenmber == 5)
+        {
+            fusMachineName = "C (1.galds)";
+        }
+        if (machinenmber == 6)
+        {
+            fusMachineName = "Uroco";
+        }
+        if (machinenmber == 7)
+        {
+            fusMachineName = "N (pārš) 8x4";
+        }
+        if (machinenmber == 8)
+        {
+            fusMachineName = "8'' gabali";
         }
     }
 
@@ -826,7 +874,7 @@ i <= DateTime.Now.Year + 5; i++)
     {
         checkParams();
         //his.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/width");
-        this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/width");
+        this.navManager.NavigateTo($"/growwidth/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/width");
         //  this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/quality");
     }
 
@@ -838,7 +886,7 @@ i <= DateTime.Now.Year + 5; i++)
 
     private void goBack(MouseEventArgs e)
     {
-        this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}");
+        this.navManager.NavigateTo($"/growwidth/{userId}/{measurementPositionId}");
     }
 
     /* [Parameter]

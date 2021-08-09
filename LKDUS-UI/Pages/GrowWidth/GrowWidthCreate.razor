@@ -1,4 +1,4 @@
-﻿@page "/growlong/{userId}/{measurementPositionId}/create"
+﻿@page "/growwidth/{userId}/{measurementPositionId}/create"
 
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
@@ -34,6 +34,7 @@
             <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
         </div>
         <div class="col w-25"><h3 class="card-title">@mp.Name</h3></div>
+        <div class="col w-25"><h4 class="card-title">Pārstrādājamais materiāls</h4></div>
         <div class="col">
             @*<button type="submit" class="btn btn-primary btn-block">Saglabāt</button>*@
         </div>
@@ -80,7 +81,7 @@
 
 
                 <div class="col">
-                    <label for="code2">FUS kods</label>
+                    <label for="code2">FUS Pakas kods</label>
 
 
                     @*@bind=@packId*@
@@ -279,26 +280,44 @@ i <= DateTime.Now.Year + 5; i++)
                 }
                 else
                 {
-                    <nav class="navbar navbar-dark">
-                        <div class="container-fluid">
-                            <div class="navbar-btn">
+            <nav class="navbar navbar-dark">
+                <div class="container-fluid">
+                    <div class="navbar-btn">
 
-                                <button type="button" @onclick="e => SelectMachine(1)" class="btn btn-primary">1.kabata</button>
-                            </div>
-                            <div class="navbar-btn">
+                        <button type="button" @onclick="e => SelectMachine(1)" class="btn btn-primary">N (pārš) 4x4</button>
+                    </div>
+                    <div class="navbar-btn">
 
-                                <button type="button" @onclick="e => SelectMachine(2)" class="btn btn-primary">2.kabata</button>
-                            </div>
-                            <div class="navbar-btn">
+                        <button type="button" @onclick="e => SelectMachine(2)" class="btn btn-primary">N (pārš) 4x8</button>
+                    </div>
+                    <div class="navbar-btn">
 
-                                <button type="button" @onclick="e => SelectMachine(3)" class="btn btn-primary">3.kabata</button>
-                            </div>
-                            <div class="navbar-btn">
+                        <button type="button" @onclick="e => SelectMachine(3)" class="btn btn-primary">C gab</button>
+                    </div>
+                    <div class="navbar-btn">
 
-                                <button type="button" @onclick="e => SelectMachine(4)" class="btn btn-primary">4.kabata</button>
-                            </div>
-                        </div>
-                    </nav>
+                        <button type="button" @onclick="e => SelectMachine(4)" class="btn btn-primary">WG gab</button>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="navbar-btn">
+
+                        <button type="button" @onclick="e => SelectMachine(5)" class="btn btn-primary">C (1.galds)</button>
+                    </div>
+                    <div class="navbar-btn">
+
+                        <button type="button" @onclick="e => SelectMachine(6)" class="btn btn-primary">Uroco</button>
+                    </div>
+                    <div class="navbar-btn">
+
+                        <button type="button" @onclick="e => SelectMachine(7)" class="btn btn-primary">N (pārš) 8x4</button>
+                    </div>
+                    <div class="navbar-btn">
+
+                        <button type="button" @onclick="e => SelectMachine(8)" class="btn btn-primary">8" gabali</button>
+                    </div>
+                </div>
+            </nav>
                     @if (fusMachineName == null)
                     {
                         <LoadingMessage Message="Lai turpinātu izvēlies kabatu" />

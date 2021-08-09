@@ -1,0 +1,356 @@
+﻿@page "/growwidth/{fusCode}/{measurementPositionId}/{userId}/{packId}/{measurementTypeName}/view"
+@*measurements/{fusCode}/{measurementPositionId}/{userId}/{packId}/view*@
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+
+@inject IMeasurementRepository measurementRepository
+@inject IMeasurementTypeRepository measurementTypeRepository
+@inject IPacksRepository packsRepository
+@inject NavigationManager navManager
+@inject IMeasurementPositionsRepository measurementPositionRepo
+
+<style>
+    .rowcentered {
+        margin: auto;
+        max-width: 300px;
+    }
+</style>
+
+<div style="height:100%">
+    <div class="container">
+        <div class="row">
+
+            <div class="col">
+                <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    @if (ModelPackHeader == null)
+    {
+        <LoadingMessage Message="Notiek mērījumu ielāde" />
+    }
+    else
+    {
+
+        <!-- Scroll bar present and enabled when more contents -->
+
+
+        <div class="rowcentered">
+            <h4> Dati par pakas:@ModelPackHeader.FusCode  @ModelPackHeader.MeasurementTypeName mērījumiem </h4>
+        </div>
+
+
+        <div class="container" style="height:75%">
+            <div class="mh-75">
+                <table class="table">
+                    <thead>
+                        <tr style=" text-align: right;"></tr>
+                        <tr>
+
+                            <th scope="col">Datums              </th>
+                            <th scope="col">Iekārta               </th>
+                            <th scope="col">Maiņa             </th>
+
+
+
+
+
+
+                            @*          b 3
+                                                                p 2
+                                                                d 6
+                                                                l 8
+
+
+                                                                    Id	Name
+                                1015	Saaudzēšana platumā defekti
+                                1016	Saaudzēšana platumā līmes punkti
+                                1017	Saaudzēšana platumā platums
+                                1018	Saaudzēšana platumā biezums
+
+
+                            *@
+                            @if (ModelMeasurements.Any(e => e.MeasurementTypeId == 1015))
+                            {
+                                <th scope="col">Rādītājs 1 </th>
+                                <th scope="col">Rādītājs 2</th>
+                                <th scope="col">Rādītājs 3</th>
+                                <th scope="col">Rādītājs 4</th>
+                                <th scope="col">Rādītājs 5</th>
+                                <th scope="col">Rādītājs 6</th>
+                            }
+                            else if (ModelMeasurements.Any(e => e.MeasurementTypeId == 1016))
+                            {
+                                <th scope="col">Rādītājs 1 </th>
+                                <th scope="col">Rādītājs 2</th>
+                                <th scope="col">Rādītājs 3</th>
+                                <th scope="col">Rādītājs 4</th>
+                                <th scope="col">Rādītājs 5</th>
+                                <th scope="col">Rādītājs 6</th>
+                                <th scope="col">Rādītājs 7</th>
+                                <th scope="col">Rādītājs 8</th>
+                            }
+                            else if (ModelMeasurements.Any(e => e.MeasurementTypeId == 1018))
+                            {
+                                <th scope="col">Rādītājs 1 </th>
+                                <th scope="col">Rādītājs 2</th>
+                                <th scope="col">Rādītājs 3</th>
+                            }
+                            else if (ModelMeasurements.Any(e => e.MeasurementTypeId == 1017))
+                            {
+                                <th scope="col">Rādītājs 1 </th>
+                                <th scope="col">Rādītājs 2</th>
+
+                            }
+
+
+
+                            @*<th scope="col">Meistars</th>*@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var model in ModelMeasurements)
+                        {
+
+                            <tr>
+
+                                <td>@model.DateCreated</td>
+                                <td>@ModelPackHeader.Machine</td>
+                                <td>@model.Shift</td>
+
+
+                                @if (ModelMeasurements.Any(e => e.MeasurementTypeId == 1015))
+                                {
+                                    <td>@model.Measurement1</td>
+                                    <td>@model.Measurement2</td>
+                                    <td>@model.Measurement3</td>
+                                    <td>@model.Measurement4</td>
+                                    <td>@model.Measurement5</td>
+                                    <td>@model.Measurement6</td>
+
+                                }
+                                else if (ModelMeasurements.Any(e => e.MeasurementTypeId == 1016))
+                                {
+                                    @if (model.Measurement1 == 0)
+                                    {
+                                        <td>@model.Measurement1 NOK</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td>@model.Measurement1 OK</td>
+
+                                    }
+
+
+                                    @if (model.Measurement2 == 0)
+                                    {
+                                        <td>@model.Measurement2 NOK</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td>@model.Measurement2 OK</td>
+
+                                    }
+
+                                    @if (model.Measurement3 == 0)
+                                    {
+                                        <td>@model.Measurement3 NOK</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td>@model.Measurement3 OK</td>
+
+                                    }
+
+                                    @if (model.Measurement4 == 0)
+                                    {
+                                        <td>@model.Measurement4 NOK</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td>@model.Measurement4 OK</td>
+
+                                    }
+
+
+                                    @if (model.Measurement5 == 0)
+                                    {
+                                        <td>@model.Measurement5 NOK</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td>@model.Measurement5 OK</td>
+
+                                    }
+
+
+                                    @if (model.Measurement6 == 0)
+                                    {
+                                        <td>@model.Measurement6 NOK</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td>@model.Measurement6 OK</td>
+
+                                    }
+
+
+                                    @if (model.Measurement7 == 0)
+                                    {
+                                        <td>@model.Measurement7 NOK</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td>@model.Measurement7 OK</td>
+
+                                    }
+
+
+                                    @if (model.Measurement8 == 0)
+                                    {
+                                        <td>@model.Measurement8 NOK</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td>@model.Measurement8 OK</td>
+
+                                    }
+                                    @*<td>@model.Measurement2</td>
+                                        <td>@model.Measurement3</td>
+                                        <td>@model.Measurement4</td>
+                                        <td>@model.Measurement5</td>
+                                        <td>@model.Measurement6</td>
+                                        <td>@model.Measurement7</td>
+                                        <td>@model.Measurement8</td>*@
+
+                                }
+                                else if (ModelMeasurements.Any(e => e.MeasurementTypeId == 1018))
+                                {
+                                    <td>@model.Measurement1</td>
+                                    <td>@model.Measurement2</td>
+                                    <td>@model.Measurement3</td>
+                                }
+
+                                else if (ModelMeasurements.Any(e => e.MeasurementTypeId == 1017))
+                                {
+                                    <td>@model.Measurement1</td>
+                                    <td>@model.Measurement2</td>
+                                    
+                                }
+
+
+
+
+                            </tr>
+
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+
+
+
+        </div>
+
+
+
+
+    }
+</div>
+@code {
+
+    [Parameter]
+    public string fusCode { get; set; }
+    [Parameter]
+    public string measurementTypeName { get; set; }
+    [Parameter]
+    public string measurementPositionId { get; set; }
+
+    [Parameter]
+    public string packId { get; set; }
+
+    [Parameter]
+    public string userId { get; set; }
+
+    //private IList<Measurement> Model;
+    private Pack ModelPackHeader;
+
+
+    private IList<Measurement> ModelMeasurements;
+
+
+    private MeasurementPosition measurementPosition;
+    private IList<MeasurementType> measurementTypelIST;
+    private MeasurementType measurementType;
+
+    protected async override Task OnInitializedAsync()
+    {
+        int packIdInt = 0;
+        int fuspackIntId = 0;
+        if (fusCode != "0")
+        {
+            try
+            {
+                fuspackIntId = int.Parse(fusCode);
+                packIdInt = int.Parse(packId);
+                ModelPackHeader = await packsRepository.Get(Endpoints.PacksEndpoint, packIdInt);
+                measurementTypelIST = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint);
+                measurementType = measurementTypelIST.Where(e => e.Name == measurementTypeName).SingleOrDefault();
+
+                //ModelPackHeader = ModelPackHeader.Where(ph=> ph. packIdInt);
+                //   Model = await machineRepo.Get(Endpoints.MachinesEndpoint, id);
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine($"Unable to parse");
+
+            }
+
+
+        }
+
+
+        ModelMeasurements = await measurementRepository.Get(Endpoints.MeasurementEndpoint);
+        //ModelPacksHeader = ModelPacksHeader.Where(p=>p.FusCode==fusCode)..ToList() ;
+
+        ModelMeasurements = ModelMeasurements.Where(m => m.PackId == packIdInt).ToList();
+        foreach (var el in ModelMeasurements)
+        {
+            el.DateCreated.ToString("dd.MM.yyyy HH:mm:ss");
+        }
+        //   ModelMeasurements = ModelMeasurements.Where(m => m.FusPackId == fuspackIntId && m.MeasurementTypeId == measurementType.Id).ToList();
+        // Model = Model.Where(e => (e.MeasurementPositionId == 1)).ToList();
+
+
+    }
+
+
+
+    private void goBack(MouseEventArgs e)
+    {
+        // this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}");
+        this.navManager.NavigateTo($"/growwidth/{userId}/{measurementPositionId}");
+    }
+}

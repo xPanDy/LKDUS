@@ -8,22 +8,96 @@
 
 @inject IMeasurementPositionsRepository measurementPositionsRepository
 @inject NavigationManager navManager
-
 @*<h3 class="card-title">Mērījumu pozīcijas</h3>*@
 <style>
-    .flex-container {
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    p {
+        margin: 0px 0px 0px 0px;
+    }
+
+    body {
+        margin: 0px;
+    }
+
+    .button {
+        display: flex;
+        margin-bottom: 3%;
+        align-items: center;
+        justify-content: center;
+        background-color: #f99b28;
+        color: #fff;
+        width: 96vw;
+        height: 10vh;
+        font-size: 200%;
+    }
+
+    a,
+    a:visited,
+    a:hover,
+    a:active {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        width: 96vw;
+        height: 76vh;
+        grid-gap: 5%;
+        color: white;
+    }
+
+    .a,
+    .b,
+    .d,
+    .e,
+    .g,
+    .h {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #0078a8;
+        color: red;
+        border-radius: 10px;
+        font-size: 170%;
+    }
+
+    .c,
+    .f,
+    .i,
+    .j,
+    .k,
+    .l,
+    .m,
+    .n {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f99b28;
+        color: red;
+        border-radius: 10px;
+        font-size: 170%;
+        pointer-events: none;
+    }
+    /* .flex-container {
         display: flex;
         flex-wrap: wrap;
         min-height: 100vh;
     }
 
     .flex-item {
-        background-color: #DCDDCD;
+        background-color: white;
         font-size: 27px;
         text-align: center;
         min-width: 50%;
         min-height: 50%;
-        border: 2px solid #CD982F;
+        border: 2px solid #F99B28;
         border-radius: 22px;
         display: flex;
         align-items: center;
@@ -31,147 +105,266 @@
     }
 
         .flex-item:hover {
-            background-color: #93929D;
-        }
-   
+            background-color: #088977;
+        }*/
 </style>
-<div id="app" class="flex-container overflow-hidden">
-    @if (Positions == null)
-    {
-        <LoadingMessage Message="Notiek mērījumu pozīciju ielāde" />
-    }
-    else
-    {
 
 
 
-
-
-
-
-
-
-<div style="position: fixed;
-  left: 0;
-  top: 0;
-  width: 150px; height:50px;
- "><button type="button"  @onclick="@goBack" style="width:150px; height:50px;" class="btn btn-primary btn-block">Atpakaļ</button></div>
-
-        while (j < Positions.Count)
-        {
-            var tmp = j;
-            var tmp2 = j + 1;
-            @*<div class="row mt-5">*@
-
-            @*<div class="col"><button id="@tmp" class="btn btn-warning btn-block" @onclick="@(e=> NavigateToMeasurements(e,tmp))">@Positions[j].Name </button></div>*@
-
-            @*@{
-
-                    j++;
-                    tmp = j;
-                    tmp2 = j + 1;
-                    //var tmp2 = j + 1;
-                    // tmp2 = j + 1;
-                }*@
-    if ( Positions[j].Id == 1 || Positions[j].Id == 2 || Positions[j].Id == 4 || Positions[j].Id == 5  || Positions[j].Id == 7)
-    {
-
-                <div id="@tmp2" style="background-color:chartreuse" @onclick="@(e=> NavigateToMeasurements(e,tmp2))" class="flex-item  "><p><h3>@Positions[j].Name </h3> </p></div>
-            }
-            else  
-            {
-                <div style="pointer-events: none;" id="@tmp2" @onclick="@(e=> NavigateToMeasurements(e,tmp2))" class="flex-item  ">
-                    <p>
-                        <h3>
-                            @Positions[j].Name
-                        <br />(notiek izstrāde)
-                    </h3>
-                </p>
-            </div>
-        }
-        @*<div class="col"><button id="@tmp2" class="btn btn-warning btn-block" @onclick="@(e=> NavigateToMeasurements(e,tmp2))">@Positions[j].Name </button></div>*@
-
-        @*<div class="w-100"></div>*@
-
-        @*</div>*@
-
-        j++;
-
-    }
-
-
-
-
-
-
+@*<div id="app" class="flex-container overflow-hidden">*@
+@if (Positions == null)
+{
+    <LoadingMessage Message="Notiek mērījumu pozīciju ielāde" />
 }
-</div>
+else
+{
+
+    <a href=# class="button">Atpakaļ</a>
+                    <div class="wrapper">
+                        <a href="" class="a" @onclick="@(e=> NavigateToMeasurements(e,1))"><div>Mitrā finiera dimensijas</div></a>
+                        <a href="" class="b" @onclick="@(e=> NavigateToMeasurements(e,2))"><div>Mizošana</div></a>
+                        <a href="" class="d" @onclick="@(e=> NavigateToMeasurements(e,4))"><div>Nažu asināšana</div></a>
+                        <a href="" class="e" @onclick="@(e=> NavigateToMeasurements(e,5))"><div>Nažu iestatīšana</div></a>
+
+                        <a href="" class="g" @onclick="@(e=> NavigateToMeasurements(e,7))"><div>Garensaaudzēšana</div></a>
+                        <a href="" class="h" @onclick="@(e=> NavigateToMeasurements(e,8))"><div>Saaudzēšana platumā</div></a>
+
+                        <a class="c" @onclick="@(e=> NavigateToMeasurements(e,3))"><div>Centrēšana</div></a>
+                        <a class="f" @onclick="@(e=> NavigateToMeasurements(e,6))"><div>Šķirošana</div></a>
+                        <a class="i" @onclick="@(e=> NavigateToMeasurements(e,9))"><div>Finieru dimensijas</div></a>
+                        <a class="j" @onclick="@(e=> NavigateToMeasurements(e,10))"><div>Lam. saplākšņa šķirošana</div></a>
+                        <a class="k" @onclick="@(e=> NavigateToMeasurements(e,11))"><div>Baltā saplākšņa šķirošana</div></a>
+                        <a class="l" @onclick="@(e=> NavigateToMeasurements(e,12))"><div>Saplākšņu biezums</div></a>
+                        <a class="m" @onclick="@(e=> NavigateToMeasurements(e,13))"><div>Tepēšana</div></a>
+                        <a class="n" @onclick="@(e=> NavigateToMeasurements(e,14))"><div>Līmes uznesumi</div></a>
+                    </div>
+
+                    @*<div class="container">
+
+                            <div class="row">
+                                <div class="col-sm-12">
+
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4" style ="background-color: green;" >
+                                    <a  href="*.html" style="width:100%;height:100%;display:block">Your link</a>
+                                </div>
+                                <div class="col-sm-4">
+
+                                </div>
+                                <div class="col-sm-4">
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-sm-4">
+
+                                </div>
+                                <div class="col-sm-4">
+
+                                </div>
+                                <div class="col-sm-4">
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+
+                                </div>
+                                <div class="col-sm-4">
+
+                                </div>
+                                <div class="col-sm-4">
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+
+                                </div>
+                                <div class="col-sm-4">
+
+                                </div>
+                                <div class="col-sm-4">
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+
+                                </div>
+                                <div class="col-sm-4">
+
+                                </div>
+                                <div class="col-sm-4">
+
+                                </div>
+
+
+                            </div>
+                        </div>*@
 
 
 
 
-    @code {
-
-        [Parameter]
-        public string measurementPositionId { get; set; }
-        [Parameter]
-        public string userId { get; set; }
-
-
-        int j = 0;
-
-        LoginModel user = new LoginModel();
 
 
 
+                    @*<div style="position: fixed;
+                         left: 0;
+                         top: 0;
+                         width: 150px; height:50px;
+                        ">
+                                   <button type="button" @onclick="@goBack" style="        width: 150px;
+                               height: 50px;
+                               background-color: #a8a9ac; color:white" class="btn btn-primary btn-block">
+                                       Atpakaļ
+                                   </button>
+                               </div>*@
 
 
-        private IList<MeasurementPosition> Positions;
 
-        //parame
-        private void NavigateToMeasurements(MouseEventArgs a, int i)
+
+                    <!--while (j < Positions.Count)
+                    {
+                        var tmp = j;
+                        var tmp2 = j + 1;-->
+                    @*<div class="row mt-5">*@
+
+                    @*<div class="col"><button id="@tmp" class="btn btn-warning btn-block" @onclick="@(e=> NavigateToMeasurements(e,tmp))">@Positions[j].Name </button></div>*@
+
+                    @*@{
+
+                            j++;
+                            tmp = j;
+                            tmp2 = j + 1;
+                            //var tmp2 = j + 1;
+                            // tmp2 = j + 1;
+                        }*@
+
+                    <!--<a href="#" class="btn">
+                        <span class="left icon icon-tablet"></span>
+                        <span class="right title">Buy in App Store</span>
+                    </a>
+                    if (Positions[j].Id == 1 || Positions[j].Id == 2 || Positions[j].Id == 4 || Positions[j].Id == 5 || Positions[j].Id == 7 || Positions[j].Id == 8)
+                    {
+
+                        <div id="@tmp2" style="background-color:#0078A8; color:white" @onclick="@(e=> NavigateToMeasurements(e,tmp2))" class="flex-item  "><p><h3>@Positions[j].Name </h3> </p></div>
+                    }
+                    else
+                    {
+                        <div style="pointer-events: none;" id="@tmp2" @onclick="@(e=> NavigateToMeasurements(e,tmp2))" class="flex-item  ">
+                            <p>
+                                <h3>
+                                    @Positions[j].Name
+                                    <br />(notiek izstrāde)
+                                </h3>
+                            </p>
+                        </div>
+                    }-->
+                    @*<div class="col"><button id="@tmp2" class="btn btn-warning btn-block" @onclick="@(e=> NavigateToMeasurements(e,tmp2))">@Positions[j].Name </button></div>*@
+
+                    @*<div class="w-100"></div>*@
+
+                    @*</div>*@
+
+                    <!--j++;
+
+                    }-->
+
+
+
+
+
+
+                }
+@*</div>*@
+
+
+
+
+@code {
+
+    [Parameter]
+    public string measurementPositionId { get; set; }
+    [Parameter]
+    public string userId { get; set; }
+
+
+    int j = 0;
+
+    LoginModel user = new LoginModel();
+
+
+
+
+
+    private IList<MeasurementPosition> Positions;
+
+    //parame
+    private void NavigateToMeasurements(MouseEventArgs a, int i)
+    {
+        measurementPositionId = i.ToString();
+        if (i == 1)
         {
-            measurementPositionId = i.ToString();
-            if (i == 1)
-            {
-                this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}");
-            }
-            else if (i == 2)
-            {
-                this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
-            }
-            else if (i == 3)
-            {
-                this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
-            }
-            else if (i == 4)
-            {
-                this.navManager.NavigateTo($"/measurementspeelingknives/{userId}/{measurementPositionId}");
-            }
-            else if (i == 5)
-            {
-                this.navManager.NavigateTo($"/measurementspeelingknivessetting/{userId}/{measurementPositionId}");
-            }
-
-            else if (i == 6)
-            {
-                
-                this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
-            }
-            else if (i == 7)
-            {
-                 
-                this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}");
-            }
+            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}");
         }
-        private void goBack(MouseEventArgs e)
+        else if (i == 2)
         {
-            this.navManager.NavigateTo($"/");
+            this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
         }
-        protected async override Task OnInitializedAsync()
+        else if (i == 3)
+        {
+            this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
+        }
+        else if (i == 4)
+        {
+            this.navManager.NavigateTo($"/measurementspeelingknives/{userId}/{measurementPositionId}");
+        }
+        else if (i == 5)
+        {
+            this.navManager.NavigateTo($"/measurementspeelingknivessetting/{userId}/{measurementPositionId}");
+        }
+
+        else if (i == 6)
         {
 
+            this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
+        }
+        else if (i == 7)
+        {
 
-            Positions = await measurementPositionsRepository.Get(Endpoints.MeasurementPositions); //Model = await _repo.Get(Endpoints.BooksEndpoint);
+            this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}");
+        }
+        else if (i == 8)
+        {
+            //"/growwidth/{userId}/{measurementPositionId}"
+            this.navManager.NavigateTo($"/growwidth/{userId}/{measurementPositionId}");
         }
     }
+    private void goBack(MouseEventArgs e)
+    {
+        this.navManager.NavigateTo($"/");
+    }
+    protected async override Task OnInitializedAsync()
+    {
+
+
+        Positions = await measurementPositionsRepository.Get(Endpoints.MeasurementPositions); //Model = await _repo.Get(Endpoints.BooksEndpoint);
+    }
+}

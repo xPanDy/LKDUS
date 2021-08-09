@@ -67,8 +67,8 @@
                         int local = i;
                         int npk = i + 1;
                         var tmpI = i;
-                        <tr>
-                            <td>@npk</td>
+                        <tr style="line-height:10px;">
+                            <td >@npk</td>
 
 
                             @for (int j = 0; j < positions.GetLength(1); j++)
@@ -260,6 +260,9 @@
         <div class="col">
             <button type="button" @onclick="(()=>select(sizes[9]))" class="btn btn-info btn-lg btn-block">@sizes[9]</button>
         </div>
+         <div class="col">
+            <button type="button" @onclick="(()=>select(sizes[10]))" class="btn btn-info btn-lg btn-block">@sizes[10]</button>
+        </div>
 
 
     </div>
@@ -335,7 +338,7 @@
         {
             for (int j = 0; j < positions.GetLength(1); j++)
             {
-                positions[i, j] = 0;
+                positions[i, j] = "";
             }
         }
         for (int i = 0; i < sizes.Length; i++)
@@ -370,8 +373,8 @@
 
     private int actPos;
 
-    private int[] sizes = new int[10];
-    private int start = 1;
+    private int[] sizes = new int[11];
+    private int start = 0;
 
     private int selectedCellI = 0;
     private int selectedCellJ = 0;
@@ -404,7 +407,7 @@
 
                     if (currentElement[i, j] == editPosition)
                     {
-                        positions[i, j] = value;
+                        positions[i, j] = value.ToString();
                     }
 
                 }
@@ -416,7 +419,7 @@
                 //for (int j = 0; j < currentElement.GetLength(1); j++)
                 //{ elements[i, column] = "";
                 elements[i, column] = "";
-                if (positions[i, column] == 0)
+                if (positions[i, column] == "")
                 {
                     if (i < currentElement.GetLength(0) - 1)
                     {
@@ -442,7 +445,7 @@
                 //for (int j = 0; j < currentElement.GetLength(1); j++)
                 //{ elements[i, column] = "";
                 elements[i, column] = "";
-                if (positions[i, column] == 0)
+                if (positions[i, column] == "")
                 {
                     if (i < currentElement.GetLength(0) - 1)
                     {
@@ -450,7 +453,7 @@
                     }
                     selectedCellI = i;
 
-                    positions[i, column] = value;
+                    positions[i, column] = value.ToString();
                     return;
 
                 }
@@ -506,7 +509,7 @@
     private string id3 = "inactive";
     private string id4 = "inactive";
 
-    private int[,] positions = new int[10, 2];
+    private string[,] positions = new string[10, 2];
     protected async override Task OnAfterRenderAsync(bool firstRender)
     {
 
@@ -552,7 +555,7 @@
             for (int j = 0; j < currentElement.GetLength(1); j++)
             {
 
-                if (positions[k, column] == 0)
+                if (positions[k, column] == "")
                 {
 
                     selectedCellI = k;
@@ -731,6 +734,7 @@
             meas.FusPackId = packId;
             meas.MeasurementTypeId = 1014
                 ;
+            meas.MachineName = fusMachineName;
             meas.PackId = int.Parse(elements[1]);
 
 
@@ -743,12 +747,18 @@
                 if (j == 0)
                 {
 
-
+                    if (positions[i, j] == "")
+                    {
+                        positions[i, j] = "0";
+                    }
                     meas.Measurement1 = Convert.ToDecimal(positions[i, j]);
                 }
                 if (j == 1)
                 {
-
+                    if (positions[i, j] == "")
+                    {
+                        positions[i, j] = "0";
+                    }
                     meas.Measurement2 = Convert.ToDecimal(positions[i, j]);
                 }
 
