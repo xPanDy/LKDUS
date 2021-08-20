@@ -1,0 +1,974 @@
+﻿@page "/sorting/{userId}/{measurementPositionId}/create"
+
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+@using Microsoft.Extensions.Logging
+
+
+@inject IAuthenticationRepository authRepo
+@inject IMeasurementRepository repo
+@inject IFusPacksRepository frepo
+
+@inject IMeasurementPositionsRepository measPositionRepo
+@inject IMachinesRepository machineRepository
+
+@inject IJSRuntime JsRuntime;
+
+@inject NavigationManager navManager
+@inject Blazored.Localisation.Services.IBrowserDateTimeProvider datetime;
+@inject ILogger<FusPack> Logger
+
+
+
+
+
+<div>
+
+    <div class="row">
+
+        <div class="col">
+
+
+            <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
+        </div>
+        <div class="col w-25"><h3 class="card-title">@mp.Name</h3></div>
+        <div class="col">
+            @*<button type="submit" class="btn btn-primary btn-block">Saglabāt</button>*@
+        </div>
+
+
+    </div>
+
+    @*kameras kolonna*@
+
+
+    <div class="row">
+
+        <div class="col-4">
+            <button id="startButton" class="btn btn-outline-success" @onclick="isStreamVisible">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">
+                    <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z" />
+                </svg>Svītrkoda skenēšana
+            </button>
+            @if (visibilityOfCamera)
+            {
+                <div id="sourceSelectPanel" style="display:none">
+                    <label for="sourceSelect"> </label><span class="text-dark" id="result"></span>
+                    <select id="sourceSelect" style="max-width:100%" class="form-control">
+                    </select>
+                </div>
+                <div>
+                    <video id="video" style="min-height:150px;max-height:60%; max-width: 100%;border: 1px solid gray"></video>
+                </div>
+
+            }
+            else
+            {
+
+            }
+
+        </div>
+
+
+        <div class="col">
+
+            @* dati 1 rinda *@
+            <div class="row">
+
+
+
+                <div class="col">
+                    <label for="code2">FUS kods</label>
+
+
+                    @*@bind=@packId*@
+
+                    <input class="form-control"
+                           id="@id100"
+                           @bind-value="@stringPackValue"
+                           @bind-value:event="oninput"
+                           @onkeydown="DoSomethingElse"
+                           @onclick="focusToInput100"
+                           @ref="@input100"
+                           type="text">
+
+                    @*<input class="form-control"
+                        id="@id100"
+                        @onkeydown="DoSomethingElse"
+                        @onclick="focusToInput100"
+                        @bind="@stringPackValue"
+                        @ref="@input100"
+                        type="text">*@
+
+
+
+                    @if (fp == null || sucess != true)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            Šāda paka neeksistē
+                        </div>
+
+                    }
+
+                </div>
+                @if (fp != null)
+                {
+                    <div class="col">
+
+                        <label for="pack">Pakas Autors   </label>
+
+                        <input class="form-control" readonly
+                               @bind="@fp.OperatorNameSurname"
+                               type="text" id="packAuthor">
+
+
+
+
+                    </div>
+
+
+
+
+                    <div class="col">
+                        <label for="pack">Pakas datums</label>
+
+                        <input class="form-control" type="text"
+                               @bind="@fp.DateCreated"
+                               readonly id="packDate">
+                    </div>
+                    <div class="col">
+                        <label for="pack">Pakas iekārta</label>
+
+                        <input class="form-control"
+                               @bind-value="@fp.MachineName" type="text" readonly id="packMachine">
+                    </div>
+                    <div class="col">
+                        <label for="packMaster">Maiņa</label>
+
+                        <input class="form-control"
+                               @bind-value="@fp.Master" style="background-color:@shiftsColor; color:@fontColor" type="text" readonly id="packMaster">
+                    </div>
+                    <div class="col">
+                        <label for="packMaster">Klase</label>
+
+                        <input class="form-control"
+                               @bind-value="@fp.ItemName" type="text" readonly id="packItem">
+                        @{ fusMachineName = fp.ItemName;}
+                    </div>
+                                }
+                else
+                {
+                    <div class="col">
+
+                        <label for="pack">Pakas Autors   </label>
+
+                        <input class="form-control" readonly
+                               type="text" id="packAuthor">
+
+
+
+
+                    </div>
+
+
+
+
+                    <div class="col">
+                        <label for="packDate">Pakas datums</label>
+
+                        <input class="form-control" type="text"
+                               readonly id="packDate">
+                    </div>
+                    <div class="col">
+                        <label for="pack">Pakas iekārta</label>
+
+                        <input class="form-control"
+                               type="text" readonly id="packMachine">
+                    </div>
+
+                    <div class="col">
+                        <label for="pack">Maiņa</label>
+
+                        <input class="form-control"
+                               type="text" readonly id="packMaster">
+                    </div>
+                    <div class="col">
+                        <label for="pack">Klase</label>
+
+                        <input class="form-control"
+                               type="text" readonly id="packItem">
+                    </div>
+                }
+
+            </div>
+            <div class="row">
+                @*<label for="example-datetime-local-input" class="col-2 col-form-label">Datums     <br /></label>*@
+
+                <div class="col">
+                    <label for="day">Diena</label>
+                    @*// 01.12.2020 09:19:04*@
+                    <select id="day" disabled="true" class="custom-select" @bind="Day">
+                        @for (int i = 1; i <= 31; i++)
+                        {
+                            <option>@i</option>
+                        }
+                    </select>
+
+                </div>
+
+
+                <div class="col">
+                    <label for="month">Mēnesis</label>
+                    <select id="month" disabled="true" class="custom-select" @bind="Month">
+                        @for (int i = 1; i <= 12; i++)
+                        {
+                            <option value="@i">@Months[i - 1]</option>
+                        }
+                    </select>
+
+                </div>
+
+
+                <div class="col">
+                    <label for="year">Gads</label>
+                    <select id="year" disabled="true" class="custom-select" @bind="Year">
+                        @for (int i = DateTime.Now.Year - 5;
+i <= DateTime.Now.Year + 5; i++)
+                        {
+                            <option>@i</option>
+                        }
+                    </select>
+
+                </div>
+                <div class="col">
+
+                    @if (LaborantList == null)
+                    {
+                        <LoadingMessage Message="Notiek laborantu ielāde" />
+                    }
+                    else
+                    {
+                        <label for="operator">Operators</label>
+                        @*<label for="operator">Laborants</label>*@
+                        <select disabled="true" class="custom-select" @bind=@defaultUser.UserName id="operator">
+
+
+                            @foreach (var usr in LaborantList)
+                            {
+
+                                <option>@usr.UserName</option>
+                            }
+
+
+                        </select>
+
+
+
+                    }
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                @if ((stringPackValue == "0" || string.IsNullOrEmpty(stringPackValue)) || fp == null)
+                {
+
+                    <LoadingMessage Message="Lai turpinātu nospied 'Svītrkoda skenēšana' vai ievadiet pakas kodu izmantojot ciparnīcu" />
+                }
+                else
+                {
+                    <nav class="navbar navbar-dark">
+                        <div class="container-fluid">
+                            <div class="navbar-btn">
+
+                                <button type="button" @onclick="@GoDefects" class="btn btn-primary">Defekti</button>
+                            </div>
+                            <div class="navbar-btn">
+
+                                <button type="button" @onclick="@GoOuterSorting" class="btn btn-primary">Ārējā finiera šķirošana</button>
+                            </div>
+                            @*<div class="navbar-btn">
+
+                                    <button type="button" @onclick="e => SelectMachine(3)" class="btn btn-primary">3.kabata</button>
+                                </div>
+                                <div class="navbar-btn">
+
+                                    <button type="button" @onclick="e => SelectMachine(4)" class="btn btn-primary">4.kabata</button>
+                                </div>*@
+                        </div>
+                    </nav>
+                    @if (fusMachineName == null)
+                    {
+                        <LoadingMessage Message="Lai turpinātu izvēlies kabatu" />
+                    }
+                    else
+                    {
+                        @*<nav class="navbar navbar-dark">
+                                <div class="container-fluid">
+                                    <div class="navbar-btn">
+
+                                        <button type="button" @onclick="@GoDefects" class="btn btn-primary">Defekti</button>
+                                    </div>
+                                    <div class="navbar-btn">
+
+                                        <button type="button" @onclick="@GoToLength" class="btn btn-primary">Garums</button>
+                                    </div>
+                                    <div class="navbar-btn">
+
+                                        <button type="button" @onclick="@GoToWidth" class="btn btn-primary">Platums</button>
+                                    </div>
+
+                                </div>
+                            </nav>*@
+                    }
+                }
+
+
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <table class="table table-bordered justify-content-center">
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(() => changeStrPvalue(stringPackValue + 1))" onclick="document.getElementById('code2').value = document.getElementById('code2').value + '1';">
+                                            1
+                                        </button>
+                                    </td>
+                                    <td> <button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(() => changeStrPvalue(stringPackValue + 2))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '2';">2</button></td>
+                                    <td> <button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(() => changeStrPvalue(stringPackValue + 3))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '3';">3</button></td>
+                                    <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(() => sliceStrPvalue(stringPackValue))" onclick="document.getElementById('code2').value=document.getElementById('code2').value.slice(0, -1);">&lt;</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(() => changeStrPvalue(stringPackValue + 4))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '4';">4</button></td>
+                                    <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(() => changeStrPvalue(stringPackValue + 5))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '5';">5</button></td>
+                                    <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(() => changeStrPvalue(stringPackValue + 6))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '6';">6</button></td>
+                                    <td> </td>
+                                </tr>
+
+                                <tr>
+                                    <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(() => changeStrPvalue(stringPackValue + 7))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '7';">7</button></td>
+                                    <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(() => changeStrPvalue(stringPackValue + 8))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '8';">8</button></td>
+                                    <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(() => changeStrPvalue(stringPackValue + 9))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '9';">9</button></td>
+                                    <td rowspan="2"><button type="button" class="btn btn-success btn-lg btn-block" @onclick="@focusToInput100">Go</button></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(() => changeStrPvalue(stringPackValue + 0))" onclick="document.getElementById('code2').value=document.getElementById('code2').value + '0';">0</button></td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col">
+
+                        @*<div class="row w-100">
+                                <label for="shift">Maiņa</label>
+                            </div>*@
+                        @*<div class="row w-100">
+                                <button class="btn btn-primary  btn-lg" style="margin:10px;  background-color: green;">Zaļā            </button>
+                                <button class="btn btn-primary btn-lg" style="margin:10px;  background-color: black;">Melnā          </button>
+                                <button class="btn btn-primary btn-lg" style="margin:10px;  background-color: red;">Sarkanā       </button>
+                                <button class="btn btn-primary btn-lg" style="margin:10px;  background-color: blue;">Zilā           </button>
+                            </div>*@
+
+
+                        @*<div class="row">
+
+                                <label for="shift">Šķira</label>
+                            </div>
+                            <div class="row">
+                                <button class="btn btn-primary btn-lg " style="margin:10px; background-color: green;"> C/P     </button>
+                                <button class="btn btn-primary btn-lg " style="margin:10px; background-color: black;"> C        </button>
+                                <button class="btn btn-primary btn-lg " style="margin:10px; background-color: red;"> WG      </button>
+                                <button class="btn btn-primary btn-lg " style="margin:10px; background-color: blue;"> WG10      </button>
+                            </div>*@
+
+                        @*<select class="custom-select" @bind="@pshift" id="shift">
+                                <option selected>1</option>
+                                <option value="1">2</option>
+
+
+
+                            </select>*@
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+@code {
+    public string bindUsername { get; set; }
+    public int Day { get; set; }
+    public int Month { get; set; }
+    public int Year { get; set; }
+
+    public string shiftsColor = "white";
+
+    private ElementReference input100;//= "code2";
+                                      // private ElementReference input1;
+
+    public string[] Months { get; set; } = {
+       "Janvāris", "Februāris", "Marts",
+       "Aprīlis", "Maijs", "Jūnijs", "Jūlijs",
+       "Augusts", "Septembris", "Oktobris",
+       "Novembris", "Decembris" };
+
+    bool isPackEntered = false;
+
+    [Parameter]
+    public int pshift { get; set; }
+    [Parameter]
+    public int pmachineIdd { get; set; }
+    [Parameter]
+    public string userId { get; set; }
+
+
+    [Parameter]
+    public string measurementPositionId { get; set; }
+    [Parameter]
+    public string packId { get; set; }
+    [Parameter]
+    public int pmeasurementTypeId { get; set; }
+
+    public string fusMachineName { get; set; }
+
+    public string stringPackValue { get; set; }
+
+
+    private string id100 = "code2";
+
+
+    // string test = "";
+
+    public string datums = "";
+    public bool edited = false;
+
+    public IList<FusPack> fusPacks;
+
+    public IList<LoginModel> LaborantList;
+
+
+    public FusPack fp { set; get; } = new FusPack();
+    Machine machine = new Machine();
+
+    private bool visibilityOfCamera = false;
+
+    private async void isStreamVisible()
+    {
+        stringPackValue = "0";
+        if (visibilityOfCamera)
+        {
+            visibilityOfCamera = false;
+            ShowScanBarcode = false;
+            await CloseScan();
+        }
+        else
+        {
+            ShowScanBarcode = true;
+            visibilityOfCamera = true;
+            await JsRuntime.InvokeAsync<string>("zxing.start", true, DotNetObjectReference.Create(this));
+            visibilityOfCamera = false;
+        }
+    }
+
+    private void Convert()
+    {
+
+        KeyboardEventArgs ec = new KeyboardEventArgs();
+        ec.Code = "Enter";
+        DoSomethingElse(ec);
+    }
+
+    public void sliceStrPvalue(string pv)
+    {
+        if (!string.IsNullOrEmpty(stringPackValue))
+        {
+            //stringPackValue = "";
+            stringPackValue = pv.Remove(pv.Length - 1, 1);
+            focusToInput100();
+
+        }
+    }
+
+    public void changeStrPvalue(string pv)
+    {
+        stringPackValue = pv;
+        focusToInput100();
+    }
+
+
+    bool sucess = true;
+
+    private void focusToInput100()
+    {
+
+        InvokeAsync(() =>
+        {
+
+            StateHasChanged();
+        });
+        if (string.IsNullOrEmpty(stringPackValue))
+        {
+            fp = null;
+        }
+        else
+        {
+            int number;
+            sucess = Int32.TryParse(stringPackValue, out number);
+
+            if (sucess)
+            {
+                int packid = int.Parse(stringPackValue);
+                JsRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input100);
+
+                //await JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", id);
+                //  await        JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input4);
+                KeyboardEventArgs ec = new KeyboardEventArgs();
+                ec.Code = "Enter";
+                DoSomethingElse(ec);
+            }
+        }
+
+    }
+
+    string fontColor = "black";
+    private void DoSomethingElse(KeyboardEventArgs e)
+    {
+
+        if (e.Code == "Enter")
+        {
+
+            try
+            {
+                if (string.IsNullOrEmpty(stringPackValue))
+                {
+                    fp = null;
+                }
+                else
+                {
+
+                    int packid = int.Parse(stringPackValue);
+                    fp = fusPacks.Where(p => p.Id == packid).SingleOrDefault();
+                    if (fp != null)
+                    {
+                        if (fp.Master.Contains("Zaļā"))
+                        {
+                            shiftsColor = "#00ff00";
+                            fontColor = "white";
+                        }
+                        else if (fp.Master.Contains("Melnā"))
+                        {
+                            shiftsColor = "#000000";
+                            fontColor = "white";
+
+                        }
+                        else if (fp.Master.Contains("Sarkanā"))
+                        {
+                            shiftsColor = "#ff3300";
+                            fontColor = "white";
+                        }
+                        else if (fp.Master.Contains("Zilā"))
+                        {
+                            shiftsColor = "#3399ff";
+                            fontColor = "black";
+                        }
+                        else
+                        {
+                            shiftsColor = "white";
+                        }
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    InvokeAsync(() =>
+                    {
+
+                        StateHasChanged();
+                    });
+                    KeyboardEventArgs ec = new KeyboardEventArgs();
+                    ec.Code = "Enter";
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Logger.LogWarning(ex, "Failed to load fuspack {packid}", stringPackValue);
+
+            }
+
+        }
+        else
+        {
+            fp = null;
+
+
+        }
+    }
+
+    private void changeMachine()
+    {
+
+    }
+
+
+    MeasurementPosition mp = new MeasurementPosition();
+
+    //protected async override void OnParametersSet()
+    //{
+
+
+    //}
+
+    private static DateTime today;
+    private static string todayLocal = today.ToString("g");
+
+    // public DateTime dateOfMeasurement { get; set; }
+    // public string dateToday { get; set; }
+    // public DateTime dateToday2 { get; set; }
+
+    string currentLocalTime = "";
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        pshift = 1;
+
+        if (firstRender)
+        {
+
+
+            id100 = "code2";
+            var browserDateTime = await datetime.GetInstance();
+
+            today = DateTime.Today;
+            currentLocalTime = browserDateTime.Now.ToString();
+            StateHasChanged();
+
+            if (firstRender)
+            {
+                //await JsRuntime.InvokeAsync<string>("zxing.start", true, DotNetObjectReference.Create(this));
+            }
+
+        }
+
+    }
+
+
+
+    private IList<Measurement> Model2;
+    private IList<Measurement> FusMachines;
+    private IList<Machine> Machines;
+    public LoginModel defaultUser = new LoginModel();
+    protected async override Task OnInitializedAsync()
+    {
+
+        Day = DateTime.Now.Day;
+        Month = DateTime.Now.Month;
+        Year = DateTime.Now.Year;
+
+        LaborantList = await this.authRepo.Get(Endpoints.AspUsersEndpoint);
+
+        defaultUser = LaborantList.Where(o => o.Id == userId).FirstOrDefault();
+
+        Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+        FusMachines = await this.repo.Get(Endpoints.MeasurementEndpoint);
+        fusPacks = await frepo.Get(Endpoints.FusPackEndPoint);
+        Machines = await machineRepository.Get(Endpoints.MachinesEndpoint);
+        try
+        {
+            int result = Int32.Parse(measurementPositionId);
+            mp = await measPositionRepo.Get(Endpoints.MeasurementPositions, result);
+
+        }
+
+        catch (FormatException)
+        {
+            Console.WriteLine($"Unable to parse");
+        }
+        todayLocal = DateTime.Now.ToString("g");// today.ToString("g");
+        pmachineIdd = fp.MachineId;// machine.Id;
+        if (pmachineIdd == 0)
+        {
+            pmachineIdd = fp.MachineId;// Machines.FirstOrDefault().Id;
+        }
+        if (fp.MachineId == null)
+        {
+            pmachineIdd = 0;
+        }
+
+        if (stringPackValue == null)
+        {
+            stringPackValue = "0";
+        }
+    }
+
+    private void checkParams()
+    {
+        bool isThere = false;
+        pmachineIdd = fp.MachineId;// machine.Id;
+        if (pmachineIdd == 0)
+        {
+            pmachineIdd = fp.MachineId;// Machines.FirstOrDefault().Id;
+
+        }
+        else { isThere = true; }
+        if (stringPackValue == null)
+        {
+            stringPackValue = "0";
+
+        }
+        else
+        {
+            isThere = true;
+        }
+        if (isThere)
+        {
+            //  fusMachineName = fp.MachineName;
+        }
+    }
+
+
+    private void GoDefects(MouseEventArgs e)
+    {
+
+        checkParams();
+
+        //  validateParameters(measurementPositionId, measurementPositionId, stringPackValue, pmachineIdd, pshift);
+
+        //this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/thickness");
+        // /sorting/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/defects
+        this.navManager.NavigateTo($"/sorting/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/defects");
+
+
+        // //      /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/thickness
+        //     {userId}/{measurementPositionId}/{stringPackValue}/{ pmachineIdd}
+
+    }
+
+    //private bool validateParameters(string p1, string p2, string p3, int p4, int p5 )
+    //{
+    //    //if (string.IsNullOrEmpty(stringPackValue)==true && (string.IsNullOrEmpty(stringPackValue))
+    //    //{
+
+    //    //    return true;
+    //    //}
+    //    //return false;
+    //}
+
+    private void GoOuterSorting(MouseEventArgs e)
+    {
+        checkParams();
+                           //        "/sortingouter/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/defects"
+        this.navManager.NavigateTo($"/sortingouter/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/defects");
+        //this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions");
+    }
+
+
+
+    private void GoToWidth(MouseEventArgs e)
+    {
+        checkParams();
+        //his.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/width");
+        //  "/sortingouter/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/defects"
+        this.navManager.NavigateTo($"/sorting/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/width");
+        //  this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/quality");
+    }
+
+    private void OpenCreateForm(MouseEventArgs e)
+    {
+        checkParams();
+        //  this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{defaultUser.Id}/{pshift}/create");
+    }
+
+    private void goBack(MouseEventArgs e)
+    {
+        this.navManager.NavigateTo($"/sorting/{userId}/{measurementPositionId}");
+    }
+
+    /* [Parameter]
+     public EventCallback<string> GetValue { get; set; }
+     private async Task StartReader()
+     {
+         //await IJSRuntime.InvokeVoidAsync("MyLib.DecodeBarcode", DotNetObjectReference.Create(this));
+         await JsRuntime.InvokeVoidAsync("MyLib.DecodeBarcode", DotNetObjectReference.Create(this));
+     }
+
+     [JSInvokable]
+     public void SetReturnValue(string value)
+     {
+         GetValue.InvokeAsync(value);
+         StateHasChanged();
+     }*/
+    //private string _barcodeValue = string.Empty;
+    //private void SetValue(string value)
+    //{
+    //    _barcodeValue = "L18-203995";// value;
+    //}
+
+
+    //private string decodedValue = "";
+    //ElementReference ReferenceToInputControl;
+    //private async Task StartReader()
+    //{
+    //    await JsRuntime.InvokeVoidAsync("MyLib.DecodeBarcode", DotNetObjectReference.Create(this));
+
+    //}
+
+    //[JSInvokable]
+    //public void SetReturnValue(string value)
+    //{
+    //    decodedValue = value;
+    //    StateHasChanged();
+    //}
+
+
+    bool ShowScanBarcode { get; set; } = false;
+
+
+    public string? BarCode { get; set; }
+
+
+
+
+
+
+    [Parameter]
+    public EventCallback<string> ScanResult { get; set; }
+
+
+    [Parameter]
+    public EventCallback Close { get; set; }
+
+
+
+    [Parameter]
+    public string? ResultBc { get; set; }
+
+    /// <summary>
+    /// 显示扫码框
+    /// </summary>
+
+
+
+
+    [JSInvokable("invokeFromJS")]
+    public async Task ChangeValue(string val)
+    {
+        // stringPackValue = val;
+        StateHasChanged();
+        await ScanResult.InvokeAsync(val);
+        Translate(val);
+
+        //return Task.CompletedTask;
+    }
+
+    [JSInvokable("invokeFromJSClose")]
+    public async Task CloseScan()
+    {
+        await Close.InvokeAsync(null);
+    }
+
+    private static char[] base62Alphabet =  { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+                                                  'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+                                                  'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+    private static string base62string = new string(base62Alphabet);
+
+    private static char[] base64Alphabet =  { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+                                                  'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+                                                  'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+                                                  '(', ')'};
+    private static string base64string = new string(base64Alphabet);
+
+    public void Translate(string val)
+    {
+        string barCode = val;
+        int iResult = 0;
+        switch (barCode.Length)
+        {
+            case 4:
+                //iResult = base62BarCodeToInt(barCode);
+                iResult = BarCodeToInt(barCode, base62string);
+                break;
+            case 5:
+                iResult = BarCodeToInt(barCode, base64string);
+                break;
+            default:
+                throw new Exception("Error in bar code. Illegal barcode length");
+        }
+
+        stringPackValue = iResult.ToString();
+
+        InvokeAsync(() =>
+        {
+
+            StateHasChanged();
+        });
+
+        visibilityOfCamera = false;
+        JsRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input100);
+
+        focusToInput100();
+    }
+
+
+    public static int BarCodeToInt(string barCode, string baseString)
+    {
+        int iResult = 0;
+        int b = 1;
+        for (int i = barCode.Length - 1; i >= 0; i--)
+        {
+            int index = 0;
+            index = baseString.LastIndexOf(barCode[i]);
+            if (index == -1)
+            {
+                throw new Exception("Error in bar code. Illegal character in alphabet");
+            }
+            iResult += index * b;
+            b *= baseString.Length;
+        }
+
+        return iResult;
+    }
+
+}

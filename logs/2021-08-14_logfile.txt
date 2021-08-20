@@ -1,0 +1,565 @@
+2021-08-14 15:02:55.2808 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-08-14 15:02:55.6686 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-08-14 15:02:56.2521 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-08-14 15:02:56.3034 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-08-14 15:02:56.3443 INFO Sucessfully got all measurementPositions
+2021-08-14 15:02:56.4687 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-08-14 15:02:57.3264 INFO Pack-GetPacks: Attempted Call
+2021-08-14 15:02:57.4051 INFO Sucessfully got all packs
+2021-08-14 15:02:57.4577 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 15:02:57.4844 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 15:03:05.2410 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 15:03:05.3600 INFO Sucessfully got all Measurements
+2021-08-14 15:03:05.6396 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 15:03:05.6396 INFO Sucessfully got all Measurements
+2021-08-14 15:03:05.6693 INFO Machine-GetMachines: Attempted Call
+2021-08-14 15:03:05.6927 INFO Sucessfully got all machines
+2021-08-14 15:03:05.7154 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 15:03:05.7154 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 15:03:06.4296 INFO Pack-GetPacks: Attempted Call
+2021-08-14 15:03:06.4561 INFO Sucessfully got all packs
+2021-08-14 15:03:06.4789 INFO Machine-GetMachines: Attempted Call
+2021-08-14 15:03:06.4872 INFO Sucessfully got all machines
+2021-08-14 15:03:06.5234 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 15:03:06.7175 INFO Sucessfully got all Measurements
+2021-08-14 15:03:06.7852 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 15:03:06.8047 INFO Sucessfully got the machine with Id:162
+2021-08-14 15:03:06.8341 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1019
+2021-08-14 15:03:06.8666 INFO Sucessfully got the measurement type with Id:1019
+2021-08-14 16:07:11.6968 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-08-14 16:07:12.0152 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-08-14 16:07:12.4981 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-08-14 16:07:12.5446 INFO Sucessfully got all measurementPositions
+2021-08-14 16:07:13.1415 INFO Pack-GetPacks: Attempted Call
+2021-08-14 16:07:13.2119 INFO Sucessfully got all packs
+2021-08-14 16:07:13.2770 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 1
+2021-08-14 16:07:13.3010 INFO Sucessfully got the measurement position with Id:1
+2021-08-14 16:07:14.4171 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-08-14 16:07:14.4312 INFO Sucessfully got all measurementPositions
+2021-08-14 16:07:15.6398 INFO Pack-GetPacks: Attempted Call
+2021-08-14 16:07:15.6639 INFO Sucessfully got all packs
+2021-08-14 16:07:15.6829 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 16:07:15.7190 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 16:07:17.5369 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 16:07:17.6562 INFO Sucessfully got all Measurements
+2021-08-14 16:07:17.7394 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 16:07:17.7514 INFO Sucessfully got all Measurements
+2021-08-14 16:07:17.7925 INFO Machine-GetMachines: Attempted Call
+2021-08-14 16:07:17.8190 INFO Sucessfully got all machines
+2021-08-14 16:07:17.8425 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 16:07:17.8425 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 16:07:18.7898 INFO Pack-GetPacks: Attempted Call
+2021-08-14 16:07:18.8151 INFO Sucessfully got all packs
+2021-08-14 16:07:18.8388 INFO Machine-GetMachines: Attempted Call
+2021-08-14 16:07:18.8576 INFO Sucessfully got all machines
+2021-08-14 16:07:18.8915 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 16:07:18.8915 INFO Sucessfully got all Measurements
+2021-08-14 16:07:18.9628 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 16:07:18.9943 INFO Sucessfully got the machine with Id:162
+2021-08-14 16:07:19.0685 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1019
+2021-08-14 16:07:19.1052 INFO Sucessfully got the measurement type with Id:1019
+2021-08-14 16:30:22.8250 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-08-14 16:30:23.1528 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-08-14 16:30:23.6431 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-08-14 16:30:23.6934 INFO Sucessfully got all measurementPositions
+2021-08-14 16:30:26.2403 INFO Pack-GetPacks: Attempted Call
+2021-08-14 16:30:26.3148 INFO Sucessfully got all packs
+2021-08-14 16:30:26.3794 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 16:30:26.4076 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 16:30:27.3695 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 16:30:27.5004 INFO Sucessfully got all Measurements
+2021-08-14 16:30:27.5684 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 16:30:27.5895 INFO Sucessfully got all Measurements
+2021-08-14 16:30:27.6418 INFO Machine-GetMachines: Attempted Call
+2021-08-14 16:30:27.6738 INFO Sucessfully got all machines
+2021-08-14 16:30:27.6974 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 16:30:27.6974 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 16:30:28.7018 INFO Pack-GetPacks: Attempted Call
+2021-08-14 16:30:28.7722 INFO Sucessfully got all packs
+2021-08-14 16:30:28.8196 INFO Machine-GetMachines: Attempted Call
+2021-08-14 16:30:28.8294 INFO Sucessfully got all machines
+2021-08-14 16:30:28.8604 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 16:30:28.8848 INFO Sucessfully got all Measurements
+2021-08-14 16:30:28.9132 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 16:30:28.9369 INFO Sucessfully got the machine with Id:162
+2021-08-14 16:30:28.9709 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1019
+2021-08-14 16:30:28.9963 INFO Sucessfully got the measurement type with Id:1019
+2021-08-14 16:30:56.8328 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 16:30:56.8433 INFO Sucessfully got the machine with Id:162
+2021-08-14 16:30:56.8869 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:30:56.8869 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:30:56.9376 INFO Pack-Create: Pack creation  Attempted
+2021-08-14 16:30:57.2122 INFO Pack-Create: Pack creation was created
+2021-08-14 16:30:57.2137 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-08-14 16:30:57.2545 INFO Measurements-Create: Measurement creation  Attempted
+2021-08-14 16:30:57.7571 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - System.ArgumentException: Parameter value '22222,00' is out of range.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2021-08-14 16:31:02.4018 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 16:31:02.4242 INFO Sucessfully got the machine with Id:162
+2021-08-14 16:31:02.4763 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:02.4814 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:02.6287 INFO Pack-Create: Pack creation  Attempted
+2021-08-14 16:31:02.6391 INFO Pack-Create: Pack creation was created
+2021-08-14 16:31:02.6391 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-08-14 16:31:02.6555 INFO Measurements-Create: Measurement creation  Attempted
+2021-08-14 16:31:03.0139 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - System.ArgumentException: Parameter value '22222,00' is out of range.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2021-08-14 16:31:03.7828 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 16:31:03.7907 INFO Sucessfully got the machine with Id:162
+2021-08-14 16:31:03.8064 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:03.8064 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:03.8064 INFO Pack-Create: Pack creation  Attempted
+2021-08-14 16:31:03.8301 INFO Pack-Create: Pack creation was created
+2021-08-14 16:31:03.8301 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-08-14 16:31:03.8552 INFO Measurements-Create: Measurement creation  Attempted
+2021-08-14 16:31:04.1016 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - System.ArgumentException: Parameter value '22222,00' is out of range.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2021-08-14 16:31:04.2332 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 16:31:04.2530 INFO Sucessfully got the machine with Id:162
+2021-08-14 16:31:04.2991 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:04.2991 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:04.3768 INFO Pack-Create: Pack creation  Attempted
+2021-08-14 16:31:04.3896 INFO Pack-Create: Pack creation was created
+2021-08-14 16:31:04.3896 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-08-14 16:31:04.3896 INFO Measurements-Create: Measurement creation  Attempted
+2021-08-14 16:31:04.7480 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - System.ArgumentException: Parameter value '22222,00' is out of range.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2021-08-14 16:31:04.7644 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 16:31:04.7644 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 16:31:04.8392 INFO Sucessfully got the machine with Id:162
+2021-08-14 16:31:04.8847 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:04.8847 INFO Sucessfully got the machine with Id:162
+2021-08-14 16:31:04.9067 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:05.0573 INFO Pack-Create: Pack creation  Attempted
+2021-08-14 16:31:05.0573 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:05.0573 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:05.0573 INFO Pack-Create: Pack creation was created
+2021-08-14 16:31:05.0573 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-08-14 16:31:05.0820 INFO Measurements-Create: Measurement creation  Attempted
+2021-08-14 16:31:05.0925 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 16:31:05.0925 INFO Pack-Create: Pack creation  Attempted
+2021-08-14 16:31:05.1055 INFO Sucessfully got the machine with Id:162
+2021-08-14 16:31:05.1415 INFO Pack-Create: Pack creation was created
+2021-08-14 16:31:05.2118 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-08-14 16:31:05.3006 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:05.3006 INFO Measurements-Create: Measurement creation  Attempted
+2021-08-14 16:31:05.3006 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:05.3893 INFO Pack-Create: Pack creation  Attempted
+2021-08-14 16:31:05.3893 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - System.ArgumentException: Parameter value '22222,00' is out of range.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2021-08-14 16:31:05.3893 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 16:31:05.4161 INFO Pack-Create: Pack creation was created
+2021-08-14 16:31:05.4161 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-08-14 16:31:05.4732 INFO Sucessfully got the machine with Id:162
+2021-08-14 16:31:05.4732 INFO Measurements-Create: Measurement creation  Attempted
+2021-08-14 16:31:05.5233 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:05.5905 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:05.6819 INFO Pack-Create: Pack creation  Attempted
+2021-08-14 16:31:05.7779 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - System.ArgumentException: Parameter value '22222,00' is out of range.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2021-08-14 16:31:05.7779 INFO Pack-Create: Pack creation was created
+2021-08-14 16:31:05.7779 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-08-14 16:31:05.8207 INFO Measurements-Create: Measurement creation  Attempted
+2021-08-14 16:31:06.0391 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - System.ArgumentException: Parameter value '22222,00' is out of range.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2021-08-14 16:31:06.4373 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - System.ArgumentException: Parameter value '22222,00' is out of range.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2021-08-14 16:31:12.5194 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 16:31:12.5299 INFO Sucessfully got the machine with Id:162
+2021-08-14 16:31:12.5464 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:12.5464 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:12.5657 INFO Pack-Create: Pack creation  Attempted
+2021-08-14 16:31:12.5793 INFO Pack-Create: Pack creation was created
+2021-08-14 16:31:12.5793 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-08-14 16:31:12.5988 INFO Measurements-Create: Measurement creation  Attempted
+2021-08-14 16:31:12.9113 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - System.ArgumentException: Parameter value '22222,00' is out of range.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2021-08-14 16:31:22.0080 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 16:31:22.0147 INFO Sucessfully got the machine with Id:162
+2021-08-14 16:31:22.0467 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:22.0467 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:22.0747 INFO Pack-Create: Pack creation  Attempted
+2021-08-14 16:31:22.0747 INFO Pack-Create: Pack creation was created
+2021-08-14 16:31:22.0747 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-08-14 16:31:22.1050 INFO Measurements-Create: Measurement creation  Attempted
+2021-08-14 16:31:22.3902 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - System.ArgumentException: Parameter value '22222,00' is out of range.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2021-08-14 16:31:49.1869 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 16:31:49.1869 INFO Sucessfully got the machine with Id:162
+2021-08-14 16:31:49.2225 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:49.2225 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 16:31:49.2349 INFO Pack-Create: Pack creation  Attempted
+2021-08-14 16:31:49.2349 INFO Pack-Create: Pack creation was created
+2021-08-14 16:31:49.2451 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-08-14 16:31:49.2451 INFO Measurements-Create: Measurement creation  Attempted
+2021-08-14 16:31:49.5091 ERROR Measurements-Create: An error occurred while updating the entries. See the inner exception for details. - System.ArgumentException: Parameter value '22222,00' is out of range.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2021-08-14 17:26:29.5504 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-08-14 17:26:29.8923 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-08-14 17:26:30.4527 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-08-14 17:26:30.5276 INFO Sucessfully got all measurementPositions
+2021-08-14 17:26:32.8413 INFO Pack-GetPacks: Attempted Call
+2021-08-14 17:26:32.9207 INFO Sucessfully got all packs
+2021-08-14 17:26:32.9911 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 17:26:33.0177 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 17:26:35.9529 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 17:26:36.2788 INFO Sucessfully got all Measurements
+2021-08-14 17:26:36.3360 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 17:26:36.3509 INFO Sucessfully got all Measurements
+2021-08-14 17:26:36.3789 INFO Machine-GetMachines: Attempted Call
+2021-08-14 17:26:36.4157 INFO Sucessfully got all machines
+2021-08-14 17:26:36.4403 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 17:26:36.4403 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 17:26:38.6001 INFO Pack-GetPacks: Attempted Call
+2021-08-14 17:26:38.6674 INFO Sucessfully got all packs
+2021-08-14 17:26:38.8217 INFO Machine-GetMachines: Attempted Call
+2021-08-14 17:26:38.8322 INFO Sucessfully got all machines
+2021-08-14 17:26:38.8504 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 17:26:38.8588 INFO Sucessfully got all Measurements
+2021-08-14 17:26:38.8933 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 17:26:38.9106 INFO Sucessfully got the machine with Id:162
+2021-08-14 17:26:39.0191 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1019
+2021-08-14 17:26:39.0496 INFO Sucessfully got the measurement type with Id:1019
+2021-08-14 17:27:14.2209 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 17:27:14.2209 INFO Sucessfully got the machine with Id:162
+2021-08-14 17:27:14.2774 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 17:27:14.2823 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 17:27:14.3180 INFO Pack-Create: Pack creation  Attempted
+2021-08-14 17:27:14.5795 INFO Pack-Create: Pack creation was created
+2021-08-14 17:27:14.5795 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-08-14 17:27:14.6652 INFO Measurements-Create: Measurement creation  Attempted
+2021-08-14 17:27:14.7323 INFO Measurements-Create: Measurement creation was created
+2021-08-14 17:27:14.7338 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-08-14 17:27:26.2387 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 17:27:26.2533 INFO Sucessfully got all Measurements
+2021-08-14 17:27:26.2857 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 17:27:26.3090 INFO Sucessfully got all Measurements
+2021-08-14 17:27:26.5997 INFO Machine-GetMachines: Attempted Call
+2021-08-14 17:27:26.6105 INFO Sucessfully got all machines
+2021-08-14 17:27:26.6286 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 17:27:26.6480 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 17:27:36.5019 INFO Pack-GetPacks: Attempted Call
+2021-08-14 17:27:36.5479 INFO Sucessfully got all packs
+2021-08-14 17:27:36.6118 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 17:27:36.6552 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 17:27:38.7435 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-08-14 17:27:38.9308 INFO Sucessfully got all measurementPositions
+2021-08-14 17:27:41.3522 INFO Pack-GetPacks: Attempted Call
+2021-08-14 17:27:41.4081 INFO Sucessfully got all packs
+2021-08-14 17:27:41.7594 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 17:27:41.8124 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 17:27:44.2492 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 17:27:44.2819 INFO Sucessfully got all Measurements
+2021-08-14 17:27:44.3577 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 17:27:44.4548 INFO Sucessfully got all Measurements
+2021-08-14 17:27:44.5169 INFO Machine-GetMachines: Attempted Call
+2021-08-14 17:27:44.5169 INFO Sucessfully got all machines
+2021-08-14 17:27:44.5431 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 17:27:44.5519 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 17:27:46.6509 INFO Pack-GetPacks: Attempted Call
+2021-08-14 17:27:46.6851 INFO Sucessfully got all packs
+2021-08-14 17:27:46.7243 INFO Machine-GetMachines: Attempted Call
+2021-08-14 17:27:46.7519 INFO Sucessfully got all machines
+2021-08-14 17:27:46.7876 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 17:27:46.8022 INFO Sucessfully got all Measurements
+2021-08-14 17:27:46.8305 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 17:27:46.8305 INFO Sucessfully got the machine with Id:162
+2021-08-14 17:27:46.8566 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1019
+2021-08-14 17:27:46.8629 INFO Sucessfully got the measurement type with Id:1019
+2021-08-14 17:28:40.0844 INFO Pack-GetPacks: Attempted Call
+2021-08-14 17:28:40.0844 INFO Sucessfully got all packs
+2021-08-14 17:28:40.4268 INFO Machine-GetMachines: Attempted Call
+2021-08-14 17:28:40.4359 INFO Sucessfully got all machines
+2021-08-14 17:28:40.4560 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 17:28:40.4708 INFO Sucessfully got all Measurements
+2021-08-14 17:28:40.5028 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 17:28:40.5028 INFO Sucessfully got the machine with Id:162
+2021-08-14 17:28:40.5267 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1019
+2021-08-14 17:28:40.5322 INFO Sucessfully got the measurement type with Id:1019
+2021-08-14 17:28:43.1521 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 17:28:43.1964 INFO Sucessfully got the machine with Id:162
+2021-08-14 17:28:43.2298 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 17:28:43.2337 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 17:28:43.2531 INFO Pack-Create: Pack creation  Attempted
+2021-08-14 17:28:43.2663 INFO Pack-Create: Pack creation was created
+2021-08-14 17:28:43.2663 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-08-14 17:29:17.7589 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 17:29:17.8195 INFO Sucessfully got the machine with Id:162
+2021-08-14 17:29:17.8622 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 17:29:17.8622 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 17:29:17.8924 INFO Pack-Create: Pack creation  Attempted
+2021-08-14 17:29:17.9302 INFO Pack-Create: Pack creation was created
+2021-08-14 17:29:17.9302 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-08-14 17:29:17.9480 INFO Measurements-Create: Measurement creation  Attempted
+2021-08-14 17:29:17.9571 INFO Measurements-Create: Measurement creation was created
+2021-08-14 17:29:17.9571 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-08-14 17:41:49.4493 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-08-14 17:41:49.8772 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-08-14 17:41:50.3572 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-08-14 17:41:50.4101 INFO Sucessfully got all measurementPositions
+2021-08-14 17:41:52.4176 INFO Pack-GetPacks: Attempted Call
+2021-08-14 17:41:52.5606 INFO Sucessfully got all packs
+2021-08-14 17:41:52.6994 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 17:41:52.7306 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 17:41:54.3895 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 17:41:54.5754 INFO Sucessfully got all Measurements
+2021-08-14 17:41:54.6292 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 17:41:54.6370 INFO Sucessfully got all Measurements
+2021-08-14 17:41:54.6571 INFO Machine-GetMachines: Attempted Call
+2021-08-14 17:41:54.6806 INFO Sucessfully got all machines
+2021-08-14 17:41:54.7011 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 17:41:54.7011 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 17:41:56.3481 INFO Pack-GetPacks: Attempted Call
+2021-08-14 17:41:56.3646 INFO Sucessfully got all packs
+2021-08-14 17:41:56.3806 INFO Machine-GetMachines: Attempted Call
+2021-08-14 17:41:56.3970 INFO Sucessfully got all machines
+2021-08-14 17:41:56.4165 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 17:41:56.4339 INFO Sucessfully got all Measurements
+2021-08-14 17:41:56.5212 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 17:41:56.6934 INFO Sucessfully got the machine with Id:162
+2021-08-14 17:41:56.7212 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1019
+2021-08-14 17:41:56.7466 INFO Sucessfully got the measurement type with Id:1019
+2021-08-14 17:42:17.9683 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 17:42:17.9913 INFO Sucessfully got the machine with Id:162
+2021-08-14 17:42:18.0990 INFO AspNetUsers-GetUser: Attempted Call for id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 17:42:18.1094 INFO AspNetUsers-GetUser: Successfully got record with id: 00c4acf0-fd20-4959-986d-818d7c40f9e7
+2021-08-14 17:42:18.1509 INFO Pack-Create: Pack creation  Attempted
+2021-08-14 17:42:18.3855 INFO Pack-Create: Pack creation was created
+2021-08-14 17:42:18.3870 INFO Pack-Create: LKDUS_API.Data.Pack
+2021-08-14 17:42:18.4323 INFO Measurements-Create: Measurement creation  Attempted
+2021-08-14 17:42:18.4765 INFO Measurements-Create: Measurement creation was created
+2021-08-14 17:42:18.4765 INFO Measurements-Create: LKDUS_API.Data.Measurement
+2021-08-14 17:42:25.1068 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 17:42:25.1068 INFO Sucessfully got all Measurements
+2021-08-14 17:42:25.1465 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 17:42:25.1548 INFO Sucessfully got all Measurements
+2021-08-14 17:42:25.2123 INFO Machine-GetMachines: Attempted Call
+2021-08-14 17:42:25.2175 INFO Sucessfully got all machines
+2021-08-14 17:42:25.3359 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 17:42:25.3617 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 17:42:35.7247 INFO Pack-GetPacks: Attempted Call
+2021-08-14 17:42:35.7404 INFO Sucessfully got all packs
+2021-08-14 17:42:35.7571 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 17:42:35.8079 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 17:42:40.4913 INFO Pack-GetPack: Attempted Get pack with ID: 197
+2021-08-14 17:42:40.5776 INFO Sucessfully got the pack with Id:197
+2021-08-14 17:42:40.8732 INFO MeasurementsType-GetMeasurementsType: Attempted Call
+2021-08-14 17:42:40.8949 INFO Sucessfully got all Measurements types
+2021-08-14 17:42:40.9462 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 17:42:40.9934 INFO Sucessfully got all Measurements
+2021-08-14 17:42:53.0730 INFO Pack-GetPacks: Attempted Call
+2021-08-14 17:42:53.1200 INFO Sucessfully got all packs
+2021-08-14 17:42:53.1672 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 17:42:53.1970 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 17:42:54.2434 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-08-14 17:42:54.2529 INFO Sucessfully got all measurementPositions
+2021-08-14 17:43:00.6496 INFO Pack-GetPacks: Attempted Call
+2021-08-14 17:43:00.6755 INFO Sucessfully got all packs
+2021-08-14 17:43:00.7383 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 8
+2021-08-14 17:43:00.7477 INFO Sucessfully got the measurement position with Id:8
+2021-08-14 17:43:03.4935 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-08-14 17:43:03.6047 INFO Sucessfully got all measurementPositions
+2021-08-14 17:43:06.1886 INFO Pack-GetPacks: Attempted Call
+2021-08-14 17:43:06.2082 INFO Sucessfully got all packs
+2021-08-14 17:43:06.2378 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 17:43:06.2559 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 17:43:11.1571 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-08-14 17:43:11.1720 INFO Sucessfully got all measurementPositions
+2021-08-14 17:43:17.9607 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-08-14 17:43:17.9672 INFO Sucessfully got all measurementPositions
+2021-08-14 17:43:23.1557 INFO Pack-GetPacks: Attempted Call
+2021-08-14 17:43:23.1967 INFO Sucessfully got all packs
+2021-08-14 17:43:23.2376 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 17:43:23.2671 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 18:06:06.6333 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-08-14 18:06:07.0900 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-08-14 18:06:07.5558 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-08-14 18:06:07.6047 INFO Sucessfully got all measurementPositions
+2021-08-14 18:06:11.6869 INFO Pack-GetPacks: Attempted Call
+2021-08-14 18:06:11.7728 INFO Sucessfully got all packs
+2021-08-14 18:06:11.8633 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 18:06:11.8897 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 18:06:14.7177 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 18:06:14.8911 INFO Sucessfully got all Measurements
+2021-08-14 18:06:14.9317 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 18:06:14.9317 INFO Sucessfully got all Measurements
+2021-08-14 18:06:14.9675 INFO Machine-GetMachines: Attempted Call
+2021-08-14 18:06:14.9919 INFO Sucessfully got all machines
+2021-08-14 18:06:15.0106 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 18:06:15.0106 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 18:06:16.9487 INFO Pack-GetPacks: Attempted Call
+2021-08-14 18:06:16.9487 INFO Sucessfully got all packs
+2021-08-14 18:06:17.0160 INFO Machine-GetMachines: Attempted Call
+2021-08-14 18:06:17.0756 INFO Sucessfully got all machines
+2021-08-14 18:06:17.0988 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 18:06:17.1144 INFO Sucessfully got all Measurements
+2021-08-14 18:06:17.1770 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 18:06:17.2004 INFO Sucessfully got the machine with Id:162
+2021-08-14 18:06:17.2644 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1019
+2021-08-14 18:06:17.3088 INFO Sucessfully got the measurement type with Id:1019
+2021-08-14 18:19:24.7221 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-08-14 18:19:25.0817 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-08-14 18:19:25.8614 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-08-14 18:19:25.9193 INFO Sucessfully got all measurementPositions
+2021-08-14 18:19:27.5810 INFO Pack-GetPacks: Attempted Call
+2021-08-14 18:19:27.6715 INFO Sucessfully got all packs
+2021-08-14 18:19:27.7612 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 18:19:27.7881 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 18:19:29.0293 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 18:19:29.1319 INFO Sucessfully got all Measurements
+2021-08-14 18:19:29.1866 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 18:19:29.1956 INFO Sucessfully got all Measurements
+2021-08-14 18:19:29.2314 INFO Machine-GetMachines: Attempted Call
+2021-08-14 18:19:29.2790 INFO Sucessfully got all machines
+2021-08-14 18:19:29.3219 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 18:19:29.3395 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 18:19:30.2467 INFO Pack-GetPacks: Attempted Call
+2021-08-14 18:19:30.2786 INFO Sucessfully got all packs
+2021-08-14 18:19:30.3118 INFO Machine-GetMachines: Attempted Call
+2021-08-14 18:19:30.3235 INFO Sucessfully got all machines
+2021-08-14 18:19:30.3495 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 18:19:30.3829 INFO Sucessfully got all Measurements
+2021-08-14 18:19:30.4229 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 18:19:30.5336 INFO Sucessfully got the machine with Id:162
+2021-08-14 18:19:30.5724 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1019
+2021-08-14 18:19:30.5945 INFO Sucessfully got the measurement type with Id:1019
+2021-08-14 18:24:31.2870 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-08-14 18:24:31.6210 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-08-14 18:24:32.2963 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-08-14 18:24:32.3695 INFO Sucessfully got all measurementPositions
+2021-08-14 18:24:34.0810 INFO Pack-GetPacks: Attempted Call
+2021-08-14 18:24:34.2954 INFO Sucessfully got all packs
+2021-08-14 18:24:34.4013 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 18:24:34.4296 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 18:24:36.5230 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 18:24:36.6253 INFO Sucessfully got all Measurements
+2021-08-14 18:24:36.7144 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 18:24:36.7235 INFO Sucessfully got all Measurements
+2021-08-14 18:24:36.7531 INFO Machine-GetMachines: Attempted Call
+2021-08-14 18:24:36.7770 INFO Sucessfully got all machines
+2021-08-14 18:24:36.7976 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 18:24:36.8078 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 18:24:37.6532 INFO Pack-GetPacks: Attempted Call
+2021-08-14 18:24:37.6710 INFO Sucessfully got all packs
+2021-08-14 18:24:37.6987 INFO Machine-GetMachines: Attempted Call
+2021-08-14 18:24:37.7241 INFO Sucessfully got all machines
+2021-08-14 18:24:37.7556 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 18:24:37.8194 INFO Sucessfully got all Measurements
+2021-08-14 18:24:37.9099 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 18:24:38.0076 INFO Sucessfully got the machine with Id:162
+2021-08-14 18:24:38.0400 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1019
+2021-08-14 18:24:38.0725 INFO Sucessfully got the measurement type with Id:1019
+2021-08-14 18:31:34.2834 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-08-14 18:31:34.6121 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-08-14 18:31:35.1389 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-08-14 18:31:35.2268 INFO Sucessfully got all measurementPositions
+2021-08-14 18:31:36.5243 INFO Pack-GetPacks: Attempted Call
+2021-08-14 18:31:36.5892 INFO Sucessfully got all packs
+2021-08-14 18:31:36.6457 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 18:31:36.6690 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 18:31:38.1097 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 18:31:38.2567 INFO Sucessfully got all Measurements
+2021-08-14 18:31:38.3071 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 18:31:38.3153 INFO Sucessfully got all Measurements
+2021-08-14 18:31:38.3378 INFO Machine-GetMachines: Attempted Call
+2021-08-14 18:31:38.3596 INFO Sucessfully got all machines
+2021-08-14 18:31:38.3838 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 3
+2021-08-14 18:31:38.3950 INFO Sucessfully got the measurement position with Id:3
+2021-08-14 18:31:39.2613 INFO Pack-GetPacks: Attempted Call
+2021-08-14 18:31:39.2703 INFO Sucessfully got all packs
+2021-08-14 18:31:39.3542 INFO Machine-GetMachines: Attempted Call
+2021-08-14 18:31:39.3704 INFO Sucessfully got all machines
+2021-08-14 18:31:39.4412 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-14 18:31:39.6264 INFO Sucessfully got all Measurements
+2021-08-14 18:31:39.6651 INFO Machine-GetMachine: Attempted get machine with ID: 162
+2021-08-14 18:31:39.7370 INFO Sucessfully got the machine with Id:162
+2021-08-14 18:31:39.7813 INFO MeasurementsType-GetMeasurementType: Attempted Get measurement type with ID: 1019
+2021-08-14 18:31:39.8016 INFO Sucessfully got the measurement type with Id:1019

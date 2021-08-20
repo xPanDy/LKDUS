@@ -1,0 +1,125 @@
+﻿@page "/sorting/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions"
+       @*/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions")*@
+    @* // /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions*@
+    @using LKDUS_UI.Models
+    @using LKDUS_UI.Static
+    @using LKDUS_UI.Contracts
+    @using System.Net.Http
+    @inject IMachinesRepository machineRepository;
+
+    @inject IMeasurementRepository repo
+    @inject NavigationManager navManager
+
+
+
+
+
+    <div class="card">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <button type="button" @onclick="@Return" class="btn btn-primary btn-block">Atpakaļ</button>
+                </div>
+                <div class="col w-25"><h3 class="card-title">Mitrā finiera izmēri</h3></div>
+                <div class="col">
+                    
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <div class="row">
+                <div class="col w-25 h-25">
+                    <button class="btn btn-warning btn-block" @onclick="@NavigattetoWidth">
+                        <h3>Lokšņu platums</h3>
+                    </button>
+                </div>
+
+
+                <div class="col"><button class="btn btn-warning btn-block" @onclick="@GoLength"> <h3>Lokšņu garums</h3> </button></div>
+
+
+                <div class="w-100"></div>
+
+            </div>
+            
+        </div>
+
+    </div>
+
+
+
+
+
+
+    @code {
+        private IList<Measurement> Model2;
+
+
+        [Parameter]
+        public string userId { get; set; }
+        [Parameter]
+        public string measurementPositionId { get; set; }
+        [Parameter]
+        public string stringPackValue { get; set; }
+        [Parameter]
+        public string pmachineIdd { get; set; }
+        [Parameter]
+        public string fusMachineName { get; set; }
+
+        //  Machine machine = new Machine();
+
+        protected async override Task OnInitializedAsync()
+        {
+            Machines = await machineRepository.Get(Endpoints.MachinesEndpoint);
+            Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+            //  machine.Id = int.Parse(pmachineIdd);
+
+            //  machine = await machineRepository.Get(Endpoints.MachinesEndpoint, machine.Id);
+        }
+
+        private IList<Machine> Machines;
+
+        private void checkParams()
+        {
+
+
+
+            //if (machine.Id  == 0)
+            //{
+            //    machine.Id = Machines.FirstOrDefault().Id;
+
+            //}
+            if (stringPackValue == null)
+            {
+                stringPackValue = "0";
+            }
+        }
+
+
+        private void OpenCreateForm(MouseEventArgs e)
+        {
+
+            this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{fusMachineName}/create");
+        }
+
+
+        private void Return(MouseEventArgs e)
+        {
+
+            this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/create");
+        }
+
+
+        private void NavigattetoWidth(MouseEventArgs e)
+        {
+
+            this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/width");
+        }
+
+        private void GoLength(MouseEventArgs e)
+        {
+
+            this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions/length");
+        }
+    }

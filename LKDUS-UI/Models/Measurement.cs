@@ -44,6 +44,34 @@ namespace LKDUS_UI.Models
 
 
 
+        public decimal Measurement11 { get; set; }
+        public decimal Measurement12 { get; set; }
+        public decimal Measurement13 { get; set; }
+        public decimal Measurement14 { get; set; }
+        public decimal Measurement15 { get; set; }
+        public decimal Measurement16 { get; set; }
+        public decimal Measurement17 { get; set; }
+        public decimal Measurement18 { get; set; }
+        public decimal Measurement19 { get; set; }
+        public decimal Measurement20 { get; set; }
+
+
+        public decimal Measurement21 { get; set; }
+        public decimal Measurement22 { get; set; }
+        public decimal Measurement23 { get; set; }
+        public decimal Measurement24 { get; set; }
+        public decimal Measurement25 { get; set; }
+        public decimal Measurement26 { get; set; }
+        public decimal Measurement27 { get; set; }
+        public decimal Measurement28 { get; set; }
+        public decimal Measurement29 { get; set; }
+        public decimal Measurement30 { get; set; }
+
+
+        public decimal Measurement31 { get; set; }
+        public decimal Measurement32 { get; set; }
+        public decimal Measurement33 { get; set; }
+
 
     }
 

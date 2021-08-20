@@ -20,6 +20,7 @@ namespace LKDUS_UI.Static
         public static string FusPackEndPoint = $"{BaseUrl}api/FusPack/";
         public static string RegisterUserEndpoint = $"{BaseUrl}api/aspnetusers/";
         public static string PacksEndpoint = $"{BaseUrl}api/pack/";
+        public static string DefectsEndpoint = $"{BaseUrl}api/defect/";
 
 
     }

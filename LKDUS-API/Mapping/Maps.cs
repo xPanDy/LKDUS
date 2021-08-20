@@ -25,6 +25,11 @@ namespace LKDUS_API.Mapping
             CreateMap<Pack, PackCreateDTO>().ReverseMap();
             CreateMap<Pack, PackUpdateDTO>().ReverseMap();
 
+
+            CreateMap<Defect, DefectDTO>().ReverseMap();
+            CreateMap<Defect, DefectCreateDTO>().ReverseMap();
+            CreateMap<Defect, DefectUpdateDTO>().ReverseMap();
+
             CreateMap<Measurement, MeasurementDTO>().ReverseMap();
             CreateMap<Measurement, MeasurementCreateDTO>().ReverseMap();
             CreateMap<Measurement, MeasurementUpdateDTO>().ReverseMap();

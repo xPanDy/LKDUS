@@ -1,0 +1,902 @@
+﻿@page "/sortingouter/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/defects"
+
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+@using LKDUS_UI.Service
+@inject IMeasurementRepository repo
+@inject NavigationManager navManager
+@inject IMeasurementRepository measurementRepo
+@inject IMachinesRepository machineRepository
+@inject IAuthenticationRepository authRepo
+@inject IPacksRepository packRepo
+@inject IMeasurementTypeRepository measurementTypeRepository
+@inject IJSRuntime JsRuntime
+@inject ToastService toastService
+<style>
+    .button {
+        width: 100%;
+        height: 100%;
+    }
+
+    .btn-success:active {
+        color: #ffffff !important;
+        background-color: #161617;
+        border-color: #494F57;
+    }
+</style>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <button type="button" @onclick="@Return" class="btn btn-primary btn-block">Atpakaļ</button>
+        </div>
+        <div class="col w-25"><h3 style="text-align: center; " class="card-title">Defekti</h3></div>
+        <div class="col">
+            <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
+        </div>
+
+    </div>
+</div>
+<div class="container">
+
+    <div class="row">
+
+        @*<div class="col">
+
+                <button type="button" style="background-color:@colorBgP1" @onclick=" " class="btn btn-outline-secondary btn-block">
+                    <h4>4 pēdas</h4>
+
+                </button>
+
+            </div>*@
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" @onclick="e=>SetClass(1) " class="btn btn-lg   btn-secondary">S</button>
+            <button type="button" @onclick="e=>SetClass(2) " class="btn btn-secondary">BB J</button>
+            <button type="button" @onclick="e=>SetClass(3) " class="btn btn-secondary">BB H</button>
+            <button type="button" @onclick="e=>SetClass(4) " class="btn btn-secondary">BB </button>
+            <button type="button" @onclick="e=>SetClass(5) " class="btn btn-secondary">BB 10</button>
+            <button type="button" @onclick="e=>SetClass(6) " class="btn btn-secondary">BB F</button>
+            <button type="button" @onclick="e=>SetClass(7) " class="btn btn-secondary">WG 10 AR F</button>
+            <button type="button" @onclick="e=>SetClass(8) " class="btn btn-secondary">LAB</button>
+            <button type="button" @onclick="e=>SetClass(9) " class="btn btn-secondary">GAB</button>
+        </div>
+
+
+
+    </div>
+    @if (isTypeCklicked)
+    {
+
+
+         
+
+       
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm">
+            <div class="container">
+                <div>
+                    <div>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+
+                                    <th scope="col">Defekta veids</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+
+                                    <td>
+                                        Plaisas
+                                    </td>
+
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(0,+1)" class="btn  btn-danger h-33 w-33">+</button>
+                                        <input readonly value=@positions[0]>
+                                        <button type="button" @onclick="e=>select(0,-1)" disabled="@isDisabledMinus[0]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Svītra no sasista naža
+
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(1,+1)" class="btn  btn-danger h-33 w-33">+</button>
+                                        <input readonly value=@positions[1]>
+                                        <button type="button" @onclick="e=>select(1,-1)" disabled="@isDisabledMinus[1]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Risa no atkritumiem uz naža
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(2,+1)" class="btn  btn-danger h-33 w-33">+</button>
+                                        <input readonly value=@positions[2]>
+                                        <button type="button" @onclick="e=>select(2,-1)" disabled="@isDisabledMinus[2]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>Risas no naža</td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(3,+1)" class="btn  btn-danger h-33 w-33">+</button>
+                                        <input readonly value=@positions[3]>
+                                        <button type="button" @onclick="e=>select(3,-1)" disabled="@isDisabledMinus[3]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>Zilā svītra</td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(4,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[4]>
+                                        <button type="button" @onclick="e=>select(4,-1)" disabled="@isDisabledMinus[4]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>Iededzināta mizas svītra</td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(5,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[5]>
+                                        <button type="button" @onclick="e=>select(5,-1)" disabled="@isDisabledMinus[5]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Svītra no piespiedējsijas
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(6,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[6]>
+                                        <button type="button" @onclick="e=>select(6,-1)" disabled="@isDisabledMinus[6]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+
+
+
+                                <tr>
+
+                                    <td>Iekrāsojums</td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(7,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[7]>
+                                        <button type="button" @onclick="e=>select(7,-1)" disabled="@isDisabledMinus[7]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>Trupe</td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(8,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[8]>
+                                        <button type="button" @onclick="e=>select(8,-1)" disabled="@isDisabledMinus[8]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>Svēdras</td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(9,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[9]>
+                                        <button type="button" @onclick="e=>select(9,-1)" disabled="@isDisabledMinus[9]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>Iekrāsojums, svēdru ailes</td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(10,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[10]>
+                                        <button type="button" @onclick="e=>select(10,-1)" disabled="@isDisabledMinus[10]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="col-sm">
+            <div class="container">
+                <div>
+                    <div>
+                        <table class="table table-bordered">
+                            <thead>
+
+
+
+                                <tr>
+
+                                    <th scope="col">Defekta veids</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+
+                                    <td>Himalaji</td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(11,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[11]>
+                                        <button type="button" @onclick="e=>select(11,-1)" disabled="@isDisabledMinus[11]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+                                        Mizas ieaugums
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(12,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[12]>
+                                        <button type="button" @onclick="e=>select(12,-1)" disabled="@isDisabledMinus[12]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Izkrituši zari līdz 6 mm
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(13,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[13]>
+                                        <button type="button" @onclick="e=>select(13,-1)" disabled="@isDisabledMinus[13]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Izkrituši zari līdz 10 mm
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(14,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[14]>
+                                        <button type="button" @onclick="e=>select(14,-1)" disabled="@isDisabledMinus[14]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Izkrituši zari līdz 15 mm
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(15,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[15]>
+                                        <button type="button" @onclick="e=>select(15,-1)" disabled="@isDisabledMinus[15]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Izkrituši zari līdz 40 mm
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(16,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[16]>
+                                        <button type="button" @onclick="e=>select(16,-1)" disabled="@isDisabledMinus[16]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Izkrituši zari virs 40 mm
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(17,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[17]>
+                                        <button type="button" @onclick="e=>select(17,-1)" disabled="@isDisabledMinus[17]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Veseli,saauguši zari
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(18,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[18]>
+                                        <button type="button" @onclick="e=>select(18,-1)" disabled="@isDisabledMinus[18]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Veseli,saauguši zari ar plaisām
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(19,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[19]>
+                                        <button type="button" @onclick="e=>select(19,-1)" disabled="@isDisabledMinus[19]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Bojāts neizkritis zars
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(20,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[20]>
+                                        <button type="button" @onclick="e=>select(20,-1)" disabled="@isDisabledMinus[20]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Māzeraini zari
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(21,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[21]>
+                                        <button type="button" @onclick="e=>select(21,-1)" disabled="@isDisabledMinus[21]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm">
+            <div class="container">
+                <div>
+                    <div>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+
+                                    <th scope="col">Defekta veids</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        Zari ar mizas ieaugumiem
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(22,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[22]>
+                                        <button type="button" @onclick="e=>select(22,-1)" disabled="@isDisabledMinus[22]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Sakrokotas maliņas (žāv def)
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(23,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[23]>
+                                        <button type="button" @onclick="e=>select(23,-1)" disabled="@isDisabledMinus[23]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Viļņains finieris
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(24,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[24]>
+                                        <button type="button" @onclick="e=>select(24,-1)" disabled="@isDisabledMinus[24]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>Apdedzis</td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(25,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[25]>
+                                        <button type="button" @onclick="e=>select(25,-1)" disabled="@isDisabledMinus[25]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Loksnes ar kūkumu
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(26,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[26]>
+                                        <button type="button" @onclick="e=>select(26,-1)" disabled="@isDisabledMinus[26]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Iekšējas plaisas no loksnēm ar kūkumu
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(27,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[27]>
+                                        <button type="button" @onclick="e=>select(27,-1)" disabled="@isDisabledMinus[27]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Mehānisks bojājums
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(28,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[28]>
+                                        <button type="button" @onclick="e=>select(28,-1)" disabled="@isDisabledMinus[28]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Eļļas traipi
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(29,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[29]>
+                                        <button type="button" @onclick="e=>select(29,-1)" disabled="@isDisabledMinus[29]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Ķīmisks iekrāsojums
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(30,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[30]>
+                                        <button type="button" @onclick="e=>select(30,-1)" disabled="@isDisabledMinus[30]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Harvestera   bojājumi
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(31,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[31]>
+                                        <button type="button" @onclick="e=>select(31,-1)" disabled="@isDisabledMinus[31]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        Atbilst šķirai
+                                    </td>
+
+                                    <td>
+                                        <button type="button" @onclick="e=>select(32,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                        <input readonly value=@positions[32]>
+                                        <button type="button" @onclick="e=>select(32,-1)" disabled="@isDisabledMinus[32]" class="btn btn-success  h-33 w-33">-</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+    }
+    else
+    {
+    <LoadingMessage Message="Izvēlies izmēru lai sāktu mērījumu"></LoadingMessage>
+    }
+
+
+
+
+
+
+
+</div>
+
+
+
+
+@code {
+    int selecteSizeType = 0;
+
+
+
+    public string colorBgP1 = "white";
+    public string colorBgP2 = "white";
+    public string colorBgP3 = "white";
+    public string colorBgP4 = "white";
+    public string colorBgP5 = "white";
+    public string colorBgP6 = "white";
+    public string colorBgP7 = "white";
+    [Parameter]
+    public string userId { get; set; }
+    [Parameter]
+    public string measurementPositionId { get; set; }
+    [Parameter]
+    public string stringPackValue { get; set; }
+    [Parameter]
+    public string pmachineIdd { get; set; }
+    [Parameter]
+    public string fusMachineName { get; set; }
+    [Parameter]
+    public string pshift { get; set; }
+    private IList<Measurement> Model2;
+
+    public bool isTypeCklicked = false;
+
+    private string[,] currentElement = new string[10, 2];
+    protected async override Task OnInitializedAsync()
+    {
+        Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+        ModelPacks = await this.packRepo.Get(Endpoints.PacksEndpoint);
+
+
+
+
+
+    }
+
+
+
+
+    bool[] isDisabledMinus = new bool[33];
+
+
+
+
+    private void SetClass
+( int classNumber)
+    {
+
+        isTypeCklicked = true;
+        if (classNumber == 1)
+        {
+            fusMachineName = "S";
+        }
+
+
+        if (classNumber == 2)
+        {
+            fusMachineName = "BB J";
+
+        }
+
+        if (classNumber == 3)
+        {
+
+            fusMachineName = "BB H";
+        }
+
+        if (classNumber == 4)
+        {
+            fusMachineName = "BB";
+
+        }
+
+        if (classNumber == 5)
+        {
+
+            fusMachineName = "BB 10";
+
+        }
+
+        if (classNumber == 6)
+        {
+
+            fusMachineName = "BB F";
+
+        }
+
+        if (classNumber == 7)
+        {
+
+            fusMachineName = "WG 10 AR";
+
+        }
+
+        if (classNumber == 8)
+        {
+
+            fusMachineName = "Lab";
+
+        }
+
+        if (classNumber == 9)
+        {
+
+            fusMachineName = "GAB";
+
+        }
+    }
+
+    private void select(int index, int valuetoadd)
+    {
+
+        for (int i = 0; i < positions.Length; i++)
+        {
+            if (i == index)
+            {
+                if (positions[i] >= 0)
+                {
+                    positions[i] = positions[i] + valuetoadd;
+
+
+                }
+                if (positions[i] == 0)
+                {
+                    isDisabledMinus[i] = true;
+                    break;
+                }
+                else
+                {
+                    isDisabledMinus[i] = false;
+                }
+            }
+        }
+
+    }
+
+    private ElementReference input1;
+    [Inject] IJSRuntime JSRuntime { get; set; }
+
+
+
+    private int[] positions = new int[33];
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+
+        if (firstRender)
+        {
+            for (int i = 0; i < positions.GetLength(0); i++)
+            {
+
+                positions[i] = 0;
+                isDisabledMinus[i] = true;
+            }
+        }
+
+    }
+    int lastRow1;
+    int lastRow2;
+    string colorBg1;
+    string colorBg2;
+
+
+
+
+
+
+    private async void Return(MouseEventArgs e)
+    {
+        if (isSuccess && isPackCreated)
+        {
+            this.navManager.NavigateTo($"/sorting/{userId}/{measurementPositionId}/create");
+        }
+        else
+        {
+
+            bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Tiešām vēlies iziet nesaglabājot?");
+            if (confirmed)
+            {
+                this.navManager.NavigateTo($"/sorting/{userId}/{measurementPositionId}/create");
+            }
+        }
+
+    }
+
+    bool isSuccess = false;
+    bool isPackCreated = false;
+    MeasurementType mt = new MeasurementType();
+
+    private IList<Pack> ModelPacks;
+    private async void SaveMeasurement()
+    {
+        int packId = int.Parse(stringPackValue);
+        mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 1022);
+        String measurementDateAndTime = DateTime.Now.ToString("g");
+
+        DateTime shiftTimeStart = Convert.ToDateTime("07:00:00");
+
+        DateTime shiftTimeEnd = Convert.ToDateTime("19:00:00");
+
+        DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
+
+
+        int shift = 1;
+
+        if (DateTime.Compare(currentMeasurement, shiftTimeStart) >= 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) < 0)
+        {
+            shift = 1;
+        }
+
+        if (DateTime.Compare(currentMeasurement, shiftTimeStart) < 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) >= 0)
+        {
+            shift = 2;
+        }
+        if (pshift != shift.ToString())
+        {
+            shift = int.Parse(pshift);
+        }
+        //var pid = ModelPacks.Max(el => el.Id) + 1;
+
+        IList<Measurement> measurementsToCreate = new List<Measurement>();
+        Pack pack = new Pack();
+        Machine machine = new Machine();
+        // machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
+        LoginModel user = new LoginModel();
+        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
+        pack.DateCreated = DateTime.Parse(measurementDateAndTime);
+        pack.MeasurementTypeName = mt.Name;
+        pack.DimensionId = selecteSizeType;
+
+        pack.Machine = fusMachineName;
+        //   pack.Machine = "Plūsmas";
+
+        pack.FusCode = stringPackValue;
+        pack.Shift = shift;
+        pack.Author = user.UserName;
+
+        var packToCreate = packRepo.CreateObjectAndReturnId(Endpoints.PacksEndpoint, pack);
+        string packStringResult = packToCreate.Result.ToString();
+
+        string firstString = "id";
+        string lastString = ",";
+
+        int pos1 = packStringResult.IndexOf(firstString);
+        int pos2 = packStringResult.IndexOf(lastString);
+
+        string final = packStringResult.Substring(pos1, pos2 - pos1);
+
+        string[] elements = final.Split(':');
+
+
+
+
+
+
+        //   isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
+
+
+        Measurement meas = new Measurement();
+        meas.DateCreated = DateTime.Parse(measurementDateAndTime);
+        // var packId = ModelPacks. Max(el => el.Id) + 1;
+        meas.Shift = shift;
+        // meas.MachineName = int.Parse(pmachineIdd); //machine.Id;'
+        meas.MachineName = fusMachineName;
+
+        meas.UserId = userId;
+        meas.MeasurementPositionId = int.Parse(measurementPositionId);
+        meas.FusPackId = packId;
+        meas.MeasurementTypeId = 1022;
+        ;
+        meas.PackId = int.Parse(elements[1]);
+
+        meas.Measurement1 = Convert.ToDecimal(positions[0]);
+        meas.Measurement2 = Convert.ToDecimal(positions[1]);
+        meas.Measurement3 = Convert.ToDecimal(positions[2]);
+        meas.Measurement4 = Convert.ToDecimal(positions[3]);
+        meas.Measurement5 = Convert.ToDecimal(positions[4]);
+        meas.Measurement6 = Convert.ToDecimal(positions[5]);
+        meas.Measurement7 = Convert.ToDecimal(positions[6]);
+        meas.Measurement8 = Convert.ToDecimal(positions[7]);
+        meas.Measurement9 = Convert.ToDecimal(positions[8]);
+        meas.Measurement10 = Convert.ToDecimal(positions[9]);
+
+        meas.Measurement11 = Convert.ToDecimal(positions[10]);
+        meas.Measurement12 = Convert.ToDecimal(positions[11]);
+        meas.Measurement13 = Convert.ToDecimal(positions[12]);
+        meas.Measurement14 = Convert.ToDecimal(positions[13]);
+        meas.Measurement15 = Convert.ToDecimal(positions[14]);
+        meas.Measurement16 = Convert.ToDecimal(positions[15]);
+        meas.Measurement17 = Convert.ToDecimal(positions[16]);
+        meas.Measurement18 = Convert.ToDecimal(positions[17]);
+        meas.Measurement19 = Convert.ToDecimal(positions[18]);
+        meas.Measurement20 = Convert.ToDecimal(positions[19]);
+
+        meas.Measurement21 = Convert.ToDecimal(positions[20]);
+        meas.Measurement22 = Convert.ToDecimal(positions[21]);
+        meas.Measurement23 = Convert.ToDecimal(positions[22]);
+        meas.Measurement24 = Convert.ToDecimal(positions[23]);
+        meas.Measurement25 = Convert.ToDecimal(positions[24]);
+        meas.Measurement26 = Convert.ToDecimal(positions[25]);
+        meas.Measurement27 = Convert.ToDecimal(positions[26]);
+        meas.Measurement28 = Convert.ToDecimal(positions[27]);
+        meas.Measurement29 = Convert.ToDecimal(positions[28]);
+        meas.Measurement30 = Convert.ToDecimal(positions[29]);
+
+        meas.Measurement31 = Convert.ToDecimal(positions[30]);
+        meas.Measurement32 = Convert.ToDecimal(positions[31]);
+        meas.Measurement33 = Convert.ToDecimal(positions[32]);
+
+
+        isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
+
+
+
+
+
+        if (packToCreate != null && isSuccess)
+        {
+            isPackCreated = true;
+            toastService.ShowToast("Mērījuma dati saglabāti", ToastLevel.Success);
+            this.navManager.NavigateTo($"/sorting/{userId}/{measurementPositionId}/create");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
