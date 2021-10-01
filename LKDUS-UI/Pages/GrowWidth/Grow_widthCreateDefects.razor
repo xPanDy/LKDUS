@@ -84,7 +84,7 @@
                                     <tr>
 
                                         <td>Pārklājums</td>
-                                     
+
 
                                         <td>
                                             <button type="button" @onclick="e=>select(0,+1)" class="btn  btn-danger h-33 w-33">+</button>
@@ -99,7 +99,7 @@
                                         <td>
                                             <button type="button" @onclick="e=>select(1,+1)" class="btn  btn-danger h-33 w-33">+</button>
                                             <input readonly value=@positions[1]>
-                                            <button type="button" @onclick="e=>select(1,-1)" disabled="@isDisabledMinus[1]"  class="btn btn-success  h-33 w-33">-</button>
+                                            <button type="button" @onclick="e=>select(1,-1)" disabled="@isDisabledMinus[1]" class="btn btn-success  h-33 w-33">-</button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -118,13 +118,13 @@
 
                                         <td>
                                             <button type="button" @onclick="e=>select(3,+1)" class="btn  btn-danger h-33 w-33">+</button>
-                                             <input readonly value=@positions[3]> 
-                                             <button type="button" @onclick="e=>select(3,-1)" disabled="@isDisabledMinus[3]" class="btn btn-success  h-33 w-33">-</button>
+                                            <input readonly value=@positions[3]>
+                                            <button type="button" @onclick="e=>select(3,-1)" disabled="@isDisabledMinus[3]" class="btn btn-success  h-33 w-33">-</button>
                                         </td>
                                     </tr>
                                     <tr>
 
-                                        <td>Līmējuma kvalitāte</td>
+                                        <td>Diegu atlīmēšanās</td>
 
                                         <td>
                                             <button type="button" @onclick="e=>select(4,+1)" class="btn  btn-danger h-33 w-33"> +</button>
@@ -138,8 +138,38 @@
 
                                         <td>
                                             <button type="button" @onclick="e=>select(5,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[5]> 
+                                            <input readonly value=@positions[5]>
                                             <button type="button" @onclick="e=>select(5,-1)" disabled="@isDisabledMinus[5]" class="btn btn-success  h-33 w-33">-</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>Raupjums</td>
+
+                                        <td>
+                                            <button type="button" @onclick="e=>select(6,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                            <input readonly value=@positions[6]>
+                                            <button type="button" @onclick="e=>select(6,-1)" disabled="@isDisabledMinus[6]" class="btn btn-success  h-33 w-33">-</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>Līme savienojumos</td>
+
+                                        <td>
+                                            <button type="button" @onclick="e=>select(7,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                            <input readonly value=@positions[7]>
+                                            <button type="button" @onclick="e=>select(7,-1)" disabled="@isDisabledMinus[7]" class="btn btn-success  h-33 w-33">-</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>Atbilst kvalitātei</td>
+
+                                        <td>
+                                            <button type="button" @onclick="e=>select(8,+1)" class="btn  btn-danger h-33 w-33"> +</button>
+                                            <input readonly value=@positions[8]>
+                                            <button type="button" @onclick="e=>select(8,-1)" disabled="@isDisabledMinus[8]" class="btn btn-success  h-33 w-33">-</button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -222,7 +252,7 @@
 
 
 
-    bool[] isDisabledMinus = new bool[6];
+    bool[] isDisabledMinus = new bool[9];
 
 
 
@@ -257,7 +287,7 @@
 
 
 
-    private int[] positions = new int[6];
+    private int[] positions = new int[9];
     protected async override Task OnAfterRenderAsync(bool firstRender)
     {
 
@@ -312,7 +342,7 @@
         String measurementDateAndTime = DateTime.Now.ToString("g");
 
         DateTime shiftTimeStart = Convert.ToDateTime("07:00:00");
-
+         
         DateTime shiftTimeEnd = Convert.ToDateTime("19:00:00");
 
         DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
@@ -393,6 +423,9 @@
         meas.Measurement4 = Convert.ToDecimal(positions[3]);
         meas.Measurement5 = Convert.ToDecimal(positions[4]);
         meas.Measurement6 = Convert.ToDecimal(positions[5]);
+        meas.Measurement7 = Convert.ToDecimal(positions[6]);
+        meas.Measurement8 = Convert.ToDecimal(positions[7]);
+        meas.Measurement9 = Convert.ToDecimal(positions[8]);
 
 
 

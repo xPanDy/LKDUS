@@ -1,0 +1,162 @@
+2021-08-29 17:44:38.1597 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-08-29 17:44:38.4642 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-08-29 17:44:38.9451 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-08-29 17:44:39.0014 INFO Sucessfully got all measurementPositions
+2021-08-29 17:44:41.8350 INFO Pack-GetPacks: Attempted Call
+2021-08-29 17:44:41.9031 INFO Sucessfully got all packs
+2021-08-29 17:44:41.9622 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 6
+2021-08-29 17:44:41.9895 INFO Sucessfully got the measurement position with Id:6
+2021-08-29 17:44:42.5733 INFO Pack-GetPacks: Attempted Call
+2021-08-29 17:44:42.6200 INFO Sucessfully got all packs
+2021-08-29 17:44:42.6888 INFO Pack-GetPacks: Attempted Call
+2021-08-29 17:44:42.7083 INFO Sucessfully got all packs
+2021-08-29 17:44:42.7083 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 6
+2021-08-29 17:44:42.7227 INFO Sucessfully got the measurement position with Id:6
+2021-08-29 17:44:42.7644 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 6
+2021-08-29 17:44:42.7955 INFO Sucessfully got the measurement position with Id:6
+2021-08-29 17:44:43.2667 INFO Pack-GetPacks: Attempted Call
+2021-08-29 17:44:43.2842 INFO Sucessfully got all packs
+2021-08-29 17:44:43.3329 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 6
+2021-08-29 17:44:43.5264 INFO Sucessfully got the measurement position with Id:6
+2021-08-29 17:44:48.6278 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-29 17:44:48.8284 INFO Sucessfully got all Measurements
+2021-08-29 17:44:48.9019 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-29 17:44:48.9019 INFO Sucessfully got all Measurements
+2021-08-29 17:44:48.9294 INFO FusPack-GetFusPacks: Attempted Call
+2021-08-29 17:44:49.5380 INFO Sucessfully got all FUS packs
+2021-08-29 17:44:49.6010 INFO Machine-GetMachines: Attempted Call
+2021-08-29 17:44:49.6312 INFO Sucessfully got all machines
+2021-08-29 17:44:49.6594 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 6
+2021-08-29 17:44:49.6594 INFO Sucessfully got the measurement position with Id:6
+2021-08-29 17:45:06.7172 INFO Defect-GetDefects: Attempted Call
+2021-08-29 17:45:06.7600 INFO Sucessfully got all defects
+2021-08-29 17:45:06.8079 INFO Classs-GetClasses: Attempted Class
+2021-08-29 17:45:06.8859 INFO Sucessfully got all Classes
+2021-08-29 17:50:40.0706 INFO Pack-GetPacks: Attempted Call
+2021-08-29 17:50:40.2127 INFO Sucessfully got all packs
+2021-08-29 17:50:40.3282 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 6
+2021-08-29 17:50:40.3714 INFO Sucessfully got the measurement position with Id:6
+2021-08-29 17:50:40.6768 INFO Pack-GetPacks: Attempted Call
+2021-08-29 17:50:40.6865 INFO Sucessfully got all packs
+2021-08-29 17:50:40.7195 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 6
+2021-08-29 17:50:40.7292 INFO Sucessfully got the measurement position with Id:6
+2021-08-29 17:50:41.7358 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-29 17:50:41.8891 INFO Sucessfully got all Measurements
+2021-08-29 17:50:42.0121 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-29 17:50:42.0296 INFO Sucessfully got all Measurements
+2021-08-29 17:50:42.0624 INFO FusPack-GetFusPacks: Attempted Call
+2021-08-29 17:50:42.2708 INFO Sucessfully got all FUS packs
+2021-08-29 17:50:42.3417 INFO Machine-GetMachines: Attempted Call
+2021-08-29 17:50:42.3722 INFO Sucessfully got all machines
+2021-08-29 17:50:42.3961 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 6
+2021-08-29 17:50:42.4015 INFO Sucessfully got the measurement position with Id:6
+2021-08-29 17:50:54.1749 INFO Defect-GetDefects: Attempted Call
+2021-08-29 17:50:54.2000 INFO Sucessfully got all defects
+2021-08-29 17:50:54.2259 INFO Classs-GetClasses: Attempted Class
+2021-08-29 17:50:54.2688 INFO Sucessfully got all Classes
+2021-08-29 17:51:13.0778 INFO Defect-GetDefects: Attempted Call
+2021-08-29 17:51:13.0849 INFO Sucessfully got all defects
+2021-08-29 17:51:13.1112 INFO Classs-GetClasses: Attempted Class
+2021-08-29 17:51:13.1195 INFO Sucessfully got all Classes
+2021-08-29 17:51:13.5403 INFO Defect-GetDefects: Attempted Call
+2021-08-29 17:51:13.5740 INFO Sucessfully got all defects
+2021-08-29 17:51:13.5973 INFO Classs-GetClasses: Attempted Class
+2021-08-29 17:51:13.6161 INFO Sucessfully got all Classes
+2021-08-29 17:52:14.0543 INFO Defect-GetDefects: Attempted Call
+2021-08-29 17:52:14.1675 INFO Sucessfully got all defects
+2021-08-29 17:52:14.2103 INFO Classs-GetClasses: Attempted Class
+2021-08-29 17:52:14.2399 INFO Sucessfully got all Classes
+2021-08-29 17:52:15.3907 INFO Defect-GetDefects: Attempted Call
+2021-08-29 17:52:15.4104 INFO Sucessfully got all defects
+2021-08-29 17:52:15.4452 INFO Classs-GetClasses: Attempted Class
+2021-08-29 17:52:15.4452 INFO Sucessfully got all Classes
+2021-08-29 17:56:36.6804 INFO Defect-GetDefects: Attempted Call
+2021-08-29 17:56:36.8188 INFO Sucessfully got all defects
+2021-08-29 17:56:36.8796 INFO Classs-GetClasses: Attempted Class
+2021-08-29 17:56:36.9231 INFO Sucessfully got all Classes
+2021-08-29 17:56:37.2790 INFO Defect-GetDefects: Attempted Call
+2021-08-29 17:56:37.3156 INFO Sucessfully got all defects
+2021-08-29 17:56:37.3904 INFO Classs-GetClasses: Attempted Class
+2021-08-29 17:56:37.4007 INFO Sucessfully got all Classes
+2021-08-29 18:24:27.2545 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-08-29 18:24:27.5964 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-08-29 18:24:28.1158 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-08-29 18:24:28.1688 INFO Sucessfully got all measurementPositions
+2021-08-29 18:24:30.6904 INFO Defect-GetDefects: Attempted Call
+2021-08-29 18:24:30.7499 INFO Sucessfully got all defects
+2021-08-29 18:24:30.8826 INFO Classs-GetClasses: Attempted Class
+2021-08-29 18:24:30.9173 INFO Sucessfully got all Classes
+2021-08-29 18:24:31.3206 INFO Defect-GetDefects: Attempted Call
+2021-08-29 18:24:31.3485 INFO Sucessfully got all defects
+2021-08-29 18:24:31.3815 INFO Classs-GetClasses: Attempted Class
+2021-08-29 18:24:31.3815 INFO Sucessfully got all Classes
+2021-08-29 18:24:36.5531 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-29 18:24:36.9095 INFO Sucessfully got all Measurements
+2021-08-29 18:24:36.9883 INFO Measurements-GetMeasurements: Attempted Call
+2021-08-29 18:24:36.9883 INFO Sucessfully got all Measurements
+2021-08-29 18:24:37.0147 INFO FusPack-GetFusPacks: Attempted Call
+2021-08-29 18:24:37.1832 INFO Sucessfully got all FUS packs
+2021-08-29 18:24:37.2332 INFO Machine-GetMachines: Attempted Call
+2021-08-29 18:24:37.2603 INFO Sucessfully got all machines
+2021-08-29 18:24:37.2913 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 6
+2021-08-29 18:24:37.3159 INFO Sucessfully got the measurement position with Id:6
+2021-08-29 18:24:37.7404 INFO Pack-GetPacks: Attempted Call
+2021-08-29 18:24:37.7926 INFO Sucessfully got all packs
+2021-08-29 18:24:37.8800 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 6
+2021-08-29 18:24:37.8800 INFO Sucessfully got the measurement position with Id:6
+2021-08-29 18:31:19.0672 INFO Defect-GetDefects: Attempted Call
+2021-08-29 18:31:19.1616 INFO Sucessfully got all defects
+2021-08-29 18:31:19.1823 INFO Classs-GetClasses: Attempted Class
+2021-08-29 18:31:19.1823 INFO Sucessfully got all Classes
+2021-08-29 18:31:19.6951 INFO Defect-GetDefects: Attempted Call
+2021-08-29 18:31:19.7339 INFO Sucessfully got all defects
+2021-08-29 18:31:19.7563 INFO Classs-GetClasses: Attempted Class
+2021-08-29 18:31:19.7640 INFO Sucessfully got all Classes
+2021-08-29 18:52:38.6251 INFO Defect-GetDefects: Attempted Call
+2021-08-29 18:52:38.7456 INFO Sucessfully got all defects
+2021-08-29 18:52:38.7934 INFO Classs-GetClasses: Attempted Class
+2021-08-29 18:52:38.8321 INFO Sucessfully got all Classes
+2021-08-29 18:52:39.5534 INFO Defect-GetDefects: Attempted Call
+2021-08-29 18:52:39.5828 INFO Sucessfully got all defects
+2021-08-29 18:52:39.6113 INFO Classs-GetClasses: Attempted Class
+2021-08-29 18:52:39.6268 INFO Sucessfully got all Classes
+2021-08-29 19:02:42.2224 INFO Defect-GetDefects: Attempted Call
+2021-08-29 19:02:42.3556 INFO Sucessfully got all defects
+2021-08-29 19:02:42.4159 INFO Classs-GetClasses: Attempted Class
+2021-08-29 19:02:42.4623 INFO Sucessfully got all Classes
+2021-08-29 19:02:42.9853 INFO Defect-GetDefects: Attempted Call
+2021-08-29 19:02:42.9974 INFO Sucessfully got all defects
+2021-08-29 19:02:43.0182 INFO Classs-GetClasses: Attempted Class
+2021-08-29 19:02:43.0287 INFO Sucessfully got all Classes
+2021-08-29 19:05:20.5546 INFO Defect-GetDefects: Attempted Call
+2021-08-29 19:05:20.6605 INFO Sucessfully got all defects
+2021-08-29 19:05:20.7096 INFO Classs-GetClasses: Attempted Class
+2021-08-29 19:05:20.7473 INFO Sucessfully got all Classes
+2021-08-29 19:05:21.1182 INFO Defect-GetDefects: Attempted Call
+2021-08-29 19:05:21.1406 INFO Sucessfully got all defects
+2021-08-29 19:05:21.1618 INFO Classs-GetClasses: Attempted Class
+2021-08-29 19:05:21.1790 INFO Sucessfully got all Classes
+2021-08-29 23:47:47.1379 INFO Defect-GetDefects: Attempted Call
+2021-08-29 23:47:47.2859 INFO Sucessfully got all defects
+2021-08-29 23:47:47.3202 INFO Classs-GetClasses: Attempted Class
+2021-08-29 23:47:47.3335 INFO Sucessfully got all Classes
+2021-08-29 23:47:48.1437 INFO Defect-GetDefects: Attempted Call
+2021-08-29 23:47:48.1572 INFO Sucessfully got all defects
+2021-08-29 23:47:48.1978 INFO Classs-GetClasses: Attempted Class
+2021-08-29 23:47:48.2049 INFO Sucessfully got all Classes
+2021-08-29 23:49:11.6316 INFO Defect-GetDefects: Attempted Call
+2021-08-29 23:49:11.6316 INFO Sucessfully got all defects
+2021-08-29 23:49:11.6588 INFO Classs-GetClasses: Attempted Class
+2021-08-29 23:49:11.6706 INFO Sucessfully got all Classes
+2021-08-29 23:49:13.5912 INFO Defect-GetDefects: Attempted Call
+2021-08-29 23:49:13.6023 INFO Sucessfully got all defects
+2021-08-29 23:49:13.6901 INFO Classs-GetClasses: Attempted Class
+2021-08-29 23:49:13.8004 INFO Sucessfully got all Classes
+2021-08-29 23:49:34.5523 INFO Defect-GetDefects: Attempted Call
+2021-08-29 23:49:34.5643 INFO Sucessfully got all defects
+2021-08-29 23:49:34.6936 INFO Classs-GetClasses: Attempted Class
+2021-08-29 23:49:34.7014 INFO Sucessfully got all Classes
+2021-08-29 23:49:35.0388 INFO Defect-GetDefects: Attempted Call
+2021-08-29 23:49:35.0503 INFO Sucessfully got all defects
+2021-08-29 23:49:35.0834 INFO Classs-GetClasses: Attempted Class
+2021-08-29 23:49:35.0946 INFO Sucessfully got all Classes

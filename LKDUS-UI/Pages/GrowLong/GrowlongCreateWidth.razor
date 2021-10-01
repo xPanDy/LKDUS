@@ -55,8 +55,19 @@
                     <tr>
 
                         <th>Nr.p.k.</th>
-                        <th>Labā mala</th>
-                        <th>Kreisā puse</th>
+                        <th>Bāzes mala </th>
+                        <th>Otra puse  </th>
+                        <th>Slīpums </th>
+
+
+                        @*<th>Bāzes mala 2</th>
+                            <th>Otra puse 2</th>
+
+                            <th>Slīpums 2</th>
+
+                            <th>Bāzes mala 3</th>
+                            <th>Otra puse 3</th>
+                            <th>Slīpums 3</th>*@
                     </tr>
 
                 </thead>
@@ -68,17 +79,30 @@
                         int npk = i + 1;
                         var tmpI = i;
                         <tr style="line-height:10px;">
-                            <td >@npk</td>
+                            <td>@npk</td>
 
 
                             @for (int j = 0; j < positions.GetLength(1); j++)
                             {
                                 var tmpJ = j;
 
-                                <td style="background-color:@elements[i, j];" id="@currentElement[i,j]"
-                                    @onclick="( e => selectTableCell(tmpI,tmpJ))">
-                                    @positions[i, j]
-                                </td>
+
+                                if (j != 2 || j != 5 || j != 8)
+                                {
+
+
+                                    <td style="background-color:@elements[i, j];" id="@currentElement[i,j]"
+                                        @onclick="( e => selectTableCell(tmpI,tmpJ))">
+                                        @positions[i, j]
+                                    </td>
+
+                                }
+                                else
+                                {
+                                    <td>
+                                        @positions[i, j]
+                                    </td>
+                                }
 
 
                             }
@@ -96,121 +120,56 @@
             </table>
         </div>
 
-        @*<div class="col">
-                <table class="table table-hover">
-
-                    <thead>
-
-
-                        <tr>
-
-                            <th>Nr.p.k.</th>
-                            <th>Labā mala</th>
-                            <th>Kreisā puse</th>
-                        </tr>
-
-                    </thead>
-                    <tbody>
-
-                        @for (int i = 10; i < positions.GetLength(0) - 10; i++)
-                        {
-                            int local = i;
-                            int npk = i + 1;
-                            var tmpI = i;
-                            <tr>
-                                <td>@npk</td>
-                                @for (int j = 0; j < positions.GetLength(1); j++)
-                                {
-                                    var tmpJ = j;
-
-                                    <td @onclick="( e => selectTableCell(tmpI,tmpJ))"
-                                        style="background-color:@elements[i, j];" id="@currentElement[i,j]">
-                                        @positions[i, j]
-                                    </td>
-
-
-                                }
-
-
-
-
-
-                            </tr>
-                        }
-
-
-                    </tbody>
-
-                </table>
-            </div>*@
-        @*<div class="col">
-                <table class="table table-hover">
-
-                    <thead>
-
-
-                        <tr>
-
-                            <th>Nr.p.k.</th>
-                            <th>1.pl.</th>
-                            <th>2.pl.</th>
-                        </tr>
-
-                    </thead>
-                    <tbody>
-
-                        @for (int i = 20; i < positions.GetLength(0); i++)
-                        {
-                            int local = i;
-                            int npk = i + 1;
-                            var tmpI = i;
-                            <tr>
-                                <td>@npk</td>
-                                @for (int j = 0; j < positions.GetLength(1); j++)
-                                {
-                                    var tmpJ = j;
-
-                                    <td style="background-color:@elements[i, j];" id="@currentElement[i,j]"
-                                        @onclick="( e => selectTableCell(tmpI,tmpJ))">
-                                        @positions[i, j]
-                                    </td>
-
-
-                                }
-
-
-
-
-
-                            </tr>
-                        }
-
-
-                    </tbody>
-
-                </table>
-            </div>*@
-
-
-
-    </div>
-    <div class="row w-50  mx-auto" style="padding-top:25px">
-        <div class="col  w-20  mx-auto">
-            <button type="button" @onclick="(e => SetFlow(0))" style=" background-color:@colorBg1" class="btn btn-success btn-lg btn-block">labā mala</button>
-        </div>
-
-
-
-        <div class="col w-20  mx-auto">
-            <button type="button" @onclick="(e =>SetFlow(1))" style=" background-color:@colorBg2" class="btn btn-success btn-lg btn-block">Kreisā puse</button>
-        </div>
-
 
 
 
     </div>
 
-    <div class="row w-100" style="padding-top:25px">
+
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <table class="table table-bordered justify-content-center">
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select(   1))">
+                                1
+                            </button>
+                        </td>
+                        <td> <button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select(    2))">2</button></td>
+                        <td> <button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( 3))">3</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select(-1))">&lt;</button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( 4))">4</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( 5))">5</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( 6))">6</button></td>
+                        <td> </td>
+                    </tr>
+
+                    <tr>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(() => select( 7))">7</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(() => select( 8))">8</button></td>
+                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( 9))">9</button></td>
+                        <td rowspan="2"><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( -2))">Go</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( 0))">0</button></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col">
+
+
+
+
+        </div>
+    </div>
+    <!--<div class="row w-100" style="padding-top:25px">
         <div class="col"><button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button> </div>
 
 
@@ -267,9 +226,14 @@
 
     </div>
 
-    <div class="row w-100" style="padding-top:25px">
-        @*<div class="col"><button type="button" @onclick="(()=>select(sizes[10]))" class="btn btn-info btn-lg btn-block">@sizes[10]</button> </div>*@
+    <div class="row w-100" style="padding-top:25px">-->
+    @*<div class="col"><button type="button" @onclick="(()=>select(sizes[10]))" class="btn btn-info btn-lg btn-block">@sizes[10]</button> </div>*@
 
+
+
+    <!--<div class="col">
+
+        </div>
 
 
         <div class="col">
@@ -277,11 +241,6 @@
         </div>
 
 
-        <div class="col">
-
-        </div>
-
-
 
         <div class="col">
 
@@ -292,7 +251,7 @@
         </div>
 
 
-    </div>
+    </div>-->
 
 
 
@@ -329,7 +288,7 @@
     private IList<Measurement> Model2;
 
 
-    private string[,] currentElement = new string[10, 2];
+    private string[,] currentElement = new string[10, 3];
     protected async override Task OnInitializedAsync()
     {
         Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
@@ -384,118 +343,116 @@
 
 
 
-    private string[,] elements = new string[10, 2];
+    private string[,] elements = new string[10, 3];
 
     int column = 0;
 
     private void select(int value)
     {
-        for (int ii = 0; ii < currentElement.GetLength(0); ii++)
-        {
-            for (int jj = 0; jj < currentElement.GetLength(1); jj++)
-            {
-                elements[ii, jj] = "";
-            }
-        }
-        if (isEdit)
-        {
-            for (int i = 0; i < currentElement.GetLength(0); i++)
-            {
-
-                for (int j = 0; j < currentElement.GetLength(1); j++)
+      if (value == -2)
+            { 
+                if (selectedCellI <= 10 && selectedCellJ < 1)
                 {
+                    elements[selectedCellI, selectedCellJ] = "";
+                    selectedCellI++;
 
-                    if (currentElement[i, j] == editPosition)
+                    //šeit
+                    if (selectedCellI == 10)
                     {
-                        positions[i, j] = value.ToString();
+                        selectedCellI = 0;
+
+
+
+                        selectedCellJ = selectedCellJ + 1;
                     }
-
-                }
-            }
-            isEdit = false;
-            for (int i = 0; i < currentElement.GetLength(0); i++)
-            {
-
-                //for (int j = 0; j < currentElement.GetLength(1); j++)
-                //{ elements[i, column] = "";
-                elements[i, column] = "";
-                if (positions[i, column] == "")
-                {
-                    if (i < currentElement.GetLength(0) - 1)
-                    {
-                        elements[i, column] = "red";
-                    }
-
+                    elements[selectedCellI, selectedCellJ] = "yellow";
 
                     return;
 
+                    elements[selectedCellI, selectedCellJ] = "yellow";
+ 
                 }
-            }
-        }
-        else
-        {
-
-
-            //  positionValues[actPos] = value;
-            //  positions[selectedCellI, selectedCellJ] = value;
-
-            for (int i = 0; i < currentElement.GetLength(0); i++)
-            {
-
-                //for (int j = 0; j < currentElement.GetLength(1); j++)
-                //{ elements[i, column] = "";
-                elements[i, column] = "";
-                if (positions[i, column] == "")
+                if (selectedCellI <= 10 && selectedCellJ == 1)
                 {
-                    if (i < currentElement.GetLength(0) - 1)
+
+                    elements[selectedCellI, selectedCellJ] = "";
+                    selectedCellI++;
+
+
+                    if (selectedCellI == 10)
                     {
-                        elements[i + 1, column] = "red";
-                    }
-                    selectedCellI = i;
+                        selectedCellI = 0;
+                        selectedCellJ = 0;
+                        elements[selectedCellI, selectedCellJ] = "yellow";
 
-                    positions[i, column] = value.ToString();
-                    return;
+                        return;
+                    }
+                    elements[selectedCellI, selectedCellJ] = "yellow";
+
 
                 }
-                else
+
+
+
+
+            }
+
+            else if (value == -1)
+            {
+                if (positions[selectedCellI, selectedCellJ].Length > 0)
                 {
 
+                    positions[selectedCellI, selectedCellJ] =
+                        positions[selectedCellI, selectedCellJ].Remove(positions[selectedCellI, selectedCellJ].Length - 1, 1);
+
+                    if (positions[selectedCellI, 0] != "" || positions[selectedCellI, 1] != null)
+                    {
+                        //  positions[selectedCellI, 2] = Math.Abs(Convert.ToDecimal(positions[selectedCellI, 1]) - Convert.ToDecimal(positions[selectedCellI, 0])) + "";
+
+                        decimal value1;
+                        Decimal.TryParse(positions[selectedCellI, 1], out value1);
+
+                        decimal value0;
+                        Decimal.TryParse(positions[selectedCellI, 0], out value0);
+
+
+                        decimal result = value1 - value0;
+                        result = Math.Abs(result);
+                        positions[selectedCellI, 2] = result.ToString();
+
+                    }
+
+                }
+            }
+            if (value >= 0)
+            {
+                if (positions[selectedCellI, selectedCellJ].Length < 4)
+                {
+                    positions[selectedCellI, selectedCellJ] = positions[selectedCellI, selectedCellJ] + value.ToString();
+
+
+                    if (positions[selectedCellI, 0] != "" || positions[selectedCellI, 1] != null)
+                    {
+                        decimal value1;
+                        Decimal.TryParse(positions[selectedCellI, 1], out value1);
+
+                        decimal value0;
+                        Decimal.TryParse(positions[selectedCellI, 0], out value0);
+
+
+                        decimal result = value1 - value0;
+                        result = Math.Abs(result);
+                        positions[selectedCellI, 2] = result.ToString();
+
+                    }
+
                 }
 
-                /*/ if (currentElement[i, j] == activePosition)
-                 {
-                     if ((selectedCellI == 29 && selectedCellJ == 1) || (selectedCellI == 29 && selectedCellJ == 0))
-                     {
-                         break;
-                     }
-                     else
-                     {
-                         positions[selectedCellI, selectedCellJ] = value;
-                         elements[i, column] = "";
-                         i++;
-                         selectedCellI = i;
-                         selectedCellJ = column;
-                         if (selectedCellI == 30 && selectedCellJ == 0)
-                         {
 
-                             selectedCellI = 0; selectedCellJ = 1;
-                             activePosition = "current" + selectedCellI + column;//selectedCellJ;
-                             positions[selectedCellI, selectedCellJ] = value;
-                             elements[selectedCellI, selectedCellJ] = "red";
-                             break;
-                         }
-                         else if (selectedCellI < 30 && selectedCellJ < 2)
-                         {
-                             elements[selectedCellI, selectedCellJ] = "red";
-                             activePosition = "current" + i + column;//j;
-
-                             break;// break;
-                         }
-                     }
-                 }*/
-                //}
             }
-        }
+
+
+         
     }
 
     private ElementReference input1;
@@ -509,7 +466,7 @@
     private string id3 = "inactive";
     private string id4 = "inactive";
 
-    private string[,] positions = new string[10, 2];
+    private string[,] positions = new string[10, 3];
     protected async override Task OnAfterRenderAsync(bool firstRender)
     {
 
@@ -641,7 +598,8 @@
         else
         {
 
-            bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Tiešām vēlies iziet nesaglabājot?");
+            bool confirmed = await JsRuntime.InvokeAsync<bool>
+    ("confirm", "Tiešām vēlies iziet nesaglabājot?");
             if (confirmed)
             {
                 this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/create");
@@ -654,7 +612,8 @@
     bool isPackCreated = false;
     MeasurementType mt = new MeasurementType();
 
-    private IList<Pack> ModelPacks;
+    private IList<Pack>
+        ModelPacks;
     private async void SaveMeasurement()
     {
         int packId = int.Parse(stringPackValue);
@@ -685,7 +644,9 @@
         }
         //var pid = ModelPacks.Max(el => el.Id) + 1;
 
-        IList<Measurement> measurementsToCreate = new List<Measurement>();
+        IList<Measurement>
+            measurementsToCreate = new List<Measurement>
+                ();
         Pack pack = new Pack();
         Machine machine = new Machine();
         // machine = await machineRepository.Get(Endpoints.MachinesEndpoint, int.Parse(pmachineIdd));//m achine.Id);
@@ -733,7 +694,7 @@
             meas.MeasurementPositionId = int.Parse(measurementPositionId);
             meas.FusPackId = packId;
             meas.MeasurementTypeId = 1014
-                ;
+            ;
             meas.MachineName = fusMachineName;
             meas.PackId = int.Parse(elements[1]);
 
@@ -762,9 +723,47 @@
                     meas.Measurement2 = Convert.ToDecimal(positions[i, j]);
                 }
 
+                if (j == 2)
+                {
+                    if (positions[i, j] == "")
+                    {
+                        positions[i, j] = "0";
+                    }
+                    meas.Measurement3 = Convert.ToDecimal(positions[i, j]);
+                }
 
-
-
+                if (j == 3)
+                {
+                    if (positions[i, j] == "")
+                    {
+                        positions[i, j] = "0";
+                    }
+                    meas.Measurement4 = Convert.ToDecimal(positions[i, j]);
+                }
+                if (j == 4)
+                {
+                    if (positions[i, j] == "")
+                    {
+                        positions[i, j] = "0";
+                    }
+                    meas.Measurement5 = Convert.ToDecimal(positions[i, j]);
+                }
+                if (j == 6)
+                {
+                    if (positions[i, j] == "")
+                    {
+                        positions[i, j] = "0";
+                    }
+                    meas.Measurement7 = Convert.ToDecimal(positions[i, j]);
+                }
+                if (j == 5)
+                {
+                    if (positions[i, j] == "")
+                    {
+                        positions[i, j] = "0";
+                    }
+                    meas.Measurement6 = Convert.ToDecimal(positions[i, j]);
+                }
             }
 
 

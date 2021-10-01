@@ -13,7 +13,7 @@ namespace LKDUS_UI.Models
         public string Name { get; set; }
 
      
-        public string Factory { get; set; }
+        public int Factory { get; set; }
        
          
     }

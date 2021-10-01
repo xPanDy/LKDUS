@@ -15,7 +15,7 @@
 @inject IPacksRepository packRepo
 @inject IAuthenticationRepository authRepo
 @inject IMeasurementTypeRepository measTRepo
-@inject IJSRuntime JsRuntime 
+@inject IJSRuntime JsRuntime
 @inject ToastService toastService
 <style>
 
@@ -84,28 +84,24 @@
             </div>
             <div class="col w-25"><h3 class="card-title">Biezums</h3></div>
             @*@if (!isTypeCklicked)
-            {<div class="col">
+                {<div class="col">
 
-                </div>
-            }
-            else*@
-             
-                <div class="col">
-                    <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
-                </div>
-            
+                    </div>
+                }
+                else*@
+
+            <div class="col">
+                <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
+            </div>
+
 
         </div>
     </div>
-     
+
     @if (isTypeCklicked)
     {
 
-        @*<div class="form-group">
-            <label for="machine">Iekārta</label>
-            <input id="machine" class="form-control" type="text" placeholder=@fusMachineName readonly>
 
-        </div>*@
 
         <div class="form-group">
 
@@ -116,6 +112,8 @@
                         <th class="text-center">Pirms šuves</th>
                         <th class="text-center">Šuves</th>
                         <th class="text-center">Pēc šuves</th>
+                        <th class="text-center">Loksnes vidējais</th>
+                        <th class="text-center">Šuves starpība ar loksnes vidējo</th>
                     </tr>
                 </thead>
                 <tbody class="body-half-screen">
@@ -154,7 +152,23 @@
                                 {
                                     int tmpx = i;
                                     int tmpj = j;
-                                    <td class="text-center" @onclick="(e => HighlightSelected(tmpx,tmpj))" style="background-color: @colors[i,j]" id="@idsForCells[i,j]">@sizesArray[i, j]</td>
+
+                                    if (j < sizesArray.GetLength(1) - 2)
+                                    {
+
+                                        <td class="text-center" @onclick="(e => HighlightSelected(tmpx,tmpj))"
+                                            style="background-color: @colors[i,j]" id="@idsForCells[i,j]">
+                                            @sizesArray[i, j]
+                                        </td>
+
+                                    }
+                                    else
+                                    {
+                                        <td class="text-center"
+                                            id="@idsForCells[i,j]">
+                                            @sizesArray[i, j]
+                                        </td>
+                                    }
                                 }
                             </tr>
                         }
@@ -195,7 +209,18 @@
                                     </span>*@
                             </div>
                         </td>
+                        <td class="text-center">
+                            <div>
+                                <span class="badge badge-info"></span>
 
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div>
+                                <span class="badge badge-info"></span>
+
+                            </div>
+                        </td>
                     </tr>
 
 
@@ -268,7 +293,9 @@
 
     public string[] rows = new string[10];
 
-    public string[,] colors = new string[10, 3];
+
+    private decimal[,] sizesArray = new decimal[10, 5];
+    public string[,] colors = new string[10, 5];
 
     public async void focustoDiv(int i)
     {
@@ -277,10 +304,14 @@
     }
 
 
-  static  bool isEdit = true;
+    static bool isEdit = true;
     string editPosition = "";
+    int isNotEmptyLines = 1;
+
     private void HighlightSelected(int a, int b)
     {
+
+
         isEdit = true;
         for (int i = 0; i < colors.GetLength(0); i++)
         {
@@ -361,282 +392,156 @@
     private string highlight3 { get; set; } = "";
     private string highlight4 { get; set; } = "";
 
-    // private string[] currentRow = new string[40];
-    private string[,] idsForCells = new string[10, 3];
-    bool down = true;
-    bool right = false;
+
+    private string[,] idsForCells = new string[10, 5];
+    bool down = false;
+    bool right = true;
     bool up = false;
     bool left = false;
     decimal avg1 = 0;
+
+
+
+
     decimal avg2 = 0;
     decimal avg3 = 0;
     private async void select(decimal value)
     {
 
+
+
         if (isEdit)
         {
             for (int i = 0; i < idsForCells.GetLength(0); i++)
             {
-                for (int j = 0; j < idsForCells.GetLength(1); j++)
+
+
+                for (int j = 0; j < idsForCells.GetLength(1) - 3; j++)
                 {
+
+
+
 
                     if (idsForCells[i, j] == editPosition)
                     {
                         sizesArray[i, j] = value;
+
+                        sizesArray[i, 3] = ((sizesArray[i, 0] + sizesArray[i, 2]) / 2);
+                        sizesArray[i, 4] = sizesArray[i, 1] - sizesArray[i, 3];
+
+                        decimal sum1 = 0;
+                        decimal sum2 = 0;
+                        decimal sum3 = 0;
+                        for (int a = 0; a < sizesArray.GetLength(0); a++)
+                        {
+
+
+                            sum1 = sum1 + sizesArray[a, 0];
+                            sum2 = sum2 + sizesArray[a, 1];
+                            sum3 = sum3 + sizesArray[a, 2];
+
+                        }
+
+
+                        avg1 = Math.Round(sum1 / isNotEmptyLines, 2);
+                        avg2 = Math.Round(sum2 / isNotEmptyLines, 2);
+                        avg3 = Math.Round(sum3 / isNotEmptyLines, 2);
+
+
                     }
 
                 }
             }
+
             isEdit = false;
-            
+
+
         }
         else
         {
-            decimal sum1 = 0;
-            decimal sum2 = 0;
-            decimal sum3 = 0;
-            for (int i = 0; i < sizesArray.GetLength(0); i++)
-            {
 
-                sum1 = sum1 + sizesArray[i, 0];
-                sum2 = sum2 + sizesArray[i, 1];
-                sum3 = sum3 + sizesArray[i, 2];
-
-            }
-            avg1 = sum1 / 10;
-            avg2 = sum2 / 10;
-            avg3 = sum3 / 10;
             if (selecteSizeType == 1)
             {
-
-                if (down)
-                {
-
-                    for (int i = 0; i < idsForCells.GetLength(0); i++)
-                    {
-                        for (int j = 0; j < idsForCells.GetLength(1); j++)
-                        {
-
-                            if (idsForCells[i, j] == activePosition)
-                            {
-                                if (i == idsForCells.GetLength(0) - 1)
-                                {
-                                    sizesArray[i, j] = value;
-                                    colors[i, j] = "";
-                                    down = false;
-                                    right = true;
-                                    j++;
-                                    activePosition = "cell" + i + j;
-                                    colors[i, j] = "red";
-
-                                    break;
-                                }
-                                else
-                                {
-                                    sizesArray[i, j] = value;
-                                    colors[i, j] = "";
-
-                                    down = true;
-                                    i++;
-                                    activePosition = "cell" + (i) + j;
-                                    colors[i, j] = "red";
-
-                                    break;
-
-                                }
-
-                            }
-
-                        }
-                    }
-                    focusToNext();
-                    return;
-                }
-                if (right)
-                {
-
-                    for (int i = 0; i < idsForCells.GetLength(0); i++)
-                    {
-                        for (int j = 0; j < idsForCells.GetLength(1); j++)
-                        {
-                            colors[i, j] = "";
-                            if (idsForCells[i, j] == activePosition)
-                            {
-                                if (j < idsForCells.GetLength(1) - 1)
-                                {
-                                    sizesArray[i, j] = value;
-                                    j++;
-
-                                    activePosition = "cell" + i + j;
-                                    colors[i, j] = "red";
-                                    if (j == idsForCells.GetLength(1) - 1)
-                                    {
-                                        up = true;
-                                        right = false;
-                                        break;
-                                    }
-                                }
-                            }
-                            else
-                            {
-
-                            }
-
-
-
-
-                        }
-                    }
-                    focusToNext();
-                    return;
-                }
-
-                if (up)
-                {
-
-                    for (int i = 0; i < idsForCells.GetLength(0); i++)
-                    {
-                        for (int j = 0; j < idsForCells.GetLength(1); j++)
-                        {
-                            //colors[i, j] = "";
-                            if (idsForCells[i, j] == activePosition)
-                            {
-                                // colors[i, j] = "";
-
-                                if (i == 0 && j == 1)
-                                {
-                                    sizesArray[i, j] = value;
-                                    break;
-                                }
-
-                                if (j == 1)
-                                {
-                                    sizesArray[i, j] = value; colors[i, j] = "";
-                                    up = false;
-                                    right = true;
-                                    i--;
-                                    activePosition = "cell" + i + j;
-                                    colors[i, j] = "red";
-                                }
-                                else if (j == 2)
-                                {
-                                    sizesArray[i, j] = value; colors[i, j] = "";
-                                    up = false;
-                                    left = true;
-                                    i--;
-                                    activePosition = "cell" + i + j;
-                                    colors[i, j] = "red";
-                                }
-
-                            }
-                            else
-                            {
-
-                            }
-
-
-
-
-                        }
-
-                    }
-                    focusToNext();
-                    return;
-                }
-
-                if (left)
-                {
-
-                    for (int i = 0; i < idsForCells.GetLength(0); i++)
-                    {
-                        for (int j = 0; j < idsForCells.GetLength(1); j++)
-                        {
-                            //colors[i, j] = "";
-                            if (idsForCells[i, j] == activePosition)
-                            {
-                                if (j == 2)
-                                {
-                                    sizesArray[i, j] = value;
-                                    colors[i, j] = "";
-                                    left = false;
-                                    up = true;
-                                    j--;
-                                    activePosition = "cell" + i + j;
-                                    colors[i, j] = "red";
-                                }
-
-                            }
-                            else
-                            {
-
-                            }
-
-
-
-
-                        }
-
-                    }
-                    focusToNext();
-                    return;
-                }
-            }
-
-            if (selecteSizeType == 2)
-            {
-
-
-
-
 
                 for (int i = 0; i < idsForCells.GetLength(0); i++)
                 {
                     for (int j = 0; j < idsForCells.GetLength(1); j++)
                     {
 
+                        colors[i, j] = "";
                         if (idsForCells[i, j] == activePosition)
                         {
-                            if (i == idsForCells.GetLength(0) - 1 && j == idsForCells.GetLength(1) - 1)
+                            sizesArray[i, j] = value;
+                            sizesArray[i, 3] = ((sizesArray[i, 0] + sizesArray[i, 2]) / 2);
+                            sizesArray[i, 4] = sizesArray[i, 1] - sizesArray[i, 3];
+
+
+                            decimal sum1 = 0;
+                            decimal sum2 = 0;
+                            decimal sum3 = 0;
+                            for (int a = 0; a < sizesArray.GetLength(0); a++)
                             {
-                                sizesArray[i, j] = value;
-                                break;
+
+
+                                sum1 = sum1 + sizesArray[a, 0];
+                                sum2 = sum2 + sizesArray[a, 1];
+                                sum3 = sum3 + sizesArray[a, 2];
+
+                            }
+                            avg1 = Math.Round(sum1 / isNotEmptyLines, 2);
+                            avg2 = Math.Round(sum2 / isNotEmptyLines, 2);
+                            avg3 = Math.Round(sum3 / isNotEmptyLines, 2);
+                            if (
+           sizesArray[i, 0] != 0 &&
+           sizesArray[i, 1] != 0 &&
+           sizesArray[i, 2] != 0 && isNotEmptyLines<sizesArray.GetLength(0)
+           )
+                            {
+                                isNotEmptyLines = isNotEmptyLines + 1;
+
+
+
+
                             }
 
-                            colors[i, j] = "";
-                            if (j < idsForCells.GetLength(1) - 1)
+                            if (j < idsForCells.GetLength(1) - 3)
                             {
-                                sizesArray[i, j] = value;
                                 j++;
-
                                 activePosition = "cell" + i + j;
-                                colors[i, j] = "red";
-                                break;
 
                             }
-                            else if (j == idsForCells.GetLength(1) - 1)
+                            else
                             {
-                                sizesArray[i, j] = value;
                                 j = 0;
-
                                 i++;
+
+                                if (i == idsForCells.GetLength(0))
+                                {
+                                    return;
+                                }
                                 activePosition = "cell" + i + j;
-                                colors[i, j] = "red";
-                                break;
                             }
+                            activePosition = "cell" + i + j;
+                            colors[i, j] = "red";
+                            return;
                         }
 
-
-
-
-
+                        
                     }
                 }
-                focusToNext();
-                return;
+
+
+
+
+
 
             }
-
         }
+
+
+
+
+
 
 
 
@@ -646,28 +551,28 @@
     public async void focusToNext()
     {
 
-        for (int i = 0; i < idsForCells.GetLength(0); i++)
-        {
-            for (int j = 0; j < idsForCells.GetLength(1); j++)
-            {
-                if (activePosition == idsForCells[i, j] && i > 5)
-                {
+        //for (int i = 0; i < idsForCells.GetLength(0); i++)
+        //{
+        //    for (int j = 0; j < idsForCells.GetLength(1); j++)
+        //    {
+        //        if (activePosition == idsForCells[i, j] && i > 5)
+        //        {
 
-                    posToFocusOn = idsForCells[i - 5, j];
-                }
-            }
-        }
+        //            posToFocusOn = idsForCells[i - 5, j];
+        //        }
+        //    }
+        //}
 
-        if (selecteSizeType == 1)
-        {
-            if (idsForCells[5, 2] == activePosition)
-            {
-                posToFocusOn = idsForCells[0, 0];
-            }
+        //if (selecteSizeType == 1)
+        //{
+        //    if (idsForCells[5, 2] == activePosition)
+        //    {
+        //        posToFocusOn = idsForCells[0, 0];
+        //    }
 
-            await JsRuntime.InvokeVoidAsync("blazorHelpers.scrollToFragment", posToFocusOn);
+        //    await JsRuntime.InvokeVoidAsync("blazorHelpers.scrollToFragment", posToFocusOn);
 
-        }
+        //}
 
 
 
@@ -715,7 +620,6 @@
 
     private decimal[] sizes = new decimal[9];
 
-    private decimal[,] sizesArray = new decimal[10, 3];
 
     private decimal start = 1.3m;
 
@@ -756,10 +660,12 @@
 
     protected async override Task OnInitializedAsync()
     {
+
+
         ModelPacks = await this.packRepo.Get(Endpoints.PacksEndpoint);
+
         machineId = int.Parse(pmachineIdd);
 
-        //  mach = await machineRepository.Get(Endpoints.MachinesEndpoint, machineId);
 
 
         int startValuesOfMeasurement = 0;

@@ -1,0 +1,128 @@
+2021-09-01 09:11:36.5198 INFO AspNetUsers-Login: Login attempted call from user Aris
+2021-09-01 09:11:36.8766 INFO AspNetUsers-Login: Aris Sucessfully Authenticated
+2021-09-01 09:11:37.3847 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-09-01 09:11:37.4415 INFO Sucessfully got all measurementPositions
+2021-09-01 09:11:37.6961 INFO Pack-GetPacks: Attempted Call
+2021-09-01 09:11:37.7765 INFO Sucessfully got all packs
+2021-09-01 09:11:37.8491 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 2
+2021-09-01 09:11:37.8778 INFO Sucessfully got the measurement position with Id:2
+2021-09-01 09:11:38.6351 INFO MeasurementPosition-GetMeasurementPositions: Attempted Call
+2021-09-01 09:11:38.6612 INFO Sucessfully got all measurementPositions
+2021-09-01 09:11:39.4716 INFO Pack-GetPacks: Attempted Call
+2021-09-01 09:11:39.4716 INFO Sucessfully got all packs
+2021-09-01 09:11:39.5084 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 6
+2021-09-01 09:11:39.5186 INFO Sucessfully got the measurement position with Id:6
+2021-09-01 09:11:40.3737 INFO Measurements-GetMeasurements: Attempted Call
+2021-09-01 09:11:40.5563 INFO Sucessfully got all Measurements
+2021-09-01 09:11:40.6319 INFO Measurements-GetMeasurements: Attempted Call
+2021-09-01 09:11:40.6319 INFO Sucessfully got all Measurements
+2021-09-01 09:11:40.6594 INFO FusPack-GetFusPacks: Attempted Call
+2021-09-01 09:11:40.9663 INFO Sucessfully got all FUS packs
+2021-09-01 09:11:41.0931 INFO Machine-GetMachines: Attempted Call
+2021-09-01 09:11:41.1264 INFO Sucessfully got all machines
+2021-09-01 09:11:41.1627 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 6
+2021-09-01 09:11:41.1759 INFO Sucessfully got the measurement position with Id:6
+2021-09-01 09:12:26.2034 INFO Measurements-GetMeasurements: Attempted Call
+2021-09-01 09:12:26.2210 INFO Sucessfully got all Measurements
+2021-09-01 09:12:26.2210 INFO Defect-GetDefects: Attempted Call
+2021-09-01 09:12:26.2513 INFO Pack-GetPacks: Attempted Call
+2021-09-01 09:12:26.2879 INFO Sucessfully got all defects
+2021-09-01 09:12:26.2879 INFO Sucessfully got all packs
+2021-09-01 09:12:26.3508 INFO Classs-GetClasses: Attempted Class
+2021-09-01 09:12:26.3840 INFO Sucessfully got all Classes
+2021-09-01 09:12:37.3440 INFO Measurements-GetMeasurements: Attempted Call
+2021-09-01 09:12:37.3541 INFO Sucessfully got all Measurements
+2021-09-01 09:12:37.3934 INFO Measurements-GetMeasurements: Attempted Call
+2021-09-01 09:12:37.3934 INFO Sucessfully got all Measurements
+2021-09-01 09:12:37.4260 INFO FusPack-GetFusPacks: Attempted Call
+2021-09-01 09:12:37.5864 INFO Sucessfully got all FUS packs
+2021-09-01 09:12:37.6510 INFO Machine-GetMachines: Attempted Call
+2021-09-01 09:12:37.6510 INFO Sucessfully got all machines
+2021-09-01 09:12:37.6567 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 6
+2021-09-01 09:12:37.6776 INFO Sucessfully got the measurement position with Id:6
+2021-09-01 09:12:45.9875 INFO Defect-GetDefects: Attempted Call
+2021-09-01 09:12:46.0281 INFO Sucessfully got all defects
+2021-09-01 09:12:46.0538 INFO Classs-GetClasses: Attempted Class
+2021-09-01 09:12:46.0538 INFO Sucessfully got all Classes
+2021-09-01 09:13:01.7183 INFO Measurements-GetMeasurements: Attempted Call
+2021-09-01 09:13:01.7332 INFO Sucessfully got all Measurements
+2021-09-01 09:13:01.7541 INFO Measurements-GetMeasurements: Attempted Call
+2021-09-01 09:13:01.7541 INFO Sucessfully got all Measurements
+2021-09-01 09:13:01.8150 INFO FusPack-GetFusPacks: Attempted Call
+2021-09-01 09:13:02.1084 INFO Sucessfully got all FUS packs
+2021-09-01 09:13:02.1565 INFO Machine-GetMachines: Attempted Call
+2021-09-01 09:13:02.1704 INFO Sucessfully got all machines
+2021-09-01 09:13:02.1990 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 6
+2021-09-01 09:13:02.2119 INFO Sucessfully got the measurement position with Id:6
+2021-09-01 09:13:07.3427 INFO Measurements-GetMeasurements: Attempted Call
+2021-09-01 09:13:07.3667 INFO Defect-GetDefects: Attempted Call
+2021-09-01 09:13:07.3667 INFO Sucessfully got all Measurements
+2021-09-01 09:13:07.3667 INFO Sucessfully got all defects
+2021-09-01 09:13:07.3931 INFO Pack-GetPacks: Attempted Call
+2021-09-01 09:13:07.3931 INFO Sucessfully got all packs
+2021-09-01 09:13:07.4130 INFO Classs-GetClasses: Attempted Class
+2021-09-01 09:13:07.4229 INFO Sucessfully got all Classes
+2021-09-01 09:13:38.6107 INFO Measurements-GetMeasurements: Attempted Call
+2021-09-01 09:13:38.6203 INFO Sucessfully got all Measurements
+2021-09-01 09:13:38.6425 INFO Measurements-GetMeasurements: Attempted Call
+2021-09-01 09:13:38.6425 INFO Sucessfully got all Measurements
+2021-09-01 09:13:38.6670 INFO FusPack-GetFusPacks: Attempted Call
+2021-09-01 09:13:38.9639 INFO Sucessfully got all FUS packs
+2021-09-01 09:13:39.0028 INFO Machine-GetMachines: Attempted Call
+2021-09-01 09:13:39.0028 INFO Sucessfully got all machines
+2021-09-01 09:13:39.0393 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 6
+2021-09-01 09:13:39.0393 INFO Sucessfully got the measurement position with Id:6
+2021-09-01 09:13:41.7571 INFO Defect-GetDefects: Attempted Call
+2021-09-01 09:13:41.7707 INFO Sucessfully got all defects
+2021-09-01 09:13:41.7861 INFO Classs-GetClasses: Attempted Class
+2021-09-01 09:13:41.7861 INFO Sucessfully got all Classes
+2021-09-01 09:13:53.8542 INFO Measurements-GetMeasurements: Attempted Call
+2021-09-01 09:13:53.8784 INFO Sucessfully got all Measurements
+2021-09-01 09:13:53.9015 INFO Measurements-GetMeasurements: Attempted Call
+2021-09-01 09:13:53.9115 INFO Sucessfully got all Measurements
+2021-09-01 09:13:53.9301 INFO FusPack-GetFusPacks: Attempted Call
+2021-09-01 09:13:54.2420 INFO Sucessfully got all FUS packs
+2021-09-01 09:13:54.2800 INFO Machine-GetMachines: Attempted Call
+2021-09-01 09:13:54.2948 INFO Sucessfully got all machines
+2021-09-01 09:13:54.3132 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 6
+2021-09-01 09:13:54.3387 INFO Sucessfully got the measurement position with Id:6
+2021-09-01 09:13:58.3631 INFO Measurements-GetMeasurements: Attempted Call
+2021-09-01 09:13:58.3631 INFO Sucessfully got all Measurements
+2021-09-01 09:13:58.4058 INFO Defect-GetDefects: Attempted Call
+2021-09-01 09:13:58.4058 INFO Pack-GetPacks: Attempted Call
+2021-09-01 09:13:58.4095 INFO Sucessfully got all defects
+2021-09-01 09:13:58.4095 INFO Sucessfully got all packs
+2021-09-01 09:13:58.4421 INFO Classs-GetClasses: Attempted Class
+2021-09-01 09:13:58.4421 INFO Sucessfully got all Classes
+2021-09-01 09:32:21.4359 INFO Measurements-GetMeasurements: Attempted Call
+2021-09-01 09:32:21.4359 INFO Sucessfully got all Measurements
+2021-09-01 09:32:21.4780 INFO Measurements-GetMeasurements: Attempted Call
+2021-09-01 09:32:21.4823 INFO Sucessfully got all Measurements
+2021-09-01 09:32:21.5007 INFO FusPack-GetFusPacks: Attempted Call
+2021-09-01 09:32:21.6266 INFO Sucessfully got all FUS packs
+2021-09-01 09:32:21.6566 INFO Machine-GetMachines: Attempted Call
+2021-09-01 09:32:21.6566 INFO Sucessfully got all machines
+2021-09-01 09:32:21.6726 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 6
+2021-09-01 09:32:21.6726 INFO Sucessfully got the measurement position with Id:6
+2021-09-01 09:48:32.9348 INFO Defect-GetDefects: Attempted Call
+2021-09-01 09:48:33.0057 INFO Sucessfully got all defects
+2021-09-01 09:48:33.0208 INFO Classs-GetClasses: Attempted Class
+2021-09-01 09:48:33.0319 INFO Sucessfully got all Classes
+2021-09-01 09:49:39.6030 INFO Defect-GetDefects: Attempted Call
+2021-09-01 09:49:39.6030 INFO Sucessfully got all defects
+2021-09-01 09:49:39.6311 INFO Classs-GetClasses: Attempted Class
+2021-09-01 09:49:39.6311 INFO Sucessfully got all Classes
+2021-09-01 09:49:39.8698 INFO Defect-GetDefects: Attempted Call
+2021-09-01 09:49:39.8827 INFO Sucessfully got all defects
+2021-09-01 09:49:39.8990 INFO Classs-GetClasses: Attempted Class
+2021-09-01 09:49:39.8990 INFO Sucessfully got all Classes
+2021-09-01 09:50:02.4536 INFO Measurements-GetMeasurements: Attempted Call
+2021-09-01 09:50:02.4851 INFO Sucessfully got all Measurements
+2021-09-01 09:50:02.5177 INFO Measurements-GetMeasurements: Attempted Call
+2021-09-01 09:50:02.5177 INFO Sucessfully got all Measurements
+2021-09-01 09:50:02.5499 INFO FusPack-GetFusPacks: Attempted Call
+2021-09-01 09:50:02.9568 INFO Sucessfully got all FUS packs
+2021-09-01 09:50:02.9960 INFO Machine-GetMachines: Attempted Call
+2021-09-01 09:50:03.0056 INFO Sucessfully got all machines
+2021-09-01 09:50:03.0201 INFO MeasurementPosition-GetMeasurementPosition: Attempted Get Measurement position with ID: 6
+2021-09-01 09:50:03.0201 INFO Sucessfully got the measurement position with Id:6

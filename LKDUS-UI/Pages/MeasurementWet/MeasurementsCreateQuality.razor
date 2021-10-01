@@ -84,6 +84,16 @@
                        min="0"
                        type="number">
             </div>
+            
+            <div class="col-md-3">
+
+                <button @onclick="focusToInput5" type="button" class="btn btn-success btn-lg btn-block">
+                    Apspiediens
+                </button>
+                <input style="background-color:@colorBgP5" @onclick="focusToInput5" disabled id="@id5" @ref="input5" @bind="@v5" class="form-control"
+                       min="0"
+                       type="number">
+            </div>
         </div>
     </div>
 
@@ -150,13 +160,15 @@
     private string v2;
     private string v3;
     private string v4;
+    private string v5;
 
     private string @colorBgP1 = "";
     private string @colorBgP2 = "";
     private string @colorBgP3 = "";
     private string @colorBgP4 = "";
+    private string @colorBgP5 = "";
 
-    string[] values = new string[4];// "";
+    string[] values = new string[5];// "";
     string selected1 = "";
     int selectedindex = 0;
     public async void add(int i)
@@ -192,6 +204,10 @@
             {
                 v4 = values[selectedindex];
             }
+            if (selectedindex == 4)
+            {
+                v5 = values[selectedindex];
+            }
         }
         else
         {
@@ -223,6 +239,10 @@
             {
                 v4 = values[selectedindex];
             }
+            if (selectedindex == 4)
+            {
+                v5 = values[selectedindex];
+            }
         }
     }
 
@@ -234,6 +254,7 @@
         v2 = "0";
         v3 = "0";
         v4 = "0";
+        v5 = "0";
         Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
     }
 
@@ -243,10 +264,12 @@
     private ElementReference input2;
     private ElementReference input3;
     private ElementReference input4;
+    private ElementReference input5;
     private string id1 = "inactive";
     private string id2 = "inactive";
     private string id3 = "inactive";
     private string id4 = "inactive";
+    private string id5 = "inactive";
 
 
     protected async override Task OnAfterRenderAsync(bool firstRender)
@@ -267,6 +290,7 @@
         colorBgP2 = "";
         colorBgP3 = "";
         colorBgP4 = "";
+        colorBgP5 = "";
         if (v1.Length == 1 && v1 == "0")
         {
             v1 = "";
@@ -278,6 +302,7 @@
         id2 = "inactive";
         id3 = "inactive";
         id4 = "inactive";
+        id5 = "inactive";
         await
 JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
 
@@ -289,6 +314,7 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
         colorBgP2 = "yellow";
         colorBgP3 = "";
         colorBgP4 = "";
+        colorBgP5 = "";
         if (values[selectedindex] != null)
         {
             if (v2.Length == 1 && v2 == "0")
@@ -300,6 +326,7 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
             id2 = "code";
             id3 = "inactive";
             id4 = "inactive";
+            id5 = "inactive";
             await
             JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input2);
         }
@@ -310,6 +337,7 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
         colorBgP2 = "";
         colorBgP3 = "yellow";
         colorBgP4 = "";
+        colorBgP5 = "";
         if (values[selectedindex] != null)
         {
             if (v3.Length == 1 && v3 == "0")
@@ -321,6 +349,7 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
             id2 = "inactive";
             id3 = "code";
             id4 = "inactive";
+            id5 = "inactive";
             await
             JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input3);
         }
@@ -331,6 +360,7 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
         colorBgP2 = "";
         colorBgP3 = "";
         colorBgP4 = "yellow";
+        colorBgP5 = "";
         if (values[selectedindex] != null)
         {
             if (v4.Length == 1 && v4 == "0")
@@ -342,11 +372,36 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
             id2 = "inactive";
             id3 = "inactive";
             id4 = "code";
+            id5 = "inactive";
             await
             JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input4);
         }
     }
 
+
+    private async void focusToInput5()
+    {
+        colorBgP1 = "";
+        colorBgP2 = "";
+        colorBgP3 = "";
+        colorBgP4 = "";
+        colorBgP5 = "yellow";
+        if (values[selectedindex] != null)
+        {
+            if (v5.Length == 1 && v5 == "0")
+            {
+                v5 = "";
+            }
+            selectedindex = 4;
+            id1 = "inactive";
+            id2 = "inactive";
+            id3 = "inactive";
+            id4 = "inactive";
+            id5 = "code";
+            await
+            JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input5);
+        }
+    }
     private async void Return(MouseEventArgs e)
     {
         if (isSuccess && isPackCreated)
@@ -457,11 +512,16 @@ JSRuntime.InvokeVoidAsync("exampleJsFunctions.focusElement", input1);
         {
             v4 = "0";
         }
+        if (v5 == "")
+        {
+            v5 = "0";
+        }
 
         meas.Measurement1 = Convert.ToDecimal(v1);
         meas.Measurement2 = Convert.ToDecimal(v2);
         meas.Measurement3 = Convert.ToDecimal(v3);
         meas.Measurement4 = Convert.ToDecimal(v4);
+        meas.Measurement5 = Convert.ToDecimal(v5);
 
 
 

@@ -19,12 +19,12 @@ namespace LKDUS_API.Data
        
 
         public int? DimensionId { get; set; }
+        public string FusClass { get; set; }
 
+        //  public virtual List<Measurement> MeasurementsList { get; set; }//;//= new List<Measurement>();
+        //     public virtual ICollection<Measurement> Measurements { get; set; }//;//= new List<Measurement>();
 
-      //  public virtual List<Measurement> MeasurementsList { get; set; }//;//= new List<Measurement>();
-   //     public virtual ICollection<Measurement> Measurements { get; set; }//;//= new List<Measurement>();
-
-}
+    }
 
 
 }

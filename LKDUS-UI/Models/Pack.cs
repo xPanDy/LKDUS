@@ -19,7 +19,8 @@ namespace LKDUS_UI.Models
        // public virtual ICollection<Measurement> Measurements { get; set; } = new List<Measurement>();
         //public virtual IList<Measurement> Measurements { get; set; } 
         public int? DimensionId { get; set; }
-         
+        public string FusClass { get; set; }
+
     }
 
 

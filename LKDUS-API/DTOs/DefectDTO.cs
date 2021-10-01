@@ -15,7 +15,7 @@ namespace LKDUS_API.DTOs
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Factory { get; set; }
+        public int Factory { get; set; }
 
 
 
@@ -28,7 +28,7 @@ namespace LKDUS_API.DTOs
 
       
         public string Name { get; set; }
-        public string Factory { get; set; }
+        public int Factory { get; set; }
 
     }
 
@@ -37,6 +37,6 @@ namespace LKDUS_API.DTOs
         public int Id { get; set; }
 
         public string Name { get; set; }
-        public string Factory { get; set; }
+        public int Factory { get; set; }
     }
 }

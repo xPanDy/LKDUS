@@ -372,9 +372,7 @@
     private decimal avg3 = 0;
     private async void select(decimal value)
     {
-        decimal sum1 = 0;
-        decimal sum2 = 0;
-        decimal sum3 = 0;
+
         if (isEdit)
         {
             for (int i = 0; i < idsForCells.GetLength(0); i++)
@@ -385,6 +383,20 @@
                     if (idsForCells[i, j] == editPosition)
                     {
                         sizesArray[i, j] = value;
+                        decimal sum1 = 0;
+                        decimal sum2 = 0;
+                        decimal sum3 = 0;
+                        for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                        {
+
+                            sum1 = sum1 + sizesArray[ai, 0];
+                            sum2 = sum2 + sizesArray[ai, 1];
+                            sum3 = sum3 + sizesArray[ai, 2];
+
+                        }
+                        avg1 = sum1 / 10;
+                        avg2 = sum2 / 10;
+                        avg3 = sum3 / 10;
                     }
 
                 }
@@ -412,6 +424,20 @@
                                 if (i == idsForCells.GetLength(0) - 1)
                                 {
                                     sizesArray[i, j] = value;
+                                    decimal sum21 = 0;
+                                    decimal sum22 = 0;
+                                    decimal sum23 = 0;
+                                    for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                    {
+
+                                        sum21 = sum21 + sizesArray[ai, 0];
+                                        sum22 = sum22 + sizesArray[ai, 1];
+                                        sum23 = sum23 + sizesArray[ai, 2];
+
+                                    }
+                                    avg1 = sum21 / 10;
+                                    avg2 = sum22 / 10;
+                                    avg3 = sum23 / 10;
                                     colors[i, j] = "";
                                     down = false;
                                     right = true;
@@ -424,6 +450,20 @@
                                 else
                                 {
                                     sizesArray[i, j] = value;
+                                    decimal sum31 = 0;
+                                    decimal sum32 = 0;
+                                    decimal sum33 = 0;
+                                    for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                    {
+
+                                        sum31 = sum31 + sizesArray[ai, 0];
+                                        sum32 = sum32 + sizesArray[ai, 1];
+                                        sum33 = sum33 + sizesArray[ai, 2];
+
+                                    }
+                                    avg1 = sum31 / 10;
+                                    avg2 = sum32 / 10;
+                                    avg3 = sum33 / 10;
                                     colors[i, j] = "";
 
                                     down = true;
@@ -439,12 +479,15 @@
 
                         }
                     }
-                    for (int i = 0; i < sizesArray.GetLength(0); i++)
+                    decimal sum1 = 0;
+                    decimal sum2 = 0;
+                    decimal sum3 = 0;
+                    for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
                     {
 
-                        sum1 = sum1 + sizesArray[i, 0];
-                        sum2 = sum2 + sizesArray[i, 1];
-                        sum3 = sum3 + sizesArray[i, 2];
+                        sum1 = sum1 + sizesArray[ai, 0];
+                        sum2 = sum2 + sizesArray[ai, 1];
+                        sum3 = sum3 + sizesArray[ai, 2];
 
                     }
                     avg1 = sum1 / 10;
@@ -467,6 +510,20 @@
                                 if (j < idsForCells.GetLength(1) - 1)
                                 {
                                     sizesArray[i, j] = value;
+                                    decimal sum41 = 0;
+                                    decimal sum42 = 0;
+                                    decimal sum43 = 0;
+                                    for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                    {
+
+                                        sum41 = sum41 + sizesArray[ai, 0];
+                                        sum42 = sum42 + sizesArray[ai, 1];
+                                        sum43 = sum43 + sizesArray[ai, 2];
+
+                                    }
+                                    avg1 = sum41 / 10;
+                                    avg2 = sum42 / 10;
+                                    avg3 = sum43 / 10;
                                     j++;
 
                                     activePosition = "cell" + i + j;
@@ -489,12 +546,15 @@
 
                         }
                     }
-                    for (int i = 0; i < sizesArray.GetLength(0); i++)
+                    decimal sum1 = 0;
+                    decimal sum2 = 0;
+                    decimal sum3 = 0;
+                    for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
                     {
 
-                        sum1 = sum1 + sizesArray[i, 0];
-                        sum2 = sum2 + sizesArray[i, 1];
-                        sum3 = sum3 + sizesArray[i, 2];
+                        sum1 = sum1 + sizesArray[ai, 0];
+                        sum2 = sum2 + sizesArray[ai, 1];
+                        sum3 = sum3 + sizesArray[ai, 2];
 
                     }
                     avg1 = sum1 / 10;
@@ -520,12 +580,41 @@
                                 if (i == 0 && j == 1)
                                 {
                                     sizesArray[i, j] = value;
+
+                                    decimal sum51 = 0;
+                                    decimal sum52 = 0;
+                                    decimal sum53 = 0;
+                                    for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                    {
+
+                                        sum51 = sum51 + sizesArray[ai, 0];
+                                        sum52 = sum52 + sizesArray[ai, 1];
+                                        sum53 = sum53 + sizesArray[ai, 2];
+
+                                    }
+                                    avg1 = sum51 / 10;
+                                    avg2 = sum52 / 10;
+                                    avg3 = sum53 / 10;
                                     break;
                                 }
 
                                 if (j == 1)
                                 {
                                     sizesArray[i, j] = value; colors[i, j] = "";
+                                    decimal sum51 = 0;
+                                    decimal sum52 = 0;
+                                    decimal sum53 = 0;
+                                    for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                    {
+
+                                        sum51 = sum51 + sizesArray[ai, 0];
+                                        sum52 = sum52 + sizesArray[ai, 1];
+                                        sum53 = sum53 + sizesArray[ai, 2];
+
+                                    }
+                                    avg1 = sum51 / 10;
+                                    avg2 = sum52 / 10;
+                                    avg3 = sum53 / 10;
                                     up = false;
                                     right = true;
                                     i--;
@@ -535,6 +624,20 @@
                                 else if (j == 2)
                                 {
                                     sizesArray[i, j] = value; colors[i, j] = "";
+                                    decimal sum61 = 0;
+                                    decimal sum62 = 0;
+                                    decimal sum63 = 0;
+                                    for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                    {
+
+                                        sum61 = sum61 + sizesArray[ai, 0];
+                                        sum62 = sum62 + sizesArray[ai, 1];
+                                        sum63 = sum63 + sizesArray[ai, 2];
+
+                                    }
+                                    avg1 = sum61 / 10;
+                                    avg2 = sum62 / 10;
+                                    avg3 = sum63 / 10;
                                     up = false;
                                     left = true;
                                     i--;
@@ -554,6 +657,9 @@
                         }
 
                     }
+                    decimal sum1 = 0;
+                    decimal sum2 = 0;
+                    decimal sum3 = 0;
                     for (int i = 0; i < sizesArray.GetLength(0); i++)
                     {
 
@@ -583,6 +689,20 @@
                                 if (j == 2)
                                 {
                                     sizesArray[i, j] = value;
+                                    decimal sum71 = 0;
+                                    decimal sum72 = 0;
+                                    decimal sum73 = 0;
+                                    for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                    {
+
+                                        sum71 = sum71 + sizesArray[ai, 0];
+                                        sum72 = sum72 + sizesArray[ai, 1];
+                                        sum73 = sum73 + sizesArray[ai, 2];
+
+                                    }
+                                    avg1 = sum71 / 10;
+                                    avg2 = sum72 / 10;
+                                    avg3 = sum73 / 10;
                                     colors[i, j] = "";
                                     left = false;
                                     up = true;
@@ -603,6 +723,9 @@
                         }
 
                     }
+                    decimal sum1 = 0;
+                    decimal sum2 = 0;
+                    decimal sum3 = 0;
                     for (int i = 0; i < sizesArray.GetLength(0); i++)
                     {
 
@@ -637,6 +760,20 @@
                             if (i == idsForCells.GetLength(0) - 1 && j == idsForCells.GetLength(1) - 1)
                             {
                                 sizesArray[i, j] = value;
+                                decimal sum1 = 0;
+                                decimal sum2 = 0;
+                                decimal sum3 = 0;
+                                for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                {
+
+                                    sum1 = sum1 + sizesArray[ai, 0];
+                                    sum2 = sum2 + sizesArray[ai, 1];
+                                    sum3 = sum3 + sizesArray[ai, 2];
+
+                                }
+                                avg1 = sum1 / 10;
+                                avg2 = sum2 / 10;
+                                avg3 = sum3 / 10;
                                 break;
                             }
 
@@ -644,6 +781,20 @@
                             if (j < idsForCells.GetLength(1) - 1)
                             {
                                 sizesArray[i, j] = value;
+                                decimal sum1 = 0;
+                                decimal sum2 = 0;
+                                decimal sum3 = 0;
+                                for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                {
+
+                                    sum1 = sum1 + sizesArray[ai, 0];
+                                    sum2 = sum2 + sizesArray[ai, 1];
+                                    sum3 = sum3 + sizesArray[ai, 2];
+
+                                }
+                                avg1 = sum1 / 10;
+                                avg2 = sum2 / 10;
+                                avg3 = sum3 / 10;
                                 j++;
 
                                 activePosition = "cell" + i + j;
@@ -654,6 +805,20 @@
                             else if (j == idsForCells.GetLength(1) - 1)
                             {
                                 sizesArray[i, j] = value;
+                                decimal sum1 = 0;
+                                decimal sum2 = 0;
+                                decimal sum3 = 0;
+                                for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                {
+
+                                    sum1 = sum1 + sizesArray[ai, 0];
+                                    sum2 = sum2 + sizesArray[ai, 1];
+                                    sum3 = sum3 + sizesArray[ai, 2];
+
+                                }
+                                avg1 = sum1 / 10;
+                                avg2 = sum2 / 10;
+                                avg3 = sum3 / 10;
                                 j = 0;
 
                                 i++;

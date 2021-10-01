@@ -28,6 +28,9 @@ namespace LKDUS_UI.Models
         
         
         public int? PackId { get; set; }
+        public int? DefectId { get; set; }
+
+        public int? ClassId { get; set; }
         public int? MeasurementTypeId { get; set; }
 
 

@@ -107,11 +107,17 @@ namespace LKDUS_API
             services.AddScoped<IMeasurementRepository, MeasurementRepository>();
             services.AddScoped<IMeasurementPositionRepository, MeasurementPositionRepository>();
             services.AddScoped<IMeasurementTypeRepository, MeasurementTypeRepository>();
+            services.AddScoped<IMeasurementRangeRepository, MeasurementRangeRepository>();
            
             services.AddScoped<IFusPackRepository, FusPackRepository>();
             services.AddScoped<IPackRepository, PackRepository>();
+            services.AddScoped<IDefectRepository, DefectRepository>();
             services.AddScoped<IDimensionRepository, DimensionRepository>();
             services.AddScoped<IMachineRepository, MachineRepository>();
+         
+            services.AddScoped<IClasssRepository, ClasssRepository>();
+
+
           //  services.AddScoped<IAspUserRepository, AspUserRepository>();
          
 

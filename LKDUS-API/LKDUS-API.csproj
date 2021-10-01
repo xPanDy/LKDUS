@@ -31,8 +31,4 @@
     <PackageReference Include="WebEssentials.AspNetCore.ServiceWorker" Version="1.0.11" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Data\HistoryOfMigrations\" />
-  </ItemGroup>
-
 </Project>

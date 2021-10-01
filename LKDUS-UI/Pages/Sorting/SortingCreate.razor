@@ -155,7 +155,7 @@
 
                         <input class="form-control"
                                @bind-value="@fp.ItemName" type="text" readonly id="packItem">
-                        @{ fusMachineName = fp.ItemName;}
+                        @{ fusclass = fp.ItemName;}
                     </div>
                                 }
                 else
@@ -282,22 +282,15 @@ i <= DateTime.Now.Year + 5; i++)
                 {
                     <nav class="navbar navbar-dark">
                         <div class="container-fluid">
-                            <div class="navbar-btn">
-
-                                <button type="button" @onclick="@GoDefects" class="btn btn-primary">Defekti</button>
-                            </div>
-                            <div class="navbar-btn">
-
-                                <button type="button" @onclick="@GoOuterSorting" class="btn btn-primary">Ārējā finiera šķirošana</button>
-                            </div>
                             @*<div class="navbar-btn">
 
-                                    <button type="button" @onclick="e => SelectMachine(3)" class="btn btn-primary">3.kabata</button>
-                                </div>
-                                <div class="navbar-btn">
+                                <button type="button" @onclick="@GoDefects" class="btn btn-primary">Šķiru atbilstība</button>
+                            </div>*@
+                            <div class="navbar-btn">
 
-                                    <button type="button" @onclick="e => SelectMachine(4)" class="btn btn-primary">4.kabata</button>
-                                </div>*@
+                                <button type="button" @onclick="@GoOuterSorting" class="btn btn-primary">Šķirošana</button>
+                            </div>
+                           
                         </div>
                     </nav>
                     @if (fusMachineName == null)
@@ -455,6 +448,7 @@ i <= DateTime.Now.Year + 5; i++)
 
     public string fusMachineName { get; set; }
 
+    public string fusclass { get; set; }
     public string stringPackValue { get; set; }
 
 
@@ -799,8 +793,8 @@ i <= DateTime.Now.Year + 5; i++)
     private void GoOuterSorting(MouseEventArgs e)
     {
         checkParams();
-                           //        "/sortingouter/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/defects"
-        this.navManager.NavigateTo($"/sortingouter/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/defects");
+        //        "/sortingouter/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/defects"
+        this.navManager.NavigateTo($"/sortingouter/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusclass}/{pshift}/create/defects");
         //this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions");
     }
 

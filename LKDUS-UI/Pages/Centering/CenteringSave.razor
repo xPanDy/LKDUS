@@ -25,15 +25,31 @@
         grid-gap: 10px;
         background-color: white;
         padding: 10px;
+        vertical-align: middle;
     }
 
     .none {
         background-color: rgba(255, 255, 255, 1);
-        text-align: center;
+        
         font-size: 30px;
         height: 100%;
+        display: block;
+        align-content: center;
+        vertical-align: middle;
+        display: inline-flex;
+        align-items: center;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
     }
-
+    /*.spn {
+        vertical-align: middle;
+        text-align: center;
+        align-content: center;
+        display: inline-flex;
+        align-items: center;
+    }
+*/
     .up, .left, .down, .right {
        /* color: red;*/
         border: solid 4px red;
@@ -77,7 +93,9 @@
                     <div style="        background-color: @colorBgs[0];" class="up" @onclick="el => setPositionValue(0)">@positionsAngle[0] </div>
                     <div class="none"></div>
                     <div style="        background-color: @colorBgs[1];" class="left" @onclick="el => setPositionValue(1)">@positionsAngle[1]</div>
-                    <div class="none">Kreisā puse</div>
+
+                    <div class="none align-middle"><span class="spn" >
+                        Kreisā puse</span></div>
                     <div style="        background-color: @colorBgs[2];" class="right" @onclick="el => setPositionValue(2)">@positionsAngle[2]</div>
                     <div class="none"></div>
                     <div style="        background-color: @colorBgs[3];" class="down" @onclick="el => setPositionValue(3)">@positionsAngle[3] </div>
@@ -93,7 +111,7 @@
                     <div style="        background-color: @colorBgs[4];" class="up" @onclick="el => setPositionValue(4)">@positionsAngle[4] </div>
                     <div class="none"></div>
                     <div style="        background-color: @colorBgs[5];" class="left" @onclick="el => setPositionValue(5)">@positionsAngle[5]</div>
-                    <div class="none">Labā puse</div>
+                    <div class="none  align-middle"><span class="spn">Labā puse</span></div>
                     <div style="        background-color: @colorBgs[6];" class="right" @onclick="el => setPositionValue(6)">@positionsAngle[6]</div>
                     <div class="none"></div>
                     <div style="        background-color: @colorBgs[7];" class="down" @onclick="el => setPositionValue(7)"> @positionsAngle[7]</div>
@@ -361,8 +379,7 @@
         string final = packStringResult.Substring(pos1, pos2 - pos1);
 
         string[] elements = final.Split(':');
-        //   isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
-
+        
         Measurement meas = new Measurement();
         meas.DateCreated = DateTime.Parse(measurementDateAndTime);
         meas.Shift = shift;
@@ -545,7 +562,7 @@
             positionsAngle[i] = "";
 
         }
-        ModelPacks = await this.packRepo.Get(Endpoints.PacksEndpoint);
+      //  ModelPacks = await this.packRepo.Get(Endpoints.PacksEndpoint);
         Machines = await machineRepository.Get(Endpoints.MachinesEndpoint);
         Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
         machine.Id = int.Parse(pmachineIdd);

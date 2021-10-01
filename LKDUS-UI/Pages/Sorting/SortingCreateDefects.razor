@@ -10,7 +10,9 @@
 @inject IMeasurementRepository measurementRepo
 @inject IMachinesRepository machineRepository
 @inject IAuthenticationRepository authRepo
+@inject IClasssRepository classRepo
 @inject IDefectRepository defectRepo
+
 @inject IPacksRepository packRepo
 @inject IMeasurementTypeRepository measurementTypeRepository
 @inject IJSRuntime JsRuntime
@@ -25,6 +27,19 @@
         color: #ffffff !important;
         background-color: #161617;
         border-color: #494F57;
+    }
+    td {
+        word-wrap: break-word;
+    }
+
+    .nonono {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    h4 {
+        padding-left:5px;
+        padding-right:5px;
     }
 </style>
 
@@ -59,424 +74,102 @@
 
 
     </div>
-    @if (isTypeCklicked)
+    @if (isTypeCklicked && DefectList != null)
     {
 
-
-
-
         <div class="row">
-
-
-
             <div class="col">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
+                <table style="table-layout: fixed; width: 100%">
+                    <thead>
+
+                    </thead>
+                    <tbody>
+                        @for (int i = 0; i < 11; i++)
+                        {
+                            int tmp = i;
+                            <tr>
+                                <td>
+                                    <h4>@DefectList[i].Name</h4>
+                                </td>
+                                <td>
+                                    <div class="row">
+                                        <div type="button" @onclick="e=>select(tmp,+1)" class="btn btn-success btn-lg  ">+</div>
+                                        <h3    >@positions[tmp]</h3>
+                                        <button type="button" @onclick="e=>select(tmp,-1)"
+                                             disabled="@isDisabledMinus[tmp]" class="btn btn-danger btn-lg">-</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
 
-                                        <th scope="col">Defekta veids</th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-
-                                        <td>
-                                            Plaisas
-                                        </td>
-
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(0,+1)" class="btn  btn-danger h-33 w-33">+</button>
-                                            <input readonly value=@positions[0]>
-                                            <button type="button" @onclick="e=>select(0,-1)" disabled="@isDisabledMinus[0]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Svītra no sasista naža
-
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(1,+1)" class="btn  btn-danger h-33 w-33">+</button>
-                                            <input readonly value=@positions[1]>
-                                            <button type="button" @onclick="e=>select(1,-1)" disabled="@isDisabledMinus[1]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Risa no atkritumiem uz naža
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(2,+1)" class="btn  btn-danger h-33 w-33">+</button>
-                                            <input readonly value=@positions[2]>
-                                            <button type="button" @onclick="e=>select(2,-1)" disabled="@isDisabledMinus[2]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>Risas no naža</td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(3,+1)" class="btn  btn-danger h-33 w-33">+</button>
-                                            <input readonly value=@positions[3]>
-                                            <button type="button" @onclick="e=>select(3,-1)" disabled="@isDisabledMinus[3]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>Zilā svītra</td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(4,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[4]>
-                                            <button type="button" @onclick="e=>select(4,-1)" disabled="@isDisabledMinus[4]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>Iededzināta mizas svītra</td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(5,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[5]>
-                                            <button type="button" @onclick="e=>select(5,-1)" disabled="@isDisabledMinus[5]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Svītra no piespiedējsijas
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(6,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[6]>
-                                            <button type="button" @onclick="e=>select(6,-1)" disabled="@isDisabledMinus[6]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                 
-                                    
-                                    
-                                    <tr>
-
-                                        <td>Iekrāsojums</td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(7,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[7]>
-                                            <button type="button" @onclick="e=>select(7,-1)" disabled="@isDisabledMinus[7]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>Trupe</td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(8,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[8]>
-                                            <button type="button" @onclick="e=>select(8,-1)" disabled="@isDisabledMinus[8]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>Svēdras</td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(9,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[9]>
-                                            <button type="button" @onclick="e=>select(9,-1)" disabled="@isDisabledMinus[9]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>Iekrāsojums, svēdru ailes</td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(10,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[10]>
-                                            <button type="button" @onclick="e=>select(10,-1)" disabled="@isDisabledMinus[10]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>Himalaji</td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(11,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[11]>
-                                            <button type="button" @onclick="e=>select(11,-1)" disabled="@isDisabledMinus[11]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Mizas ieaugums
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(12,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[12]>
-                                            <button type="button" @onclick="e=>select(12,-1)" disabled="@isDisabledMinus[12]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Izkrituši zari līdz 6 mm
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(13,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[13]>
-                                            <button type="button" @onclick="e=>select(13,-1)" disabled="@isDisabledMinus[13]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Izkrituši zari līdz 10 mm
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(14,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[14]>
-                                            <button type="button" @onclick="e=>select(14,-1)" disabled="@isDisabledMinus[14]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Izkrituši zari līdz 15 mm
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(15,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[15]>
-                                            <button type="button" @onclick="e=>select(15,-1)" disabled="@isDisabledMinus[15]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Izkrituši zari līdz 40 mm
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(16,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[16]>
-                                            <button type="button" @onclick="e=>select(16,-1)" disabled="@isDisabledMinus[16]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Izkrituši zari virs 40 mm
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(17,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[17]>
-                                            <button type="button" @onclick="e=>select(17,-1)" disabled="@isDisabledMinus[17]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Veseli,saauguši zari
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(18,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[18]>
-                                            <button type="button" @onclick="e=>select(18,-1)" disabled="@isDisabledMinus[18]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Veseli,saauguši zari ar plaisām
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(19,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[19]>
-                                            <button type="button" @onclick="e=>select(19,-1)" disabled="@isDisabledMinus[19]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Bojāts neizkritis zars
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(20,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[20]>
-                                            <button type="button" @onclick="e=>select(20,-1)" disabled="@isDisabledMinus[20]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Māzeraini zari
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(21,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[21]>
-                                            <button type="button" @onclick="e=>select(21,-1)" disabled="@isDisabledMinus[21]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Zari ar mizas ieaugumiem
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(22,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[22]>
-                                            <button type="button" @onclick="e=>select(22,-1)" disabled="@isDisabledMinus[22]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Sakrokotas maliņas (žāv def)
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(23,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[23]>
-                                            <button type="button" @onclick="e=>select(23,-1)" disabled="@isDisabledMinus[23]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Viļņains finieris
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(24,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[24]>
-                                            <button type="button" @onclick="e=>select(24,-1)" disabled="@isDisabledMinus[24]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>Apdedzis</td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(25,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[25]>
-                                            <button type="button" @onclick="e=>select(25,-1)" disabled="@isDisabledMinus[25]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Loksnes ar kūkumu
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(26,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[26]>
-                                            <button type="button" @onclick="e=>select(26,-1)" disabled="@isDisabledMinus[26]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Iekšējas plaisas no loksnēm ar kūkumu
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(27,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[27]>
-                                            <button type="button" @onclick="e=>select(27,-1)" disabled="@isDisabledMinus[27]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Mehānisks bojājums
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(28,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[28]>
-                                            <button type="button" @onclick="e=>select(28,-1)" disabled="@isDisabledMinus[28]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Eļļas traipi
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(29,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[29]>
-                                            <button type="button" @onclick="e=>select(29,-1)" disabled="@isDisabledMinus[29]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Ķīmisks iekrāsojums
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(30,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[30]>
-                                            <button type="button" @onclick="e=>select(30,-1)" disabled="@isDisabledMinus[30]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Harvestera   bojājumi
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(31,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[31]>
-                                            <button type="button" @onclick="e=>select(31,-1)" disabled="@isDisabledMinus[31]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            Atbilst šķirai
-                                        </td>
-
-                                        <td>
-                                            <button type="button" @onclick="e=>select(32,+1)" class="btn  btn-danger h-33 w-33"> +</button>
-                                            <input readonly value=@positions[32]>
-                                            <button type="button" @onclick="e=>select(32,-1)" disabled="@isDisabledMinus[32]" class="btn btn-success  h-33 w-33">-</button>
-                                        </td>
-                                    </tr>   
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
             </div>
+            <div class="col">
+                <table style="table-layout: fixed; width: 100%">
+                    <thead>
+
+                    </thead>
+                    <tbody>
+
+                        @for (int i = 11; i < 22; i++)
+
+                        {
+                            int tmp = i;
+                            <tr>
+                                <td>
+                                    <h4>@DefectList[tmp].Name</h4>
+                                </td>
+                                <td>
+                                    <div class="row">
+                                        <div type="button" @onclick="e=>select(tmp,+1)" class="btn btn-success btn-lg  ">+</div>
+                                        <h3 readonly>@positions[tmp]</h3>
+                                        <button type="button" @onclick="e=>select(tmp,-1)"
+                                             disabled="@isDisabledMinus[tmp]" class="btn btn-danger btn-lg">-</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        }
 
 
+                    </tbody>
+                </table>
+            </div>
+            <div class="col">
+                <table style="table-layout: fixed; width: 100%">
+                    <thead>
 
+                    </thead>
+                    <tbody>
+                        @for (int i =  23; i <33  ; i++)
 
+                        {
+                            int tmp = i;
+                            <tr>
+                                <td>
+                                    <h4>@DefectList[tmp].Name</h4>
+                                </td>
+                                <td>
+                                    <div class="row">
+                                        <div type="button" @onclick="e=>select(tmp,+1)" class="btn btn-success btn-lg  ">+</div>
+                                        <h3 readonly>@positions[tmp]</h3>
+                                        <button type="button" @onclick="e=>select(tmp,-1)"
+                                             disabled="@isDisabledMinus[tmp]" class="btn btn-danger btn-lg">-</button>
+                                    </div>
+                                </td>
+                            </tr>
 
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
+
+
+
+        
 
 
 
@@ -556,20 +249,17 @@
         {
             if (i == index)
             {
-                if (positions[i] >= 0)
+                positions[index] = positions[index] + valuetoadd;
+                if (positions[index] == 0)
                 {
-                    positions[i] = positions[i] + valuetoadd;
+                    isDisabledMinus[index] = true;
 
+                    return;
 
-                }
-                if (positions[i] == 0)
+                }else
                 {
-                    isDisabledMinus[i] = true;
-                    break;
-                }
-                else
-                {
-                    isDisabledMinus[i] = false;
+                    isDisabledMinus[index] = false;
+                    return;
                 }
             }
         }
@@ -589,6 +279,7 @@
         {
 
             DefectList =   await defectRepo.Get(Endpoints.DefectsEndpoint);
+            ClassList =   await classRepo.Get(Endpoints.ClasssEndpoint);
             for (int i = 0; i < positions.GetLength(0); i++)
             {
 
@@ -631,6 +322,7 @@
     MeasurementType mt = new MeasurementType();
 
     private IList<Defect> DefectList;
+    private IList<Classs> ClassList;
     private IList<Pack> ModelPacks;
     private async void SaveMeasurement()
     {
@@ -713,7 +405,7 @@
         meas.MeasurementTypeId = 1021;
         ;
         meas.PackId = int.Parse(elements[1]);
-
+        meas.DefectId = null;
         meas.Measurement1 = Convert.ToDecimal(positions[0]);
         meas.Measurement2 = Convert.ToDecimal(positions[1]);
         meas.Measurement3 = Convert.ToDecimal(positions[2]);

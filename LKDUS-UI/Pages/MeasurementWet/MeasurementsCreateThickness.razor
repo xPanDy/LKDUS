@@ -12,6 +12,7 @@
 @inject IMeasurementRepository measurementRepo;
 @inject IMachinesRepository machineRepository
 @inject IMeasurementTypeRepository measurementTypeRepository;
+@inject IMeasurementRangeRepository measurementRangeRepo;
 @inject IPacksRepository packRepo
 @inject IAuthenticationRepository authRepo
 @inject IMeasurementTypeRepository measTRepo
@@ -257,8 +258,8 @@
         <div class="container">
 
             <div class="d-flex justify-content-between">
-                <button type="button" @onclick="Reduce"  disabled="@visibilitystatus" style="color:deeppink" class="btn btn-secondary btn-lg">-</button>
-                <table class="table table-bordered table-bordered">
+                <button type="button" @onclick="Limeuce"  disabled="@visibilitystatus" style="color:deeppink" class="btn btn-secondary btn-lg">-</button>
+                <table class="table table-bordeLime table-bordeLime">
                     <tbody>
                         <tr class="text-center">
 
@@ -336,7 +337,7 @@
                 if (idsForCells[i, j] == activePosition)
                 {
                     activePosition = "cell" + i + j;
-                    colors[i, j] = "red";
+                    colors[i, j] = "Lime";
                     break;
                 }
             }
@@ -360,7 +361,7 @@
             }
         }
         activePosition = "cell00";
-        colors[0, 0] = "red";
+        colors[0, 0] = "Lime";
 
         isTypeCklicked = true;
 
@@ -381,7 +382,7 @@
             }
         }
         activePosition = "cell00";
-        colors[0, 0] = "red";
+        colors[0, 0] = "Lime";
 
 
         isTypeCklicked = true;
@@ -402,7 +403,7 @@
             }
         }
         activePosition = "cell00";
-        colors[0, 0] = "red";
+        colors[0, 0] = "Lime";
 
         isTypeCklicked = true;
         selecteSizeType = 2;
@@ -469,6 +470,8 @@
     private async void select(decimal value)
     {
 
+       
+
         if (isEdit)
         {
             for (int i = 0; i < idsForCells.GetLength(0); i++)
@@ -479,6 +482,20 @@
                     if (idsForCells[i, j] == editPosition)
                     {
                         sizesArray[i, j] = value;
+                        decimal sumd1 = 0;
+                        decimal sumd2 = 0;
+                        decimal sumd3 = 0;
+                        for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                        {
+
+                            sumd1 = sumd1 + sizesArray[ai, 0];
+                            sumd2 = sumd2 + sizesArray[ai, 1];
+                            sumd3 = sumd3 + sizesArray[ai, 2];
+
+                        }
+                        avg1 = sumd1 /40;
+                        avg2 = sumd2 /40;
+                        avg3 = sumd3 /40;
                     }
 
                 }
@@ -517,24 +534,52 @@
                                 if (i == idsForCells.GetLength(0) - 1)
                                 {
                                     sizesArray[i, j] = value;
+                                    decimal sumf1 = 0;
+                                    decimal sumf2 = 0;
+                                    decimal sumf3 = 0;
+                                    for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                    {
+
+                                        sumf1 = sumf1 + sizesArray[ai, 0];
+                                        sumf2 = sumf2 + sizesArray[ai, 1];
+                                        sumf3 = sumf3 + sizesArray[ai, 2];
+
+                                    }
+                                    avg1 = sumf1 / 40;
+                                    avg2 = sumf2 / 40;
+                                    avg3 = sumf3 / 40;
                                     colors[i, j] = "";
                                     down = false;
                                     right = true;
                                     j++;
                                     activePosition = "cell" + i + j;
-                                    colors[i, j] = "red";
+                                    colors[i, j] = "Lime";
 
                                     break;
                                 }
                                 else
                                 {
                                     sizesArray[i, j] = value;
+                                    decimal sum21 = 0;
+                                    decimal sum22 = 0;
+                                    decimal sum23 = 0;
+                                    for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                    {
+
+                                        sum21 = sum21 + sizesArray[ai, 0];
+                                        sum22 = sum22 + sizesArray[ai, 1];
+                                        sum23 = sum23 + sizesArray[ai, 2];
+
+                                    }
+                                    avg1 = sum21 / 40;
+                                    avg2 = sum22 / 40;
+                                    avg3 = sum23 / 40;
                                     colors[i, j] = "";
 
                                     down = true;
                                     i++;
                                     activePosition = "cell" + (i) + j;
-                                    colors[i, j] = "red";
+                                    colors[i, j] = "Lime";
 
                                     break;
 
@@ -560,10 +605,24 @@
                                 if (j < idsForCells.GetLength(1) - 1)
                                 {
                                     sizesArray[i, j] = value;
+                                    decimal sum31 = 0;
+                                    decimal sum32 = 0;
+                                    decimal sum33 = 0;
+                                    for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                    {
+
+                                        sum31 = sum31 + sizesArray[ai, 0];
+                                        sum32 = sum32 + sizesArray[ai, 1];
+                                        sum33 = sum33 + sizesArray[ai, 2];
+
+                                    }
+                                    avg1 = sum31 / 40;
+                                    avg2 = sum32 / 40;
+                                    avg3 = sum33 / 40;
                                     j++;
 
                                     activePosition = "cell" + i + j;
-                                    colors[i, j] = "red";
+                                    colors[i, j] = "Lime";
                                     if (j == idsForCells.GetLength(1) - 1)
                                     {
                                         up = true;
@@ -601,26 +660,68 @@
                                 if (i == 0 && j == 1)
                                 {
                                     sizesArray[i, j] = value;
+                                    decimal sum41 = 0;
+                                    decimal sum42 = 0;
+                                    decimal sum43 = 0;
+                                    for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                    {
+
+                                        sum41 = sum41 + sizesArray[ai, 0];
+                                        sum42 = sum42 + sizesArray[ai, 1];
+                                        sum43 = sum43 + sizesArray[ai, 2];
+
+                                    }
+                                    avg1 = sum41 / 40;
+                                    avg2 = sum42 / 40;
+                                    avg3 = sum43 / 40;
                                     break;
                                 }
 
                                 if (j == 1)
                                 {
                                     sizesArray[i, j] = value; colors[i, j] = "";
+                                    decimal sum51 = 0;
+                                    decimal sum52 = 0;
+                                    decimal sum53 = 0;
+                                    for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                    {
+
+                                        sum51 = sum51 + sizesArray[ai, 0];
+                                        sum52 = sum52 + sizesArray[ai, 1];
+                                        sum53 = sum53 + sizesArray[ai, 2];
+
+                                    }
+                                    avg1 = sum51 / 40;
+                                    avg2 = sum52 / 40;
+                                    avg3 = sum53 / 40;
                                     up = false;
                                     right = true;
                                     i--;
                                     activePosition = "cell" + i + j;
-                                    colors[i, j] = "red";
+                                    colors[i, j] = "Lime";
                                 }
                                 else if (j == 2)
                                 {
                                     sizesArray[i, j] = value; colors[i, j] = "";
+                                    decimal sum61 = 0;
+                                    decimal sum62 = 0;
+                                    decimal sum63 = 0;
+                                    for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                    {
+
+                                        sum61 = sum61 + sizesArray[ai, 0];
+                                        sum62 = sum62 + sizesArray[ai, 1];
+                                        sum63 = sum63 + sizesArray[ai, 2];
+
+                                    }
+                                    avg1 = sum61 / 40;
+                                    avg2 = sum62 / 40;
+                                    avg3 = sum63 / 40;
                                     up = false;
                                     left = true;
                                     i--;
                                     activePosition = "cell" + i + j;
-                                    colors[i, j] = "red";
+                                    colors[i, j] = "Lime";
                                 }
 
                             }
@@ -652,12 +753,26 @@
                                 if (j == 2)
                                 {
                                     sizesArray[i, j] = value;
+                                    decimal sum81 = 0;
+                                    decimal sum82 = 0;
+                                    decimal sum83 = 0;
+                                    for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                    {
+
+                                        sum81 = sum81 + sizesArray[ai, 0];
+                                        sum82 = sum82 + sizesArray[ai, 1];
+                                        sum83 = sum83 + sizesArray[ai, 2];
+
+                                    }
+                                    avg1 = sum1 / 40;
+                                    avg2 = sum2 / 40;
+                                    avg3 = sum3 / 40;
                                     colors[i, j] = "";
                                     left = false;
                                     up = true;
                                     j--;
                                     activePosition = "cell" + i + j;
-                                    colors[i, j] = "red";
+                                    colors[i, j] = "Lime";
                                 }
 
                             }
@@ -694,6 +809,20 @@
                             if (i == idsForCells.GetLength(0) - 1 && j == idsForCells.GetLength(1) - 1)
                             {
                                 sizesArray[i, j] = value;
+                                decimal suma1 = 0;
+                                decimal suma2 = 0;
+                                decimal suma3 = 0;
+                                for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                {
+
+                                    suma1 = suma1 + sizesArray[ai, 0];
+                                    suma2 = suma2 + sizesArray[ai, 1];
+                                    suma3 = suma3 + sizesArray[ai, 2];
+
+                                }
+                                avg1 = suma1 / 40;
+                                avg2 = suma2 / 40;
+                                avg3 = suma3 / 40;
                                 break;
                             }
 
@@ -701,21 +830,49 @@
                             if (j < idsForCells.GetLength(1) - 1)
                             {
                                 sizesArray[i, j] = value;
+                                decimal sumb1 = 0;
+                                decimal sumb2 = 0;
+                                decimal sumb3 = 0;
+                                for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                {
+
+                                    sumb1 = sumb1 + sizesArray[ai, 0];
+                                    sumb2 = sumb2 + sizesArray[ai, 1];
+                                    sumb3 = sumb3 + sizesArray[ai, 2];
+
+                                }
+                                avg1 = sumb1 /40;
+                                avg2 = sumb2 /40;
+                                avg3 = sumb3 /40;
                                 j++;
 
                                 activePosition = "cell" + i + j;
-                                colors[i, j] = "red";
+                                colors[i, j] = "Lime";
                                 break;
 
                             }
                             else if (j == idsForCells.GetLength(1) - 1)
                             {
                                 sizesArray[i, j] = value;
+                                decimal sumc1 = 0;
+                                decimal sumc2 = 0;
+                                decimal sumc3 = 0;
+                                for (int ai = 0; ai < sizesArray.GetLength(0); ai++)
+                                {
+
+                                    sumc1 = sumc1 + sizesArray[ai, 0];
+                                    sumc2 = sumc2 + sizesArray[ai, 1];
+                                    sumc3 = sumc3 + sizesArray[ai, 2];
+
+                                }
+                                avg1 = sumc1 / 40;
+                                avg2 = sumc2 / 40;
+                                avg3 = sumc3 / 40;
                                 j = 0;
 
                                 i++;
                                 activePosition = "cell" + i + j;
-                                colors[i, j] = "red";
+                                colors[i, j] = "Lime";
                                 break;
                             }
                         }
@@ -772,33 +929,33 @@
     private void setPos(int i)
     {
 
-        // Color = Color == "red" ? "green" : "red";
+        // Color = Color == "Lime" ? "green" : "Lime";
         actPos = i;
         actPosCol = i;
 
         if (i == 0)
         {
-            colorBg1 = "red";
+            colorBg1 = "Lime";
             colorBg2 = "";
             colorBg3 = "";
         }
         else if (i == 1)
         {
             colorBg1 = "";
-            colorBg2 = "red";
+            colorBg2 = "Lime";
             colorBg3 = "";
         }
         else if (i == 2)
         {
             colorBg1 = "";
             colorBg2 = "";
-            colorBg3 = "red";
+            colorBg3 = "Lime";
         }
 
         //actPosCol
     }
 
-    private string Color { get; set; } = "red";
+    private string Color { get; set; } = "Lime";
     private IList<Measurement> Model2;
 
     private int actPos;
@@ -827,12 +984,16 @@
 
     MeasurementType mt = new MeasurementType();
 
+    MeasurementRange mr = new MeasurementRange();
+
     protected async override Task OnInitializedAsync()
     {
         ModelPacks = await this.packRepo.Get(Endpoints.PacksEndpoint);
 
         machineId = int.Parse(pmachineIdd);
 
+        Ranges = await this.measurementRangeRepo.Get(Endpoints.MeasurementRangeEntpoint);
+        mr = Ranges.Where(e => e.Id.Equals(1)).FirstOrDefault();
         //  mach = await machineRepository.Get(Endpoints.MachinesEndpoint, machineId);
 
 
@@ -897,13 +1058,14 @@
         // this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
     }
     private IList<Pack> ModelPacks;
+    private IList<MeasurementRange> Ranges;
     bool isSuccess = false;
     bool isPackCreated = false;
     private async void SaveMeasurement()
     {
 
 
-       // var pid = ModelPacks. Max(el => el.Id) + 1;
+        // var pid = ModelPacks. Max(el => el.Id) + 1;
 
 
         String measurementDateAndTime = DateTime.Now.ToString("g");
@@ -1014,7 +1176,7 @@
     bool visibilitystatus = false;
     bool visibilitystatus2 = false;
 
-    private void Reduce(MouseEventArgs e)
+    private void Limeuce(MouseEventArgs e)
     {
         for (int i = 0; i < sizes.Length; i++)
         {

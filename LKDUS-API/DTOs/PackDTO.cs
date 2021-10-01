@@ -23,7 +23,7 @@ namespace LKDUS_API.DTOs
         public string MeasurementTypeName { get; set; }
         public int? DimensionId { get; set; }
         //  public virtual IList<Measurement> MeasurementsList { get; set; }
- 
+        public string FusClass { get; set; }
     }
 
     public class PackCreateDTO
@@ -39,6 +39,7 @@ namespace LKDUS_API.DTOs
         public string FusCode { get; set; }
         public string MeasurementTypeName { get; set; }
           public int? DimensionId { get; set; }
+        public string FusClass { get; set; }
     }
 
     public class PackUpdateDTO
@@ -53,5 +54,6 @@ namespace LKDUS_API.DTOs
         public string FusCode { get; set; }
         public string MeasurementTypeName { get; set; }
         public int? DimensionId { get; set; }
-     }
+        public string FusClass { get; set; }
+    }
 }

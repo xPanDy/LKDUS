@@ -21,6 +21,8 @@ namespace LKDUS_UI.Static
         public static string RegisterUserEndpoint = $"{BaseUrl}api/aspnetusers/";
         public static string PacksEndpoint = $"{BaseUrl}api/pack/";
         public static string DefectsEndpoint = $"{BaseUrl}api/defect/";
+        public static string ClasssEndpoint = $"{BaseUrl}api/classs/";
+        public static string MeasurementRangeEntpoint = $"{BaseUrl}api/measurementrange/";
 
 
     }
