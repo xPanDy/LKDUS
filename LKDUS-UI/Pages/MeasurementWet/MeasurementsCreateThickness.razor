@@ -258,7 +258,7 @@
         <div class="container">
 
             <div class="d-flex justify-content-between">
-                <button type="button" @onclick="Limeuce"  disabled="@visibilitystatus" style="color:deeppink" class="btn btn-secondary btn-lg">-</button>
+                <button type="button" @onclick="Limeuce" disabled="@visibilitystatus" style="color:deeppink" class="btn btn-secondary btn-lg">-</button>
                 <table class="table table-bordeLime table-bordeLime">
                     <tbody>
                         <tr class="text-center">
@@ -330,10 +330,16 @@
                     editPosition = "cell" + i + j;
 
                 }
+                else if (sizesArray[i, j] < mr.FormatMin || sizesArray[i, j] > mr.FormatMax && sizesArray[i, j] != 0)
+                {
+                    colors[i, j] = "#F99B28";
+                }
                 else
                 {
                     colors[i, j] = "";
+
                 }
+
                 if (idsForCells[i, j] == activePosition)
                 {
                     activePosition = "cell" + i + j;
@@ -470,7 +476,8 @@
     private async void select(decimal value)
     {
 
-       
+
+
 
         if (isEdit)
         {
@@ -482,6 +489,10 @@
                     if (idsForCells[i, j] == editPosition)
                     {
                         sizesArray[i, j] = value;
+                        if (value < mr.FormatMin && value > mr.FormatMax)
+                        {
+                            colors[i, j] = "#F99B28";
+                        }
                         decimal sumd1 = 0;
                         decimal sumd2 = 0;
                         decimal sumd3 = 0;
@@ -493,9 +504,9 @@
                             sumd3 = sumd3 + sizesArray[ai, 2];
 
                         }
-                        avg1 = sumd1 /40;
-                        avg2 = sumd2 /40;
-                        avg3 = sumd3 /40;
+                        avg1 = sumd1 / 40;
+                        avg2 = sumd2 / 40;
+                        avg3 = sumd3 / 40;
                     }
 
                 }
@@ -534,6 +545,12 @@
                                 if (i == idsForCells.GetLength(0) - 1)
                                 {
                                     sizesArray[i, j] = value;
+
+                                    if (value < mr.FormatMin && value > mr.FormatMax)
+                                    {
+                                        colors[i, j] = "#F99B28";
+                                    }
+
                                     decimal sumf1 = 0;
                                     decimal sumf2 = 0;
                                     decimal sumf3 = 0;
@@ -560,6 +577,10 @@
                                 else
                                 {
                                     sizesArray[i, j] = value;
+                                    if (value < mr.FormatMin && value > mr.FormatMax)
+                                    {
+                                        colors[i, j] = "#F99B28";
+                                    }
                                     decimal sum21 = 0;
                                     decimal sum22 = 0;
                                     decimal sum23 = 0;
@@ -605,6 +626,10 @@
                                 if (j < idsForCells.GetLength(1) - 1)
                                 {
                                     sizesArray[i, j] = value;
+                                    if (value < mr.FormatMin || value > mr.FormatMax)
+                                    {
+                                        colors[i, j] = "#F99B28";
+                                    }
                                     decimal sum31 = 0;
                                     decimal sum32 = 0;
                                     decimal sum33 = 0;
@@ -660,6 +685,10 @@
                                 if (i == 0 && j == 1)
                                 {
                                     sizesArray[i, j] = value;
+                                    if (value < mr.FormatMin || value > mr.FormatMax)
+                                    {
+                                        colors[i, j] = "#F99B28";
+                                    }
                                     decimal sum41 = 0;
                                     decimal sum42 = 0;
                                     decimal sum43 = 0;
@@ -679,7 +708,17 @@
 
                                 if (j == 1)
                                 {
-                                    sizesArray[i, j] = value; colors[i, j] = "";
+                                    sizesArray[i, j] = value;
+                                    if (value < mr.FormatMin || value > mr.FormatMax)
+                                    {
+                                        colors[i, j] = "#F99B28";
+                                    }
+                                    else
+                                    {
+
+                                        colors[i, j] = "";
+
+                                    }
                                     decimal sum51 = 0;
                                     decimal sum52 = 0;
                                     decimal sum53 = 0;
@@ -702,7 +741,20 @@
                                 }
                                 else if (j == 2)
                                 {
-                                    sizesArray[i, j] = value; colors[i, j] = "";
+                                    sizesArray[i, j] = value;
+                                    if (value < mr.FormatMin || value > mr.FormatMax)
+                                    {
+                                        colors[i, j] = "#F99B28";
+                                    }
+                                    else
+                                    {
+                                        colors[i, j] = "";
+
+                                    }
+
+
+
+
                                     decimal sum61 = 0;
                                     decimal sum62 = 0;
                                     decimal sum63 = 0;
@@ -753,6 +805,10 @@
                                 if (j == 2)
                                 {
                                     sizesArray[i, j] = value;
+                                    if (value < mr.FormatMin || value > mr.FormatMax)
+                                    {
+                                        colors[i, j] = "#F99B28";
+                                    }
                                     decimal sum81 = 0;
                                     decimal sum82 = 0;
                                     decimal sum83 = 0;
@@ -809,6 +865,10 @@
                             if (i == idsForCells.GetLength(0) - 1 && j == idsForCells.GetLength(1) - 1)
                             {
                                 sizesArray[i, j] = value;
+                                if (value < mr.FormatMin || value > mr.FormatMax)
+                                {
+                                    colors[i, j] = "#F99B28";
+                                }
                                 decimal suma1 = 0;
                                 decimal suma2 = 0;
                                 decimal suma3 = 0;
@@ -830,6 +890,10 @@
                             if (j < idsForCells.GetLength(1) - 1)
                             {
                                 sizesArray[i, j] = value;
+                                if (value < mr.FormatMin || value > mr.FormatMax)
+                                {
+                                    colors[i, j] = "#F99B28";
+                                }
                                 decimal sumb1 = 0;
                                 decimal sumb2 = 0;
                                 decimal sumb3 = 0;
@@ -841,9 +905,9 @@
                                     sumb3 = sumb3 + sizesArray[ai, 2];
 
                                 }
-                                avg1 = sumb1 /40;
-                                avg2 = sumb2 /40;
-                                avg3 = sumb3 /40;
+                                avg1 = sumb1 / 40;
+                                avg2 = sumb2 / 40;
+                                avg3 = sumb3 / 40;
                                 j++;
 
                                 activePosition = "cell" + i + j;
@@ -854,6 +918,10 @@
                             else if (j == idsForCells.GetLength(1) - 1)
                             {
                                 sizesArray[i, j] = value;
+                                if (value < mr.FormatMin || value > mr.FormatMax)
+                                {
+                                    colors[i, j] = "#F99B28";
+                                }
                                 decimal sumc1 = 0;
                                 decimal sumc2 = 0;
                                 decimal sumc3 = 0;
@@ -985,6 +1053,7 @@
     MeasurementType mt = new MeasurementType();
 
     MeasurementRange mr = new MeasurementRange();
+    MeasurementRange mrtest = new MeasurementRange();
 
     protected async override Task OnInitializedAsync()
     {
@@ -994,6 +1063,7 @@
 
         Ranges = await this.measurementRangeRepo.Get(Endpoints.MeasurementRangeEntpoint);
         mr = Ranges.Where(e => e.Id.Equals(1)).FirstOrDefault();
+        //   mrtest = await this.measurementRangeRepo.Get(1);
         //  mach = await machineRepository.Get(Endpoints.MachinesEndpoint, machineId);
 
 
@@ -1184,7 +1254,7 @@
             sizes[i] = sizes[i] - 0.01m;
         }
 
-        if(sizes[0]<= 0.00m)
+        if (sizes[0] <= 0.00m)
         {
             visibilitystatus = true;
         }

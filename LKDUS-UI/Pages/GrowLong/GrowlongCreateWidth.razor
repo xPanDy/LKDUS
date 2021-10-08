@@ -43,10 +43,59 @@
     </div>
 
     <div class="row">
+        <div class="row">
 
 
 
-        <div class="col">
+
+            <div class="col w-25"></div>
+
+            <div class="col">
+
+                <button type="button" @onclick="e=>setdimension(28)" class="btn btn-outline-secondary btn-block">
+                    <h4>4x9</h4>
+
+                </button>
+
+
+            </div>
+
+            <div class="col w-25"></div>
+
+            <div class="col">
+
+                <button type="button" @onclick="e=>setdimension(29)" class="btn btn-outline-secondary btn-block">
+                    <h4>4x10</h4>
+
+
+                </button>
+
+            </div>
+
+
+            <div class="col w-25"></div>
+
+            <div class="col">
+
+                <button type="button" @onclick="e=>setdimension(30)" class="btn btn-outline-secondary btn-block">
+                    <h4>4x10</h4>
+
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+    @if (isTypeCklicked)
+    {<div class="col">
             <table class="table table-hover">
 
                 <thead>
@@ -55,19 +104,12 @@
                     <tr>
 
                         <th>Nr.p.k.</th>
-                        <th>Bāzes mala </th>
-                        <th>Otra puse  </th>
+                        <th>1.mala</th>
+                        <th>2.mala </th>
                         <th>Slīpums </th>
 
 
-                        @*<th>Bāzes mala 2</th>
-                            <th>Otra puse 2</th>
 
-                            <th>Slīpums 2</th>
-
-                            <th>Bāzes mala 3</th>
-                            <th>Otra puse 3</th>
-                            <th>Slīpums 3</th>*@
                     </tr>
 
                 </thead>
@@ -119,140 +161,56 @@
 
             </table>
         </div>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <table class="table table-bordered justify-content-center">
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                <button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select(   1))">
+                                    1
+                                </button>
+                            </td>
+                            <td> <button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select(    2))">2</button></td>
+                            <td> <button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( 3))">3</button></td>
+                            <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select(-1))">&lt;</button></td>
+                        </tr>
+
+                        <tr>
+                            <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( 4))">4</button></td>
+                            <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( 5))">5</button></td>
+                            <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( 6))">6</button></td>
+                            <td> </td>
+                        </tr>
+
+                        <tr>
+                            <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(() => select( 7))">7</button></td>
+                            <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(() => select( 8))">8</button></td>
+                            <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( 9))">9</button></td>
+                            <td rowspan="2"><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( -2))">Go</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( 0))">0</button></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col">
 
 
 
 
-    </div>
-
-
-    <div class="row justify-content-center">
-        <div class="col-auto">
-            <table class="table table-bordered justify-content-center">
-                <tbody>
-
-                    <tr>
-                        <td>
-                            <button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select(   1))">
-                                1
-                            </button>
-                        </td>
-                        <td> <button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select(    2))">2</button></td>
-                        <td> <button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( 3))">3</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select(-1))">&lt;</button></td>
-                    </tr>
-
-                    <tr>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( 4))">4</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( 5))">5</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( 6))">6</button></td>
-                        <td> </td>
-                    </tr>
-
-                    <tr>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(() => select( 7))">7</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onmouseup="(() => select( 8))">8</button></td>
-                        <td><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( 9))">9</button></td>
-                        <td rowspan="2"><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( -2))">Go</button></td>
-                    </tr>
-                    <tr>
-                        <td colspan="3"><button type="button" class="btn btn-success btn-lg btn-block" @onclick="(() => select( 0))">0</button></td>
-
-                    </tr>
-                </tbody>
-            </table>
+            </div>
         </div>
-        <div class="col">
+        }
 
 
-
-
-        </div>
-    </div>
-    <!--<div class="row w-100" style="padding-top:25px">
-        <div class="col"><button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button> </div>
-
-
-
-        <div class="col">
-            <button type="button" @onclick="(()=>select(sizes[1]))" class="btn btn-info btn-lg btn-block">@sizes[1]</button>
-        </div>
-
-
-        <div class="col">
-            <button type="button" @onclick="(()=>select(sizes[2]))" class="btn btn-info btn-lg btn-block">@sizes[2]</button>
-        </div>
-
-
-
-        <div class="col">
-            <button type="button" @onclick="(()=>select(sizes[3]))" class="btn btn-info btn-lg btn-block">@sizes[3]</button>
-        </div>
-
-        <div class="col">
-            <button type="button" @onclick="(()=>select(sizes[4]))" class="btn btn-info btn-lg btn-block">@sizes[4]</button>
-        </div>
-
-
-    </div>
-
-    <div class="row w-100" style="padding-top:25px">
-        <div class="col"><button type="button" @onclick="(()=>select(sizes[5]))" class="btn btn-info btn-lg btn-block">@sizes[5]</button> </div>
-
-
-
-        <div class="col">
-            <button type="button" @onclick="(()=>select(sizes[6]))" class="btn btn-info btn-lg btn-block">@sizes[6]</button>
-        </div>
-
-
-        <div class="col">
-            <button type="button" @onclick="(()=>select(sizes[7]))" class="btn btn-info btn-lg btn-block">@sizes[7]</button>
-        </div>
-
-
-
-        <div class="col">
-            <button type="button" @onclick="(()=>select(sizes[8]))" class="btn btn-info btn-lg btn-block">@sizes[8]</button>
-        </div>
-
-        <div class="col">
-            <button type="button" @onclick="(()=>select(sizes[9]))" class="btn btn-info btn-lg btn-block">@sizes[9]</button>
-        </div>
-         <div class="col">
-            <button type="button" @onclick="(()=>select(sizes[10]))" class="btn btn-info btn-lg btn-block">@sizes[10]</button>
-        </div>
-
-
-    </div>
-
-    <div class="row w-100" style="padding-top:25px">-->
-    @*<div class="col"><button type="button" @onclick="(()=>select(sizes[10]))" class="btn btn-info btn-lg btn-block">@sizes[10]</button> </div>*@
-
-
-
-    <!--<div class="col">
-
-        </div>
-
-
-        <div class="col">
-
-        </div>
-
-
-
-        <div class="col">
-
-        </div>
-
-        <div class="col">
-
-        </div>
-
-
-    </div>-->
-
+    else
+    {
+        <LoadingMessage Message="Izvēlies izmēru lai sāktu mērījumu"></LoadingMessage>
+    }
 
 
 
@@ -347,112 +305,122 @@
 
     int column = 0;
 
+
+    private int dimenstionid = 0;
+    public bool isTypeCklicked = false;
+    private void setdimension(int dimensionId)
+    {
+        dimenstionid = dimensionId;
+        isTypeCklicked = true;
+    }
+
+
     private void select(int value)
     {
-      if (value == -2)
-            { 
-                if (selectedCellI <= 10 && selectedCellJ < 1)
+        if (value == -2)
+        {
+            if (selectedCellI <= 10 && selectedCellJ < 1)
+            {
+                elements[selectedCellI, selectedCellJ] = "";
+                selectedCellI++;
+
+                //šeit
+                if (selectedCellI == 10)
                 {
-                    elements[selectedCellI, selectedCellJ] = "";
-                    selectedCellI++;
-
-                    //šeit
-                    if (selectedCellI == 10)
-                    {
-                        selectedCellI = 0;
+                    selectedCellI = 0;
 
 
 
-                        selectedCellJ = selectedCellJ + 1;
-                    }
+                    selectedCellJ = selectedCellJ + 1;
+                }
+                elements[selectedCellI, selectedCellJ] = "yellow";
+
+                return;
+
+                elements[selectedCellI, selectedCellJ] = "yellow";
+
+            }
+            if (selectedCellI <= 10 && selectedCellJ == 1)
+            {
+
+                elements[selectedCellI, selectedCellJ] = "";
+                selectedCellI++;
+
+
+                if (selectedCellI == 10)
+                {
+                    selectedCellI = 0;
+                    selectedCellJ = 0;
                     elements[selectedCellI, selectedCellJ] = "yellow";
 
                     return;
-
-                    elements[selectedCellI, selectedCellJ] = "yellow";
- 
                 }
-                if (selectedCellI <= 10 && selectedCellJ == 1)
-                {
-
-                    elements[selectedCellI, selectedCellJ] = "";
-                    selectedCellI++;
-
-
-                    if (selectedCellI == 10)
-                    {
-                        selectedCellI = 0;
-                        selectedCellJ = 0;
-                        elements[selectedCellI, selectedCellJ] = "yellow";
-
-                        return;
-                    }
-                    elements[selectedCellI, selectedCellJ] = "yellow";
-
-
-                }
-
-
+                elements[selectedCellI, selectedCellJ] = "yellow";
 
 
             }
 
-            else if (value == -1)
+
+
+
+        }
+
+        else if (value == -1)
+        {
+            if (positions[selectedCellI, selectedCellJ].Length > 0)
             {
-                if (positions[selectedCellI, selectedCellJ].Length > 0)
+
+                positions[selectedCellI, selectedCellJ] =
+                    positions[selectedCellI, selectedCellJ].Remove(positions[selectedCellI, selectedCellJ].Length - 1, 1);
+
+                if (positions[selectedCellI, 0] != "" || positions[selectedCellI, 1] != null)
                 {
+                    //  positions[selectedCellI, 2] = Math.Abs(Convert.ToDecimal(positions[selectedCellI, 1]) - Convert.ToDecimal(positions[selectedCellI, 0])) + "";
 
-                    positions[selectedCellI, selectedCellJ] =
-                        positions[selectedCellI, selectedCellJ].Remove(positions[selectedCellI, selectedCellJ].Length - 1, 1);
+                    decimal value1;
+                    Decimal.TryParse(positions[selectedCellI, 1], out value1);
 
-                    if (positions[selectedCellI, 0] != "" || positions[selectedCellI, 1] != null)
-                    {
-                        //  positions[selectedCellI, 2] = Math.Abs(Convert.ToDecimal(positions[selectedCellI, 1]) - Convert.ToDecimal(positions[selectedCellI, 0])) + "";
-
-                        decimal value1;
-                        Decimal.TryParse(positions[selectedCellI, 1], out value1);
-
-                        decimal value0;
-                        Decimal.TryParse(positions[selectedCellI, 0], out value0);
+                    decimal value0;
+                    Decimal.TryParse(positions[selectedCellI, 0], out value0);
 
 
-                        decimal result = value1 - value0;
-                        result = Math.Abs(result);
-                        positions[selectedCellI, 2] = result.ToString();
-
-                    }
+                    decimal result = value1 - value0;
+                    result = Math.Abs(result);
+                    positions[selectedCellI, 2] = result.ToString();
 
                 }
+
             }
-            if (value >= 0)
+        }
+        if (value >= 0)
+        {
+            if (positions[selectedCellI, selectedCellJ].Length < 4)
             {
-                if (positions[selectedCellI, selectedCellJ].Length < 4)
+                positions[selectedCellI, selectedCellJ] = positions[selectedCellI, selectedCellJ] + value.ToString();
+
+
+                if (positions[selectedCellI, 0] != "" || positions[selectedCellI, 1] != null)
                 {
-                    positions[selectedCellI, selectedCellJ] = positions[selectedCellI, selectedCellJ] + value.ToString();
+                    decimal value1;
+                    Decimal.TryParse(positions[selectedCellI, 1], out value1);
+
+                    decimal value0;
+                    Decimal.TryParse(positions[selectedCellI, 0], out value0);
 
 
-                    if (positions[selectedCellI, 0] != "" || positions[selectedCellI, 1] != null)
-                    {
-                        decimal value1;
-                        Decimal.TryParse(positions[selectedCellI, 1], out value1);
-
-                        decimal value0;
-                        Decimal.TryParse(positions[selectedCellI, 0], out value0);
-
-
-                        decimal result = value1 - value0;
-                        result = Math.Abs(result);
-                        positions[selectedCellI, 2] = result.ToString();
-
-                    }
+                    decimal result = value1 - value0;
+                    result = Math.Abs(result);
+                    positions[selectedCellI, 2] = result.ToString();
 
                 }
-
 
             }
 
 
-         
+        }
+
+
+
     }
 
     private ElementReference input1;
@@ -662,7 +630,7 @@
 
         pack.Shift = shift;
         pack.Author = user.UserName;
-        pack.DimensionId = 6;
+        pack.DimensionId = dimenstionid;
         var packToCreate = packRepo.CreateObjectAndReturnId(Endpoints.PacksEndpoint, pack);
         string packStringResult = packToCreate.Result.ToString();
 

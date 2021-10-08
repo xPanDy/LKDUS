@@ -1,838 +1,838 @@
 ﻿@page "/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/width"
-   
-       
-    @using LKDUS_UI.Models
-    @using LKDUS_UI.Static
-    @using LKDUS_UI.Contracts
-    @using System.Net.Http
-    @using LKDUS_UI.Service
+
+
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+@using LKDUS_UI.Service
 
 
 
-    @inject IMeasurementRepository repo
-    @inject NavigationManager navManager
-    @inject IMeasurementRepository measurementRepo;
-    @inject IMachinesRepository machineRepository
-    @inject IMeasurementTypeRepository measurementTypeRepository;
-    @inject IPacksRepository packRepo
-    @inject IAuthenticationRepository authRepo
-    @inject IJSRuntime JsRuntime;
-    @inject ToastService toastService
-    <style>
-    </style>
+@inject IMeasurementRepository repo
+@inject NavigationManager navManager
+@inject IMeasurementRepository measurementRepo;
+@inject IMachinesRepository machineRepository
+@inject IMeasurementTypeRepository measurementTypeRepository;
+@inject IPacksRepository packRepo
+@inject IAuthenticationRepository authRepo
+@inject IJSRuntime JsRuntime;
+@inject ToastService toastService
+<style>
+</style>
 
-    <div class="container">
+<div class="container">
 
 
-        <div class="row">
+    <div class="row">
+        <div class="col">
+            <button type="button" @onclick="@BacktochooseDimension" class="btn btn-primary btn-block">Atpakaļ</button>
+        </div>
+        <div class="col w-25"><h3 class="card-title">Mitrā finiera platums</h3></div>
+
+        @if (!isTypeCklicked)
+        {
             <div class="col">
-                <button type="button" @onclick="@BacktochooseDimension" class="btn btn-primary btn-block">Atpakaļ</button>
-            </div>
-            <div class="col w-25"><h3 class="card-title">Mitrā finiera platums</h3></div>
 
-            @if (!isTypeCklicked)
-            {
+            </div>
+        }
+        else
+        {
+            <div class="col">
+                <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
+
+            </div>
+        }
+    </div>
+
+    <div class="row w-100">
+
+        <div class="col w-75">
+
+            <div class="row">
+
                 <div class="col">
 
+                    <button style="background-color:@colorBg1;" @onclick="changecolor1AndSetSizes" type="button" class="btn btn-outline-secondary btn-block">
+                        <h4>4x8</h4>
+                        <br />
+                        <h5>(13<span sstyle="color:red">XX</span>)</h5>
+                    </button>
+
                 </div>
+
+
+                <div class="col w-25"></div>
+
+                <div class="col">
+
+                    <button style="background-color:@colorBg2;" @onclick="changecolor2AndSetSizes" type="button" class="btn btn-outline-secondary btn-block">
+                        <h4>8x4</h4>
+                        <br />
+                        <h5>(28<span sstyle="color:red">XX</span>)</h5>
+                    </button>
+
+
+                </div>
+
+                <div class="col w-25"></div>
+
+                <div class="col">
+
+                    <button style="background-color:@colorBg3;" @onclick="changecolor3AndSetSizes" type="button" class="btn btn-outline-secondary btn-block">
+                        <h4>4x4</h4>
+                        <br />
+                        <h5>(13<span sstyle="color:red">XX</span>)</h5>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            @if (isTypeCklicked)
+            {
+                <div class="row">
+                    <div class="col w-75">
+                        <table class="table table-hover">
+
+                            <thead>
+
+
+                                <tr>
+                                    <th rowspan="2">Nr.p.k.</th>
+                                    <th colspan="2">Lokšņu platums</th>
+                                    <th rowspan="2">Slīpums</th>
+                                </tr>
+                                <tr>
+                                    <td>kreisā</td>
+                                    <td>labā</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (positions != null)
+                                {
+
+
+                                    @for (int i = 0; i < positions.GetLength(0); i++)
+                                    {
+                                        var nrpk = i + 1;
+                                        <tr>
+                                            <td style="background-color:white;">@nrpk  </td>
+
+                                            @for (int j = 0; j < positions.GetLength(1); j++)
+                                            {
+                                                int tmpx = i;
+                                                int tmpj = j;
+                                                if (j < positions.GetLength(1) - 1)
+                                                {
+                                                    <td @onclick="(e => HighlightSelected(tmpx,tmpj))" style="background-color:@elements[i, j];" id="@currentElement[i,j]"> @positions[i, j] </td>
+
+                                                }
+                                                else
+                                                {
+                                                    <td style="background-color:white;">@positions[i, j] </td>
+                                                }
+                                            }
+                                        </tr>
+                                    }
+
+
+                                }
+
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                    <div class="col w-25">
+
+                        <div class="d-flex justify-content-between">
+
+                            <table class="table  ">
+                                <tbody class="h-100">
+                                    <tr class="text-center">
+                                        <td colspan="3"> <div type="button" @onclick="Reduce" disabled="@isDisabledMinus" style=" color:deeppink" class="btn btn-secondary btn-lg">-</div></td>
+                                    </tr>
+
+                                    <tr class="text-center">
+
+
+
+
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button></td>
+
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[1]))" class="btn btn-info btn-lg btn-block">@sizes[1]</button></td>
+
+
+                                        <td>  <button type="button" @onclick="(()=>select(sizes[2]))" class="btn btn-info btn-lg btn-block">@sizes[2]</button></td>
+                                    </tr>
+
+
+                                    <tr class="text-center">
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[3]))" class="btn btn-info btn-lg btn-block">@sizes[3]</div></td>
+
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[4]))" class="btn btn-info btn-lg btn-block">@sizes[4]</div></td>
+
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[5]))" class="btn btn-info btn-lg btn-block">@sizes[5]</div></td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[6]))" class="btn btn-info btn-lg btn-block">@sizes[6]</div></td>
+
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[7]))" class="btn btn-info btn-lg btn-block">@sizes[7]</div></td>
+
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[8]))" class="btn btn-info btn-lg btn-block">@sizes[8]</div></td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[9]))" class="btn btn-info btn-lg btn-block">@sizes[9]</div></td>
+
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[10]))" class="btn btn-info btn-lg btn-block">@sizes[10]</div></td>
+
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[11]))" class="btn btn-info btn-lg btn-block">@sizes[11]</div></td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[12]))" class="btn btn-info btn-lg btn-block">@sizes[12]</div></td>
+
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[13]))" class="btn btn-info btn-lg btn-block">@sizes[13]</div></td>
+
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[14]))" class="btn btn-info btn-lg btn-block">@sizes[14]</div></td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[15]))" class="btn btn-info btn-lg btn-block">@sizes[15]</div></td>
+
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[16]))" class="btn btn-info btn-lg btn-block">@sizes[16]</div></td>
+
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[17]))" class="btn btn-info btn-lg btn-block">@sizes[17]</div></td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[18]))" class="btn btn-info btn-lg btn-block">@sizes[18]</div></td>
+
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[19]))" class="btn btn-info btn-lg btn-block">@sizes[19]</div></td>
+
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[20]))" class="btn btn-info btn-lg btn-block">@sizes[20]</div></td>
+                                    </tr>
+
+                                    <tr class="text-center">
+
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[21]))" class="btn btn-info btn-lg btn-block">@sizes[21]</div></td>
+
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[22]))" class="btn btn-info btn-lg btn-block">@sizes[22]</div></td>
+
+                                        <td>  <div type="button" @onclick="(()=>select(sizes[23]))" class="btn btn-info btn-lg btn-block">@sizes[23]</div></td>
+                                    </tr>
+
+                                    <tr class="text-center">
+                                        <td colspan="3">  <div type="button" style="color:lawngreen" disabled="@isDisabledPlus" @onclick="Add" class="btn btn-secondary btn-lg">+</div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
             }
             else
             {
-                <div class="col">
-                    <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
-
-                </div>
+                <LoadingMessage Message="Izvēlies izmēru lai sāktu mērījumu"></LoadingMessage>
             }
         </div>
-
-        <div class="row w-100">
-
-            <div class="col w-75">
-
-                <div class="row">
-
-                    <div class="col">
-
-                        <button style="background-color:@colorBg1;" @onclick="changecolor1AndSetSizes" type="button" class="btn btn-outline-secondary btn-block">
-                            <h4>4x8</h4>
-                            <br />
-                            <h5>(13<span sstyle="color:red">XX</span>)</h5>
-                        </button>
-
-                    </div>
+    </div>
+</div>
 
 
-                    <div class="col w-25"></div>
-
-                    <div class="col">
-
-                        <button style="background-color:@colorBg2;" @onclick="changecolor2AndSetSizes" type="button" class="btn btn-outline-secondary btn-block">
-                            <h4>8x4</h4>
-                            <br />
-                            <h5>(28<span sstyle="color:red">XX</span>)</h5>
-                        </button>
 
 
-                    </div>
 
-                    <div class="col w-25"></div>
 
-                    <div class="col">
 
-                        <button style="background-color:@colorBg3;" @onclick="changecolor3AndSetSizes" type="button" class="btn btn-outline-secondary btn-block">
-                            <h4>4x4</h4>
-                            <br />
-                            <h5>(13<span sstyle="color:red">XX</span>)</h5>
+@code {
+    [Parameter]
+    public string pshift { get; set; }
+    [Parameter]
+    public string userId { get; set; }
+    [Parameter]
+    public string measurementPositionId { get; set; }
+    [Parameter]
+    public string stringPackValue { get; set; }
+    [Parameter]
+    public string pmachineIdd { get; set; }
+    [Parameter]
+    public string fusMachineName { get; set; }
 
-                        </button>
+    public string colorBg1 = "white";
+    public string colorBg2 = "white";
+    public string colorBg3 = "white";
+    public bool isTypeCklicked = false;
+    int selecteSizeType = 0;
+    private string activePosition = "";
 
-                    </div>
+    private IList<Measurement> Model2;
 
-                </div>
 
-                @if (isTypeCklicked)
+    public int[,] positions = new int[10, 3];
+
+    bool isEdit = false;
+    string editPosition = "";
+    private void HighlightSelected(int a, int b)
+    {
+        isEdit = true;
+        for (int i = 0; i < elements.GetLength(0); i++)
+        {
+
+            for (int j = 0; j < elements.GetLength(1); j++)
+            {
+                if (i == a && b == j)
                 {
-                    <div class="row">
-                        <div class="col w-75">
-                            <table class="table table-hover">
-
-                                <thead>
-
-
-                                    <tr>
-                                        <th rowspan="2">Nr.p.k.</th>
-                                        <th colspan="2">Lokšņu platums</th>
-                                        <th rowspan="2">Slīpums</th>
-                                    </tr>
-                                    <tr>
-                                        <td>kreisā</td>
-                                        <td>labā</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @if (positions != null)
-                                    {
-
-
-                                        @for (int i = 0; i < positions.GetLength(0); i++)
-                                        {
-                                            var nrpk = i + 1;
-                                            <tr>
-                                                <td style="background-color:white;">@nrpk  </td>
-
-                                                @for (int j = 0; j < positions.GetLength(1); j++)
-                                                {
-                                                    int tmpx = i;
-                                                    int tmpj = j;
-                                                    if (j < positions.GetLength(1) - 1)
-                                                    {
-                                                        <td @onclick="(e => HighlightSelected(tmpx,tmpj))" style="background-color:@elements[i, j];" id="@currentElement[i,j]"> @positions[i, j] </td>
-
-                                                    }
-                                                    else
-                                                    {
-                                                        <td style="background-color:white;">@positions[i, j] </td>
-                                                    }
-                                                }
-                                            </tr>
-                                        }
-
-
-                                    }
-
-                                </tbody>
-
-                            </table>
-                        </div>
-
-                        <div class="col w-25">
-
-                            <div class="d-flex justify-content-between">
-
-                                <table class="table  ">
-                                    <tbody class="h-100">
-                                        <tr class="text-center">
-                                            <td colspan="3"> <div type="button" @onclick="Reduce" disabled="@isDisabledMinus" style=" color:deeppink" class="btn btn-secondary btn-lg">-</div></td>
-                                        </tr>
-
-                                        <tr class="text-center">
-
-
-
-
-
-                                            <td>  <button type="button" @onclick="(()=>select(sizes[0]))" class="btn btn-info btn-lg btn-block">@sizes[0]</button></td>
-
-
-                                            <td>  <button type="button" @onclick="(()=>select(sizes[1]))" class="btn btn-info btn-lg btn-block">@sizes[1]</button></td>
-
-
-                                            <td>  <button type="button" @onclick="(()=>select(sizes[2]))" class="btn btn-info btn-lg btn-block">@sizes[2]</button></td>
-                                        </tr>
-
-
-                                        <tr class="text-center">
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[3]))" class="btn btn-info btn-lg btn-block">@sizes[3]</div></td>
-
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[4]))" class="btn btn-info btn-lg btn-block">@sizes[4]</div></td>
-
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[5]))" class="btn btn-info btn-lg btn-block">@sizes[5]</div></td>
-                                        </tr>
-                                        <tr class="text-center">
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[6]))" class="btn btn-info btn-lg btn-block">@sizes[6]</div></td>
-
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[7]))" class="btn btn-info btn-lg btn-block">@sizes[7]</div></td>
-
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[8]))" class="btn btn-info btn-lg btn-block">@sizes[8]</div></td>
-                                        </tr>
-                                        <tr class="text-center">
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[9]))" class="btn btn-info btn-lg btn-block">@sizes[9]</div></td>
-
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[10]))" class="btn btn-info btn-lg btn-block">@sizes[10]</div></td>
-
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[11]))" class="btn btn-info btn-lg btn-block">@sizes[11]</div></td>
-                                        </tr>
-                                        <tr class="text-center">
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[12]))" class="btn btn-info btn-lg btn-block">@sizes[12]</div></td>
-
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[13]))" class="btn btn-info btn-lg btn-block">@sizes[13]</div></td>
-
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[14]))" class="btn btn-info btn-lg btn-block">@sizes[14]</div></td>
-                                        </tr>
-                                        <tr class="text-center">
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[15]))" class="btn btn-info btn-lg btn-block">@sizes[15]</div></td>
-
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[16]))" class="btn btn-info btn-lg btn-block">@sizes[16]</div></td>
-
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[17]))" class="btn btn-info btn-lg btn-block">@sizes[17]</div></td>
-                                        </tr>
-                                        <tr class="text-center">
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[18]))" class="btn btn-info btn-lg btn-block">@sizes[18]</div></td>
-
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[19]))" class="btn btn-info btn-lg btn-block">@sizes[19]</div></td>
-
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[20]))" class="btn btn-info btn-lg btn-block">@sizes[20]</div></td>
-                                        </tr>
-
-                                        <tr class="text-center">
-
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[21]))" class="btn btn-info btn-lg btn-block">@sizes[21]</div></td>
-
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[22]))" class="btn btn-info btn-lg btn-block">@sizes[22]</div></td>
-
-                                            <td>  <div type="button" @onclick="(()=>select(sizes[23]))" class="btn btn-info btn-lg btn-block">@sizes[23]</div></td>
-                                        </tr>
-
-                                        <tr class="text-center">
-                                            <td colspan="3">  <div type="button" style="color:lawngreen" disabled="@isDisabledPlus" @onclick="Add" class="btn btn-secondary btn-lg">+</div></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                            </div>
-                        </div>
-                        
-
-                    </div>
+                    elements[i, j] = "yellow";
+                    editPosition = "current" + i + j;
 
                 }
                 else
                 {
-                    <LoadingMessage Message="Izvēlies izmēru lai sāktu mērījumu"></LoadingMessage>
+                    elements[i, j] = "";
                 }
-            </div>
-        </div>
-    </div>
 
+            }
+        }
 
+    }
+    int dimension = 0;
 
+    private void changecolor1AndSetSizes()
+    {
 
-
-
-
-    @code {
-        [Parameter]
-        public string pshift { get; set; }
-        [Parameter]
-        public string userId { get; set; }
-        [Parameter]
-        public string measurementPositionId { get; set; }
-        [Parameter]
-        public string stringPackValue { get; set; }
-        [Parameter]
-        public string pmachineIdd { get; set; }
-        [Parameter]
-        public string fusMachineName { get; set; }
-
-        public string colorBg1 = "white";
-        public string colorBg2 = "white";
-        public string colorBg3 = "white";
-        public bool isTypeCklicked = false;
-        int selecteSizeType = 0;
-        private string activePosition = "";
-
-        private IList<Measurement> Model2;
-
-
-        public int[,] positions = new int[10, 3];
-
-        bool isEdit = false;
-        string editPosition = "";
-        private void HighlightSelected(int a, int b)
+        dimension = 1;
+        for (int i = 0; i < elements.GetLength(0); i++)
         {
-            isEdit = true;
-            for (int i = 0; i < elements.GetLength(0); i++)
+            for (int j = 0; j < elements.GetLength(1); j++)
             {
+                elements[i, j] = "";
+            }
+        }
+        activePosition = "current00";
+        elements[0, 0] = "red";
+        selectedCellI = 0;
+        selectedCellJ = 0;
 
-                for (int j = 0; j < elements.GetLength(1); j++)
+        isTypeCklicked = true;
+        selecteSizeType = 13;
+        colorBg1 = "greenyellow";
+        colorBg2 = "white";
+        colorBg3 = "white";
+
+    }
+
+    private void changecolor2AndSetSizes()
+    {
+        dimension = 2;
+        for (int i = 0; i < elements.GetLength(0); i++)
+        {
+            for (int j = 0; j < elements.GetLength(1); j++)
+            {
+                elements[i, j] = "";
+            }
+        }
+        activePosition = "current00";
+        elements[0, 0] = "red";
+
+        isTypeCklicked = true;
+        selecteSizeType = 28;
+        colorBg1 = "white";
+        colorBg2 = "greenyellow";
+        colorBg3 = "white";
+    }
+    private void changecolor3AndSetSizes()
+    {
+        dimension = 3;
+        for (int i = 0; i < elements.GetLength(0); i++)
+        {
+            for (int j = 0; j < elements.GetLength(1); j++)
+            {
+                elements[i, j] = "";
+            }
+        }
+        activePosition = "current00";
+        elements[0, 0] = "red";
+        isTypeCklicked = true;
+        selecteSizeType = 13;
+        colorBg1 = "white";
+        colorBg2 = "white";
+        colorBg3 = "greenyellow";
+    }
+    MeasurementType mt = new MeasurementType();
+
+    bool isPackCreated = false;
+    bool isSuccess = false;
+    private IList<Pack> ModelPacks;
+    private async void SaveMeasurement()
+    {
+        //var pid = ModelPacks.Max(el => el.Id) + 1;
+        mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 2);
+        int packId = int.Parse(stringPackValue);
+
+        String measurementDateAndTime = DateTime.Now.ToString("g");
+        DateTime shiftTimeStart = Convert.ToDateTime("07:00:00");
+
+        DateTime shiftTimeEnd = Convert.ToDateTime("19:00:00");
+
+        DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
+
+        //String timeOfTheDayNow = DateTime.Now.ToString("t");
+        int shift = 1;
+
+        if (DateTime.Compare(currentMeasurement, shiftTimeStart) >= 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) < 0)
+        {
+            shift = 1;
+        }
+
+        if (DateTime.Compare(currentMeasurement, shiftTimeStart) < 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) >= 0)
+        {
+            shift = 2;
+        }
+        if (pshift != shift.ToString())
+        {
+            shift = int.Parse(pshift);
+        }
+
+
+
+        IList<Measurement> measurementsToCreate = new List<Measurement>();
+        Pack pack = new Pack();
+
+        LoginModel user = new LoginModel();
+        user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
+        pack.DateCreated = DateTime.Parse(measurementDateAndTime);
+        pack.Machine = fusMachineName;
+        pack.Shift = shift;
+        pack.Author = user.UserName;
+        pack.FusCode = stringPackValue;
+        pack.MeasurementTypeName = mt.Name;
+        pack.DimensionId = dimension;
+        var packToCreate = packRepo.CreateObjectAndReturnId(Endpoints.PacksEndpoint, pack);
+        string packStringResult = packToCreate.Result.ToString();
+
+        string firstString = "id";
+        string lastString = ",";
+
+        int pos1 = packStringResult.IndexOf(firstString);
+        int pos2 = packStringResult.IndexOf(lastString);
+
+        string final = packStringResult.Substring(pos1, pos2 - pos1);
+
+        string[] elements = final.Split(':');
+
+
+        for (int i = 0; i < positions.GetLength(0); i++)
+        {
+
+
+            Measurement meas = new Measurement();
+            meas.DateCreated = DateTime.Parse(measurementDateAndTime);
+            meas.Shift = shift;
+            meas.MachineName = fusMachineName;
+            meas.UserId = userId;
+            meas.MeasurementPositionId = int.Parse(measurementPositionId);
+            meas.FusPackId = packId;
+            meas.PackId = int.Parse(elements[1]);
+            meas.MeasurementTypeId = 2;
+
+            for (int j = 0; j < positions.GetLength(1); j++)
+            {
+                string newMeasSize = selecteSizeType.ToString();
+
+
+                if (j == 0)
                 {
-                    if (i == a && b == j)
-                    {
-                        elements[i, j] = "yellow";
-                        editPosition = "current" + i + j;
 
+                    if (positions[i, j] == 0)
+                    {
+
+                        newMeasSize = newMeasSize + "00";
                     }
                     else
                     {
-                        elements[i, j] = "";
+                        if (positions[i, j].ToString().Length == 1)
+                        {
+                            newMeasSize = newMeasSize + "0" + positions[i, j];
+                        }
+                        else if (positions[i, j].ToString().Length == 2)
+                        {
+                            newMeasSize = newMeasSize + positions[i, j];
+                        }
+
+                    }
+
+
+                    meas.Measurement1 = Convert.ToDecimal(newMeasSize);
+                }
+                if (j == 1)
+                {
+                    if (positions[i, j] == 0)
+                    {
+                        newMeasSize = newMeasSize + "00";
+                    }
+                    else
+                    {
+                        if (positions[i, j].ToString().Length == 1)
+                        {
+                            newMeasSize = newMeasSize + "0" + positions[i, j];
+                        }
+                        else if (positions[i, j].ToString().Length == 2)
+                        {
+                            newMeasSize = newMeasSize + positions[i, j];
+                        }
+                        //newMeasSize = newMeasSize + positions[i, j];
+                    }
+                    meas.Measurement2 = Convert.ToDecimal(newMeasSize);
+                }
+                if (j == 2)
+                {
+                    if (positions[i, j] == 0)
+                    {
+                        newMeasSize = "0";
+                    }
+                    else
+                    {
+
+                        newMeasSize = positions[i, j].ToString();
+                    }
+                    meas.Measurement3 = Convert.ToDecimal(newMeasSize);
+                }
+
+                newMeasSize = "";
+
+            }
+            measurementsToCreate.Add(meas);
+
+            isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
+        }
+
+
+        if (isSuccess && packToCreate != null)
+        {
+            isPackCreated = true;
+            toastService.ShowToast("Mērījuma dati saglabāti", ToastLevel.Success);
+            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
+        }
+        if (isPackCreated)
+        {
+
+        }
+
+
+    }
+
+    protected async override Task OnInitializedAsync()
+    {
+        ModelPacks = await this.packRepo.Get(Endpoints.PacksEndpoint);
+        activePosition = "current00";
+        Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+        for (int i = 0; i < sizes.Length; i++)
+        {
+
+            sizes[i] = start;
+            start = start + 1;
+        }
+
+        for (int i = 0; i < positions.GetLength(0); i++)
+        {
+            for (int j = 0; j < positions.GetLength(1); j++)
+            {
+                positions[i, j] = 0;
+            }
+        }
+
+
+        for (int i = 0; i < elements.GetLength(0); i++)
+        {
+
+            for (int j = 0; j < elements.GetLength(1); j++)
+            {
+                elements[i, j] = "";
+            }
+        }
+
+
+        for (int i = 0; i < 10; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
+
+                currentElement[i, j] = "current" + i + j;
+            }
+        }
+    }
+
+    private string bgcolor = "";
+
+    private int actPos;
+
+    private int[] sizes = new int[27];
+    private int start = 1;
+
+    private int selectedCellI = 0;
+    private int selectedCellJ = 0;
+    private int[] positionValues = new int[3];
+    private int positionValue;
+
+    private string[,] elements { get; set; } = new string[10, 3];
+
+    bool isEnd = false;
+    private void select(int value)
+    {
+
+        if (isEdit)
+        {
+            for (int i = 0; i < currentElement.GetLength(0); i++)
+            {
+                for (int j = 0; j < currentElement.GetLength(1); j++)
+                {
+
+                    if (currentElement[i, j] == editPosition)
+                    {
+                        positions[i, j] = value;
+                        break;//added
                     }
 
                 }
             }
-
-        }
-        int dimension = 0;
-
-        private void changecolor1AndSetSizes()
-        {
-
-            dimension = 1;
-            for(int i = 0; i < elements.GetLength(0); i++)
-            {
-                for (int j = 0; j < elements.GetLength(1); j++)
-                {
-                    elements[i, j] = "";
-                }
-            }
-            activePosition = "current00";
-            elements[0, 0] = "red";
-            selectedCellI = 0;
-            selectedCellJ = 0;
-
-            isTypeCklicked = true;
-            selecteSizeType = 13;
-            colorBg1 = "greenyellow";
-            colorBg2 = "white";
-            colorBg3 = "white";
-
-        }
-
-        private void changecolor2AndSetSizes()
-        {
-            dimension = 2;
-            for (int i = 0; i < elements.GetLength(0); i++)
-            {
-                for (int j = 0; j < elements.GetLength(1); j++)
-                {
-                    elements[i, j] = "";
-                }
-            }
-            activePosition = "current00";
-            elements[0, 0] = "red";
-
-            isTypeCklicked = true;
-            selecteSizeType = 28;
-            colorBg1 = "white";
-            colorBg2 = "greenyellow";
-            colorBg3 = "white";
-        }
-        private void changecolor3AndSetSizes()
-        {
-            dimension = 3;
-            for (int i = 0; i < elements.GetLength(0); i++)
-            {
-                for (int j = 0; j < elements.GetLength(1); j++)
-                {
-                    elements[i, j] = "";
-                }
-            }
-            activePosition = "current00";
-            elements[0, 0] = "red";
-            isTypeCklicked = true;
-            selecteSizeType = 13;
-            colorBg1 = "white";
-            colorBg2 = "white";
-            colorBg3 = "greenyellow";
-        }
-        MeasurementType mt = new MeasurementType();
-
-        bool isPackCreated = false;
-        bool isSuccess = false;
-        private IList<Pack> ModelPacks;
-        private async void SaveMeasurement()
-        {
-            //var pid = ModelPacks.Max(el => el.Id) + 1;
-            mt = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint, 2);
-            int packId = int.Parse(stringPackValue);
-
-            String measurementDateAndTime = DateTime.Now.ToString("g");
-            DateTime shiftTimeStart = Convert.ToDateTime("07:00:00");
-
-            DateTime shiftTimeEnd = Convert.ToDateTime("19:00:00");
-
-            DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);
-
-            //String timeOfTheDayNow = DateTime.Now.ToString("t");
-            int shift = 1;
-
-            if (DateTime.Compare(currentMeasurement, shiftTimeStart) >= 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) < 0)
-            {
-                shift = 1;
-            }
-
-            if (DateTime.Compare(currentMeasurement, shiftTimeStart) < 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) >= 0)
-            {
-                shift = 2;
-            }
-            if (pshift != shift.ToString())
-            {
-                shift = int.Parse(pshift);
-            }
-
-
-
-            IList<Measurement> measurementsToCreate = new List<Measurement>();
-            Pack pack = new Pack();
-
-            LoginModel user = new LoginModel();
-            user = await authRepo.Get(Endpoints.AspUsersEndpoint, userId);
-            pack.DateCreated = DateTime.Parse(measurementDateAndTime);
-            pack.Machine = fusMachineName;
-            pack.Shift = shift;
-            pack.Author = user.UserName;
-            pack.FusCode = stringPackValue;
-            pack.MeasurementTypeName = mt.Name;
-            pack.DimensionId = dimension;
-            var packToCreate = packRepo.CreateObjectAndReturnId(Endpoints.PacksEndpoint, pack);
-            string packStringResult = packToCreate.Result.ToString();
-
-            string firstString = "id";
-            string lastString = ",";
-
-            int pos1 = packStringResult.IndexOf(firstString);
-            int pos2 = packStringResult.IndexOf(lastString);
-
-            string final = packStringResult.Substring(pos1, pos2 - pos1);
-
-            string[] elements = final.Split(':');
-
-
+            isEdit = false;
             for (int i = 0; i < positions.GetLength(0); i++)
             {
 
 
-                Measurement meas = new Measurement();
-                meas.DateCreated = DateTime.Parse(measurementDateAndTime);
-                meas.Shift = shift;
-                meas.MachineName = fusMachineName;
-                meas.UserId = userId;
-                meas.MeasurementPositionId = int.Parse(measurementPositionId);
-                meas.FusPackId = packId;
-                meas.PackId = int.Parse(elements[1]);
-                meas.MeasurementTypeId = 2;
-
-                for (int j = 0; j < positions.GetLength(1); j++)
+                int max = positions[i, 0];
+                int min = positions[i, 1];
+                if (positions[i, 1] >= max)
                 {
-                    string newMeasSize = selecteSizeType.ToString();
-
-
-                    if (j == 0)
-                    {
-
-                        if (positions[i, j] == 0)
-                        {
-
-                            newMeasSize = newMeasSize + "00";
-                        }
-                        else
-                        {
-                            if (positions[i, j].ToString().Length == 1)
-                            {
-                                newMeasSize = newMeasSize + "0" + positions[i, j];
-                            }
-                            else if (positions[i, j].ToString().Length == 2)
-                            {
-                                newMeasSize = newMeasSize + positions[i, j];
-                            }
-
-                        }
-
-
-                        meas.Measurement1 = Convert.ToDecimal(newMeasSize);
-                    }
-                    if (j == 1)
-                    {
-                        if (positions[i, j] == 0)
-                        {
-                            newMeasSize = newMeasSize + "00";
-                        }
-                        else
-                        {
-                            if (positions[i, j].ToString().Length == 1)
-                            {
-                                newMeasSize = newMeasSize + "0" + positions[i, j];
-                            }
-                            else if (positions[i, j].ToString().Length == 2)
-                            {
-                                newMeasSize = newMeasSize + positions[i, j];
-                            }
-                            //newMeasSize = newMeasSize + positions[i, j];
-                        }
-                        meas.Measurement2 = Convert.ToDecimal(newMeasSize);
-                    }
-                    if (j == 2)
-                    {
-                        if (positions[i, j] == 0)
-                        {
-                            newMeasSize = "0";
-                        }
-                        else
-                        {
-
-                            newMeasSize = positions[i, j].ToString();
-                        }
-                        meas.Measurement3 = Convert.ToDecimal(newMeasSize);
-                    }
-
-                    newMeasSize = "";
-
+                    max = positions[i, 1];
+                    min = positions[i, 0];
                 }
-                measurementsToCreate.Add(meas);
 
-                isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
-            }
+                positions[i, 2] = max - min;
 
 
-            if (isSuccess && packToCreate != null)
-            {
-                isPackCreated = true;
-                toastService.ShowToast("Mērījuma dati saglabāti", ToastLevel.Success);
-                this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
-            }
-            if (isPackCreated)
-            {
 
-            }
-
-
-        }
-
-        protected async override Task OnInitializedAsync()
-        {
-            ModelPacks = await this.packRepo.Get(Endpoints.PacksEndpoint);
-            activePosition = "current00";
-            Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
-            for (int i = 0; i < sizes.Length; i++)
-            {
-
-                sizes[i] = start;
-                start = start + 1;
-            }
-
-            for (int i = 0; i < positions.GetLength(0); i++)
-            {
-                for (int j = 0; j < positions.GetLength(1); j++)
-                {
-                    positions[i, j] = 0;
-                }
-            }
-
-
-            for (int i = 0; i < elements.GetLength(0); i++)
-            {
-
-                for (int j = 0; j < elements.GetLength(1); j++)
-                {
-                    elements[i, j] = "";
-                }
-            }
-
-
-            for (int i = 0; i < 10; i++)
-            {
-                for (int j = 0; j < 2; j++)
-                {
-
-                    currentElement[i, j] = "current" + i + j;
-                }
             }
         }
-
-        private string bgcolor = "";
-
-        private int actPos;
-
-        private int[] sizes = new int[27];
-        private int start = 1;
-
-        private int selectedCellI = 0;
-        private int selectedCellJ = 0;
-        private int[] positionValues = new int[3];
-        private int positionValue;
-
-        private string[,] elements { get; set; } = new string[10, 3];
-
-        bool isEnd = false;
-        private void select(int value)
+        else
         {
 
-            if (isEdit)
+            for (int i = 0; i < currentElement.GetLength(0); i++)
             {
-                for (int i = 0; i < currentElement.GetLength(0); i++)
-                {
-                    for (int j = 0; j < currentElement.GetLength(1); j++)
-                    {
 
-                        if (currentElement[i, j] == editPosition)
+                for (int j = 0; j < currentElement.GetLength(1); j++)
+                {
+                    if (currentElement[i, j] == activePosition)
+                    {
+                        if (selectedCellI == 10 && selectedCellJ == 1)
                         {
-                            positions[i, j] = value;
-                            break;//added
+                            break;
                         }
-
-                    }
-                }
-                isEdit = false;
-                for (int i = 0; i < positions.GetLength(0); i++)
-                {
-
-
-                    int max = positions[i, 0];
-                    int min = positions[i, 1];
-                    if (positions[i, 1] >= max)
-                    {
-                        max = positions[i, 1];
-                        min = positions[i, 0];
-                    }
-
-                    positions[i, 2] = max - min;
-
-
-
-                }
-            }
-            else
-            {
-
-                for (int i = 0; i < currentElement.GetLength(0); i++)
-                {
-
-                    for (int j = 0; j < currentElement.GetLength(1); j++)
-                    {
-                        if (currentElement[i, j] == activePosition)
+                        else
                         {
-                            if (selectedCellI == 10 && selectedCellJ == 1)
+                            positions[selectedCellI, selectedCellJ] = value;
+                            elements[i, j] = "";
+                            i++;
+                            selectedCellI = i;
+                            selectedCellJ = j;
+                            if (selectedCellI == 10 && selectedCellJ == 0)
                             {
+
+                                selectedCellI = 0; selectedCellJ = 1;
+                                activePosition = "current" + selectedCellI + selectedCellJ;
+                                positions[selectedCellI, selectedCellJ] = value;
+                                elements[selectedCellI, selectedCellJ] = "red";
                                 break;
                             }
-                            else
+                            else if (selectedCellI < 10 && selectedCellJ < 2)
                             {
-                                positions[selectedCellI, selectedCellJ] = value;
-                                elements[i, j] = "";
-                                i++;
-                                selectedCellI = i;
-                                selectedCellJ = j;
-                                if (selectedCellI == 10 && selectedCellJ == 0)
-                                {
+                                elements[selectedCellI, selectedCellJ] = "red";
+                                activePosition = "current" + i + j;
 
-                                    selectedCellI = 0; selectedCellJ = 1;
-                                    activePosition = "current" + selectedCellI + selectedCellJ;
-                                    positions[selectedCellI, selectedCellJ] = value;
-                                    elements[selectedCellI, selectedCellJ] = "red";
-                                    break;
-                                }
-                                else if (selectedCellI < 10 && selectedCellJ < 2)
-                                {
-                                    elements[selectedCellI, selectedCellJ] = "red";
-                                    activePosition = "current" + i + j;
-
-                                    break;// break;
-                                }
+                                break;// break;
                             }
-
                         }
+
                     }
                 }
+            }
 
 
 
 
 
 
-                for (int i = 0; i < positions.GetLength(0); i++)
+            for (int i = 0; i < positions.GetLength(0); i++)
+            {
+
+
+                int max = positions[i, 0];
+                int min = positions[i, 1];
+                if (positions[i, 1] >= max)
                 {
-
-
-                    int max = positions[i, 0];
-                    int min = positions[i, 1];
-                    if (positions[i, 1] >= max)
-                    {
-                        max = positions[i, 1];
-                        min = positions[i, 0];
-                    }
-
-                    positions[i, 2] = max - min;
-
-
-
+                    max = positions[i, 1];
+                    min = positions[i, 0];
                 }
 
+                positions[i, 2] = max - min;
+
+
+
             }
+
         }
+    }
 
 
 
 
-        private string[,] currentElement = new string[10, 2];
-        string current = "";
+    private string[,] currentElement = new string[10, 2];
+    string current = "";
 
-        public void focusToNextElement(int i, int j)
+    public void focusToNextElement(int i, int j)
+    {
+
+
+        for (int x = 0; x < 10; x++)
         {
 
-
-            for (int x = 0; x < 10; x++)
+            for (int y = 0; y < 2; y++)
             {
-
-                for (int y = 0; y < 2; y++)
+                if (x == i && y == j)
                 {
-                    if (x == i && y == j)
+                    elements[selectedCellI, selectedCellJ] = "";
+                    if (x < 9)
                     {
-                        elements[selectedCellI, selectedCellJ] = "";
-                        if (x < 9)
-                        {
-                            selectedCellI = x + 1;
-                            selectedCellJ = y;
+                        selectedCellI = x + 1;
+                        selectedCellJ = y;
 
-                            elements[selectedCellI, selectedCellJ] = "red";
-                        }
+                        elements[selectedCellI, selectedCellJ] = "red";
                     }
-
-
                 }
 
 
             }
 
 
-
         }
-        private void selectTableCell(int ii, int jj)
-        {
-            selectedCellI = ii;
-            selectedCellJ = jj;
-            int cellI = ii;
-            int cellJ = jj - 1;
-
-
-
-            for (int i = 0; i < elements.GetLength(0); i++)
-            {
-
-                for (int j = 0; j < elements.GetLength(1); j++)
-                {
-                    if (i == cellI && j == cellJ)
-                    {
-                        elements[i, j] = "red";
-                    }
-                    else
-                    {
-                        elements[i, j] = "";
-                    }
-
-
-                }
-            }
-
-
-        }
-
-        private async void BacktochooseDimension(MouseEventArgs e)
-        {
-            if (isSuccess && isPackCreated)
-            {
-                this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions");
-            }
-            else
-            {
-
-                bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Tiešām vēlies iziet nesaglabājot?");
-                if (confirmed)
-                {
-                    this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions");
-                }
-            }
-        }
-
-        bool isDisabledMinus = true;
-        bool isDisabledPlus = false;
-
-        private void Reduce(MouseEventArgs e)
-        {
-
-            int toRemove = 9;
-            if (sizes[0] == 4)
-            {
-                toRemove = 3;
-            }
-            if (sizes[0] == 1)
-            {
-                isDisabledMinus = true;
-                return;
-            }
-            if (sizes[23] <= 99)
-            {
-                isDisabledPlus = false;
-            }
-
-            for (int i = 0; i < sizes.Length; i++)
-            {
-
-                sizes[i] = sizes[i] - toRemove;
-
-
-
-            }
-
-        }
-
-
-        private void Add(MouseEventArgs e)
-        {
-            if (sizes[0] >= 1)
-            {
-                isDisabledMinus = false;
-
-            }
-            if (sizes[23] == 99)
-            {
-                isDisabledPlus = true;
-                return;
-
-            }
-
-            int toAdd = 9;
-            if (sizes[23] == 96)
-            {
-                toAdd = 3;
-            }
-            for (int i = 0; i < sizes.Length; i++)
-            {
-
-
-                sizes[i] = sizes[i] + toAdd;
-            }
-        }
-
 
 
 
     }
+    private void selectTableCell(int ii, int jj)
+    {
+        selectedCellI = ii;
+        selectedCellJ = jj;
+        int cellI = ii;
+        int cellJ = jj - 1;
+
+
+
+        for (int i = 0; i < elements.GetLength(0); i++)
+        {
+
+            for (int j = 0; j < elements.GetLength(1); j++)
+            {
+                if (i == cellI && j == cellJ)
+                {
+                    elements[i, j] = "red";
+                }
+                else
+                {
+                    elements[i, j] = "";
+                }
+
+
+            }
+        }
+
+
+    }
+
+    private async void BacktochooseDimension(MouseEventArgs e)
+    {
+        if (isSuccess && isPackCreated)
+        {
+            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions");
+        }
+        else
+        {
+
+            bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Tiešām vēlies iziet nesaglabājot?");
+            if (confirmed)
+            {
+                this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions");
+            }
+        }
+    }
+
+    bool isDisabledMinus = true;
+    bool isDisabledPlus = false;
+
+    private void Reduce(MouseEventArgs e)
+    {
+
+        int toRemove = 9;
+        if (sizes[0] == 4)
+        {
+            toRemove = 3;
+        }
+        if (sizes[0] == 1)
+        {
+            isDisabledMinus = true;
+            return;
+        }
+        if (sizes[23] <= 99)
+        {
+            isDisabledPlus = false;
+        }
+
+        for (int i = 0; i < sizes.Length; i++)
+        {
+
+            sizes[i] = sizes[i] - toRemove;
+
+
+
+        }
+
+    }
+
+
+    private void Add(MouseEventArgs e)
+    {
+        if (sizes[0] >= 1)
+        {
+            isDisabledMinus = false;
+
+        }
+        if (sizes[23] == 99)
+        {
+            isDisabledPlus = true;
+            return;
+
+        }
+
+        int toAdd = 9;
+        if (sizes[23] == 96)
+        {
+            toAdd = 3;
+        }
+        for (int i = 0; i < sizes.Length; i++)
+        {
+
+
+            sizes[i] = sizes[i] + toAdd;
+        }
+    }
+
+
+
+
+}

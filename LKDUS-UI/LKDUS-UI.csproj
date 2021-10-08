@@ -35,6 +35,7 @@
 
   <ItemGroup>
     <Folder Include="Components\ToastBase\" />
+    <Folder Include="NewFolder\" />
     <Folder Include="Pages\Measurements\" />
   </ItemGroup>
 

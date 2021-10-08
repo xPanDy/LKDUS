@@ -8,6 +8,7 @@ namespace LKDUS_UI.Static
     public static class Endpoints
     {   
          public static string BaseUrl = "http://localhost:5000/";
+       // public static int measurementRangeId = 0;
      //   public static string BaseUrl = "http://lkdus-api.finieris.lv:5000";
         public static string UsersEndpoint = $"{BaseUrl}api/users/";
         public static string MeasurementEndpoint = $"{BaseUrl}api/measurements/";
@@ -23,6 +24,7 @@ namespace LKDUS_UI.Static
         public static string DefectsEndpoint = $"{BaseUrl}api/defect/";
         public static string ClasssEndpoint = $"{BaseUrl}api/classs/";
         public static string MeasurementRangeEntpoint = $"{BaseUrl}api/measurementrange/";
+      //  public static string MeasurementRangeEntpointID = $"{BaseUrl}api/measurementrange/{measurementRangeId}";
 
 
     }

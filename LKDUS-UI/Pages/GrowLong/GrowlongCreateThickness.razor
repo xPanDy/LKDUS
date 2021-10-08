@@ -12,6 +12,7 @@
 @inject IMeasurementRepository measurementRepo;
 @inject IMachinesRepository machineRepository
 @inject IMeasurementTypeRepository measurementTypeRepository;
+@inject IMeasurementRangeRepository measurementRangeRepo
 @inject IPacksRepository packRepo
 @inject IAuthenticationRepository authRepo
 @inject IMeasurementTypeRepository measTRepo
@@ -311,6 +312,25 @@
     private void HighlightSelected(int a, int b)
     {
 
+        for (int i = 0; i < colors.GetLength(0); i++)
+        {
+
+            for (int j = 0; j < colors.GetLength(1); j++)
+            {
+
+                if (sizesArray[i, j] < mr.FormatMin || sizesArray[i, j] > mr.FormatMax && sizesArray[i, j] != 0)
+                {
+                    colors[i, j] = "#F99B28";
+                }
+                else
+                {
+                    colors[i, j] = "";
+
+                }
+            }
+        }
+
+
 
         isEdit = true;
         for (int i = 0; i < colors.GetLength(0); i++)
@@ -400,8 +420,8 @@
     bool left = false;
     decimal avg1 = 0;
 
-
-
+    private IList<MeasurementRange> Ranges;
+    MeasurementRange mr = new MeasurementRange();
 
     decimal avg2 = 0;
     decimal avg3 = 0;
@@ -426,8 +446,13 @@
                     {
                         sizesArray[i, j] = value;
 
+
+
                         sizesArray[i, 3] = ((sizesArray[i, 0] + sizesArray[i, 2]) / 2);
+                        sizesArray[i, 3] = Math.Round(sizesArray[i, 3], 2);
+
                         sizesArray[i, 4] = sizesArray[i, 1] - sizesArray[i, 3];
+                        sizesArray[i, 4] = Math.Round(sizesArray[i, 4], 2);
 
                         decimal sum1 = 0;
                         decimal sum2 = 0;
@@ -468,12 +493,25 @@
                     for (int j = 0; j < idsForCells.GetLength(1); j++)
                     {
 
-                        colors[i, j] = "";
+                        if (sizesArray[i, j] < mr.FormatMin || sizesArray[i, j] > mr.FormatMax && sizesArray[i, j] != 0)
+                        {
+                            colors[i, j] = "#F99B28";
+                        }
+                        else
+                        {
+                            colors[i, j] = "";
+
+                        }
+
+                        // colors[i, j] = "";
                         if (idsForCells[i, j] == activePosition)
                         {
                             sizesArray[i, j] = value;
                             sizesArray[i, 3] = ((sizesArray[i, 0] + sizesArray[i, 2]) / 2);
+                            sizesArray[i, 3] = Math.Round(sizesArray[i, 3], 2);
+
                             sizesArray[i, 4] = sizesArray[i, 1] - sizesArray[i, 3];
+                            sizesArray[i, 4] = Math.Round(sizesArray[i, 4], 2);
 
 
                             decimal sum1 = 0;
@@ -494,7 +532,7 @@
                             if (
            sizesArray[i, 0] != 0 &&
            sizesArray[i, 1] != 0 &&
-           sizesArray[i, 2] != 0 && isNotEmptyLines<sizesArray.GetLength(0)
+           sizesArray[i, 2] != 0 && isNotEmptyLines < sizesArray.GetLength(0)
            )
                             {
                                 isNotEmptyLines = isNotEmptyLines + 1;
@@ -526,7 +564,7 @@
                             return;
                         }
 
-                        
+
                     }
                 }
 
@@ -642,6 +680,8 @@
         if (firstRender)
         {
 
+
+
             for (int i = 0; i < colors.GetLength(0); i++)
             {
                 for (int j = 0; j < colors.GetLength(1); j++)
@@ -660,7 +700,8 @@
 
     protected async override Task OnInitializedAsync()
     {
-
+        Ranges = await this.measurementRangeRepo.Get(Endpoints.MeasurementRangeEntpoint);
+        mr = Ranges.Where(e => e.Id.Equals(27)).FirstOrDefault();
 
         ModelPacks = await this.packRepo.Get(Endpoints.PacksEndpoint);
 
@@ -778,6 +819,10 @@
         pack.FusCode = stringPackValue;
         pack.MeasurementTypeName = mt.Name;
 
+
+
+        pack.DimensionId = 27;
+
         ///isPackCreated = await packRepo.Create(Endpoints.PacksEndpoint, pack);
         var packToCreate = packRepo.CreateObjectAndReturnId(Endpoints.PacksEndpoint, pack);
         string packStringResult = packToCreate.Result.ToString();
@@ -818,14 +863,26 @@
                 {
                     meas.Measurement3 = sizesArray[i, j];
                 }
+                if (j == 3)
+                {
+                    meas.Measurement4 = sizesArray[i, j];
+                }
+                if (j == 4)
+                {
+                    meas.Measurement5 = sizesArray[i, j];
+                }
 
 
 
             }
             measurementsToCreate.Add(meas);
 
+            if (meas.Measurement1 != 0 && meas.Measurement2 != 0 && meas.Measurement3 != 0)
+            {
 
-            isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
+                isSuccess = await measurementRepo.Create(Endpoints.MeasurementEndpoint, meas);
+
+            }
         }
 
 
