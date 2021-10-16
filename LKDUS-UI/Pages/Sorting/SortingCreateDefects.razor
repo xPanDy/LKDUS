@@ -28,6 +28,7 @@
         background-color: #161617;
         border-color: #494F57;
     }
+
     td {
         word-wrap: break-word;
     }
@@ -38,14 +39,60 @@
     }
 
     h4 {
-        padding-left:5px;
-        padding-right:5px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 </style>
 
 
+<style>
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
 
-<div class="container">
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
+
+
+
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+
+
+<div id="row1">
+    <div class="button-container">
+        <span class="button-left" @onclick="@Return">
+            <h1><a id="back">Atpakaļ</a></h1>
+        </span>
+        <span>
+            <h1> Defekti </h1>
+        </span>
+        <span style="visibility:visible"  @onclick="@SaveMeasurement" class="button-right">
+            <h1><a id="save">Saglabāt</a></h1>
+        </span>
+    </div>
+</div>
+
+@*<div class="container">
     <div class="row">
         <div class="col">
             <button type="button" @onclick="@Return" class="btn btn-primary btn-block">Atpakaļ</button>
@@ -56,7 +103,7 @@
         </div>
 
     </div>
-</div>
+</div>*@
 <div class="container">
 
     <div class="row">
@@ -94,9 +141,11 @@
                                 <td>
                                     <div class="row">
                                         <div type="button" @onclick="e=>select(tmp,+1)" class="btn btn-success btn-lg  ">+</div>
-                                        <h3    >@positions[tmp]</h3>
+                                        <h3>@positions[tmp]</h3>
                                         <button type="button" @onclick="e=>select(tmp,-1)"
-                                             disabled="@isDisabledMinus[tmp]" class="btn btn-danger btn-lg">-</button>
+                                                disabled="@isDisabledMinus[tmp]" class="btn btn-danger btn-lg">
+                                            -
+                                        </button>
                                     </div>
                                 </td>
                             </tr>
@@ -126,7 +175,9 @@
                                         <div type="button" @onclick="e=>select(tmp,+1)" class="btn btn-success btn-lg  ">+</div>
                                         <h3 readonly>@positions[tmp]</h3>
                                         <button type="button" @onclick="e=>select(tmp,-1)"
-                                             disabled="@isDisabledMinus[tmp]" class="btn btn-danger btn-lg">-</button>
+                                                disabled="@isDisabledMinus[tmp]" class="btn btn-danger btn-lg">
+                                            -
+                                        </button>
                                     </div>
                                 </td>
                             </tr>
@@ -143,7 +194,7 @@
 
                     </thead>
                     <tbody>
-                        @for (int i =  23; i <33  ; i++)
+                        @for (int i = 23; i < 33; i++)
 
                         {
                             int tmp = i;
@@ -156,7 +207,9 @@
                                         <div type="button" @onclick="e=>select(tmp,+1)" class="btn btn-success btn-lg  ">+</div>
                                         <h3 readonly>@positions[tmp]</h3>
                                         <button type="button" @onclick="e=>select(tmp,-1)"
-                                             disabled="@isDisabledMinus[tmp]" class="btn btn-danger btn-lg">-</button>
+                                                disabled="@isDisabledMinus[tmp]" class="btn btn-danger btn-lg">
+                                            -
+                                        </button>
                                     </div>
                                 </td>
                             </tr>
@@ -169,7 +222,7 @@
 
 
 
-        
+
 
 
 
@@ -256,7 +309,8 @@
 
                     return;
 
-                }else
+                }
+                else
                 {
                     isDisabledMinus[index] = false;
                     return;
@@ -278,8 +332,8 @@
         if (firstRender)
         {
 
-            DefectList =   await defectRepo.Get(Endpoints.DefectsEndpoint);
-            ClassList =   await classRepo.Get(Endpoints.ClasssEndpoint);
+            DefectList = await defectRepo.Get(Endpoints.DefectsEndpoint);
+            ClassList = await classRepo.Get(Endpoints.ClasssEndpoint);
             for (int i = 0; i < positions.GetLength(0); i++)
             {
 

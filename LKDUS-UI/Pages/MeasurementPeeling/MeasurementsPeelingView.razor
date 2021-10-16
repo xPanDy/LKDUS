@@ -1,5 +1,5 @@
 ﻿@page "/measurementspeeling/{measurementPositionId}/{userId}/{packId}/{measurementTypeName}/view"
-      @*measurements/{fusCode}/{measurementPositionId}/{userId}/{packId}/view*@
+@*measurements/{fusCode}/{measurementPositionId}/{userId}/{packId}/view*@
 @using LKDUS_UI.Models
 @using LKDUS_UI.Static
 @using LKDUS_UI.Contracts
@@ -18,165 +18,209 @@
     }
 </style>
 
-<div style="height:100%">
-    <div class="container">
-        <div class="row">
+<style>
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
 
-            <div class="col">
-                <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
+
+
+
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+
+
+
+
+@if (ModelPackHeader == null || ModelMeasurements == null)
+{
+    <LoadingMessage Message="Notiek mērījumu ielāde" />
+}
+else
+{
+    <div id="row1">
+        <div class="button-container">
+            <span class="button-left" @onclick="@goBack">
+                <h1><a id="back">Atpakaļ</a></h1>
+            </span>
+            <span>
+                <h1>Dati par pakas:@ModelPackHeader.FusCode  @ModelPackHeader.MeasurementTypeName mērījumiem</h1>
+            </span>
+            <span style="visibility:hidden" class="button-right">
+                <h1><a id="save">Saglabāt</a></h1>
+            </span>
         </div>
     </div>
+    <div style="height:100%">
+        @*<div class="container">
+                <div class="row">
+
+                    <div class="col">
+                        <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
+                    </div>
+                    <div class="col">
+                    </div>
+                    <div class="col">
+                    </div>
+                </div>
+            </div>*@
 
 
 
-
-
-    @if (ModelPackHeader == null)
-    {
-        <LoadingMessage Message="Notiek mērījumu ielāde" />
-    }
-    else
-    {
 
         <!-- Scroll bar present and enabled when more contents -->
+        @*<div class="rowcentered">
+                <h4> Dati par pakas:@ModelPackHeader.FusCode  @ModelPackHeader.MeasurementTypeName mērījumiem </h4>
+            </div>*@
 
 
-        <div class="rowcentered">
-            <h4  > Dati par pakas:@ModelPackHeader.FusCode  @ModelPackHeader.MeasurementTypeName mērījumiem </h4>
-        </div>
+        <div class="container" style="height:75%">
+            <div class="mh-75">
+                <table class="table">
+                    <thead>
+                        <tr style=" text-align: right;"></tr>
+                        <tr>
+
+                            <th scope="col">Datums              </th>
+                            <th scope="col">Iekārta               </th>
+                            <th scope="col">Maiņa             </th>
 
 
-            <div class="container" style="height:75%">
-                <div class="mh-75">
-                    <table class="table">
-                        <thead>
-                            <tr style=" text-align: right;"></tr>
+
+                            <th scope="col">1.plūsma</th>
+                            <th scope="col">2.plūsma</th>
+
+
+
+                            @*<th scope="col">Meistars</th>*@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var model in ModelMeasurements)
+                        {
+
                             <tr>
 
-                                <th scope="col">Datums              </th>
-                                <th scope="col">Iekārta               </th>
-                                <th scope="col">Maiņa             </th>
+                                <td>@model.DateCreated</td>
+                                <td>@ModelPackHeader.Machine</td>
+                                <td>@model.Shift</td>
+
+                                <td>@model.Measurement1</td>
+                                <td>@model.Measurement2</td>
 
 
 
-                                <th scope="col">1.plūsma</th>
-                                <th scope="col">2.plūsma</th>
-                              
 
 
-                                @*<th scope="col">Meistars</th>*@
+
+
                             </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var model in ModelMeasurements)
-                            {
 
-                                <tr>
-
-                                    <td>@model.DateCreated</td>
-                                    <td>@ModelPackHeader.Machine</td>
-                                    <td>@model.Shift</td>
-
-                                    <td>@model.Measurement1</td>
-                                    <td>@model.Measurement2</td>
-                                     
+                        }
 
 
-
-
-
-
-                                </tr>
-
-                            }
-
-
-                        </tbody>
-                    </table>
-                </div>
-
-
-
+                    </tbody>
+                </table>
             </div>
 
 
 
-
-            }
         </div>
-        @code {
 
-            [Parameter]
-            public string fusCode { get; set; }
-            [Parameter]
-            public string measurementTypeName { get; set; }
-            [Parameter]
-            public string measurementPositionId { get; set; }
 
-            [Parameter]
-            public string packId { get; set; }
 
-            [Parameter]
-            public string userId { get; set; }
+
+    </div>
+}
+@code {
+
+    [Parameter]
+    public string fusCode { get; set; }
+    [Parameter]
+    public string measurementTypeName { get; set; }
+    [Parameter]
+    public string measurementPositionId { get; set; }
+
+    [Parameter]
+    public string packId { get; set; }
+
+    [Parameter]
+    public string userId { get; set; }
 
     //private IList<Measurement> Model;
-        private Pack ModelPackHeader;
+    private Pack ModelPackHeader;
 
 
-        private IList<Measurement> ModelMeasurements;
+    private IList<Measurement> ModelMeasurements;
 
 
-        private MeasurementPosition measurementPosition;
-        private IList<MeasurementType> measurementTypelIST;
-        private MeasurementType measurementType;
+    private MeasurementPosition measurementPosition;
+    private IList<MeasurementType> measurementTypelIST;
+    private MeasurementType measurementType;
 
-        protected async override Task OnInitializedAsync()
+    protected async override Task OnInitializedAsync()
+    {
+        int packIdInt = int.Parse(packId);
+
+        if (packIdInt != 0)
         {
-           int packIdInt = int.Parse(packId);
-           
-            if (packIdInt != 0)
+            try
             {
-                try
-                {
-                    
-                    
-                    ModelPackHeader = await packsRepository.Get(Endpoints.PacksEndpoint, packIdInt);
-                    measurementTypelIST = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint);
-                    measurementType = measurementTypelIST.Where(e => e.Name == measurementTypeName).SingleOrDefault();
 
-                    //ModelPackHeader = ModelPackHeader.Where(ph=> ph. packIdInt);
-                    //   Model = await machineRepo.Get(Endpoints.MachinesEndpoint, id);
-                }
-                catch (Exception)
-                {
 
-                    Console.WriteLine($"Unable to parse");
+                ModelPackHeader = await packsRepository.Get(Endpoints.PacksEndpoint, packIdInt);
+                measurementTypelIST = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint);
+                measurementType = measurementTypelIST.Where(e => e.Name == measurementTypeName).SingleOrDefault();
 
-                }
+                //ModelPackHeader = ModelPackHeader.Where(ph=> ph. packIdInt);
+                //   Model = await machineRepo.Get(Endpoints.MachinesEndpoint, id);
+            }
+            catch (Exception)
+            {
 
+                Console.WriteLine($"Unable to parse");
 
             }
 
 
-            ModelMeasurements = await measurementRepository.Get(Endpoints.MeasurementEndpoint);
-            //ModelPacksHeader = ModelPacksHeader.Where(p=>p.FusCode==fusCode)..ToList() ;
-
-            //ModelMeasurements = ModelMeasurements.Where(m => m.PackId == packIdInt ).ToList();
-            ModelMeasurements = ModelMeasurements.Where(m => m.PackId == packIdInt ).ToList();
-            // Model = Model.Where(e => (e.MeasurementPositionId == 1)).ToList();
-
-
         }
 
 
+        ModelMeasurements = await measurementRepository.Get(Endpoints.MeasurementEndpoint);
+        //ModelPacksHeader = ModelPacksHeader.Where(p=>p.FusCode==fusCode)..ToList() ;
 
-        private void goBack(MouseEventArgs e)
-        {
-            this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
-        }
-        }
+        //ModelMeasurements = ModelMeasurements.Where(m => m.PackId == packIdInt ).ToList();
+        ModelMeasurements = ModelMeasurements.Where(m => m.PackId == packIdInt).ToList();
+        // Model = Model.Where(e => (e.MeasurementPositionId == 1)).ToList();
+
+
+    }
+
+
+
+    private void goBack(MouseEventArgs e)
+    {
+        this.navManager.NavigateTo($"/measurementspeeling/{userId}/{measurementPositionId}");
+    }
+}

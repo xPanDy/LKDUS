@@ -20,12 +20,30 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
-    
+
 
     <script src="_framework/blazor.webassembly.js"></script>
 
     <script src="js/my_lib.js"></script>
     <script type="text/javascript" src="JsLib"></script>
+    <script>
+
+        function changeToFullScreen() {
+            var itm = document.getElementById("container");
+            if (itm.requestFullscreen) {
+                itm.requestFullscreen();
+            }
+            else if (itm.msRequestFullscreen) {
+                itm.msRequestFullscreen();
+            }
+            else if (itm.mozRequestFullScreen) {
+                itm.mozRequestFullScreen();
+            }
+            else if (itm.webkitRequestFullscreen) {
+                itm.webkitRequestFullscreen();
+            }
+        }
+    </script>
 </body>
 
 </html>

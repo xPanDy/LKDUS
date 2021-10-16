@@ -21,10 +21,67 @@
 <style>
 </style>
 
+<style>
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
+
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
+
+
+
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+
+
+<div id="row1">
+    <div class="button-container">
+        <span class="button-left" @onclick="@BacktochooseDimension">
+            <h1><a id="back">Atpakaļ</a></h1>
+        </span>
+        <span>
+            <h1>Mitrā finiera platums</h1>
+        </span>
+        @if (!isTypeCklicked)
+        {
+            <span style="visibility:hidden" class="button-right">
+                <h1><a id="save">Saglabāt</a></h1>
+            </span>
+        }
+        else
+        {
+            <span style="visibility:visible" @onclick="@SaveMeasurement" class="button-right">
+                <h1><a id="save">Saglabāt</a></h1>
+            </span>
+        }
+    </div>
+</div>
+
+
 <div class="container">
 
 
-    <div class="row">
+    @*<div class="row">
         <div class="col">
             <button type="button" @onclick="@BacktochooseDimension" class="btn btn-primary btn-block">Atpakaļ</button>
         </div>
@@ -43,7 +100,7 @@
 
             </div>
         }
-    </div>
+    </div>*@
 
     <div class="row w-100">
 

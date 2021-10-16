@@ -26,21 +26,55 @@
         border-color: #494F57;
     }
 </style>
+<style>
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
 
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
+
+
+
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+
+
+<div id="row1">
+    <div class="button-container">
+        <span class="button-left" @onclick="@Return">
+            <h1><a id="back">Atpakaļ</a></h1>
+        </span>
+        <span>
+            <h1> Platums </h1>
+        </span>
+        <span style="visibility:visible" @onclick="@SaveMeasurement" class="button-right">
+            <h1><a id="save">Saglabāt</a></h1>
+        </span>
+    </div>
+</div>
 <div class="container">
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <button type="button" @onclick="@Return" class="btn btn-primary btn-block">Atpakaļ</button>
-            </div>
-            <div class="col w-25"><h3 class="card-title">Platums</h3></div>
-            <div class="col">
-                <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
-            </div>
-
-        </div>
-    </div>
+     
 
     <div class="row">
 
@@ -68,7 +102,7 @@
                         int npk = i + 1;
                         var tmpI = i;
                         <tr style="line-height:10px;">
-                            <td >@npk</td>
+                            <td>@npk</td>
 
 
                             @for (int j = 0; j < positions.GetLength(1); j++)
@@ -260,7 +294,7 @@
         <div class="col">
             <button type="button" @onclick="(()=>select(sizes[9]))" class="btn btn-info btn-lg btn-block">@sizes[9]</button>
         </div>
-         <div class="col">
+        <div class="col">
             <button type="button" @onclick="(()=>select(sizes[10]))" class="btn btn-info btn-lg btn-block">@sizes[10]</button>
         </div>
 

@@ -27,32 +27,77 @@
     }
 </style>
 
+<style>
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
+
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
 
 
-<div class="container">
-    <div class="row">
+
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+
+
+<div id="row1">
+    <div class="button-container">
+        <span class="button-left" @onclick="@Return">
+            <h1><a id="back">Atpakaļ</a></h1>
+        </span>
+        <span>
+            <h1>Defekti</h1>
+        </span>
+        <span style="visibility:visible"   @onclick="@SaveMeasurement" class="button-right">
+            <h1><a id="save">Saglabāt</a></h1>
+        </span>
+    </div>
+</div>
+
+<!--<div class="container">-->
+    @*<div class="row">
         <div class="col">
             <button type="button" @onclick="@Return" class="btn btn-primary btn-block">Atpakaļ</button>
         </div>
-        <div class="col w-25"><h3  style="text-align: center; " class="card-title">Defekti</h3></div>
+        <div class="col w-25"><h3 style="text-align: center; " class="card-title">Defekti</h3></div>
         <div class="col">
             <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
         </div>
 
-    </div>
-</div>
+    </div>*@
+<!--</div>-->
 <div class="container">
 
     <div class="row">
 
         @*<div class="col">
 
-            <button type="button" style="background-color:@colorBgP1" @onclick=" " class="btn btn-outline-secondary btn-block">
-                <h4>4 pēdas</h4>
+                <button type="button" style="background-color:@colorBgP1" @onclick=" " class="btn btn-outline-secondary btn-block">
+                    <h4>4 pēdas</h4>
 
-            </button>
+                </button>
 
-        </div>*@
+            </div>*@
 
 
 
@@ -211,7 +256,7 @@
 
 @code {
     int selecteSizeType = 0;
-    
+
 
 
     public string colorBgP1 = "white";
@@ -273,7 +318,8 @@
                 {
                     isDisabledMinus[i] = true;
                     break;
-                }else
+                }
+                else
                 {
                     isDisabledMinus[i] = false;
                 }
@@ -342,7 +388,7 @@
         String measurementDateAndTime = DateTime.Now.ToString("g");
 
         DateTime shiftTimeStart = Convert.ToDateTime("07:00:00");
-         
+
         DateTime shiftTimeEnd = Convert.ToDateTime("19:00:00");
 
         DateTime currentMeasurement = Convert.ToDateTime(measurementDateAndTime);

@@ -132,7 +132,7 @@
         font-size: 18px;
         display: inline;
     }
-    
+
     .minus {
         display: inline;
         font-size: 25px;
@@ -149,10 +149,55 @@
         padding-top: 5px;
     }
 </style>
+<style>
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
+
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
 
 
 
-<div class="container">
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+
+
+<div id="row1">
+    <div class="button-container">
+        <span class="button-left" @onclick="@Return">
+            <h1><a id="back">Atpakaļ</a></h1>
+        </span>
+        <span>
+            <h1> Defekti </h1>
+        </span>
+        <span style="visibility:visible" @onclick="@SaveMeasurement" class="button-right">
+            <h1><a id="save">Saglabāt</a></h1>
+        </span>
+    </div>
+</div>
+
+
+@*<div class="container">
     <div class="row">
         <div class="col">
             <button type="button" @onclick="@Return" class="btn btn-primary btn-block">Atpakaļ</button>
@@ -163,7 +208,7 @@
         </div>
 
     </div>
-</div>
+</div>*@
 <div class="container">
 
 
@@ -222,7 +267,7 @@
                                      class="btn minus">
                                     -
                                 </div>
-                                 
+
                             </div>
 
 
@@ -299,10 +344,10 @@
 
 
                     </div>
-                      </div>
-                
+                </div>
 
-                
+
+
 
             }
 

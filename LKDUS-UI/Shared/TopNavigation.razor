@@ -1,6 +1,5 @@
-﻿@namespace ComponentsTestAPIUI
-@inject IJSRuntime JsRuntime
-
+﻿@inject NavigationManager navManager
+@using LKDUS_UI.Pages
 <style>
     #row1 {
         padding: 20px 20px 20px 20px;
@@ -31,30 +30,36 @@
         padding: 25px;
         text-align: center;
     }
-
 </style>
 
 
 <div id="row1">
     <div class="button-container">
-        <span class="button-left">
+        <span class="button-left" @onclick="@goback">
             <h1><a id="back">Atpakaļ</a></h1>
         </span>
         <span>
-            <h1>index</h1>
+            <h1>@Title</h1>
         </span>
-        <span class="button-right">
-            <h1><a id="save">Saglabāt</a></h1>
+        <span style="visibility:@HiddenOrVisible" @onclick="(() => OnClick.InvokeAsync())" class="button-right">
+            <h1  ><a id="save">Saglabāt</a></h1>
         </span>
     </div>
 </div>
- 
-
-
 @code {
-     
+    [Parameter]
+    public string Link { get; set; }
+    [Parameter]
+    public string HiddenOrVisible { get; set; }
 
+    [Parameter]
+    public string Title { get; set; }
+
+    private void goback(MouseEventArgs e)
+    {
+        this.navManager.NavigateTo(Link);
+    }
+
+
+    [Parameter] public EventCallback<string> OnClick { get; set; }
 }
-
-
-

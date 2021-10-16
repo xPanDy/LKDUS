@@ -17,39 +17,83 @@
         max-width: 300px;
     }
 </style>
+<style>
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
 
-<div style="height:100%">
-    <div class="container">
-        <div class="row">
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
 
-            <div class="col">
-                <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
+
+
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+
+
+
+
+
+@if (ModelPackHeader == null || ModelMeasurements == null)
+{
+    <LoadingMessage Message="Notiek mērījumu ielāde" />
+
+}
+else
+{
+
+    <!-- Scroll bar present and enabled when more contents -->
+
+
+    @*<div class="rowcentered">
+            <h4> Dati par pakas:@ModelPackHeader.FusCode  @ModelPackHeader.MeasurementTypeName mērījumiem </h4>
+        </div>*@
+
+    <div id="row1">
+        <div class="button-container">
+            <span class="button-left" @onclick="@goBack">
+                <h1><a id="back">Atpakaļ</a></h1>
+            </span>
+            <span>
+                <h1>Dati par pakas:@ModelPackHeader.FusCode  @ModelPackHeader.MeasurementTypeName mērījumiem  </h1>
+            </span>
+            <span style="visibility:hidden" class="button-right">
+                <h1><a id="save">Saglabāt</a></h1>
+            </span>
         </div>
     </div>
+    <div style="height:100%">
+        @*<div class="container">
+                <div class="row">
 
-
-
-
-
-    @if (ModelPackHeader == null)
-    {
-        <LoadingMessage Message="Notiek mērījumu ielāde" />
-    }
-    else
-    {
-
-        <!-- Scroll bar present and enabled when more contents -->
-
-
-        <div class="rowcentered">
-            <h4> Dati par pakas:@ModelPackHeader.FusCode  @ModelPackHeader.MeasurementTypeName mērījumiem </h4>
-        </div>
-
+                    <div class="col">
+                        <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
+                    </div>
+                    <div class="col">
+                    </div>
+                    <div class="col">
+                    </div>
+                </div>
+            </div>*@
 
         <div class="container" style="height:75%">
             <div class="mh-75">
@@ -126,160 +170,160 @@
                         @foreach (var model in ModelMeasurements)
                         {
 
-                        <tr>
+                            <tr>
 
-                            <td>@model.DateCreated</td>
-                            <td>@ModelPackHeader.Machine</td>
-                            <td>@model.Shift</td>
+                                <td>@model.DateCreated</td>
+                                <td>@ModelPackHeader.Machine</td>
+                                <td>@model.Shift</td>
 
 
-                            @if (ModelMeasurements.Any(e => e.MeasurementTypeId == 1015))
-                            {
-                                <td>@model.Measurement1</td>
-                                <td>@model.Measurement2</td>
-                                <td>@model.Measurement3</td>
-                                <td>@model.Measurement4</td>
-                                <td>@model.Measurement5</td>
-                                <td>@model.Measurement6</td>
-                                <td>@model.Measurement7</td>
-                                <td>@model.Measurement8</td>
-                                <td>@model.Measurement9</td>
-
-                            }
-                            else if (ModelMeasurements.Any(e => e.MeasurementTypeId == 1016))
-                            {
-                                @if (model.Measurement1 == 0)
+                                @if (ModelMeasurements.Any(e => e.MeasurementTypeId == 1015))
                                 {
-                                    <td>@model.Measurement1 NOK</td>
+                                    <td>@model.Measurement1</td>
+                                    <td>@model.Measurement2</td>
+                                    <td>@model.Measurement3</td>
+                                    <td>@model.Measurement4</td>
+                                    <td>@model.Measurement5</td>
+                                    <td>@model.Measurement6</td>
+                                    <td>@model.Measurement7</td>
+                                    <td>@model.Measurement8</td>
+                                    <td>@model.Measurement9</td>
 
                                 }
-                                else
+                                else if (ModelMeasurements.Any(e => e.MeasurementTypeId == 1016))
                                 {
-                                    <td>@model.Measurement1 OK</td>
+                                    @if (model.Measurement1 == 0)
+                                    {
+                                        <td>@model.Measurement1 NOK</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td>@model.Measurement1 OK</td>
+
+                                    }
+
+
+                                    @if (model.Measurement2 == 0)
+                                    {
+                                        <td>@model.Measurement2 NOK</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td>@model.Measurement2 OK</td>
+
+                                    }
+
+                                    @if (model.Measurement3 == 0)
+                                    {
+                                        <td>@model.Measurement3 NOK</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td>@model.Measurement3 OK</td>
+
+                                    }
+
+                                    @if (model.Measurement4 == 0)
+                                    {
+                                        <td>@model.Measurement4 NOK</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td>@model.Measurement4 OK</td>
+
+                                    }
+
+
+                                    @if (model.Measurement5 == 0)
+                                    {
+                                        <td>@model.Measurement5 NOK</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td>@model.Measurement5 OK</td>
+
+                                    }
+
+
+                                    @if (model.Measurement6 == 0)
+                                    {
+                                        <td>@model.Measurement6 NOK</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td>@model.Measurement6 OK</td>
+
+                                    }
+
+
+                                    @if (model.Measurement7 == 0)
+                                    {
+                                        <td>@model.Measurement7 NOK</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td>@model.Measurement7 OK</td>
+
+                                    }
+
+
+                                    @if (model.Measurement8 == 0)
+                                    {
+                                        <td>@model.Measurement8 NOK</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td>@model.Measurement8 OK</td>
+
+                                    }
+
+                                    @if (model.Measurement9 == 0)
+                                    {
+                                        <td>@model.Measurement9 NOK</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td>@model.Measurement9 OK</td>
+
+                                    }
+
+
+                                    @*<td>@model.Measurement2</td>
+                                        <td>@model.Measurement3</td>
+                                        <td>@model.Measurement4</td>
+                                        <td>@model.Measurement5</td>
+                                        <td>@model.Measurement6</td>
+                                        <td>@model.Measurement7</td>
+                                        <td>@model.Measurement8</td>*@
+
+                                }
+                                else if (ModelMeasurements.Any(e => e.MeasurementTypeId == 1018))
+                                {
+                                    <td>@model.Measurement1</td>
+                                    <td>@model.Measurement2</td>
+                                    <td>@model.Measurement3</td>
+                                }
+
+                                else if (ModelMeasurements.Any(e => e.MeasurementTypeId == 1017))
+                                {
+                                    <td>@model.Measurement1</td>
+                                    <td>@model.Measurement2</td>
 
                                 }
 
 
-                                @if (model.Measurement2 == 0)
-                                {
-                                    <td>@model.Measurement2 NOK</td>
-
-                                }
-                                else
-                                {
-                                    <td>@model.Measurement2 OK</td>
-
-                                }
-
-                                @if (model.Measurement3 == 0)
-                                {
-                                    <td>@model.Measurement3 NOK</td>
-
-                                }
-                                else
-                                {
-                                    <td>@model.Measurement3 OK</td>
-
-                                }
-
-                                @if (model.Measurement4 == 0)
-                                {
-                                    <td>@model.Measurement4 NOK</td>
-
-                                }
-                                else
-                                {
-                                    <td>@model.Measurement4 OK</td>
-
-                                }
 
 
-                                @if (model.Measurement5 == 0)
-                                {
-                                    <td>@model.Measurement5 NOK</td>
-
-                                }
-                                else
-                                {
-                                    <td>@model.Measurement5 OK</td>
-
-                                }
-
-
-                                @if (model.Measurement6 == 0)
-                                {
-                                    <td>@model.Measurement6 NOK</td>
-
-                                }
-                                else
-                                {
-                                    <td>@model.Measurement6 OK</td>
-
-                                }
-
-
-                                @if (model.Measurement7 == 0)
-                                {
-                                    <td>@model.Measurement7 NOK</td>
-
-                                }
-                                else
-                                {
-                                    <td>@model.Measurement7 OK</td>
-
-                                }
-
-
-                                @if (model.Measurement8 == 0)
-                                {
-                                    <td>@model.Measurement8 NOK</td>
-
-                                }
-                                else
-                                {
-                                    <td>@model.Measurement8 OK</td>
-
-                                }
-
-                                @if (model.Measurement9 == 0)
-                                {
-                                    <td>@model.Measurement9 NOK</td>
-
-                                }
-                                else
-                                {
-                                    <td>@model.Measurement9 OK</td>
-
-                                }
-
-
-                                @*<td>@model.Measurement2</td>
-            <td>@model.Measurement3</td>
-            <td>@model.Measurement4</td>
-            <td>@model.Measurement5</td>
-            <td>@model.Measurement6</td>
-            <td>@model.Measurement7</td>
-            <td>@model.Measurement8</td>*@
-
-                            }
-                            else if (ModelMeasurements.Any(e => e.MeasurementTypeId == 1018))
-                            {
-                                <td>@model.Measurement1</td>
-                                <td>@model.Measurement2</td>
-                                <td>@model.Measurement3</td>
-                            }
-
-                            else if (ModelMeasurements.Any(e => e.MeasurementTypeId == 1017))
-                            {
-                                <td>@model.Measurement1</td>
-                                <td>@model.Measurement2</td>
-
-                            }
-
-
-
-
-                        </tr>
+                            </tr>
 
                         }
 
@@ -295,8 +339,8 @@
 
 
 
-    }
-</div>
+    </div>
+}
 @code {
 
     [Parameter]

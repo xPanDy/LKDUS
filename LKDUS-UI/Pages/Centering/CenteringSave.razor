@@ -17,58 +17,106 @@
 @inject IMeasurementTypeRepository measurementTypeRepository;
 @inject IPacksRepository packRepo
 <style>
-    .grid-container {
-        display: grid;
-        height: 400px;
-        align-content: center;
-        grid-template-columns: 33% 33% 33%;
-        grid-gap: 10px;
-        background-color: white;
-        padding: 10px;
-        vertical-align: middle;
-    }
+        .grid-container {
+            display: grid;
+            height: 400px;
+            align-content: center;
+            grid-template-columns: 33% 33% 33%;
+            grid-gap: 10px;
+            background-color: white;
+            padding: 10px;
+            vertical-align: middle;
+        }
 
-    .none {
-        background-color: rgba(255, 255, 255, 1);
-        
-        font-size: 30px;
-        height: 100%;
-        display: block;
-        align-content: center;
-        vertical-align: middle;
-        display: inline-flex;
-        align-items: center;
-        text-align: center;
-        width: 50%;
-        margin: 0 auto;
-    }
-    /*.spn {
-        vertical-align: middle;
-        text-align: center;
-        align-content: center;
-        display: inline-flex;
-        align-items: center;
-    }
-*/
-    .up, .left, .down, .right {
-       /* color: red;*/
-        border: solid 4px red;
-        font-size: 3em;
-        text-align: center;
-        height: 100px;
-    }
-
-        .up:hover, .left:hover, .down:hover, .right:hover {
-           /* background-color: aqua;*/
-            cursor: pointer;
+        .none {
+            background-color: rgba(255, 255, 255, 1);
+            font-size: 30px;
+            height: 100%;
+            display: block;
+            align-content: center;
+            vertical-align: middle;
+            display: inline-flex;
+            align-items: center;
+            text-align: center;
+            width: 50%;
+            margin: 0 auto;
+        }
+        /*.spn {
+            vertical-align: middle;
+            text-align: center;
+            align-content: center;
+            display: inline-flex;
+            align-items: center;
+        }
+    */
+        .up, .left, .down, .right {
+            /* color: red;*/
+            border: solid 4px red;
             font-size: 3em;
             text-align: center;
+            height: 100px;
         }
+
+            .up:hover, .left:hover, .down:hover, .right:hover {
+                /* background-color: aqua;*/
+                cursor: pointer;
+                font-size: 3em;
+                text-align: center;
+            }
 </style>
+
+<style>
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
+
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
+
+
+
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+
+
+<div id="row1">
+    <div class="button-container">
+        <span class="button-left" @onclick="@Return">
+            <h1><a id="back">Atpakaļ</a></h1>
+        </span>
+        <span>
+            <h1>Centrēšana</h1>
+        </span>
+        <span style="visibility:visible"  @onclick="@SaveMeasurement" class="button-right">
+            <h1><a id="save">Saglabāt</a></h1>
+        </span>
+    </div>
+</div>
+
+
 <div class="vh-100 m-0 p-0" style="overflow: hidden;">
     <div style="height: 100%;  width:100%; background-color: white ">
         <!--navigation -->
-        <div class=" col-md-8 mx-auto p-1 m-0 d-inline-block" style="width: 50%; height:10%; float:left; background-color: white">
+        @*<div class=" col-md-8 mx-auto p-1 m-0 d-inline-block" style="width: 50%; height:10%; float:left; background-color: white">
             <button class="btn-primary btn btn-block" @onclick="@Return" style="width:100%; height:100%;"><h3>Atpakaļ</h3></button>
         </div>
         <div class=" col-md-8  mx-auto p-1 m-0  d-inline-block" style="width: 50%;height:10%; float:left;  background-color: white">
@@ -81,7 +129,7 @@
         text-align: center;
 ">
             <h3>Centrēšana</h3>
-        </div>
+        </div>*@
 
         <div class="row">
 
@@ -94,8 +142,11 @@
                     <div class="none"></div>
                     <div style="        background-color: @colorBgs[1];" class="left" @onclick="el => setPositionValue(1)">@positionsAngle[1]</div>
 
-                    <div class="none align-middle"><span class="spn" >
-                        Kreisā puse</span></div>
+                    <div class="none align-middle">
+                        <span class="spn">
+                            Kreisā puse
+                        </span>
+                    </div>
                     <div style="        background-color: @colorBgs[2];" class="right" @onclick="el => setPositionValue(2)">@positionsAngle[2]</div>
                     <div class="none"></div>
                     <div style="        background-color: @colorBgs[3];" class="down" @onclick="el => setPositionValue(3)">@positionsAngle[3] </div>
@@ -298,13 +349,13 @@
         Int32.TryParse(positionsAngle[6], out v6);
         Int32.TryParse(positionsAngle[7], out v7);
         if (
-            v0-v3 >=5
-            || v3-v0 >= 5 ||
+            v0 - v3 >= 5
+            || v3 - v0 >= 5 ||
 
-            v3 -v0
+            v3 - v0
             <= -5 ||
             v0 -
-            v3<= -5
+            v3 <= -5
 
 
             )
@@ -325,7 +376,7 @@
 
 
     private IList<Pack> ModelPacks;
-    private async void SaveMeasurement()
+    public async void SaveMeasurement()
     {
         String measurementDateAndTime = DateTime.Now.ToString("g");
         ////var pid = ModelPacks.Max(el => el.Id) + 1;
@@ -379,7 +430,7 @@
         string final = packStringResult.Substring(pos1, pos2 - pos1);
 
         string[] elements = final.Split(':');
-        
+
         Measurement meas = new Measurement();
         meas.DateCreated = DateTime.Parse(measurementDateAndTime);
         meas.Shift = shift;
@@ -562,7 +613,7 @@
             positionsAngle[i] = "";
 
         }
-      //  ModelPacks = await this.packRepo.Get(Endpoints.PacksEndpoint);
+        //  ModelPacks = await this.packRepo.Get(Endpoints.PacksEndpoint);
         Machines = await machineRepository.Get(Endpoints.MachinesEndpoint);
         Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
         machine.Id = int.Parse(pmachineIdd);

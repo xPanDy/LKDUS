@@ -15,7 +15,7 @@
 @inject IPacksRepository packRepo
 @inject IAuthenticationRepository authRepo
 @inject IMeasurementTypeRepository measTRepo
-@inject IJSRuntime JsRuntime 
+@inject IJSRuntime JsRuntime
 @inject ToastService toastService
 <style>
 
@@ -73,39 +73,84 @@
         max-height: 35vh;
     }
 </style>
+<style>
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
 
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
+
+
+
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+
+
+<div id="row1">
+    <div class="button-container">
+        <span class="button-left" @onclick="@GoToCreation">
+            <h1><a id="back">Atpakaļ</a></h1>
+        </span>
+        <span>
+            <h1> Biezums</h1>
+        </span>
+        <span style="visibility:visible" @onclick="@SaveMeasurement" class="button-right">
+            <h1><a id="save">Saglabāt</a></h1>
+        </span>
+    </div>
+</div>
 <div>
 
-    <div class="container">
+    <!--<div class="container">
         <div class="row">
 
             <div class="col">
                 <button type="button" @onclick="@GoToCreation" class="btn btn-primary btn-block">Atpakaļ</button>
             </div>
-            <div class="col w-25"><h3 class="card-title">Biezums</h3></div>
+            <div class="col w-25"><h3 class="card-title">Biezums</h3></div>-->
             @*@if (!isTypeCklicked)
-            {<div class="col">
+                {<div class="col">
 
-                </div>
-            }
-            else*@
-             
-                <div class="col">
-                    <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
-                </div>
-            
+                    </div>
+                }
+                else*@
+
+            <!--<div class="col">
+                <button type="submit" @onclick="@SaveMeasurement" class="btn btn-primary btn-block">Saglabāt</button>
+            </div>
+
 
         </div>
-    </div>
-     
+    </div>-->
+
     @if (isTypeCklicked)
     {
 
         @*<div class="form-group">
-            <label for="machine">Iekārta</label>
-            <input id="machine" class="form-control" type="text" placeholder=@fusMachineName readonly>
+                <label for="machine">Iekārta</label>
+                <input id="machine" class="form-control" type="text" placeholder=@fusMachineName readonly>
 
-        </div>*@
+            </div>*@
 
         <div class="form-group">
 
@@ -277,7 +322,7 @@
     }
 
 
-    static  bool isEdit = true;
+    static bool isEdit = true;
     string editPosition = "";
     private void HighlightSelected(int a, int b)
     {

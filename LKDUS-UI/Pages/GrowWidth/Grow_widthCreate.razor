@@ -22,11 +22,175 @@
 
 
 
+<style>
+    .center {
+        margin: 0 auto;
+        text-align: center;
+    }
 
+    .spacer {
+        margin-top: 6rem;
+    }
+
+    /* barcode container */
+    .anim-box {
+        position: relative;
+        width: 220px;
+        height: 100px;
+        padding: 25px 30px;
+        transition: transform .6s ease-out;
+    }
+
+        /* adds the 4 corners */
+        .anim-box:before, .anim-box:after, .anim-box > :first-child:before, .anim-box > :first-child:after {
+            position: absolute;
+            width: 10%;
+            height: 15%;
+            border-color: white;
+            border-style: solid;
+            content: ' ';
+        }
+
+        /* top left corner */
+        .anim-box:before {
+            top: 0;
+            left: 0;
+            border-width: 2px 0 0 2px;
+        }
+
+        /* top right corner */
+        .anim-box:after {
+            top: 0;
+            right: 0;
+            border-width: 2px 2px 0 0;
+        }
+
+        /* bottom right corner */
+        .anim-box > :first-child:before {
+            bottom: 0;
+            right: 0;
+            border-width: 0 2px 2px 0;
+        }
+
+        /* bottom left corner */
+        .anim-box > :first-child:after {
+            bottom: 0;
+            left: 0;
+            border-width: 0 0 2px 2px;
+        }
+
+    /* barcode bars */
+    .anim-item {
+        display: inline-block;
+        background-color: black;
+        height: 100px;
+    }
+
+    .anim-item-sm {
+        width: 2px;
+        margin-right: 3px;
+    }
+
+    .anim-item-md {
+        width: 3px;
+        margin-right: 2px;
+    }
+
+    .anim-item-lg {
+        width: 5px;
+        margin-right: 5px;
+    }
+
+    /* grow on hover */
+    .anim-box:hover {
+        transform: scale(1.5, 2);
+    }
+
+        .anim-box:hover .scanner {
+            animation-play-state: running;
+        }
+
+    /* animated laser beam */
+    .scanner {
+        width: 100%;
+        height: 3px;
+        background-color: red;
+        opacity: 0.7;
+        position: relative;
+        box-shadow: 0px 0px 8px 10px rgba(170, 11, 23, 0.49);
+        top: 50%;
+        animation-name: scan;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-play-state: paused;
+    }
+
+    @@keyframes scan {
+        0% {
+            box-shadow: 0px 0px 8px 10px rgba(170, 11, 23, 0.49);
+            top: 50%;
+        }
+
+        25% {
+            box-shadow: 0px 6px 8px 10px rgba(170, 11, 23, 0.49);
+            top: 5px;
+        }
+
+        75% {
+            box-shadow: 0px -6px 8px 10px rgba(170, 11, 23, 0.49);
+            top: 98%;
+        }
+    }
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
+
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
+
+
+
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+
+
+<div id="row1">
+    <div class="button-container">
+        <span class="button-left" @onclick="@goBack">
+            <h1><a id="back">Atpakaļ</a></h1>
+        </span>
+        <span>
+            <h1>@mp.Name</h1>
+        </span>
+        <span style="visibility:hidden" class="button-right">
+            <h1><a id="save">Saglabāt</a></h1>
+        </span>
+    </div>
+</div>
 
 <div>
 
-    <div class="row">
+    <!--<div class="row">
 
         <div class="col">
 
@@ -34,12 +198,12 @@
             <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
         </div>
         <div class="col w-25"><h3 class="card-title">@mp.Name</h3></div>
-        <div class="col">
+        <div class="col">-->
             @*<button type="submit" class="btn btn-primary btn-block">Saglabāt</button>*@
-        </div>
+        <!--</div>-->
 
 
-    </div>
+    @*</div>*@
 
     @*kameras kolonna*@
 
@@ -47,27 +211,57 @@
     <div class="row">
 
         <div class="col-4">
-            <button id="startButton" class="btn btn-outline-success" @onclick="isStreamVisible">
+            <button id="startButton" class="btn btn-outline-success" style="margin-left:20px" @onclick="isStreamVisible">
+                @*<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">
+                <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z" />
+
+            </svg>*@
+                <h2>Skenēt</h2>
+
+
+                <div class='spacer' @onclick="isStreamVisible"></div>
+                <div class='anim-box center spacer' @onclick="isStreamVisible">
+                    <!-- empty first child used for corners -->
+                    <div></div>
+                    <div @onclick="isStreamVisible" class='scanner'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-sm'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-lg'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-lg'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-sm'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-lg'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-sm'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-md'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-sm'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-md'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-lg'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-sm'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-sm'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-lg'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-sm'></div>
+                </div>
+                <div class='spacer'></div>
+                </button>
+                @*<button id="startButton" class="btn btn-outline-success" @onclick="isStreamVisible">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">
                     <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z" />
                 </svg>Svītrkoda skenēšana
-            </button>
-            @if (visibilityOfCamera)
-            {
-                <div id="sourceSelectPanel" style="display:none">
-                    <label for="sourceSelect"> </label><span class="text-dark" id="result"></span>
-                    <select id="sourceSelect" style="max-width:100%" class="form-control">
-                    </select>
-                </div>
-                <div>
-                    <video id="video" style="min-height:150px;max-height:60%; max-width: 100%;border: 1px solid gray"></video>
-                </div>
+            </button>*@
+                @if (visibilityOfCamera)
+                {
+                    <div id="sourceSelectPanel" style="display:none">
+                        <label for="sourceSelect"> </label><span class="text-dark" id="result"></span>
+                        <select id="sourceSelect" style="max-width:100%" class="form-control">
+                        </select>
+                    </div>
+                    <div>
+                        <video id="video" style="min-height:150px;max-height:60%; max-width: 100%;border: 1px solid gray"></video>
+                    </div>
 
-            }
-            else
-            {
+                }
+                else
+                {
 
-            }
+                }
 
         </div>
 
@@ -95,12 +289,12 @@
                            type="text">
 
                     @*<input class="form-control"
-            id="@id100"
-            @onkeydown="DoSomethingElse"
-            @onclick="focusToInput100"
-            @bind="@stringPackValue"
-            @ref="@input100"
-            type="text">*@
+                        id="@id100"
+                        @onkeydown="DoSomethingElse"
+                        @onclick="focusToInput100"
+                        @bind="@stringPackValue"
+                        @ref="@input100"
+                        type="text">*@
 
 
 
@@ -134,7 +328,7 @@
                     <div class="col">
                         <label for="pack">Pakas datums</label>
 
-                        <input  class="form-control" type="text"
+                        <input class="form-control" type="text"
                                @bind="@fp.DateCreated"
                                readonly id="packDate">
                     </div>
@@ -148,7 +342,7 @@
                         <label for="packMaster">Maiņa</label>
 
                         <input class="form-control"
-                               @bind-value="@fp.Master"  style="background-color:@shiftsColor; color:@fontColor" type="text" readonly id="packMaster">
+                               @bind-value="@fp.Master" style="background-color:@shiftsColor; color:@fontColor" type="text" readonly id="packMaster">
                     </div>
                     <div class="col">
                         <label for="packMaster">Klase</label>
@@ -275,8 +469,7 @@ i <= DateTime.Now.Year + 5; i++)
                 @if ((stringPackValue == "0" || string.IsNullOrEmpty(stringPackValue)) || fp == null)
                 {
 
-                    <LoadingMessage Message="Lai turpinātu nospied 'Svītrkoda skenēšana' vai ievadiet pakas kodu izmantojot ciparnīcu" />
-                }
+                <LoadingMessage Message="Lai turpinātu nospiediet uz pogas 'Skenēt' vai ievadiet pakas kodu izmantojot ciparnīcu" />                }
                 else
                 {
                     <nav class="navbar navbar-dark">
@@ -351,6 +544,8 @@ i <= DateTime.Now.Year + 5; i++)
                 }
 
 
+
+            </div>
                 <div class="row justify-content-center">
                     <div class="col-auto">
                         <table class="table table-bordered justify-content-center">
@@ -390,40 +585,38 @@ i <= DateTime.Now.Year + 5; i++)
                     <div class="col">
 
                         @*<div class="row w-100">
-                    <label for="shift">Maiņa</label>
-                </div>*@
+                                <label for="shift">Maiņa</label>
+                            </div>*@
                         @*<div class="row w-100">
-                    <button class="btn btn-primary  btn-lg" style="margin:10px;  background-color: green;">Zaļā            </button>
-                    <button class="btn btn-primary btn-lg" style="margin:10px;  background-color: black;">Melnā          </button>
-                    <button class="btn btn-primary btn-lg" style="margin:10px;  background-color: red;">Sarkanā       </button>
-                    <button class="btn btn-primary btn-lg" style="margin:10px;  background-color: blue;">Zilā           </button>
-                </div>*@
+                                <button class="btn btn-primary  btn-lg" style="margin:10px;  background-color: green;">Zaļā            </button>
+                                <button class="btn btn-primary btn-lg" style="margin:10px;  background-color: black;">Melnā          </button>
+                                <button class="btn btn-primary btn-lg" style="margin:10px;  background-color: red;">Sarkanā       </button>
+                                <button class="btn btn-primary btn-lg" style="margin:10px;  background-color: blue;">Zilā           </button>
+                            </div>*@
 
 
                         @*<div class="row">
 
-                    <label for="shift">Šķira</label>
-                </div>
-                <div class="row">
-                    <button class="btn btn-primary btn-lg " style="margin:10px; background-color: green;"> C/P     </button>
-                    <button class="btn btn-primary btn-lg " style="margin:10px; background-color: black;"> C        </button>
-                    <button class="btn btn-primary btn-lg " style="margin:10px; background-color: red;"> WG      </button>
-                    <button class="btn btn-primary btn-lg " style="margin:10px; background-color: blue;"> WG10      </button>
-                </div>*@
+                                <label for="shift">Šķira</label>
+                            </div>
+                            <div class="row">
+                                <button class="btn btn-primary btn-lg " style="margin:10px; background-color: green;"> C/P     </button>
+                                <button class="btn btn-primary btn-lg " style="margin:10px; background-color: black;"> C        </button>
+                                <button class="btn btn-primary btn-lg " style="margin:10px; background-color: red;"> WG      </button>
+                                <button class="btn btn-primary btn-lg " style="margin:10px; background-color: blue;"> WG10      </button>
+                            </div>*@
 
                         @*<select class="custom-select" @bind="@pshift" id="shift">
-                    <option selected>1</option>
-                    <option value="1">2</option>
+                                <option selected>1</option>
+                                <option value="1">2</option>
 
 
 
-                </select>*@
+                            </select>*@
 
 
                     </div>
                 </div>
-
-            </div>
 
 
         </div>
@@ -834,7 +1027,8 @@ i <= DateTime.Now.Year + 5; i++)
         //this.navManager.NavigateTo($"/growlong/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions");
     }
 
-    private void SelectMachine(int machinenmber){
+    private void SelectMachine(int machinenmber)
+    {
 
         if (machinenmber == 1)
         {

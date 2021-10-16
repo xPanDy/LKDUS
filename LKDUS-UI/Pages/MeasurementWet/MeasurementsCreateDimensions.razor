@@ -1,126 +1,173 @@
 ﻿@page "/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions"
-       @*/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions")*@
-    @* // /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions*@
-    @using LKDUS_UI.Models
-    @using LKDUS_UI.Static
-    @using LKDUS_UI.Contracts
-    @using System.Net.Http
-    @inject IMachinesRepository machineRepository;
+@*/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/create/measurementdimensions")*@
+@* // /measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/create/measurementdimensions*@
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
+@inject IMachinesRepository machineRepository;
 
-    @inject IMeasurementRepository repo
-    @inject NavigationManager navManager
-
-
+@inject IMeasurementRepository repo
+@inject NavigationManager navManager
 
 
+<style>
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
 
-    <div class="card">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <button type="button" @onclick="@Return" class="btn btn-primary btn-block">Atpakaļ</button>
-                </div>
-                <div class="col w-25"><h3 class="card-title">Mitrā finiera izmēri</h3></div>
-                <div class="col">
-                    
-                </div>
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
+
+
+
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+
+
+<div id="row1">
+    <div class="button-container">
+        <span class="button-left" @onclick="@Return"  >
+            <h1><a id="back">Atpakaļ</a></h1>
+        </span>
+        <span>
+            <h1>Mitrā finiera izmēri</h1>
+        </span>
+        <span style="visibility:hidden" class="button-right">
+            <h1><a id="save">Saglabāt</a></h1>
+        </span>
+    </div>
+</div>
+
+
+
+
+<div class="card">
+    @*<div class="container">
+        <div class="row">
+            <div class="col">
+                <button type="button" @onclick="@Return" class="btn btn-primary btn-block">Atpakaļ</button>
+            </div>
+            <div class="col w-25"><h3 class="card-title">Mitrā finiera izmēri</h3></div>
+            <div class="col">
 
             </div>
+
         </div>
-        <div>
-            <div class="row">
-                <div class="col w-25 h-25">
-                    <button class="btn btn-warning btn-block" @onclick="@NavigattetoWidth">
-                        <h3>Lokšņu platums</h3>
-                    </button>
-                </div>
-
-
-                <div class="col"><button class="btn btn-warning btn-block" @onclick="@GoLength"> <h3>Lokšņu garums</h3> </button></div>
-
-
-                <div class="w-100"></div>
-
+    </div>*@
+    <div>
+        <div class="row">
+            <div class="col w-25 h-25">
+                <button class="btn btn-warning btn-block" @onclick="@NavigattetoWidth">
+                    <h3>Lokšņu platums</h3>
+                </button>
             </div>
-            
+
+
+            <div class="col"><button class="btn btn-warning btn-block" @onclick="@GoLength"> <h3>Lokšņu garums</h3> </button></div>
+
+
+            <div class="w-100"></div>
+
         </div>
 
     </div>
 
+</div>
 
 
 
 
 
-    @code {
-        private IList<Measurement> Model2;
 
-        [Parameter]
-        public string pshift { get; set; }
-        [Parameter]
-        public string userId { get; set; }
-        [Parameter]
-        public string measurementPositionId { get; set; }
-        [Parameter]
-        public string stringPackValue { get; set; }
-        [Parameter]
-        public string pmachineIdd { get; set; }
-        [Parameter]
-        public string fusMachineName { get; set; }
+@code {
+    private IList<Measurement> Model2;
 
-        //  Machine machine = new Machine();
+    [Parameter]
+    public string pshift { get; set; }
+    [Parameter]
+    public string userId { get; set; }
+    [Parameter]
+    public string measurementPositionId { get; set; }
+    [Parameter]
+    public string stringPackValue { get; set; }
+    [Parameter]
+    public string pmachineIdd { get; set; }
+    [Parameter]
+    public string fusMachineName { get; set; }
 
-        protected async override Task OnInitializedAsync()
+    //  Machine machine = new Machine();
+
+    protected async override Task OnInitializedAsync()
+    {
+        Machines = await machineRepository.Get(Endpoints.MachinesEndpoint);
+        Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
+        //  machine.Id = int.Parse(pmachineIdd);
+
+        //  machine = await machineRepository.Get(Endpoints.MachinesEndpoint, machine.Id);
+    }
+
+    private IList<Machine> Machines;
+
+    private void checkParams()
+    {
+
+
+
+        //if (machine.Id  == 0)
+        //{
+        //    machine.Id = Machines.FirstOrDefault().Id;
+
+        //}
+        if (stringPackValue == null)
         {
-            Machines = await machineRepository.Get(Endpoints.MachinesEndpoint);
-            Model2 = await this.repo.Get(Endpoints.MeasurementEndpoint);
-            //  machine.Id = int.Parse(pmachineIdd);
-
-            //  machine = await machineRepository.Get(Endpoints.MachinesEndpoint, machine.Id);
-        }
-
-        private IList<Machine> Machines;
-
-        private void checkParams()
-        {
-
-
-
-            //if (machine.Id  == 0)
-            //{
-            //    machine.Id = Machines.FirstOrDefault().Id;
-
-            //}
-            if (stringPackValue == null)
-            {
-                stringPackValue = "0";
-            }
-        }
-
-
-        private void OpenCreateForm(MouseEventArgs e)
-        {
-
-            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{fusMachineName}/create");
-        }
-
-
-        private void Return(MouseEventArgs e)
-        {
-
-            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
-        }
-
-
-        private void NavigattetoWidth(MouseEventArgs e)
-        {
-
-            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/width");
-        }
-
-        private void GoLength(MouseEventArgs e)
-        {
-
-            this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/length");
+            stringPackValue = "0";
         }
     }
+
+
+    private void OpenCreateForm(MouseEventArgs e)
+    {
+
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{fusMachineName}/create");
+    }
+
+
+    private void Return(MouseEventArgs e)
+    {
+
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/create");
+    }
+
+
+    private void NavigattetoWidth(MouseEventArgs e)
+    {
+
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/width");
+    }
+
+    private void GoLength(MouseEventArgs e)
+    {
+
+        this.navManager.NavigateTo($"/measurements/{userId}/{measurementPositionId}/{stringPackValue}/{pmachineIdd}/{fusMachineName}/{pshift}/create/measurementdimensions/length");
+    }
+}

@@ -22,11 +22,289 @@
 
 
 
+<style>
+    .center {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .spacer {
+        margin-top: 6rem;
+    }
+
+    /* barcode container */
+    .anim-box {
+        position: relative;
+        width: 220px;
+        height: 100px;
+        padding: 25px 30px;
+        transition: transform .6s ease-out;
+    }
+
+        /* adds the 4 corners */
+        .anim-box:before, .anim-box:after, .anim-box > :first-child:before, .anim-box > :first-child:after {
+            position: absolute;
+            width: 10%;
+            height: 15%;
+            border-color: white;
+            border-style: solid;
+            content: ' ';
+        }
+
+        /* top left corner */
+        .anim-box:before {
+            top: 0;
+            left: 0;
+            border-width: 2px 0 0 2px;
+        }
+
+        /* top right corner */
+        .anim-box:after {
+            top: 0;
+            right: 0;
+            border-width: 2px 2px 0 0;
+        }
+
+        /* bottom right corner */
+        .anim-box > :first-child:before {
+            bottom: 0;
+            right: 0;
+            border-width: 0 2px 2px 0;
+        }
+
+        /* bottom left corner */
+        .anim-box > :first-child:after {
+            bottom: 0;
+            left: 0;
+            border-width: 0 0 2px 2px;
+        }
+
+    /* barcode bars */
+    .anim-item {
+        display: inline-block;
+        background-color: black;
+        height: 100px;
+    }
+
+    .anim-item-sm {
+        width: 2px;
+        margin-right: 3px;
+    }
+
+    .anim-item-md {
+        width: 3px;
+        margin-right: 2px;
+    }
+
+    .anim-item-lg {
+        width: 5px;
+        margin-right: 5px;
+    }
+
+    /* grow on hover */
+    .anim-box:hover {
+        transform: scale(1.5, 2);
+    }
+
+        .anim-box:hover .scanner {
+            animation-play-state: running;
+        }
+
+    /* animated laser beam */
+    .scanner {
+        width: 100%;
+        height: 3px;
+        background-color: red;
+        opacity: 0.7;
+        position: relative;
+        box-shadow: 0px 0px 8px 10px rgba(170, 11, 23, 0.49);
+        top: 50%;
+        animation-name: scan;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-play-state: paused;
+    }
+
+    @@keyframes scan {
+        0% {
+            box-shadow: 0px 0px 8px 10px rgba(170, 11, 23, 0.49);
+            top: 50%;
+        }
+
+        25% {
+            box-shadow: 0px 6px 8px 10px rgba(170, 11, 23, 0.49);
+            top: 5px;
+        }
+
+        75% {
+            box-shadow: 0px -6px 8px 10px rgba(170, 11, 23, 0.49);
+            top: 98%;
+        }
+    }
+
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
+
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
+
+
+
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+
+
+
+
+
+    /* CONTAINERS */
+
+    .container2 {
+        max-width: 850px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .four {
+        width: 32.26%;
+        max-width: 32.26%;
+    }
+
+
+    /* COLUMNS */
+
+    .col {
+        display: block;
+        float: left;
+        margin: 1% 0 1% 1.6%;
+    }
+
+        .col:first-of-type {
+            margin-left: 0;
+        }
+
+    /* CLEARFIX */
+
+    .cf:before,
+    .cf:after {
+        content: " ";
+        display: table;
+    }
+
+    .cf:after {
+        clear: both;
+    }
+
+    .cf {
+        *zoom: 1;
+    }
+
+    /* FORM */
+
+    .form .plan input, .form .payment-plan input, .form .payment-type input {
+        display: none;
+    }
+
+    .form label {
+        position: relative;
+        color: #fff;
+        background-color: #aaa;
+        font-size: 26px;
+        text-align: center;
+        height: 150px;
+        line-height: 150px;
+        display: block;
+        cursor: pointer;
+        border: 3px solid transparent;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .form .plan input:checked + label, .form .payment-plan input:checked + label, .form .payment-type input:checked + label {
+        border: 3px solid #333;
+        background-color: #2fcc71;
+    }
+
+        .form .plan input:checked + label:after, form .payment-plan input:checked + label:after, .form .payment-type input:checked + label:after {
+            content: "\2713";
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 100%;
+            border: 2px solid #333;
+            background-color: #2fcc71;
+            z-index: 999;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+        }
+
+    .submit {
+        padding: 15px 60px;
+        display: inline-block;
+        border: none;
+        margin: 20px 0;
+        background-color: #2fcc71;
+        color: #fff;
+        border: 2px solid #333;
+        font-size: 18px;
+        -webkit-transition: transform 0.3s ease-in-out;
+        -o-transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .submit:hover {
+            cursor: pointer;
+            transform: rotateX(360deg);
+        }
+</style>
+
+<div id="row1">
+    <div class="button-container">
+        <span class="button-left" @onclick="@goBack">
+            <h1><a id="back">Atpakaļ</a></h1>
+        </span>
+        <span>
+            <h1>@mp.Name </h1>
+        </span>
+        <span style="visibility:hidden" class="button-right">
+            <h1><a id="save">Saglabāt</a></h1>
+        </span>
+    </div>
+</div>
 
 
 <div>
 
-    <div class="row">
+    <!--<div class="row">
 
         <div class="col">
 
@@ -34,24 +312,53 @@
             <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
         </div>
         <div class="col w-25"><h3 class="card-title">@mp.Name</h3></div>
-        <div class="col">
-            @*<button type="submit" class="btn btn-primary btn-block">Saglabāt</button>*@
-        </div>
+        <div class="col">-->
+    @*<button type="submit" class="btn btn-primary btn-block">Saglabāt</button>*@
+    <!--</div>
 
 
-    </div>
-
+    </div>-->
     @*kameras kolonna*@
 
 
     <div class="row">
 
         <div class="col-4">
-            <button id="startButton" class="btn btn-outline-success" @onclick="isStreamVisible">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">
-                    <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z" />
-                </svg>Svītrkoda skenēšana
+            <button id="startButton" class="btn btn-outline-success" style="margin-left:20px" @onclick="isStreamVisible">
+                @*<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">
+                        <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z" />
+
+                    </svg>*@
+                <h2>Skenēt</h2>
+
+                @*<button id="startButton" class="btn btn-outline-success" @onclick="isStreamVisible">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">
+                            <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z" />
+                        </svg>Svītrkoda skenēšana
+                    </button>*@
+                <div class='spacer' @onclick="isStreamVisible"></div>
+                <div class='anim-box center spacer' @onclick="isStreamVisible">
+                    <!-- empty first child used for corners -->
+                    <div></div>
+                    <div @onclick="isStreamVisible" class='scanner'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-sm'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-lg'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-lg'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-sm'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-lg'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-sm'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-md'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-sm'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-md'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-lg'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-sm'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-sm'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-lg'></div>
+                    <div @onclick="isStreamVisible" class='anim-item anim-item-sm'></div>
+                </div>
+                <div class='spacer'></div>
             </button>
+
             @if (visibilityOfCamera)
             {
                 <div id="sourceSelectPanel" style="display:none">
@@ -222,7 +529,7 @@
                     <label for="year">Gads</label>
                     <select disabled="true" id="year" class="custom-select" @bind="Year">
                         @for (int i = DateTime.Now.Year - 5;
-                       i <= DateTime.Now.Year + 5; i++)
+                     i <= DateTime.Now.Year + 5; i++)
                         {
                             <option>@i</option>
                         }
@@ -265,21 +572,35 @@
 
                     </select>
 
-                    
+
 
                 </div>
             </div>
 
-            <div class="row">
 
-                @if ((stringPackValue == "0" || string.IsNullOrEmpty(stringPackValue)) || fp == null || stringPackValue =="")
+            <div class="row">
+                @if ((stringPackValue == "0" || string.IsNullOrEmpty(stringPackValue)) || fp == null || stringPackValue == "")
                 {
 
-                    <LoadingMessage Message="Lai turpinātu nospied 'Svītrkoda skenēšana' vai ievadiet pakas kodu izmantojot ciparnīcu" />
-                }
+                    <LoadingMessage Message="Lai turpinātu nospiediet uz pogas 'Skenēt' vai ievadiet pakas kodu izmantojot ciparnīcu" /> }
                 else
                 {
-                    <nav class="navbar navbar-dark">
+
+            <div class="container2">
+
+                <form class="form cf">
+                    <section class="plan cf">
+                        
+                        <input type="radio"  @onclick="@GoToThickness"  name="radio1" id="free" value="free"><label class="free-label four col" for="free">Mitrā finiera biezums</label>
+                        <input type="radio" @onclick="@GoToDimensions"  name="radio1" id="basic" value="basic" ><label class="basic-label four col" for="basic">Platums, garums</label>
+                        <input type="radio"  @onclick="@GoToQuality"  name="radio1" id="premium" value="premium"><label class="premium-label four col" for="premium">Kvalitāte</label>
+                    </section>
+
+
+                </form>
+            </div>
+
+                    @*<nav class="navbar navbar-dark">
                         <div class="container-fluid">
                             <div class="navbar-btn">
 
@@ -295,10 +616,11 @@
                             </div>
 
                         </div>
-                    </nav>
+                    </nav>*@
                 }
 
 
+            </div>
                 <div class="row justify-content-center">
                     <div class="col-auto">
                         <table class="table table-bordered justify-content-center">
@@ -337,7 +659,6 @@
                     </div>
                 </div>
 
-            </div>
 
 
         </div>
@@ -465,7 +786,7 @@
 
             StateHasChanged();
         });
-        if (string.IsNullOrEmpty(stringPackValue) || stringPackValue=="" || stringPackValue.Length==1)
+        if (string.IsNullOrEmpty(stringPackValue) || stringPackValue == "" || stringPackValue.Length == 1)
         {
             fp = null;
         }
@@ -579,12 +900,12 @@
 
             if (DateTime.Compare(currentMeasurement, shiftTimeStart) >= 0 && DateTime.Compare(currentMeasurement, shiftTimeEnd) < 0)
             {
-                pshift =1;
+                pshift = 1;
             }
 
             if (DateTime.Compare(currentMeasurement, shiftTimeStart) < 0 || DateTime.Compare(currentMeasurement, shiftTimeEnd) >= 0)
             {
-                pshift =2;
+                pshift = 2;
             }
 
 

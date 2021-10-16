@@ -17,38 +17,86 @@
         max-width: 300px;
     }
 </style>
+<style>
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
 
-<div style="height:100%">
-    <div class="container">
-        <div class="row">
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
 
-            <div class="col">
-                <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
+
+
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+
+
+
+
+
+
+@if (ModelPackHeader == null || ModelMeasurements == null)
+{
+
+
+    <LoadingMessage Message="Notiek mērījumu ielāde" />
+}
+else
+{
+
+    <div id="row1">
+        <div class="button-container">
+            <span class="button-left" @onclick="@goBack">
+                <h1><a id="back">Atpakaļ</a></h1>
+            </span>
+            <span>
+                <h1>Dati par pakas:@ModelPackHeader.FusCode  @ModelPackHeader.MeasurementTypeName mērījumiem </h1>
+            </span>
+
+            <span style="visibility:hidden" class="button-right">
+                <h1><a id="save">Saglabāt</a></h1>
+            </span>
+
         </div>
     </div>
 
+    <div style="height:100%">
+        @*<div class="container">
+                <div class="row">
 
-
-
-
-    @if (ModelPackHeader == null)
-    {
-        <LoadingMessage Message="Notiek mērījumu ielāde" />
-    }
-    else
-    {
+                    <div class="col">
+                        <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
+                    </div>
+                    <div class="col">
+                    </div>
+                    <div class="col">
+                    </div>
+                </div>
+            </div>*@
 
         <!-- Scroll bar present and enabled when more contents -->
-
-
-        <div class="rowcentered">
-            <h4> Dati par pakas:@ModelPackHeader.FusCode  @ModelPackHeader.MeasurementTypeName mērījumiem </h4>
-        </div>
+        @*<div class="rowcentered">
+                <h4> Dati par pakas:@ModelPackHeader.FusCode  @ModelPackHeader.MeasurementTypeName mērījumiem </h4>
+            </div>*@
 
 
         <div class="container" style="height:75%">
@@ -92,43 +140,43 @@
                                 {
 
                                     @if (model.Measurement1 == 1.53m ||
-                                         model.Measurement1 == 1.54m ||
-                                         model.Measurement1 == 1.55m ||
-                                         model.Measurement1 == 1.63m ||
-                                         model.Measurement1 == 1.64m ||
-                                         model.Measurement1 == 1.65m)
+                                     model.Measurement1 == 1.54m ||
+                                     model.Measurement1 == 1.55m ||
+                                     model.Measurement1 == 1.63m ||
+                                     model.Measurement1 == 1.64m ||
+                                     model.Measurement1 == 1.65m)
                                     {
                                         <td style="        background-color: skyblue;">@model.Measurement1</td>
                                     }
 
                                     @if (model.Measurement2 == 1.53m ||
-                                          model.Measurement2 == 1.54m ||
-                                          model.Measurement2 == 1.55m ||
-                                          model.Measurement2 == 1.63m ||
-                                          model.Measurement2 == 1.64m ||
-                                          model.Measurement2 == 1.65m)
+                                      model.Measurement2 == 1.54m ||
+                                      model.Measurement2 == 1.55m ||
+                                      model.Measurement2 == 1.63m ||
+                                      model.Measurement2 == 1.64m ||
+                                      model.Measurement2 == 1.65m)
                                     {
                                         <td style="        background-color: skyblue;">@model.Measurement2</td>
- 
+
                                     }
                                     @if (model.Measurement3 == 1.53m ||
-                                       model.Measurement3 == 1.54m ||
-                                       model.Measurement3 == 1.55m ||
-                                       model.Measurement3 == 1.63m ||
-                                       model.Measurement3 == 1.64m ||
-                                       model.Measurement3 == 1.65m )    
-                                       {
+                                   model.Measurement3 == 1.54m ||
+                                   model.Measurement3 == 1.55m ||
+                                   model.Measurement3 == 1.63m ||
+                                   model.Measurement3 == 1.64m ||
+                                   model.Measurement3 == 1.65m)
+                                    {
                                         <td style="background-color:skyblue;">@model.Measurement3</td>
-                                     }
+                                    }
 
-                                    @if (model.Measurement1 <= 1.52m || 
-                                        model.Measurement1 >= 1.66m )
+                                    @if (model.Measurement1 <= 1.52m ||
+                                    model.Measurement1 >= 1.66m)
                                     {
                                         <td style="background-color:red;">@model.Measurement1</td>
                                     }
 
                                     @if (model.Measurement2 <= 1.52m ||
-                                        model.Measurement2 >= 1.66m )
+                                    model.Measurement2 >= 1.66m)
                                     {
                                         <td style="background-color:red;">@model.Measurement2</td>
 
@@ -138,14 +186,14 @@
 
 
                                     @if (model.Measurement3 <= 1.52m ||
-                                        model.Measurement3 >= 1.66m )
+                                    model.Measurement3 >= 1.66m)
                                     {
                                         <td style="background-color:red;">@model.Measurement3</td>
                                     }
 
 
-                                    @if (model.Measurement1 >= 1.56m && 
-                                        model.Measurement3 <= 1.62m )
+                                    @if (model.Measurement1 >= 1.56m &&
+                                    model.Measurement3 <= 1.62m)
                                     {
                                         <td>@model.Measurement1</td>
 
@@ -154,15 +202,15 @@
 
 
                                     @if (model.Measurement2 >= 1.56m &&
-                                        model.Measurement2 <= 1.62m )
+                                    model.Measurement2 <= 1.62m)
                                     {
                                         <td>@model.Measurement2</td>
 
 
                                     }
 
-                                    @if ( model.Measurement3 >= 1.56m && 
-                                        model.Measurement3 <= 1.62m )
+                                    @if (model.Measurement3 >= 1.56m &&
+                                    model.Measurement3 <= 1.62m)
                                     {
                                         <td>@model.Measurement3</td>
                                     }
@@ -183,8 +231,8 @@
 
 
 
-    }
-</div>
+    </div>
+}
 @code {
 
     [Parameter]
@@ -221,9 +269,9 @@
             {
                 fuspackIntId = int.Parse(fusCode);
                 packIdInt = int.Parse(packId);
-                ModelPackHeader = await packsRepository.Get(Endpoints.PacksEndpoint, packIdInt);
                 measurementTypelIST = await measurementTypeRepository.Get(Endpoints.MeasurementTypeEndpoint);
                 measurementType = measurementTypelIST.Where(e => e.Name == measurementTypeName).SingleOrDefault();
+                ModelPackHeader = await packsRepository.Get(Endpoints.PacksEndpoint, packIdInt);
 
                 //ModelPackHeader = ModelPackHeader.Where(ph=> ph. packIdInt);
                 //   Model = await machineRepo.Get(Endpoints.MachinesEndpoint, id);

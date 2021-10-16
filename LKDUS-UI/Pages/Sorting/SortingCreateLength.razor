@@ -27,9 +27,185 @@
     }
 </style>
 
+<style>
 
 
-<div class="container">
+    .btn-success:active {
+        color: #ffffff !important;
+        background-color: #161617;
+        border-color: #494F57;
+    }
+
+    td {
+        word-wrap: break-word;
+    }
+
+    .nonono {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    h4 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    #test2:hover {
+        background-color: green;
+    }
+
+    #test2:active {
+        background-color: green;
+        color: white;
+    }
+
+    #test2:focus {
+        background-color: green;
+        color: white;
+    }
+
+
+
+
+    .counter-box {
+        display: block;
+        background: #f6f6f6;
+        padding: 5px;
+        text-align: center
+    }
+
+        .counter-box p {
+            margin: 0px 0 0;
+            padding: 0;
+            color: #909090;
+            font-size: 18px;
+            font-weight: 500
+        }
+
+        .counter-box i {
+            font-size: 25px;
+            margin: 0 0 15px;
+            color: #d2d2d2
+        }
+
+    .counter {
+        display: inline-block;
+        font-size: 32px;
+        font-weight: 700;
+        color: #666;
+        line-height: 28px
+    }
+
+
+
+
+    .counter-box.colored {
+        background: #3acf87;
+        display: inline-block;
+    }
+
+    .counterminus {
+        display: inline-block;
+        background: red;
+        text-align: center;
+        color: #fff;
+        font-size: 60px;
+        font-weight: 700;
+    }
+
+    .counter-box.colored p,
+    .counter-box.colored i,
+    .counter-box.colored .counter {
+        color: #fff
+    }
+
+    p {
+        word-wrap: break-word;
+    }
+
+
+
+    .btn.abc {
+        width: 300px;
+        font-size: 25px;
+        display: inline-block;
+        background-color: #088977;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        white-space: normal;
+        height: 50%;
+    }
+
+    .plus {
+        font-size: 18px;
+        display: inline;
+    }
+
+    .minus {
+        display: inline;
+        font-size: 25px;
+    }
+
+    .btn.minus {
+        background-color: #F16360;
+        width: 50px;
+        height: 50%;
+        color: white;
+    }
+
+    .row {
+        padding-top: 5px;
+    }
+</style>
+<style>
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
+
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
+
+
+
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+
+
+<div id="row1">
+    <div class="button-container">
+        <span class="button-left" @onclick="@Return">
+            <h1><a id="back">Atpakaļ</a></h1>
+        </span>
+        <span>
+            <h1> Garums </h1>
+        </span>
+        <span style="visibility:visible" @onclick="@SaveMeasurement" class="button-right">
+            <h1><a id="save">Saglabāt</a></h1>
+        </span>
+    </div>
+</div>
+
+@*<div class="container">
     <div class="row">
         <div class="col">
             <button type="button" @onclick="@Return" class="btn btn-primary btn-block">Atpakaļ</button>
@@ -40,7 +216,7 @@
         </div>
 
     </div>
-</div>
+</div>*@
 <div class="container">
 
     <div class="row">
@@ -608,7 +784,7 @@
 
                     if (currentElement[i, j] == editPosition)
                     {
-                        positions[i, j] = value.ToString() ;
+                        positions[i, j] = value.ToString();
                     }
 
                 }
@@ -947,7 +1123,8 @@
                 if (j == 0)
                 {
 
-                    if (positions[i, j] == "") {
+                    if (positions[i, j] == "")
+                    {
                         positions[i, j] = "0";
                     }
                     meas.Measurement1 = Convert.ToDecimal(positions[i, j]);

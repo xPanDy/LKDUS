@@ -70,8 +70,8 @@
         font-size: 170%;
     }
 
-    
-    
+
+
     .i,
     .j,
     .k,
@@ -121,180 +121,230 @@
 else
 {
 
-    <a href=# class="button">Atpakaļ</a>
-                    <div class="wrapper">
-                        <a href="" class="a" @onclick="@(e=> NavigateToMeasurements(e,1))"><div>Mitrā finiera dimensijas</div></a>
-                        <a href="" class="b" @onclick="@(e=> NavigateToMeasurements(e,2))"><div>Mizošana</div></a>
-                        <a href="" class="c" @onclick="@(e=> NavigateToMeasurements(e,3))"><div>Centrēšana</div></a>
-                        <a href="" class="d" @onclick="@(e=> NavigateToMeasurements(e,4))"><div>Nažu asināšana</div></a>
-                        <a href="" class="e" @onclick="@(e=> NavigateToMeasurements(e,5))"><div>Nažu iestatīšana</div></a>
-                        <a href="" class="f" @onclick="@(e=> NavigateToMeasurements(e,6))"><div>Šķirošana</div></a>
-
-                        <a href="" class="g" @onclick="@(e=> NavigateToMeasurements(e,7))"><div>Garensaaudzēšana</div></a>
-                        <a href="" class="h" @onclick="@(e=> NavigateToMeasurements(e,8))"><div>Saaudzēšana platumā</div></a>
-
-                        <a class="i" @onclick="@(e=> NavigateToMeasurements(e,9))"><div>Finieru dimensijas</div></a>
-                        <a class="j" @onclick="@(e=> NavigateToMeasurements(e,10))"><div>Lam. saplākšņa šķirošana</div></a>
-                        <a class="k" @onclick="@(e=> NavigateToMeasurements(e,11))"><div>Baltā saplākšņa šķirošana</div></a>
-                        <a class="l" @onclick="@(e=> NavigateToMeasurements(e,12))"><div>Saplākšņu biezums</div></a>
-                        <a class="m" @onclick="@(e=> NavigateToMeasurements(e,13))"><div>Tepēšana</div></a>
-                        <a class="n" @onclick="@(e=> NavigateToMeasurements(e,14))"><div>Līmes uznesumi</div></a>
-                    </div>
-
-                    @*<div class="container">
-
-                            <div class="row">
-                                <div class="col-sm-12">
-
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-4" style ="background-color: green;" >
-                                    <a  href="*.html" style="width:100%;height:100%;display:block">Your link</a>
-                                </div>
-                                <div class="col-sm-4">
-
-                                </div>
-                                <div class="col-sm-4">
-
-                                </div>
 
 
-                            </div>
+    <style>
+        #row1 {
+            padding: 20px 20px 20px 20px;
+            overflow: hidden;
+        }
 
-
-                            <div class="row">
-                                <div class="col-sm-4">
-
-                                </div>
-                                <div class="col-sm-4">
-
-                                </div>
-                                <div class="col-sm-4">
-
-                                </div>
-
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-4">
-
-                                </div>
-                                <div class="col-sm-4">
-
-                                </div>
-                                <div class="col-sm-4">
-
-                                </div>
-
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-4">
-
-                                </div>
-                                <div class="col-sm-4">
-
-                                </div>
-                                <div class="col-sm-4">
-
-                                </div>
-
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-4">
-
-                                </div>
-                                <div class="col-sm-4">
-
-                                </div>
-                                <div class="col-sm-4">
-
-                                </div>
-
-
-                            </div>
-                        </div>*@
+        .button-container {
+            display: flex;
+            /* displays flex-items (children) inline */
+            justify-content: space-between;
+            /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+            align-items: center;
+            /* centers them vertically */
+        }
 
 
 
+        #back {
+            background-color: #1b6ec2;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        #save {
+            background-color: #1b6ec2;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+    </style>
 
 
+    <div id="row1">
+        <div class="button-container">
+            <span class="button-left" @onclick="@goBack" href=#>
+                <h1><a id="back">Atpakaļ</a></h1>
+            </span>
+            <span>
+                <h1>  </h1>
+            </span>
+            <span style="visibility:hidden" class="button-right">
+                <h1><a id="save">Saglabāt</a></h1>
+            </span>
+        </div>
+    </div>
 
 
-                    @*<div style="position: fixed;
-                         left: 0;
-                         top: 0;
-                         width: 150px; height:50px;
-                        ">
-                                   <button type="button" @onclick="@goBack" style="        width: 150px;
-                               height: 50px;
-                               background-color: #a8a9ac; color:white" class="btn btn-primary btn-block">
-                                       Atpakaļ
-                                   </button>
-                               </div>*@
+    @*<a href=# class="button">Atpakaļ</a>*@
+    <div class="wrapper">
+        <a href="" class="a" @onclick="@(e=> NavigateToMeasurements(e,1))"><div>Mitrā finiera dimensijas</div></a>
+        <a href="" class="b" @onclick="@(e=> NavigateToMeasurements(e,2))"><div>Mizošana</div></a>
+        <a href="" class="c" @onclick="@(e=> NavigateToMeasurements(e,3))"><div>Centrēšana</div></a>
+        <a href="" class="d" @onclick="@(e=> NavigateToMeasurements(e,4))"><div>Nažu asināšana</div></a>
+        <a href="" class="e" @onclick="@(e=> NavigateToMeasurements(e,5))"><div>Nažu iestatīšana</div></a>
+        <a href="" class="f" @onclick="@(e=> NavigateToMeasurements(e,6))"><div>Šķirošana</div></a>
+
+        <a href="" class="g" @onclick="@(e=> NavigateToMeasurements(e,7))"><div>Garensaaudzēšana</div></a>
+        <a href="" class="h" @onclick="@(e=> NavigateToMeasurements(e,8))"><div>Saaudzēšana platumā</div></a>
+
+        <a class="i" @onclick="@(e=> NavigateToMeasurements(e,9))"><div>Finieru dimensijas</div></a>
+        <a class="j" @onclick="@(e=> NavigateToMeasurements(e,10))"><div>Lam. saplākšņa šķirošana</div></a>
+        <a class="k" @onclick="@(e=> NavigateToMeasurements(e,11))"><div>Baltā saplākšņa šķirošana</div></a>
+        <a class="l" @onclick="@(e=> NavigateToMeasurements(e,12))"><div>Saplākšņu biezums</div></a>
+        <a class="m" @onclick="@(e=> NavigateToMeasurements(e,13))"><div>Tepēšana</div></a>
+        <a class="n" @onclick="@(e=> NavigateToMeasurements(e,14))"><div>Līmes uznesumi</div></a>
+    </div>
+
+    @*<div class="container">
+
+            <div class="row">
+                <div class="col-sm-12">
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-4" style ="background-color: green;" >
+                    <a  href="*.html" style="width:100%;height:100%;display:block">Your link</a>
+                </div>
+                <div class="col-sm-4">
+
+                </div>
+                <div class="col-sm-4">
+
+                </div>
 
 
+            </div>
 
 
-                    <!--while (j < Positions.Count)
-                    {
-                        var tmp = j;
-                        var tmp2 = j + 1;-->
-                    @*<div class="row mt-5">*@
+            <div class="row">
+                <div class="col-sm-4">
 
-                    @*<div class="col"><button id="@tmp" class="btn btn-warning btn-block" @onclick="@(e=> NavigateToMeasurements(e,tmp))">@Positions[j].Name </button></div>*@
+                </div>
+                <div class="col-sm-4">
 
-                    @*@{
+                </div>
+                <div class="col-sm-4">
 
-                            j++;
-                            tmp = j;
-                            tmp2 = j + 1;
-                            //var tmp2 = j + 1;
-                            // tmp2 = j + 1;
-                        }*@
+                </div>
 
-                    <!--<a href="#" class="btn">
-                        <span class="left icon icon-tablet"></span>
-                        <span class="right title">Buy in App Store</span>
-                    </a>
-                    if (Positions[j].Id == 1 || Positions[j].Id == 2 || Positions[j].Id == 4 || Positions[j].Id == 5 || Positions[j].Id == 7 || Positions[j].Id == 8)
-                    {
 
-                        <div id="@tmp2" style="background-color:#0078A8; color:white" @onclick="@(e=> NavigateToMeasurements(e,tmp2))" class="flex-item  "><p><h3>@Positions[j].Name </h3> </p></div>
-                    }
-                    else
-                    {
-                        <div style="pointer-events: none;" id="@tmp2" @onclick="@(e=> NavigateToMeasurements(e,tmp2))" class="flex-item  ">
-                            <p>
-                                <h3>
-                                    @Positions[j].Name
-                                    <br />(notiek izstrāde)
-                                </h3>
-                            </p>
-                        </div>
-                    }-->
-                    @*<div class="col"><button id="@tmp2" class="btn btn-warning btn-block" @onclick="@(e=> NavigateToMeasurements(e,tmp2))">@Positions[j].Name </button></div>*@
+            </div>
 
-                    @*<div class="w-100"></div>*@
+            <div class="row">
+                <div class="col-sm-4">
 
-                    @*</div>*@
+                </div>
+                <div class="col-sm-4">
 
-                    <!--j++;
+                </div>
+                <div class="col-sm-4">
 
-                    }-->
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+
+                </div>
+                <div class="col-sm-4">
+
+                </div>
+                <div class="col-sm-4">
+
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+
+                </div>
+                <div class="col-sm-4">
+
+                </div>
+                <div class="col-sm-4">
+
+                </div>
+
+
+            </div>
+        </div>*@
 
 
 
 
 
 
-                }
+
+    @*<div style="position: fixed;
+         left: 0;
+         top: 0;
+         width: 150px; height:50px;
+        ">
+                   <button type="button" @onclick="@goBack" style="        width: 150px;
+               height: 50px;
+               background-color: #a8a9ac; color:white" class="btn btn-primary btn-block">
+                       Atpakaļ
+                   </button>
+               </div>*@
+
+
+
+
+    <!--while (j < Positions.Count)
+    {
+        var tmp = j;
+        var tmp2 = j + 1;-->
+    @*<div class="row mt-5">*@
+
+    @*<div class="col"><button id="@tmp" class="btn btn-warning btn-block" @onclick="@(e=> NavigateToMeasurements(e,tmp))">@Positions[j].Name </button></div>*@
+
+    @*@{
+
+            j++;
+            tmp = j;
+            tmp2 = j + 1;
+            //var tmp2 = j + 1;
+            // tmp2 = j + 1;
+        }*@
+
+    <!--<a href="#" class="btn">
+        <span class="left icon icon-tablet"></span>
+        <span class="right title">Buy in App Store</span>
+    </a>
+    if (Positions[j].Id == 1 || Positions[j].Id == 2 || Positions[j].Id == 4 || Positions[j].Id == 5 || Positions[j].Id == 7 || Positions[j].Id == 8)
+    {
+
+        <div id="@tmp2" style="background-color:#0078A8; color:white" @onclick="@(e=> NavigateToMeasurements(e,tmp2))" class="flex-item  "><p><h3>@Positions[j].Name </h3> </p></div>
+    }
+    else
+    {
+        <div style="pointer-events: none;" id="@tmp2" @onclick="@(e=> NavigateToMeasurements(e,tmp2))" class="flex-item  ">
+            <p>
+                <h3>
+                    @Positions[j].Name
+                    <br />(notiek izstrāde)
+                </h3>
+            </p>
+        </div>
+    }-->
+    @*<div class="col"><button id="@tmp2" class="btn btn-warning btn-block" @onclick="@(e=> NavigateToMeasurements(e,tmp2))">@Positions[j].Name </button></div>*@
+
+    @*<div class="w-100"></div>*@
+
+    @*</div>*@
+
+    <!--j++;
+
+    }-->
+
+
+
+
+
+
+}
 @*</div>*@
 
 

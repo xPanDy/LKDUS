@@ -8,24 +8,70 @@
 @inject NavigationManager navManager
 
 
+<style>
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
+
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
+
+
+
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+
+
+<div id="row1">
+    <div class="button-container">
+        <span class="button-left" @onclick="@Return">
+            <h1><a id="back">Atpakaļ</a></h1>
+        </span>
+        <span>
+            <h1> Lobnaža asināšana </h1>
+        </span>
+        <span style="visibility:hidden" class="button-right">
+            <h1><a id="save">Saglabāt</a></h1>
+        </span>
+    </div>
+</div>
 
 
 
 <div class="card">
-    <div class="container">
+    <!--<div class="container">
         <div class="row">
             <div class="col">
                 <button type="button" @onclick="@Return" class="btn btn-primary  ">Atpakaļ</button>
-            </div>
+            </div>-->
 
             @*<div class="col">
-                <button type="submit" class="btn btn-primary btn-block">Saglabāt</button>
-            </div>*@
+                    <button type="submit" class="btn btn-primary btn-block">Saglabāt</button>
+                </div>*@
 
-        </div><div class="row">
-    <div class="col w-25"><h3 class="card-title">Lobnaža asināšana</h3></div>
-</div>
-    </div>
+        <!--</div><div class="row">
+            <div class="col w-25"><h3 class="card-title">Lobnaža asināšana</h3></div>
+        </div>
+    </div>-->
     <div>
         <div class="row">
             <div class="col w-25 h-25">
@@ -35,14 +81,17 @@
             </div>
 
 
-            <div class="col"><button class="btn btn-warning btn-block" @onclick="@NavigatetoAngle">
-                <h3>Nažu izmēri un asināšanas leņķis</h3> </button></div>
+            <div class="col">
+                <button class="btn btn-warning btn-block" @onclick="@NavigatetoAngle">
+                    <h3>Nažu izmēri un asināšanas leņķis</h3>
+                </button>
+            </div>
 
 
             <div class="w-100"></div>
 
         </div>
-        
+
     </div>
 
 </div>
@@ -65,7 +114,7 @@
     [Parameter]
     public string pmachineIdd { get; set; }
 
-      [Parameter]
+    [Parameter]
     public string pshift { get; set; }
     Machine machine = new Machine();
 

@@ -11,157 +11,159 @@
 
 @inject IAuthenticationRepository authRepo
 @inject NavigationManager navManager
-<div class="card">
-    <h3 class="card-title">Ieiešana sistēmā</h3>
+
+   
+    <div class="card">
+        <h3 class="card-title">Ieiešana sistēmā</h3>
 
 
-    @if (!response)
-    {
-        <div>Kaut kas notika greizi ar ieiešanu sistēmā</div>
-    }
-
-    @if (LoginModels == null)
-    {
-        <LoadingMessage Message="Notiek lietotāju ielāde..." />
-    }
-    else
-    {
-
-        <div class="card-body">
-            @*<EditForm Model="model" OnSubmit="HandleLogin">*@
-            @*<DataAnnotationsValidator />*@
-            @*<ValidationSummary />*@
-
-            <div class="form-group">
-                <label for="userName">Izvēlieties lietotāju!</label>
-
-                @*<select @bind="model.ByCountryId">
-                        @if (model?.Countries != null)
-                        {
-                            @foreach (var cnt in model.Countries)
-                            {
-                                <option value="@cnt.Id">@cnt.Name</option>
-                            }
-                        }
-                    </select>*@
-
-                <div id="userName" name="userName">
-                    <select class="form-control form-control-lg" @bind="model.Id">
-
-                        @foreach (var mod in LoginModels)
-
-                        {
-
-                            <option class="form-control" value="@mod.Id">@mod.UserName</option>
-
-
-
-                        }
-
-                    </select>
-
-                    <p> </p>
-
-                </div>
-
-
-                @*<ValidationMessage For="@(() => model.UserName)" />*@
-            </div>
-
-
-            @*<div class="form-group">
-                    <select>
-                        @foreach (var model in LoginModels)
-                            {
-                                <option value="On">@model.UserName</option>
-
-                            }
-
-                        <option value="Off">Off</option>
-                    </select>
-                    <p> </p>
-
-                </div>*@
-
-
-            @*<div class="form-group">
-                    <label for="password">Password</label>
-                    <InputText Id="password" type="password" class="form-control" @bind-Value="Model.Password" />
-                    <ValidationMessage For="@(() => Model.Password)" />
-                </div>*@
-
-            <button @onclick="()=> HandleLogin(model)" class="btn btn-primary btn-block">Ieiet!</button>
-
-            @* </EditForm>*@
-        </div>
-    }
-</div>
-
-
-@code {
-
-
-
-    public string userId { get; set; }
-
-    private IList<LoginModel> LoginModels;
-    public LoginModel model = new LoginModel();
-    private bool response = true;
-    private bool response2 = true;
-    private async Task HandleLogin(LoginModel modelFromForm)
-    {
-
-
-        LoginModel newModel = new LoginModel();
-        newModel = LoginModels.Where(o => o.Id == modelFromForm.Id).FirstOrDefault();
-
-        if (newModel == null)
+        @if (!response)
         {
-            newModel = LoginModels.FirstOrDefault();
-            response = await authRepo.Login(newModel);
-            if (response)
-            {
-                //    userId =
+            <div>Kaut kas notika greizi ar ieiešanu sistēmā</div>
+        }
 
-                this.navManager.NavigateTo($"/measurementpositions/{newModel.Id}");
-
-
-            }
+        @if (LoginModels == null)
+        {
+            <LoadingMessage Message="Notiek lietotāju ielāde..." />
         }
         else
         {
-            response = await authRepo.Login(newModel);
-            if (response)
+
+            <div class="card-body">
+                @*<EditForm Model="model" OnSubmit="HandleLogin">*@
+                @*<DataAnnotationsValidator />*@
+                @*<ValidationSummary />*@
+
+                <div class="form-group">
+                    <label for="userName">Izvēlieties lietotāju!</label>
+
+                    @*<select @bind="model.ByCountryId">
+                            @if (model?.Countries != null)
+                            {
+                                @foreach (var cnt in model.Countries)
+                                {
+                                    <option value="@cnt.Id">@cnt.Name</option>
+                                }
+                            }
+                        </select>*@
+
+                    <div id="userName" name="userName">
+                        <select class="form-control form-control-lg" @bind="model.Id">
+
+                            @foreach (var mod in LoginModels)
+
+                            {
+
+                                <option class="form-control" value="@mod.Id">@mod.UserName</option>
+
+
+
+                            }
+
+                        </select>
+
+                        <p> </p>
+
+                    </div>
+
+
+                    @*<ValidationMessage For="@(() => model.UserName)" />*@
+                </div>
+
+
+                @*<div class="form-group">
+                        <select>
+                            @foreach (var model in LoginModels)
+                                {
+                                    <option value="On">@model.UserName</option>
+
+                                }
+
+                            <option value="Off">Off</option>
+                        </select>
+                        <p> </p>
+
+                    </div>*@
+
+
+                @*<div class="form-group">
+                        <label for="password">Password</label>
+                        <InputText Id="password" type="password" class="form-control" @bind-Value="Model.Password" />
+                        <ValidationMessage For="@(() => Model.Password)" />
+                    </div>*@
+
+                <button @onclick="()=> HandleLogin(model)" class="btn btn-primary btn-block">Ieiet!</button>
+
+                @* </EditForm>*@
+            </div>
+        }
+    </div>
+
+
+    @code {
+
+
+
+        public string userId { get; set; }
+
+        private IList<LoginModel> LoginModels;
+        public LoginModel model = new LoginModel();
+        private bool response = true;
+        private bool response2 = true;
+        private async Task HandleLogin(LoginModel modelFromForm)
+        {
+
+
+            LoginModel newModel = new LoginModel();
+            newModel = LoginModels.Where(o => o.Id == modelFromForm.Id).FirstOrDefault();
+
+            if (newModel == null)
             {
-                //    userId =
+                newModel = LoginModels.FirstOrDefault();
+                response = await authRepo.Login(newModel);
+                if (response)
+                {
+                    //    userId =
 
-                this.navManager.NavigateTo($"/measurementpositions/{newModel.Id}");
+                    this.navManager.NavigateTo($"/measurementpositions/{newModel.Id}");
 
 
+                }
+            }
+            else
+            {
+                response = await authRepo.Login(newModel);
+                if (response)
+                {
+                    //    userId =
+
+                    this.navManager.NavigateTo($"/measurementpositions/{newModel.Id}");
+
+
+                }
             }
         }
+        protected async override Task OnInitializedAsync()
+        {
+            LoginModels = await authRepo.Get(Endpoints.GetUsersEndpoint);
+            // model = LoginModels.First();
+        }
+        void SomeStartupMethod()
+        {
+            // Do Some Work
+        }
+
+        Task SomeStartupTask()
+        {
+            // Do some task based work
+            return Task.CompletedTask;
+        }
+
+
+
+
+
+
+
     }
-    protected async override Task OnInitializedAsync()
-    {
-        LoginModels = await authRepo.Get(Endpoints.GetUsersEndpoint);
-        // model = LoginModels.First();
-    }
-    void SomeStartupMethod()
-    {
-        // Do Some Work
-    }
-
-    Task SomeStartupTask()
-    {
-        // Do some task based work
-        return Task.CompletedTask;
-    }
-
-
-
-
-
-
-
-}
 

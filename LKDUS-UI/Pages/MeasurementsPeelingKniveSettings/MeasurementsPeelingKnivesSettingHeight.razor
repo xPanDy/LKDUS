@@ -17,23 +17,71 @@
 @inject IMeasurementTypeRepository measurementTypeRepository;
 @inject IPacksRepository packRepo
 
+<style>
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
+
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
+
+
+
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+
+
+<div id="row1">
+    <div class="button-container">
+        <span class="button-left" @onclick="@Return"  >
+            <h1><a id="back">Atpakaļ</a></h1>
+        </span>
+        <span>
+            <h1>Spiedlīstes augstums virs naža  </h1>
+        </span>
+        <span style="visibility:visible" @onclick="@SaveMeasurement" class="button-right">
+            <h1><a id="save">Saglabāt</a></h1>
+        </span>
+    </div>
+</div>
+
+
 <div class="vh-100 m-0 p-0" style="overflow: hidden;">
     <div style="height: 100%;  width:100%; background-color: white ">
         <!--navigation -->
-        <div class=" col-md-8 mx-auto p-1 m-0 d-inline-block" style="width: 50%; height:10%; float:left; background-color: white">
+        @*<div class=" col-md-8 mx-auto p-1 m-0 d-inline-block" style="width: 50%; height:10%; float:left; background-color: white">
             <button class="btn-primary btn btn-block" @onclick="@Return" style="width:100%; height:100%;"><h3>Atpakaļ</h3></button>
         </div>
         <div class=" col-md-8  mx-auto p-1 m-0  d-inline-block" style="width: 50%;height:10%; float:left;  background-color: white">
             <button class="btn-primary btn btn-block" @onclick="@SaveMeasurement" style="width:100%; height:100%;"><h3>Saglabāt</h3></button>
-        </div>
+        </div>*@
 
-        <div style=" margin: auto;
+        @*<div style=" margin: auto;
         width: 50%;
         padding: 10px;
         text-align: center;
 ">
             <h3>Spiedlīstes augstums virs naža</h3>
-        </div>
+        </div>*@
 
         <div class="container">
             <div class="row">

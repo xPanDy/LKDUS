@@ -1,172 +1,218 @@
 ﻿@page "/measurementspeelingknivessetting/{userId}/{measurementPositionId}"
-  @*////measurementspeelingknivessetting/{userId}/{measurementPositionId}/*@
-    @using LKDUS_UI.Models
-    @using LKDUS_UI.Static
-    @using LKDUS_UI.Contracts
-    @using System.Net.Http
+@*////measurementspeelingknivessetting/{userId}/{measurementPositionId}/*@
+@using LKDUS_UI.Models
+@using LKDUS_UI.Static
+@using LKDUS_UI.Contracts
+@using System.Net.Http
 
-    @inject IMeasurementRepository repo
-    @inject IPacksRepository pRepo
-    @inject NavigationManager navManager
-    @inject IMeasurementPositionsRepository measurementPositionRepo
+@inject IMeasurementRepository repo
+@inject IPacksRepository pRepo
+@inject NavigationManager navManager
+@inject IMeasurementPositionsRepository measurementPositionRepo
+
+<style>
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
+
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
 
 
-    <div style="height:100%">
-        <div class="container">
-            <div class="row">
 
-                <div class="col">
-                    <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
-                </div>
-                <div class="col">
-                </div>
-                <div class="col">
-                </div>
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+
+
+<div id="row1">
+    <div class="button-container">
+        <span class="button-left" @onclick="@goBack"  >
+            <h1><a id="back">Atpakaļ</a></h1>
+        </span>
+        <span>
+            <h1>@mp.Name </h1>
+        </span>
+        <span style="visibility:hidden" class="button-right">
+            <h1><a id="save">Saglabāt</a></h1>
+        </span>
+    </div>
+</div>
+
+<div style="height:100%">
+    @*<div class="container">
+        <div class="row">
+
+            <div class="col">
+                <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
             </div>
         </div>
+    </div>*@
 
-        <div style="height:50%" class="container">
-            <div class="mh-50">
-                <h3 class="card-title">@mp.Name</h3>
-                <button type="button" @onclick="@OpenCreateForm" class="btn btn-info">Jauna pārbaude</button>
-                <h3 class="card-title">Veiktās nažu pārbaudes</h3>
-
-            </div>
-
+    <div style="height:50%" class="container">
+        <div class="mh-50">
+            @*<h3 class="card-title">@mp.Name</h3>*@
+            <button type="button" @onclick="@OpenCreateForm" class="btn btn-info">Jauna pārbaude</button>
+            <h3 class="card-title">Veiktās nažu pārbaudes</h3>
 
         </div>
 
 
-
-        @if (Model == null)
-        {
-            <LoadingMessage Message="Notiek nažu mērījumu ielāde" />
-        }
-        else
-        {
-
-            <!-- Scroll bar present and enabled when more contents -->
-
-
-
-
-
-            <div class="container pre-scrollable" style="height:75%">
-                <div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Nr.                 </th>
-                                <th scope="col">Datums              </th>
-                                <th scope="col">Iekārta               </th>
-                                <th scope="col">Maiņa             </th>
-                                <th scope="col">Laborants           </th>
-                                <th scope="col">Darbība           </th>
-
-
-
-                                @*<th scope="col">Meistars</th>*@
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var model in Model)
-                            {
-
-                                <tr>
-                                    <th scope="row">@model.Id</th>
-                                    <td>@model.DateCreated</td>
-                                    <td>@model.Machine</td>
-                                    <td>@model.Shift</td>
-                                    <td>@model.Author</td>
-
-                                    <td>
-                                        <button @onclick="(e=>viewMeasurement(  model.Id, model.MeasurementTypeName))" type="button" class="btn btn-success">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
-                                                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
-                                                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"></path>
-                                            </svg>
-                                            Skatīt
-                                        </button>
-                                    </td>
-
-
-
-
-                                </tr>
-
-                            }
-
-
-                        </tbody>
-                    </table>
-                </div>
-
-
-
-            </div>
-
-
-
-
-        }
     </div>
 
-    @code {
 
-        private void viewMeasurement(int modelid, string measurementTypeName)
+
+    @if (Model == null)
+    {
+        <LoadingMessage Message="Notiek nažu mērījumu ielāde" />
+    }
+    else
+    {
+
+        <!-- Scroll bar present and enabled when more contents -->
+
+
+
+
+
+        <div class="container pre-scrollable" style="height:75%">
+            <div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nr.                 </th>
+                            <th scope="col">Datums              </th>
+                            <th scope="col">Iekārta               </th>
+                            <th scope="col">Maiņa             </th>
+                            <th scope="col">Laborants           </th>
+                            <th scope="col">Darbība           </th>
+
+
+
+                            @*<th scope="col">Meistars</th>*@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var model in Model)
+                        {
+
+                            <tr>
+                                <th scope="row">@model.Id</th>
+                                <td>@model.DateCreated</td>
+                                <td>@model.Machine</td>
+                                <td>@model.Shift</td>
+                                <td>@model.Author</td>
+
+                                <td>
+                                    <button @onclick="(e=>viewMeasurement(  model.Id, model.MeasurementTypeName))" type="button" class="btn btn-success">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
+                                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"></path>
+                                        </svg>
+                                        Skatīt
+                                    </button>
+                                </td>
+
+
+
+
+                            </tr>
+
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+
+
+
+        </div>
+
+
+
+
+    }
+</div>
+
+@code {
+
+    private void viewMeasurement(int modelid, string measurementTypeName)
+    {
+
+        this.navManager.NavigateTo($"/measurementspeelingknivessettingsview/{measurementPositionId}/{userId}/{modelid}/{measurementTypeName}/view");
+    }
+
+    [Parameter]
+    public string measurementPositionId { get; set; }
+    [Parameter]
+    public string userId { get; set; }
+
+    MeasurementPosition mp = new MeasurementPosition();
+
+    protected override void OnParametersSet()
+    {
+
+        string test = measurementPositionId;
+    }
+
+
+    private IList<Pack> Model;
+    private MeasurementPosition measurementPosition;
+
+    protected async override Task OnInitializedAsync()
+    {
+        Model = await pRepo.Get(Endpoints.PacksEndpoint);
+
+        Model = Model.OrderByDescending(el => el.Id).ToList();
+        Model = Model.OrderByDescending(el => el.Id).Where(el => el.MeasurementTypeName == "Spiedlīstes augstums" ||
+
+        el.MeasurementTypeName == "Spiedlīstes sprauga" ||
+        el.MeasurementTypeName == "Lobnaža augstums").ToList();
+
+        try
         {
+            int result = Int32.Parse(measurementPositionId);
+            mp = await measurementPositionRepo.Get(Endpoints.MeasurementPositions, result);
 
-            this.navManager.NavigateTo($"/measurementspeelingknivessettingsview/{measurementPositionId}/{userId}/{modelid}/{measurementTypeName}/view");
         }
 
-        [Parameter]
-        public string measurementPositionId { get; set; }
-        [Parameter]
-        public string userId { get; set; }
-
-        MeasurementPosition mp = new MeasurementPosition();
-
-        protected override void OnParametersSet()
+        catch (FormatException)
         {
-
-            string test = measurementPositionId;
-        }
-
-
-        private IList<Pack> Model;
-        private MeasurementPosition measurementPosition;
-
-        protected async override Task OnInitializedAsync()
-        {
-            Model = await pRepo.Get(Endpoints.PacksEndpoint);
-
-            Model = Model.OrderByDescending(el => el.Id).ToList();
-            Model = Model.OrderByDescending(el => el.Id).Where(el => el.MeasurementTypeName == "Spiedlīstes augstums" ||
-
-            el.MeasurementTypeName == "Spiedlīstes sprauga" ||
-            el.MeasurementTypeName == "Lobnaža augstums").ToList();
-
-            try
-            {
-                int result = Int32.Parse(measurementPositionId);
-                mp = await measurementPositionRepo.Get(Endpoints.MeasurementPositions, result);
-
-            }
-
-            catch (FormatException)
-            {
-                Console.WriteLine($"Unable to parse");
-            }
-        }
-
-
-        private void OpenCreateForm(MouseEventArgs e)
-        {
-            //this.measurementPosition.
-            this.navManager.NavigateTo($"/measurementspeelingknivessettings/{userId}/{measurementPositionId}/create");
-        }
-        private void goBack(MouseEventArgs e)
-        {
-            this.navManager.NavigateTo($"/measurementpositions/{userId}");
+            Console.WriteLine($"Unable to parse");
         }
     }
+
+
+    private void OpenCreateForm(MouseEventArgs e)
+    {
+        //this.measurementPosition.
+        this.navManager.NavigateTo($"/measurementspeelingknivessettings/{userId}/{measurementPositionId}/create");
+    }
+    private void goBack(MouseEventArgs e)
+    {
+        this.navManager.NavigateTo($"/measurementpositions/{userId}");
+    }
+}

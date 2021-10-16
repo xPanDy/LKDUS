@@ -11,9 +11,56 @@
 @inject IMeasurementPositionsRepository measurementPositionRepo
 
 
+<style>
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
 
-<div   style="height:100%">
-    <div class="container">
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
+
+
+
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+
+
+<div id="row1">
+    <div class="button-container">
+        <span class="button-left" @onclick="@goBack">
+            <h1><a id="back">Atpakaļ</a></h1>
+        </span>
+        <span>
+            <h1>@mp.Name</h1>
+        </span>
+        <span style="visibility:hidden"  class="button-right">
+            <h1><a id="save"> </a></h1>
+        </span>
+    </div>
+</div>
+
+
+<div style="height:100%">
+    @*<div class="container">
         <div class="row">
 
             <div class="col">
@@ -24,11 +71,11 @@
             <div class="col">
             </div>
         </div>
-    </div>
+    </div>*@
 
     <div style="height:50%" class="container">
         <div class="mh-50">
-            <h3 class="card-title">@mp.Name</h3>
+            @*<h3 class="card-title">@mp.Name</h3>*@
             <button type="button" @onclick="@OpenCreateForm" class="btn btn-info">Jauna paka</button>
             <h3 class="card-title">Pārbaudītās pakas</h3>
 
@@ -45,8 +92,8 @@
     }
     else
     {
- 
-        <div class="container pre-scrollable"  style="height:100%;  max-height: 540px;
+
+        <div class="container pre-scrollable" style="height:100%;  max-height: 540px;
     overflow-y: scroll;">
             <div class="mh-100">
                 <table class="table">
@@ -81,13 +128,15 @@
                                 <td>@model.MeasurementTypeName</td>
                                 <td> </td>
                                 <td> </td>
-                                <td> <button @onclick="(e=>viewMeasurement(model.FusCode, model.Id, model.MeasurementTypeName))" type="button"  class="btn btn-success">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
-        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
-        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"></path>
-    </svg>
-    Skatīt
-</button></td>
+                                <td>
+                                    <button @onclick="(e=>viewMeasurement(model.FusCode, model.Id, model.MeasurementTypeName))" type="button" class="btn btn-success">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
+                                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"></path>
+                                        </svg>
+                                        Skatīt
+                                    </button>
+                                </td>
 
 
 
@@ -134,7 +183,8 @@
     {
         Model = await pRepo.Get(Endpoints.PacksEndpoint);
         //odel = Model.OrderByDescending(el => el.Id).ToList() ;
-        if (Model != null) {
+        if (Model != null)
+        {
             Model = Model.OrderByDescending(el => el.Id).Where(el => el.MeasurementTypeName.Contains("Saaudzēšana platumā defekti") ||
             el.MeasurementTypeName.Contains("Saaudzēšana platumā līmes punkti") ||
             el.MeasurementTypeName.Contains("Saaudzēšana platumā biezums") ||

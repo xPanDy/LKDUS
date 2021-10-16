@@ -17,39 +17,85 @@
         max-width: 300px;
     }
 </style>
+<style>
+    #row1 {
+        padding: 20px 20px 20px 20px;
+        overflow: hidden;
+    }
 
-<div style="height:100%">
-    <div class="container">
-        <div class="row">
+    .button-container {
+        display: flex;
+        /* displays flex-items (children) inline */
+        justify-content: space-between;
+        /* MDN: The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. */
+        align-items: center;
+        /* centers them vertically */
+    }
 
-            <div class="col">
-                <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
+
+
+    #back {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #save {
+        background-color: #1b6ec2;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+</style>
+
+@if (ModelPackHeader == null || ModelMeasurements == null)
+{
+
+
+
+
+
+
+    <LoadingMessage Message="Notiek mērījumu ielāde" />
+}
+else
+{
+
+    <!-- Scroll bar present and enabled when more contents -->
+
+
+    @*<div class="rowcentered">
+            <h4> Dati par pakas:@ModelPackHeader.FusCode  @ModelPackHeader.MeasurementTypeName mērījumiem </h4>
+        </div>*@
+
+    <div id="row1">
+        <div class="button-container">
+            <span class="button-left" @onclick="@goBack">
+                <h1><a id="back">Atpakaļ</a></h1>
+            </span>
+            <span>
+                <h1>Dati par pakas:@ModelPackHeader.FusCode  @ModelPackHeader.MeasurementTypeName mērījumiem </h1>
+            </span>
+            <span style="visibility:hidden" class="button-right">
+                <h1><a id="save">Saglabāt</a></h1>
+            </span>
         </div>
     </div>
 
+    <div style="height:100%">
+        @*<div class="container">
+                <div class="row">
 
-
-
-
-    @if (ModelPackHeader == null)
-    {
-        <LoadingMessage Message="Notiek mērījumu ielāde" />
-    }
-    else
-    {
-
-        <!-- Scroll bar present and enabled when more contents -->
-
-
-        <div class="rowcentered">
-            <h4> Dati par pakas:@ModelPackHeader.FusCode  @ModelPackHeader.MeasurementTypeName mērījumiem </h4>
-        </div>
-
+                    <div class="col">
+                        <button type="button" @onclick="@goBack" class="btn btn-primary btn-block">Atpakaļ</button>
+                    </div>
+                    <div class="col">
+                    </div>
+                    <div class="col">
+                    </div>
+                </div>
+            </div>*@
 
         <div class="container" style="height:75%">
             <div class="mh-75">
@@ -62,40 +108,40 @@
                             <th scope="col">Iekārta               </th>
                             <th scope="col">Maiņa             </th>
 
-                            
-                                @if (measurementType.Id == 1012)
-                                {
-                                    <th scope="col">Pirms šuves </th>
-                                    <th scope="col">Šuves</th>
-                                    <th scope="col">Pēc šuves</th>
-                                    <th scope="col">Loksnes vidējais</th>
-                                    <th scope="col">Šuves starpība</th>
 
-                                }
-                                else if (measurementType.Id == 1013)
-                                {
+                            @if (measurementType.Id == 1012)
+                            {
+                                <th scope="col">Pirms šuves </th>
+                                <th scope="col">Šuves</th>
+                                <th scope="col">Pēc šuves</th>
+                                <th scope="col">Loksnes vidējais</th>
+                                <th scope="col">Šuves starpība</th>
 
-                                    <th scope="col">Labā </th>
-                                    <th scope="col">Kreisā</th>
-                                    <th scope="col">Slīpums</th>
-                                    
+                            }
+                            else if (measurementType.Id == 1013)
+                            {
 
-                                }
-                                else if (measurementType.Id == 1014)
-                                {
-                                    <th scope="col">Bāzes mala </th>
-                                    <th scope="col">Otra puse</th>
-                                    <th scope="col">Slipums</th>
-                                    
-                                }
+                                <th scope="col">Labā </th>
+                                <th scope="col">Kreisā</th>
+                                <th scope="col">Slīpums</th>
 
 
-                            
+                            }
+                            else if (measurementType.Id == 1014)
+                            {
+                                <th scope="col">Bāzes mala </th>
+                                <th scope="col">Otra puse</th>
+                                <th scope="col">Slipums</th>
+
+                            }
 
 
 
 
-                         
+
+
+
+
                         </tr>
                     </thead>
                     <tbody>
@@ -181,8 +227,8 @@
 
 
 
-    }
-</div>
+    </div>
+}
 @code {
 
     [Parameter]
